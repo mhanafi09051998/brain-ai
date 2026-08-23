@@ -754,5 +754,17 @@
     "seen": 1787514556.619476,
     "ast_hash": "7448f56bfe2c158862b552cd3b52f8fc",
     "semantic_hash": ""
+  },
+  "scripts/claudiacode_server.js": {
+    "mtime": 1787517436.3920605,
+    "seen": 1787517487.3373945,
+    "ast_hash": "a483a8a2705d60b8d727bf149740c5e0",
+    "semantic_hash": ""
+  },
+  "scripts/claudiacode_login.html": {
+    "mtime": 1787517432.357074,
+    "seen": 1787517487.3373945,
+    "ast_hash": "f1f5dec6bb4ab7c275fadc577da33ec5",
+    "semantic_hash": ""
   }
 }
