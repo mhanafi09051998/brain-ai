@@ -1,0 +1,345 @@
+{
+  "communities": {
+    "0": [
+      "ponytail_hooks_ponytail_config_normalizemode",
+      "ponytail_hooks_ponytail_config_normalizepersistedmode",
+      "ponytail_hooks_ponytail_config_runtime_modes",
+      "ponytail_hooks_ponytail_instructions",
+      "ponytail_hooks_ponytail_instructions_default_mode_normalizemode_normalizepersistedmode",
+      "ponytail_hooks_ponytail_instructions_filterskillbodyformode",
+      "ponytail_hooks_ponytail_instructions_fs",
+      "ponytail_hooks_ponytail_instructions_getfallbackinstructions",
+      "ponytail_hooks_ponytail_instructions_getponytailinstructions",
+      "ponytail_hooks_ponytail_instructions_independent_modes",
+      "ponytail_hooks_ponytail_instructions_path",
+      "ponytail_hooks_ponytail_instructions_skill_path",
+      "ponytail_pi_extension_index",
+      "ponytail_pi_extension_index_default_mode_runtime_modes_getdefaultmode_getquietstartup_gethidestatus_normalizemode_normalizepersistedmode_isdeactivationcommand_writedefaultmode",
+      "ponytail_pi_extension_index_getponytailinstructions_filterskillbodyformode",
+      "ponytail_pi_extension_index_parseponytailcommand",
+      "ponytail_pi_extension_index_ponytailextension",
+      "ponytail_pi_extension_index_ponytailextension_syncstatus",
+      "ponytail_pi_extension_index_readdefaultmode",
+      "ponytail_pi_extension_index_readquietstartup",
+      "ponytail_pi_extension_index_require",
+      "ponytail_pi_extension_index_resolvesessionmode",
+      "ponytail_pi_extension_index_runtime_mode_list",
+      "ponytail_pi_extension_test_extension_test",
+      "ponytail_pi_extension_test_extension_test_createcommandcontext",
+      "ponytail_pi_extension_test_extension_test_createpiharness",
+      "ponytail_pi_extension_test_extension_test_notify",
+      "ponytail_pi_extension_test_extension_test_withtempconfig",
+      "ponytail_pi_extension_test_helpers_test"
+    ],
+    "1": [
+      "ponytail_hooks_ponytail_config_isdeactivationcommand",
+      "ponytail_hooks_ponytail_config_writedefaultmode",
+      "ponytail_hooks_ponytail_mode_tracker",
+      "ponytail_hooks_ponytail_mode_tracker_clearmode_isqoder_readmode_setmode_writehookoutput",
+      "ponytail_hooks_ponytail_mode_tracker_finish",
+      "ponytail_hooks_ponytail_mode_tracker_getdefaultmode_isdeactivationcommand_writedefaultmode",
+      "ponytail_hooks_ponytail_mode_tracker_getponytailinstructions",
+      "ponytail_hooks_ponytail_runtime",
+      "ponytail_hooks_ponytail_runtime_clearmode",
+      "ponytail_hooks_ponytail_runtime_fs",
+      "ponytail_hooks_ponytail_runtime_getclaudedir_getconfigdir",
+      "ponytail_hooks_ponytail_runtime_iscopilot",
+      "ponytail_hooks_ponytail_runtime_os",
+      "ponytail_hooks_ponytail_runtime_path",
+      "ponytail_hooks_ponytail_runtime_readmode",
+      "ponytail_hooks_ponytail_runtime_setmode",
+      "ponytail_hooks_ponytail_runtime_statedir",
+      "ponytail_hooks_ponytail_runtime_statepath",
+      "ponytail_hooks_ponytail_runtime_writehookoutput",
+      "ponytail_hooks_ponytail_subagent",
+      "ponytail_hooks_ponytail_subagent_finish",
+      "ponytail_hooks_ponytail_subagent_getponytailinstructions",
+      "ponytail_hooks_ponytail_subagent_inject",
+      "ponytail_hooks_ponytail_subagent_mode",
+      "ponytail_hooks_ponytail_subagent_readmode_writehookoutput"
+    ],
+    "2": [
+      "ponytail_package",
+      "ponytail_package_author",
+      "ponytail_package_author_name",
+      "ponytail_package_author_url",
+      "ponytail_package_bugs",
+      "ponytail_package_bugs_url",
+      "ponytail_package_description",
+      "ponytail_package_exports",
+      "ponytail_package_exports_plugin",
+      "ponytail_package_homepage",
+      "ponytail_package_license",
+      "ponytail_package_main",
+      "ponytail_package_name",
+      "ponytail_package_publishconfig",
+      "ponytail_package_publishconfig_access",
+      "ponytail_package_repository",
+      "ponytail_package_repository_type",
+      "ponytail_package_repository_url",
+      "ponytail_package_scripts",
+      "ponytail_package_scripts_test",
+      "ponytail_package_version"
+    ],
+    "3": [
+      "ponytail_package_files",
+      "ponytail_package_keywords",
+      "ponytail_package_pi",
+      "ponytail_package_pi_extensions",
+      "ponytail_package_pi_skills",
+      "ref_agents_md",
+      "ref_assets",
+      "ref_hooks",
+      "ref_license",
+      "ref_opencode",
+      "ref_opencode_plugin",
+      "ref_pi",
+      "ref_pi_extension",
+      "ref_pi_extension_index_js",
+      "ref_pi_package",
+      "ref_ponytail",
+      "ref_qoder",
+      "ref_qoder_plugin",
+      "ref_scripts_uninstall_js",
+      "ref_skills"
+    ],
+    "4": [
+      "ponytail_hooks_ponytail_config",
+      "ponytail_hooks_ponytail_config_fs",
+      "ponytail_hooks_ponytail_config_getclaudedir",
+      "ponytail_hooks_ponytail_config_getconfigdir",
+      "ponytail_hooks_ponytail_config_getconfigpath",
+      "ponytail_hooks_ponytail_config_gethidestatus",
+      "ponytail_hooks_ponytail_config_getquietstartup",
+      "ponytail_hooks_ponytail_config_normalizeconfigmode",
+      "ponytail_hooks_ponytail_config_os",
+      "ponytail_hooks_ponytail_config_path",
+      "ponytail_hooks_ponytail_config_valid_modes",
+      "ponytail_scripts_uninstall",
+      "ponytail_scripts_uninstall_fs",
+      "ponytail_scripts_uninstall_getconfigpath_getclaudedir",
+      "ponytail_scripts_uninstall_path",
+      "ponytail_scripts_uninstall_removeifexists",
+      "ponytail_scripts_uninstall_settingspath"
+    ],
+    "5": [
+      "ponytail_hooks_ponytail_config_getdefaultmode",
+      "ponytail_opencode_plugins_ponytail",
+      "ponytail_opencode_plugins_ponytail_dirname",
+      "ponytail_opencode_plugins_ponytail_frontmatter",
+      "ponytail_opencode_plugins_ponytail_frontmatter_parsecommandfile",
+      "ponytail_opencode_plugins_ponytail_getdefaultmode_normalizepersistedmode",
+      "ponytail_opencode_plugins_ponytail_getponytailinstructions",
+      "ponytail_opencode_plugins_ponytail_parsecommandfile",
+      "ponytail_opencode_plugins_ponytail_readmode",
+      "ponytail_opencode_plugins_ponytail_require",
+      "ponytail_opencode_plugins_ponytail_statepath",
+      "ponytail_opencode_plugins_ponytail_writemode"
+    ],
+    "6": [
+      "ponytail_hooks_ponytail_activate",
+      "ponytail_hooks_ponytail_activate_claudedir",
+      "ponytail_hooks_ponytail_activate_clearmode_iscodex_iscopilot_setmode_writehookoutput",
+      "ponytail_hooks_ponytail_activate_fs",
+      "ponytail_hooks_ponytail_activate_getdefaultmode_getclaudedir_isshellsafe",
+      "ponytail_hooks_ponytail_activate_getponytailinstructions",
+      "ponytail_hooks_ponytail_activate_mode",
+      "ponytail_hooks_ponytail_activate_output",
+      "ponytail_hooks_ponytail_activate_path",
+      "ponytail_hooks_ponytail_activate_settingspath",
+      "ponytail_hooks_ponytail_config_isshellsafe"
+    ],
+    "7": [
+      "ponytail_pi_extension_package",
+      "ponytail_pi_extension_package_name",
+      "ponytail_pi_extension_package_private",
+      "ponytail_pi_extension_package_scripts",
+      "ponytail_pi_extension_package_scripts_test",
+      "ponytail_pi_extension_package_type"
+    ],
+    "8": [
+      "zolu_kas_dashboard_page",
+      "zolu_kas_dashboard_page_categorystat",
+      "zolu_kas_dashboard_page_dashboardpage",
+      "zolu_kas_dashboard_page_toast",
+      "zolu_kas_dashboard_page_transaction",
+      "zolu_kas_dashboard_page_walletdata"
+    ],
+    "9": [
+      "learning_scripts_grow_neurons",
+      "learning_scripts_grow_neurons_grow_neural_mesh",
+      "learning_scripts_grow_neurons_rationale_1"
+    ],
+    "10": [
+      "ponytail_hooks_ponytail_statusline_sh__entry",
+      "ponytail_hooks_ponytail_statusline_sh_ponytail_hooks_ponytail_statusline"
+    ],
+    "11": [
+      "ecosystem_config"
+    ],
+    "12": [
+      "ponytail_hooks_ponytail_statusline_ps1_ponytail_hooks_ponytail_statusline"
+    ]
+  },
+  "cohesion": {
+    "0": 0.12561576354679804,
+    "1": 0.12666666666666668,
+    "2": 0.09523809523809523,
+    "3": 0.11052631578947368,
+    "4": 0.15441176470588236,
+    "5": 0.19696969696969696,
+    "6": 0.18181818181818182,
+    "7": 0.3333333333333333,
+    "8": 0.3333333333333333,
+    "9": 0.6666666666666666,
+    "10": 1.0,
+    "11": 1.0,
+    "12": 1.0
+  },
+  "gods": [
+    {
+      "id": "ponytail_hooks_ponytail_instructions_getponytailinstructions",
+      "label": "getPonytailInstructions()",
+      "degree": 13
+    },
+    {
+      "id": "ponytail_pi_extension_index_ponytailextension",
+      "label": "ponytailExtension()",
+      "degree": 13
+    },
+    {
+      "id": "ponytail_hooks_ponytail_config_normalizepersistedmode",
+      "label": "normalizePersistedMode()",
+      "degree": 11
+    },
+    {
+      "id": "ponytail_package_files",
+      "label": "files",
+      "degree": 11
+    },
+    {
+      "id": "ponytail_hooks_ponytail_mode_tracker_finish",
+      "label": "finish()",
+      "degree": 9
+    },
+    {
+      "id": "ponytail_hooks_ponytail_config_getdefaultmode",
+      "label": "getDefaultMode()",
+      "degree": 9
+    },
+    {
+      "id": "ponytail_hooks_ponytail_config_normalizemode",
+      "label": "normalizeMode()",
+      "degree": 8
+    },
+    {
+      "id": "ponytail_package_keywords",
+      "label": "keywords",
+      "degree": 8
+    },
+    {
+      "id": "ponytail_hooks_ponytail_config_writedefaultmode",
+      "label": "writeDefaultMode()",
+      "degree": 7
+    },
+    {
+      "id": "ponytail_hooks_ponytail_config_getconfigpath",
+      "label": "getConfigPath()",
+      "degree": 7
+    }
+  ],
+  "surprises": [
+    {
+      "source": "readMode()",
+      "target": "normalizePersistedMode()",
+      "source_files": [
+        "ponytail/.opencode/plugins/ponytail.mjs",
+        "ponytail/hooks/ponytail-config.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "finish()",
+      "target": "getPonytailInstructions()",
+      "source_files": [
+        "ponytail/hooks/ponytail-mode-tracker.js",
+        "ponytail/hooks/ponytail-instructions.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "inject()",
+      "target": "getPonytailInstructions()",
+      "source_files": [
+        "ponytail/hooks/ponytail-subagent.js",
+        "ponytail/hooks/ponytail-instructions.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "ponytailExtension()",
+      "target": "getDefaultMode()",
+      "source_files": [
+        "ponytail/pi-extension/index.js",
+        "ponytail/hooks/ponytail-config.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "ponytailExtension()",
+      "target": "getHideStatus()",
+      "source_files": [
+        "ponytail/pi-extension/index.js",
+        "ponytail/hooks/ponytail-config.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `getPonytailInstructions()` connect `index.js` to `ponytail-runtime.js`, `ponytail.mjs`, `ponytail-activate.js`?",
+      "why": "High betweenness centrality (0.040) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `files` connect `files` to `ponytail/package.json`?",
+      "why": "High betweenness centrality (0.025) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `ponytailExtension()` connect `index.js` to `ponytail-runtime.js`, `ponytail-config.js`, `ponytail.mjs`?",
+      "why": "High betweenness centrality (0.024) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `CategoryStat`, `Toast`, `Transaction` to the rest of the system?",
+      "why": "79 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `index.js` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.12561576354679804 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `ponytail-runtime.js` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.12666666666666668 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `ponytail/package.json` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.09523809523809523 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

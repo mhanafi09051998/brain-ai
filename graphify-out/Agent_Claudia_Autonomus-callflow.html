@@ -1,0 +1,3057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agent_Claudia_Autonomus — Complete Call Flow &amp; Architecture Documentation</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<style>
+:root {
+  --bg: #0f172a; --surface: #1e293b; --border: #334155;
+  --text: #e2e8f0; --muted: #94a3b8; --accent: #38bdf8;
+  --warn: #fbbf24; --err: #f87171; --ok: #34d399;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; padding: 40px 24px; }
+h1 { font-size: 2.4rem; margin-bottom: 8px; background: linear-gradient(135deg, var(--accent), #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+h2 { font-size: 1.7rem; margin: 48px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--accent); }
+h3 { font-size: 1.25rem; margin: 32px 0 12px; color: var(--accent); }
+h4 { font-size: 1.05rem; margin: 20px 0 8px; color: var(--warn); }
+p { margin: 8px 0; color: var(--muted); }
+.subtitle { color: var(--muted); font-size: 1.1rem; margin-bottom: 32px; }
+.mermaid { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin: 20px 0; overflow-x: auto; position: relative; }
+.mermaid.is-enhanced { padding: 0; overflow: hidden; min-height: 260px; }
+.mermaid-viewport { padding: 54px 24px 24px; overflow: hidden; cursor: grab; touch-action: none; min-height: 260px; }
+.mermaid-viewport.is-dragging { cursor: grabbing; }
+.mermaid-viewport svg { max-width: none !important; height: auto; transform-origin: 0 0; transition: transform 120ms ease; }
+.mermaid-toolbar { position: absolute; top: 10px; right: 10px; z-index: 3; display: flex; align-items: center; gap: 6px; padding: 6px; background: rgba(15,23,42,0.92); border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.28); }
+.mermaid-toolbar button, .mermaid-toolbar .zoom-level { height: 28px; min-width: 32px; border: 1px solid var(--border); border-radius: 6px; background: #1e293b; color: var(--text); font: 600 0.78rem system-ui, sans-serif; display: inline-flex; align-items: center; justify-content: center; }
+.mermaid-toolbar button { cursor: pointer; }
+.mermaid-toolbar button:hover { border-color: var(--accent); color: var(--accent); }
+.mermaid-toolbar .zoom-level { min-width: 52px; color: var(--muted); background: transparent; }
+.call-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.92rem; }
+.call-table th { background: #1a2744; color: var(--accent); text-align: left; padding: 10px 14px; border: 1px solid var(--border); }
+.call-table td { padding: 8px 14px; border: 1px solid var(--border); vertical-align: top; }
+.call-table tr:nth-child(even) { background: rgba(255,255,255,0.02); }
+.tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 600; }
+.tag-async { background: #7c3aed33; color: #a78bfa; }
+.tag-class { background: #05966933; color: var(--ok); }
+.tag-func { background: #2563eb33; color: var(--accent); }
+.tag-cmd { background: #d9770633; color: var(--warn); }
+.tag-endpoint { background: #dc262633; color: var(--err); }
+.tag-hook { background: #db277733; color: #f472b6; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px; margin: 16px 0; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 16px; margin: 16px 0; }
+.arrow-chain { font-family: 'Fira Code', monospace; font-size: 0.85rem; color: var(--accent); padding: 10px; background: rgba(56,189,248,0.06); border-radius: 6px; }
+code { font-family: 'Fira Code', 'Cascadia Code', monospace; background: rgba(255,255,255,0.06); padding: 1px 6px; border-radius: 3px; font-size: 0.88em; }
+ul, ol { margin: 8px 0 8px 24px; color: var(--muted); }
+li { margin: 4px 0; }
+a { color: var(--accent); }
+hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+.nav { position: sticky; top: 0; background: var(--bg); z-index: 10; padding: 12px 0; border-bottom: 1px solid var(--border); display: flex; gap: 20px; flex-wrap: wrap; font-size: 0.9rem; }
+.nav a { text-decoration: none; }
+.nav a:hover { text-decoration: underline; }
+@media (max-width: 768px) { .container { padding: 16px; } h1 { font-size: 1.8rem; } }
+
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>Agent_Claudia_Autonomus — Complete Call Flow &amp; Architecture Documentation</h1>
+<p class="subtitle">Generated from graphify knowledge graph: 454 nodes, 487 edges, 65 communities. Commit: unknown</p>
+
+<div class="nav">
+    <a href="#overview">Architecture Overview</a>
+    <a href="#build-graph">Graph Build</a>
+    <a href="#cli-skills">CLI &amp; Skill Installers</a>
+    <a href="#tests-fixtures">Tests &amp; Fixtures</a>
+    <a href="#production-planning-specification-zolu-ai-web-pr">Production Planning Specification: Zolu AI Web Production Engine</a>
+    <a href="#core-engines-workflows">Core Engines &amp; Workflows</a>
+    <a href="#ponytail-lazy-senior-dev-mode">Ponytail, lazy senior dev mode</a>
+    <a href="#ponytail-lazy-senior-dev-mode-36116e">Ponytail, lazy senior dev mode</a>
+    <a href="#ponytail-lazy-senior-dev-mode-2">Ponytail, lazy senior dev mode</a>
+    <a href="#ponytail-lazy-senior-dev-mode-3">Ponytail, lazy senior dev mode</a>
+    <a href="#pembelajaran-standar-tetap-learnings-fixed-rules">Pembelajaran &amp; Standar Tetap (Learnings &amp; Fixed Rules) - Claudia</a>
+    <a href="#neuron-n008-persistent-live-session-checkpoint-i">Neuron N008: Persistent Live Session Checkpoint &amp; Infrastructure State</a>
+    <a href="#readme-md">README.md</a>
+    <a href="#zolu-kas-dashboard-page-tsx">zolu_kas_dashboard_page.tsx</a>
+    <a href="#core-stack-architecture">Core Stack &amp; Architecture</a>
+    <a href="#other">Other</a>
+</div>
+
+<!-- ====== Architecture Overview ====== -->
+<h2 id="overview">1. Architecture Overview</h2>
+
+<div class="mermaid">
+
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    BUILD_GRAPH_321CBB04("Graph Build<br/><small>56 nodes</small>")
+    class BUILD_GRAPH_321CBB04 module;
+    CLI_SKILLS_9964CBB8("CLI &amp; Skill Installers<br/><small>190 nodes</small>")
+    class CLI_SKILLS_9964CBB8 module;
+    TESTS_FIXTURES_B84B1DCC("Tests &amp; Fixtures<br/><small>57 nodes</small>")
+    class TESTS_FIXTURES_B84B1DCC module;
+    PRODUCTION_PLANNING_SPECIFICATION_ZOLU_AI_WEB_PR_F5CFD07A("Production Planning Specification: Zolu AI Web Production Engine<br/><small>10 nodes</small>")
+    class PRODUCTION_PLANNING_SPECIFICATION_ZOLU_AI_WEB_PR_F5CFD07A module;
+    CORE_ENGINES_WORKFLOWS_6F8507CD("Core Engines &amp; Workflows<br/><small>8 nodes</small>")
+    class CORE_ENGINES_WORKFLOWS_6F8507CD module;
+    PONYTAIL_LAZY_SENIOR_DEV_MODE_87509AA5("Ponytail, lazy senior dev mode<br/><small>7 nodes</small>")
+    class PONYTAIL_LAZY_SENIOR_DEV_MODE_87509AA5 module;
+    PONYTAIL_LAZY_SENIOR_DEV_MODE_36116E_97C13027("Ponytail, lazy senior dev mode<br/><small>7 nodes</small>")
+    class PONYTAIL_LAZY_SENIOR_DEV_MODE_36116E_97C13027 module;
+    PONYTAIL_LAZY_SENIOR_DEV_MODE_2_73266681("Ponytail, lazy senior dev mode<br/><small>7 nodes</small>")
+    class PONYTAIL_LAZY_SENIOR_DEV_MODE_2_73266681 module;
+    PONYTAIL_LAZY_SENIOR_DEV_MODE_3_66F499E9("Ponytail, lazy senior dev mode<br/><small>7 nodes</small>")
+    class PONYTAIL_LAZY_SENIOR_DEV_MODE_3_66F499E9 module;
+    PEMBELAJARAN_STANDAR_TETAP_LEARNINGS_FIXED_RULES_05304646("Pembelajaran &amp; Standar Tetap (Learnings &amp; Fixed Rules) - Claudia<br/><small>6 nodes</small>")
+    class PEMBELAJARAN_STANDAR_TETAP_LEARNINGS_FIXED_RULES_05304646 module;
+    NEURON_N008_PERSISTENT_LIVE_SESSION_CHECKPOINT_I_631C716D("Neuron N008: Persistent Live Session Checkpoint &amp; Infrastructure State<br/><small>6 nodes</small>")
+    class NEURON_N008_PERSISTENT_LIVE_SESSION_CHECKPOINT_I_631C716D module;
+    README_MD_6F88C4CB("README.md<br/><small>6 nodes</small>")
+    class README_MD_6F88C4CB module;
+    ZOLU_KAS_DASHBOARD_PAGE_TSX_6F357C17("zolu_kas_dashboard_page.tsx<br/><small>6 nodes</small>")
+    class ZOLU_KAS_DASHBOARD_PAGE_TSX_6F357C17 module;
+    CORE_STACK_ARCHITECTURE_DB9A9D42("Core Stack &amp; Architecture<br/><small>5 nodes</small>")
+    class CORE_STACK_ARCHITECTURE_DB9A9D42 module;
+    OTHER_D0941E68("Other<br/><small>76 nodes</small>")
+    class OTHER_D0941E68 module;
+    CLI_SKILLS_9964CBB8 -->|imports x22| TESTS_FIXTURES_B84B1DCC
+    TESTS_FIXTURES_B84B1DCC -->|indirect call x4| CLI_SKILLS_9964CBB8
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<div class="grid">
+  <div class="card">
+    <h4>Architecture Layers</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>Layer</th><th>Nodes</th><th>Communities</th></tr>
+      <tr><td>Graph Build</td><td>56</td><td><code>2, 63, 7</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>190</td><td><code>3, 1, 4, 5, 62, 13, 14, 15, 17, 23, 24, 25, 29, 30, 31, 32, 41, 42, 55, 56, 57, 58, 59, 60</code></td></tr><tr><td>Tests &amp; Fixtures</td><td>57</td><td><code>0</code></td></tr><tr><td>Production Planning Specification: Zolu AI Web Production Engine</td><td>10</td><td><code>6</code></td></tr><tr><td>Core Engines &amp; Workflows</td><td>8</td><td><code>16</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>7</td><td><code>18</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>7</td><td><code>19</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>7</td><td><code>20</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>7</td><td><code>21</code></td></tr><tr><td>Pembelajaran &amp; Standar Tetap (Learnings &amp; Fixed Rules) - Claudia</td><td>6</td><td><code>22</code></td></tr><tr><td>Neuron N008: Persistent Live Session Checkpoint &amp; Infrastructure State</td><td>6</td><td><code>61</code></td></tr><tr><td>README.md</td><td>6</td><td><code>64</code></td></tr><tr><td>zolu_kas_dashboard_page.tsx</td><td>6</td><td><code>8</code></td></tr><tr><td>Core Stack &amp; Architecture</td><td>5</td><td><code>26</code></td></tr><tr><td>Other</td><td>76</td><td><code>27, 28, 33, 35, 36, 37, 38, 39, 40, 34, 43, 44, 45, 46, 9, 10, 47, 48, 49, 50, 51, 52, 53, 54, 11, 12</code></td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Core Flow</h4>
+    <div class="arrow-chain">Graph Build -&gt; CLI &amp; Skill Installers -&gt; Tests &amp; Fixtures -&gt; Production Planning Specification: Zolu AI Web Production Engine -&gt; Core Engines &amp; Workflows -&gt; Ponytail, lazy senior dev mode -&gt; Ponytail, lazy senior dev mode</div>
+  </div>
+</div>
+<div class="grid">
+  <div class="card">
+    <h4>Graph Report Highlights</h4>
+    <ul>
+      <li>454 nodes · 487 edges · 65 communities (49 shown, 16 thin omitted)</li>
+      <li>Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.85)</li>
+      <li>Token cost: 0 input · 0 output</li>
+      <li>1. `Install` - 15 edges</li>
+      <li>2. `getPonytailInstructions()` - 13 edges</li>
+      <li>3. `ponytailExtension()` - 13 edges</li>
+    </ul>
+  </div>
+</div>
+<hr>
+<!-- ====== 2. Graph Build ====== -->
+<h2 id="build-graph">2. Graph Build</h2>
+<p>Graph Build groups implementation around ponytail, packagejson, toolkit, readmemd, mostly in ponytail/package.json, toolkit/README.md, ponytail/pi-extension/package.json. This section covers 56 nodes and 57 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: Graph Build (56 nodes, 57 edges)
+    subgraph build_graph_ponytail_package_json_1d0e4d1a["ponytail/package.json"]
+        ponytail_package_61b18d19("ponytail/package.json")
+        ponytail_package_files_a3aaab99("files<br/><small>ponytail/package.json</small>")
+        ponytail_package_keywords_a90fca4c("keywords<br/><small>ponytail/package.json</small>")
+        ref_agents_md_d06f2a86("AGENTS.md<br/><small>ponytail/package.json</small>")
+        ref_assets_3dad4e7f("assets/<br/><small>ponytail/package.json</small>")
+        ref_hooks_b06872a5("hooks/<br/><small>ponytail/package.json</small>")
+        ref_license_2326a34f("LICENSE<br/><small>ponytail/package.json</small>")
+        ref_opencode_59c29318("opencode<br/><small>ponytail/package.json</small>")
+        ref_pi_extension_5372c4b4("pi-extension/<br/><small>ponytail/package.json</small>")
+        ref_qoder_c277cdb9("qoder<br/><small>ponytail/package.json</small>")
+        ref_qoder_plugin_e78f29fc(".qoder-plugin/<br/><small>ponytail/package.json</small>")
+        ref_scripts_uninstall_js_07bfe050("uninstall.js<br/><small>ponytail/package.json</small>")
+        ref_skills_11db073e("skills<br/><small>ponytail/package.json</small>")
+        ref_opencode_plugin_608e621f("opencode-plugin<br/><small>ponytail/package.json</small>")
+        ref_pi_ce243ce0("pi<br/><small>ponytail/package.json</small>")
+    end
+    subgraph build_graph_toolkit_README_md_6c874374["toolkit/README.md"]
+        toolkit_readme_daftar_modul_framework_f059f3a4("📦 Daftar Modul &amp; Framework<br/><small>toolkit/README.md</small>")
+        toolkit_readme_93f9acd9("toolkit/README.md")
+    end
+    ponytail_pi_extension_package_882df0b1("pi-extension/package.json")
+    ponytail_package_files_a3aaab99 -->|extends| ref_agents_md_d06f2a86
+    ponytail_package_files_a3aaab99 -->|extends| ref_assets_3dad4e7f
+    ponytail_package_files_a3aaab99 -->|extends| ref_hooks_b06872a5
+    ponytail_package_files_a3aaab99 -->|extends| ref_license_2326a34f
+    ponytail_package_files_a3aaab99 -->|extends| ref_opencode_59c29318
+    ponytail_package_files_a3aaab99 -->|extends| ref_pi_extension_5372c4b4
+    ponytail_package_files_a3aaab99 -->|extends| ref_qoder_c277cdb9
+    ponytail_package_files_a3aaab99 -->|extends| ref_qoder_plugin_e78f29fc
+    ponytail_package_files_a3aaab99 -->|extends| ref_scripts_uninstall_js_07bfe050
+    ponytail_package_files_a3aaab99 -->|extends| ref_skills_11db073e
+    ponytail_package_keywords_a90fca4c -->|extends| ref_opencode_59c29318
+    ponytail_package_keywords_a90fca4c -->|extends| ref_opencode_plugin_608e621f
+    ponytail_package_keywords_a90fca4c -->|extends| ref_pi_ce243ce0
+    ponytail_package_keywords_a90fca4c -->|extends| ref_qoder_c277cdb9
+    ponytail_package_keywords_a90fca4c -->|extends| ref_skills_11db073e
+    ponytail_package_61b18d19 -->|contains| ponytail_package_files_a3aaab99
+    ponytail_package_61b18d19 -->|contains| ponytail_package_keywords_a90fca4c
+    toolkit_readme_93f9acd9 -->|contains| toolkit_readme_daftar_modul_framework_f059f3a4
+    %% Omitted for readability: 38 nodes, 0 edges
+    class ponytail_package_61b18d19 function;
+    class ponytail_package_files_a3aaab99 function;
+    class ponytail_package_keywords_a90fca4c function;
+    class ref_agents_md_d06f2a86 klass;
+    class ref_assets_3dad4e7f async;
+    class ref_hooks_b06872a5 ui;
+    class ref_license_2326a34f klass;
+    class ref_opencode_59c29318 function;
+    class ref_pi_extension_5372c4b4 function;
+    class ref_qoder_c277cdb9 function;
+    class ref_qoder_plugin_e78f29fc function;
+    class ref_scripts_uninstall_js_07bfe050 module;
+    class ref_skills_11db073e function;
+    class ref_opencode_plugin_608e621f function;
+    class ref_pi_ce243ce0 function;
+    class toolkit_readme_daftar_modul_framework_f059f3a4 concept;
+    class toolkit_readme_93f9acd9 concept;
+    class ponytail_pi_extension_package_882df0b1 function;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>ponytail/package.json</code><br><small style="color:var(--muted)">ponytail/package.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>ponytail/package.json node in ponytail/package.json.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>author</code><br><small style="color:var(--muted)">ponytail/package.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>author node in ponytail/package.json.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>name</code><br><small style="color:var(--muted)">ponytail/package.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>name node in ponytail/package.json.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>url</code><br><small style="color:var(--muted)">ponytail/package.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>url node in ponytail/package.json.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>bugs</code><br><small style="color:var(--muted)">ponytail/package.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>bugs node in ponytail/package.json.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>url</code><br><small style="color:var(--muted)">ponytail/package.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>url node in ponytail/package.json.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>description</code><br><small style="color:var(--muted)">ponytail/package.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>description node in ponytail/package.json.</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>exports</code><br><small style="color:var(--muted)">ponytail/package.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Exports documentation data to a target format.</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>./plugin</code><br><small style="color:var(--muted)">ponytail/package.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>./plugin node in ponytail/package.json.</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>files</code><br><small style="color:var(--muted)">ponytail/package.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>files node in ponytail/package.json.</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>homepage</code><br><small style="color:var(--muted)">ponytail/package.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Organizes documentation pages, navigation, or content lookup.</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>keywords</code><br><small style="color:var(--muted)">ponytail/package.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>keywords node in ponytail/package.json.</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>license</code><br><small style="color:var(--muted)">ponytail/package.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>license node in ponytail/package.json.</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>main</code><br><small style="color:var(--muted)">ponytail/package.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>main node in ponytail/package.json.</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>name</code><br><small style="color:var(--muted)">ponytail/package.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>name node in ponytail/package.json.</td>
+</tr>
+<tr>
+  <td>16</td>
+  <td><code>pi</code><br><small style="color:var(--muted)">ponytail/package.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>pi node in ponytail/package.json.</td>
+</tr>
+<tr>
+  <td>17</td>
+  <td><code>extensions</code><br><small style="color:var(--muted)">ponytail/package.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>extensions node in ponytail/package.json.</td>
+</tr>
+<tr>
+  <td>18</td>
+  <td><code>skills</code><br><small style="color:var(--muted)">ponytail/package.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>skills node in ponytail/package.json.</td>
+</tr>
+<tr>
+  <td>19</td>
+  <td><code>publishConfig</code><br><small style="color:var(--muted)">ponytail/package.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Reads, resolves, or persists project configuration.</td>
+</tr>
+<tr>
+  <td>20</td>
+  <td><code>access</code><br><small style="color:var(--muted)">ponytail/package.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>access node in ponytail/package.json.</td>
+</tr>
+<tr>
+  <td>21</td>
+  <td><code>repository</code><br><small style="color:var(--muted)">ponytail/package.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>repository node in ponytail/package.json.</td>
+</tr>
+<tr>
+  <td>22</td>
+  <td><code>type</code><br><small style="color:var(--muted)">ponytail/package.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>type node in ponytail/package.json.</td>
+</tr>
+<tr>
+  <td>23</td>
+  <td><code>url</code><br><small style="color:var(--muted)">ponytail/package.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>url node in ponytail/package.json.</td>
+</tr>
+<tr>
+  <td>24</td>
+  <td><code>scripts</code><br><small style="color:var(--muted)">ponytail/package.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>scripts node in ponytail/package.json.</td>
+</tr>
+<tr>
+  <td>25</td>
+  <td><code>test</code><br><small style="color:var(--muted)">ponytail/package.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Verifies imports, entry points, or version behavior.</td>
+</tr>
+<tr>
+  <td>26</td>
+  <td><code>version</code><br><small style="color:var(--muted)">ponytail/package.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>version node in ponytail/package.json.</td>
+</tr>
+<tr>
+  <td>27</td>
+  <td><code>AGENTS.md</code><br><small style="color:var(--muted)">ponytail/package.json</small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>AGENTS.md node in ponytail/package.json.</td>
+</tr>
+<tr>
+  <td>28</td>
+  <td><code>assets/</code><br><small style="color:var(--muted)">ponytail/package.json</small></td>
+  <td><span class="tag tag-async">Async</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>assets/ node in ponytail/package.json.</td>
+</tr>
+<tr>
+  <td>29</td>
+  <td><code>hooks/</code><br><small style="color:var(--muted)">ponytail/package.json</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>hooks/ node in ponytail/package.json.</td>
+</tr>
+<tr>
+  <td>30</td>
+  <td><code>LICENSE</code><br><small style="color:var(--muted)">ponytail/package.json</small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>LICENSE node in ponytail/package.json.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>ponytail/package.json</code></td><td>41 nodes</td></tr>
+<tr><td><code>toolkit/README.md</code></td><td>9 nodes</td></tr>
+<tr><td><code>ponytail/pi-extension/package.json</code></td><td>6 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x38, extends x19. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 3. CLI & Skill Installers ====== -->
+<h2 id="cli-skills">3. CLI &amp; Skill Installers</h2>
+<p>CLI &amp; Skill Installers groups implementation around ponytail, skills, skillmd, agents, mostly in ponytail/README.md, ponytail/README.ko.md, ponytail/README.es.md. This section covers 190 nodes and 171 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: CLI &amp; Skill Installers (190 nodes, 171 edges)
+    subgraph cli_skills_opencode_plugins_ponytail_mjs_a268305e[".opencode/plugins/ponytail.mjs"]
+        ponytail_opencode_plugins_ponytail_b70099ee("ponytail.mjs")
+        ponytail_opencode_plugins_ponytail_dirname_a4d86cba("__dirname<br/><small>.opencode/plugins/ponytail.mjs</small>")
+        ponytail_opencode_plugins_ponytail_readmode_6df6db11("readMode()<br/><small>.opencode/plugins/ponytail.mjs</small>")
+        ponytail_opencode_plugins_ponytail_require_eb2dd9d7("require<br/><small>.opencode/plugins/ponytail.mjs</small>")
+        ponytail_opencode_plugins_ponytail_statepath_e2db2453("statePath<br/><small>.opencode/plugins/ponytail.mjs</small>")
+        ponytail_opencode_plugins_ponytail_writemode_672e3cee("writeMode()<br/><small>.opencode/plugins/ponytail.mjs</small>")
+        ponytail_opencode_plugins_ponytail_getdefaultmod_103b48d5("getDefaultMode, normalizePersistedMode<br/><small>.opencode/plugins/ponytail.mjs</small>")
+        ponytail_opencode_plugins_ponytail_getponytailin_1b9cdc3b("getPonytailInstructions<br/><small>.opencode/plugins/ponytail.mjs</small>")
+        ponytail_opencode_plugins_ponytail_parsecommandf_d3d49ce2("parseCommandFile<br/><small>.opencode/plugins/ponytail.mjs</small>")
+    end
+    subgraph cli_skills_opencode_plugins_ponytail_frontmatter_d123f0ce[".opencode/plugins/ponytail-frontmatter.cjs"]
+        ponytail_opencode_plugins_ponytail_frontmatter_p_5d2c27cd("parseCommandFile()<br/><small>.opencode/plugins/ponytail-frontmatter.cjs</small>")
+        ponytail_opencode_plugins_ponytail_frontmatter_e526c9f5("ponytail-frontmatter.cjs")
+    end
+    subgraph cli_skills_ponytail_hooks_ponytail_activate_js_3b33dc66["ponytail/hooks/ponytail-activate.js"]
+        ponytail_hooks_ponytail_activate_5d3f34a7("ponytail-activate.js")
+        ponytail_hooks_ponytail_activate_claudedir_44b8f662("claudeDir<br/><small>ponytail/hooks/ponytail-activate.js</small>")
+    end
+    subgraph cli_skills_ponytail_hooks_ponytail_config_js_5d3ef804["ponytail/hooks/ponytail-config.js"]
+        ponytail_hooks_ponytail_config_getclaudedir_cdda0ee2("getClaudeDir()<br/><small>ponytail/hooks/ponytail-config.js</small>")
+        ponytail_hooks_ponytail_config_isshellsafe_89f20b44("isShellSafe()<br/><small>ponytail/hooks/ponytail-config.js</small>")
+    end
+    subgraph cli_skills_ponytail_hooks_ponytail_runtime_js_26b6c942["ponytail/hooks/ponytail-runtime.js"]
+        ponytail_hooks_ponytail_runtime_b60ec3ea("ponytail-runtime.js")
+        ponytail_hooks_ponytail_runtime_iscopilot_40d5c103("isCopilot<br/><small>ponytail/hooks/ponytail-runtime.js</small>")
+    end
+    ponytail_scripts_uninstall_a236f983("uninstall.js")
+    ponytail_hooks_ponytail_activate_5d3f34a7 -->|imports| ponytail_hooks_ponytail_config_getclaudedir_cdda0ee2
+    ponytail_hooks_ponytail_activate_5d3f34a7 -->|imports| ponytail_hooks_ponytail_config_isshellsafe_89f20b44
+    ponytail_hooks_ponytail_activate_5d3f34a7 -->|imports| ponytail_hooks_ponytail_runtime_iscopilot_40d5c103
+    ponytail_hooks_ponytail_activate_5d3f34a7 -->|imports| ponytail_hooks_ponytail_runtime_b60ec3ea
+    ponytail_hooks_ponytail_runtime_b60ec3ea -->|imports| ponytail_hooks_ponytail_config_getclaudedir_cdda0ee2
+    ponytail_scripts_uninstall_a236f983 -->|imports| ponytail_hooks_ponytail_config_getclaudedir_cdda0ee2
+    ponytail_opencode_plugins_ponytail_b70099ee -->|imports| ponytail_opencode_plugins_ponytail_frontmatter_p_5d2c27cd
+    ponytail_opencode_plugins_ponytail_b70099ee -->|imports| ponytail_opencode_plugins_ponytail_frontmatter_e526c9f5
+    %% Omitted for readability: 172 nodes, 0 edges
+    class ponytail_opencode_plugins_ponytail_b70099ee function;
+    class ponytail_opencode_plugins_ponytail_dirname_a4d86cba function;
+    class ponytail_opencode_plugins_ponytail_readmode_6df6db11 function;
+    class ponytail_opencode_plugins_ponytail_require_eb2dd9d7 function;
+    class ponytail_opencode_plugins_ponytail_statepath_e2db2453 function;
+    class ponytail_opencode_plugins_ponytail_writemode_672e3cee function;
+    class ponytail_opencode_plugins_ponytail_getdefaultmod_103b48d5 function;
+    class ponytail_opencode_plugins_ponytail_getponytailin_1b9cdc3b function;
+    class ponytail_opencode_plugins_ponytail_parsecommandf_d3d49ce2 entry;
+    class ponytail_opencode_plugins_ponytail_frontmatter_p_5d2c27cd entry;
+    class ponytail_opencode_plugins_ponytail_frontmatter_e526c9f5 function;
+    class ponytail_hooks_ponytail_activate_5d3f34a7 module;
+    class ponytail_hooks_ponytail_activate_claudedir_44b8f662 function;
+    class ponytail_hooks_ponytail_config_getclaudedir_cdda0ee2 function;
+    class ponytail_hooks_ponytail_config_isshellsafe_89f20b44 function;
+    class ponytail_hooks_ponytail_runtime_b60ec3ea module;
+    class ponytail_hooks_ponytail_runtime_iscopilot_40d5c103 function;
+    class ponytail_scripts_uninstall_a236f983 module;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>.qoder/rules/ponytail.md</code><br><small style="color:var(--muted)">.qoder/rules/ponytail.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing .qoder/rules/ponytail.md.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>Ponytail, lazy senior dev mode</code><br><small style="color:var(--muted)">.qoder/rules/ponytail.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Ponytail, lazy senior dev mode.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>ponytail/README.md</code><br><small style="color:var(--muted)">ponytail/README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing ponytail/README.md.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>Antigravity CLI</code><br><small style="color:var(--muted)">ponytail/README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Antigravity CLI.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>Before / after</code><br><small style="color:var(--muted)">ponytail/README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Before / after.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>Claude Code</code><br><small style="color:var(--muted)">ponytail/README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Claude Code.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>CodeWhale</code><br><small style="color:var(--muted)">ponytail/README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing CodeWhale.</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>Codex</code><br><small style="color:var(--muted)">ponytail/README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Codex.</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>Commands</code><br><small style="color:var(--muted)">ponytail/README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Commands.</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>Development</code><br><small style="color:var(--muted)">ponytail/README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Development.</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>Devin CLI</code><br><small style="color:var(--muted)">ponytail/README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Devin CLI.</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>FAQ</code><br><small style="color:var(--muted)">ponytail/README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing FAQ.</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>Gemini CLI</code><br><small style="color:var(--muted)">ponytail/README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Gemini CLI.</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>GitHub Copilot CLI</code><br><small style="color:var(--muted)">ponytail/README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing GitHub Copilot CLI.</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>Hermes Agent</code><br><small style="color:var(--muted)">ponytail/README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Hermes Agent.</td>
+</tr>
+<tr>
+  <td>16</td>
+  <td><code>How it works</code><br><small style="color:var(--muted)">ponytail/README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing How it works.</td>
+</tr>
+<tr>
+  <td>17</td>
+  <td><code>Install</code><br><small style="color:var(--muted)">ponytail/README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Install.</td>
+</tr>
+<tr>
+  <td>18</td>
+  <td><code>License</code><br><small style="color:var(--muted)">ponytail/README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing License.</td>
+</tr>
+<tr>
+  <td>19</td>
+  <td><code>Numbers</code><br><small style="color:var(--muted)">ponytail/README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Numbers.</td>
+</tr>
+<tr>
+  <td>20</td>
+  <td><code>OpenClaw</code><br><small style="color:var(--muted)">ponytail/README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing OpenClaw.</td>
+</tr>
+<tr>
+  <td>21</td>
+  <td><code>OpenCode</code><br><small style="color:var(--muted)">ponytail/README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing OpenCode.</td>
+</tr>
+<tr>
+  <td>22</td>
+  <td><code>Pi agent harness</code><br><small style="color:var(--muted)">ponytail/README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Pi agent harness.</td>
+</tr>
+<tr>
+  <td>23</td>
+  <td><code>Qoder</code><br><small style="color:var(--muted)">ponytail/README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Qoder.</td>
+</tr>
+<tr>
+  <td>24</td>
+  <td><code>Sponsors</code><br><small style="color:var(--muted)">ponytail/README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Sponsors.</td>
+</tr>
+<tr>
+  <td>25</td>
+  <td><code>Star History</code><br><small style="color:var(--muted)">ponytail/README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Star History.</td>
+</tr>
+<tr>
+  <td>26</td>
+  <td><code>Swival</code><br><small style="color:var(--muted)">ponytail/README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Swival.</td>
+</tr>
+<tr>
+  <td>27</td>
+  <td><code>Uninstall</code><br><small style="color:var(--muted)">ponytail/README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Uninstall.</td>
+</tr>
+<tr>
+  <td>28</td>
+  <td><code>getClaudeDir()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>ponytail-activate.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small><br><code>ponytail-config.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>ponytail-runtime.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small><br>+1 more</td>
+  <td>No direct outbound edge</td>
+  <td>getClaudeDir() node in ponytail/hooks/ponytail-config.js.</td>
+</tr>
+<tr>
+  <td>29</td>
+  <td><code>isShellSafe()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>ponytail-activate.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small><br><code>ponytail-config.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td>No direct outbound edge</td>
+  <td>isShellSafe() node in ponytail/hooks/ponytail-config.js.</td>
+</tr>
+<tr>
+  <td>30</td>
+  <td><code>removeIfExists()</code><br><small style="color:var(--muted)">ponytail/scripts/uninstall.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>removeIfExists() node in ponytail/scripts/uninstall.js.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>ponytail/README.md</code></td><td>25 nodes</td></tr>
+<tr><td><code>ponytail/README.ko.md</code></td><td>22 nodes</td></tr>
+<tr><td><code>ponytail/README.es.md</code></td><td>21 nodes</td></tr>
+<tr><td><code>ponytail/hooks/ponytail-activate.js</code></td><td>10 nodes</td></tr>
+<tr><td><code>skills/ponytail/SKILL.md</code></td><td>9 nodes</td></tr>
+<tr><td><code>.opencode/plugins/ponytail.mjs</code></td><td>9 nodes</td></tr>
+<tr><td><code>skills/ponytail/SKILL.md</code></td><td>9 nodes</td></tr>
+<tr><td><code>skills/ponytail-help/SKILL.md</code></td><td>8 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x158, imports x6, references x4, imports x2. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 4. Tests & Fixtures ====== -->
+<h2 id="tests-fixtures">4. Tests &amp; Fixtures</h2>
+<p>Tests &amp; Fixtures groups implementation around ponytail, hooks, configjs, extension, mostly in ponytail/hooks/ponytail-config.js, ponytail/pi-extension/index.js, ponytail/hooks/ponytail-instructions.js. This section covers 57 nodes and 119 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: Tests &amp; Fixtures (57 nodes, 119 edges)
+    subgraph tests_fixtures_ponytail_hooks_ponytail_config_js_298a56c8["ponytail/hooks/ponytail-config.js"]
+        ponytail_hooks_ponytail_config_getconfigpath_99a2d710("getConfigPath()<br/><small>ponytail/hooks/ponytail-config.js</small>")
+        ponytail_hooks_ponytail_config_getconfigdir_11eb74d4("getConfigDir()<br/><small>ponytail/hooks/ponytail-config.js</small>")
+        ponytail_hooks_ponytail_config_getdefaultmode_e08b0a47("getDefaultMode()<br/><small>ponytail/hooks/ponytail-config.js</small>")
+        ponytail_hooks_ponytail_config_gethidestatus_b7520fb0("getHideStatus()<br/><small>ponytail/hooks/ponytail-config.js</small>")
+        ponytail_hooks_ponytail_config_getquietstartup_e3631449("getQuietStartup()<br/><small>ponytail/hooks/ponytail-config.js</small>")
+        ponytail_hooks_ponytail_config_normalizepersiste_56f04243("normalizePersistedMode()<br/><small>ponytail/hooks/ponytail-config.js</small>")
+        ponytail_hooks_ponytail_config_normalizeconfigmo_8053930d("normalizeConfigMode()<br/><small>ponytail/hooks/ponytail-config.js</small>")
+        ponytail_hooks_ponytail_config_normalizemode_03b6d2b3("normalizeMode()<br/><small>ponytail/hooks/ponytail-config.js</small>")
+        ponytail_hooks_ponytail_config_writedefaultmode_f0661819("writeDefaultMode()<br/><small>ponytail/hooks/ponytail-config.js</small>")
+    end
+    subgraph tests_fixtures_ponytail_hooks_ponytail_instructi_58d68942["ponytail/hooks/ponytail-instructions.js"]
+        ponytail_hooks_ponytail_instructions_filterskill_1b655263("filterSkillBodyForMode()<br/><small>ponytail/hooks/ponytail-instructions.js</small>")
+        ponytail_hooks_ponytail_instructions_getponytail_3d13839b("getPonytailInstructions()<br/><small>ponytail/hooks/ponytail-instructions.js</small>")
+        ponytail_hooks_ponytail_instructions_getfallback_9542b159("getFallbackInstructions()<br/><small>ponytail/hooks/ponytail-instructions.js</small>")
+    end
+    subgraph tests_fixtures_ponytail_hooks_ponytail_mode_trac_86d705b3["ponytail/hooks/ponytail-mode-tracker.js"]
+        ponytail_hooks_ponytail_mode_tracker_febd017e("ponytail-mode-tracker.js")
+        ponytail_hooks_ponytail_mode_tracker_finish_01f4ad14("finish()<br/><small>ponytail/hooks/ponytail-mode-tracker.js</small>")
+    end
+    subgraph tests_fixtures_ponytail_pi_extension_index_js_2ee43314["ponytail/pi-extension/index.js"]
+        ponytail_pi_extension_index_9d2d2187("index.js")
+        ponytail_pi_extension_index_ponytailextension_a321ba46("ponytailExtension()<br/><small>ponytail/pi-extension/index.js</small>")
+    end
+    ponytail_pi_extension_test_helpers_test_2bad389e("helpers.test.js")
+    ponytail_hooks_ponytail_subagent_e36b1d4c("ponytail-subagent.js")
+    ponytail_hooks_ponytail_config_getconfigpath_99a2d710 -->|calls| ponytail_hooks_ponytail_config_getconfigdir_11eb74d4
+    ponytail_hooks_ponytail_config_getdefaultmode_e08b0a47 -->|calls| ponytail_hooks_ponytail_config_getconfigpath_99a2d710
+    ponytail_hooks_ponytail_config_gethidestatus_b7520fb0 -->|calls| ponytail_hooks_ponytail_config_getconfigpath_99a2d710
+    ponytail_hooks_ponytail_config_getquietstartup_e3631449 -->|calls| ponytail_hooks_ponytail_config_getconfigpath_99a2d710
+    ponytail_hooks_ponytail_config_normalizepersiste_56f04243 -->|calls| ponytail_hooks_ponytail_config_normalizeconfigmo_8053930d
+    ponytail_hooks_ponytail_config_normalizepersiste_56f04243 -->|calls| ponytail_hooks_ponytail_config_normalizemode_03b6d2b3
+    ponytail_hooks_ponytail_config_writedefaultmode_f0661819 -->|calls| ponytail_hooks_ponytail_config_normalizemode_03b6d2b3
+    ponytail_hooks_ponytail_config_writedefaultmode_f0661819 -->|calls| ponytail_hooks_ponytail_config_getconfigpath_99a2d710
+    ponytail_hooks_ponytail_instructions_filterskill_1b655263 -->|calls| ponytail_hooks_ponytail_config_normalizemode_03b6d2b3
+    ponytail_hooks_ponytail_instructions_getponytail_3d13839b -->|calls| ponytail_hooks_ponytail_config_normalizepersiste_56f04243
+    ponytail_hooks_ponytail_instructions_getponytail_3d13839b -->|calls| ponytail_hooks_ponytail_config_normalizemode_03b6d2b3
+    ponytail_hooks_ponytail_instructions_getponytail_3d13839b -->|calls| ponytail_hooks_ponytail_instructions_filterskill_1b655263
+    ponytail_hooks_ponytail_instructions_getponytail_3d13839b -->|calls| ponytail_hooks_ponytail_instructions_getfallback_9542b159
+    ponytail_hooks_ponytail_mode_tracker_finish_01f4ad14 -->|calls| ponytail_hooks_ponytail_instructions_getponytail_3d13839b
+    ponytail_hooks_ponytail_mode_tracker_finish_01f4ad14 -->|calls| ponytail_hooks_ponytail_config_writedefaultmode_f0661819
+    ponytail_hooks_ponytail_mode_tracker_finish_01f4ad14 -->|calls| ponytail_hooks_ponytail_config_getdefaultmode_e08b0a47
+    ponytail_pi_extension_index_ponytailextension_a321ba46 -->|calls| ponytail_hooks_ponytail_config_writedefaultmode_f0661819
+    ponytail_pi_extension_index_ponytailextension_a321ba46 -->|calls| ponytail_hooks_ponytail_config_getquietstartup_e3631449
+    ponytail_pi_extension_index_ponytailextension_a321ba46 -->|calls| ponytail_hooks_ponytail_instructions_getponytail_3d13839b
+    ponytail_pi_extension_index_ponytailextension_a321ba46 -->|calls| ponytail_hooks_ponytail_config_getdefaultmode_e08b0a47
+    ponytail_pi_extension_index_ponytailextension_a321ba46 -->|calls| ponytail_hooks_ponytail_config_gethidestatus_b7520fb0
+    ponytail_pi_extension_index_ponytailextension_a321ba46 -->|calls| ponytail_hooks_ponytail_config_normalizepersiste_56f04243
+    ponytail_hooks_ponytail_mode_tracker_febd017e -->|imports| ponytail_hooks_ponytail_config_getdefaultmode_e08b0a47
+    ponytail_hooks_ponytail_mode_tracker_febd017e -->|imports| ponytail_hooks_ponytail_config_writedefaultmode_f0661819
+    %% Omitted for readability: 39 nodes, 11 edges
+    class ponytail_hooks_ponytail_config_getconfigpath_99a2d710 function;
+    class ponytail_hooks_ponytail_config_getconfigdir_11eb74d4 function;
+    class ponytail_hooks_ponytail_config_getdefaultmode_e08b0a47 function;
+    class ponytail_hooks_ponytail_config_gethidestatus_b7520fb0 function;
+    class ponytail_hooks_ponytail_config_getquietstartup_e3631449 function;
+    class ponytail_hooks_ponytail_config_normalizepersiste_56f04243 function;
+    class ponytail_hooks_ponytail_config_normalizeconfigmo_8053930d function;
+    class ponytail_hooks_ponytail_config_normalizemode_03b6d2b3 function;
+    class ponytail_hooks_ponytail_config_writedefaultmode_f0661819 function;
+    class ponytail_hooks_ponytail_instructions_filterskill_1b655263 function;
+    class ponytail_hooks_ponytail_instructions_getponytail_3d13839b function;
+    class ponytail_hooks_ponytail_instructions_getfallback_9542b159 function;
+    class ponytail_hooks_ponytail_mode_tracker_febd017e module;
+    class ponytail_hooks_ponytail_mode_tracker_finish_01f4ad14 function;
+    class ponytail_pi_extension_index_9d2d2187 module;
+    class ponytail_pi_extension_index_ponytailextension_a321ba46 function;
+    class ponytail_pi_extension_test_helpers_test_2bad389e test;
+    class ponytail_hooks_ponytail_subagent_e36b1d4c module;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>getConfigDir()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>getConfigPath()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>ponytail-config.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>ponytail-runtime.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small></td>
+  <td>No direct outbound edge</td>
+  <td>Reads, resolves, or persists project configuration.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>getConfigPath()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>getDefaultMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>getHideStatus()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>getQuietStartup()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br>+3 more</td>
+  <td><code>getConfigDir()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td>Reads, resolves, or persists project configuration.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>getDefaultMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>ponytail-activate.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small><br>+5 more</td>
+  <td><code>getConfigPath()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td>getDefaultMode() node in ponytail/hooks/ponytail-config.js.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>getHideStatus()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>ponytail-config.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>ponytailExtension()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
+  <td><code>getConfigPath()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td>getHideStatus() node in ponytail/hooks/ponytail-config.js.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>getQuietStartup()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>ponytail-config.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>ponytailExtension()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
+  <td><code>getConfigPath()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td>getQuietStartup() node in ponytail/hooks/ponytail-config.js.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>isDeactivationCommand()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td><span class="tag tag-cmd">Entry</span></td>
+  <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>ponytail-config.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br>+2 more</td>
+  <td>No direct outbound edge</td>
+  <td>isDeactivationCommand() node in ponytail/hooks/ponytail-config.js.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>normalizeConfigMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>normalizePersistedMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>ponytail-config.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td>No direct outbound edge</td>
+  <td>Reads, resolves, or persists project configuration.</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>normalizeMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>filterSkillBodyForMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br><code>getPonytailInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br>+5 more</td>
+  <td>No direct outbound edge</td>
+  <td>normalizeMode() node in ponytail/hooks/ponytail-config.js.</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>normalizePersistedMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>getPonytailInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>parsePonytailCommand()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br>+6 more</td>
+  <td><code>normalizeConfigMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>normalizeMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td>normalizePersistedMode() node in ponytail/hooks/ponytail-config.js.</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>writeDefaultMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>ponytail-config.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br>+2 more</td>
+  <td><code>getConfigPath()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>normalizeMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td>writeDefaultMode() node in ponytail/hooks/ponytail-config.js.</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>filterSkillBodyForMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>getPonytailInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>ponytail-instructions.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small></td>
+  <td><code>normalizeMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td>filterSkillBodyForMode() node in ponytail/hooks/ponytail-instructions.js.</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>getFallbackInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>getPonytailInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br><code>ponytail-instructions.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small></td>
+  <td>No direct outbound edge</td>
+  <td>getFallbackInstructions() node in ponytail/hooks/ponytail-instructions.js.</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>getPonytailInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>inject()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-subagent.js</small><br>+6 more</td>
+  <td><code>filterSkillBodyForMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br><code>getFallbackInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br><code>normalizeMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br>+1 more</td>
+  <td>getPonytailInstructions() node in ponytail/hooks/ponytail-instructions.js.</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>ponytail-mode-tracker.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small></td>
+  <td><code>clearMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small><br><code>getDefaultMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>getPonytailInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br>+5 more</td>
+  <td>finish() node in ponytail/hooks/ponytail-mode-tracker.js.</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>clearMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br><code>ponytail-activate.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small><br><code>ponytail-mode-tracker.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br>+1 more</td>
+  <td>No direct outbound edge</td>
+  <td>clearMode() node in ponytail/hooks/ponytail-runtime.js.</td>
+</tr>
+<tr>
+  <td>16</td>
+  <td><code>readMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br><code>ponytail-mode-tracker.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br><code>ponytail-runtime.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small><br>+1 more</td>
+  <td>No direct outbound edge</td>
+  <td>readMode() node in ponytail/hooks/ponytail-runtime.js.</td>
+</tr>
+<tr>
+  <td>17</td>
+  <td><code>setMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br><code>ponytail-activate.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small><br><code>ponytail-mode-tracker.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br>+1 more</td>
+  <td>No direct outbound edge</td>
+  <td>setMode() node in ponytail/hooks/ponytail-runtime.js.</td>
+</tr>
+<tr>
+  <td>18</td>
+  <td><code>writeHookOutput()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br><code>inject()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-subagent.js</small><br><code>ponytail-activate.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small><br>+3 more</td>
+  <td>No direct outbound edge</td>
+  <td>writeHookOutput() node in ponytail/hooks/ponytail-runtime.js.</td>
+</tr>
+<tr>
+  <td>19</td>
+  <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-subagent.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>ponytail-subagent.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-subagent.js</small></td>
+  <td><code>inject()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-subagent.js</small></td>
+  <td>finish() node in ponytail/hooks/ponytail-subagent.js.</td>
+</tr>
+<tr>
+  <td>20</td>
+  <td><code>inject()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-subagent.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-subagent.js</small></td>
+  <td><code>getPonytailInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br><code>writeHookOutput()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small></td>
+  <td>inject() node in ponytail/hooks/ponytail-subagent.js.</td>
+</tr>
+<tr>
+  <td>21</td>
+  <td><code>parsePonytailCommand()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
+  <td><span class="tag tag-cmd">Entry</span></td>
+  <td><code>helpers.test.js</code><br><small style="color:var(--muted)">pi-extension/test/helpers.test.js</small><br><code>ponytailExtension()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
+  <td><code>normalizeMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>normalizePersistedMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td>parsePonytailCommand() node in ponytail/pi-extension/index.js.</td>
+</tr>
+<tr>
+  <td>22</td>
+  <td><code>ponytailExtension()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>createPiHarness()</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small><br><code>extension.test.js</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small></td>
+  <td><code>getDefaultMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>getHideStatus()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>getPonytailInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br>+6 more</td>
+  <td>ponytailExtension() node in ponytail/pi-extension/index.js.</td>
+</tr>
+<tr>
+  <td>23</td>
+  <td><code>syncStatus()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>syncStatus() node in ponytail/pi-extension/index.js.</td>
+</tr>
+<tr>
+  <td>24</td>
+  <td><code>resolveSessionMode()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>helpers.test.js</code><br><small style="color:var(--muted)">pi-extension/test/helpers.test.js</small><br><code>ponytailExtension()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
+  <td><code>normalizePersistedMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td>resolveSessionMode() node in ponytail/pi-extension/index.js.</td>
+</tr>
+<tr>
+  <td>25</td>
+  <td><code>createCommandContext()</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small></td>
+  <td><span class="tag tag-func">Test</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>createCommandContext() node in pi-extension/test/extension.test.js.</td>
+</tr>
+<tr>
+  <td>26</td>
+  <td><code>createPiHarness()</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small></td>
+  <td><span class="tag tag-func">Test</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>ponytailExtension()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
+  <td>createPiHarness() node in pi-extension/test/extension.test.js.</td>
+</tr>
+<tr>
+  <td>27</td>
+  <td><code>notify()</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small></td>
+  <td><span class="tag tag-func">Test</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>notify() node in pi-extension/test/extension.test.js.</td>
+</tr>
+<tr>
+  <td>28</td>
+  <td><code>withTempConfig()</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small></td>
+  <td><span class="tag tag-func">Test</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Reads, resolves, or persists project configuration.</td>
+</tr>
+<tr>
+  <td>29</td>
+  <td><code>ponytail-config.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td><span class="tag tag-class">Module</span></td>
+  <td><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>ponytail-activate.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small><br><code>ponytail-instructions.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br>+4 more</td>
+  <td><code>getClaudeDir()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>getConfigDir()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>getConfigPath()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br>+9 more</td>
+  <td>Reads, resolves, or persists project configuration.</td>
+</tr>
+<tr>
+  <td>30</td>
+  <td><code>fs</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>fs node in ponytail/hooks/ponytail-config.js.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>ponytail/hooks/ponytail-config.js</code></td><td>16 nodes</td></tr>
+<tr><td><code>ponytail/pi-extension/index.js</code></td><td>11 nodes</td></tr>
+<tr><td><code>ponytail/hooks/ponytail-instructions.js</code></td><td>9 nodes</td></tr>
+<tr><td><code>ponytail/hooks/ponytail-subagent.js</code></td><td>6 nodes</td></tr>
+<tr><td><code>ponytail/hooks/ponytail-mode-tracker.js</code></td><td>5 nodes</td></tr>
+<tr><td><code>pi-extension/test/extension.test.js</code></td><td>5 nodes</td></tr>
+<tr><td><code>ponytail/hooks/ponytail-runtime.js</code></td><td>4 nodes</td></tr>
+<tr><td><code>pi-extension/test/helpers.test.js</code></td><td>1 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: calls x37, contains x31, imports x28, indirect call x15. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 5. Production Planning Specification: Zolu AI Web Production Engine ====== -->
+<h2 id="production-planning-specification-zolu-ai-web-pr">5. Production Planning Specification: Zolu AI Web Production Engine</h2>
+<p>Production Planning Specification: Zolu AI Web Production Engine groups implementation around prod, plannermd, modular, production, mostly in prod_planner.md. This section covers 10 nodes and 9 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: Production Planning Specification: Zolu AI Web Production Engine (10 nodes, 9 edges)
+    prod_planner_production_planning_specification_z_d72bbd60("Production Planning Specification: Zolu...<br/><small>prod_planner.md</small>")
+    prod_planner_061162a7("prod_planner.md")
+    prod_planner_1_arsitektur_sistem_spesifikasi_int_1b7115d6("1. Arsitektur Sistem &amp; Spesifikasi Inti<br/><small>prod_planner.md</small>")
+    prod_planner_1_1_tech_stack_standar_68b886b4("1.1 Tech Stack Standar<br/><small>prod_planner.md</small>")
+    prod_planner_4_skema_database_sqlite_wal_mode_4b8b458a("4. Skema Database SQLite (WAL Mode)<br/><small>prod_planner.md</small>")
+    prod_planner_5_integrasi_mesin_ai_9router_lib_ai_ad57180e("5. Integrasi Mesin AI 9Router (lib/ai/...<br/><small>prod_planner.md</small>")
+    prod_planner_2_aturan_modularity_maintenance_max_0a0a0b3b("2. Aturan Modularity &amp; Maintenance (Max...<br/><small>prod_planner.md</small>")
+    prod_planner_3_struktur_direktori_proyek_modular_354aa84b("3. Struktur Direktori Proyek (Modular L...<br/><small>prod_planner.md</small>")
+    prod_planner_6_prompting_invariant_modular_code_0de2a24f("6. Prompting Invariant: Modular Code De...<br/><small>prod_planner.md</small>")
+    prod_planner_7_tahapan_implementasi_deployment_4436528a("7. Tahapan Implementasi &amp; Deployment<br/><small>prod_planner.md</small>")
+    prod_planner_061162a7 -->|contains| prod_planner_production_planning_specification_z_d72bbd60
+    prod_planner_1_arsitektur_sistem_spesifikasi_int_1b7115d6 -->|contains| prod_planner_1_1_tech_stack_standar_68b886b4
+    prod_planner_production_planning_specification_z_d72bbd60 -->|contains| prod_planner_1_arsitektur_sistem_spesifikasi_int_1b7115d6
+    prod_planner_production_planning_specification_z_d72bbd60 -->|contains| prod_planner_4_skema_database_sqlite_wal_mode_4b8b458a
+    prod_planner_production_planning_specification_z_d72bbd60 -->|contains| prod_planner_5_integrasi_mesin_ai_9router_lib_ai_ad57180e
+    prod_planner_production_planning_specification_z_d72bbd60 -->|contains| prod_planner_6_prompting_invariant_modular_code_0de2a24f
+    prod_planner_production_planning_specification_z_d72bbd60 -->|contains| prod_planner_7_tahapan_implementasi_deployment_4436528a
+    prod_planner_production_planning_specification_z_d72bbd60 -->|contains| prod_planner_2_aturan_modularity_maintenance_max_0a0a0b3b
+    prod_planner_production_planning_specification_z_d72bbd60 -->|contains| prod_planner_3_struktur_direktori_proyek_modular_354aa84b
+    class prod_planner_production_planning_specification_z_d72bbd60 concept;
+    class prod_planner_061162a7 concept;
+    class prod_planner_1_arsitektur_sistem_spesifikasi_int_1b7115d6 concept;
+    class prod_planner_1_1_tech_stack_standar_68b886b4 concept;
+    class prod_planner_4_skema_database_sqlite_wal_mode_4b8b458a concept;
+    class prod_planner_5_integrasi_mesin_ai_9router_lib_ai_ad57180e concept;
+    class prod_planner_2_aturan_modularity_maintenance_max_0a0a0b3b concept;
+    class prod_planner_3_struktur_direktori_proyek_modular_354aa84b concept;
+    class prod_planner_6_prompting_invariant_modular_code_0de2a24f concept;
+    class prod_planner_7_tahapan_implementasi_deployment_4436528a concept;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>prod_planner.md</code><br><small style="color:var(--muted)">prod_planner.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing prod_planner.md.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>1.1 Tech Stack Standar</code><br><small style="color:var(--muted)">prod_planner.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 1.1 Tech Stack Standar.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>1. Arsitektur Sistem &amp; Spesifikasi Inti</code><br><small style="color:var(--muted)">prod_planner.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 1. Arsitektur Sistem &amp; Spesifikasi Inti.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>2. Aturan Modularity &amp; Maintenance (Max 300 Lines/File)</code><br><small style="color:var(--muted)">prod_planner.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 2. Aturan Modularity &amp; Maintenance (Max 300 Lines/File).</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>3. Struktur Direktori Proyek (Modular Layout)</code><br><small style="color:var(--muted)">prod_planner.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 3. Struktur Direktori Proyek (Modular Layout).</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>4. Skema Database SQLite (WAL Mode)</code><br><small style="color:var(--muted)">prod_planner.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 4. Skema Database SQLite (WAL Mode).</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>5. Integrasi Mesin AI 9Router (`lib/ai/router_client.ts`)</code><br><small style="color:var(--muted)">prod_planner.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 5. Integrasi Mesin AI 9Router (`lib/ai/router_client.ts`).</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>6. Prompting Invariant: Modular Code Decomposition</code><br><small style="color:var(--muted)">prod_planner.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 6. Prompting Invariant: Modular Code Decomposition.</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>7. Tahapan Implementasi &amp; Deployment</code><br><small style="color:var(--muted)">prod_planner.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 7. Tahapan Implementasi &amp; Deployment.</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>Production Planning Specification: Zolu AI Web Production Engine</code><br><small style="color:var(--muted)">prod_planner.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Production Planning Specification: Zolu AI Web Production Engine.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>prod_planner.md</code></td><td>10 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x9. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 6. Core Engines & Workflows ====== -->
+<h2 id="core-engines-workflows">6. Core Engines &amp; Workflows</h2>
+<p>Core Engines &amp; Workflows groups implementation around identitymd, ponytail, lazy, senior, mostly in identity.md. This section covers 8 nodes and 7 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: Core Engines &amp; Workflows (8 nodes, 7 edges)
+    identity_core_engines_workflows_013a76c7("Core Engines &amp; Workflows<br/><small>identity.md</small>")
+    identity_identity_claudia_204dadea("Identity: Claudia<br/><small>identity.md</small>")
+    identity_1db089a9("identity.md")
+    identity_1_ponytail_lazy_senior_dev_engine_6629cae7("1. Ponytail (Lazy Senior Dev Engine)<br/><small>identity.md</small>")
+    identity_2_graphify_knowledge_graph_structural_m_a4beaff7("2. Graphify (Knowledge Graph &amp; Structur...<br/><small>identity.md</small>")
+    identity_3_9router_ai_gateway_model_routing_e48ffc60("3. 9Router (AI Gateway &amp; Model Routing)<br/><small>identity.md</small>")
+    identity_karakter_gaya_komunikasi_3d2d1dc4("Karakter &amp; Gaya Komunikasi<br/><small>identity.md</small>")
+    identity_self_learning_loop_1f19af35("Self-Learning Loop<br/><small>identity.md</small>")
+    identity_1db089a9 -->|contains| identity_identity_claudia_204dadea
+    identity_core_engines_workflows_013a76c7 -->|contains| identity_1_ponytail_lazy_senior_dev_engine_6629cae7
+    identity_core_engines_workflows_013a76c7 -->|contains| identity_2_graphify_knowledge_graph_structural_m_a4beaff7
+    identity_core_engines_workflows_013a76c7 -->|contains| identity_3_9router_ai_gateway_model_routing_e48ffc60
+    identity_identity_claudia_204dadea -->|contains| identity_core_engines_workflows_013a76c7
+    identity_identity_claudia_204dadea -->|contains| identity_self_learning_loop_1f19af35
+    identity_identity_claudia_204dadea -->|contains| identity_karakter_gaya_komunikasi_3d2d1dc4
+    class identity_core_engines_workflows_013a76c7 concept;
+    class identity_identity_claudia_204dadea concept;
+    class identity_1db089a9 concept;
+    class identity_1_ponytail_lazy_senior_dev_engine_6629cae7 concept;
+    class identity_2_graphify_knowledge_graph_structural_m_a4beaff7 concept;
+    class identity_3_9router_ai_gateway_model_routing_e48ffc60 concept;
+    class identity_karakter_gaya_komunikasi_3d2d1dc4 concept;
+    class identity_self_learning_loop_1f19af35 concept;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>identity.md</code><br><small style="color:var(--muted)">identity.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing identity.md.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>1. Ponytail (Lazy Senior Dev Engine)</code><br><small style="color:var(--muted)">identity.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 1. Ponytail (Lazy Senior Dev Engine).</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>2. Graphify (Knowledge Graph &amp; Structural Memory)</code><br><small style="color:var(--muted)">identity.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 2. Graphify (Knowledge Graph &amp; Structural Memory).</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>3. 9Router (AI Gateway &amp; Model Routing)</code><br><small style="color:var(--muted)">identity.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 3. 9Router (AI Gateway &amp; Model Routing).</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>Core Engines &amp; Workflows</code><br><small style="color:var(--muted)">identity.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Core Engines &amp; Workflows.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>Identity: Claudia</code><br><small style="color:var(--muted)">identity.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Identity: Claudia.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>Karakter &amp; Gaya Komunikasi</code><br><small style="color:var(--muted)">identity.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Karakter &amp; Gaya Komunikasi.</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>Self-Learning Loop</code><br><small style="color:var(--muted)">identity.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Self-Learning Loop.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>identity.md</code></td><td>8 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x7. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 7. Ponytail, lazy senior dev mode ====== -->
+<h2 id="ponytail-lazy-senior-dev-mode">7. Ponytail, lazy senior dev mode</h2>
+<p>Ponytail, lazy senior dev mode groups implementation around agentsmd, lazy, graphify, knowledge, mostly in AGENTS.md. This section covers 7 nodes and 6 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: Ponytail, lazy senior dev mode (7 nodes, 6 edges)
+    agents_ponytail_lazy_senior_dev_mode_470b7aad("Ponytail, lazy senior dev mode<br/><small>AGENTS.md</small>")
+    agents_e7052aeb("AGENTS.md")
+    agents_the_minimality_ladder_8a04368d("The Minimality Ladder<br/><small>AGENTS.md</small>")
+    agents_rules_a75588b1("Rules:<br/><small>AGENTS.md</small>")
+    agents_not_lazy_about_0082a118("Not lazy about:<br/><small>AGENTS.md</small>")
+    agents_graphify_knowledge_graph_a454b945("Graphify Knowledge Graph:<br/><small>AGENTS.md</small>")
+    agents_persona_communication_22bdb463("Persona &amp; Communication<br/><small>AGENTS.md</small>")
+    agents_e7052aeb -->|contains| agents_ponytail_lazy_senior_dev_mode_470b7aad
+    agents_ponytail_lazy_senior_dev_mode_470b7aad -->|contains| agents_the_minimality_ladder_8a04368d
+    agents_ponytail_lazy_senior_dev_mode_470b7aad -->|contains| agents_rules_a75588b1
+    agents_ponytail_lazy_senior_dev_mode_470b7aad -->|contains| agents_not_lazy_about_0082a118
+    agents_ponytail_lazy_senior_dev_mode_470b7aad -->|contains| agents_graphify_knowledge_graph_a454b945
+    agents_ponytail_lazy_senior_dev_mode_470b7aad -->|contains| agents_persona_communication_22bdb463
+    class agents_ponytail_lazy_senior_dev_mode_470b7aad concept;
+    class agents_e7052aeb concept;
+    class agents_the_minimality_ladder_8a04368d concept;
+    class agents_rules_a75588b1 concept;
+    class agents_not_lazy_about_0082a118 concept;
+    class agents_graphify_knowledge_graph_a454b945 concept;
+    class agents_persona_communication_22bdb463 concept;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>AGENTS.md</code><br><small style="color:var(--muted)">AGENTS.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing AGENTS.md.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>Graphify Knowledge Graph:</code><br><small style="color:var(--muted)">AGENTS.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Graphify Knowledge Graph:.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>Not lazy about:</code><br><small style="color:var(--muted)">AGENTS.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Not lazy about:.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>Persona &amp; Communication</code><br><small style="color:var(--muted)">AGENTS.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Persona &amp; Communication.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>Ponytail, lazy senior dev mode</code><br><small style="color:var(--muted)">AGENTS.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Ponytail, lazy senior dev mode.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>Rules:</code><br><small style="color:var(--muted)">AGENTS.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Rules:.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>The Minimality Ladder</code><br><small style="color:var(--muted)">AGENTS.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing The Minimality Ladder.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>AGENTS.md</code></td><td>7 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x6. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 8. Ponytail, lazy senior dev mode ====== -->
+<h2 id="ponytail-lazy-senior-dev-mode-36116e">8. Ponytail, lazy senior dev mode</h2>
+<p>Ponytail, lazy senior dev mode groups implementation around rules, agents, ponytailmd, lazy, mostly in .agents/rules/ponytail.md. This section covers 7 nodes and 6 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: Ponytail, lazy senior dev mode (7 nodes, 6 edges)
+    agents_rules_ponytail_ponytail_lazy_senior_dev_m_a22a0c1c("Ponytail, lazy senior dev mode<br/><small>.agents/rules/ponytail.md</small>")
+    agents_rules_ponytail_e898a0ee(".agents/rules/ponytail.md")
+    agents_rules_ponytail_the_minimality_ladder_a25fbc4b("The Minimality Ladder<br/><small>.agents/rules/ponytail.md</small>")
+    agents_rules_ponytail_rules_d812a63a("Rules:<br/><small>.agents/rules/ponytail.md</small>")
+    agents_rules_ponytail_not_lazy_about_e7e7afe3("Not lazy about:<br/><small>.agents/rules/ponytail.md</small>")
+    agents_rules_ponytail_graphify_knowledge_graph_9220918a("Graphify Knowledge Graph:<br/><small>.agents/rules/ponytail.md</small>")
+    agents_rules_ponytail_persona_communication_1572c688("Persona &amp; Communication<br/><small>.agents/rules/ponytail.md</small>")
+    agents_rules_ponytail_e898a0ee -->|contains| agents_rules_ponytail_ponytail_lazy_senior_dev_m_a22a0c1c
+    agents_rules_ponytail_ponytail_lazy_senior_dev_m_a22a0c1c -->|contains| agents_rules_ponytail_the_minimality_ladder_a25fbc4b
+    agents_rules_ponytail_ponytail_lazy_senior_dev_m_a22a0c1c -->|contains| agents_rules_ponytail_rules_d812a63a
+    agents_rules_ponytail_ponytail_lazy_senior_dev_m_a22a0c1c -->|contains| agents_rules_ponytail_not_lazy_about_e7e7afe3
+    agents_rules_ponytail_ponytail_lazy_senior_dev_m_a22a0c1c -->|contains| agents_rules_ponytail_graphify_knowledge_graph_9220918a
+    agents_rules_ponytail_ponytail_lazy_senior_dev_m_a22a0c1c -->|contains| agents_rules_ponytail_persona_communication_1572c688
+    class agents_rules_ponytail_ponytail_lazy_senior_dev_m_a22a0c1c concept;
+    class agents_rules_ponytail_e898a0ee concept;
+    class agents_rules_ponytail_the_minimality_ladder_a25fbc4b concept;
+    class agents_rules_ponytail_rules_d812a63a concept;
+    class agents_rules_ponytail_not_lazy_about_e7e7afe3 concept;
+    class agents_rules_ponytail_graphify_knowledge_graph_9220918a concept;
+    class agents_rules_ponytail_persona_communication_1572c688 concept;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>.agents/rules/ponytail.md</code><br><small style="color:var(--muted)">.agents/rules/ponytail.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing .agents/rules/ponytail.md.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>Graphify Knowledge Graph:</code><br><small style="color:var(--muted)">.agents/rules/ponytail.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Graphify Knowledge Graph:.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>Not lazy about:</code><br><small style="color:var(--muted)">.agents/rules/ponytail.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Not lazy about:.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>Persona &amp; Communication</code><br><small style="color:var(--muted)">.agents/rules/ponytail.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Persona &amp; Communication.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>Ponytail, lazy senior dev mode</code><br><small style="color:var(--muted)">.agents/rules/ponytail.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Ponytail, lazy senior dev mode.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>Rules:</code><br><small style="color:var(--muted)">.agents/rules/ponytail.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Rules:.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>The Minimality Ladder</code><br><small style="color:var(--muted)">.agents/rules/ponytail.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing The Minimality Ladder.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>.agents/rules/ponytail.md</code></td><td>7 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x6. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 9. Ponytail, lazy senior dev mode ====== -->
+<h2 id="ponytail-lazy-senior-dev-mode-2">9. Ponytail, lazy senior dev mode</h2>
+<p>Ponytail, lazy senior dev mode groups implementation around geminimd, lazy, graphify, knowledge, mostly in GEMINI.md. This section covers 7 nodes and 6 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: Ponytail, lazy senior dev mode (7 nodes, 6 edges)
+    gemini_ponytail_lazy_senior_dev_mode_1fe246eb("Ponytail, lazy senior dev mode<br/><small>GEMINI.md</small>")
+    gemini_468da084("GEMINI.md")
+    gemini_the_minimality_ladder_d5916f9d("The Minimality Ladder<br/><small>GEMINI.md</small>")
+    gemini_rules_f8452ae3("Rules:<br/><small>GEMINI.md</small>")
+    gemini_not_lazy_about_493fe573("Not lazy about:<br/><small>GEMINI.md</small>")
+    gemini_graphify_knowledge_graph_8178ad0e("Graphify Knowledge Graph:<br/><small>GEMINI.md</small>")
+    gemini_persona_communication_c4d01176("Persona &amp; Communication<br/><small>GEMINI.md</small>")
+    gemini_468da084 -->|contains| gemini_ponytail_lazy_senior_dev_mode_1fe246eb
+    gemini_ponytail_lazy_senior_dev_mode_1fe246eb -->|contains| gemini_the_minimality_ladder_d5916f9d
+    gemini_ponytail_lazy_senior_dev_mode_1fe246eb -->|contains| gemini_rules_f8452ae3
+    gemini_ponytail_lazy_senior_dev_mode_1fe246eb -->|contains| gemini_not_lazy_about_493fe573
+    gemini_ponytail_lazy_senior_dev_mode_1fe246eb -->|contains| gemini_graphify_knowledge_graph_8178ad0e
+    gemini_ponytail_lazy_senior_dev_mode_1fe246eb -->|contains| gemini_persona_communication_c4d01176
+    class gemini_ponytail_lazy_senior_dev_mode_1fe246eb concept;
+    class gemini_468da084 concept;
+    class gemini_the_minimality_ladder_d5916f9d concept;
+    class gemini_rules_f8452ae3 concept;
+    class gemini_not_lazy_about_493fe573 concept;
+    class gemini_graphify_knowledge_graph_8178ad0e concept;
+    class gemini_persona_communication_c4d01176 concept;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>GEMINI.md</code><br><small style="color:var(--muted)">GEMINI.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing GEMINI.md.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>Graphify Knowledge Graph:</code><br><small style="color:var(--muted)">GEMINI.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Graphify Knowledge Graph:.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>Not lazy about:</code><br><small style="color:var(--muted)">GEMINI.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Not lazy about:.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>Persona &amp; Communication</code><br><small style="color:var(--muted)">GEMINI.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Persona &amp; Communication.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>Ponytail, lazy senior dev mode</code><br><small style="color:var(--muted)">GEMINI.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Ponytail, lazy senior dev mode.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>Rules:</code><br><small style="color:var(--muted)">GEMINI.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Rules:.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>The Minimality Ladder</code><br><small style="color:var(--muted)">GEMINI.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing The Minimality Ladder.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>GEMINI.md</code></td><td>7 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x6. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 10. Ponytail, lazy senior dev mode ====== -->
+<h2 id="ponytail-lazy-senior-dev-mode-3">10. Ponytail, lazy senior dev mode</h2>
+<p>Ponytail, lazy senior dev mode groups implementation around rules, windsurf, ponytailmd, lazy, mostly in .windsurf/rules/ponytail.md. This section covers 7 nodes and 6 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: Ponytail, lazy senior dev mode (7 nodes, 6 edges)
+    windsurf_rules_ponytail_ponytail_lazy_senior_dev_53be56fa("Ponytail, lazy senior dev mode<br/><small>.windsurf/rules/ponytail.md</small>")
+    windsurf_rules_ponytail_d58f346f(".windsurf/rules/ponytail.md")
+    windsurf_rules_ponytail_the_minimality_ladder_c1b7134b("The Minimality Ladder<br/><small>.windsurf/rules/ponytail.md</small>")
+    windsurf_rules_ponytail_rules_858b227b("Rules:<br/><small>.windsurf/rules/ponytail.md</small>")
+    windsurf_rules_ponytail_not_lazy_about_71ec2975("Not lazy about:<br/><small>.windsurf/rules/ponytail.md</small>")
+    windsurf_rules_ponytail_graphify_knowledge_graph_c8e3387f("Graphify Knowledge Graph:<br/><small>.windsurf/rules/ponytail.md</small>")
+    windsurf_rules_ponytail_persona_communication_bf988526("Persona &amp; Communication<br/><small>.windsurf/rules/ponytail.md</small>")
+    windsurf_rules_ponytail_d58f346f -->|contains| windsurf_rules_ponytail_ponytail_lazy_senior_dev_53be56fa
+    windsurf_rules_ponytail_ponytail_lazy_senior_dev_53be56fa -->|contains| windsurf_rules_ponytail_the_minimality_ladder_c1b7134b
+    windsurf_rules_ponytail_ponytail_lazy_senior_dev_53be56fa -->|contains| windsurf_rules_ponytail_rules_858b227b
+    windsurf_rules_ponytail_ponytail_lazy_senior_dev_53be56fa -->|contains| windsurf_rules_ponytail_not_lazy_about_71ec2975
+    windsurf_rules_ponytail_ponytail_lazy_senior_dev_53be56fa -->|contains| windsurf_rules_ponytail_graphify_knowledge_graph_c8e3387f
+    windsurf_rules_ponytail_ponytail_lazy_senior_dev_53be56fa -->|contains| windsurf_rules_ponytail_persona_communication_bf988526
+    class windsurf_rules_ponytail_ponytail_lazy_senior_dev_53be56fa concept;
+    class windsurf_rules_ponytail_d58f346f concept;
+    class windsurf_rules_ponytail_the_minimality_ladder_c1b7134b concept;
+    class windsurf_rules_ponytail_rules_858b227b concept;
+    class windsurf_rules_ponytail_not_lazy_about_71ec2975 concept;
+    class windsurf_rules_ponytail_graphify_knowledge_graph_c8e3387f concept;
+    class windsurf_rules_ponytail_persona_communication_bf988526 concept;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>.windsurf/rules/ponytail.md</code><br><small style="color:var(--muted)">.windsurf/rules/ponytail.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing .windsurf/rules/ponytail.md.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>Graphify Knowledge Graph:</code><br><small style="color:var(--muted)">.windsurf/rules/ponytail.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Graphify Knowledge Graph:.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>Not lazy about:</code><br><small style="color:var(--muted)">.windsurf/rules/ponytail.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Not lazy about:.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>Persona &amp; Communication</code><br><small style="color:var(--muted)">.windsurf/rules/ponytail.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Persona &amp; Communication.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>Ponytail, lazy senior dev mode</code><br><small style="color:var(--muted)">.windsurf/rules/ponytail.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Ponytail, lazy senior dev mode.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>Rules:</code><br><small style="color:var(--muted)">.windsurf/rules/ponytail.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Rules:.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>The Minimality Ladder</code><br><small style="color:var(--muted)">.windsurf/rules/ponytail.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing The Minimality Ladder.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>.windsurf/rules/ponytail.md</code></td><td>7 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x6. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 11. Pembelajaran & Standar Tetap (Learnings & Fixed Rules) - Claudia ====== -->
+<h2 id="pembelajaran-standar-tetap-learnings-fixed-rules">11. Pembelajaran &amp; Standar Tetap (Learnings &amp; Fixed Rules) - Claudia</h2>
+<p>Pembelajaran &amp; Standar Tetap (Learnings &amp; Fixed Rules) - Claudia groups implementation around mojoloker, learningsmd, learning, feedback, mostly in learning/feedback_log/mojoloker_learnings.md. This section covers 6 nodes and 5 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: Pembelajaran &amp; Standar Tetap (Learnings &amp; Fixed Rules) - Claudia (6 nodes, 5 edges)
+    learning_feedback_log_mojoloker_learnings_pembel_28c86ee9("Pembelajaran &amp; Standar Tetap (Learnings...<br/><small>learning/feedback_log/mojoloker_learnings.md</small>")
+    learning_feedback_log_mojoloker_learnings_51e7913a("mojoloker_learnings.md")
+    learning_feedback_log_mojoloker_learnings_3_resp_18aae940("3. Responsivitas Mobile<br/><small>learning/feedback_log/mojoloker_learnings.md</small>")
+    learning_feedback_log_mojoloker_learnings_4_bran_8ccb1758("4. Branding &amp; Desain Khusus MojoLoker<br/><small>learning/feedback_log/mojoloker_learnings.md</small>")
+    learning_feedback_log_mojoloker_learnings_1_tamp_ef7e44a8("1. Tampilan &amp; Mode<br/><small>learning/feedback_log/mojoloker_learnings.md</small>")
+    learning_feedback_log_mojoloker_learnings_2_drop_8e95d8d8("2. Dropdown &amp; Komponen Formulir<br/><small>learning/feedback_log/mojoloker_learnings.md</small>")
+    learning_feedback_log_mojoloker_learnings_51e7913a -->|contains| learning_feedback_log_mojoloker_learnings_pembel_28c86ee9
+    learning_feedback_log_mojoloker_learnings_pembel_28c86ee9 -->|contains| learning_feedback_log_mojoloker_learnings_3_resp_18aae940
+    learning_feedback_log_mojoloker_learnings_pembel_28c86ee9 -->|contains| learning_feedback_log_mojoloker_learnings_4_bran_8ccb1758
+    learning_feedback_log_mojoloker_learnings_pembel_28c86ee9 -->|contains| learning_feedback_log_mojoloker_learnings_1_tamp_ef7e44a8
+    learning_feedback_log_mojoloker_learnings_pembel_28c86ee9 -->|contains| learning_feedback_log_mojoloker_learnings_2_drop_8e95d8d8
+    class learning_feedback_log_mojoloker_learnings_pembel_28c86ee9 concept;
+    class learning_feedback_log_mojoloker_learnings_51e7913a concept;
+    class learning_feedback_log_mojoloker_learnings_3_resp_18aae940 concept;
+    class learning_feedback_log_mojoloker_learnings_4_bran_8ccb1758 concept;
+    class learning_feedback_log_mojoloker_learnings_1_tamp_ef7e44a8 concept;
+    class learning_feedback_log_mojoloker_learnings_2_drop_8e95d8d8 concept;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>mojoloker_learnings.md</code><br><small style="color:var(--muted)">learning/feedback_log/mojoloker_learnings.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing mojoloker_learnings.md.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>1. Tampilan &amp; Mode</code><br><small style="color:var(--muted)">learning/feedback_log/mojoloker_learnings.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 1. Tampilan &amp; Mode.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>2. Dropdown &amp; Komponen Formulir</code><br><small style="color:var(--muted)">learning/feedback_log/mojoloker_learnings.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 2. Dropdown &amp; Komponen Formulir.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>3. Responsivitas Mobile</code><br><small style="color:var(--muted)">learning/feedback_log/mojoloker_learnings.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 3. Responsivitas Mobile.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>4. Branding &amp; Desain Khusus MojoLoker</code><br><small style="color:var(--muted)">learning/feedback_log/mojoloker_learnings.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 4. Branding &amp; Desain Khusus MojoLoker.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>Pembelajaran &amp; Standar Tetap (Learnings &amp; Fixed Rules) - Claudia</code><br><small style="color:var(--muted)">learning/feedback_log/mojoloker_learnings.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Pembelajaran &amp; Standar Tetap (Learnings &amp; Fixed Rules) - Claudia.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>learning/feedback_log/mojoloker_learnings.md</code></td><td>6 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x5. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 12. Neuron N008: Persistent Live Session Checkpoint & Infrastructure State ====== -->
+<h2 id="neuron-n008-persistent-live-session-checkpoint-i">12. Neuron N008: Persistent Live Session Checkpoint &amp; Infrastructure State</h2>
+<p>Neuron N008: Persistent Live Session Checkpoint &amp; Infrastructure State groups implementation around n008, live, session, checkpointmd, mostly in learning/neurons/N008_live_session_checkpoint.md. This section covers 6 nodes and 5 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: Neuron N008: Persistent Live Session Checkpoint &amp; Infrastructure State (6 nodes, 5 edges)
+    learning_neurons_n008_live_session_checkpoint_ne_469a2e07("Neuron N008: Persistent Live Session Ch...<br/><small>learning/neurons/N008_live_session_checkpoint.md</small>")
+    learning_neurons_n008_live_session_checkpoint_e37a3c55("live session checkpoint.md<br/><small>learning/neurons/N008_live_session_checkpoint.md</small>")
+    learning_neurons_n008_live_session_checkpoint_de_8a770681("🚀 Deployed Ecosystem &amp; Port Mappings<br/><small>learning/neurons/N008_live_session_checkpoint.md</small>")
+    learning_neurons_n008_live_session_checkpoint_me_23f6dcb4("📌 Metadata<br/><small>learning/neurons/N008_live_session_checkpoint.md</small>")
+    learning_neurons_n008_live_session_checkpoint_me_63a3598f("🎬 Media Engine &amp; Strict Subtitle Cleaner<br/><small>learning/neurons/N008_live_session_checkpoint.md</small>")
+    learning_neurons_n008_live_session_checkpoint_in_bbf6baea("🛠️ Installed Autonomous Fullstack &amp; Sec...<br/><small>learning/neurons/N008_live_session_checkpoint.md</small>")
+    learning_neurons_n008_live_session_checkpoint_e37a3c55 -->|contains| learning_neurons_n008_live_session_checkpoint_ne_469a2e07
+    learning_neurons_n008_live_session_checkpoint_ne_469a2e07 -->|contains| learning_neurons_n008_live_session_checkpoint_de_8a770681
+    learning_neurons_n008_live_session_checkpoint_ne_469a2e07 -->|contains| learning_neurons_n008_live_session_checkpoint_me_23f6dcb4
+    learning_neurons_n008_live_session_checkpoint_ne_469a2e07 -->|contains| learning_neurons_n008_live_session_checkpoint_me_63a3598f
+    learning_neurons_n008_live_session_checkpoint_ne_469a2e07 -->|contains| learning_neurons_n008_live_session_checkpoint_in_bbf6baea
+    class learning_neurons_n008_live_session_checkpoint_ne_469a2e07 concept;
+    class learning_neurons_n008_live_session_checkpoint_e37a3c55 concept;
+    class learning_neurons_n008_live_session_checkpoint_de_8a770681 concept;
+    class learning_neurons_n008_live_session_checkpoint_me_23f6dcb4 concept;
+    class learning_neurons_n008_live_session_checkpoint_me_63a3598f concept;
+    class learning_neurons_n008_live_session_checkpoint_in_bbf6baea concept;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>N008_live_session_checkpoint.md</code><br><small style="color:var(--muted)">learning/neurons/N008_live_session_checkpoint.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing N008_live_session_checkpoint.md.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>🚀 Deployed Ecosystem &amp; Port Mappings</code><br><small style="color:var(--muted)">learning/neurons/N008_live_session_checkpoint.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🚀 Deployed Ecosystem &amp; Port Mappings.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>🛠️ Installed Autonomous Fullstack &amp; Security Toolkit</code><br><small style="color:var(--muted)">learning/neurons/N008_live_session_checkpoint.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🛠️ Installed Autonomous Fullstack &amp; Security Toolkit.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>🎬 Media Engine &amp; Strict Subtitle Cleaner</code><br><small style="color:var(--muted)">learning/neurons/N008_live_session_checkpoint.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🎬 Media Engine &amp; Strict Subtitle Cleaner.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>📌 Metadata</code><br><small style="color:var(--muted)">learning/neurons/N008_live_session_checkpoint.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 📌 Metadata.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>Neuron N008: Persistent Live Session Checkpoint &amp; Infrastructure State</code><br><small style="color:var(--muted)">learning/neurons/N008_live_session_checkpoint.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Neuron N008: Persistent Live Session Checkpoint &amp; Infrastructure State.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>learning/neurons/N008_live_session_checkpoint.md</code></td><td>6 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x5. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 13. README.md ====== -->
+<h2 id="readme-md">13. README.md</h2>
+<p>README.md groups implementation around readmemd, arsitektur, memori, pengetahuan, mostly in README.md. This section covers 6 nodes and 5 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: README.md (6 nodes, 5 edges)
+    readme_f78a71af("README.md")
+    readme_arsitektur_memori_pengetahuan_bcf53116("🧠 Arsitektur Memori &amp; Pengetahuan<br/><small>README.md</small>")
+    readme_persenjataan_fullstack_yang_terpasang_2993b2a7("🛠️ Persenjataan Fullstack yang Terpasang<br/><small>README.md</small>")
+    readme_standar_keamanan_manajemen_kredensial_543432af("🔒 Standar Keamanan &amp; Manajemen Kredensial<br/><small>README.md</small>")
+    readme_memulai_quick_start_4bf3f978("🚀 Memulai (Quick Start)<br/><small>README.md</small>")
+    readme_core_philosophy_the_minimality_ladder_pon_edc2a743("🌟 Core Philosophy: The Minimality Ladde...<br/><small>README.md</small>")
+    readme_f78a71af -->|contains| readme_arsitektur_memori_pengetahuan_bcf53116
+    readme_f78a71af -->|contains| readme_persenjataan_fullstack_yang_terpasang_2993b2a7
+    readme_f78a71af -->|contains| readme_standar_keamanan_manajemen_kredensial_543432af
+    readme_f78a71af -->|contains| readme_memulai_quick_start_4bf3f978
+    readme_f78a71af -->|contains| readme_core_philosophy_the_minimality_ladder_pon_edc2a743
+    class readme_f78a71af concept;
+    class readme_arsitektur_memori_pengetahuan_bcf53116 concept;
+    class readme_persenjataan_fullstack_yang_terpasang_2993b2a7 concept;
+    class readme_standar_keamanan_manajemen_kredensial_543432af concept;
+    class readme_memulai_quick_start_4bf3f978 concept;
+    class readme_core_philosophy_the_minimality_ladder_pon_edc2a743 concept;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>README.md</code><br><small style="color:var(--muted)">README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing README.md.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>🧠 Arsitektur Memori &amp; Pengetahuan</code><br><small style="color:var(--muted)">README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🧠 Arsitektur Memori &amp; Pengetahuan.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>🌟 Core Philosophy: The Minimality Ladder (Ponytail)</code><br><small style="color:var(--muted)">README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🌟 Core Philosophy: The Minimality Ladder (Ponytail).</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>🚀 Memulai (Quick Start)</code><br><small style="color:var(--muted)">README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🚀 Memulai (Quick Start).</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>🛠️ Persenjataan Fullstack yang Terpasang</code><br><small style="color:var(--muted)">README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🛠️ Persenjataan Fullstack yang Terpasang.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>🔒 Standar Keamanan &amp; Manajemen Kredensial</code><br><small style="color:var(--muted)">README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🔒 Standar Keamanan &amp; Manajemen Kredensial.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>README.md</code></td><td>6 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x5. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 14. zolu_kas_dashboard_page.tsx ====== -->
+<h2 id="zolu-kas-dashboard-page-tsx">14. zolu_kas_dashboard_page.tsx</h2>
+<p>zolu_kas_dashboard_page.tsx groups implementation around zolu, kas, dashboard, pagetsx, mostly in zolu_kas_dashboard_page.tsx. This section covers 6 nodes and 5 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: zolu_kas_dashboard_page.tsx (6 nodes, 5 edges)
+    zolu_kas_dashboard_page_9a86ae0e("zolu_kas_dashboard_page.tsx")
+    zolu_kas_dashboard_page_transaction_fc7d95f6("Transaction<br/><small>zolu_kas_dashboard_page.tsx</small>")
+    zolu_kas_dashboard_page_walletdata_83281b08("WalletData<br/><small>zolu_kas_dashboard_page.tsx</small>")
+    zolu_kas_dashboard_page_categorystat_d9406664("CategoryStat<br/><small>zolu_kas_dashboard_page.tsx</small>")
+    zolu_kas_dashboard_page_toast_e5a01de2("Toast<br/><small>zolu_kas_dashboard_page.tsx</small>")
+    zolu_kas_dashboard_page_dashboardpage_6266d10b("DashboardPage()<br/><small>zolu_kas_dashboard_page.tsx</small>")
+    zolu_kas_dashboard_page_9a86ae0e -->|contains| zolu_kas_dashboard_page_transaction_fc7d95f6
+    zolu_kas_dashboard_page_9a86ae0e -->|contains| zolu_kas_dashboard_page_walletdata_83281b08
+    zolu_kas_dashboard_page_9a86ae0e -->|contains| zolu_kas_dashboard_page_categorystat_d9406664
+    zolu_kas_dashboard_page_9a86ae0e -->|contains| zolu_kas_dashboard_page_toast_e5a01de2
+    zolu_kas_dashboard_page_9a86ae0e -->|contains| zolu_kas_dashboard_page_dashboardpage_6266d10b
+    class zolu_kas_dashboard_page_9a86ae0e ui;
+    class zolu_kas_dashboard_page_transaction_fc7d95f6 ui;
+    class zolu_kas_dashboard_page_walletdata_83281b08 ui;
+    class zolu_kas_dashboard_page_categorystat_d9406664 ui;
+    class zolu_kas_dashboard_page_toast_e5a01de2 ui;
+    class zolu_kas_dashboard_page_dashboardpage_6266d10b ui;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>CategoryStat</code><br><small style="color:var(--muted)">zolu_kas_dashboard_page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>CategoryStat node in zolu_kas_dashboard_page.tsx.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>Toast</code><br><small style="color:var(--muted)">zolu_kas_dashboard_page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Toast node in zolu_kas_dashboard_page.tsx.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>Transaction</code><br><small style="color:var(--muted)">zolu_kas_dashboard_page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Transaction node in zolu_kas_dashboard_page.tsx.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>WalletData</code><br><small style="color:var(--muted)">zolu_kas_dashboard_page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>WalletData node in zolu_kas_dashboard_page.tsx.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>DashboardPage()</code><br><small style="color:var(--muted)">zolu_kas_dashboard_page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Organizes documentation pages, navigation, or content lookup.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>zolu_kas_dashboard_page.tsx</code><br><small style="color:var(--muted)">zolu_kas_dashboard_page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in zolu_kas_dashboard_page.tsx.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>zolu_kas_dashboard_page.tsx</code></td><td>6 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x5. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 15. Core Stack & Architecture ====== -->
+<h2 id="core-stack-architecture">15. Core Stack &amp; Architecture</h2>
+<p>Core Stack &amp; Architecture groups implementation around stackmd, learning, knowledge, base, mostly in learning/knowledge_base/core_stack.md. This section covers 5 nodes and 4 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: Core Stack &amp; Architecture (5 nodes, 4 edges)
+    learning_knowledge_base_core_stack_core_stack_ar_15231e75("Core Stack &amp; Architecture<br/><small>learning/knowledge_base/core_stack.md</small>")
+    learning_knowledge_base_core_stack_d37d2e8e("core_stack.md")
+    learning_knowledge_base_core_stack_3_engineering_24fc6ad9("3. Engineering &amp; Intelligence Engines<br/><small>learning/knowledge_base/core_stack.md</small>")
+    learning_knowledge_base_core_stack_1_database_st_846c0ec9("1. Database &amp; Storage<br/><small>learning/knowledge_base/core_stack.md</small>")
+    learning_knowledge_base_core_stack_2_web_service_0cb8decd("2. Web &amp; Service Stack<br/><small>learning/knowledge_base/core_stack.md</small>")
+    learning_knowledge_base_core_stack_d37d2e8e -->|contains| learning_knowledge_base_core_stack_core_stack_ar_15231e75
+    learning_knowledge_base_core_stack_core_stack_ar_15231e75 -->|contains| learning_knowledge_base_core_stack_3_engineering_24fc6ad9
+    learning_knowledge_base_core_stack_core_stack_ar_15231e75 -->|contains| learning_knowledge_base_core_stack_1_database_st_846c0ec9
+    learning_knowledge_base_core_stack_core_stack_ar_15231e75 -->|contains| learning_knowledge_base_core_stack_2_web_service_0cb8decd
+    class learning_knowledge_base_core_stack_core_stack_ar_15231e75 concept;
+    class learning_knowledge_base_core_stack_d37d2e8e concept;
+    class learning_knowledge_base_core_stack_3_engineering_24fc6ad9 concept;
+    class learning_knowledge_base_core_stack_1_database_st_846c0ec9 concept;
+    class learning_knowledge_base_core_stack_2_web_service_0cb8decd concept;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>core_stack.md</code><br><small style="color:var(--muted)">learning/knowledge_base/core_stack.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing core_stack.md.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>1. Database &amp; Storage</code><br><small style="color:var(--muted)">learning/knowledge_base/core_stack.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 1. Database &amp; Storage.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>2. Web &amp; Service Stack</code><br><small style="color:var(--muted)">learning/knowledge_base/core_stack.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 2. Web &amp; Service Stack.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>3. Engineering &amp; Intelligence Engines</code><br><small style="color:var(--muted)">learning/knowledge_base/core_stack.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 3. Engineering &amp; Intelligence Engines.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>Core Stack &amp; Architecture</code><br><small style="color:var(--muted)">learning/knowledge_base/core_stack.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Core Stack &amp; Architecture.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>learning/knowledge_base/core_stack.md</code></td><td>5 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x4. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 16. Other ====== -->
+<h2 id="other">16. Other</h2>
+<p>Other groups implementation around learning, neurons, readmemd, memory, mostly in learning/neurons/N001_executive_decisions.md, memory.md, learning/feedback_log/README.md. This section covers 76 nodes and 50 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: Other (76 nodes, 50 edges)
+    subgraph other_learning_scripts_grow_neurons_py_af9d11e7["learning/scripts/grow_neurons.py"]
+        learning_scripts_grow_neurons_115f26f1("grow_neurons.py")
+        learning_scripts_grow_neurons_grow_neural_mesh_124978b0("grow_neural_mesh()<br/><small>learning/scripts/grow_neurons.py</small>")
+    end
+    subgraph other_ponytail_hooks_ponytail_statusline_sh_497f4546["ponytail/hooks/ponytail-statusline.sh"]
+        ponytail_hooks_ponytail_statusline_sh_ponytail_h_c98e5687("ponytail-statusline.sh")
+        ponytail_hooks_ponytail_statusline_sh_entry_0bb3c519("ponytail-statusline.sh script<br/><small>ponytail/hooks/ponytail-statusline.sh</small>")
+    end
+    ecosystem_config_803395df("ecosystem.config.cjs")
+    learning_readme_self_learning_framework_1ecd3559("Self-Learning Framework<br/><small>learning/README.md</small>")
+    learning_feedback_log_readme_feedback_log_f5c8b3e6("Feedback Log<br/><small>learning/feedback_log/README.md</small>")
+    learning_knowledge_base_readme_knowledge_base_in_e16af81e("Knowledge Base Index<br/><small>learning/knowledge_base/README.md</small>")
+    learning_neurons_n001_executive_decisions_neuron_068806f7("Neuron N001: Executive Decision Making<br/><small>learning/neurons/N001_executive_decisions.md</small>")
+    learning_neurons_n002_vps_remote_ops_neuron_n002_132ee2f8("Neuron N002: VPS Remote Operations &amp; Pi...<br/><small>learning/neurons/N002_vps_remote_ops.md</small>")
+    learning_neurons_n003_mobile_first_ui_neuron_n00_e1cbf89a("Neuron N003: Mobile-First UI &amp; Compact...<br/><small>learning/neurons/N003_mobile_first_ui.md</small>")
+    learning_neurons_n004_ponytail_minimality_neuron_103ec0c4("Neuron N004: Ponytail Minimality Ladder<br/><small>learning/neurons/N004_ponytail_minimality.md</small>")
+    learning_neurons_n005_graphify_knowledge_neuron_894b4d54("Neuron N005: Graphify Knowledge Network<br/><small>learning/neurons/N005_graphify_knowledge.md</small>")
+    learning_neurons_n006_9router_gateway_neuron_n00_3e4e1422("Neuron N006: 9Router Gateway Engine<br/><small>learning/neurons/N006_9router_gateway.md</small>")
+    learning_neurons_n007_self_improving_loop_neuron_86034018("Neuron N007: Autonomous Self-Improving...<br/><small>learning/neurons/N007_self_improving_loop.md</small>")
+    learning_playbooks_readme_playbooks_6a5783ba("Playbooks<br/><small>learning/playbooks/README.md</small>")
+    memory_claudia_neuron_memory_network_ccf6bccf("Claudia Neuron Memory Network<br/><small>memory.md</small>")
+    ponytail_hooks_ponytail_statusline_ps1_ponytail_82c5179b("ponytail-statusline.ps1")
+    ponytail_hooks_ponytail_statusline_sh_ponytail_h_c98e5687 -->|contains| ponytail_hooks_ponytail_statusline_sh_entry_0bb3c519
+    learning_scripts_grow_neurons_115f26f1 -->|contains| learning_scripts_grow_neurons_grow_neural_mesh_124978b0
+    %% Omitted for readability: 58 nodes, 0 edges
+    class learning_scripts_grow_neurons_115f26f1 module;
+    class learning_scripts_grow_neurons_grow_neural_mesh_124978b0 function;
+    class ponytail_hooks_ponytail_statusline_sh_ponytail_h_c98e5687 function;
+    class ponytail_hooks_ponytail_statusline_sh_entry_0bb3c519 function;
+    class ecosystem_config_803395df function;
+    class learning_readme_self_learning_framework_1ecd3559 concept;
+    class learning_feedback_log_readme_feedback_log_f5c8b3e6 concept;
+    class learning_knowledge_base_readme_knowledge_base_in_e16af81e concept;
+    class learning_neurons_n001_executive_decisions_neuron_068806f7 concept;
+    class learning_neurons_n002_vps_remote_ops_neuron_n002_132ee2f8 concept;
+    class learning_neurons_n003_mobile_first_ui_neuron_n00_e1cbf89a concept;
+    class learning_neurons_n004_ponytail_minimality_neuron_103ec0c4 concept;
+    class learning_neurons_n005_graphify_knowledge_neuron_894b4d54 concept;
+    class learning_neurons_n006_9router_gateway_neuron_n00_3e4e1422 concept;
+    class learning_neurons_n007_self_improving_loop_neuron_86034018 concept;
+    class learning_playbooks_readme_playbooks_6a5783ba concept;
+    class memory_claudia_neuron_memory_network_ccf6bccf concept;
+    class ponytail_hooks_ponytail_statusline_ps1_ponytail_82c5179b function;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>N001_executive_decisions.md</code><br><small style="color:var(--muted)">learning/neurons/N001_executive_decisions.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing N001_executive_decisions.md.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>Core Concept</code><br><small style="color:var(--muted)">learning/neurons/N001_executive_decisions.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Core Concept.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>Neuron N001: Executive Decision Making</code><br><small style="color:var(--muted)">learning/neurons/N001_executive_decisions.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Neuron N001: Executive Decision Making.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>Synaptic Links</code><br><small style="color:var(--muted)">learning/neurons/N001_executive_decisions.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Synaptic Links.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>Triggers &amp; Heuristics</code><br><small style="color:var(--muted)">learning/neurons/N001_executive_decisions.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Triggers &amp; Heuristics.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>memory.md</code><br><small style="color:var(--muted)">memory.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing memory.md.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>🧠 Active Memory Neurons</code><br><small style="color:var(--muted)">memory.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🧠 Active Memory Neurons.</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>📋 Active Tasks &amp; History</code><br><small style="color:var(--muted)">memory.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 📋 Active Tasks &amp; History.</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>Claudia Neuron Memory Network</code><br><small style="color:var(--muted)">memory.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Claudia Neuron Memory Network.</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>📋 Prosedur Pembaruan Memori</code><br><small style="color:var(--muted)">memory.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 📋 Prosedur Pembaruan Memori.</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>feedback_log/README.md</code><br><small style="color:var(--muted)">learning/feedback_log/README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing feedback_log/README.md.</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>Feedback Log</code><br><small style="color:var(--muted)">learning/feedback_log/README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Feedback Log.</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>Log 001 - Inisialisasi Persona</code><br><small style="color:var(--muted)">learning/feedback_log/README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Log 001 - Inisialisasi Persona.</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>Log 002 - Executive Decision Making (Anti-Pilihan Berlebih)</code><br><small style="color:var(--muted)">learning/feedback_log/README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Log 002 - Executive Decision Making (Anti-Pilihan Berlebih).</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>N003_mobile_first_ui.md</code><br><small style="color:var(--muted)">learning/neurons/N003_mobile_first_ui.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing N003_mobile_first_ui.md.</td>
+</tr>
+<tr>
+  <td>16</td>
+  <td><code>Core Concept</code><br><small style="color:var(--muted)">learning/neurons/N003_mobile_first_ui.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Core Concept.</td>
+</tr>
+<tr>
+  <td>17</td>
+  <td><code>Neuron N003: Mobile-First UI &amp; Compact Data Viz</code><br><small style="color:var(--muted)">learning/neurons/N003_mobile_first_ui.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Neuron N003: Mobile-First UI &amp; Compact Data Viz.</td>
+</tr>
+<tr>
+  <td>18</td>
+  <td><code>Synaptic Links</code><br><small style="color:var(--muted)">learning/neurons/N003_mobile_first_ui.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Synaptic Links.</td>
+</tr>
+<tr>
+  <td>19</td>
+  <td><code>N004_ponytail_minimality.md</code><br><small style="color:var(--muted)">learning/neurons/N004_ponytail_minimality.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing N004_ponytail_minimality.md.</td>
+</tr>
+<tr>
+  <td>20</td>
+  <td><code>Core Concept</code><br><small style="color:var(--muted)">learning/neurons/N004_ponytail_minimality.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Core Concept.</td>
+</tr>
+<tr>
+  <td>21</td>
+  <td><code>Neuron N004: Ponytail Minimality Ladder</code><br><small style="color:var(--muted)">learning/neurons/N004_ponytail_minimality.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Neuron N004: Ponytail Minimality Ladder.</td>
+</tr>
+<tr>
+  <td>22</td>
+  <td><code>Synaptic Links</code><br><small style="color:var(--muted)">learning/neurons/N004_ponytail_minimality.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Synaptic Links.</td>
+</tr>
+<tr>
+  <td>23</td>
+  <td><code>N005_graphify_knowledge.md</code><br><small style="color:var(--muted)">learning/neurons/N005_graphify_knowledge.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing N005_graphify_knowledge.md.</td>
+</tr>
+<tr>
+  <td>24</td>
+  <td><code>Core Concept</code><br><small style="color:var(--muted)">learning/neurons/N005_graphify_knowledge.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Core Concept.</td>
+</tr>
+<tr>
+  <td>25</td>
+  <td><code>Neuron N005: Graphify Knowledge Network</code><br><small style="color:var(--muted)">learning/neurons/N005_graphify_knowledge.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Neuron N005: Graphify Knowledge Network.</td>
+</tr>
+<tr>
+  <td>26</td>
+  <td><code>Synaptic Links</code><br><small style="color:var(--muted)">learning/neurons/N005_graphify_knowledge.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Synaptic Links.</td>
+</tr>
+<tr>
+  <td>27</td>
+  <td><code>N006_9router_gateway.md</code><br><small style="color:var(--muted)">learning/neurons/N006_9router_gateway.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing N006_9router_gateway.md.</td>
+</tr>
+<tr>
+  <td>28</td>
+  <td><code>Core Concept</code><br><small style="color:var(--muted)">learning/neurons/N006_9router_gateway.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Core Concept.</td>
+</tr>
+<tr>
+  <td>29</td>
+  <td><code>Neuron N006: 9Router Gateway Engine</code><br><small style="color:var(--muted)">learning/neurons/N006_9router_gateway.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Neuron N006: 9Router Gateway Engine.</td>
+</tr>
+<tr>
+  <td>30</td>
+  <td><code>Synaptic Links</code><br><small style="color:var(--muted)">learning/neurons/N006_9router_gateway.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Synaptic Links.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>learning/neurons/N001_executive_decisions.md</code></td><td>5 nodes</td></tr>
+<tr><td><code>memory.md</code></td><td>5 nodes</td></tr>
+<tr><td><code>learning/README.md</code></td><td>4 nodes</td></tr>
+<tr><td><code>learning/feedback_log/README.md</code></td><td>4 nodes</td></tr>
+<tr><td><code>learning/neurons/N003_mobile_first_ui.md</code></td><td>4 nodes</td></tr>
+<tr><td><code>learning/neurons/N004_ponytail_minimality.md</code></td><td>4 nodes</td></tr>
+<tr><td><code>learning/neurons/N005_graphify_knowledge.md</code></td><td>4 nodes</td></tr>
+<tr><td><code>learning/neurons/N006_9router_gateway.md</code></td><td>4 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x49, explains x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<h2 id="stats">Project Statistics</h2>
+
+<div class="grid">
+  <div class="card">
+    <h4>Graph</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><td>Nodes</td><td>454</td></tr>
+      <tr><td>Edges</td><td>487</td></tr>
+      <tr><td>Hyperedges</td><td>0</td></tr>
+      <tr><td>Communities</td><td>65</td></tr>
+      <tr><td>Documented Sections</td><td>15</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Edge Confidence</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><td>EXTRACTED</td><td>465</td></tr>
+      <tr><td>INFERRED</td><td>22</td></tr>
+      <tr><td>AMBIGUOUS</td><td>0</td></tr>
+    </table>
+  </div>
+</div>
+
+<div style="text-align:center; padding:40px 0; color: var(--muted); font-size:0.9rem;">
+  <p>Agent_Claudia_Autonomus — Architecture Documentation</p>
+  <p>Generated: 2026-08-23 13:13 UTC · graphify callflow-html</p>
+</div>
+
+</div><!-- .container -->
+
+<script>
+(function () {
+  const mermaidConfig = {
+    startOnLoad: false,
+    theme: 'dark',
+    securityLevel: 'loose',
+    flowchart: { htmlLabels: true, useMaxWidth: true },
+    themeVariables: {
+      primaryColor: '#1e293b',
+      primaryTextColor: '#e2e8f0',
+      primaryBorderColor: '#38bdf8',
+      secondaryColor: '#0f172a',
+      tertiaryColor: '#334155',
+      lineColor: '#64748b',
+      textColor: '#e2e8f0',
+    }
+  };
+
+  mermaid.initialize(mermaidConfig);
+
+  function clamp(value, min, max) {
+    return Math.min(max, Math.max(min, value));
+  }
+
+  function enhanceMermaidDiagrams() {
+    document.querySelectorAll('.mermaid').forEach((container) => {
+      if (container.dataset.zoomReady === 'true') return;
+      const svg = container.querySelector('svg');
+      if (!svg) return;
+
+      container.dataset.zoomReady = 'true';
+      container.classList.add('is-enhanced');
+
+      const viewport = document.createElement('div');
+      viewport.className = 'mermaid-viewport';
+      svg.parentNode.insertBefore(viewport, svg);
+      viewport.appendChild(svg);
+
+      const toolbar = document.createElement('div');
+      toolbar.className = 'mermaid-toolbar';
+      toolbar.innerHTML = [
+        '<button type="button" data-action="zoom-out" title="Zoom out">-</button>',
+        '<span class="zoom-level" data-role="level">100%</span>',
+        '<button type="button" data-action="zoom-in" title="Zoom in">+</button>',
+        '<button type="button" data-action="fit" title="Fit width">Fit</button>',
+        '<button type="button" data-action="reset" title="Reset view">Reset</button>'
+      ].join('');
+      container.insertBefore(toolbar, viewport);
+
+      const state = { scale: 1, x: 0, y: 0, dragging: false, startX: 0, startY: 0, originX: 0, originY: 0 };
+      const level = toolbar.querySelector('[data-role="level"]');
+
+      function applyTransform() {
+        svg.style.transform = `translate(${state.x}px, ${state.y}px) scale(${state.scale})`;
+        level.textContent = `${Math.round(state.scale * 100)}%`;
+      }
+
+      function zoomBy(delta) {
+        state.scale = clamp(state.scale + delta, 0.25, 3);
+        applyTransform();
+      }
+
+      function reset() {
+        state.scale = 1;
+        state.x = 0;
+        state.y = 0;
+        applyTransform();
+      }
+
+      function fitWidth() {
+        const rawWidth = svg.viewBox && svg.viewBox.baseVal && svg.viewBox.baseVal.width
+          ? svg.viewBox.baseVal.width
+          : svg.getBoundingClientRect().width / state.scale;
+        if (!rawWidth) {
+          reset();
+          return;
+        }
+        state.scale = clamp((viewport.clientWidth - 48) / rawWidth, 0.25, 1.4);
+        state.x = 0;
+        state.y = 0;
+        applyTransform();
+      }
+
+      toolbar.addEventListener('click', (event) => {
+        const button = event.target.closest('button[data-action]');
+        if (!button) return;
+        const action = button.dataset.action;
+        if (action === 'zoom-in') zoomBy(0.15);
+        if (action === 'zoom-out') zoomBy(-0.15);
+        if (action === 'fit') fitWidth();
+        if (action === 'reset') reset();
+      });
+
+      viewport.addEventListener('wheel', (event) => {
+        if (!event.ctrlKey && !event.metaKey) return;
+        event.preventDefault();
+        zoomBy(event.deltaY < 0 ? 0.1 : -0.1);
+      }, { passive: false });
+
+      viewport.addEventListener('pointerdown', (event) => {
+        if (event.button !== 0) return;
+        state.dragging = true;
+        state.startX = event.clientX;
+        state.startY = event.clientY;
+        state.originX = state.x;
+        state.originY = state.y;
+        viewport.classList.add('is-dragging');
+        viewport.setPointerCapture(event.pointerId);
+      });
+
+      viewport.addEventListener('pointermove', (event) => {
+        if (!state.dragging) return;
+        state.x = state.originX + event.clientX - state.startX;
+        state.y = state.originY + event.clientY - state.startY;
+        applyTransform();
+      });
+
+      function endDrag(event) {
+        if (!state.dragging) return;
+        state.dragging = false;
+        viewport.classList.remove('is-dragging');
+        if (viewport.hasPointerCapture(event.pointerId)) {
+          viewport.releasePointerCapture(event.pointerId);
+        }
+      }
+
+      viewport.addEventListener('pointerup', endDrag);
+      viewport.addEventListener('pointercancel', endDrag);
+      applyTransform();
+    });
+  }
+
+  function renderMermaid() {
+    const result = mermaid.run
+      ? mermaid.run({ querySelector: '.mermaid' })
+      : Promise.resolve();
+    Promise.resolve(result)
+      .then(enhanceMermaidDiagrams)
+      .catch((error) => {
+        console.error('Mermaid render failed:', error);
+        enhanceMermaidDiagrams();
+      });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', renderMermaid);
+  } else {
+    renderMermaid();
+  }
+})();
+</script>
+
+</body>
+</html>

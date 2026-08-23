@@ -1,0 +1,291 @@
+# Graph Report - Agent_Claudia_Autonomus  (2026-08-23)
+
+## Corpus Check
+- 81 files · ~284,785 words
+- Verdict: corpus is large enough that graph structure adds value.
+
+## Summary
+- 454 nodes · 487 edges · 65 communities (49 shown, 16 thin omitted)
+- Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.85)
+- Token cost: 0 input · 0 output
+
+## Community Hubs (Navigation)
+- ponytail-config.js
+- ponytail-activate.js
+- ponytail/package.json
+- Install
+- README.es.md
+- Install
+- Production Planning Specification: Zolu AI Web Production Engine
+- pi-extension/package.json
+- zolu_kas_dashboard_page.tsx
+- grow_neurons.py
+- ponytail-statusline.sh script
+- Ponytail
+- Ponytail
+- Ponytail Help
+- Core Engines & Workflows
+- Ponytail Help
+- Ponytail, lazy senior dev mode
+- Ponytail, lazy senior dev mode
+- Ponytail, lazy senior dev mode
+- Ponytail, lazy senior dev mode
+- Pembelajaran & Standar Tetap (Learnings & Fixed Rules) - Claudia
+- .agents/skills/ponytail-audit/SKILL.md
+- Ponytail Gain
+- .agents/skills/ponytail-review/SKILL.md
+- Core Stack & Architecture
+- Neuron N001: Executive Decision Making
+- Claudia Neuron Memory Network
+- ponytail/skills/ponytail-audit/SKILL.md
+- Ponytail Gain
+- ponytail/skills/ponytail-review/SKILL.md
+- .agents/skills/ponytail-debt/SKILL.md
+- Feedback Log
+- Neuron N002: VPS Remote Operations & Pipeline
+- Neuron N003: Mobile-First UI & Compact Data Viz
+- Neuron N004: Ponytail Minimality Ladder
+- Neuron N005: Graphify Knowledge Network
+- Neuron N006: 9Router Gateway Engine
+- Neuron N007: Autonomous Self-Improving Loop
+- Self-Learning Framework
+- ponytail/skills/ponytail-debt/SKILL.md
+- /graphify
+- Knowledge Base Index
+- Playbook: Graphify Workflow
+- Playbooks
+- Playbook: Self-Improving Mechanism
+- rules/graphify.md
+- workflows/graphify.md
+- reflections/README.md
+- ai_engine_9router.md
+- mojoloker_brand.md
+- ui_ux_design_rules.md
+- user_profile.md
+- vps_infrastructure.md
+- Neuron N008: Persistent Live Session Checkpoint & Infrastructure State
+- ponytail.mjs
+- 📦 Daftar Modul & Framework
+- README.md
+
+## God Nodes (most connected - your core abstractions)
+1. `Install` - 15 edges
+2. `getPonytailInstructions()` - 13 edges
+3. `ponytailExtension()` - 13 edges
+4. `Install` - 12 edges
+5. `normalizePersistedMode()` - 11 edges
+6. `files` - 11 edges
+7. `Instalación` - 11 edges
+8. `getDefaultMode()` - 9 edges
+9. `finish()` - 9 edges
+10. `normalizeMode()` - 8 edges
+
+## Surprising Connections (you probably didn't know these)
+- `readMode()` --calls--> `getDefaultMode()`  [EXTRACTED]
+  ponytail/.opencode/plugins/ponytail.mjs → ponytail/hooks/ponytail-config.js
+- `readMode()` --calls--> `normalizePersistedMode()`  [EXTRACTED]
+  ponytail/.opencode/plugins/ponytail.mjs → ponytail/hooks/ponytail-config.js
+- `createPiHarness()` --calls--> `ponytailExtension()`  [EXTRACTED]
+  ponytail/pi-extension/test/extension.test.js → ponytail/pi-extension/index.js
+- `filterSkillBodyForMode()` --calls--> `normalizeMode()`  [EXTRACTED]
+  ponytail/hooks/ponytail-instructions.js → ponytail/hooks/ponytail-config.js
+- `getPonytailInstructions()` --calls--> `normalizeMode()`  [EXTRACTED]
+  ponytail/hooks/ponytail-instructions.js → ponytail/hooks/ponytail-config.js
+
+## Import Cycles
+- None detected.
+
+## Communities (65 total, 16 thin omitted)
+
+### Community 0 - "ponytail-config.js"
+Cohesion: 0.07
+Nodes (46): fs, getConfigDir(), getConfigPath(), getDefaultMode(), getHideStatus(), getQuietStartup(), isDeactivationCommand(), normalizeConfigMode() (+38 more)
+
+### Community 1 - "ponytail-activate.js"
+Cohesion: 0.08
+Nodes (22): claudeDir, {
+  clearMode,
+  isCodex,
+  isCopilot,
+  setMode,
+  writeHookOutput,
+}, fs, { getDefaultMode, getClaudeDir, isShellSafe }, { getPonytailInstructions }, mode, output, path (+14 more)
+
+### Community 2 - "ponytail/package.json"
+Cohesion: 0.05
+Nodes (40): author, name, url, bugs, url, description, exports, ./plugin (+32 more)
+
+### Community 3 - "Install"
+Cohesion: 0.07
+Nodes (25): Ponytail, lazy senior dev mode, Antigravity CLI, Before / after, Claude Code, CodeWhale, Codex, Commands, Development (+17 more)
+
+### Community 4 - "README.es.md"
+Cohesion: 0.09
+Nodes (21): Ponytail, lazy senior dev mode, Antes / después, Antigravity CLI, Claude Code, CodeWhale, Codex, Comandos, Cómo funciona (+13 more)
+
+### Community 5 - "Install"
+Cohesion: 0.09
+Nodes (21): Antigravity CLI, Before / after, Claude Code, CodeWhale, Codex, Commands, Development, Devin CLI (+13 more)
+
+### Community 6 - "Production Planning Specification: Zolu AI Web Production Engine"
+Cohesion: 0.20
+Nodes (9): 1.1 Tech Stack Standar, 1. Arsitektur Sistem & Spesifikasi Inti, 2. Aturan Modularity & Maintenance (Max 300 Lines/File), 3. Struktur Direktori Proyek (Modular Layout), 4. Skema Database SQLite (WAL Mode), 5. Integrasi Mesin AI 9Router (`lib/ai/router_client.ts`), 6. Prompting Invariant: Modular Code Decomposition, 7. Tahapan Implementasi & Deployment (+1 more)
+
+### Community 7 - "pi-extension/package.json"
+Cohesion: 0.33
+Nodes (5): name, private, scripts, test, type
+
+### Community 8 - "zolu_kas_dashboard_page.tsx"
+Cohesion: 0.33
+Nodes (4): CategoryStat, Toast, Transaction, WalletData
+
+### Community 13 - "Ponytail"
+Cohesion: 0.22
+Nodes (8): Boundaries, Intensity, Output, Persistence, Ponytail, Rules, The ladder, When NOT to be lazy
+
+### Community 14 - "Ponytail"
+Cohesion: 0.22
+Nodes (8): Boundaries, Intensity, Output, Persistence, Ponytail, Rules, The ladder, When NOT to be lazy
+
+### Community 15 - "Ponytail Help"
+Cohesion: 0.25
+Nodes (7): Configure Default Mode, Deactivate, Levels, More, Ponytail Help, Skills, Update
+
+### Community 16 - "Core Engines & Workflows"
+Cohesion: 0.25
+Nodes (7): 1. Ponytail (Lazy Senior Dev Engine), 2. Graphify (Knowledge Graph & Structural Memory), 3. 9Router (AI Gateway & Model Routing), Core Engines & Workflows, Identity: Claudia, Karakter & Gaya Komunikasi, Self-Learning Loop
+
+### Community 17 - "Ponytail Help"
+Cohesion: 0.25
+Nodes (7): Configure Default Mode, Deactivate, Levels, More, Ponytail Help, Skills, Update
+
+### Community 18 - "Ponytail, lazy senior dev mode"
+Cohesion: 0.29
+Nodes (6): Graphify Knowledge Graph:, Not lazy about:, Persona & Communication, Ponytail, lazy senior dev mode, Rules:, The Minimality Ladder
+
+### Community 19 - "Ponytail, lazy senior dev mode"
+Cohesion: 0.29
+Nodes (6): Graphify Knowledge Graph:, Not lazy about:, Persona & Communication, Ponytail, lazy senior dev mode, Rules:, The Minimality Ladder
+
+### Community 20 - "Ponytail, lazy senior dev mode"
+Cohesion: 0.29
+Nodes (6): Graphify Knowledge Graph:, Not lazy about:, Persona & Communication, Ponytail, lazy senior dev mode, Rules:, The Minimality Ladder
+
+### Community 21 - "Ponytail, lazy senior dev mode"
+Cohesion: 0.29
+Nodes (6): Graphify Knowledge Graph:, Not lazy about:, Persona & Communication, Ponytail, lazy senior dev mode, Rules:, The Minimality Ladder
+
+### Community 22 - "Pembelajaran & Standar Tetap (Learnings & Fixed Rules) - Claudia"
+Cohesion: 0.33
+Nodes (5): 1. Tampilan & Mode, 2. Dropdown & Komponen Formulir, 3. Responsivitas Mobile, 4. Branding & Desain Khusus MojoLoker, Pembelajaran & Standar Tetap (Learnings & Fixed Rules) - Claudia
+
+### Community 23 - ".agents/skills/ponytail-audit/SKILL.md"
+Cohesion: 0.40
+Nodes (4): Boundaries, Hunt, Output, Tags
+
+### Community 24 - "Ponytail Gain"
+Cohesion: 0.40
+Nodes (4): Boundaries, Honesty boundary, Ponytail Gain, Scoreboard
+
+### Community 25 - ".agents/skills/ponytail-review/SKILL.md"
+Cohesion: 0.40
+Nodes (4): Boundaries, Examples, Format, Scoring
+
+### Community 26 - "Core Stack & Architecture"
+Cohesion: 0.40
+Nodes (4): 1. Database & Storage, 2. Web & Service Stack, 3. Engineering & Intelligence Engines, Core Stack & Architecture
+
+### Community 27 - "Neuron N001: Executive Decision Making"
+Cohesion: 0.40
+Nodes (4): Core Concept, Neuron N001: Executive Decision Making, Synaptic Links, Triggers & Heuristics
+
+### Community 28 - "Claudia Neuron Memory Network"
+Cohesion: 0.40
+Nodes (4): 🧠 Active Memory Neurons, 📋 Active Tasks & History, Claudia Neuron Memory Network, 📋 Prosedur Pembaruan Memori
+
+### Community 29 - "ponytail/skills/ponytail-audit/SKILL.md"
+Cohesion: 0.40
+Nodes (4): Boundaries, Hunt, Output, Tags
+
+### Community 30 - "Ponytail Gain"
+Cohesion: 0.40
+Nodes (4): Boundaries, Honesty boundary, Ponytail Gain, Scoreboard
+
+### Community 31 - "ponytail/skills/ponytail-review/SKILL.md"
+Cohesion: 0.40
+Nodes (4): Boundaries, Examples, Format, Scoring
+
+### Community 32 - ".agents/skills/ponytail-debt/SKILL.md"
+Cohesion: 0.50
+Nodes (3): Boundaries, Output, Scan
+
+### Community 33 - "Feedback Log"
+Cohesion: 0.50
+Nodes (3): Feedback Log, Log 001 - Inisialisasi Persona, Log 002 - Executive Decision Making (Anti-Pilihan Berlebih)
+
+### Community 35 - "Neuron N003: Mobile-First UI & Compact Data Viz"
+Cohesion: 0.50
+Nodes (3): Core Concept, Neuron N003: Mobile-First UI & Compact Data Viz, Synaptic Links
+
+### Community 36 - "Neuron N004: Ponytail Minimality Ladder"
+Cohesion: 0.50
+Nodes (3): Core Concept, Neuron N004: Ponytail Minimality Ladder, Synaptic Links
+
+### Community 37 - "Neuron N005: Graphify Knowledge Network"
+Cohesion: 0.50
+Nodes (3): Core Concept, Neuron N005: Graphify Knowledge Network, Synaptic Links
+
+### Community 38 - "Neuron N006: 9Router Gateway Engine"
+Cohesion: 0.50
+Nodes (3): Core Concept, Neuron N006: 9Router Gateway Engine, Synaptic Links
+
+### Community 39 - "Neuron N007: Autonomous Self-Improving Loop"
+Cohesion: 0.50
+Nodes (3): Core Concept, Neuron N007: Autonomous Self-Improving Loop, Synaptic Links
+
+### Community 40 - "Self-Learning Framework"
+Cohesion: 0.50
+Nodes (3): Alur Pembelajaran, Self-Learning Framework, Struktur Folder
+
+### Community 41 - "ponytail/skills/ponytail-debt/SKILL.md"
+Cohesion: 0.50
+Nodes (3): Boundaries, Output, Scan
+
+### Community 61 - "Neuron N008: Persistent Live Session Checkpoint & Infrastructure State"
+Cohesion: 0.33
+Nodes (5): 🚀 Deployed Ecosystem & Port Mappings, 🛠️ Installed Autonomous Fullstack & Security Toolkit, 🎬 Media Engine & Strict Subtitle Cleaner, 📌 Metadata, Neuron N008: Persistent Live Session Checkpoint & Infrastructure State
+
+### Community 62 - "ponytail.mjs"
+Cohesion: 0.20
+Nodes (8): __dirname, parseCommandFile(), { getDefaultMode, normalizePersistedMode }, { getPonytailInstructions }, { parseCommandFile }, readMode(), require, statePath
+
+### Community 63 - "📦 Daftar Modul & Framework"
+Cohesion: 0.22
+Nodes (8): 1. **Biome (`@biomejs/biome`)** - *Linter & Formatter Rust*, 2. **Playwright (`playwright` + Chromium Headless)** - *UI & End-to-End Testing*, 3. **Hono (`hono`)** - *Ultra-Lightweight Edge Web Framework*, 4. **Zod (`zod`)** - *Runtime Schema Validation*, 5. **Drizzle ORM (`drizzle-orm` + `better-sqlite3`)** - *Zero-Bloat Type-Safe Database*, 6. **Puppeteer (`puppeteer`)** - *Headless Chrome Automation*, 📦 Daftar Modul & Framework, 🔒 Standar Keamanan & Vetting
+
+### Community 64 - "README.md"
+Cohesion: 0.33
+Nodes (5): 🧠 Arsitektur Memori & Pengetahuan, 🌟 Core Philosophy: The Minimality Ladder (Ponytail), 🚀 Memulai (Quick Start), 🛠️ Persenjataan Fullstack yang Terpasang, 🔒 Standar Keamanan & Manajemen Kredensial
+
+## Knowledge Gaps
+- **286 isolated node(s):** `__dirname`, `require`, `{ getPonytailInstructions }`, `{ getDefaultMode, normalizePersistedMode }`, `{ parseCommandFile }` (+281 more)
+  These have ≤1 connection - possible missing edges or undocumented components.
+- **16 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+
+## Suggested Questions
+_Questions this graph is uniquely positioned to answer:_
+
+- **What connects `__dirname`, `require`, `{ getPonytailInstructions }` to the rest of the system?**
+  _286 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `ponytail-config.js` be split into smaller, more focused modules?**
+  _Cohesion score 0.07456140350877193 - nodes in this community are weakly interconnected._
+- **Should `ponytail-activate.js` be split into smaller, more focused modules?**
+  _Cohesion score 0.08307692307692308 - nodes in this community are weakly interconnected._
+- **Should `ponytail/package.json` be split into smaller, more focused modules?**
+  _Cohesion score 0.05365853658536585 - nodes in this community are weakly interconnected._
+- **Should `Install` be split into smaller, more focused modules?**
+  _Cohesion score 0.07407407407407407 - nodes in this community are weakly interconnected._
+- **Should `README.es.md` be split into smaller, more focused modules?**
+  _Cohesion score 0.08695652173913043 - nodes in this community are weakly interconnected._
+- **Should `Install` be split into smaller, more focused modules?**
+  _Cohesion score 0.09090909090909091 - nodes in this community are weakly interconnected._

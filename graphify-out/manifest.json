@@ -1,0 +1,614 @@
+{
+  "ecosystem.config.cjs": {
+    "mtime": 1787490795.2775588,
+    "seen": 1787490827.4109864,
+    "ast_hash": "dd15119fb2196a241d762fb6eacacf90",
+    "semantic_hash": ""
+  },
+  "learning/NEURON_INDEX.json": {
+    "mtime": 1787405648.6926944,
+    "seen": 1787440966.9016154,
+    "ast_hash": "ae46fab2e0d70558e8d2a3ebcfc3fa39",
+    "semantic_hash": "ae46fab2e0d70558e8d2a3ebcfc3fa39"
+  },
+  "learning/scripts/grow_neurons.py": {
+    "mtime": 1787405645.569641,
+    "seen": 1787440966.9016154,
+    "ast_hash": "6ffb00d5892f1bc34c2e7c502ef0712e",
+    "semantic_hash": "6ffb00d5892f1bc34c2e7c502ef0712e"
+  },
+  "ponytail/.opencode/plugins/ponytail-frontmatter.cjs": {
+    "mtime": 499162500.0,
+    "seen": 1787440966.9016154,
+    "ast_hash": "727cff9f4262d988efd8f135effe9ba1",
+    "semantic_hash": "727cff9f4262d988efd8f135effe9ba1"
+  },
+  "ponytail/.opencode/plugins/ponytail.mjs": {
+    "mtime": 499162500.0,
+    "seen": 1787440966.9016154,
+    "ast_hash": "78a142c5dadf342a93cbdc39f167ce65",
+    "semantic_hash": "78a142c5dadf342a93cbdc39f167ce65"
+  },
+  "ponytail/.qoder-plugin/plugin.json": {
+    "mtime": 499162500.0,
+    "seen": 1787440966.9016154,
+    "ast_hash": "be4993fd6ed77c578d7e18ed73af9f0f",
+    "semantic_hash": "be4993fd6ed77c578d7e18ed73af9f0f"
+  },
+  "ponytail/hooks/claude-codex-hooks.json": {
+    "mtime": 499162500.0,
+    "seen": 1787440966.9016154,
+    "ast_hash": "78ad8273d245cbb0ef573c0675a03fb1",
+    "semantic_hash": "78ad8273d245cbb0ef573c0675a03fb1"
+  },
+  "ponytail/hooks/copilot-hooks.json": {
+    "mtime": 499162500.0,
+    "seen": 1787440966.9016154,
+    "ast_hash": "c750eea96b3cd0f6089dc5dec8511e54",
+    "semantic_hash": "c750eea96b3cd0f6089dc5dec8511e54"
+  },
+  "ponytail/hooks/ponytail-activate.js": {
+    "mtime": 499162500.0,
+    "seen": 1787440966.9016154,
+    "ast_hash": "4ee3f7ca98c70b335404bd9a0514a18f",
+    "semantic_hash": "4ee3f7ca98c70b335404bd9a0514a18f"
+  },
+  "ponytail/hooks/ponytail-config.js": {
+    "mtime": 499162500.0,
+    "seen": 1787440966.9016154,
+    "ast_hash": "8eb332c21cdfa77ad739af66a59d2ba5",
+    "semantic_hash": "8eb332c21cdfa77ad739af66a59d2ba5"
+  },
+  "ponytail/hooks/ponytail-instructions.js": {
+    "mtime": 499162500.0,
+    "seen": 1787440966.9016154,
+    "ast_hash": "d6c8baebb2df6a7349ae4bbc57ff69dc",
+    "semantic_hash": "d6c8baebb2df6a7349ae4bbc57ff69dc"
+  },
+  "ponytail/hooks/ponytail-mode-tracker.js": {
+    "mtime": 499162500.0,
+    "seen": 1787440966.9016154,
+    "ast_hash": "7b78e63f8a381c6089bc3df72cf44905",
+    "semantic_hash": "7b78e63f8a381c6089bc3df72cf44905"
+  },
+  "ponytail/hooks/ponytail-runtime.js": {
+    "mtime": 499162500.0,
+    "seen": 1787440966.9016154,
+    "ast_hash": "020eda09d81cf73f0bdefaadc21f6579",
+    "semantic_hash": "020eda09d81cf73f0bdefaadc21f6579"
+  },
+  "ponytail/hooks/ponytail-statusline.ps1": {
+    "mtime": 499162500.0,
+    "seen": 1787440966.9016154,
+    "ast_hash": "96e784701bdafee69a4401bd8820364d",
+    "semantic_hash": "96e784701bdafee69a4401bd8820364d"
+  },
+  "ponytail/hooks/ponytail-statusline.sh": {
+    "mtime": 499162500.0,
+    "seen": 1787440966.9016154,
+    "ast_hash": "4f1ae8324f0c29bdddb5676a652a2d8d",
+    "semantic_hash": "4f1ae8324f0c29bdddb5676a652a2d8d"
+  },
+  "ponytail/hooks/ponytail-subagent.js": {
+    "mtime": 499162500.0,
+    "seen": 1787440966.9016154,
+    "ast_hash": "8ded97bd99238931e1a0be7f6b43b8ea",
+    "semantic_hash": "8ded97bd99238931e1a0be7f6b43b8ea"
+  },
+  "ponytail/hooks/qoder-hooks.json": {
+    "mtime": 499162500.0,
+    "seen": 1787440966.9016154,
+    "ast_hash": "1d072dc4ef39ff986d2c7759bd8c2143",
+    "semantic_hash": "1d072dc4ef39ff986d2c7759bd8c2143"
+  },
+  "ponytail/package.json": {
+    "mtime": 499162500.0,
+    "seen": 1787440966.9016154,
+    "ast_hash": "0599deeb522623ee7f4e37cac5376cc4",
+    "semantic_hash": "0599deeb522623ee7f4e37cac5376cc4"
+  },
+  "ponytail/pi-extension/index.js": {
+    "mtime": 499162500.0,
+    "seen": 1787440966.9016154,
+    "ast_hash": "642a09b827b27f7680cf63bbc437a9bf",
+    "semantic_hash": "642a09b827b27f7680cf63bbc437a9bf"
+  },
+  "ponytail/pi-extension/package.json": {
+    "mtime": 499162500.0,
+    "seen": 1787440966.9016154,
+    "ast_hash": "7cde7bd94bca66b954ab3669f5c83756",
+    "semantic_hash": "7cde7bd94bca66b954ab3669f5c83756"
+  },
+  "ponytail/pi-extension/test/extension.test.js": {
+    "mtime": 499162500.0,
+    "seen": 1787440966.9016154,
+    "ast_hash": "02507673f7249b4d05b593bac31e11fd",
+    "semantic_hash": "02507673f7249b4d05b593bac31e11fd"
+  },
+  "ponytail/pi-extension/test/helpers.test.js": {
+    "mtime": 499162500.0,
+    "seen": 1787440966.9016154,
+    "ast_hash": "463aeb1d1a2298bb32af2e2e3a12db45",
+    "semantic_hash": "463aeb1d1a2298bb32af2e2e3a12db45"
+  },
+  "ponytail/scripts/uninstall.js": {
+    "mtime": 499162500.0,
+    "seen": 1787440966.9016154,
+    "ast_hash": "ad3f86c43d5e793af9d181c5c5e2157d",
+    "semantic_hash": "ad3f86c43d5e793af9d181c5c5e2157d"
+  },
+  "zolu_kas_dashboard_page.tsx": {
+    "mtime": 1787442231.3408532,
+    "seen": 1787476501.9923196,
+    "ast_hash": "5825d079482de4184c785992865a1f04",
+    "semantic_hash": ""
+  },
+  ".agents/rules/graphify.md": {
+    "mtime": 1787401886.4098494,
+    "seen": 1787476501.9923196,
+    "ast_hash": "a0e4d192b9e2e17256124dbfc8e24e6a",
+    "semantic_hash": ""
+  },
+  ".agents/rules/ponytail.md": {
+    "mtime": 1787405092.8531096,
+    "seen": 1787476501.9923196,
+    "ast_hash": "91365e6249ec8ea87fb05ce6793bf90d",
+    "semantic_hash": ""
+  },
+  ".agents/skills/graphify/SKILL.md": {
+    "mtime": 1787401906.263774,
+    "seen": 1787476501.9923196,
+    "ast_hash": "46ec69552fab17d8f368f8b94f8e8dc3",
+    "semantic_hash": ""
+  },
+  ".agents/skills/ponytail-audit/SKILL.md": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "2a757432defa9d63639a3aca3bbbf23a",
+    "semantic_hash": ""
+  },
+  ".agents/skills/ponytail-debt/SKILL.md": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "33f49652fe513cf08082e9bcf8e2ecf2",
+    "semantic_hash": ""
+  },
+  ".agents/skills/ponytail-gain/SKILL.md": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "e0090358fafc0a4b01716b88399e8405",
+    "semantic_hash": ""
+  },
+  ".agents/skills/ponytail-help/SKILL.md": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "a89c89a1fec6a90c3751302574389d47",
+    "semantic_hash": ""
+  },
+  ".agents/skills/ponytail-review/SKILL.md": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "438e2414888145bc0108fa63f64314fd",
+    "semantic_hash": ""
+  },
+  ".agents/skills/ponytail/SKILL.md": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "421e40917db6cc732864011799da3235",
+    "semantic_hash": ""
+  },
+  ".agents/workflows/graphify.md": {
+    "mtime": 1787401886.4098494,
+    "seen": 1787476501.9923196,
+    "ast_hash": "a831cf3669f1e6ab85d8a80ebe655f99",
+    "semantic_hash": ""
+  },
+  ".windsurf/rules/ponytail.md": {
+    "mtime": 1787401955.8074205,
+    "seen": 1787476501.9923196,
+    "ast_hash": "5b9f4b48a502af2a026a4f0a2cbd5d69",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1787405092.8531096,
+    "seen": 1787476501.9923196,
+    "ast_hash": "91365e6249ec8ea87fb05ce6793bf90d",
+    "semantic_hash": ""
+  },
+  "GEMINI.md": {
+    "mtime": 1787405092.8531096,
+    "seen": 1787476501.9923196,
+    "ast_hash": "91365e6249ec8ea87fb05ce6793bf90d",
+    "semantic_hash": ""
+  },
+  "identity.md": {
+    "mtime": 1787405089.8071988,
+    "seen": 1787476501.9923196,
+    "ast_hash": "109c79ab886482587c42ee30982881bb",
+    "semantic_hash": ""
+  },
+  "learning/README.md": {
+    "mtime": 1787401920.8148384,
+    "seen": 1787476501.9923196,
+    "ast_hash": "743f6e2a7d371bbe54104d4759cd3b95",
+    "semantic_hash": ""
+  },
+  "learning/feedback_log/README.md": {
+    "mtime": 1787405086.6801314,
+    "seen": 1787476501.9923196,
+    "ast_hash": "db3baa9b8c7fd24b809e47a947587dd3",
+    "semantic_hash": ""
+  },
+  "learning/feedback_log/mojoloker_learnings.md": {
+    "mtime": 1787447456.9593062,
+    "seen": 1787476501.9923196,
+    "ast_hash": "5b8485bf211c99dadcd7064ee56df6e2",
+    "semantic_hash": ""
+  },
+  "learning/knowledge_base/README.md": {
+    "mtime": 1787401924.869598,
+    "seen": 1787476501.9923196,
+    "ast_hash": "93785418c0e7a9782bd70e2ace2aee7c",
+    "semantic_hash": ""
+  },
+  "learning/knowledge_base/core_stack.md": {
+    "mtime": 1787442764.7669053,
+    "seen": 1787476501.9923196,
+    "ast_hash": "1cfdcdb43fc22993010ef10c238bd77f",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N001_executive_decisions.md": {
+    "mtime": 1787405619.8392026,
+    "seen": 1787476501.9923196,
+    "ast_hash": "d11b6a7884f120011994fdee451da295",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N002_vps_remote_ops.md": {
+    "mtime": 1787490776.5354333,
+    "seen": 1787490827.4109864,
+    "ast_hash": "f68c4435a574cf82aac0a84ed227cf8d",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N003_mobile_first_ui.md": {
+    "mtime": 1787405627.027714,
+    "seen": 1787476501.9923196,
+    "ast_hash": "e5bee79c47e9cbcc0842183504475d6e",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N004_ponytail_minimality.md": {
+    "mtime": 1787405630.8861687,
+    "seen": 1787476501.9923196,
+    "ast_hash": "494dcb1977fc43ea9defaff489aaded2",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N005_graphify_knowledge.md": {
+    "mtime": 1787405633.608623,
+    "seen": 1787476501.9923196,
+    "ast_hash": "451ee73b872061980e36d6e0ed72e31f",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N006_9router_gateway.md": {
+    "mtime": 1787405636.469458,
+    "seen": 1787476501.9923196,
+    "ast_hash": "2a5b9e3cdd5013515e0651c84abed836",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N007_self_improving_loop.md": {
+    "mtime": 1787405640.4121878,
+    "seen": 1787476501.9923196,
+    "ast_hash": "569c9ae9418eff10782aaea03314f969",
+    "semantic_hash": ""
+  },
+  "learning/playbooks/README.md": {
+    "mtime": 1787401934.4980137,
+    "seen": 1787476501.9923196,
+    "ast_hash": "ba1fecb55580fee25df217f7f5cbb475",
+    "semantic_hash": ""
+  },
+  "learning/playbooks/graphify_workflow.md": {
+    "mtime": 1787401938.8679245,
+    "seen": 1787476501.9923196,
+    "ast_hash": "336043d57ebc3498ec8e84af7195469d",
+    "semantic_hash": ""
+  },
+  "learning/playbooks/self_improving.md": {
+    "mtime": 1787403262.8967183,
+    "seen": 1787476501.9923196,
+    "ast_hash": "1e7fc33392b44cd7223fed130865337f",
+    "semantic_hash": ""
+  },
+  "learning/reflections/README.md": {
+    "mtime": 1787401943.1228957,
+    "seen": 1787476501.9923196,
+    "ast_hash": "89e71160c9e2b5ea6775faedae9043ed",
+    "semantic_hash": ""
+  },
+  "memory.md": {
+    "mtime": 1787490786.9590697,
+    "seen": 1787490827.4109864,
+    "ast_hash": "81a7f5d66e99e6c62d0d1cb0a8500dd2",
+    "semantic_hash": ""
+  },
+  "memory/neurons/ai_engine_9router.md": {
+    "mtime": 1787449952.0460973,
+    "seen": 1787476501.9923196,
+    "ast_hash": "e7e43a3bfcbcc5fe4b67b2650dc3c409",
+    "semantic_hash": ""
+  },
+  "memory/neurons/mojoloker_brand.md": {
+    "mtime": 1787449952.0447226,
+    "seen": 1787476501.9923196,
+    "ast_hash": "3a7906d406e4720beb28cfc0f997539f",
+    "semantic_hash": ""
+  },
+  "memory/neurons/ui_ux_design_rules.md": {
+    "mtime": 1787489976.3458316,
+    "seen": 1787489982.0037174,
+    "ast_hash": "dbc794c552afbc18a76b274e93736915",
+    "semantic_hash": ""
+  },
+  "memory/neurons/user_profile.md": {
+    "mtime": 1787449952.0427172,
+    "seen": 1787476501.9923196,
+    "ast_hash": "4b2cb24f001c5b913772f2db2e821cff",
+    "semantic_hash": ""
+  },
+  "memory/neurons/vps_infrastructure.md": {
+    "mtime": 1787490780.0660965,
+    "seen": 1787490827.4109864,
+    "ast_hash": "cda7155f27bca33be73e3b5f4340ada8",
+    "semantic_hash": ""
+  },
+  "ponytail/.opencode/command/ponytail-audit.md": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "a0ef3e7017d40d8933f92f2069dc3abb",
+    "semantic_hash": ""
+  },
+  "ponytail/.opencode/command/ponytail-debt.md": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "a23bd5acee5a039b652967807017577b",
+    "semantic_hash": ""
+  },
+  "ponytail/.opencode/command/ponytail-gain.md": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "ef5577d3bd8411b8e5638ae5999176b8",
+    "semantic_hash": ""
+  },
+  "ponytail/.opencode/command/ponytail-help.md": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "525aac4786c5afbb6ff4a5616c21d703",
+    "semantic_hash": ""
+  },
+  "ponytail/.opencode/command/ponytail-review.md": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "8232fafb655acddc8449d84f8687430f",
+    "semantic_hash": ""
+  },
+  "ponytail/.opencode/command/ponytail.md": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "4ba2bb8419941313dc2c5d92de3fee5f",
+    "semantic_hash": ""
+  },
+  "ponytail/.qoder/rules/ponytail.md": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "2d922daa034b7081de0bcd1a1fd01040",
+    "semantic_hash": ""
+  },
+  "ponytail/AGENTS.md": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "fa1d46d5a2f236ff4b03257f33a6afe4",
+    "semantic_hash": ""
+  },
+  "ponytail/README.es.md": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "eae15ce03bcf1cb9e661ae37ae8d8374",
+    "semantic_hash": ""
+  },
+  "ponytail/README.ko.md": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "85e39a67ec1ad0aac987b0133a65a843",
+    "semantic_hash": ""
+  },
+  "ponytail/README.md": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "fe5244999553a766c91fd0b41315fc16",
+    "semantic_hash": ""
+  },
+  "ponytail/skills/ponytail-audit/SKILL.md": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "2a757432defa9d63639a3aca3bbbf23a",
+    "semantic_hash": ""
+  },
+  "ponytail/skills/ponytail-debt/SKILL.md": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "33f49652fe513cf08082e9bcf8e2ecf2",
+    "semantic_hash": ""
+  },
+  "ponytail/skills/ponytail-gain/SKILL.md": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "e0090358fafc0a4b01716b88399e8405",
+    "semantic_hash": ""
+  },
+  "ponytail/skills/ponytail-help/SKILL.md": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "a89c89a1fec6a90c3751302574389d47",
+    "semantic_hash": ""
+  },
+  "ponytail/skills/ponytail-review/SKILL.md": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "438e2414888145bc0108fa63f64314fd",
+    "semantic_hash": ""
+  },
+  "ponytail/skills/ponytail/SKILL.md": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "421e40917db6cc732864011799da3235",
+    "semantic_hash": ""
+  },
+  "prod_planner.md": {
+    "mtime": 1787449701.2613695,
+    "seen": 1787476501.9923196,
+    "ast_hash": "685c535c7cece0724ee5b9d96994ec44",
+    "semantic_hash": ""
+  },
+  "ponytail/assets/benchmark-3model.svg": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "66fd8752a1afcee31b6f41cbdc51c465",
+    "semantic_hash": ""
+  },
+  "ponytail/assets/benchmark-agentic.svg": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "d5d2d4079f21877bdf1a3e8dcadaa2af",
+    "semantic_hash": ""
+  },
+  "ponytail/assets/logo-dark.png": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "04333e49586d3a7e52dc0e99524058c8",
+    "semantic_hash": ""
+  },
+  "ponytail/assets/logo-dark.svg": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "43b43a7f5d8abc301baa3858293425e9",
+    "semantic_hash": ""
+  },
+  "ponytail/assets/logo-greenpt-dark.svg": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "6fa30424f2dfd03dad556f5c673ce94e",
+    "semantic_hash": ""
+  },
+  "ponytail/assets/logo-greenpt.svg": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "6e3f4f2c43649dff3efd5b308f9f1ed3",
+    "semantic_hash": ""
+  },
+  "ponytail/assets/logo.png": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "036e892fd1c2bd1bfb329ee7c3b1cd02",
+    "semantic_hash": ""
+  },
+  "ponytail/assets/social-preview.png": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "afeb113daf2e6aa6260af475ac5047a7",
+    "semantic_hash": ""
+  },
+  "ponytail/assets/waitlist-banner-es.png": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "329d29850248f06083c9aaf37033bb72",
+    "semantic_hash": ""
+  },
+  "ponytail/assets/waitlist-banner-ko.png": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "382b77997d73c537f0b6405d36795add",
+    "semantic_hash": ""
+  },
+  "ponytail/assets/waitlist-banner.png": {
+    "mtime": 499162500.0,
+    "seen": 1787476501.9923196,
+    "ast_hash": "2c223c2bb087ce98b47ef2dee43c2d7c",
+    "semantic_hash": ""
+  },
+  "poster-mojoloker/poster_1_launching.jpg": {
+    "mtime": 1787447586.375963,
+    "seen": 1787476501.9923196,
+    "ast_hash": "a8c0e199701806a194380aa72c622cb6",
+    "semantic_hash": ""
+  },
+  "poster-mojoloker/poster_2_pencari_kerja.jpg": {
+    "mtime": 1787447615.0870242,
+    "seen": 1787476501.9923196,
+    "ast_hash": "8d116f3ac71a2f21ca2a803e83f2873a",
+    "semantic_hash": ""
+  },
+  "poster-mojoloker/poster_3_pemberi_kerja.jpg": {
+    "mtime": 1787447643.6351058,
+    "seen": 1787476501.9923196,
+    "ast_hash": "3f536658c89f6cd04acfbd89605d50c9",
+    "semantic_hash": ""
+  },
+  "poster-mojoloker/poster_4_kawasan_industri.jpg": {
+    "mtime": 1787447675.234155,
+    "seen": 1787476501.9923196,
+    "ast_hash": "26582550c28dea2e940b4b7f947e3c67",
+    "semantic_hash": ""
+  },
+  "poster-mojoloker/poster_5_komunitas_mojokerto.jpg": {
+    "mtime": 1787447725.2368882,
+    "seen": 1787476501.9923196,
+    "ast_hash": "f2b3e083d36601d8ba4ea9d91256b6f8",
+    "semantic_hash": ""
+  },
+  "poster-mojoloker/story_1_pabrik_ngoro.jpg": {
+    "mtime": 1787450044.3993585,
+    "seen": 1787476501.9923196,
+    "ast_hash": "dec8d76c6cc7322514891924ed7b58e6",
+    "semantic_hash": ""
+  },
+  "poster-mojoloker/story_2_pasang_loker_hrd.jpg": {
+    "mtime": 1787450123.3239985,
+    "seen": 1787476501.9923196,
+    "ast_hash": "6d57b9fee67d1895ebf03c9f7b072626",
+    "semantic_hash": ""
+  },
+  "poster-mojoloker/story_3_fresh_graduate.jpg": {
+    "mtime": 1787450200.6810584,
+    "seen": 1787476501.9923196,
+    "ast_hash": "e4d2be1ecdbecd6e474e06539030ca46",
+    "semantic_hash": ""
+  },
+  "poster-mojoloker/story_4_standar_gaji_umk.jpg": {
+    "mtime": 1787450227.0895865,
+    "seen": 1787476501.9923196,
+    "ast_hash": "a6d39c987402b3c644b6cd3b55fd4f46",
+    "semantic_hash": ""
+  },
+  "poster-mojoloker/story_5_whatsapp_connect.jpg": {
+    "mtime": 1787450259.2664404,
+    "seen": 1787476501.9923196,
+    "ast_hash": "18cc35c1b3c1e59155a96497abc9a779",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N008_live_session_checkpoint.md": {
+    "mtime": 1787490773.8014567,
+    "seen": 1787490827.4109864,
+    "ast_hash": "104d3d00b1cb1262c99dd4d87fb2193b",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1787490809.2961705,
+    "seen": 1787490827.4109864,
+    "ast_hash": "aa54b4878d0e44f4e5b4685dae302e06",
+    "semantic_hash": ""
+  },
+  "toolkit/README.md": {
+    "mtime": 1787490803.60497,
+    "seen": 1787490827.4109864,
+    "ast_hash": "79d9cd722c0800645a7663e39980639b",
+    "semantic_hash": ""
+  }
+}

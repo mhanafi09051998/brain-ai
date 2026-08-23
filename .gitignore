@@ -1,0 +1,46 @@
+﻿# =============================================================================
+# SECURITY & CREDENTIALS (STRICTLY IGNORED)
+# =============================================================================
+.env
+.env.*
+*.env
+.secrets/
+secrets/
+private/
+credentials.json
+*.json.secret
+cookies.txt
+*.key
+*.pem
+*.ppk
+*.id_rsa
+*.id_ed25519
+connect_vps.*
+scripts/connect_vps.*
+
+# =============================================================================
+# RUNTIME, DEPENDENCIES & LOGS
+# =============================================================================
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# =============================================================================
+# DATABASES & LOCAL CACHES
+# =============================================================================
+*.sqlite
+*.sqlite3
+*.sqlite-journal
+*.sqlite-wal
+*.db
+.pm2/
+graphify-out/cache/
+.tempmediaStorage/
+.system_generated/

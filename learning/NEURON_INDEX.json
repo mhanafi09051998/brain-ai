@@ -1,0 +1,84 @@
+{
+  "version": "1.1.0",
+  "updated_at": "2026-08-22T20:34:08.692165",
+  "total_neurons": 7,
+  "total_synapses": 12,
+  "mesh_density": 0.286,
+  "neurons": [
+    {
+      "id": "N001",
+      "label": "Neuron N001: Executive Decision Making",
+      "file": "N001_executive_decisions.md",
+      "connections": [
+        "N004",
+        "N007"
+      ],
+      "synapse_count": 2,
+      "size_bytes": 851
+    },
+    {
+      "id": "N002",
+      "label": "Neuron N002: VPS Remote Operations & Pipeline",
+      "file": "N002_vps_remote_ops.md",
+      "connections": [
+        "N004",
+        "N006"
+      ],
+      "synapse_count": 2,
+      "size_bytes": 664
+    },
+    {
+      "id": "N003",
+      "label": "Neuron N003: Mobile-First UI & Compact Data Viz",
+      "file": "N003_mobile_first_ui.md",
+      "connections": [
+        "N001",
+        "N004"
+      ],
+      "synapse_count": 2,
+      "size_bytes": 1091
+    },
+    {
+      "id": "N004",
+      "label": "Neuron N004: Ponytail Minimality Ladder",
+      "file": "N004_ponytail_minimality.md",
+      "connections": [
+        "N001",
+        "N005"
+      ],
+      "synapse_count": 2,
+      "size_bytes": 671
+    },
+    {
+      "id": "N005",
+      "label": "Neuron N005: Graphify Knowledge Network",
+      "file": "N005_graphify_knowledge.md",
+      "connections": [
+        "N007"
+      ],
+      "synapse_count": 1,
+      "size_bytes": 565
+    },
+    {
+      "id": "N006",
+      "label": "Neuron N006: 9Router Gateway Engine",
+      "file": "N006_9router_gateway.md",
+      "connections": [
+        "N002"
+      ],
+      "synapse_count": 1,
+      "size_bytes": 478
+    },
+    {
+      "id": "N007",
+      "label": "Neuron N007: Autonomous Self-Improving Loop",
+      "file": "N007_self_improving_loop.md",
+      "connections": [
+        "N001",
+        "N004"
+      ],
+      "synapse_count": 2,
+      "size_bytes": 696
+    }
+  ]
+}
