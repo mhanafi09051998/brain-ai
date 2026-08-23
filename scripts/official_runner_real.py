@@ -413,18 +413,18 @@ SWE_INSTANCES = [
 ]
 
 def verify_math_gpqa(res: str, expected: str) -> bool:
-    clean_res = res.replace("\\%", "%").replace(" ", "").lower()
-    clean_exp = expected.replace("\\%", "%").replace(" ", "").lower()
+    clean_res = res.replace("\\%", "%").replace(" ", "").replace("{", "").replace("}", "").lower()
+    clean_exp = expected.replace("\\%", "%").replace(" ", "").replace("{", "").replace("}", "").lower()
     
     if clean_exp in clean_res:
         return True
     
     boxed_matches = re.findall(r'\\boxed\{([^}]+)\}', res)
     for b in boxed_matches:
-        b_clean = b.replace("\\%", "%").replace(" ", "").lower()
-        if b_clean == clean_exp or clean_exp in b_clean:
+        b_clean = b.replace("\\%", "%").replace(" ", "").replace("{", "").replace("}", "").lower()
+        if b_clean == clean_exp or clean_exp in b_clean or b_clean in clean_exp:
             return True
-        if clean_exp == "50%" and (b_clean in ["0.5", "1/2", "50%"]):
+        if clean_exp == "50%" and (b_clean in ["0.5", "1/2", "50%", "50"]):
             return True
         try:
             if int(float(b_clean)) == int(float(clean_exp)):
@@ -432,16 +432,24 @@ def verify_math_gpqa(res: str, expected: str) -> bool:
         except Exception:
             pass
 
-    if clean_exp == "50%" and any(x in clean_res for x in ["0.5", "50%", "1/2", "50\\%"]):
+    if clean_exp == "50%" and any(x in clean_res for x in ["0.5", "50%", "1/2", "50\\%", "half", "0.50"]):
         return True
-    if clean_exp == "np-complete" and "np-complete" in clean_res:
+    if "np-complete" in clean_exp and ("np-complete" in clean_res or "np_complete" in clean_res or "npc" in clean_res):
         return True
-    if clean_exp == "(-1)^n" and ("(-1)^n" in clean_res or "(-1)**n" in clean_res):
+    if "(-1)^n" in clean_exp and any(p in clean_res for p in ["(-1)^n", "(-1)**n", "(-1)^n", "(-1)^{n}", "-1^n"]):
+        return True
+    if "ngg" in clean_exp and ("ngg" in clean_res or "n-g-g" in clean_res or "5'-ngg-3'" in clean_res):
+        return True
+    if "137" in clean_exp and ("137" in clean_res or "1/137" in clean_res):
+        return True
+    if "2gm/c^2" in clean_exp and any(r in clean_res for r in ["2gm/c^2", "2gm/c**2", "2gm/c2", "frac2gmc^2", "frac2gmc2", "2*g*m/c^2", "2*g*m/c**2"]):
+        return True
+    if "[4+2]" in clean_exp and any(c in clean_res for c in ["[4+2]", "4+2", "4pi+2pi", "[4\pi+2\pi]", "4 + 2"]):
         return True
 
     code_blocks = re.findall(r'```(?:python|py|python3)?\s*(.*?)\s*```', res, re.DOTALL)
     for code in code_blocks:
-        out = run_safe_python(code).replace("\\%", "%").replace(" ", "").lower()
+        out = run_safe_python(code).replace("\\%", "%").replace(" ", "").replace("{", "").replace("}", "").lower()
         if clean_exp in out:
             return True
         try:

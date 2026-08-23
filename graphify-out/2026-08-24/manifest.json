@@ -606,9 +606,9 @@
     "semantic_hash": ""
   },
   ".claudia/settings.json": {
-    "mtime": 1787511081.45117,
-    "seen": 1787511965.0234702,
-    "ast_hash": "dad56d90699a9f21c14478b55a4b45d4",
+    "mtime": 1787516847.7706854,
+    "seen": 1787516876.570004,
+    "ast_hash": "cfe02f77365438905644bace5ad2db79",
     "semantic_hash": ""
   },
   "opencode.json": {
@@ -660,9 +660,9 @@
     "semantic_hash": ""
   },
   "scripts/official_runner_real.py": {
-    "mtime": 1787516602.3304198,
-    "seen": 1787516659.263985,
-    "ast_hash": "f30d71a1be1361b1360cee9c39dbade2",
+    "mtime": 1787516725.7909207,
+    "seen": 1787516758.5193114,
+    "ast_hash": "395f28bd92557118b2f68d96ccc37d6d",
     "semantic_hash": ""
   },
   "scripts/test_direct_router.py": {

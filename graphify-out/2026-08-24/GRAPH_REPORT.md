@@ -1,7 +1,7 @@
 # Graph Report - Agent_Claudia_Autonomus  (2026-08-24)
 
 ## Corpus Check
-- 114 files · ~75,639 words
+- 114 files · ~75,893 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `381d66f7`
+- Built from commit: `347ddb2c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -126,8 +126,8 @@
 ## Communities (90 total, 26 thin omitted)
 
 ### Community 0 - "index.js"
-Cohesion: 0.16
-Nodes (13): normalizeConfigMode(), normalizePersistedMode(), RUNTIME_MODES, {
+Cohesion: 0.18
+Nodes (11): normalizePersistedMode(), {
   DEFAULT_MODE,
   RUNTIME_MODES,
   getDefaultMode,
@@ -137,7 +137,7 @@ Nodes (13): normalizeConfigMode(), normalizePersistedMode(), RUNTIME_MODES, {
   normalizePersistedMode,
   isDeactivationCommand,
   writeDefaultMode,
-}, { getPonytailInstructions, filterSkillBodyForMode }, parsePonytailCommand(), ponytailExtension(), readDefaultMode (+5 more)
+}, { getPonytailInstructions, filterSkillBodyForMode }, parsePonytailCommand(), ponytailExtension(), readDefaultMode, readQuietStartup, require (+3 more)
 
 ### Community 1 - "ponytail/package.json"
 Cohesion: 0.05
@@ -336,8 +336,8 @@ Cohesion: 0.50
 Nodes (3): 📋 4 Aturan Disiplin Eksekusi:, 📌 Domain & Karakteristik, Neuron N019: BFCL Tool Schema & IFEval Strict Format Oracle
 
 ### Community 86 - "ponytail-config.js"
-Cohesion: 0.15
-Nodes (14): fs, getClaudeDir(), getConfigDir(), getConfigPath(), getHideStatus(), getQuietStartup(), isShellSafe(), os (+6 more)
+Cohesion: 0.14
+Nodes (15): fs, getClaudeDir(), getConfigDir(), getConfigPath(), getHideStatus(), getQuietStartup(), normalizeConfigMode(), os (+7 more)
 
 ### Community 87 - "ponytail-instructions.js"
 Cohesion: 0.18
@@ -348,14 +348,14 @@ Cohesion: 0.20
 Nodes (9): getDefaultMode(), __dirname, parseCommandFile(), { getDefaultMode, normalizePersistedMode }, { getPonytailInstructions }, { parseCommandFile }, readMode(), require (+1 more)
 
 ### Community 89 - "ponytail-activate.js"
-Cohesion: 0.20
-Nodes (9): claudeDir, {
+Cohesion: 0.18
+Nodes (10): claudeDir, {
   clearMode,
   isCodex,
   isCopilot,
   setMode,
   writeHookOutput,
-}, fs, { getDefaultMode, getClaudeDir, isShellSafe }, { getPonytailInstructions }, mode, output, path (+1 more)
+}, fs, { getDefaultMode, getClaudeDir, isShellSafe }, { getPonytailInstructions }, mode, output, path (+2 more)
 
 ## Knowledge Gaps
 - **335 isolated node(s):** `$schema`, `npm`, `baseURL`, `apiKey`, `name` (+330 more)
