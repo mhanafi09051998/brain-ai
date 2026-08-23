@@ -768,14 +768,14 @@
     "semantic_hash": ""
   },
   ".claudia/mcp.json": {
-    "mtime": 1787521289.677828,
-    "seen": 1787521299.9456651,
+    "mtime": 1787526403.8911097,
+    "seen": 1787526418.6755166,
     "ast_hash": "16dfbb04d0aea7824aab724313d4334f",
     "semantic_hash": ""
   },
   ".claudia/todos.json": {
-    "mtime": 1787521289.2903707,
-    "seen": 1787521299.9456651,
+    "mtime": 1787526402.963271,
+    "seen": 1787526418.6755166,
     "ast_hash": "d751713988987e9331980363e24189ce",
     "semantic_hash": ""
   }
