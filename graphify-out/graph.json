@@ -4,18 +4,6 @@
   "graph": {},
   "nodes": [
     {
-      "id": "ponytail_hooks_ponytail_config_getconfigdir",
-      "label": "getConfigDir()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ponytail-config.js",
-      "file_type": "code",
-      "norm_label": "getconfigdir()",
-      "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L54"
-    },
-    {
       "id": "ponytail_hooks_ponytail_config_getconfigpath",
       "label": "getConfigPath()",
       "_callable": true,
@@ -62,18 +50,6 @@
       "norm_label": "getquietstartup()",
       "source_file": "ponytail/hooks/ponytail-config.js",
       "source_location": "L105"
-    },
-    {
-      "id": "ponytail_hooks_ponytail_config_isdeactivationcommand",
-      "label": "isDeactivationCommand()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ponytail-config.js",
-      "file_type": "code",
-      "norm_label": "isdeactivationcommand()",
-      "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L40"
     },
     {
       "id": "ponytail_hooks_ponytail_config_normalizeconfigmode",
@@ -302,6 +278,30 @@
       "norm_label": "getclaudedir()",
       "source_file": "ponytail/hooks/ponytail-config.js",
       "source_location": "L71"
+    },
+    {
+      "id": "ponytail_hooks_ponytail_config_getconfigdir",
+      "label": "getConfigDir()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ponytail-activate.js",
+      "file_type": "code",
+      "norm_label": "getconfigdir()",
+      "source_file": "ponytail/hooks/ponytail-config.js",
+      "source_location": "L54"
+    },
+    {
+      "id": "ponytail_hooks_ponytail_config_isdeactivationcommand",
+      "label": "isDeactivationCommand()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ponytail-activate.js",
+      "file_type": "code",
+      "norm_label": "isdeactivationcommand()",
+      "source_file": "ponytail/hooks/ponytail-config.js",
+      "source_location": "L40"
     },
     {
       "id": "ponytail_hooks_ponytail_config_isshellsafe",
@@ -1550,6 +1550,18 @@
       "source_location": "L40"
     },
     {
+      "id": "agents_kerahasiaan_arsitektur_perlindungan_hak_cipta_proprietary_ip_shield",
+      "label": "?? Kerahasiaan Arsitektur & Perlindungan Hak Cipta (Proprietary IP Shield):",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "Ponytail, lazy senior dev mode",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "?? kerahasiaan arsitektur & perlindungan hak cipta (proprietary ip shield):",
+      "source_file": "AGENTS.md",
+      "source_location": "L45"
+    },
+    {
       "id": "agents_not_lazy_about",
       "label": "Not lazy about:",
       "_origin": "ast",
@@ -1716,6 +1728,18 @@
       "norm_label": "graphify & auto-sync knowledge graph:",
       "source_file": "GEMINI.md",
       "source_location": "L40"
+    },
+    {
+      "id": "gemini_kerahasiaan_arsitektur_perlindungan_hak_cipta_proprietary_ip_shield",
+      "label": "?? Kerahasiaan Arsitektur & Perlindungan Hak Cipta (Proprietary IP Shield):",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "Ponytail, lazy senior dev mode",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "?? kerahasiaan arsitektur & perlindungan hak cipta (proprietary ip shield):",
+      "source_file": "GEMINI.md",
+      "source_location": "L45"
     },
     {
       "id": "gemini_not_lazy_about",
@@ -7309,6 +7333,17 @@
     },
     {
       "source": "agents_ponytail_lazy_senior_dev_mode",
+      "target": "agents_kerahasiaan_arsitektur_perlindungan_hak_cipta_proprietary_ip_shield",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_ponytail_lazy_senior_dev_mode",
       "target": "agents_persona_communication",
       "relation": "contains",
       "_origin": "ast",
@@ -7811,6 +7846,17 @@
       "confidence_score": 1.0,
       "source_file": "GEMINI.md",
       "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "gemini_ponytail_lazy_senior_dev_mode",
+      "target": "gemini_kerahasiaan_arsitektur_perlindungan_hak_cipta_proprietary_ip_shield",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "GEMINI.md",
+      "source_location": "L45",
       "weight": 1.0
     },
     {
@@ -11533,5 +11579,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "2ccc87640c7c64a018144ec0d5cd80ca4df8da1d"
+  "built_at_commit": "56a97b9c1492634db72052ad8741cfe9dc7f2dfc"
 }

@@ -1,16 +1,16 @@
 # Graph Report - Agent_Claudia_Autonomus  (2026-08-23)
 
 ## Corpus Check
-- 90 files · ~62,775 words
+- 90 files · ~63,314 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 482 nodes · 507 edges · 73 communities (49 shown, 24 thin omitted)
+- 484 nodes · 509 edges · 73 communities (49 shown, 24 thin omitted)
 - Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c5c312f8`
+- Built from commit: `2ccc8764`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -91,7 +91,7 @@
 7. `Instalación` - 11 edges
 8. `getDefaultMode()` - 9 edges
 9. `finish()` - 9 edges
-10. `normalizeMode()` - 8 edges
+10. `⚡ CLAUDIA 2.0` - 9 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `finish()` --calls--> `isDeactivationCommand()`  [EXTRACTED]
@@ -201,8 +201,8 @@ Cohesion: 0.33
 Nodes (5): name, private, scripts, test, type
 
 ### Community 21 - "⚡ CLAUDIA 2.0"
-Cohesion: 0.25
-Nodes (7): 🌌 1. Filosofi Rekayasa Inti: *The Minimality Ladder*, 🧠 2. Cognitive Neural Mesh (15 Master Neurons), 🛠️ 3. Persenjataan Fullstack Terpasang, 🏛️ 4. Kapabilitas Orkestrasi Cloud & Multi-Layanan, 🔒 5. Zero-Trust Security & Vault Isolation, *Autonomous Fullstack Engineer & Cognitive Neural Mesh*, ⚡ CLAUDIA 2.0
+Cohesion: 0.20
+Nodes (9): 🌌 1. Filosofi Rekayasa Inti: *The Minimality Ladder*, 🧠 2. Cognitive Neural Mesh (16 Master Neurons), 🧪 3. Framework Tolok Ukur 6 Parameter (Frontier Real Evaluator), 🌐 4. Ekosistem Layanan Aktif (*Production Cluster*), 📊 5. Telemetri VPS & Kecepatan Jaringan Real-Time, 🛠️ 6. Persenjataan & Toolkit Terpasang, 🔒 7. Zero-Trust Security & Vault Isolation, *Autonomous Senior Engineering Partner & Cognitive Neural Mesh* (+1 more)
 
 ### Community 23 - ".agents/skills/ponytail-audit/SKILL.md"
 Cohesion: 0.40
@@ -281,7 +281,7 @@ Cohesion: 0.50
 Nodes (3): Boundaries, Output, Scan
 
 ## Knowledge Gaps
-- **301 isolated node(s):** `__dirname`, `require`, `{ getPonytailInstructions }`, `{ getDefaultMode, normalizePersistedMode }`, `{ parseCommandFile }` (+296 more)
+- **303 isolated node(s):** `__dirname`, `require`, `{ getPonytailInstructions }`, `{ getDefaultMode, normalizePersistedMode }`, `{ parseCommandFile }` (+298 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **24 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -289,7 +289,7 @@ Nodes (3): Boundaries, Output, Scan
 _Questions this graph is uniquely positioned to answer:_
 
 - **What connects `__dirname`, `require`, `{ getPonytailInstructions }` to the rest of the system?**
-  _301 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _303 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `ponytail-config.js` be split into smaller, more focused modules?**
   _Cohesion score 0.07474600870827286 - nodes in this community are weakly interconnected._
 - **Should `ponytail/package.json` be split into smaller, more focused modules?**
