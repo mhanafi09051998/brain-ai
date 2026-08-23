@@ -14,6 +14,10 @@ Dokumen memori modular terdistribusi Claudia. Memori dipecah menjadi neuron-neur
 7. **[`N009_peak_algorithms_codex.md`](file:///D:/Agent_Claudia_Autonomus/learning/neurons/N009_peak_algorithms_codex.md)** — **Peak Algorithmic Codex**: Graph SCC (Tarjan), Probabilistic Filters (Bloom/HyperLogLog), Segment Tree, Lock-Free Concurrency.
 8. **[`N010_distributed_systems_design.md`](file:///D:/Agent_Claudia_Autonomus/learning/neurons/N010_distributed_systems_design.md)** — **High-Scale Distributed Systems**: Raft/Paxos, Consistent Hashing, CQRS, Event Sourcing, Circuit Breakers.
 9. **[`N011_mechanical_sympathy_perf.md`](file:///D:/Agent_Claudia_Autonomus/learning/neurons/N011_mechanical_sympathy_perf.md)** — **Mechanical Sympathy & Zero-Copy**: L1/L2 Cache Locality, `sendfile`/`splice` Zero-Copy, `io_uring` kernel event multiplexing.
+10. **[`N012_deep_search_and_graph_rag.md`](file:///D:/Agent_Claudia_Autonomus/learning/neurons/N012_deep_search_and_graph_rag.md)** — **Deep Search & GraphRAG**: BM25 + Dense Vector Semantic, Reciprocal Rank Fusion (RRF), HyDE, Multi-Hop Callflow Traversal.
+11. **[`N013_deep_storage_and_distributed_db.md`](file:///D:/Agent_Claudia_Autonomus/learning/neurons/N013_deep_storage_and_distributed_db.md)** — **Deep Storage & Distributed DB**: LSM-Tree vs B+ Tree, MemTable/SSTable Compaction, 2PC & Saga Transactions, HNSW Vector Indexing.
+12. **[`N014_zero_trust_security_and_cryptography.md`](file:///D:/Agent_Claudia_Autonomus/learning/neurons/N014_zero_trust_security_and_cryptography.md)** — **Zero-Trust Security & Cryptography**: PASETO Tokens, Constant-Time Hash, mTLS, STRIDE Threat Modeling, eBPF Kernel Probing.
+13. **[`N015_compiler_ast_and_system_profiling.md`](file:///D:/Agent_Claudia_Autonomus/learning/neurons/N015_compiler_ast_and_system_profiling.md)** — **Compiler AST & Diagnostics**: Tree-Sitter Visitor Pattern, WebAssembly WASM, CPU Flamegraphs, Event Loop Lag Profiling.
 
 
 

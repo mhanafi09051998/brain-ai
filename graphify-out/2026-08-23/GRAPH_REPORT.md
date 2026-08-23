@@ -1,21 +1,21 @@
 # Graph Report - Agent_Claudia_Autonomus  (2026-08-23)
 
 ## Corpus Check
-- 82 files · ~285,022 words
+- 85 files · ~285,608 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 457 nodes · 490 edges · 66 communities (49 shown, 17 thin omitted)
+- 467 nodes · 497 edges · 73 communities (54 shown, 19 thin omitted)
 - Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1a00f434`
+- Built from commit: `57c01741`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- ponytail-config.js
+- index.js
 - ponytail-activate.js
 - ponytail/package.json
 - Install
@@ -73,6 +73,13 @@
 - 📦 Daftar Modul & Framework
 - README.md
 - auto_sync_github.py
+- ponytail-runtime.js
+- ponytail-config.js
+- ponytail-instructions.js
+- ponytail-subagent.js
+- N009_peak_algorithms_codex.md
+- N010_distributed_systems_design.md
+- N011_mechanical_sympathy_perf.md
 
 ## God Nodes (most connected - your core abstractions)
 1. `Install` - 15 edges
@@ -87,35 +94,45 @@
 10. `normalizeMode()` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `readMode()` --calls--> `getDefaultMode()`  [EXTRACTED]
-  ponytail/.opencode/plugins/ponytail.mjs → ponytail/hooks/ponytail-config.js
 - `readMode()` --calls--> `normalizePersistedMode()`  [EXTRACTED]
   ponytail/.opencode/plugins/ponytail.mjs → ponytail/hooks/ponytail-config.js
-- `createPiHarness()` --calls--> `ponytailExtension()`  [EXTRACTED]
-  ponytail/pi-extension/test/extension.test.js → ponytail/pi-extension/index.js
-- `filterSkillBodyForMode()` --calls--> `normalizeMode()`  [EXTRACTED]
+- `parsePonytailCommand()` --calls--> `normalizeMode()`  [EXTRACTED]
+  ponytail/pi-extension/index.js → ponytail/hooks/ponytail-config.js
+- `getPonytailInstructions()` --calls--> `normalizePersistedMode()`  [EXTRACTED]
   ponytail/hooks/ponytail-instructions.js → ponytail/hooks/ponytail-config.js
-- `getPonytailInstructions()` --calls--> `normalizeMode()`  [EXTRACTED]
-  ponytail/hooks/ponytail-instructions.js → ponytail/hooks/ponytail-config.js
+- `ponytailExtension()` --calls--> `isDeactivationCommand()`  [EXTRACTED]
+  ponytail/pi-extension/index.js → ponytail/hooks/ponytail-config.js
+- `finish()` --calls--> `getDefaultMode()`  [EXTRACTED]
+  ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-config.js
 
 ## Import Cycles
 - None detected.
 
-## Communities (66 total, 17 thin omitted)
+## Communities (73 total, 19 thin omitted)
 
-### Community 0 - "ponytail-config.js"
-Cohesion: 0.07
-Nodes (46): fs, getConfigDir(), getConfigPath(), getDefaultMode(), getHideStatus(), getQuietStartup(), isDeactivationCommand(), normalizeConfigMode() (+38 more)
+### Community 0 - "index.js"
+Cohesion: 0.17
+Nodes (13): getHideStatus(), getQuietStartup(), normalizePersistedMode(), {
+  DEFAULT_MODE,
+  RUNTIME_MODES,
+  getDefaultMode,
+  getQuietStartup,
+  getHideStatus,
+  normalizeMode,
+  normalizePersistedMode,
+  isDeactivationCommand,
+  writeDefaultMode,
+}, { getPonytailInstructions, filterSkillBodyForMode }, parsePonytailCommand(), ponytailExtension(), readDefaultMode (+5 more)
 
 ### Community 1 - "ponytail-activate.js"
-Cohesion: 0.08
-Nodes (22): claudeDir, {
+Cohesion: 0.18
+Nodes (10): claudeDir, {
   clearMode,
   isCodex,
   isCopilot,
   setMode,
   writeHookOutput,
-}, fs, { getDefaultMode, getClaudeDir, isShellSafe }, { getPonytailInstructions }, mode, output, path (+14 more)
+}, fs, { getDefaultMode, getClaudeDir, isShellSafe }, { getPonytailInstructions }, mode, output, path (+2 more)
 
 ### Community 2 - "ponytail/package.json"
 Cohesion: 0.05
@@ -263,7 +280,7 @@ Nodes (5): 🚀 Deployed Ecosystem & Port Mappings, 🛠️ Installed Autonomous
 
 ### Community 62 - "ponytail.mjs"
 Cohesion: 0.20
-Nodes (8): __dirname, parseCommandFile(), { getDefaultMode, normalizePersistedMode }, { getPonytailInstructions }, { parseCommandFile }, readMode(), require, statePath
+Nodes (9): getDefaultMode(), __dirname, parseCommandFile(), { getDefaultMode, normalizePersistedMode }, { getPonytailInstructions }, { parseCommandFile }, readMode(), require (+1 more)
 
 ### Community 63 - "📦 Daftar Modul & Framework"
 Cohesion: 0.22
@@ -273,20 +290,36 @@ Nodes (8): 1. **Biome (`@biomejs/biome`)** - *Linter & Formatter Rust*, 2. **Pla
 Cohesion: 0.33
 Nodes (5): 🧠 Arsitektur Memori & Pengetahuan, 🌟 Core Philosophy: The Minimality Ladder (Ponytail), 🚀 Memulai (Quick Start), 🛠️ Persenjataan Fullstack yang Terpasang, 🔒 Standar Keamanan & Manajemen Kredensial
 
+### Community 66 - "ponytail-runtime.js"
+Cohesion: 0.16
+Nodes (16): isDeactivationCommand(), writeDefaultMode(), { clearMode, isQoder, readMode, setMode, writeHookOutput }, finish(), { getDefaultMode, isDeactivationCommand, writeDefaultMode }, { getPonytailInstructions }, clearMode(), fs (+8 more)
+
+### Community 67 - "ponytail-config.js"
+Cohesion: 0.15
+Nodes (13): fs, getClaudeDir(), getConfigDir(), getConfigPath(), normalizeConfigMode(), os, path, RUNTIME_MODES (+5 more)
+
+### Community 68 - "ponytail-instructions.js"
+Cohesion: 0.29
+Nodes (9): normalizeMode(), { DEFAULT_MODE, normalizeMode, normalizePersistedMode }, filterSkillBodyForMode(), fs, getFallbackInstructions(), getPonytailInstructions(), INDEPENDENT_MODES, path (+1 more)
+
+### Community 69 - "ponytail-subagent.js"
+Cohesion: 0.38
+Nodes (6): writeHookOutput(), finish(), { getPonytailInstructions }, inject(), mode, { readMode, writeHookOutput }
+
+### Community 70 - "N009_peak_algorithms_codex.md"
+Cohesion: 0.50
+Nodes (3): 1. Graph & Network Flow Algorithms, 2. Probabilistic & Spatial Data Structures, 3. High-Performance Concurrency & Rate Limiting
+
 ## Knowledge Gaps
-- **286 isolated node(s):** `__dirname`, `require`, `{ getPonytailInstructions }`, `{ getDefaultMode, normalizePersistedMode }`, `{ parseCommandFile }` (+281 more)
+- **293 isolated node(s):** `__dirname`, `require`, `{ getPonytailInstructions }`, `{ getDefaultMode, normalizePersistedMode }`, `{ parseCommandFile }` (+288 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **17 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **19 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **What connects `__dirname`, `require`, `{ getPonytailInstructions }` to the rest of the system?**
-  _286 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `ponytail-config.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.07456140350877193 - nodes in this community are weakly interconnected._
-- **Should `ponytail-activate.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.08307692307692308 - nodes in this community are weakly interconnected._
+  _293 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `ponytail/package.json` be split into smaller, more focused modules?**
   _Cohesion score 0.05365853658536585 - nodes in this community are weakly interconnected._
 - **Should `Install` be split into smaller, more focused modules?**

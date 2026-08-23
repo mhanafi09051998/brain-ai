@@ -1,75 +1,24 @@
 ﻿{
-  "version": "1.2.0",
-  "updated_at": "2026-08-23T20:21:40",
-  "total_neurons": 11,
-  "total_synapses": 24,
-  "mesh_density": 0.35,
+  "version": "2.0.0",
+  "updated_at": "2026-08-23T20:24:45",
+  "total_neurons": 15,
+  "total_synapses": 42,
+  "mesh_density": 0.40,
   "neurons": [
-    {
-      "id": "N001",
-      "label": "Neuron N001: Executive Decision Making",
-      "file": "N001_executive_decisions.md",
-      "connections": ["N004", "N007"]
-    },
-    {
-      "id": "N002",
-      "label": "Neuron N002: VPS Remote Operations & Pipeline",
-      "file": "N002_vps_remote_ops.md",
-      "connections": ["N004", "N006", "N008"]
-    },
-    {
-      "id": "N003",
-      "label": "Neuron N003: Mobile-First UI & Compact Data Viz",
-      "file": "N003_mobile_first_ui.md",
-      "connections": ["N001", "N004"]
-    },
-    {
-      "id": "N004",
-      "label": "Neuron N004: Ponytail Minimality Ladder",
-      "file": "N004_ponytail_minimality.md",
-      "connections": ["N001", "N005", "N011"]
-    },
-    {
-      "id": "N005",
-      "label": "Neuron N005: Graphify Knowledge Network",
-      "file": "N005_graphify_knowledge.md",
-      "connections": ["N007", "N009"]
-    },
-    {
-      "id": "N006",
-      "label": "Neuron N006: 9Router Gateway Engine",
-      "file": "N006_9router_gateway.md",
-      "connections": ["N002", "N010"]
-    },
-    {
-      "id": "N007",
-      "label": "Neuron N007: Autonomous Self-Improving Loop",
-      "file": "N007_self_improving_loop.md",
-      "connections": ["N001", "N004", "N008"]
-    },
-    {
-      "id": "N008",
-      "label": "Neuron N008: Persistent Live Session Checkpoint",
-      "file": "N008_live_session_checkpoint.md",
-      "connections": ["N002", "N006", "N010"]
-    },
-    {
-      "id": "N009",
-      "label": "Neuron N009: Peak Algorithmic Codex & Data Structures",
-      "file": "N009_peak_algorithms_codex.md",
-      "connections": ["N004", "N005", "N011"]
-    },
-    {
-      "id": "N010",
-      "label": "Neuron N010: High-Scale Distributed Systems Architecture",
-      "file": "N010_distributed_systems_design.md",
-      "connections": ["N006", "N008", "N009"]
-    },
-    {
-      "id": "N011",
-      "label": "Neuron N011: Mechanical Sympathy & Zero-Copy Performance",
-      "file": "N011_mechanical_sympathy_perf.md",
-      "connections": ["N004", "N009", "N010"]
-    }
+    {"id": "N001", "label": "Neuron N001: Executive Decision Making", "file": "N001_executive_decisions.md", "connections": ["N004", "N007"]},
+    {"id": "N002", "label": "Neuron N002: VPS Remote Operations & Pipeline", "file": "N002_vps_remote_ops.md", "connections": ["N004", "N006", "N008"]},
+    {"id": "N003", "label": "Neuron N003: Mobile-First UI & Compact Data Viz", "file": "N003_mobile_first_ui.md", "connections": ["N001", "N004"]},
+    {"id": "N004", "label": "Neuron N004: Ponytail Minimality Ladder", "file": "N004_ponytail_minimality.md", "connections": ["N001", "N005", "N011"]},
+    {"id": "N005", "label": "Neuron N005: Graphify Knowledge Network", "file": "N005_graphify_knowledge.md", "connections": ["N007", "N009", "N012"]},
+    {"id": "N006", "label": "Neuron N006: 9Router Gateway Engine", "file": "N006_9router_gateway.md", "connections": ["N002", "N010", "N014"]},
+    {"id": "N007", "label": "Neuron N007: Autonomous Self-Improving Loop", "file": "N007_self_improving_loop.md", "connections": ["N001", "N004", "N008", "N015"]},
+    {"id": "N008", "label": "Neuron N008: Persistent Live Session Checkpoint", "file": "N008_live_session_checkpoint.md", "connections": ["N002", "N006", "N010"]},
+    {"id": "N009", "label": "Neuron N009: Peak Algorithmic Codex & Data Structures", "file": "N009_peak_algorithms_codex.md", "connections": ["N004", "N005", "N011", "N013"]},
+    {"id": "N010", "label": "Neuron N010: High-Scale Distributed Systems Architecture", "file": "N010_distributed_systems_design.md", "connections": ["N006", "N008", "N009", "N013"]},
+    {"id": "N011", "label": "Neuron N011: Mechanical Sympathy & Zero-Copy Performance", "file": "N011_mechanical_sympathy_perf.md", "connections": ["N004", "N009", "N010", "N015"]},
+    {"id": "N012", "label": "Neuron N012: Deep Search, Multi-Hop Reasoning & Hybrid Retrieval", "file": "N012_deep_search_and_graph_rag.md", "connections": ["N005", "N009", "N015"]},
+    {"id": "N013", "label": "Neuron N013: Deep Storage Internals, LSM-Trees & Distributed DB", "file": "N013_deep_storage_and_distributed_db.md", "connections": ["N009", "N010", "N011"]},
+    {"id": "N014", "label": "Neuron N014: Zero-Trust Security, Cryptography & Threat Modeling", "file": "N014_zero_trust_security_and_cryptography.md", "connections": ["N006", "N008", "N010"]},
+    {"id": "N015", "label": "Neuron N015: Compiler Engineering, AST Synthesis & System Profiling", "file": "N015_compiler_ast_and_system_profiling.md", "connections": ["N005", "N007", "N011", "N012"]}
   ]
 }

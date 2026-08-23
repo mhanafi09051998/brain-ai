@@ -1,5 +1,5 @@
 {
-  "0": "ponytail-config.js",
+  "0": "index.js",
   "1": "ponytail-activate.js",
   "2": "ponytail/package.json",
   "3": "Install",
@@ -64,5 +64,12 @@
   "62": "ponytail.mjs",
   "63": "📦 Daftar Modul & Framework",
   "64": "README.md",
-  "65": "auto_sync_github.py"
+  "65": "auto_sync_github.py",
+  "66": "ponytail-runtime.js",
+  "67": "ponytail-config.js",
+  "68": "ponytail-instructions.js",
+  "69": "ponytail-subagent.js",
+  "70": "N009_peak_algorithms_codex.md",
+  "71": "N010_distributed_systems_design.md",
+  "72": "N011_mechanical_sympathy_perf.md"
 }
