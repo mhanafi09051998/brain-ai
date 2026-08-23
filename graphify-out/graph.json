@@ -445,7 +445,7 @@
       "file_type": "code",
       "norm_label": "auto_sync()",
       "source_file": "scripts/auto_sync_github.py",
-      "source_location": "L15"
+      "source_location": "L18"
     },
     {
       "id": "scripts_auto_sync_github_run_cmd",
@@ -6289,7 +6289,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/auto_sync_github.py",
-      "source_location": "L22",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -11079,7 +11079,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/auto_sync_github.py",
-      "source_location": "L15",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -11579,5 +11579,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "56a97b9c1492634db72052ad8741cfe9dc7f2dfc"
+  "built_at_commit": "1877f52e2c26c10d693c02839d6b2eebeb398984"
 }
