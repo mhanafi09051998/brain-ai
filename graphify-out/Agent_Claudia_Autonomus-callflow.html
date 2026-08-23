@@ -60,7 +60,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 <div class="container">
 
 <h1>Agent_Claudia_Autonomus — Complete Call Flow &amp; Architecture Documentation</h1>
-<p class="subtitle">Generated from graphify knowledge graph: 479 nodes, 505 edges, 73 communities. Commit: 98e0d4f</p>
+<p class="subtitle">Generated from graphify knowledge graph: 481 nodes, 507 edges, 73 communities. Commit: df07788</p>
 
 <div class="nav">
     <a href="#overview">Architecture Overview</a>
@@ -73,11 +73,11 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
     <a href="#tests-fixtures">Tests &amp; Fixtures</a>
     <a href="#production-planning-specification-zolu-ai-web-pr">Production Planning Specification: Zolu AI Web Production Engine</a>
     <a href="#core-engines-workflows">Core Engines &amp; Workflows</a>
+    <a href="#claudia-2-0">⚡ CLAUDIA 2.0</a>
     <a href="#ponytail-lazy-senior-dev-mode">Ponytail, lazy senior dev mode</a>
     <a href="#ponytail-lazy-senior-dev-mode-36116e">Ponytail, lazy senior dev mode</a>
     <a href="#ponytail-lazy-senior-dev-mode-2">Ponytail, lazy senior dev mode</a>
     <a href="#ponytail-lazy-senior-dev-mode-3">Ponytail, lazy senior dev mode</a>
-    <a href="#pembelajaran-standar-tetap-learnings-fixed-rules">Pembelajaran &amp; Standar Tetap (Learnings &amp; Fixed Rules) - Claudia</a>
     <a href="#other">Other</a>
 </div>
 
@@ -106,6 +106,8 @@ flowchart LR
     class PRODUCTION_PLANNING_SPECIFICATION_ZOLU_AI_WEB_PR_F5CFD07A module;
     CORE_ENGINES_WORKFLOWS_6F8507CD("Core Engines &amp; Workflows<br/><small>8 nodes</small>")
     class CORE_ENGINES_WORKFLOWS_6F8507CD module;
+    CLAUDIA_2_0_DAD7BB91("⚡ CLAUDIA 2.0<br/><small>8 nodes</small>")
+    class CLAUDIA_2_0_DAD7BB91 module;
     PONYTAIL_LAZY_SENIOR_DEV_MODE_87509AA5("Ponytail, lazy senior dev mode<br/><small>7 nodes</small>")
     class PONYTAIL_LAZY_SENIOR_DEV_MODE_87509AA5 module;
     PONYTAIL_LAZY_SENIOR_DEV_MODE_36116E_97C13027("Ponytail, lazy senior dev mode<br/><small>7 nodes</small>")
@@ -114,13 +116,11 @@ flowchart LR
     class PONYTAIL_LAZY_SENIOR_DEV_MODE_2_73266681 module;
     PONYTAIL_LAZY_SENIOR_DEV_MODE_3_66F499E9("Ponytail, lazy senior dev mode<br/><small>7 nodes</small>")
     class PONYTAIL_LAZY_SENIOR_DEV_MODE_3_66F499E9 module;
-    PEMBELAJARAN_STANDAR_TETAP_LEARNINGS_FIXED_RULES_05304646("Pembelajaran &amp; Standar Tetap (Learnings &amp; Fixed Rules) - Claudia<br/><small>6 nodes</small>")
-    class PEMBELAJARAN_STANDAR_TETAP_LEARNINGS_FIXED_RULES_05304646 module;
     OTHER_D0941E68("Other<br/><small>108 nodes</small>")
     class OTHER_D0941E68 module;
     ANALYSIS_CLUSTERING_C79796DA -->|imports x19| TESTS_FIXTURES_B84B1DCC
-    ANALYSIS_CLUSTERING_C79796DA -->|imports x2| CLI_SKILLS_9964CBB8
     CLI_SKILLS_9964CBB8 -->|imports x2| TESTS_FIXTURES_B84B1DCC
+    ANALYSIS_CLUSTERING_C79796DA -->|imports x2| CLI_SKILLS_9964CBB8
     TESTS_FIXTURES_B84B1DCC -->|indirect call| CLI_SKILLS_9964CBB8
     TESTS_FIXTURES_B84B1DCC -->|indirect call| ANALYSIS_CLUSTERING_C79796DA
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
@@ -139,7 +139,7 @@ flowchart LR
     <h4>Architecture Layers</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>Layer</th><th>Nodes</th><th>Communities</th></tr>
-      <tr><td>Extraction Pipeline</td><td>6</td><td><code>62, 69</code></td></tr><tr><td>Graph Build</td><td>56</td><td><code>2, 63, 7</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>34</td><td><code>66</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>164</td><td><code>3, 4, 5, 13, 14, 15, 17, 67, 23, 24, 25, 29, 30, 31, 32, 41, 70, 42, 55, 56, 57, 58, 59, 60</code></td></tr><tr><td>Serving API</td><td>3</td><td><code>1</code></td></tr><tr><td>Security &amp; Global Graph</td><td>3</td><td><code>68</code></td></tr><tr><td>Tests &amp; Fixtures</td><td>53</td><td><code>0</code></td></tr><tr><td>Production Planning Specification: Zolu AI Web Production Engine</td><td>10</td><td><code>6</code></td></tr><tr><td>Core Engines &amp; Workflows</td><td>8</td><td><code>16</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>7</td><td><code>18</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>7</td><td><code>19</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>7</td><td><code>20</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>7</td><td><code>21</code></td></tr><tr><td>Pembelajaran &amp; Standar Tetap (Learnings &amp; Fixed Rules) - Claudia</td><td>6</td><td><code>22</code></td></tr><tr><td>Other</td><td>108</td><td><code>61, 64, 8, 26, 27, 28, 33, 35, 36, 37, 38, 39, 40, 34, 43, 44, 45, 46, 65, 71, 72, 9, 10, 47, 48, 49, 50, 51, 52, 53, 54, 11, 12</code></td></tr>
+      <tr><td>Extraction Pipeline</td><td>6</td><td><code>48, 50</code></td></tr><tr><td>Graph Build</td><td>56</td><td><code>1, 9, 20</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>34</td><td><code>2</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>164</td><td><code>3, 4, 5, 7, 8, 10, 12, 16, 23, 24, 25, 29, 30, 31, 32, 39, 41, 42, 67, 68, 69, 70, 71, 72</code></td></tr><tr><td>Serving API</td><td>3</td><td><code>47</code></td></tr><tr><td>Security &amp; Global Graph</td><td>3</td><td><code>49</code></td></tr><tr><td>Tests &amp; Fixtures</td><td>53</td><td><code>0</code></td></tr><tr><td>Production Planning Specification: Zolu AI Web Production Engine</td><td>10</td><td><code>6</code></td></tr><tr><td>Core Engines &amp; Workflows</td><td>8</td><td><code>11</code></td></tr><tr><td>⚡ CLAUDIA 2.0</td><td>8</td><td><code>21</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>7</td><td><code>13</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>7</td><td><code>14</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>7</td><td><code>15</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>7</td><td><code>17</code></td></tr><tr><td>Other</td><td>108</td><td><code>18, 19, 22, 26, 27, 28, 33, 34, 35, 36, 37, 38, 40, 43, 44, 45, 46, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66</code></td></tr>
     </table>
   </div>
   <div class="card">
@@ -151,7 +151,7 @@ flowchart LR
   <div class="card">
     <h4>Graph Report Highlights</h4>
     <ul>
-      <li>479 nodes · 505 edges · 73 communities (50 shown, 23 thin omitted)</li>
+      <li>481 nodes · 507 edges · 73 communities (50 shown, 23 thin omitted)</li>
       <li>Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.85)</li>
       <li>Token cost: 0 input · 0 output</li>
       <li>1. `Install` - 15 edges</li>
@@ -2132,8 +2132,141 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 11. Ponytail, lazy senior dev mode ====== -->
-<h2 id="ponytail-lazy-senior-dev-mode">11. Ponytail, lazy senior dev mode</h2>
+<!-- ====== 11. ⚡ CLAUDIA 2.0 ====== -->
+<h2 id="claudia-2-0">11. ⚡ CLAUDIA 2.0</h2>
+<p>⚡ CLAUDIA 2.0 groups implementation around readmemd, cognitive, neural, mesh, mostly in README.md. This section covers 8 nodes and 7 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: ⚡ CLAUDIA 2.0 (8 nodes, 7 edges)
+    readme_claudia_2_0_3050ec34("⚡ CLAUDIA 2.0<br/><small>README.md</small>")
+    readme_f78a71af("README.md")
+    readme_3_battle_tested_fullstack_toolkit_3666e819("🛠️ 3. Battle-Tested Fullstack Toolkit<br/><small>README.md</small>")
+    readme_4_live_production_ecosystem_cloud_service_741eede3("🖥️ 4. Live Production Ecosystem &amp; Cloud...<br/><small>README.md</small>")
+    readme_5_zero_trust_security_vault_isolation_2383562b("🔒 5. Zero-Trust Security &amp; Vault Isolation<br/><small>README.md</small>")
+    readme_1_core_engineering_philosophy_the_minimal_b2876fed("🌌 1. Core Engineering Philosophy: *The...<br/><small>README.md</small>")
+    readme_autonomous_fullstack_engineer_cognitive_n_ccb65a25("*Autonomous Fullstack Engineer &amp; Cognit...<br/><small>README.md</small>")
+    readme_2_cognitive_neural_mesh_15_master_neurons_872a759c("🧠 2. Cognitive Neural Mesh (15 Master N...<br/><small>README.md</small>")
+    readme_f78a71af -->|contains| readme_claudia_2_0_3050ec34
+    readme_claudia_2_0_3050ec34 -->|contains| readme_3_battle_tested_fullstack_toolkit_3666e819
+    readme_claudia_2_0_3050ec34 -->|contains| readme_4_live_production_ecosystem_cloud_service_741eede3
+    readme_claudia_2_0_3050ec34 -->|contains| readme_5_zero_trust_security_vault_isolation_2383562b
+    readme_claudia_2_0_3050ec34 -->|contains| readme_1_core_engineering_philosophy_the_minimal_b2876fed
+    readme_claudia_2_0_3050ec34 -->|contains| readme_autonomous_fullstack_engineer_cognitive_n_ccb65a25
+    readme_claudia_2_0_3050ec34 -->|contains| readme_2_cognitive_neural_mesh_15_master_neurons_872a759c
+    class readme_claudia_2_0_3050ec34 concept;
+    class readme_f78a71af concept;
+    class readme_3_battle_tested_fullstack_toolkit_3666e819 concept;
+    class readme_4_live_production_ecosystem_cloud_service_741eede3 concept;
+    class readme_5_zero_trust_security_vault_isolation_2383562b concept;
+    class readme_1_core_engineering_philosophy_the_minimal_b2876fed concept;
+    class readme_autonomous_fullstack_engineer_cognitive_n_ccb65a25 concept;
+    class readme_2_cognitive_neural_mesh_15_master_neurons_872a759c concept;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>README.md</code><br><small style="color:var(--muted)">README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing README.md.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>🌌 1. Core Engineering Philosophy: *The Minimality Ladder*</code><br><small style="color:var(--muted)">README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🌌 1. Core Engineering Philosophy: *The Minimality Ladder*.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>🧠 2. Cognitive Neural Mesh (15 Master Neurons)</code><br><small style="color:var(--muted)">README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🧠 2. Cognitive Neural Mesh (15 Master Neurons).</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>🛠️ 3. Battle-Tested Fullstack Toolkit</code><br><small style="color:var(--muted)">README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🛠️ 3. Battle-Tested Fullstack Toolkit.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>🖥️ 4. Live Production Ecosystem &amp; Cloud Services</code><br><small style="color:var(--muted)">README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🖥️ 4. Live Production Ecosystem &amp; Cloud Services.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>🔒 5. Zero-Trust Security &amp; Vault Isolation</code><br><small style="color:var(--muted)">README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🔒 5. Zero-Trust Security &amp; Vault Isolation.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>*Autonomous Fullstack Engineer &amp; Cognitive Neural Mesh*</code><br><small style="color:var(--muted)">README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing *Autonomous Fullstack Engineer &amp; Cognitive Neural Mesh*.</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>⚡ CLAUDIA 2.0</code><br><small style="color:var(--muted)">README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing ⚡ CLAUDIA 2.0.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>README.md</code></td><td>8 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x7. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 12. Ponytail, lazy senior dev mode ====== -->
+<h2 id="ponytail-lazy-senior-dev-mode">12. Ponytail, lazy senior dev mode</h2>
 <p>Ponytail, lazy senior dev mode groups implementation around agentsmd, lazy, graphify, auto, mostly in AGENTS.md. This section covers 7 nodes and 6 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -2254,8 +2387,8 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 12. Ponytail, lazy senior dev mode ====== -->
-<h2 id="ponytail-lazy-senior-dev-mode-36116e">12. Ponytail, lazy senior dev mode</h2>
+<!-- ====== 13. Ponytail, lazy senior dev mode ====== -->
+<h2 id="ponytail-lazy-senior-dev-mode-36116e">13. Ponytail, lazy senior dev mode</h2>
 <p>Ponytail, lazy senior dev mode groups implementation around rules, agents, ponytailmd, lazy, mostly in .agents/rules/ponytail.md. This section covers 7 nodes and 6 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -2376,8 +2509,8 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 13. Ponytail, lazy senior dev mode ====== -->
-<h2 id="ponytail-lazy-senior-dev-mode-2">13. Ponytail, lazy senior dev mode</h2>
+<!-- ====== 14. Ponytail, lazy senior dev mode ====== -->
+<h2 id="ponytail-lazy-senior-dev-mode-2">14. Ponytail, lazy senior dev mode</h2>
 <p>Ponytail, lazy senior dev mode groups implementation around geminimd, lazy, graphify, auto, mostly in GEMINI.md. This section covers 7 nodes and 6 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -2498,8 +2631,8 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 14. Ponytail, lazy senior dev mode ====== -->
-<h2 id="ponytail-lazy-senior-dev-mode-3">14. Ponytail, lazy senior dev mode</h2>
+<!-- ====== 15. Ponytail, lazy senior dev mode ====== -->
+<h2 id="ponytail-lazy-senior-dev-mode-3">15. Ponytail, lazy senior dev mode</h2>
 <p>Ponytail, lazy senior dev mode groups implementation around rules, windsurf, ponytailmd, lazy, mostly in .windsurf/rules/ponytail.md. This section covers 7 nodes and 6 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -2620,120 +2753,9 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 15. Pembelajaran & Standar Tetap (Learnings & Fixed Rules) - Claudia ====== -->
-<h2 id="pembelajaran-standar-tetap-learnings-fixed-rules">15. Pembelajaran &amp; Standar Tetap (Learnings &amp; Fixed Rules) - Claudia</h2>
-<p>Pembelajaran &amp; Standar Tetap (Learnings &amp; Fixed Rules) - Claudia groups implementation around mojoloker, learningsmd, learning, feedback, mostly in learning/feedback_log/mojoloker_learnings.md. This section covers 6 nodes and 5 internal edges; the diagram shows only representative relationships to stay readable.</p>
-
-<div class="mermaid">
-%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
-flowchart LR
-    %% Section: Pembelajaran &amp; Standar Tetap (Learnings &amp; Fixed Rules) - Claudia (6 nodes, 5 edges)
-    learning_feedback_log_mojoloker_learnings_pembel_28c86ee9("Pembelajaran &amp; Standar Tetap (Learnings...<br/><small>learning/feedback_log/mojoloker_learnings.md</small>")
-    learning_feedback_log_mojoloker_learnings_51e7913a("mojoloker_learnings.md")
-    learning_feedback_log_mojoloker_learnings_3_resp_18aae940("3. Responsivitas Mobile<br/><small>learning/feedback_log/mojoloker_learnings.md</small>")
-    learning_feedback_log_mojoloker_learnings_4_bran_8ccb1758("4. Branding &amp; Desain Khusus MojoLoker<br/><small>learning/feedback_log/mojoloker_learnings.md</small>")
-    learning_feedback_log_mojoloker_learnings_1_tamp_ef7e44a8("1. Tampilan &amp; Mode<br/><small>learning/feedback_log/mojoloker_learnings.md</small>")
-    learning_feedback_log_mojoloker_learnings_2_drop_8e95d8d8("2. Dropdown &amp; Komponen Formulir<br/><small>learning/feedback_log/mojoloker_learnings.md</small>")
-    learning_feedback_log_mojoloker_learnings_51e7913a -->|contains| learning_feedback_log_mojoloker_learnings_pembel_28c86ee9
-    learning_feedback_log_mojoloker_learnings_pembel_28c86ee9 -->|contains| learning_feedback_log_mojoloker_learnings_3_resp_18aae940
-    learning_feedback_log_mojoloker_learnings_pembel_28c86ee9 -->|contains| learning_feedback_log_mojoloker_learnings_4_bran_8ccb1758
-    learning_feedback_log_mojoloker_learnings_pembel_28c86ee9 -->|contains| learning_feedback_log_mojoloker_learnings_1_tamp_ef7e44a8
-    learning_feedback_log_mojoloker_learnings_pembel_28c86ee9 -->|contains| learning_feedback_log_mojoloker_learnings_2_drop_8e95d8d8
-    class learning_feedback_log_mojoloker_learnings_pembel_28c86ee9 concept;
-    class learning_feedback_log_mojoloker_learnings_51e7913a concept;
-    class learning_feedback_log_mojoloker_learnings_3_resp_18aae940 concept;
-    class learning_feedback_log_mojoloker_learnings_4_bran_8ccb1758 concept;
-    class learning_feedback_log_mojoloker_learnings_1_tamp_ef7e44a8 concept;
-    class learning_feedback_log_mojoloker_learnings_2_drop_8e95d8d8 concept;
-    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
-    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
-    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
-    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
-    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
-    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
-    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
-    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
-    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
-</div>
-
-<h3>Call Details</h3>
-<table class="call-table">
-<tr>
-  <th style="width:5%">#</th>
-  <th style="width:28%">Node</th>
-  <th style="width:10%">Type</th>
-  <th style="width:17%">Caller</th>
-  <th style="width:20%">Callees</th>
-  <th style="width:20%">Description</th>
-</tr>
-<tr>
-  <td>1</td>
-  <td><code>mojoloker_learnings.md</code><br><small style="color:var(--muted)">learning/feedback_log/mojoloker_learnings.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing mojoloker_learnings.md.</td>
-</tr>
-<tr>
-  <td>2</td>
-  <td><code>1. Tampilan &amp; Mode</code><br><small style="color:var(--muted)">learning/feedback_log/mojoloker_learnings.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 1. Tampilan &amp; Mode.</td>
-</tr>
-<tr>
-  <td>3</td>
-  <td><code>2. Dropdown &amp; Komponen Formulir</code><br><small style="color:var(--muted)">learning/feedback_log/mojoloker_learnings.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 2. Dropdown &amp; Komponen Formulir.</td>
-</tr>
-<tr>
-  <td>4</td>
-  <td><code>3. Responsivitas Mobile</code><br><small style="color:var(--muted)">learning/feedback_log/mojoloker_learnings.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 3. Responsivitas Mobile.</td>
-</tr>
-<tr>
-  <td>5</td>
-  <td><code>4. Branding &amp; Desain Khusus MojoLoker</code><br><small style="color:var(--muted)">learning/feedback_log/mojoloker_learnings.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 4. Branding &amp; Desain Khusus MojoLoker.</td>
-</tr>
-<tr>
-  <td>6</td>
-  <td><code>Pembelajaran &amp; Standar Tetap (Learnings &amp; Fixed Rules) - Claudia</code><br><small style="color:var(--muted)">learning/feedback_log/mojoloker_learnings.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Pembelajaran &amp; Standar Tetap (Learnings &amp; Fixed Rules) - Claudia.</td>
-</tr>
-</table>
-
-<div class="grid">
-  <div class="card">
-    <h4>Key Files</h4>
-    <table style="width:100%;font-size:0.85rem;">
-      <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>learning/feedback_log/mojoloker_learnings.md</code></td><td>6 nodes</td></tr>
-    </table>
-  </div>
-  <div class="card">
-    <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x5. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
-  </div>
-</div>
-<hr>
-
 <!-- ====== 16. Other ====== -->
 <h2 id="other">16. Other</h2>
-<p>Other groups implementation around learning, neurons, readmemd, memory, mostly in learning/neurons/N008_live_session_checkpoint.md, README.md, zolu_kas_dashboard_page.tsx. This section covers 108 nodes and 76 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Other groups implementation around learning, neurons, readmemd, memory, mostly in learning/feedback_log/mojoloker_learnings.md, learning/neurons/N008_live_session_checkpoint.md, zolu_kas_dashboard_page.tsx. This section covers 108 nodes and 76 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
@@ -2810,6 +2832,54 @@ flowchart LR
 </tr>
 <tr>
   <td>1</td>
+  <td><code>mojoloker_learnings.md</code><br><small style="color:var(--muted)">learning/feedback_log/mojoloker_learnings.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing mojoloker_learnings.md.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>1. Tampilan &amp; Mode</code><br><small style="color:var(--muted)">learning/feedback_log/mojoloker_learnings.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 1. Tampilan &amp; Mode.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>2. Dropdown &amp; Komponen Formulir</code><br><small style="color:var(--muted)">learning/feedback_log/mojoloker_learnings.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 2. Dropdown &amp; Komponen Formulir.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>3. Responsivitas Mobile</code><br><small style="color:var(--muted)">learning/feedback_log/mojoloker_learnings.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 3. Responsivitas Mobile.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>4. Branding &amp; Desain Khusus MojoLoker</code><br><small style="color:var(--muted)">learning/feedback_log/mojoloker_learnings.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 4. Branding &amp; Desain Khusus MojoLoker.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>Pembelajaran &amp; Standar Tetap (Learnings &amp; Fixed Rules) - Claudia</code><br><small style="color:var(--muted)">learning/feedback_log/mojoloker_learnings.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Pembelajaran &amp; Standar Tetap (Learnings &amp; Fixed Rules) - Claudia.</td>
+</tr>
+<tr>
+  <td>7</td>
   <td><code>N008_live_session_checkpoint.md</code><br><small style="color:var(--muted)">learning/neurons/N008_live_session_checkpoint.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
@@ -2817,7 +2887,7 @@ flowchart LR
   <td>Documentation node describing N008_live_session_checkpoint.md.</td>
 </tr>
 <tr>
-  <td>2</td>
+  <td>8</td>
   <td><code>🚀 Deployed Ecosystem &amp; Port Mappings</code><br><small style="color:var(--muted)">learning/neurons/N008_live_session_checkpoint.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
@@ -2825,7 +2895,7 @@ flowchart LR
   <td>Documentation node describing 🚀 Deployed Ecosystem &amp; Port Mappings.</td>
 </tr>
 <tr>
-  <td>3</td>
+  <td>9</td>
   <td><code>🛠️ Installed Autonomous Fullstack &amp; Security Toolkit</code><br><small style="color:var(--muted)">learning/neurons/N008_live_session_checkpoint.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
@@ -2833,7 +2903,7 @@ flowchart LR
   <td>Documentation node describing 🛠️ Installed Autonomous Fullstack &amp; Security Toolkit.</td>
 </tr>
 <tr>
-  <td>4</td>
+  <td>10</td>
   <td><code>🎬 Media Engine &amp; Strict Subtitle Cleaner</code><br><small style="color:var(--muted)">learning/neurons/N008_live_session_checkpoint.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
@@ -2841,7 +2911,7 @@ flowchart LR
   <td>Documentation node describing 🎬 Media Engine &amp; Strict Subtitle Cleaner.</td>
 </tr>
 <tr>
-  <td>5</td>
+  <td>11</td>
   <td><code>📌 Metadata</code><br><small style="color:var(--muted)">learning/neurons/N008_live_session_checkpoint.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
@@ -2849,60 +2919,12 @@ flowchart LR
   <td>Documentation node describing 📌 Metadata.</td>
 </tr>
 <tr>
-  <td>6</td>
+  <td>12</td>
   <td><code>Neuron N008: Persistent Live Session Checkpoint &amp; Infrastructure State</code><br><small style="color:var(--muted)">learning/neurons/N008_live_session_checkpoint.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
   <td>Documentation node describing Neuron N008: Persistent Live Session Checkpoint &amp; Infrastructure State.</td>
-</tr>
-<tr>
-  <td>7</td>
-  <td><code>README.md</code><br><small style="color:var(--muted)">README.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing README.md.</td>
-</tr>
-<tr>
-  <td>8</td>
-  <td><code>🧠 Arsitektur Memori &amp; Pengetahuan</code><br><small style="color:var(--muted)">README.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 🧠 Arsitektur Memori &amp; Pengetahuan.</td>
-</tr>
-<tr>
-  <td>9</td>
-  <td><code>🌟 Core Philosophy: The Minimality Ladder (Ponytail)</code><br><small style="color:var(--muted)">README.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 🌟 Core Philosophy: The Minimality Ladder (Ponytail).</td>
-</tr>
-<tr>
-  <td>10</td>
-  <td><code>🚀 Memulai (Quick Start)</code><br><small style="color:var(--muted)">README.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 🚀 Memulai (Quick Start).</td>
-</tr>
-<tr>
-  <td>11</td>
-  <td><code>🛠️ Persenjataan Fullstack yang Terpasang</code><br><small style="color:var(--muted)">README.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 🛠️ Persenjataan Fullstack yang Terpasang.</td>
-</tr>
-<tr>
-  <td>12</td>
-  <td><code>🔒 Standar Keamanan &amp; Manajemen Kredensial</code><br><small style="color:var(--muted)">README.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 🔒 Standar Keamanan &amp; Manajemen Kredensial.</td>
 </tr>
 <tr>
   <td>13</td>
@@ -3055,7 +3077,7 @@ flowchart LR
     <h4>Key Files</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>README.md</code></td><td>6 nodes</td></tr>
+      <tr><td><code>learning/feedback_log/mojoloker_learnings.md</code></td><td>6 nodes</td></tr>
 <tr><td><code>learning/neurons/N008_live_session_checkpoint.md</code></td><td>6 nodes</td></tr>
 <tr><td><code>zolu_kas_dashboard_page.tsx</code></td><td>6 nodes</td></tr>
 <tr><td><code>learning/knowledge_base/core_stack.md</code></td><td>5 nodes</td></tr>
@@ -3078,8 +3100,8 @@ flowchart LR
   <div class="card">
     <h4>Graph</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>Nodes</td><td>479</td></tr>
-      <tr><td>Edges</td><td>505</td></tr>
+      <tr><td>Nodes</td><td>481</td></tr>
+      <tr><td>Edges</td><td>507</td></tr>
       <tr><td>Hyperedges</td><td>0</td></tr>
       <tr><td>Communities</td><td>73</td></tr>
       <tr><td>Documented Sections</td><td>15</td></tr>
@@ -3088,7 +3110,7 @@ flowchart LR
   <div class="card">
     <h4>Edge Confidence</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>EXTRACTED</td><td>483</td></tr>
+      <tr><td>EXTRACTED</td><td>485</td></tr>
       <tr><td>INFERRED</td><td>22</td></tr>
       <tr><td>AMBIGUOUS</td><td>0</td></tr>
     </table>
@@ -3097,7 +3119,7 @@ flowchart LR
 
 <div style="text-align:center; padding:40px 0; color: var(--muted); font-size:0.9rem;">
   <p>Agent_Claudia_Autonomus — Architecture Documentation</p>
-  <p>Generated: 2026-08-23 13:25 UTC · graphify callflow-html</p>
+  <p>Generated: 2026-08-23 13:35 UTC · graphify callflow-html</p>
 </div>
 
 </div><!-- .container -->

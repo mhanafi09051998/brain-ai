@@ -167,22 +167,22 @@
       "ponytail_agents",
       "ponytail_agents_ponytail_lazy_senior_dev_mode",
       "ponytail_readme_es",
-      "ponytail_readme_es_antes_despu\u00e9s",
+      "ponytail_readme_es_antes_después",
       "ponytail_readme_es_antigravity_cli",
       "ponytail_readme_es_claude_code",
       "ponytail_readme_es_codewhale",
       "ponytail_readme_es_codex",
       "ponytail_readme_es_comandos",
-      "ponytail_readme_es_c\u00f3mo_funciona",
+      "ponytail_readme_es_cómo_funciona",
       "ponytail_readme_es_desarrollo",
       "ponytail_readme_es_devin_cli",
       "ponytail_readme_es_faq",
       "ponytail_readme_es_gemini_cli",
       "ponytail_readme_es_github_copilot_cli",
       "ponytail_readme_es_historial_de_estrellas",
-      "ponytail_readme_es_instalaci\u00f3n",
+      "ponytail_readme_es_instalación",
       "ponytail_readme_es_licencia",
-      "ponytail_readme_es_n\u00fameros",
+      "ponytail_readme_es_números",
       "ponytail_readme_es_openclaw",
       "ponytail_readme_es_opencode",
       "ponytail_readme_es_patrocinadores",
@@ -733,8 +733,8 @@
       "degree": 11
     },
     {
-      "id": "ponytail_readme_es_instalaci\u00f3n",
-      "label": "Instalaci\u00f3n",
+      "id": "ponytail_readme_es_instalación",
+      "label": "Instalación",
       "degree": 11
     },
     {
@@ -810,8 +810,41 @@
       "why": "bridges separate communities"
     }
   ],
-  "tokens": {
-    "input": 0,
-    "output": 0
-  }
+  "questions": [
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `CategoryStat`, `Toast`, `Transaction` to the rest of the system?",
+      "why": "301 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `ponytail-config.js` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.07474600870827286 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `ponytail/package.json` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.05365853658536585 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `ponytail-activate.js` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.0873440285204991 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Install` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.07407407407407407 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `README.es.md` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.08695652173913043 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Install` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.09090909090909091 - nodes in this community are weakly interconnected."
+    }
+  ]
 }
