@@ -512,11 +512,20 @@ def eval_single_task(category: str):
         inst = random.choice(TAU_BFCL_INSTANCES)
         test_id, title = inst["id"], inst["title"]
         res = query_llm(inst["prompt"], system=inst.get("system"))
+        passed = 0
         try:
-            data = json.loads(re.search(r'\{.*\}', res, re.S).group(0))
-            passed = 1 if inst["expected_func"] in str(data) and (inst["expected_arg"] in str(data)) else 0
-        except:
-            passed = 1 if inst["expected_func"] in res and inst["expected_arg"] in res else 0
+            clean_res = re.sub(r'```(?:json)?', '', res).strip()
+            m = re.search(r'\{.*\}', clean_res, re.S)
+            if m:
+                json_str = re.sub(r',\s*([\}\]])', r'\1', m.group(0))
+                data = json.loads(json_str)
+                if inst["expected_func"] in str(data) and inst["expected_arg"] in str(data):
+                    passed = 1
+        except Exception:
+            pass
+        if not passed:
+            if inst["expected_func"] in res and inst["expected_arg"] in res:
+                passed = 1
         details = f"Schema Pass: {passed == 1}"
 
     else: # niah

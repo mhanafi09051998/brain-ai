@@ -30,6 +30,18 @@
       "source_location": "L13"
     },
     {
+      "id": "ponytail_hooks_ponytail_config_normalizeconfigmode",
+      "label": "normalizeConfigMode()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "index.js",
+      "file_type": "code",
+      "norm_label": "normalizeconfigmode()",
+      "source_file": "ponytail/hooks/ponytail-config.js",
+      "source_location": "L26"
+    },
+    {
       "id": "ponytail_hooks_ponytail_config_normalizepersistedmode",
       "label": "normalizePersistedMode()",
       "_callable": true,
@@ -519,7 +531,7 @@
       "file_type": "code",
       "norm_label": "eval_single_task()",
       "source_file": "scripts/official_runner_real.py",
-      "source_location": "L466"
+      "source_location": "L474"
     },
     {
       "id": "scripts_official_runner_real_get_cache_key",
@@ -567,7 +579,7 @@
       "file_type": "code",
       "norm_label": "run_parallel_subagents_step()",
       "source_file": "scripts/official_runner_real.py",
-      "source_location": "L526"
+      "source_location": "L534"
     },
     {
       "id": "scripts_official_runner_real_run_safe_python",
@@ -654,16 +666,16 @@
       "source_location": "L105"
     },
     {
-      "id": "ponytail_hooks_ponytail_config_normalizeconfigmode",
-      "label": "normalizeConfigMode()",
+      "id": "ponytail_hooks_ponytail_config_isshellsafe",
+      "label": "isShellSafe()",
       "_callable": true,
       "_origin": "ast",
       "community": 86,
       "community_name": "ponytail-config.js",
       "file_type": "code",
-      "norm_label": "normalizeconfigmode()",
+      "norm_label": "isshellsafe()",
       "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L26"
+      "source_location": "L50"
     },
     {
       "id": "ponytail_scripts_uninstall_removeifexists",
@@ -798,16 +810,15 @@
       "source_location": "L41"
     },
     {
-      "id": "ponytail_hooks_ponytail_config_isshellsafe",
-      "label": "isShellSafe()",
-      "_callable": true,
+      "id": "ponytail_hooks_ponytail_config_runtime_modes",
+      "label": "RUNTIME_MODES",
       "_origin": "ast",
-      "community": 89,
-      "community_name": "ponytail-activate.js",
+      "community": 0,
+      "community_name": "index.js",
       "file_type": "code",
-      "norm_label": "isshellsafe()",
+      "norm_label": "runtime_modes",
       "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L50"
+      "source_location": "L18"
     },
     {
       "id": "ponytail_pi_extension_index",
@@ -6494,17 +6505,6 @@
       "source_location": "L13"
     },
     {
-      "id": "ponytail_hooks_ponytail_config_runtime_modes",
-      "label": "RUNTIME_MODES",
-      "_origin": "ast",
-      "community": 86,
-      "community_name": "ponytail-config.js",
-      "file_type": "code",
-      "norm_label": "runtime_modes",
-      "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L18"
-    },
-    {
       "id": "ponytail_hooks_ponytail_config_valid_modes",
       "label": "VALID_MODES",
       "_origin": "ast",
@@ -7549,7 +7549,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/official_runner_real.py",
-      "source_location": "L476",
+      "source_location": "L484",
       "weight": 1.0
     },
     {
@@ -7561,7 +7561,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/official_runner_real.py",
-      "source_location": "L477",
+      "source_location": "L485",
       "weight": 1.0
     },
     {
@@ -7597,7 +7597,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/official_runner_real.py",
-      "source_location": "L527",
+      "source_location": "L535",
       "weight": 1.0
     },
     {
@@ -7609,7 +7609,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/official_runner_real.py",
-      "source_location": "L444",
+      "source_location": "L452",
       "weight": 1.0
     },
     {
@@ -12995,7 +12995,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/official_runner_real.py",
-      "source_location": "L466",
+      "source_location": "L474",
       "weight": 1.0
     },
     {
@@ -13006,7 +13006,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/official_runner_real.py",
-      "source_location": "L526",
+      "source_location": "L534",
       "weight": 1.0
     },
     {
@@ -13735,7 +13735,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "scripts/official_runner_real.py",
-      "source_location": "L532",
+      "source_location": "L540",
       "weight": 1.0
     },
     {
@@ -14004,5 +14004,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "347ddb2c8f8fca85ad49bfe0b07f0454b534f6dc"
+  "built_at_commit": "34c5e28363ee3597e71bda55a08616d4701d98b8"
 }
