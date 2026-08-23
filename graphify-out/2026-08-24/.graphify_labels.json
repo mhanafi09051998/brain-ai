@@ -1,7 +1,7 @@
 {
-  "0": "ponytail-config.js",
+  "0": "index.js",
   "1": "ponytail/package.json",
-  "2": "ponytail-activate.js",
+  "2": "ponytail-runtime.js",
   "3": "Install",
   "4": "README.es.md",
   "5": "Install",
@@ -72,5 +72,16 @@
   "70": "ponytail-gain.md",
   "71": "ponytail-help.md",
   "72": "ponytail-review.md",
-  "73": "opencode.json"
+  "73": "opencode.json",
+  "74": "ponytail-config.js",
+  "75": "ponytailExtension",
+  "76": "ponytail-activate.js",
+  "77": "ponytail.mjs",
+  "78": "ingest_frontier_knowledge.py",
+  "79": "official_runner_real.py",
+  "80": "Neuron N017: Program-Aided Mathematical Reasoning & AIME Invariants",
+  "81": "Neuron N018: RepoMap AST Compression & SWE-bench Precision",
+  "82": "Neuron N019: BFCL Tool Schema & IFEval Strict Format Oracle",
+  "83": "debug_tau.py",
+  "84": "test_direct_router.py"
 }

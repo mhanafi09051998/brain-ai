@@ -6,10 +6,10 @@
     "semantic_hash": "dd15119fb2196a241d762fb6eacacf90"
   },
   "learning/NEURON_INDEX.json": {
-    "mtime": 1787491487.6057732,
-    "seen": 1787491973.4734986,
-    "ast_hash": "8e4c215703ee6bd7d92620a23e7456ad",
-    "semantic_hash": "8e4c215703ee6bd7d92620a23e7456ad"
+    "mtime": 1787511902.5285332,
+    "seen": 1787511965.0234702,
+    "ast_hash": "5faab239ce315dc3d8328bfcb58265fb",
+    "semantic_hash": ""
   },
   "learning/scripts/grow_neurons.py": {
     "mtime": 1787405645.569641,
@@ -318,9 +318,9 @@
     "semantic_hash": ""
   },
   "memory.md": {
-    "mtime": 1787491495.0159388,
-    "seen": 1787491503.5698326,
-    "ast_hash": "ada620a42a1ed180e0c3e192cb0b9623",
+    "mtime": 1787511923.1253743,
+    "seen": 1787511965.0234702,
+    "ast_hash": "578d9b8dd1f287d8f135e898ea8d7dca",
     "semantic_hash": ""
   },
   "memory/neurons/ai_engine_9router.md": {
@@ -606,8 +606,8 @@
     "semantic_hash": ""
   },
   ".claudia/settings.json": {
-    "mtime": 1787510331.078773,
-    "seen": 1787510383.1990135,
+    "mtime": 1787511081.45117,
+    "seen": 1787511965.0234702,
     "ast_hash": "dad56d90699a9f21c14478b55a4b45d4",
     "semantic_hash": ""
   },
@@ -627,6 +627,72 @@
     "mtime": 1787509932.461912,
     "seen": 1787509974.6198688,
     "ast_hash": "6d1ee1c97adc206b0590b2977cd1dc72",
+    "semantic_hash": ""
+  },
+  "learning/frontier_datasets/aime_2024_core.json": {
+    "mtime": 1787511867.3937552,
+    "seen": 1787511965.0234702,
+    "ast_hash": "f9e6e46df8cd97fe05fc734f18025ec4",
+    "semantic_hash": ""
+  },
+  "learning/frontier_datasets/ifeval_core.json": {
+    "mtime": 1787511867.3937552,
+    "seen": 1787511965.0234702,
+    "ast_hash": "be32e240b3d37d492232a12cb7ce821b",
+    "semantic_hash": ""
+  },
+  "learning/frontier_datasets/swe_repomap_heuristics.json": {
+    "mtime": 1787511867.3937552,
+    "seen": 1787511965.0234702,
+    "ast_hash": "d596d7e0fd1ef07aec27361c53a456f8",
+    "semantic_hash": ""
+  },
+  "scripts/debug_tau.py": {
+    "mtime": 1787511624.490383,
+    "seen": 1787511965.0234702,
+    "ast_hash": "ea0f858dabb2bd348fe0c3fddca51305",
+    "semantic_hash": ""
+  },
+  "scripts/ingest_frontier_knowledge.py": {
+    "mtime": 1787511860.187513,
+    "seen": 1787511965.0234702,
+    "ast_hash": "e87472281265d7035bbba57699566eb3",
+    "semantic_hash": ""
+  },
+  "scripts/official_runner_real.py": {
+    "mtime": 1787511661.4606562,
+    "seen": 1787511965.0234702,
+    "ast_hash": "c164597e8eaebf1fa590359aa5261b70",
+    "semantic_hash": ""
+  },
+  "scripts/test_direct_router.py": {
+    "mtime": 1787511313.1430964,
+    "seen": 1787511965.0234702,
+    "ast_hash": "fd72d771c5d0a8dbdbe1dc30927fdced",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N017_program_aided_math.md": {
+    "mtime": 1787511874.4059675,
+    "seen": 1787511965.0234702,
+    "ast_hash": "25b4f60ee4722d21483cf518ae6f1640",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N018_repomap_swebench.md": {
+    "mtime": 1787511882.6751375,
+    "seen": 1787511965.0234702,
+    "ast_hash": "2240b3639ac931974708eceaf3ac1324",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N019_bfcl_ifeval_oracle.md": {
+    "mtime": 1787511889.1509888,
+    "seen": 1787511965.0234702,
+    "ast_hash": "ef2c2618a49a993865bb28b27802b9ac",
+    "semantic_hash": ""
+  },
+  "scripts/learn_index.html": {
+    "mtime": 1787511709.91228,
+    "seen": 1787511965.0234702,
+    "ast_hash": "71356d857c7ea2c20559ba4f45efc702",
     "semantic_hash": ""
   }
 }
