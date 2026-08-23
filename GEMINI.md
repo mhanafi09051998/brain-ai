@@ -37,5 +37,7 @@ Bug fix = root cause, not symptom: a report names a symptom. Grep every caller o
 ## Not lazy about:
 Understanding the problem, input validation at trust boundaries, error handling that prevents data loss, security, accessibility, the calibration real hardware needs, anything explicitly requested. Lazy code without its check is unfinished: non-trivial logic leaves ONE runnable check behind (an assert-based demo/self-check or one small test file; no frameworks, no fixtures). Trivial one-liners need no test.
 
-## Graphify Knowledge Graph:
-Before answering large codebase queries or architecture overviews, check `graphify-out/graph.json` or run `python -m graphify extract . --code-only`.
+## Graphify & Auto-Sync Knowledge Graph:
+- Sebelum menjawab query arsitektur besar, gunakan `graphify-out/graph.json` atau jalankan `python -m graphify extract . --code-only`.
+- Setelah memodifikasi kode, menambah neuron baru di `learning/` atau `memory/`, jalankan `python scripts/auto_sync_github.py` untuk menjaga repositori GitHub tetap sinkron dan mutakhir.
+

@@ -1672,14 +1672,14 @@
       "source_location": "L1"
     },
     {
-      "id": "agents_graphify_knowledge_graph",
-      "label": "Graphify Knowledge Graph:",
+      "id": "agents_graphify_auto_sync_knowledge_graph",
+      "label": "Graphify & Auto-Sync Knowledge Graph:",
       "_origin": "ast",
       "community": 18,
       "community_name": "Ponytail, lazy senior dev mode",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "graphify knowledge graph:",
+      "norm_label": "graphify & auto-sync knowledge graph:",
       "source_file": "AGENTS.md",
       "source_location": "L40"
     },
@@ -2291,14 +2291,14 @@
       "source_location": "L1"
     },
     {
-      "id": "gemini_graphify_knowledge_graph",
-      "label": "Graphify Knowledge Graph:",
+      "id": "gemini_graphify_auto_sync_knowledge_graph",
+      "label": "Graphify & Auto-Sync Knowledge Graph:",
       "_origin": "ast",
       "community": 20,
       "community_name": "Ponytail, lazy senior dev mode",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "graphify knowledge graph:",
+      "norm_label": "graphify & auto-sync knowledge graph:",
       "source_file": "GEMINI.md",
       "source_location": "L40"
     },
@@ -6979,7 +6979,7 @@
     },
     {
       "source": "agents_ponytail_lazy_senior_dev_mode",
-      "target": "agents_graphify_knowledge_graph",
+      "target": "agents_graphify_auto_sync_knowledge_graph",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -7485,7 +7485,7 @@
     },
     {
       "source": "gemini_ponytail_lazy_senior_dev_mode",
-      "target": "gemini_graphify_knowledge_graph",
+      "target": "gemini_graphify_auto_sync_knowledge_graph",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -11005,5 +11005,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "1ceb36819b36bbcd4e955a82df8d56e8851ea905"
+  "built_at_commit": "1a00f434a8858144dd1f452de4549b4001a0d483"
 }
