@@ -2469,7 +2469,7 @@
       "label": "README.md",
       "_origin": "ast",
       "community": 21,
-      "community_name": "README.md",
+      "community_name": "\u26a1 CLAUDIA 2.0",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "readme.md",
@@ -2477,64 +2477,88 @@
       "source_location": "L1"
     },
     {
-      "id": "readme_arsitektur_memori_pengetahuan",
-      "label": "\ud83e\udde0 Arsitektur Memori & Pengetahuan",
+      "id": "readme_1_core_engineering_philosophy_the_minimality_ladder",
+      "label": "\ud83c\udf0c 1. Core Engineering Philosophy: *The Minimality Ladder*",
       "_origin": "ast",
       "community": 21,
-      "community_name": "README.md",
+      "community_name": "\u26a1 CLAUDIA 2.0",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "\ud83e\udde0 arsitektur memori & pengetahuan",
+      "norm_label": "\ud83c\udf0c 1. core engineering philosophy: *the minimality ladder*",
       "source_file": "README.md",
-      "source_location": "L19"
+      "source_location": "L21"
     },
     {
-      "id": "readme_core_philosophy_the_minimality_ladder_ponytail",
-      "label": "\ud83c\udf1f Core Philosophy: The Minimality Ladder (Ponytail)",
+      "id": "readme_2_cognitive_neural_mesh_15_master_neurons",
+      "label": "\ud83e\udde0 2. Cognitive Neural Mesh (15 Master Neurons)",
       "_origin": "ast",
       "community": 21,
-      "community_name": "README.md",
+      "community_name": "\u26a1 CLAUDIA 2.0",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "\ud83c\udf1f core philosophy: the minimality ladder (ponytail)",
+      "norm_label": "\ud83e\udde0 2. cognitive neural mesh (15 master neurons)",
       "source_file": "README.md",
-      "source_location": "L8"
+      "source_location": "L43"
     },
     {
-      "id": "readme_memulai_quick_start",
-      "label": "\ud83d\ude80 Memulai (Quick Start)",
+      "id": "readme_3_battle_tested_fullstack_toolkit",
+      "label": "\ud83d\udee0\ufe0f 3. Battle-Tested Fullstack Toolkit",
       "_origin": "ast",
       "community": 21,
-      "community_name": "README.md",
+      "community_name": "\u26a1 CLAUDIA 2.0",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "\ud83d\ude80 memulai (quick start)",
+      "norm_label": "\ud83d\udee0\ufe0f 3. battle-tested fullstack toolkit",
       "source_file": "README.md",
-      "source_location": "L57"
+      "source_location": "L112"
     },
     {
-      "id": "readme_persenjataan_fullstack_yang_terpasang",
-      "label": "\ud83d\udee0\ufe0f Persenjataan Fullstack yang Terpasang",
+      "id": "readme_4_live_production_ecosystem_cloud_services",
+      "label": "\ud83d\udda5\ufe0f 4. Live Production Ecosystem & Cloud Services",
       "_origin": "ast",
       "community": 21,
-      "community_name": "README.md",
+      "community_name": "\u26a1 CLAUDIA 2.0",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "\ud83d\udee0\ufe0f persenjataan fullstack yang terpasang",
+      "norm_label": "\ud83d\udda5\ufe0f 4. live production ecosystem & cloud services",
       "source_file": "README.md",
-      "source_location": "L37"
+      "source_location": "L128"
     },
     {
-      "id": "readme_standar_keamanan_manajemen_kredensial",
-      "label": "\ud83d\udd12 Standar Keamanan & Manajemen Kredensial",
+      "id": "readme_5_zero_trust_security_vault_isolation",
+      "label": "\ud83d\udd12 5. Zero-Trust Security & Vault Isolation",
       "_origin": "ast",
       "community": 21,
-      "community_name": "README.md",
+      "community_name": "\u26a1 CLAUDIA 2.0",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "\ud83d\udd12 standar keamanan & manajemen kredensial",
+      "norm_label": "\ud83d\udd12 5. zero-trust security & vault isolation",
       "source_file": "README.md",
-      "source_location": "L49"
+      "source_location": "L148"
+    },
+    {
+      "id": "readme_autonomous_fullstack_engineer_cognitive_neural_mesh",
+      "label": "*Autonomous Fullstack Engineer & Cognitive Neural Mesh*",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "\u26a1 CLAUDIA 2.0",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "*autonomous fullstack engineer & cognitive neural mesh*",
+      "source_file": "README.md",
+      "source_location": "L4"
+    },
+    {
+      "id": "readme_claudia_2_0",
+      "label": "\u26a1 CLAUDIA 2.0",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "\u26a1 CLAUDIA 2.0",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u26a1 claudia 2.0",
+      "source_file": "README.md",
+      "source_location": "L3"
     },
     {
       "id": "zolu_kas_dashboard_page",
@@ -10829,57 +10853,79 @@
     },
     {
       "source": "readme",
-      "target": "readme_arsitektur_memori_pengetahuan",
+      "target": "readme_claudia_2_0",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L19",
+      "source_location": "L3",
       "weight": 1.0
     },
     {
-      "source": "readme",
-      "target": "readme_persenjataan_fullstack_yang_terpasang",
+      "source": "readme_claudia_2_0",
+      "target": "readme_3_battle_tested_fullstack_toolkit",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L37",
+      "source_location": "L112",
       "weight": 1.0
     },
     {
-      "source": "readme",
-      "target": "readme_standar_keamanan_manajemen_kredensial",
+      "source": "readme_claudia_2_0",
+      "target": "readme_4_live_production_ecosystem_cloud_services",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L49",
+      "source_location": "L128",
       "weight": 1.0
     },
     {
-      "source": "readme",
-      "target": "readme_memulai_quick_start",
+      "source": "readme_claudia_2_0",
+      "target": "readme_5_zero_trust_security_vault_isolation",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L57",
+      "source_location": "L148",
       "weight": 1.0
     },
     {
-      "source": "readme",
-      "target": "readme_core_philosophy_the_minimality_ladder_ponytail",
+      "source": "readme_claudia_2_0",
+      "target": "readme_1_core_engineering_philosophy_the_minimality_ladder",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L8",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_claudia_2_0",
+      "target": "readme_autonomous_fullstack_engineer_cognitive_neural_mesh",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_claudia_2_0",
+      "target": "readme_2_cognitive_neural_mesh_15_master_neurons",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L43",
       "weight": 1.0
     },
     {
@@ -11434,5 +11480,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "c901ec279c013c7838808450125e209281834e61"
+  "built_at_commit": "df0778829c45d10e8309553209587e0c9128a2b4"
 }

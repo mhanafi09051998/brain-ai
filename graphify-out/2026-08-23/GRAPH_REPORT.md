@@ -1,15 +1,16 @@
 # Graph Report - Agent_Claudia_Autonomus  (2026-08-23)
 
 ## Corpus Check
-- cluster-only mode — file stats not available
+- 89 files · ~286,910 words
+- Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 479 nodes · 505 edges · 73 communities (50 shown, 23 thin omitted)
+- 481 nodes · 507 edges · 73 communities (50 shown, 23 thin omitted)
 - Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c901ec27`
+- Built from commit: `df077882`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -35,7 +36,7 @@
 - Pembelajaran & Standar Tetap (Learnings & Fixed Rules) - Claudia
 - Neuron N008: Persistent Live Session Checkpoint & Infrastructure State
 - pi-extension/package.json
-- README.md
+- ⚡ CLAUDIA 2.0
 - zolu_kas_dashboard_page.tsx
 - .agents/skills/ponytail-audit/SKILL.md
 - Ponytail Gain
@@ -93,9 +94,9 @@
 10. `normalizeMode()` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `finish()` --calls--> `getDefaultMode()`  [EXTRACTED]
-  ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-config.js
 - `finish()` --calls--> `isDeactivationCommand()`  [EXTRACTED]
+  ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-config.js
+- `finish()` --calls--> `getDefaultMode()`  [EXTRACTED]
   ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-config.js
 - `finish()` --calls--> `writeDefaultMode()`  [EXTRACTED]
   ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-config.js
@@ -199,9 +200,9 @@ Nodes (5): 🚀 Deployed Ecosystem & Port Mappings, 🛠️ Installed Autonomous
 Cohesion: 0.33
 Nodes (5): name, private, scripts, test, type
 
-### Community 21 - "README.md"
-Cohesion: 0.33
-Nodes (5): 🧠 Arsitektur Memori & Pengetahuan, 🌟 Core Philosophy: The Minimality Ladder (Ponytail), 🚀 Memulai (Quick Start), 🛠️ Persenjataan Fullstack yang Terpasang, 🔒 Standar Keamanan & Manajemen Kredensial
+### Community 21 - "⚡ CLAUDIA 2.0"
+Cohesion: 0.25
+Nodes (7): 🌌 1. Core Engineering Philosophy: *The Minimality Ladder*, 🧠 2. Cognitive Neural Mesh (15 Master Neurons), 🛠️ 3. Battle-Tested Fullstack Toolkit, 🖥️ 4. Live Production Ecosystem & Cloud Services, 🔒 5. Zero-Trust Security & Vault Isolation, *Autonomous Fullstack Engineer & Cognitive Neural Mesh*, ⚡ CLAUDIA 2.0
 
 ### Community 22 - "zolu_kas_dashboard_page.tsx"
 Cohesion: 0.33
@@ -284,15 +285,15 @@ Cohesion: 0.50
 Nodes (3): Boundaries, Output, Scan
 
 ## Knowledge Gaps
-- **301 isolated node(s):** `CategoryStat`, `Toast`, `Transaction`, `WalletData`, `fs` (+296 more)
+- **302 isolated node(s):** `__dirname`, `require`, `{ getPonytailInstructions }`, `{ getDefaultMode, normalizePersistedMode }`, `{ parseCommandFile }` (+297 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **23 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **What connects `CategoryStat`, `Toast`, `Transaction` to the rest of the system?**
-  _301 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `__dirname`, `require`, `{ getPonytailInstructions }` to the rest of the system?**
+  _302 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `ponytail-config.js` be split into smaller, more focused modules?**
   _Cohesion score 0.07474600870827286 - nodes in this community are weakly interconnected._
 - **Should `ponytail/package.json` be split into smaller, more focused modules?**

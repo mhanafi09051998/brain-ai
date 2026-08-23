@@ -18,7 +18,7 @@
 
 </div>
 
-## 🌌 1. Core Engineering Philosophy: *The Minimality Ladder*
+## 🌌 1. Filosofi Rekayasa Inti: *The Minimality Ladder*
 
 Claudia beroperasi di bawah prinsip fundamental **Ponytail**: *"Kode terbaik adalah kode yang tidak pernah perlu ditulis."*
 
@@ -98,7 +98,7 @@ graph TD
 | **`N005`** | **Graphify AST Mapper** | Navigasi arsitektur berbasis graf AST dan visualisasi komunitas dependensi. |
 | **`N006`** | **9Router AI Gateway** | Routing multi-model LLM dengan latensi rendah dan fallback otomatis. |
 | **`N007`** | **Self-Improving Loop** | Refleksi mandiri, pencatatan umpan balik, dan pencegahan regresi. |
-| **`N008`** | **Infrastructure Checkpoint**| Sinkronisasi status live server 6 Cores AMD EPYC, 18 GB RAM, 1 TB SSD. |
+| **`N008`** | **Infrastructure Checkpoint**| Sinkronisasi spesifikasi server multi-core, memori, dan storage terdistribusi. |
 | **`N009`** | **Peak Algorithmic Codex** | Tarjan's SCC, Bloom Filters, Segment Trees, dan Lock-Free Concurrency. |
 | **`N010`** | **Distributed Systems** | Konsensus Raft/Paxos, Consistent Hashing, CQRS, dan Event Sourcing. |
 | **`N011`** | **Mechanical Sympathy** | L1/L2 Cache Locality, Linux `sendfile`/`splice` Zero-Copy, `io_uring` I/O. |
@@ -109,39 +109,26 @@ graph TD
 
 ---
 
-## 🛠️ 3. Battle-Tested Fullstack Toolkit
+## 🛠️ 3. Persenjataan Fullstack Terpasang
 
 Toolkit modern terintegrasi berkecepatan tinggi yang memangkas beban kerja dan runtime:
 
-```
-├── ⚡ @biomejs/biome         -> Linter & Formatter Rust (35x lebih cepat dari ESLint/Prettier)
-├── 🎭 playwright             -> Headless Chromium E2E Tester & Visual Screenshot Verifier
-├── 🚀 hono                   -> Framework REST/Edge API sub-15KB (< 10MB RAM per worker)
-├── 🔒 zod                    -> Runtime Schema Validation di trust boundaries
-├── 🗄️ drizzle-orm            -> Type-Safe SQL ORM untuk SQLite WAL mode berkecepatan tinggi
-├── 📄 puppeteer              -> Headless Chrome rendering untuk faktur PDF & web scraping
-└── 🕸️ graphify               -> Codebase Knowledge Graph & Callflow Visualizer
-```
+* ⚡ **`@biomejs/biome`**: Linter & Formatter Rust (35x lebih cepat dari ESLint/Prettier).
+* 🎭 **`playwright`**: Headless Chromium E2E Tester & Visual Screenshot Verifier.
+* 🚀 **`hono`**: Framework REST/Edge API sub-15KB (< 10MB RAM per worker).
+* 🔒 **`zod`**: Runtime Schema Validation di batas trust boundaries.
+* 🗄️ **`drizzle-orm`**: Type-Safe SQL ORM untuk SQLite WAL mode berkecepatan tinggi.
+* 📄 **`puppeteer`**: Headless Chrome rendering untuk dokumen resmi & web scraping.
+* 🕸️ **`graphify`**: Codebase Knowledge Graph & Callflow Visualizer.
 
 ---
 
-## 🖥️ 4. Live Production Ecosystem & Cloud Services
+## 🏛️ 4. Kapabilitas Orkestrasi Cloud & Multi-Layanan
 
-Claudia mengelola dan mengorkestrasi 11 subdomain aktif di server produksi secara mandiri:
-
-| Subdomain | Port | Deskripsi Layanan | Status |
-| :--- | :---: | :--- | :---: |
-| **`zolu.my.id`** | `3000` | Main Ecosystem Hub & Live Infrastructure Telemetry | 🟢 Active |
-| **`monitoring.zolu.my.id`** | `3001` | Server Hardware & Telemetry Real-time Dashboard | 🟢 Active |
-| **`user.zolu.my.id`** | `3003` | Multi-Tenant Session & Telegram Isolation Manager | 🟢 Active |
-| **`mojoloker.my.id`** | `3011` | Portal Loker Terpercaya Mojokerto (21 Kec / 301 Desa) | 🟢 Active |
-| **`prod.zolu.my.id`** | `3012` | Autonomous AI Fullstack Web Production Engine | 🟢 Active |
-| **`nextcloud.zolu.my.id`** | `3015` | Enterprise Private Cloud Storage & File NAS | 🟢 Active |
-| **`movie.zolu.my.id`** | `3016` | Zolu Cinema (Jellyfin FastStart + Subtitle Sanitizer) | 🟢 Active |
-| **`join.zolu.my.id`** | `3017` | VIP Invitation Gateway (`ZOLU-VIP-100X`) | 🟢 Active |
-| **`kas.zolu.my.id`** | `3030` | Zolu Kasir & Financial ERP Operating System | 🟢 Active |
-| **`9router.zolu.my.id`** | `3040` | AI Multi-Model LLM Gateway & Load Balancer | 🟢 Active |
-| **`skripsi.zolu.my.id`** | `3050` | AI Academic Generator & Thesis Research Assistant | 🟢 Active |
+Claudia dirancang untuk mengelola dan memantau klaster layanan backend secara otonom:
+* **Zero-Downtime Process Supervision**: Orkestrasi daemon PM2 & Docker container dengan auto-restart dan circuit breaker.
+* **Real-time Telemetry Diagnostics**: Pemantauan metrik CPU, RAM, Disk I/O, dan latensi jaringan secara berkelanjutan.
+* **Database WAL Optimization**: Manajemen konkurensi tinggi dengan *Write-Ahead Logging* untuk operasi tulis instan tanpa lock contention.
 
 ---
 

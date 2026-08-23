@@ -137,12 +137,6 @@
     "ast_hash": "ad3f86c43d5e793af9d181c5c5e2157d",
     "semantic_hash": "ad3f86c43d5e793af9d181c5c5e2157d"
   },
-  "zolu_kas_dashboard_page.tsx": {
-    "mtime": 1787442231.3408532,
-    "seen": 1787491973.4761393,
-    "ast_hash": "5825d079482de4184c785992865a1f04",
-    "semantic_hash": "5825d079482de4184c785992865a1f04"
-  },
   ".agents/rules/graphify.md": {
     "mtime": 1787401886.4098494,
     "seen": 1787476501.9923196,
@@ -533,66 +527,6 @@
     "ast_hash": "2c223c2bb087ce98b47ef2dee43c2d7c",
     "semantic_hash": ""
   },
-  "poster-mojoloker/poster_1_launching.jpg": {
-    "mtime": 1787447586.375963,
-    "seen": 1787476501.9923196,
-    "ast_hash": "a8c0e199701806a194380aa72c622cb6",
-    "semantic_hash": ""
-  },
-  "poster-mojoloker/poster_2_pencari_kerja.jpg": {
-    "mtime": 1787447615.0870242,
-    "seen": 1787476501.9923196,
-    "ast_hash": "8d116f3ac71a2f21ca2a803e83f2873a",
-    "semantic_hash": ""
-  },
-  "poster-mojoloker/poster_3_pemberi_kerja.jpg": {
-    "mtime": 1787447643.6351058,
-    "seen": 1787476501.9923196,
-    "ast_hash": "3f536658c89f6cd04acfbd89605d50c9",
-    "semantic_hash": ""
-  },
-  "poster-mojoloker/poster_4_kawasan_industri.jpg": {
-    "mtime": 1787447675.234155,
-    "seen": 1787476501.9923196,
-    "ast_hash": "26582550c28dea2e940b4b7f947e3c67",
-    "semantic_hash": ""
-  },
-  "poster-mojoloker/poster_5_komunitas_mojokerto.jpg": {
-    "mtime": 1787447725.2368882,
-    "seen": 1787476501.9923196,
-    "ast_hash": "f2b3e083d36601d8ba4ea9d91256b6f8",
-    "semantic_hash": ""
-  },
-  "poster-mojoloker/story_1_pabrik_ngoro.jpg": {
-    "mtime": 1787450044.3993585,
-    "seen": 1787476501.9923196,
-    "ast_hash": "dec8d76c6cc7322514891924ed7b58e6",
-    "semantic_hash": ""
-  },
-  "poster-mojoloker/story_2_pasang_loker_hrd.jpg": {
-    "mtime": 1787450123.3239985,
-    "seen": 1787476501.9923196,
-    "ast_hash": "6d57b9fee67d1895ebf03c9f7b072626",
-    "semantic_hash": ""
-  },
-  "poster-mojoloker/story_3_fresh_graduate.jpg": {
-    "mtime": 1787450200.6810584,
-    "seen": 1787476501.9923196,
-    "ast_hash": "e4d2be1ecdbecd6e474e06539030ca46",
-    "semantic_hash": ""
-  },
-  "poster-mojoloker/story_4_standar_gaji_umk.jpg": {
-    "mtime": 1787450227.0895865,
-    "seen": 1787476501.9923196,
-    "ast_hash": "a6d39c987402b3c644b6cd3b55fd4f46",
-    "semantic_hash": ""
-  },
-  "poster-mojoloker/story_5_whatsapp_connect.jpg": {
-    "mtime": 1787450259.2664404,
-    "seen": 1787476501.9923196,
-    "ast_hash": "18cc35c1b3c1e59155a96497abc9a779",
-    "semantic_hash": ""
-  },
   "learning/neurons/N008_live_session_checkpoint.md": {
     "mtime": 1787490773.8014567,
     "seen": 1787490827.4109864,
@@ -600,9 +534,9 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1787492107.1697273,
-    "seen": 1787492111.8518033,
-    "ast_hash": "cbdb459f739e6f7fbd577695c59d2ae9",
+    "mtime": 1787492399.6461408,
+    "seen": 1787492404.0547502,
+    "ast_hash": "954cc68f45af27915ba3f42bf06a0b43",
     "semantic_hash": ""
   },
   "toolkit/README.md": {
@@ -612,10 +546,10 @@
     "semantic_hash": ""
   },
   "scripts/auto_sync_github.py": {
-    "mtime": 1787491151.523421,
-    "seen": 1787491973.4761393,
-    "ast_hash": "bdb9b45e0b9467e552f8b7afd32288ee",
-    "semantic_hash": "bdb9b45e0b9467e552f8b7afd32288ee"
+    "mtime": 1787492199.6831176,
+    "seen": 1787492404.0547502,
+    "ast_hash": "84d1e0facbcb451b8235df346a8cc5bf",
+    "semantic_hash": ""
   },
   "learning/neurons/N009_peak_algorithms_codex.md": {
     "mtime": 1787491296.310493,
