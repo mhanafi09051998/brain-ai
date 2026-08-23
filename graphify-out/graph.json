@@ -90,18 +90,6 @@
       "source_location": "L105"
     },
     {
-      "id": "ponytail_hooks_ponytail_config_isdeactivationcommand",
-      "label": "isDeactivationCommand()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ponytail-config.js",
-      "file_type": "code",
-      "norm_label": "isdeactivationcommand()",
-      "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L40"
-    },
-    {
       "id": "ponytail_hooks_ponytail_config_normalizeconfigmode",
       "label": "normalizeConfigMode()",
       "_callable": true,
@@ -328,6 +316,18 @@
       "norm_label": "getclaudedir()",
       "source_file": "ponytail/hooks/ponytail-config.js",
       "source_location": "L71"
+    },
+    {
+      "id": "ponytail_hooks_ponytail_config_isdeactivationcommand",
+      "label": "isDeactivationCommand()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ponytail-activate.js",
+      "file_type": "code",
+      "norm_label": "isdeactivationcommand()",
+      "source_file": "ponytail/hooks/ponytail-config.js",
+      "source_location": "L40"
     },
     {
       "id": "ponytail_hooks_ponytail_config_isshellsafe",
@@ -603,7 +603,7 @@
       "file_type": "code",
       "norm_label": "eval_single_task()",
       "source_file": "scripts/parallel_runner.py",
-      "source_location": "L133"
+      "source_location": "L141"
     },
     {
       "id": "scripts_parallel_runner_init_db",
@@ -639,7 +639,55 @@
       "file_type": "code",
       "norm_label": "run_parallel_subagents_step()",
       "source_file": "scripts/parallel_runner.py",
-      "source_location": "L185"
+      "source_location": "L195"
+    },
+    {
+      "id": "scripts_zolu_learn_server_broadcaststate",
+      "label": "broadcastState()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 75,
+      "community_name": "zolu_learn_server.js",
+      "file_type": "code",
+      "norm_label": "broadcaststate()",
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L32"
+    },
+    {
+      "id": "scripts_zolu_learn_server_cleanupandexit",
+      "label": "cleanupAndExit()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 75,
+      "community_name": "zolu_learn_server.js",
+      "file_type": "code",
+      "norm_label": "cleanupandexit()",
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L101"
+    },
+    {
+      "id": "scripts_zolu_learn_server_getstate",
+      "label": "getState()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 75,
+      "community_name": "zolu_learn_server.js",
+      "file_type": "code",
+      "norm_label": "getstate()",
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L24"
+    },
+    {
+      "id": "scripts_zolu_learn_server_runrealbenchmarkstep",
+      "label": "runRealBenchmarkStep()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 75,
+      "community_name": "zolu_learn_server.js",
+      "file_type": "code",
+      "norm_label": "runrealbenchmarkstep()",
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L56"
     },
     {
       "id": "scripts_ingest_frontier_knowledge_build_offline_frontier_corpus",
@@ -6229,13 +6277,189 @@
     },
     {
       "id": "scripts_parallel_runner_rationale_1",
-      "label": "High-Speed Parallel Subagent Benchmark Evaluator for Claudia Runs concurrent\u2026",
+      "label": "High-Speed Parallel Subagent Benchmark Evaluator for Claudia Features Valid\u2026",
       "_origin": "ast",
       "community": 74,
       "community_name": "parallel_runner.py",
       "file_type": "rationale",
-      "norm_label": "high-speed parallel subagent benchmark evaluator for claudia runs concurrent...",
+      "norm_label": "high-speed parallel subagent benchmark evaluator for claudia features valid...",
       "source_file": "scripts/parallel_runner.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_zolu_learn_server",
+      "label": "zolu_learn_server.js",
+      "_origin": "ast",
+      "community": 75,
+      "community_name": "zolu_learn_server.js",
+      "file_type": "code",
+      "norm_label": "zolu_learn_server.js",
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_zolu_learn_server_app",
+      "label": "app",
+      "_origin": "ast",
+      "community": 75,
+      "community_name": "zolu_learn_server.js",
+      "file_type": "code",
+      "norm_label": "app",
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L8"
+    },
+    {
+      "id": "scripts_zolu_learn_server_clients",
+      "label": "clients",
+      "_origin": "ast",
+      "community": 75,
+      "community_name": "zolu_learn_server.js",
+      "file_type": "code",
+      "norm_label": "clients",
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L14"
+    },
+    {
+      "id": "scripts_zolu_learn_server_cors",
+      "label": "cors",
+      "_origin": "ast",
+      "community": 75,
+      "community_name": "zolu_learn_server.js",
+      "file_type": "code",
+      "norm_label": "cors",
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L2"
+    },
+    {
+      "id": "scripts_zolu_learn_server_exec",
+      "label": "{ exec }",
+      "_origin": "ast",
+      "community": 75,
+      "community_name": "zolu_learn_server.js",
+      "file_type": "code",
+      "norm_label": "{ exec }",
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L3"
+    },
+    {
+      "id": "scripts_zolu_learn_server_express",
+      "label": "express",
+      "_origin": "ast",
+      "community": 75,
+      "community_name": "zolu_learn_server.js",
+      "file_type": "code",
+      "norm_label": "express",
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_zolu_learn_server_fs",
+      "label": "fs",
+      "_origin": "ast",
+      "community": 75,
+      "community_name": "zolu_learn_server.js",
+      "file_type": "code",
+      "norm_label": "fs",
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L4"
+    },
+    {
+      "id": "scripts_zolu_learn_server_http",
+      "label": "http",
+      "_origin": "ast",
+      "community": 75,
+      "community_name": "zolu_learn_server.js",
+      "file_type": "code",
+      "norm_label": "http",
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L6"
+    },
+    {
+      "id": "scripts_zolu_learn_server_intervaltimer",
+      "label": "intervalTimer",
+      "_origin": "ast",
+      "community": 75,
+      "community_name": "zolu_learn_server.js",
+      "file_type": "code",
+      "norm_label": "intervaltimer",
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L87"
+    },
+    {
+      "id": "scripts_zolu_learn_server_path",
+      "label": "path",
+      "_origin": "ast",
+      "community": 75,
+      "community_name": "zolu_learn_server.js",
+      "file_type": "code",
+      "norm_label": "path",
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L5"
+    },
+    {
+      "id": "scripts_zolu_learn_server_server",
+      "label": "server",
+      "_origin": "ast",
+      "community": 75,
+      "community_name": "zolu_learn_server.js",
+      "file_type": "code",
+      "norm_label": "server",
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L90"
+    },
+    {
+      "id": "scripts_zolu_learn_server_state_file",
+      "label": "STATE_FILE",
+      "_origin": "ast",
+      "community": 75,
+      "community_name": "zolu_learn_server.js",
+      "file_type": "code",
+      "norm_label": "state_file",
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L10"
+    },
+    {
+      "id": "scripts_diagnose_browser",
+      "label": "diagnose_browser.js",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "diagnose_browser.js",
+      "file_type": "code",
+      "norm_label": "diagnose_browser.js",
+      "source_file": "scripts/diagnose_browser.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_diagnose_browser_chromium",
+      "label": "{ chromium }",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "diagnose_browser.js",
+      "file_type": "code",
+      "norm_label": "{ chromium }",
+      "source_file": "scripts/diagnose_browser.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_test_playwright",
+      "label": "test_playwright.js",
+      "_origin": "ast",
+      "community": 77,
+      "community_name": "test_playwright.js",
+      "file_type": "code",
+      "norm_label": "test_playwright.js",
+      "source_file": "scripts/test_playwright.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_test_playwright_chromium",
+      "label": "{ chromium }",
+      "_origin": "ast",
+      "community": 77,
+      "community_name": "test_playwright.js",
+      "file_type": "code",
+      "norm_label": "{ chromium }",
+      "source_file": "scripts/test_playwright.js",
       "source_location": "L1"
     },
     {
@@ -6571,6 +6795,28 @@
       "file_type": "code",
       "norm_label": "test_direct_router.py",
       "source_file": "scripts/test_direct_router.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_verify_ecosystem_playwright",
+      "label": "verify_ecosystem_playwright.js",
+      "_origin": "ast",
+      "community": 85,
+      "community_name": "verify_ecosystem_playwright.js",
+      "file_type": "code",
+      "norm_label": "verify_ecosystem_playwright.js",
+      "source_file": "scripts/verify_ecosystem_playwright.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_verify_ecosystem_playwright_chromium",
+      "label": "{ chromium }",
+      "_origin": "ast",
+      "community": 85,
+      "community_name": "verify_ecosystem_playwright.js",
+      "file_type": "code",
+      "norm_label": "{ chromium }",
+      "source_file": "scripts/verify_ecosystem_playwright.js",
       "source_location": "L1"
     },
     {
@@ -7268,7 +7514,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/parallel_runner.py",
-      "source_location": "L143",
+      "source_location": "L151",
       "weight": 1.0
     },
     {
@@ -7280,7 +7526,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/parallel_runner.py",
-      "source_location": "L186",
+      "source_location": "L196",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_zolu_learn_server_runrealbenchmarkstep",
+      "target": "scripts_zolu_learn_server_broadcaststate",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L82",
       "weight": 1.0
     },
     {
@@ -12513,6 +12771,17 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_diagnose_browser",
+      "target": "scripts_diagnose_browser_chromium",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/diagnose_browser.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
       "source": "scripts_ingest_frontier_knowledge",
       "target": "scripts_ingest_frontier_knowledge_ensure_dirs",
       "relation": "contains",
@@ -12608,7 +12877,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/parallel_runner.py",
-      "source_location": "L133",
+      "source_location": "L141",
       "weight": 1.0
     },
     {
@@ -12619,7 +12888,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/parallel_runner.py",
-      "source_location": "L185",
+      "source_location": "L195",
       "weight": 1.0
     },
     {
@@ -12642,6 +12911,182 @@
       "confidence_score": 1.0,
       "source_file": "scripts/parallel_runner.py",
       "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_playwright",
+      "target": "scripts_test_playwright_chromium",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/test_playwright.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_ecosystem_playwright",
+      "target": "scripts_verify_ecosystem_playwright_chromium",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/verify_ecosystem_playwright.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_zolu_learn_server",
+      "target": "scripts_zolu_learn_server_express",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_zolu_learn_server",
+      "target": "scripts_zolu_learn_server_state_file",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_zolu_learn_server",
+      "target": "scripts_zolu_learn_server_cleanupandexit",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_zolu_learn_server",
+      "target": "scripts_zolu_learn_server_clients",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_zolu_learn_server",
+      "target": "scripts_zolu_learn_server_cors",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_zolu_learn_server",
+      "target": "scripts_zolu_learn_server_getstate",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_zolu_learn_server",
+      "target": "scripts_zolu_learn_server_exec",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_zolu_learn_server",
+      "target": "scripts_zolu_learn_server_broadcaststate",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_zolu_learn_server",
+      "target": "scripts_zolu_learn_server_fs",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_zolu_learn_server",
+      "target": "scripts_zolu_learn_server_path",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_zolu_learn_server",
+      "target": "scripts_zolu_learn_server_http",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_zolu_learn_server",
+      "target": "scripts_zolu_learn_server_app",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_zolu_learn_server",
+      "target": "scripts_zolu_learn_server_intervaltimer",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_zolu_learn_server",
+      "target": "scripts_zolu_learn_server_server",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L90",
       "weight": 1.0
     },
     {
@@ -13128,7 +13573,19 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "scripts/parallel_runner.py",
-      "source_location": "L191",
+      "source_location": "L201",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_zolu_learn_server",
+      "target": "scripts_zolu_learn_server_runrealbenchmarkstep",
+      "relation": "indirect_call",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "argument",
+      "source_file": "scripts/zolu_learn_server.js",
+      "source_location": "L87",
       "weight": 1.0
     },
     {
@@ -13373,5 +13830,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "5f120fcaef652d37c38db62a7b113ef5fbfc65f1"
+  "built_at_commit": "0027f9213bf8f52ee35f51df61b2de84fb7ebc81"
 }

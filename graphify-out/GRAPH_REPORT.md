@@ -1,16 +1,16 @@
 # Graph Report - Agent_Claudia_Autonomus  (2026-08-24)
 
 ## Corpus Check
-- 105 files · ~70,288 words
+- 109 files · ~72,615 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 562 nodes · 593 edges · 82 communities (59 shown, 23 thin omitted)
-- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 23 edges (avg confidence: 0.85)
+- 584 nodes · 612 edges · 86 communities (60 shown, 26 thin omitted)
+- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 24 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5f120fca`
+- Built from commit: `0027f921`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -82,11 +82,15 @@
 - ponytail-statusline.sh script
 - opencode.json
 - parallel_runner.py
+- zolu_learn_server.js
+- diagnose_browser.js
+- test_playwright.js
 - ingest_frontier_knowledge.py
 - official_runner_real.py
 - Neuron N017: Program-Aided Mathematical Reasoning & AIME Invariants
 - Neuron N018: RepoMap AST Compression & SWE-bench Precision
 - Neuron N019: BFCL Tool Schema & IFEval Strict Format Oracle
+- verify_ecosystem_playwright.js
 
 ## God Nodes (most connected - your core abstractions)
 1. `Install` - 15 edges
@@ -101,8 +105,8 @@
 10. `⚡ CLAUDIA 2.0` - 9 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `finish()` --calls--> `isDeactivationCommand()`  [EXTRACTED]
-  ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-config.js
+- `ponytailExtension()` --calls--> `isDeactivationCommand()`  [EXTRACTED]
+  ponytail/pi-extension/index.js → ponytail/hooks/ponytail-config.js
 - `finish()` --calls--> `getDefaultMode()`  [EXTRACTED]
   ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-config.js
 - `finish()` --calls--> `writeDefaultMode()`  [EXTRACTED]
@@ -115,11 +119,11 @@
 ## Import Cycles
 - None detected.
 
-## Communities (82 total, 23 thin omitted)
+## Communities (86 total, 26 thin omitted)
 
 ### Community 0 - "ponytail-config.js"
-Cohesion: 0.07
-Nodes (41): fs, getConfigDir(), getConfigPath(), getDefaultMode(), getHideStatus(), getQuietStartup(), isDeactivationCommand(), normalizeConfigMode() (+33 more)
+Cohesion: 0.08
+Nodes (40): fs, getConfigDir(), getConfigPath(), getDefaultMode(), getHideStatus(), getQuietStartup(), normalizeConfigMode(), normalizeMode() (+32 more)
 
 ### Community 1 - "ponytail/package.json"
 Cohesion: 0.05
@@ -127,13 +131,13 @@ Nodes (40): author, name, url, bugs, url, description, exports, ./plugin (+32 mo
 
 ### Community 2 - "ponytail-activate.js"
 Cohesion: 0.07
-Nodes (35): claudeDir, {
+Nodes (36): claudeDir, {
   clearMode,
   isCodex,
   isCopilot,
   setMode,
   writeHookOutput,
-}, fs, { getDefaultMode, getClaudeDir, isShellSafe }, { getPonytailInstructions }, mode, output, path (+27 more)
+}, fs, { getDefaultMode, getClaudeDir, isShellSafe }, { getPonytailInstructions }, mode, output, path (+28 more)
 
 ### Community 3 - "Install"
 Cohesion: 0.07
@@ -297,7 +301,11 @@ Nodes (21): models, npm, options, modalities, name, agent, explorer, description
 
 ### Community 74 - "parallel_runner.py"
 Cohesion: 0.53
-Nodes (5): eval_single_task(), init_db(), query_llm(), High-Speed Parallel Subagent Benchmark Evaluator for Claudia Runs concurrent…, run_parallel_subagents_step()
+Nodes (5): eval_single_task(), init_db(), query_llm(), High-Speed Parallel Subagent Benchmark Evaluator for Claudia Features Valid…, run_parallel_subagents_step()
+
+### Community 75 - "zolu_learn_server.js"
+Cohesion: 0.13
+Nodes (13): app, broadcastState(), clients, cors, { exec }, express, fs, http (+5 more)
 
 ### Community 78 - "ingest_frontier_knowledge.py"
 Cohesion: 0.40
@@ -320,21 +328,21 @@ Cohesion: 0.50
 Nodes (3): 📋 4 Aturan Disiplin Eksekusi:, 📌 Domain & Karakteristik, Neuron N019: BFCL Tool Schema & IFEval Strict Format Oracle
 
 ## Knowledge Gaps
-- **321 isolated node(s):** `$schema`, `npm`, `baseURL`, `apiKey`, `name` (+316 more)
+- **335 isolated node(s):** `$schema`, `npm`, `baseURL`, `apiKey`, `name` (+330 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **23 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **26 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **What connects `$schema`, `npm`, `baseURL` to the rest of the system?**
-  _321 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _335 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `ponytail-config.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.07474600870827286 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07541478129713423 - nodes in this community are weakly interconnected._
 - **Should `ponytail/package.json` be split into smaller, more focused modules?**
   _Cohesion score 0.05365853658536585 - nodes in this community are weakly interconnected._
 - **Should `ponytail-activate.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.06951219512195123 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06852497096399536 - nodes in this community are weakly interconnected._
 - **Should `Install` be split into smaller, more focused modules?**
   _Cohesion score 0.07407407407407407 - nodes in this community are weakly interconnected._
 - **Should `README.es.md` be split into smaller, more focused modules?**
