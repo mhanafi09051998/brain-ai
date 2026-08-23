@@ -1,13 +1,18 @@
 # Graph Report - Agent_Claudia_Autonomus  (2026-08-23)
 
 ## Corpus Check
-- 81 files · ~284,785 words
+- 82 files · ~284,978 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 454 nodes · 487 edges · 65 communities (49 shown, 16 thin omitted)
-- Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.85)
+- 457 nodes · 490 edges · 66 communities (49 shown, 17 thin omitted)
+- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
+
+## Graph Freshness
+- Built from commit: `1ceb3681`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - ponytail-config.js
@@ -67,6 +72,7 @@
 - ponytail.mjs
 - 📦 Daftar Modul & Framework
 - README.md
+- auto_sync_github.py
 
 ## God Nodes (most connected - your core abstractions)
 1. `Install` - 15 edges
@@ -95,7 +101,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (65 total, 16 thin omitted)
+## Communities (66 total, 17 thin omitted)
 
 ### Community 0 - "ponytail-config.js"
 Cohesion: 0.07
@@ -270,7 +276,7 @@ Nodes (5): 🧠 Arsitektur Memori & Pengetahuan, 🌟 Core Philosophy: The Minim
 ## Knowledge Gaps
 - **286 isolated node(s):** `__dirname`, `require`, `{ getPonytailInstructions }`, `{ getDefaultMode, normalizePersistedMode }`, `{ parseCommandFile }` (+281 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **16 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **17 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_

@@ -1,11 +1,11 @@
 # Graph Report - Agent_Claudia_Autonomus  (2026-08-23)
 
 ## Corpus Check
-- 79 files · ~284,170 words
+- 81 files · ~284,785 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 439 nodes · 474 edges · 63 communities (47 shown, 16 thin omitted)
+- 454 nodes · 487 edges · 65 communities (49 shown, 16 thin omitted)
 - Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
@@ -64,7 +64,9 @@
 - user_profile.md
 - vps_infrastructure.md
 - Neuron N008: Persistent Live Session Checkpoint & Infrastructure State
-- uninstall.js
+- ponytail.mjs
+- 📦 Daftar Modul & Framework
+- README.md
 
 ## God Nodes (most connected - your core abstractions)
 1. `Install` - 15 edges
@@ -79,35 +81,35 @@
 10. `normalizeMode()` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `finish()` --calls--> `isDeactivationCommand()`  [EXTRACTED]
-  ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-config.js
-- `finish()` --calls--> `getDefaultMode()`  [EXTRACTED]
-  ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-config.js
-- `finish()` --calls--> `writeDefaultMode()`  [EXTRACTED]
-  ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-config.js
-- `finish()` --calls--> `getPonytailInstructions()`  [EXTRACTED]
-  ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-instructions.js
-- `inject()` --calls--> `getPonytailInstructions()`  [EXTRACTED]
-  ponytail/hooks/ponytail-subagent.js → ponytail/hooks/ponytail-instructions.js
+- `readMode()` --calls--> `getDefaultMode()`  [EXTRACTED]
+  ponytail/.opencode/plugins/ponytail.mjs → ponytail/hooks/ponytail-config.js
+- `readMode()` --calls--> `normalizePersistedMode()`  [EXTRACTED]
+  ponytail/.opencode/plugins/ponytail.mjs → ponytail/hooks/ponytail-config.js
+- `createPiHarness()` --calls--> `ponytailExtension()`  [EXTRACTED]
+  ponytail/pi-extension/test/extension.test.js → ponytail/pi-extension/index.js
+- `filterSkillBodyForMode()` --calls--> `normalizeMode()`  [EXTRACTED]
+  ponytail/hooks/ponytail-instructions.js → ponytail/hooks/ponytail-config.js
+- `getPonytailInstructions()` --calls--> `normalizeMode()`  [EXTRACTED]
+  ponytail/hooks/ponytail-instructions.js → ponytail/hooks/ponytail-config.js
 
 ## Import Cycles
 - None detected.
 
-## Communities (63 total, 16 thin omitted)
+## Communities (65 total, 16 thin omitted)
 
 ### Community 0 - "ponytail-config.js"
 Cohesion: 0.07
-Nodes (41): fs, getConfigDir(), getConfigPath(), getDefaultMode(), getHideStatus(), getQuietStartup(), isDeactivationCommand(), normalizeConfigMode() (+33 more)
+Nodes (46): fs, getConfigDir(), getConfigPath(), getDefaultMode(), getHideStatus(), getQuietStartup(), isDeactivationCommand(), normalizeConfigMode() (+38 more)
 
 ### Community 1 - "ponytail-activate.js"
-Cohesion: 0.09
-Nodes (30): claudeDir, {
+Cohesion: 0.08
+Nodes (22): claudeDir, {
   clearMode,
   isCodex,
   isCopilot,
   setMode,
   writeHookOutput,
-}, fs, { getDefaultMode, getClaudeDir, isShellSafe }, { getPonytailInstructions }, mode, output, path (+22 more)
+}, fs, { getDefaultMode, getClaudeDir, isShellSafe }, { getPonytailInstructions }, mode, output, path (+14 more)
 
 ### Community 2 - "ponytail/package.json"
 Cohesion: 0.05
@@ -253,12 +255,20 @@ Nodes (3): Boundaries, Output, Scan
 Cohesion: 0.33
 Nodes (5): 🚀 Deployed Ecosystem & Port Mappings, 🛠️ Installed Autonomous Fullstack & Security Toolkit, 🎬 Media Engine & Strict Subtitle Cleaner, 📌 Metadata, Neuron N008: Persistent Live Session Checkpoint & Infrastructure State
 
-### Community 62 - "uninstall.js"
-Cohesion: 0.29
-Nodes (5): getClaudeDir(), fs, { getConfigPath, getClaudeDir }, path, settingsPath
+### Community 62 - "ponytail.mjs"
+Cohesion: 0.20
+Nodes (8): __dirname, parseCommandFile(), { getDefaultMode, normalizePersistedMode }, { getPonytailInstructions }, { parseCommandFile }, readMode(), require, statePath
+
+### Community 63 - "📦 Daftar Modul & Framework"
+Cohesion: 0.22
+Nodes (8): 1. **Biome (`@biomejs/biome`)** - *Linter & Formatter Rust*, 2. **Playwright (`playwright` + Chromium Headless)** - *UI & End-to-End Testing*, 3. **Hono (`hono`)** - *Ultra-Lightweight Edge Web Framework*, 4. **Zod (`zod`)** - *Runtime Schema Validation*, 5. **Drizzle ORM (`drizzle-orm` + `better-sqlite3`)** - *Zero-Bloat Type-Safe Database*, 6. **Puppeteer (`puppeteer`)** - *Headless Chrome Automation*, 📦 Daftar Modul & Framework, 🔒 Standar Keamanan & Vetting
+
+### Community 64 - "README.md"
+Cohesion: 0.33
+Nodes (5): 🧠 Arsitektur Memori & Pengetahuan, 🌟 Core Philosophy: The Minimality Ladder (Ponytail), 🚀 Memulai (Quick Start), 🛠️ Persenjataan Fullstack yang Terpasang, 🔒 Standar Keamanan & Manajemen Kredensial
 
 ## Knowledge Gaps
-- **274 isolated node(s):** `__dirname`, `require`, `{ getPonytailInstructions }`, `{ getDefaultMode, normalizePersistedMode }`, `{ parseCommandFile }` (+269 more)
+- **286 isolated node(s):** `__dirname`, `require`, `{ getPonytailInstructions }`, `{ getDefaultMode, normalizePersistedMode }`, `{ parseCommandFile }` (+281 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **16 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -266,11 +276,11 @@ Nodes (5): getClaudeDir(), fs, { getConfigPath, getClaudeDir }, path, settingsPa
 _Questions this graph is uniquely positioned to answer:_
 
 - **What connects `__dirname`, `require`, `{ getPonytailInstructions }` to the rest of the system?**
-  _274 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _286 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `ponytail-config.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.07474600870827286 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07456140350877193 - nodes in this community are weakly interconnected._
 - **Should `ponytail-activate.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.0873440285204991 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08307692307692308 - nodes in this community are weakly interconnected._
 - **Should `ponytail/package.json` be split into smaller, more focused modules?**
   _Cohesion score 0.05365853658536585 - nodes in this community are weakly interconnected._
 - **Should `Install` be split into smaller, more focused modules?**

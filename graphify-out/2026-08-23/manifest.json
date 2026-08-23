@@ -1,9 +1,9 @@
 {
   "ecosystem.config.cjs": {
-    "mtime": 1787405069.5229647,
-    "seen": 1787440966.9016154,
-    "ast_hash": "0ee955c1022e948b4f68e102a7c245bb",
-    "semantic_hash": "0ee955c1022e948b4f68e102a7c245bb"
+    "mtime": 1787490795.2775588,
+    "seen": 1787490827.4109864,
+    "ast_hash": "dd15119fb2196a241d762fb6eacacf90",
+    "semantic_hash": ""
   },
   "learning/NEURON_INDEX.json": {
     "mtime": 1787405648.6926944,
@@ -264,9 +264,9 @@
     "semantic_hash": ""
   },
   "learning/neurons/N002_vps_remote_ops.md": {
-    "mtime": 1787484542.9703171,
-    "seen": 1787484553.9351048,
-    "ast_hash": "04c10dec7c4c456c4e6e6c82733be742",
+    "mtime": 1787490776.5354333,
+    "seen": 1787490827.4109864,
+    "ast_hash": "f68c4435a574cf82aac0a84ed227cf8d",
     "semantic_hash": ""
   },
   "learning/neurons/N003_mobile_first_ui.md": {
@@ -324,9 +324,9 @@
     "semantic_hash": ""
   },
   "memory.md": {
-    "mtime": 1787485944.2137783,
-    "seen": 1787485952.9354389,
-    "ast_hash": "75612f824d9581175b53cefe50ba777d",
+    "mtime": 1787490786.9590697,
+    "seen": 1787490827.4109864,
+    "ast_hash": "81a7f5d66e99e6c62d0d1cb0a8500dd2",
     "semantic_hash": ""
   },
   "memory/neurons/ai_engine_9router.md": {
@@ -354,9 +354,9 @@
     "semantic_hash": ""
   },
   "memory/neurons/vps_infrastructure.md": {
-    "mtime": 1787457144.4098437,
-    "seen": 1787476501.9923196,
-    "ast_hash": "d3b31c8ab5d3305c9a36afca54a0f124",
+    "mtime": 1787490780.0660965,
+    "seen": 1787490827.4109864,
+    "ast_hash": "cda7155f27bca33be73e3b5f4340ada8",
     "semantic_hash": ""
   },
   "ponytail/.opencode/command/ponytail-audit.md": {
@@ -594,9 +594,21 @@
     "semantic_hash": ""
   },
   "learning/neurons/N008_live_session_checkpoint.md": {
-    "mtime": 1787490676.457566,
-    "seen": 1787490683.0223145,
-    "ast_hash": "73bf5f050834c9f5bc8434edd5749426",
+    "mtime": 1787490773.8014567,
+    "seen": 1787490827.4109864,
+    "ast_hash": "104d3d00b1cb1262c99dd4d87fb2193b",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1787490809.2961705,
+    "seen": 1787490827.4109864,
+    "ast_hash": "aa54b4878d0e44f4e5b4685dae302e06",
+    "semantic_hash": ""
+  },
+  "toolkit/README.md": {
+    "mtime": 1787490803.60497,
+    "seen": 1787490827.4109864,
+    "ast_hash": "79d9cd722c0800645a7663e39980639b",
     "semantic_hash": ""
   }
 }

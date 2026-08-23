@@ -212,19 +212,31 @@
       "source_location": "L77"
     },
     {
-      "id": "ponytail_opencode_plugins_ponytail_frontmatter_parsecommandfile",
-      "label": "parseCommandFile()",
+      "id": "ponytail_hooks_ponytail_mode_tracker_finish",
+      "label": "finish()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
       "community_name": "ponytail-config.js",
       "file_type": "code",
-      "norm_label": "parsecommandfile()",
-      "source_file": "ponytail/.opencode/plugins/ponytail-frontmatter.cjs",
-      "source_location": "L13"
+      "norm_label": "finish()",
+      "source_file": "ponytail/hooks/ponytail-mode-tracker.js",
+      "source_location": "L12"
     },
     {
-      "id": "ponytail_opencode_plugins_ponytail_readmode",
+      "id": "ponytail_hooks_ponytail_runtime_clearmode",
+      "label": "clearMode()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "ponytail-config.js",
+      "file_type": "code",
+      "norm_label": "clearmode()",
+      "source_file": "ponytail/hooks/ponytail-runtime.js",
+      "source_location": "L23"
+    },
+    {
+      "id": "ponytail_hooks_ponytail_runtime_readmode",
       "label": "readMode()",
       "_callable": true,
       "_origin": "ast",
@@ -232,20 +244,56 @@
       "community_name": "ponytail-config.js",
       "file_type": "code",
       "norm_label": "readmode()",
-      "source_file": "ponytail/.opencode/plugins/ponytail.mjs",
-      "source_location": "L33"
+      "source_file": "ponytail/hooks/ponytail-runtime.js",
+      "source_location": "L28"
     },
     {
-      "id": "ponytail_opencode_plugins_ponytail_writemode",
-      "label": "writeMode()",
+      "id": "ponytail_hooks_ponytail_runtime_setmode",
+      "label": "setMode()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
       "community_name": "ponytail-config.js",
       "file_type": "code",
-      "norm_label": "writemode()",
-      "source_file": "ponytail/.opencode/plugins/ponytail.mjs",
-      "source_location": "L41"
+      "norm_label": "setmode()",
+      "source_file": "ponytail/hooks/ponytail-runtime.js",
+      "source_location": "L18"
+    },
+    {
+      "id": "ponytail_hooks_ponytail_runtime_writehookoutput",
+      "label": "writeHookOutput()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "ponytail-config.js",
+      "file_type": "code",
+      "norm_label": "writehookoutput()",
+      "source_file": "ponytail/hooks/ponytail-runtime.js",
+      "source_location": "L36"
+    },
+    {
+      "id": "ponytail_hooks_ponytail_subagent_finish",
+      "label": "finish()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "ponytail-config.js",
+      "file_type": "code",
+      "norm_label": "finish()",
+      "source_file": "ponytail/hooks/ponytail-subagent.js",
+      "source_location": "L56"
+    },
+    {
+      "id": "ponytail_hooks_ponytail_subagent_inject",
+      "label": "inject()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "ponytail-config.js",
+      "file_type": "code",
+      "norm_label": "inject()",
+      "source_file": "ponytail/hooks/ponytail-subagent.js",
+      "source_location": "L23"
     },
     {
       "id": "ponytail_pi_extension_index_parseponytailcommand",
@@ -344,6 +392,18 @@
       "source_location": "L43"
     },
     {
+      "id": "ponytail_hooks_ponytail_config_getclaudedir",
+      "label": "getClaudeDir()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "ponytail-activate.js",
+      "file_type": "code",
+      "norm_label": "getclaudedir()",
+      "source_file": "ponytail/hooks/ponytail-config.js",
+      "source_location": "L71"
+    },
+    {
       "id": "ponytail_hooks_ponytail_config_isshellsafe",
       "label": "isShellSafe()",
       "_callable": true,
@@ -356,112 +416,52 @@
       "source_location": "L50"
     },
     {
-      "id": "ponytail_hooks_ponytail_mode_tracker_finish",
-      "label": "finish()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ponytail-activate.js",
-      "file_type": "code",
-      "norm_label": "finish()",
-      "source_file": "ponytail/hooks/ponytail-mode-tracker.js",
-      "source_location": "L12"
-    },
-    {
-      "id": "ponytail_hooks_ponytail_runtime_clearmode",
-      "label": "clearMode()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ponytail-activate.js",
-      "file_type": "code",
-      "norm_label": "clearmode()",
-      "source_file": "ponytail/hooks/ponytail-runtime.js",
-      "source_location": "L23"
-    },
-    {
-      "id": "ponytail_hooks_ponytail_runtime_readmode",
-      "label": "readMode()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ponytail-activate.js",
-      "file_type": "code",
-      "norm_label": "readmode()",
-      "source_file": "ponytail/hooks/ponytail-runtime.js",
-      "source_location": "L28"
-    },
-    {
-      "id": "ponytail_hooks_ponytail_runtime_setmode",
-      "label": "setMode()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ponytail-activate.js",
-      "file_type": "code",
-      "norm_label": "setmode()",
-      "source_file": "ponytail/hooks/ponytail-runtime.js",
-      "source_location": "L18"
-    },
-    {
-      "id": "ponytail_hooks_ponytail_runtime_writehookoutput",
-      "label": "writeHookOutput()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ponytail-activate.js",
-      "file_type": "code",
-      "norm_label": "writehookoutput()",
-      "source_file": "ponytail/hooks/ponytail-runtime.js",
-      "source_location": "L36"
-    },
-    {
-      "id": "ponytail_hooks_ponytail_subagent_finish",
-      "label": "finish()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ponytail-activate.js",
-      "file_type": "code",
-      "norm_label": "finish()",
-      "source_file": "ponytail/hooks/ponytail-subagent.js",
-      "source_location": "L56"
-    },
-    {
-      "id": "ponytail_hooks_ponytail_subagent_inject",
-      "label": "inject()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ponytail-activate.js",
-      "file_type": "code",
-      "norm_label": "inject()",
-      "source_file": "ponytail/hooks/ponytail-subagent.js",
-      "source_location": "L23"
-    },
-    {
-      "id": "ponytail_hooks_ponytail_config_getclaudedir",
-      "label": "getClaudeDir()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "uninstall.js",
-      "file_type": "code",
-      "norm_label": "getclaudedir()",
-      "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L71"
-    },
-    {
       "id": "ponytail_scripts_uninstall_removeifexists",
       "label": "removeIfExists()",
       "_callable": true,
       "_origin": "ast",
-      "community": 62,
-      "community_name": "uninstall.js",
+      "community": 1,
+      "community_name": "ponytail-activate.js",
       "file_type": "code",
       "norm_label": "removeifexists()",
       "source_file": "ponytail/scripts/uninstall.js",
       "source_location": "L14"
+    },
+    {
+      "id": "ponytail_opencode_plugins_ponytail_frontmatter_parsecommandfile",
+      "label": "parseCommandFile()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 62,
+      "community_name": "ponytail.mjs",
+      "file_type": "code",
+      "norm_label": "parsecommandfile()",
+      "source_file": "ponytail/.opencode/plugins/ponytail-frontmatter.cjs",
+      "source_location": "L13"
+    },
+    {
+      "id": "ponytail_opencode_plugins_ponytail_readmode",
+      "label": "readMode()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 62,
+      "community_name": "ponytail.mjs",
+      "file_type": "code",
+      "norm_label": "readmode()",
+      "source_file": "ponytail/.opencode/plugins/ponytail.mjs",
+      "source_location": "L33"
+    },
+    {
+      "id": "ponytail_opencode_plugins_ponytail_writemode",
+      "label": "writeMode()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 62,
+      "community_name": "ponytail.mjs",
+      "file_type": "code",
+      "norm_label": "writemode()",
+      "source_file": "ponytail/.opencode/plugins/ponytail.mjs",
+      "source_location": "L41"
     },
     {
       "id": "zolu_kas_dashboard_page_dashboardpage",
@@ -620,92 +620,92 @@
       "source_location": "L9"
     },
     {
-      "id": "ponytail_opencode_plugins_ponytail",
-      "label": "ponytail.mjs",
+      "id": "ponytail_hooks_ponytail_mode_tracker",
+      "label": "ponytail-mode-tracker.js",
       "_origin": "ast",
       "community": 0,
       "community_name": "ponytail-config.js",
       "file_type": "code",
-      "norm_label": "ponytail.mjs",
-      "source_file": "ponytail/.opencode/plugins/ponytail.mjs",
+      "norm_label": "ponytail-mode-tracker.js",
+      "source_file": "ponytail/hooks/ponytail-mode-tracker.js",
       "source_location": "L1"
     },
     {
-      "id": "ponytail_opencode_plugins_ponytail_dirname",
-      "label": "__dirname",
+      "id": "ponytail_hooks_ponytail_mode_tracker_clearmode_isqoder_readmode_setmode_writehookoutput",
+      "label": "{ clearMode, isQoder, readMode, setMode, writeHookOutput }",
       "_origin": "ast",
       "community": 0,
       "community_name": "ponytail-config.js",
       "file_type": "code",
-      "norm_label": "__dirname",
-      "source_file": "ponytail/.opencode/plugins/ponytail.mjs",
-      "source_location": "L18"
+      "norm_label": "{ clearmode, isqoder, readmode, setmode, writehookoutput }",
+      "source_file": "ponytail/hooks/ponytail-mode-tracker.js",
+      "source_location": "L6"
     },
     {
-      "id": "ponytail_opencode_plugins_ponytail_frontmatter",
-      "label": "ponytail-frontmatter.cjs",
+      "id": "ponytail_hooks_ponytail_mode_tracker_getdefaultmode_isdeactivationcommand_writedefaultmode",
+      "label": "{ getDefaultMode, isDeactivationCommand, writeDefaultMode }",
       "_origin": "ast",
       "community": 0,
       "community_name": "ponytail-config.js",
       "file_type": "code",
-      "norm_label": "ponytail-frontmatter.cjs",
-      "source_file": "ponytail/.opencode/plugins/ponytail-frontmatter.cjs",
-      "source_location": "L1"
+      "norm_label": "{ getdefaultmode, isdeactivationcommand, writedefaultmode }",
+      "source_file": "ponytail/hooks/ponytail-mode-tracker.js",
+      "source_location": "L5"
     },
     {
-      "id": "ponytail_opencode_plugins_ponytail_getdefaultmode_normalizepersistedmode",
-      "label": "{ getDefaultMode, normalizePersistedMode }",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ponytail-config.js",
-      "file_type": "code",
-      "norm_label": "{ getdefaultmode, normalizepersistedmode }",
-      "source_file": "ponytail/.opencode/plugins/ponytail.mjs",
-      "source_location": "L23"
-    },
-    {
-      "id": "ponytail_opencode_plugins_ponytail_getponytailinstructions",
+      "id": "ponytail_hooks_ponytail_mode_tracker_getponytailinstructions",
       "label": "{ getPonytailInstructions }",
       "_origin": "ast",
       "community": 0,
       "community_name": "ponytail-config.js",
       "file_type": "code",
       "norm_label": "{ getponytailinstructions }",
-      "source_file": "ponytail/.opencode/plugins/ponytail.mjs",
-      "source_location": "L22"
+      "source_file": "ponytail/hooks/ponytail-mode-tracker.js",
+      "source_location": "L7"
     },
     {
-      "id": "ponytail_opencode_plugins_ponytail_parsecommandfile",
-      "label": "{ parseCommandFile }",
+      "id": "ponytail_hooks_ponytail_subagent",
+      "label": "ponytail-subagent.js",
       "_origin": "ast",
       "community": 0,
       "community_name": "ponytail-config.js",
       "file_type": "code",
-      "norm_label": "{ parsecommandfile }",
-      "source_file": "ponytail/.opencode/plugins/ponytail.mjs",
-      "source_location": "L24"
+      "norm_label": "ponytail-subagent.js",
+      "source_file": "ponytail/hooks/ponytail-subagent.js",
+      "source_location": "L1"
     },
     {
-      "id": "ponytail_opencode_plugins_ponytail_require",
-      "label": "require",
+      "id": "ponytail_hooks_ponytail_subagent_getponytailinstructions",
+      "label": "{ getPonytailInstructions }",
       "_origin": "ast",
       "community": 0,
       "community_name": "ponytail-config.js",
       "file_type": "code",
-      "norm_label": "require",
-      "source_file": "ponytail/.opencode/plugins/ponytail.mjs",
-      "source_location": "L21"
+      "norm_label": "{ getponytailinstructions }",
+      "source_file": "ponytail/hooks/ponytail-subagent.js",
+      "source_location": "L13"
     },
     {
-      "id": "ponytail_opencode_plugins_ponytail_statepath",
-      "label": "statePath",
+      "id": "ponytail_hooks_ponytail_subagent_mode",
+      "label": "mode",
       "_origin": "ast",
       "community": 0,
       "community_name": "ponytail-config.js",
       "file_type": "code",
-      "norm_label": "statepath",
-      "source_file": "ponytail/.opencode/plugins/ponytail.mjs",
-      "source_location": "L27"
+      "norm_label": "mode",
+      "source_file": "ponytail/hooks/ponytail-subagent.js",
+      "source_location": "L16"
+    },
+    {
+      "id": "ponytail_hooks_ponytail_subagent_readmode_writehookoutput",
+      "label": "{ readMode, writeHookOutput }",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "ponytail-config.js",
+      "file_type": "code",
+      "norm_label": "{ readmode, writehookoutput }",
+      "source_file": "ponytail/hooks/ponytail-subagent.js",
+      "source_location": "L14"
     },
     {
       "id": "ponytail_pi_extension_index",
@@ -917,50 +917,6 @@
       "source_location": "L22"
     },
     {
-      "id": "ponytail_hooks_ponytail_mode_tracker",
-      "label": "ponytail-mode-tracker.js",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ponytail-activate.js",
-      "file_type": "code",
-      "norm_label": "ponytail-mode-tracker.js",
-      "source_file": "ponytail/hooks/ponytail-mode-tracker.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "ponytail_hooks_ponytail_mode_tracker_clearmode_isqoder_readmode_setmode_writehookoutput",
-      "label": "{ clearMode, isQoder, readMode, setMode, writeHookOutput }",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ponytail-activate.js",
-      "file_type": "code",
-      "norm_label": "{ clearmode, isqoder, readmode, setmode, writehookoutput }",
-      "source_file": "ponytail/hooks/ponytail-mode-tracker.js",
-      "source_location": "L6"
-    },
-    {
-      "id": "ponytail_hooks_ponytail_mode_tracker_getdefaultmode_isdeactivationcommand_writedefaultmode",
-      "label": "{ getDefaultMode, isDeactivationCommand, writeDefaultMode }",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ponytail-activate.js",
-      "file_type": "code",
-      "norm_label": "{ getdefaultmode, isdeactivationcommand, writedefaultmode }",
-      "source_file": "ponytail/hooks/ponytail-mode-tracker.js",
-      "source_location": "L5"
-    },
-    {
-      "id": "ponytail_hooks_ponytail_mode_tracker_getponytailinstructions",
-      "label": "{ getPonytailInstructions }",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ponytail-activate.js",
-      "file_type": "code",
-      "norm_label": "{ getponytailinstructions }",
-      "source_file": "ponytail/hooks/ponytail-mode-tracker.js",
-      "source_location": "L7"
-    },
-    {
       "id": "ponytail_hooks_ponytail_runtime",
       "label": "ponytail-runtime.js",
       "_origin": "ast",
@@ -1049,48 +1005,59 @@
       "source_location": "L16"
     },
     {
-      "id": "ponytail_hooks_ponytail_subagent",
-      "label": "ponytail-subagent.js",
+      "id": "ponytail_scripts_uninstall",
+      "label": "uninstall.js",
       "_origin": "ast",
       "community": 1,
       "community_name": "ponytail-activate.js",
       "file_type": "code",
-      "norm_label": "ponytail-subagent.js",
-      "source_file": "ponytail/hooks/ponytail-subagent.js",
+      "norm_label": "uninstall.js",
+      "source_file": "ponytail/scripts/uninstall.js",
       "source_location": "L1"
     },
     {
-      "id": "ponytail_hooks_ponytail_subagent_getponytailinstructions",
-      "label": "{ getPonytailInstructions }",
+      "id": "ponytail_scripts_uninstall_fs",
+      "label": "fs",
       "_origin": "ast",
       "community": 1,
       "community_name": "ponytail-activate.js",
       "file_type": "code",
-      "norm_label": "{ getponytailinstructions }",
-      "source_file": "ponytail/hooks/ponytail-subagent.js",
-      "source_location": "L13"
+      "norm_label": "fs",
+      "source_file": "ponytail/scripts/uninstall.js",
+      "source_location": "L8"
     },
     {
-      "id": "ponytail_hooks_ponytail_subagent_mode",
-      "label": "mode",
+      "id": "ponytail_scripts_uninstall_getconfigpath_getclaudedir",
+      "label": "{ getConfigPath, getClaudeDir }",
       "_origin": "ast",
       "community": 1,
       "community_name": "ponytail-activate.js",
       "file_type": "code",
-      "norm_label": "mode",
-      "source_file": "ponytail/hooks/ponytail-subagent.js",
-      "source_location": "L16"
+      "norm_label": "{ getconfigpath, getclaudedir }",
+      "source_file": "ponytail/scripts/uninstall.js",
+      "source_location": "L10"
     },
     {
-      "id": "ponytail_hooks_ponytail_subagent_readmode_writehookoutput",
-      "label": "{ readMode, writeHookOutput }",
+      "id": "ponytail_scripts_uninstall_path",
+      "label": "path",
       "_origin": "ast",
       "community": 1,
       "community_name": "ponytail-activate.js",
       "file_type": "code",
-      "norm_label": "{ readmode, writehookoutput }",
-      "source_file": "ponytail/hooks/ponytail-subagent.js",
-      "source_location": "L14"
+      "norm_label": "path",
+      "source_file": "ponytail/scripts/uninstall.js",
+      "source_location": "L9"
+    },
+    {
+      "id": "ponytail_scripts_uninstall_settingspath",
+      "label": "settingsPath",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "ponytail-activate.js",
+      "file_type": "code",
+      "norm_label": "settingspath",
+      "source_file": "ponytail/scripts/uninstall.js",
+      "source_location": "L26"
     },
     {
       "id": "ponytail_hooks_ponytail_statusline_sh__entry",
@@ -2873,7 +2840,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\udccb active tasks & history",
       "source_file": "memory.md",
-      "source_location": "L24"
+      "source_location": "L25"
     },
     {
       "id": "memory_claudia_neuron_memory_network",
@@ -2897,7 +2864,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\udccb prosedur pembaruan memori",
       "source_file": "memory.md",
-      "source_location": "L18"
+      "source_location": "L19"
     },
     {
       "id": "ponytail_skills_ponytail_audit_skill",
@@ -5060,7 +5027,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\udee0\ufe0f installed autonomous fullstack & security toolkit",
       "source_file": "learning/neurons/N008_live_session_checkpoint.md",
-      "source_location": "L39"
+      "source_location": "L40"
     },
     {
       "id": "learning_neurons_n008_live_session_checkpoint_media_engine_strict_subtitle_cleaner",
@@ -5072,7 +5039,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83c\udfac media engine & strict subtitle cleaner",
       "source_file": "learning/neurons/N008_live_session_checkpoint.md",
-      "source_location": "L31"
+      "source_location": "L32"
     },
     {
       "id": "learning_neurons_n008_live_session_checkpoint_metadata",
@@ -5099,59 +5066,272 @@
       "source_location": "L1"
     },
     {
-      "id": "ponytail_scripts_uninstall",
-      "label": "uninstall.js",
+      "id": "ponytail_opencode_plugins_ponytail",
+      "label": "ponytail.mjs",
       "_origin": "ast",
       "community": 62,
-      "community_name": "uninstall.js",
+      "community_name": "ponytail.mjs",
       "file_type": "code",
-      "norm_label": "uninstall.js",
-      "source_file": "ponytail/scripts/uninstall.js",
+      "norm_label": "ponytail.mjs",
+      "source_file": "ponytail/.opencode/plugins/ponytail.mjs",
       "source_location": "L1"
     },
     {
-      "id": "ponytail_scripts_uninstall_fs",
-      "label": "fs",
+      "id": "ponytail_opencode_plugins_ponytail_dirname",
+      "label": "__dirname",
       "_origin": "ast",
       "community": 62,
-      "community_name": "uninstall.js",
+      "community_name": "ponytail.mjs",
       "file_type": "code",
-      "norm_label": "fs",
-      "source_file": "ponytail/scripts/uninstall.js",
-      "source_location": "L8"
+      "norm_label": "__dirname",
+      "source_file": "ponytail/.opencode/plugins/ponytail.mjs",
+      "source_location": "L18"
     },
     {
-      "id": "ponytail_scripts_uninstall_getconfigpath_getclaudedir",
-      "label": "{ getConfigPath, getClaudeDir }",
+      "id": "ponytail_opencode_plugins_ponytail_frontmatter",
+      "label": "ponytail-frontmatter.cjs",
       "_origin": "ast",
       "community": 62,
-      "community_name": "uninstall.js",
+      "community_name": "ponytail.mjs",
       "file_type": "code",
-      "norm_label": "{ getconfigpath, getclaudedir }",
-      "source_file": "ponytail/scripts/uninstall.js",
-      "source_location": "L10"
+      "norm_label": "ponytail-frontmatter.cjs",
+      "source_file": "ponytail/.opencode/plugins/ponytail-frontmatter.cjs",
+      "source_location": "L1"
     },
     {
-      "id": "ponytail_scripts_uninstall_path",
-      "label": "path",
+      "id": "ponytail_opencode_plugins_ponytail_getdefaultmode_normalizepersistedmode",
+      "label": "{ getDefaultMode, normalizePersistedMode }",
       "_origin": "ast",
       "community": 62,
-      "community_name": "uninstall.js",
+      "community_name": "ponytail.mjs",
       "file_type": "code",
-      "norm_label": "path",
-      "source_file": "ponytail/scripts/uninstall.js",
+      "norm_label": "{ getdefaultmode, normalizepersistedmode }",
+      "source_file": "ponytail/.opencode/plugins/ponytail.mjs",
+      "source_location": "L23"
+    },
+    {
+      "id": "ponytail_opencode_plugins_ponytail_getponytailinstructions",
+      "label": "{ getPonytailInstructions }",
+      "_origin": "ast",
+      "community": 62,
+      "community_name": "ponytail.mjs",
+      "file_type": "code",
+      "norm_label": "{ getponytailinstructions }",
+      "source_file": "ponytail/.opencode/plugins/ponytail.mjs",
+      "source_location": "L22"
+    },
+    {
+      "id": "ponytail_opencode_plugins_ponytail_parsecommandfile",
+      "label": "{ parseCommandFile }",
+      "_origin": "ast",
+      "community": 62,
+      "community_name": "ponytail.mjs",
+      "file_type": "code",
+      "norm_label": "{ parsecommandfile }",
+      "source_file": "ponytail/.opencode/plugins/ponytail.mjs",
+      "source_location": "L24"
+    },
+    {
+      "id": "ponytail_opencode_plugins_ponytail_require",
+      "label": "require",
+      "_origin": "ast",
+      "community": 62,
+      "community_name": "ponytail.mjs",
+      "file_type": "code",
+      "norm_label": "require",
+      "source_file": "ponytail/.opencode/plugins/ponytail.mjs",
+      "source_location": "L21"
+    },
+    {
+      "id": "ponytail_opencode_plugins_ponytail_statepath",
+      "label": "statePath",
+      "_origin": "ast",
+      "community": 62,
+      "community_name": "ponytail.mjs",
+      "file_type": "code",
+      "norm_label": "statepath",
+      "source_file": "ponytail/.opencode/plugins/ponytail.mjs",
+      "source_location": "L27"
+    },
+    {
+      "id": "toolkit_readme",
+      "label": "toolkit/README.md",
+      "_origin": "ast",
+      "community": 63,
+      "community_name": "\ud83d\udce6 Daftar Modul & Framework",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "toolkit/readme.md",
+      "source_file": "toolkit/README.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "toolkit_readme_1_biome_biomejs_biome_linter_formatter_rust",
+      "label": "1. **Biome (`@biomejs/biome`)** - *Linter & Formatter Rust*",
+      "_origin": "ast",
+      "community": 63,
+      "community_name": "\ud83d\udce6 Daftar Modul & Framework",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. **biome (`@biomejs/biome`)** - *linter & formatter rust*",
+      "source_file": "toolkit/README.md",
       "source_location": "L9"
     },
     {
-      "id": "ponytail_scripts_uninstall_settingspath",
-      "label": "settingsPath",
+      "id": "toolkit_readme_2_playwright_playwright_chromium_headless_ui_end_to_end_testing",
+      "label": "2. **Playwright (`playwright` + Chromium Headless)** - *UI & End-to-End Testing*",
       "_origin": "ast",
-      "community": 62,
-      "community_name": "uninstall.js",
-      "file_type": "code",
-      "norm_label": "settingspath",
-      "source_file": "ponytail/scripts/uninstall.js",
-      "source_location": "L26"
+      "community": 63,
+      "community_name": "\ud83d\udce6 Daftar Modul & Framework",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. **playwright (`playwright` + chromium headless)** - *ui & end-to-end testing*",
+      "source_file": "toolkit/README.md",
+      "source_location": "L14"
+    },
+    {
+      "id": "toolkit_readme_3_hono_hono_ultra_lightweight_edge_web_framework",
+      "label": "3. **Hono (`hono`)** - *Ultra-Lightweight Edge Web Framework*",
+      "_origin": "ast",
+      "community": 63,
+      "community_name": "\ud83d\udce6 Daftar Modul & Framework",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. **hono (`hono`)** - *ultra-lightweight edge web framework*",
+      "source_file": "toolkit/README.md",
+      "source_location": "L18"
+    },
+    {
+      "id": "toolkit_readme_4_zod_zod_runtime_schema_validation",
+      "label": "4. **Zod (`zod`)** - *Runtime Schema Validation*",
+      "_origin": "ast",
+      "community": 63,
+      "community_name": "\ud83d\udce6 Daftar Modul & Framework",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. **zod (`zod`)** - *runtime schema validation*",
+      "source_file": "toolkit/README.md",
+      "source_location": "L22"
+    },
+    {
+      "id": "toolkit_readme_5_drizzle_orm_drizzle_orm_better_sqlite3_zero_bloat_type_safe_database",
+      "label": "5. **Drizzle ORM (`drizzle-orm` + `better-sqlite3`)** - *Zero-Bloat Type-Safe Database*",
+      "_origin": "ast",
+      "community": 63,
+      "community_name": "\ud83d\udce6 Daftar Modul & Framework",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "5. **drizzle orm (`drizzle-orm` + `better-sqlite3`)** - *zero-bloat type-safe database*",
+      "source_file": "toolkit/README.md",
+      "source_location": "L25"
+    },
+    {
+      "id": "toolkit_readme_6_puppeteer_puppeteer_headless_chrome_automation",
+      "label": "6. **Puppeteer (`puppeteer`)** - *Headless Chrome Automation*",
+      "_origin": "ast",
+      "community": 63,
+      "community_name": "\ud83d\udce6 Daftar Modul & Framework",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "6. **puppeteer (`puppeteer`)** - *headless chrome automation*",
+      "source_file": "toolkit/README.md",
+      "source_location": "L28"
+    },
+    {
+      "id": "toolkit_readme_daftar_modul_framework",
+      "label": "\ud83d\udce6 Daftar Modul & Framework",
+      "_origin": "ast",
+      "community": 63,
+      "community_name": "\ud83d\udce6 Daftar Modul & Framework",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udce6 daftar modul & framework",
+      "source_file": "toolkit/README.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "toolkit_readme_standar_keamanan_vetting",
+      "label": "\ud83d\udd12 Standar Keamanan & Vetting",
+      "_origin": "ast",
+      "community": 63,
+      "community_name": "\ud83d\udce6 Daftar Modul & Framework",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udd12 standar keamanan & vetting",
+      "source_file": "toolkit/README.md",
+      "source_location": "L33"
+    },
+    {
+      "id": "readme",
+      "label": "README.md",
+      "_origin": "ast",
+      "community": 64,
+      "community_name": "README.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "readme.md",
+      "source_file": "README.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "readme_arsitektur_memori_pengetahuan",
+      "label": "\ud83e\udde0 Arsitektur Memori & Pengetahuan",
+      "_origin": "ast",
+      "community": 64,
+      "community_name": "README.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83e\udde0 arsitektur memori & pengetahuan",
+      "source_file": "README.md",
+      "source_location": "L19"
+    },
+    {
+      "id": "readme_core_philosophy_the_minimality_ladder_ponytail",
+      "label": "\ud83c\udf1f Core Philosophy: The Minimality Ladder (Ponytail)",
+      "_origin": "ast",
+      "community": 64,
+      "community_name": "README.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83c\udf1f core philosophy: the minimality ladder (ponytail)",
+      "source_file": "README.md",
+      "source_location": "L8"
+    },
+    {
+      "id": "readme_memulai_quick_start",
+      "label": "\ud83d\ude80 Memulai (Quick Start)",
+      "_origin": "ast",
+      "community": 64,
+      "community_name": "README.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\ude80 memulai (quick start)",
+      "source_file": "README.md",
+      "source_location": "L57"
+    },
+    {
+      "id": "readme_persenjataan_fullstack_yang_terpasang",
+      "label": "\ud83d\udee0\ufe0f Persenjataan Fullstack yang Terpasang",
+      "_origin": "ast",
+      "community": 64,
+      "community_name": "README.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udee0\ufe0f persenjataan fullstack yang terpasang",
+      "source_file": "README.md",
+      "source_location": "L37"
+    },
+    {
+      "id": "readme_standar_keamanan_manajemen_kredensial",
+      "label": "\ud83d\udd12 Standar Keamanan & Manajemen Kredensial",
+      "_origin": "ast",
+      "community": 64,
+      "community_name": "README.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udd12 standar keamanan & manajemen kredensial",
+      "source_file": "README.md",
+      "source_location": "L49"
     },
     {
       "id": "ponytail_pi_extension_package",
@@ -7781,7 +7961,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "learning/neurons/N008_live_session_checkpoint.md",
-      "source_location": "L31",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -7792,7 +7972,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "learning/neurons/N008_live_session_checkpoint.md",
-      "source_location": "L39",
+      "source_location": "L40",
       "weight": 1.0
     },
     {
@@ -7935,7 +8115,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "memory.md",
-      "source_location": "L18",
+      "source_location": "L19",
       "weight": 1.0
     },
     {
@@ -7946,7 +8126,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "memory.md",
-      "source_location": "L24",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -10169,6 +10349,149 @@
       "confidence_score": 1.0,
       "source_file": "prod_planner.md",
       "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "readme",
+      "target": "readme_arsitektur_memori_pengetahuan",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "readme",
+      "target": "readme_persenjataan_fullstack_yang_terpasang",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "readme",
+      "target": "readme_standar_keamanan_manajemen_kredensial",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "readme",
+      "target": "readme_memulai_quick_start",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L57",
+      "weight": 1.0
+    },
+    {
+      "source": "readme",
+      "target": "readme_core_philosophy_the_minimality_ladder_ponytail",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "toolkit_readme",
+      "target": "toolkit_readme_standar_keamanan_vetting",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "toolkit/README.md",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "toolkit_readme",
+      "target": "toolkit_readme_daftar_modul_framework",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "toolkit/README.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "toolkit_readme_daftar_modul_framework",
+      "target": "toolkit_readme_2_playwright_playwright_chromium_headless_ui_end_to_end_testing",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "toolkit/README.md",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "toolkit_readme_daftar_modul_framework",
+      "target": "toolkit_readme_3_hono_hono_ultra_lightweight_edge_web_framework",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "toolkit/README.md",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "toolkit_readme_daftar_modul_framework",
+      "target": "toolkit_readme_4_zod_zod_runtime_schema_validation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "toolkit/README.md",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "toolkit_readme_daftar_modul_framework",
+      "target": "toolkit_readme_5_drizzle_orm_drizzle_orm_better_sqlite3_zero_bloat_type_safe_database",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "toolkit/README.md",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "toolkit_readme_daftar_modul_framework",
+      "target": "toolkit_readme_6_puppeteer_puppeteer_headless_chrome_automation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "toolkit/README.md",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "toolkit_readme_daftar_modul_framework",
+      "target": "toolkit_readme_1_biome_biomejs_biome_linter_formatter_rust",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "toolkit/README.md",
+      "source_location": "L9",
       "weight": 1.0
     },
     {
