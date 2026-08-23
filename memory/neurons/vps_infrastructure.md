@@ -11,7 +11,9 @@
   - zolu-prod: Port 3012 (prod.zolu.my.id - AI Fullstack Web Production Generator)
   - zolu-kas: Port 3030 (kas.zolu.my.id - Kasir & Financial OS)
   - zolu-skripsi: Port 3050 (skripsi.zolu.my.id - Academic Skripsi Generator)
+  - zolu-learn: Port 3005 (learn.zolu.my.id - Autonomous Benchmark & Virtual Training Lab)
   - 9router: Port 3040 / 20128 (AI Multi-Model Gateway)
+
   - antigravity-bridge: Port 8000 (OpenAI-compatible AI Bridge)
 - **Hermes Agent (Telegram & Multi-tenant)**:
   - Global Persona: "Claudia" developed by Gahar Inovasi Teknologi.
