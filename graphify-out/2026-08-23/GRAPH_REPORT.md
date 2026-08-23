@@ -1,23 +1,23 @@
 # Graph Report - Agent_Claudia_Autonomus  (2026-08-23)
 
 ## Corpus Check
-- 88 files · ~62,484 words
+- 90 files · ~62,775 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 475 nodes · 502 edges · 75 communities (52 shown, 23 thin omitted)
+- 482 nodes · 507 edges · 73 communities (49 shown, 24 thin omitted)
 - Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `9474c489`
+- Built from commit: `c5c312f8`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- index.js
+- ponytail-config.js
 - ponytail/package.json
-- ponytail-runtime.js
+- ponytail-activate.js
 - Install
 - README.es.md
 - Install
@@ -31,13 +31,13 @@
 - Ponytail, lazy senior dev mode
 - Ponytail, lazy senior dev mode
 - Ponytail, lazy senior dev mode
-- ponytail-config.js
+- N016_frontier_benchmark_evaluator.md
 - Ponytail, lazy senior dev mode
 - Pembelajaran & Standar Tetap (Learnings & Fixed Rules) - Claudia
 - Neuron N008: Persistent Live Session Checkpoint & Infrastructure State
 - pi-extension/package.json
 - ⚡ CLAUDIA 2.0
-- ponytailExtension
+- benchmark_engine.py
 - .agents/skills/ponytail-audit/SKILL.md
 - Ponytail Gain
 - .agents/skills/ponytail-review/SKILL.md
@@ -80,8 +80,6 @@
 - user_profile.md
 - vps_infrastructure.md
 - ponytail-statusline.sh script
-- ponytail-activate.js
-- ponytail.mjs
 
 ## God Nodes (most connected - your core abstractions)
 1. `Install` - 15 edges
@@ -96,33 +94,39 @@
 10. `normalizeMode()` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `readMode()` --calls--> `getDefaultMode()`  [EXTRACTED]
-  ponytail/.opencode/plugins/ponytail.mjs → ponytail/hooks/ponytail-config.js
-- `readMode()` --calls--> `normalizePersistedMode()`  [EXTRACTED]
-  ponytail/.opencode/plugins/ponytail.mjs → ponytail/hooks/ponytail-config.js
-- `ponytailExtension()` --calls--> `normalizePersistedMode()`  [EXTRACTED]
-  ponytail/pi-extension/index.js → ponytail/hooks/ponytail-config.js
-- `ponytailExtension()` --calls--> `isDeactivationCommand()`  [EXTRACTED]
-  ponytail/pi-extension/index.js → ponytail/hooks/ponytail-config.js
+- `finish()` --calls--> `isDeactivationCommand()`  [EXTRACTED]
+  ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-config.js
 - `finish()` --calls--> `getDefaultMode()`  [EXTRACTED]
   ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-config.js
+- `finish()` --calls--> `writeDefaultMode()`  [EXTRACTED]
+  ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-config.js
+- `finish()` --calls--> `getPonytailInstructions()`  [EXTRACTED]
+  ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-instructions.js
+- `inject()` --calls--> `getPonytailInstructions()`  [EXTRACTED]
+  ponytail/hooks/ponytail-subagent.js → ponytail/hooks/ponytail-instructions.js
 
 ## Import Cycles
 - None detected.
 
-## Communities (75 total, 23 thin omitted)
+## Communities (73 total, 24 thin omitted)
 
-### Community 0 - "index.js"
-Cohesion: 0.18
-Nodes (18): normalizeMode(), normalizePersistedMode(), { DEFAULT_MODE, normalizeMode, normalizePersistedMode }, filterSkillBodyForMode(), fs, getFallbackInstructions(), getPonytailInstructions(), INDEPENDENT_MODES (+10 more)
+### Community 0 - "ponytail-config.js"
+Cohesion: 0.07
+Nodes (41): fs, getConfigDir(), getConfigPath(), getDefaultMode(), getHideStatus(), getQuietStartup(), isDeactivationCommand(), normalizeConfigMode() (+33 more)
 
 ### Community 1 - "ponytail/package.json"
 Cohesion: 0.05
 Nodes (40): author, name, url, bugs, url, description, exports, ./plugin (+32 more)
 
-### Community 2 - "ponytail-runtime.js"
-Cohesion: 0.12
-Nodes (22): getConfigDir(), isDeactivationCommand(), { clearMode, isQoder, readMode, setMode, writeHookOutput }, finish(), { getDefaultMode, isDeactivationCommand, writeDefaultMode }, { getPonytailInstructions }, clearMode(), fs (+14 more)
+### Community 2 - "ponytail-activate.js"
+Cohesion: 0.07
+Nodes (35): claudeDir, {
+  clearMode,
+  isCodex,
+  isCopilot,
+  setMode,
+  writeHookOutput,
+}, fs, { getDefaultMode, getClaudeDir, isShellSafe }, { getPonytailInstructions }, mode, output, path (+27 more)
 
 ### Community 3 - "Install"
 Cohesion: 0.07
@@ -176,9 +180,9 @@ Nodes (6): Graphify Knowledge Graph:, Not lazy about:, Persona & Communication, 
 Cohesion: 0.29
 Nodes (6): Graphify & Auto-Sync Knowledge Graph:, Not lazy about:, Persona & Communication, Ponytail, lazy senior dev mode, Rules:, The Minimality Ladder
 
-### Community 16 - "ponytail-config.js"
-Cohesion: 0.15
-Nodes (11): fs, getClaudeDir(), normalizeConfigMode(), os, path, RUNTIME_MODES, VALID_MODES, fs (+3 more)
+### Community 16 - "N016_frontier_benchmark_evaluator.md"
+Cohesion: 0.50
+Nodes (3): 6 Parameter Tolok Ukur Puncak:, Karakteristik, Lokasi Monitoring Realtime:
 
 ### Community 17 - "Ponytail, lazy senior dev mode"
 Cohesion: 0.29
@@ -199,10 +203,6 @@ Nodes (5): name, private, scripts, test, type
 ### Community 21 - "⚡ CLAUDIA 2.0"
 Cohesion: 0.25
 Nodes (7): 🌌 1. Filosofi Rekayasa Inti: *The Minimality Ladder*, 🧠 2. Cognitive Neural Mesh (15 Master Neurons), 🛠️ 3. Persenjataan Fullstack Terpasang, 🏛️ 4. Kapabilitas Orkestrasi Cloud & Multi-Layanan, 🔒 5. Zero-Trust Security & Vault Isolation, *Autonomous Fullstack Engineer & Cognitive Neural Mesh*, ⚡ CLAUDIA 2.0
-
-### Community 22 - "ponytailExtension"
-Cohesion: 0.23
-Nodes (7): getConfigPath(), getDefaultMode(), getHideStatus(), getQuietStartup(), writeDefaultMode(), ponytailExtension(), createPiHarness()
 
 ### Community 23 - ".agents/skills/ponytail-audit/SKILL.md"
 Cohesion: 0.40
@@ -280,34 +280,22 @@ Nodes (3): Alur Pembelajaran, Self-Learning Framework, Struktur Folder
 Cohesion: 0.50
 Nodes (3): Boundaries, Output, Scan
 
-### Community 73 - "ponytail-activate.js"
-Cohesion: 0.18
-Nodes (10): claudeDir, {
-  clearMode,
-  isCodex,
-  isCopilot,
-  setMode,
-  writeHookOutput,
-}, fs, { getDefaultMode, getClaudeDir, isShellSafe }, { getPonytailInstructions }, mode, output, path (+2 more)
-
-### Community 74 - "ponytail.mjs"
-Cohesion: 0.20
-Nodes (8): __dirname, parseCommandFile(), { getDefaultMode, normalizePersistedMode }, { getPonytailInstructions }, { parseCommandFile }, readMode(), require, statePath
-
 ## Knowledge Gaps
-- **298 isolated node(s):** `__dirname`, `require`, `{ getPonytailInstructions }`, `{ getDefaultMode, normalizePersistedMode }`, `{ parseCommandFile }` (+293 more)
+- **301 isolated node(s):** `__dirname`, `require`, `{ getPonytailInstructions }`, `{ getDefaultMode, normalizePersistedMode }`, `{ parseCommandFile }` (+296 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **23 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **24 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **What connects `__dirname`, `require`, `{ getPonytailInstructions }` to the rest of the system?**
-  _298 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _301 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `ponytail-config.js` be split into smaller, more focused modules?**
+  _Cohesion score 0.07474600870827286 - nodes in this community are weakly interconnected._
 - **Should `ponytail/package.json` be split into smaller, more focused modules?**
   _Cohesion score 0.05365853658536585 - nodes in this community are weakly interconnected._
-- **Should `ponytail-runtime.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.12333333333333334 - nodes in this community are weakly interconnected._
+- **Should `ponytail-activate.js` be split into smaller, more focused modules?**
+  _Cohesion score 0.06951219512195123 - nodes in this community are weakly interconnected._
 - **Should `Install` be split into smaller, more focused modules?**
   _Cohesion score 0.07407407407407407 - nodes in this community are weakly interconnected._
 - **Should `README.es.md` be split into smaller, more focused modules?**

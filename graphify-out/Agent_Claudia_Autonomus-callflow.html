@@ -60,7 +60,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 <div class="container">
 
 <h1>Agent_Claudia_Autonomus — Complete Call Flow &amp; Architecture Documentation</h1>
-<p class="subtitle">Generated from graphify knowledge graph: 482 nodes, 507 edges, 73 communities. Commit: c5c312f</p>
+<p class="subtitle">Generated from graphify knowledge graph: 484 nodes, 509 edges, 73 communities. Commit: 2ccc876</p>
 
 <div class="nav">
     <a href="#overview">Architecture Overview</a>
@@ -71,9 +71,9 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
     <a href="#serve-api">Serving API</a>
     <a href="#security-global">Security &amp; Global Graph</a>
     <a href="#tests-fixtures">Tests &amp; Fixtures</a>
+    <a href="#claudia-2-0">⚡ CLAUDIA 2.0</a>
     <a href="#production-planning-specification-zolu-ai-web-pr">Production Planning Specification: Zolu AI Web Production Engine</a>
     <a href="#core-engines-workflows">Core Engines &amp; Workflows</a>
-    <a href="#claudia-2-0">⚡ CLAUDIA 2.0</a>
     <a href="#ponytail-lazy-senior-dev-mode">Ponytail, lazy senior dev mode</a>
     <a href="#ponytail-lazy-senior-dev-mode-36116e">Ponytail, lazy senior dev mode</a>
     <a href="#ponytail-lazy-senior-dev-mode-2">Ponytail, lazy senior dev mode</a>
@@ -102,12 +102,12 @@ flowchart LR
     class SECURITY_GLOBAL_5B9C6A04 module;
     TESTS_FIXTURES_B84B1DCC("Tests &amp; Fixtures<br/><small>53 nodes</small>")
     class TESTS_FIXTURES_B84B1DCC module;
+    CLAUDIA_2_0_DAD7BB91("⚡ CLAUDIA 2.0<br/><small>10 nodes</small>")
+    class CLAUDIA_2_0_DAD7BB91 module;
     PRODUCTION_PLANNING_SPECIFICATION_ZOLU_AI_WEB_PR_F5CFD07A("Production Planning Specification: Zolu AI Web Production Engine<br/><small>10 nodes</small>")
     class PRODUCTION_PLANNING_SPECIFICATION_ZOLU_AI_WEB_PR_F5CFD07A module;
     CORE_ENGINES_WORKFLOWS_6F8507CD("Core Engines &amp; Workflows<br/><small>8 nodes</small>")
     class CORE_ENGINES_WORKFLOWS_6F8507CD module;
-    CLAUDIA_2_0_DAD7BB91("⚡ CLAUDIA 2.0<br/><small>8 nodes</small>")
-    class CLAUDIA_2_0_DAD7BB91 module;
     PONYTAIL_LAZY_SENIOR_DEV_MODE_87509AA5("Ponytail, lazy senior dev mode<br/><small>7 nodes</small>")
     class PONYTAIL_LAZY_SENIOR_DEV_MODE_87509AA5 module;
     PONYTAIL_LAZY_SENIOR_DEV_MODE_36116E_97C13027("Ponytail, lazy senior dev mode<br/><small>7 nodes</small>")
@@ -136,7 +136,7 @@ flowchart LR
     <h4>Architecture Layers</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>Layer</th><th>Nodes</th><th>Communities</th></tr>
-      <tr><td>Extraction Pipeline</td><td>6</td><td><code>48, 50</code></td></tr><tr><td>Graph Build</td><td>56</td><td><code>1, 9, 20</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>7</td><td><code>16, 22</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>198</td><td><code>2, 3, 4, 5, 7, 8, 10, 12, 23, 24, 25, 29, 30, 31, 32, 39, 41, 42, 67, 68, 69, 70, 71, 72</code></td></tr><tr><td>Serving API</td><td>3</td><td><code>47</code></td></tr><tr><td>Security &amp; Global Graph</td><td>3</td><td><code>49</code></td></tr><tr><td>Tests &amp; Fixtures</td><td>53</td><td><code>0</code></td></tr><tr><td>Production Planning Specification: Zolu AI Web Production Engine</td><td>10</td><td><code>6</code></td></tr><tr><td>Core Engines &amp; Workflows</td><td>8</td><td><code>11</code></td></tr><tr><td>⚡ CLAUDIA 2.0</td><td>8</td><td><code>21</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>7</td><td><code>13</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>7</td><td><code>14</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>7</td><td><code>15</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>7</td><td><code>17</code></td></tr><tr><td>Other</td><td>102</td><td><code>18, 19, 26, 27, 28, 33, 34, 35, 36, 37, 38, 40, 43, 44, 45, 46, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66</code></td></tr>
+      <tr><td>Extraction Pipeline</td><td>6</td><td><code>48, 50</code></td></tr><tr><td>Graph Build</td><td>56</td><td><code>1, 9, 20</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>7</td><td><code>16, 22</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>198</td><td><code>2, 3, 4, 5, 7, 8, 10, 12, 23, 24, 25, 29, 30, 31, 32, 39, 41, 42, 67, 68, 69, 70, 71, 72</code></td></tr><tr><td>Serving API</td><td>3</td><td><code>47</code></td></tr><tr><td>Security &amp; Global Graph</td><td>3</td><td><code>49</code></td></tr><tr><td>Tests &amp; Fixtures</td><td>53</td><td><code>0</code></td></tr><tr><td>⚡ CLAUDIA 2.0</td><td>10</td><td><code>21</code></td></tr><tr><td>Production Planning Specification: Zolu AI Web Production Engine</td><td>10</td><td><code>6</code></td></tr><tr><td>Core Engines &amp; Workflows</td><td>8</td><td><code>11</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>7</td><td><code>13</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>7</td><td><code>14</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>7</td><td><code>15</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>7</td><td><code>17</code></td></tr><tr><td>Other</td><td>102</td><td><code>18, 19, 26, 27, 28, 33, 34, 35, 36, 37, 38, 40, 43, 44, 45, 46, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66</code></td></tr>
     </table>
   </div>
   <div class="card">
@@ -148,7 +148,7 @@ flowchart LR
   <div class="card">
     <h4>Graph Report Highlights</h4>
     <ul>
-      <li>482 nodes · 507 edges · 73 communities (49 shown, 24 thin omitted)</li>
+      <li>484 nodes · 509 edges · 73 communities (49 shown, 24 thin omitted)</li>
       <li>Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.85)</li>
       <li>Token cost: 0 input · 0 output</li>
       <li>1. `Install` - 15 edges</li>
@@ -1638,8 +1638,163 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 9. Production Planning Specification: Zolu AI Web Production Engine ====== -->
-<h2 id="production-planning-specification-zolu-ai-web-pr">9. Production Planning Specification: Zolu AI Web Production Engine</h2>
+<!-- ====== 9. ⚡ CLAUDIA 2.0 ====== -->
+<h2 id="claudia-2-0">9. ⚡ CLAUDIA 2.0</h2>
+<p>⚡ CLAUDIA 2.0 groups implementation around readmemd, cognitive, neural, mesh, mostly in README.md. This section covers 10 nodes and 9 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: ⚡ CLAUDIA 2.0 (10 nodes, 9 edges)
+    readme_claudia_2_0_3050ec34("⚡ CLAUDIA 2.0<br/><small>README.md</small>")
+    readme_f78a71af("README.md")
+    readme_3_framework_tolok_ukur_6_parameter_fronti_88baf46a("🧪 3. Framework Tolok Ukur 6 Parameter (...<br/><small>README.md</small>")
+    readme_4_ekosistem_layanan_aktif_production_clus_e87fe26d("🌐 4. Ekosistem Layanan Aktif (*Producti...<br/><small>README.md</small>")
+    readme_5_telemetri_vps_kecepatan_jaringan_real_t_6cb314e5("📊 5. Telemetri VPS &amp; Kecepatan Jaringan...<br/><small>README.md</small>")
+    readme_6_persenjataan_toolkit_terpasang_95aa1a5c("🛠️ 6. Persenjataan &amp; Toolkit Terpasang<br/><small>README.md</small>")
+    readme_autonomous_senior_engineering_partner_cog_79bdf162("*Autonomous Senior Engineering Partner...<br/><small>README.md</small>")
+    readme_1_filosofi_rekayasa_inti_the_minimality_l_715a3aa6("🌌 1. Filosofi Rekayasa Inti: *The Minim...<br/><small>README.md</small>")
+    readme_7_zero_trust_security_vault_isolation_bad07ec3("🔒 7. Zero-Trust Security &amp; Vault Isolation<br/><small>README.md</small>")
+    readme_2_cognitive_neural_mesh_16_master_neurons_ccae85c0("🧠 2. Cognitive Neural Mesh (16 Master N...<br/><small>README.md</small>")
+    readme_f78a71af -->|contains| readme_claudia_2_0_3050ec34
+    readme_claudia_2_0_3050ec34 -->|contains| readme_3_framework_tolok_ukur_6_parameter_fronti_88baf46a
+    readme_claudia_2_0_3050ec34 -->|contains| readme_4_ekosistem_layanan_aktif_production_clus_e87fe26d
+    readme_claudia_2_0_3050ec34 -->|contains| readme_5_telemetri_vps_kecepatan_jaringan_real_t_6cb314e5
+    readme_claudia_2_0_3050ec34 -->|contains| readme_6_persenjataan_toolkit_terpasang_95aa1a5c
+    readme_claudia_2_0_3050ec34 -->|contains| readme_7_zero_trust_security_vault_isolation_bad07ec3
+    readme_claudia_2_0_3050ec34 -->|contains| readme_1_filosofi_rekayasa_inti_the_minimality_l_715a3aa6
+    readme_claudia_2_0_3050ec34 -->|contains| readme_autonomous_senior_engineering_partner_cog_79bdf162
+    readme_claudia_2_0_3050ec34 -->|contains| readme_2_cognitive_neural_mesh_16_master_neurons_ccae85c0
+    class readme_claudia_2_0_3050ec34 concept;
+    class readme_f78a71af concept;
+    class readme_3_framework_tolok_ukur_6_parameter_fronti_88baf46a concept;
+    class readme_4_ekosistem_layanan_aktif_production_clus_e87fe26d concept;
+    class readme_5_telemetri_vps_kecepatan_jaringan_real_t_6cb314e5 concept;
+    class readme_6_persenjataan_toolkit_terpasang_95aa1a5c concept;
+    class readme_autonomous_senior_engineering_partner_cog_79bdf162 concept;
+    class readme_1_filosofi_rekayasa_inti_the_minimality_l_715a3aa6 concept;
+    class readme_7_zero_trust_security_vault_isolation_bad07ec3 concept;
+    class readme_2_cognitive_neural_mesh_16_master_neurons_ccae85c0 concept;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>README.md</code><br><small style="color:var(--muted)">README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing README.md.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>🌌 1. Filosofi Rekayasa Inti: *The Minimality Ladder*</code><br><small style="color:var(--muted)">README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🌌 1. Filosofi Rekayasa Inti: *The Minimality Ladder*.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>🧠 2. Cognitive Neural Mesh (16 Master Neurons)</code><br><small style="color:var(--muted)">README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🧠 2. Cognitive Neural Mesh (16 Master Neurons).</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>🧪 3. Framework Tolok Ukur 6 Parameter (Frontier Real Evaluator)</code><br><small style="color:var(--muted)">README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🧪 3. Framework Tolok Ukur 6 Parameter (Frontier Real Evaluator).</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>🌐 4. Ekosistem Layanan Aktif (*Production Cluster*)</code><br><small style="color:var(--muted)">README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🌐 4. Ekosistem Layanan Aktif (*Production Cluster*).</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>📊 5. Telemetri VPS &amp; Kecepatan Jaringan Real-Time</code><br><small style="color:var(--muted)">README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 📊 5. Telemetri VPS &amp; Kecepatan Jaringan Real-Time.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>🛠️ 6. Persenjataan &amp; Toolkit Terpasang</code><br><small style="color:var(--muted)">README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🛠️ 6. Persenjataan &amp; Toolkit Terpasang.</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>🔒 7. Zero-Trust Security &amp; Vault Isolation</code><br><small style="color:var(--muted)">README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🔒 7. Zero-Trust Security &amp; Vault Isolation.</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>*Autonomous Senior Engineering Partner &amp; Cognitive Neural Mesh*</code><br><small style="color:var(--muted)">README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing *Autonomous Senior Engineering Partner &amp; Cognitive Neural Mesh*.</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>⚡ CLAUDIA 2.0</code><br><small style="color:var(--muted)">README.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing ⚡ CLAUDIA 2.0.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>README.md</code></td><td>10 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x9. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 10. Production Planning Specification: Zolu AI Web Production Engine ====== -->
+<h2 id="production-planning-specification-zolu-ai-web-pr">10. Production Planning Specification: Zolu AI Web Production Engine</h2>
 <p>Production Planning Specification: Zolu AI Web Production Engine groups implementation around prod, plannermd, modular, production, mostly in prod_planner.md. This section covers 10 nodes and 9 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -1793,8 +1948,8 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 10. Core Engines & Workflows ====== -->
-<h2 id="core-engines-workflows">10. Core Engines &amp; Workflows</h2>
+<!-- ====== 11. Core Engines & Workflows ====== -->
+<h2 id="core-engines-workflows">11. Core Engines &amp; Workflows</h2>
 <p>Core Engines &amp; Workflows groups implementation around identitymd, ponytail, lazy, senior, mostly in identity.md. This section covers 8 nodes and 7 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -1917,139 +2072,6 @@ flowchart LR
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
       <tr><td><code>identity.md</code></td><td>8 nodes</td></tr>
-    </table>
-  </div>
-  <div class="card">
-    <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x7. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
-  </div>
-</div>
-<hr>
-
-<!-- ====== 11. ⚡ CLAUDIA 2.0 ====== -->
-<h2 id="claudia-2-0">11. ⚡ CLAUDIA 2.0</h2>
-<p>⚡ CLAUDIA 2.0 groups implementation around readmemd, cognitive, neural, mesh, mostly in README.md. This section covers 8 nodes and 7 internal edges; the diagram shows only representative relationships to stay readable.</p>
-
-<div class="mermaid">
-%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
-flowchart LR
-    %% Section: ⚡ CLAUDIA 2.0 (8 nodes, 7 edges)
-    readme_claudia_2_0_3050ec34("⚡ CLAUDIA 2.0<br/><small>README.md</small>")
-    readme_f78a71af("README.md")
-    readme_3_persenjataan_fullstack_terpasang_aafed51b("🛠️ 3. Persenjataan Fullstack Terpasang<br/><small>README.md</small>")
-    readme_4_kapabilitas_orkestrasi_cloud_multi_laya_3edaae57("🏛️ 4. Kapabilitas Orkestrasi Cloud &amp; Mu...<br/><small>README.md</small>")
-    readme_5_zero_trust_security_vault_isolation_2383562b("🔒 5. Zero-Trust Security &amp; Vault Isolation<br/><small>README.md</small>")
-    readme_1_filosofi_rekayasa_inti_the_minimality_l_715a3aa6("🌌 1. Filosofi Rekayasa Inti: *The Minim...<br/><small>README.md</small>")
-    readme_autonomous_fullstack_engineer_cognitive_n_ccb65a25("*Autonomous Fullstack Engineer &amp; Cognit...<br/><small>README.md</small>")
-    readme_2_cognitive_neural_mesh_15_master_neurons_872a759c("🧠 2. Cognitive Neural Mesh (15 Master N...<br/><small>README.md</small>")
-    readme_f78a71af -->|contains| readme_claudia_2_0_3050ec34
-    readme_claudia_2_0_3050ec34 -->|contains| readme_3_persenjataan_fullstack_terpasang_aafed51b
-    readme_claudia_2_0_3050ec34 -->|contains| readme_4_kapabilitas_orkestrasi_cloud_multi_laya_3edaae57
-    readme_claudia_2_0_3050ec34 -->|contains| readme_5_zero_trust_security_vault_isolation_2383562b
-    readme_claudia_2_0_3050ec34 -->|contains| readme_1_filosofi_rekayasa_inti_the_minimality_l_715a3aa6
-    readme_claudia_2_0_3050ec34 -->|contains| readme_autonomous_fullstack_engineer_cognitive_n_ccb65a25
-    readme_claudia_2_0_3050ec34 -->|contains| readme_2_cognitive_neural_mesh_15_master_neurons_872a759c
-    class readme_claudia_2_0_3050ec34 concept;
-    class readme_f78a71af concept;
-    class readme_3_persenjataan_fullstack_terpasang_aafed51b concept;
-    class readme_4_kapabilitas_orkestrasi_cloud_multi_laya_3edaae57 concept;
-    class readme_5_zero_trust_security_vault_isolation_2383562b concept;
-    class readme_1_filosofi_rekayasa_inti_the_minimality_l_715a3aa6 concept;
-    class readme_autonomous_fullstack_engineer_cognitive_n_ccb65a25 concept;
-    class readme_2_cognitive_neural_mesh_15_master_neurons_872a759c concept;
-    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
-    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
-    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
-    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
-    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
-    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
-    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
-    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
-    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
-</div>
-
-<h3>Call Details</h3>
-<table class="call-table">
-<tr>
-  <th style="width:5%">#</th>
-  <th style="width:28%">Node</th>
-  <th style="width:10%">Type</th>
-  <th style="width:17%">Caller</th>
-  <th style="width:20%">Callees</th>
-  <th style="width:20%">Description</th>
-</tr>
-<tr>
-  <td>1</td>
-  <td><code>README.md</code><br><small style="color:var(--muted)">README.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing README.md.</td>
-</tr>
-<tr>
-  <td>2</td>
-  <td><code>🌌 1. Filosofi Rekayasa Inti: *The Minimality Ladder*</code><br><small style="color:var(--muted)">README.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 🌌 1. Filosofi Rekayasa Inti: *The Minimality Ladder*.</td>
-</tr>
-<tr>
-  <td>3</td>
-  <td><code>🧠 2. Cognitive Neural Mesh (15 Master Neurons)</code><br><small style="color:var(--muted)">README.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 🧠 2. Cognitive Neural Mesh (15 Master Neurons).</td>
-</tr>
-<tr>
-  <td>4</td>
-  <td><code>🛠️ 3. Persenjataan Fullstack Terpasang</code><br><small style="color:var(--muted)">README.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 🛠️ 3. Persenjataan Fullstack Terpasang.</td>
-</tr>
-<tr>
-  <td>5</td>
-  <td><code>🏛️ 4. Kapabilitas Orkestrasi Cloud &amp; Multi-Layanan</code><br><small style="color:var(--muted)">README.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 🏛️ 4. Kapabilitas Orkestrasi Cloud &amp; Multi-Layanan.</td>
-</tr>
-<tr>
-  <td>6</td>
-  <td><code>🔒 5. Zero-Trust Security &amp; Vault Isolation</code><br><small style="color:var(--muted)">README.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 🔒 5. Zero-Trust Security &amp; Vault Isolation.</td>
-</tr>
-<tr>
-  <td>7</td>
-  <td><code>*Autonomous Fullstack Engineer &amp; Cognitive Neural Mesh*</code><br><small style="color:var(--muted)">README.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing *Autonomous Fullstack Engineer &amp; Cognitive Neural Mesh*.</td>
-</tr>
-<tr>
-  <td>8</td>
-  <td><code>⚡ CLAUDIA 2.0</code><br><small style="color:var(--muted)">README.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing ⚡ CLAUDIA 2.0.</td>
-</tr>
-</table>
-
-<div class="grid">
-  <div class="card">
-    <h4>Key Files</h4>
-    <table style="width:100%;font-size:0.85rem;">
-      <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>README.md</code></td><td>8 nodes</td></tr>
     </table>
   </div>
   <div class="card">
@@ -2896,8 +2918,8 @@ flowchart LR
   <div class="card">
     <h4>Graph</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>Nodes</td><td>482</td></tr>
-      <tr><td>Edges</td><td>507</td></tr>
+      <tr><td>Nodes</td><td>484</td></tr>
+      <tr><td>Edges</td><td>509</td></tr>
       <tr><td>Hyperedges</td><td>0</td></tr>
       <tr><td>Communities</td><td>73</td></tr>
       <tr><td>Documented Sections</td><td>15</td></tr>
@@ -2906,7 +2928,7 @@ flowchart LR
   <div class="card">
     <h4>Edge Confidence</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>EXTRACTED</td><td>485</td></tr>
+      <tr><td>EXTRACTED</td><td>487</td></tr>
       <tr><td>INFERRED</td><td>22</td></tr>
       <tr><td>AMBIGUOUS</td><td>0</td></tr>
     </table>
@@ -2915,7 +2937,7 @@ flowchart LR
 
 <div style="text-align:center; padding:40px 0; color: var(--muted); font-size:0.9rem;">
   <p>Agent_Claudia_Autonomus — Architecture Documentation</p>
-  <p>Generated: 2026-08-23 14:32 UTC · graphify callflow-html</p>
+  <p>Generated: 2026-08-23 15:29 UTC · graphify callflow-html</p>
 </div>
 
 </div><!-- .container -->
