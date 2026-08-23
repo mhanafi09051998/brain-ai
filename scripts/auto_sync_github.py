@@ -1,7 +1,6 @@
 ﻿#!/usr/bin/env python3
 import subprocess, os, sys, datetime, json
 
-# Force UTF-8 encoding for standard output on Windows
 if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")
     sys.stderr.reconfigure(encoding="utf-8")
@@ -14,7 +13,7 @@ def run_cmd(cmd):
     return res.stdout.strip(), res.stderr.strip(), res.returncode
 
 def auto_sync():
-    print(f"[*] Checking for new learnings in {WORKSPACE}...")
+    print(f"[*] Memeriksa pembaruan pembelajaran di {WORKSPACE}...")
     
     # 1. Update Graphify AST
     subprocess.run("python -m graphify update .", shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
@@ -24,11 +23,11 @@ def auto_sync():
     status_out, _, _ = run_cmd("git status --porcelain")
     
     if not status_out:
-        print("[OK] Repository is already up to date. No new changes.")
+        print("[OK] Repositori sudah bersih dan up-to-date. Tidak ada perubahan baru.")
         return
         
     now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    commit_msg = f"learn: auto-sync neural memory and knowledge network ({now})"
+    commit_msg = f"belajar: sinkronisasi otomatis memori neuron dan pengetahuan ({now})"
     
     run_cmd(f'git commit -m "{commit_msg}"')
     print(f"[COMMIT] {commit_msg}")
@@ -44,9 +43,9 @@ def auto_sync():
     res_out, res_err, code = run_cmd(vps_push_cmd)
     
     if code == 0:
-        print("[SUCCESS] Successfully synced & pushed new learnings to GitHub repository!")
+        print("[SUKSES] Berhasil sinkronisasi dan push pembelajaran ke repositori GitHub!")
     else:
-        print("[NOTICE] Push output:", res_out, res_err)
+        print("[CATATAN] Output push:", res_out, res_err)
 
 if __name__ == "__main__":
     auto_sync()
