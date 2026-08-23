@@ -4,6 +4,18 @@
   "graph": {},
   "nodes": [
     {
+      "id": "ponytail_hooks_ponytail_config_getconfigdir",
+      "label": "getConfigDir()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "ponytail-config.js",
+      "file_type": "code",
+      "norm_label": "getconfigdir()",
+      "source_file": "ponytail/hooks/ponytail-config.js",
+      "source_location": "L54"
+    },
+    {
       "id": "ponytail_hooks_ponytail_config_getconfigpath",
       "label": "getConfigPath()",
       "_callable": true,
@@ -278,18 +290,6 @@
       "norm_label": "getclaudedir()",
       "source_file": "ponytail/hooks/ponytail-config.js",
       "source_location": "L71"
-    },
-    {
-      "id": "ponytail_hooks_ponytail_config_getconfigdir",
-      "label": "getConfigDir()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "ponytail-activate.js",
-      "file_type": "code",
-      "norm_label": "getconfigdir()",
-      "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L54"
     },
     {
       "id": "ponytail_hooks_ponytail_config_isdeactivationcommand",
@@ -5589,6 +5589,248 @@
       "source_location": "L1"
     },
     {
+      "id": "opencode",
+      "label": "opencode.json",
+      "_origin": "ast",
+      "community": 73,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "opencode.json",
+      "source_file": "opencode.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "opencode_9router_models",
+      "label": "models",
+      "_origin": "ast",
+      "community": 73,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "models",
+      "source_file": "opencode.json",
+      "source_location": "L10"
+    },
+    {
+      "id": "opencode_9router_npm",
+      "label": "npm",
+      "_origin": "ast",
+      "community": 73,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "npm",
+      "source_file": "opencode.json",
+      "source_location": "L5"
+    },
+    {
+      "id": "opencode_9router_options",
+      "label": "options",
+      "_origin": "ast",
+      "community": 73,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "options",
+      "source_file": "opencode.json",
+      "source_location": "L6"
+    },
+    {
+      "id": "opencode_ag_gemini_3_7_flash_high_modalities",
+      "label": "modalities",
+      "_origin": "ast",
+      "community": 73,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "modalities",
+      "source_file": "opencode.json",
+      "source_location": "L13"
+    },
+    {
+      "id": "opencode_ag_gemini_3_7_flash_high_name",
+      "label": "name",
+      "_origin": "ast",
+      "community": 73,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "name",
+      "source_file": "opencode.json",
+      "source_location": "L12"
+    },
+    {
+      "id": "opencode_agent",
+      "label": "agent",
+      "_origin": "ast",
+      "community": 73,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "agent",
+      "source_file": "opencode.json",
+      "source_location": "L27"
+    },
+    {
+      "id": "opencode_agent_explorer",
+      "label": "explorer",
+      "_origin": "ast",
+      "community": 73,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "explorer",
+      "source_file": "opencode.json",
+      "source_location": "L28"
+    },
+    {
+      "id": "opencode_explorer_description",
+      "label": "description",
+      "_origin": "ast",
+      "community": 73,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "description",
+      "source_file": "opencode.json",
+      "source_location": "L29"
+    },
+    {
+      "id": "opencode_explorer_mode",
+      "label": "mode",
+      "_origin": "ast",
+      "community": 73,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "mode",
+      "source_file": "opencode.json",
+      "source_location": "L30"
+    },
+    {
+      "id": "opencode_explorer_model",
+      "label": "model",
+      "_origin": "ast",
+      "community": 73,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "model",
+      "source_file": "opencode.json",
+      "source_location": "L31"
+    },
+    {
+      "id": "opencode_modalities_input",
+      "label": "input",
+      "_origin": "ast",
+      "community": 73,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "input",
+      "source_file": "opencode.json",
+      "source_location": "L14"
+    },
+    {
+      "id": "opencode_modalities_output",
+      "label": "output",
+      "_origin": "ast",
+      "community": 73,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "output",
+      "source_file": "opencode.json",
+      "source_location": "L18"
+    },
+    {
+      "id": "opencode_model",
+      "label": "model",
+      "_origin": "ast",
+      "community": 73,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "model",
+      "source_file": "opencode.json",
+      "source_location": "L26"
+    },
+    {
+      "id": "opencode_models_ag_gemini_3_7_flash_high",
+      "label": "ag/gemini-3.7-flash-high",
+      "_origin": "ast",
+      "community": 73,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "ag/gemini-3.7-flash-high",
+      "source_file": "opencode.json",
+      "source_location": "L11"
+    },
+    {
+      "id": "opencode_options_apikey",
+      "label": "apiKey",
+      "_origin": "ast",
+      "community": 73,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "apikey",
+      "source_file": "opencode.json",
+      "source_location": "L8"
+    },
+    {
+      "id": "opencode_options_baseurl",
+      "label": "baseURL",
+      "_origin": "ast",
+      "community": 73,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "baseurl",
+      "source_file": "opencode.json",
+      "source_location": "L7"
+    },
+    {
+      "id": "opencode_provider",
+      "label": "provider",
+      "_origin": "ast",
+      "community": 73,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "provider",
+      "source_file": "opencode.json",
+      "source_location": "L3"
+    },
+    {
+      "id": "opencode_provider_9router",
+      "label": "9router",
+      "_origin": "ast",
+      "community": 73,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "9router",
+      "source_file": "opencode.json",
+      "source_location": "L4"
+    },
+    {
+      "id": "opencode_schema",
+      "label": "$schema",
+      "_origin": "ast",
+      "community": 73,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "$schema",
+      "source_file": "opencode.json",
+      "source_location": "L2"
+    },
+    {
+      "id": "ref_image",
+      "label": "image",
+      "_origin": "ast",
+      "community": 73,
+      "community_name": "opencode.json",
+      "file_type": "concept",
+      "norm_label": "image",
+      "source_file": "opencode.json",
+      "source_location": "L14"
+    },
+    {
+      "id": "ref_text",
+      "label": "text",
+      "_origin": "ast",
+      "community": 73,
+      "community_name": "opencode.json",
+      "file_type": "concept",
+      "norm_label": "text",
+      "source_file": "opencode.json",
+      "source_location": "L14"
+    },
+    {
       "id": "ponytail_skills_ponytail_skill",
       "label": "ponytail/skills/ponytail/SKILL.md",
       "_origin": "ast",
@@ -6302,6 +6544,42 @@
       "context": "call",
       "source_file": "ponytail/pi-extension/index.js",
       "source_location": "L71",
+      "weight": 1.0
+    },
+    {
+      "source": "opencode_modalities_input",
+      "target": "ref_image",
+      "relation": "extends",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "opencode.json",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "opencode_modalities_input",
+      "target": "ref_text",
+      "relation": "extends",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "opencode.json",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "opencode_modalities_output",
+      "target": "ref_text",
+      "relation": "extends",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "opencode.json",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -8803,6 +9081,215 @@
       "confidence_score": 1.0,
       "source_file": "memory/neurons/vps_infrastructure.md",
       "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "opencode",
+      "target": "opencode_schema",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "opencode.json",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "opencode",
+      "target": "opencode_model",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "opencode.json",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "opencode",
+      "target": "opencode_agent",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "opencode.json",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "opencode",
+      "target": "opencode_provider",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "opencode.json",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "opencode_9router_models",
+      "target": "opencode_models_ag_gemini_3_7_flash_high",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "opencode.json",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "opencode_9router_options",
+      "target": "opencode_options_baseurl",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "opencode.json",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "opencode_9router_options",
+      "target": "opencode_options_apikey",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "opencode.json",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "opencode_ag_gemini_3_7_flash_high_modalities",
+      "target": "opencode_modalities_input",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "opencode.json",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "opencode_ag_gemini_3_7_flash_high_modalities",
+      "target": "opencode_modalities_output",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "opencode.json",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "opencode_agent",
+      "target": "opencode_agent_explorer",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "opencode.json",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "opencode_agent_explorer",
+      "target": "opencode_explorer_description",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "opencode.json",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "opencode_agent_explorer",
+      "target": "opencode_explorer_mode",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "opencode.json",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "opencode_agent_explorer",
+      "target": "opencode_explorer_model",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "opencode.json",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "opencode_models_ag_gemini_3_7_flash_high",
+      "target": "opencode_ag_gemini_3_7_flash_high_name",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "opencode.json",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "opencode_models_ag_gemini_3_7_flash_high",
+      "target": "opencode_ag_gemini_3_7_flash_high_modalities",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "opencode.json",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "opencode_provider",
+      "target": "opencode_provider_9router",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "opencode.json",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "opencode_provider_9router",
+      "target": "opencode_9router_models",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "opencode.json",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "opencode_provider_9router",
+      "target": "opencode_9router_npm",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "opencode.json",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "opencode_provider_9router",
+      "target": "opencode_9router_options",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "opencode.json",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -11579,5 +12066,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "1877f52e2c26c10d693c02839d6b2eebeb398984"
+  "built_at_commit": "36b0162669487a9fe4cbb0470cd923a8ece03c7c"
 }

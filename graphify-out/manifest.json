@@ -594,9 +594,9 @@
     "semantic_hash": ""
   },
   "scripts/benchmark_engine.py": {
-    "mtime": 1787495559.457204,
-    "seen": 1787495567.1661987,
-    "ast_hash": "7615c98d39f489893bb8b1efe52e51a4",
+    "mtime": 1787509911.4151073,
+    "seen": 1787509974.6198688,
+    "ast_hash": "8c5cd98c89763babc740813f302b627e",
     "semantic_hash": ""
   },
   "learning/neurons/N016_frontier_benchmark_evaluator.md": {
@@ -615,6 +615,18 @@
     "mtime": 1787507982.8265324,
     "seen": 1787509365.03831,
     "ast_hash": "050b11b9b718e6b29e092fcd8001b7da",
+    "semantic_hash": ""
+  },
+  "scripts/multihop_engine.py": {
+    "mtime": 1787509881.1532185,
+    "seen": 1787509974.6198688,
+    "ast_hash": "06230490bb3670832aebc1bcee32e5d2",
+    "semantic_hash": ""
+  },
+  "scripts/niah_evaluator.py": {
+    "mtime": 1787509932.461912,
+    "seen": 1787509974.6198688,
+    "ast_hash": "6d1ee1c97adc206b0590b2977cd1dc72",
     "semantic_hash": ""
   }
 }

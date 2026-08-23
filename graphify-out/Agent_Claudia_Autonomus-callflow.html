@@ -60,7 +60,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 <div class="container">
 
 <h1>Agent_Claudia_Autonomus — Complete Call Flow &amp; Architecture Documentation</h1>
-<p class="subtitle">Generated from graphify knowledge graph: 508 nodes, 533 edges, 74 communities. Commit: 36b0162</p>
+<p class="subtitle">Generated from graphify knowledge graph: 531 nodes, 564 edges, 74 communities. Commit: 73812bd</p>
 
 <div class="nav">
     <a href="#overview">Architecture Overview</a>
@@ -92,15 +92,15 @@ flowchart LR
     class EXTRACT_PIPELINE_5F350230 module;
     BUILD_GRAPH_321CBB04("Graph Build<br/><small>78 nodes</small>")
     class BUILD_GRAPH_321CBB04 module;
-    ANALYSIS_CLUSTERING_C79796DA("Analysis &amp; Clustering<br/><small>7 nodes</small>")
+    ANALYSIS_CLUSTERING_C79796DA("Analysis &amp; Clustering<br/><small>30 nodes</small>")
     class ANALYSIS_CLUSTERING_C79796DA module;
-    CLI_SKILLS_9964CBB8("CLI &amp; Skill Installers<br/><small>199 nodes</small>")
+    CLI_SKILLS_9964CBB8("CLI &amp; Skill Installers<br/><small>200 nodes</small>")
     class CLI_SKILLS_9964CBB8 module;
     SERVE_API_35EC8E86("Serving API<br/><small>3 nodes</small>")
     class SERVE_API_35EC8E86 module;
     SECURITY_GLOBAL_5B9C6A04("Security &amp; Global Graph<br/><small>3 nodes</small>")
     class SECURITY_GLOBAL_5B9C6A04 module;
-    TESTS_FIXTURES_B84B1DCC("Tests &amp; Fixtures<br/><small>52 nodes</small>")
+    TESTS_FIXTURES_B84B1DCC("Tests &amp; Fixtures<br/><small>51 nodes</small>")
     class TESTS_FIXTURES_B84B1DCC module;
     CLAUDIA_2_0_DAD7BB91("⚡ CLAUDIA 2.0<br/><small>10 nodes</small>")
     class CLAUDIA_2_0_DAD7BB91 module;
@@ -118,8 +118,8 @@ flowchart LR
     class PONYTAIL_LAZY_SENIOR_DEV_MODE_3_66F499E9 module;
     OTHER_D0941E68("Other<br/><small>102 nodes</small>")
     class OTHER_D0941E68 module;
-    CLI_SKILLS_9964CBB8 -->|imports x19| TESTS_FIXTURES_B84B1DCC
-    TESTS_FIXTURES_B84B1DCC -->|indirect call x5| CLI_SKILLS_9964CBB8
+    CLI_SKILLS_9964CBB8 -->|imports x18| TESTS_FIXTURES_B84B1DCC
+    TESTS_FIXTURES_B84B1DCC -->|indirect call x7| CLI_SKILLS_9964CBB8
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -136,7 +136,7 @@ flowchart LR
     <h4>Architecture Layers</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>Layer</th><th>Nodes</th><th>Communities</th></tr>
-      <tr><td>Extraction Pipeline</td><td>6</td><td><code>48, 50</code></td></tr><tr><td>Graph Build</td><td>78</td><td><code>1, 73, 9, 20</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>7</td><td><code>16, 22</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>199</td><td><code>2, 3, 4, 5, 7, 8, 10, 12, 23, 24, 25, 29, 30, 31, 32, 39, 41, 42, 67, 68, 69, 70, 71, 72</code></td></tr><tr><td>Serving API</td><td>3</td><td><code>47</code></td></tr><tr><td>Security &amp; Global Graph</td><td>3</td><td><code>49</code></td></tr><tr><td>Tests &amp; Fixtures</td><td>52</td><td><code>0</code></td></tr><tr><td>⚡ CLAUDIA 2.0</td><td>10</td><td><code>21</code></td></tr><tr><td>Production Planning Specification: Zolu AI Web Production Engine</td><td>10</td><td><code>6</code></td></tr><tr><td>Core Engines &amp; Workflows</td><td>8</td><td><code>11</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>8</td><td><code>13</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>8</td><td><code>15</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>7</td><td><code>14</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>7</td><td><code>17</code></td></tr><tr><td>Other</td><td>102</td><td><code>18, 19, 26, 27, 28, 33, 34, 35, 36, 37, 38, 40, 43, 44, 45, 46, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66</code></td></tr>
+      <tr><td>Extraction Pipeline</td><td>6</td><td><code>48, 50</code></td></tr><tr><td>Graph Build</td><td>78</td><td><code>1, 73, 9, 20</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>30</td><td><code>22, 16</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>200</td><td><code>2, 3, 4, 5, 7, 8, 10, 12, 23, 24, 25, 29, 30, 31, 32, 39, 41, 42, 67, 68, 69, 70, 71, 72</code></td></tr><tr><td>Serving API</td><td>3</td><td><code>47</code></td></tr><tr><td>Security &amp; Global Graph</td><td>3</td><td><code>49</code></td></tr><tr><td>Tests &amp; Fixtures</td><td>51</td><td><code>0</code></td></tr><tr><td>⚡ CLAUDIA 2.0</td><td>10</td><td><code>21</code></td></tr><tr><td>Production Planning Specification: Zolu AI Web Production Engine</td><td>10</td><td><code>6</code></td></tr><tr><td>Core Engines &amp; Workflows</td><td>8</td><td><code>11</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>8</td><td><code>13</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>8</td><td><code>15</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>7</td><td><code>14</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>7</td><td><code>17</code></td></tr><tr><td>Other</td><td>102</td><td><code>18, 19, 26, 27, 28, 33, 34, 35, 36, 37, 38, 40, 43, 44, 45, 46, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66</code></td></tr>
     </table>
   </div>
   <div class="card">
@@ -148,7 +148,7 @@ flowchart LR
   <div class="card">
     <h4>Graph Report Highlights</h4>
     <ul>
-      <li>508 nodes · 533 edges · 74 communities (50 shown, 24 thin omitted)</li>
+      <li>531 nodes · 564 edges · 74 communities (51 shown, 23 thin omitted)</li>
       <li>Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.85)</li>
       <li>Token cost: 0 input · 0 output</li>
       <li>1. `Install` - 15 edges</li>
@@ -620,35 +620,75 @@ flowchart LR
 
 <!-- ====== 4. Analysis & Clustering ====== -->
 <h2 id="analysis-clustering">4. Analysis &amp; Clustering</h2>
-<p>Analysis &amp; Clustering groups implementation around benchmark, n016, frontier, evaluatormd, mostly in learning/neurons/N016_frontier_benchmark_evaluator.md, scripts/benchmark_engine.py. This section covers 7 nodes and 5 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Analysis &amp; Clustering groups implementation around scripts, enginepy, multihop, niah, mostly in scripts/multihop_engine.py, scripts/niah_evaluator.py, learning/neurons/N016_frontier_benchmark_evaluator.md. This section covers 30 nodes and 36 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Analysis &amp; Clustering (7 nodes, 5 edges)
-    subgraph analysis_clustering_learning_neurons_N016_fronti_b1ef43b1["learning/neurons/N016_frontier_benchmark_evaluator.md"]
-        learning_neurons_n016_frontier_benchmark_evaluat_8c32cc79("frontier benchmark evaluator.md<br/><small>learning/neurons/N016_frontier_benchmark_evaluator.md</small>")
-        learning_neurons_n016_frontier_benchmark_evaluat_69e16a17("Lokasi Monitoring Realtime:<br/><small>learning/neurons/N016_frontier_benchmark_evaluator.md</small>")
-        learning_neurons_n016_frontier_benchmark_evaluat_f5985359("Karakteristik<br/><small>learning/neurons/N016_frontier_benchmark_evaluator.md</small>")
-        learning_neurons_n016_frontier_benchmark_evaluat_0328d780("6 Parameter Tolok Ukur Puncak:<br/><small>learning/neurons/N016_frontier_benchmark_evaluator.md</small>")
+    %% Section: Analysis &amp; Clustering (30 nodes, 36 edges)
+    subgraph analysis_clustering_scripts_multihop_engine_py_1bca8080["scripts/multihop_engine.py"]
+        scripts_multihop_engine_multihopengine_8af60b42("MultiHopEngine<br/><small>scripts/multihop_engine.py</small>")
+        scripts_multihop_engine_multihopengine_init_1b3e7f27("__init__()<br/><small>scripts/multihop_engine.py</small>")
+        scripts_multihop_engine_multihopengine_load_grap_d7dd64a8("_load_graph()<br/><small>scripts/multihop_engine.py</small>")
+        scripts_multihop_engine_multihopengine_decompose_0715a6b2("decompose_query()<br/><small>scripts/multihop_engine.py</small>")
+        scripts_multihop_engine_multihopengine_traverse_56eaaed2("traverse_multihop()<br/><small>scripts/multihop_engine.py</small>")
+        scripts_multihop_engine_multihopengine_hybrid_ra_eedd7020("hybrid_rank_fuse()<br/><small>scripts/multihop_engine.py</small>")
+        scripts_multihop_engine_3c7a33b5("multihop_engine.py")
+    end
+    subgraph analysis_clustering_scripts_niah_evaluator_py_c9443efc["scripts/niah_evaluator.py"]
+        scripts_niah_evaluator_niahevaluator_8cfbb7b0("NIAHEvaluator<br/><small>scripts/niah_evaluator.py</small>")
+        scripts_niah_evaluator_niahevaluator_evaluate_mu_1b6c394a("evaluate_multihop_ruler()<br/><small>scripts/niah_evaluator.py</small>")
+        scripts_niah_evaluator_niahevaluator_init_27b0e20e("__init__()<br/><small>scripts/niah_evaluator.py</small>")
+        scripts_niah_evaluator_niahevaluator_generate_sy_8e43e717("generate_synthetic_haystack()<br/><small>scripts/niah_evaluator.py</small>")
+        scripts_niah_evaluator_niahevaluator_evaluate_si_cc1b1c9c("evaluate_single_needle()<br/><small>scripts/niah_evaluator.py</small>")
+        scripts_niah_evaluator_4a8d5a3e("niah_evaluator.py")
+    end
+    subgraph analysis_clustering_External_generated_9ee0240b["External / generated"]
+        scripts_multihop_engine_py_any_43664188("Any")
+        scripts_niah_evaluator_py_any_e926f712("Any")
     end
     subgraph analysis_clustering_scripts_benchmark_engine_py_c2084361["scripts/benchmark_engine.py"]
-        scripts_benchmark_engine_rationale_1_5a013563("Local Benchmark Evaluator &amp; Verificatio...<br/><small>scripts/benchmark_engine.py</small>")
         scripts_benchmark_engine_ca807eec("benchmark_engine.py")
         scripts_benchmark_engine_run_evaluation_checks_d6dbc5e6("run_evaluation_checks()<br/><small>scripts/benchmark_engine.py</small>")
     end
-    learning_neurons_n016_frontier_benchmark_evaluat_8c32cc79 -->|contains| learning_neurons_n016_frontier_benchmark_evaluat_69e16a17
-    learning_neurons_n016_frontier_benchmark_evaluat_8c32cc79 -->|contains| learning_neurons_n016_frontier_benchmark_evaluat_f5985359
-    learning_neurons_n016_frontier_benchmark_evaluat_8c32cc79 -->|contains| learning_neurons_n016_frontier_benchmark_evaluat_0328d780
-    scripts_benchmark_engine_ca807eec -->|contains| scripts_benchmark_engine_run_evaluation_checks_d6dbc5e6
-    scripts_benchmark_engine_rationale_1_5a013563 -->|explains| scripts_benchmark_engine_ca807eec
-    class learning_neurons_n016_frontier_benchmark_evaluat_8c32cc79 concept;
-    class learning_neurons_n016_frontier_benchmark_evaluat_69e16a17 concept;
-    class learning_neurons_n016_frontier_benchmark_evaluat_f5985359 concept;
-    class learning_neurons_n016_frontier_benchmark_evaluat_0328d780 concept;
-    class scripts_benchmark_engine_rationale_1_5a013563 concept;
+    learning_neurons_n016_frontier_benchmark_evaluat_0328d780("6 Parameter Tolok Ukur Puncak:<br/><small>learning/neurons/N016_frontier_benchmark_evaluator.md</small>")
+    scripts_multihop_engine_multihopengine_8af60b42 -->|method| scripts_multihop_engine_multihopengine_init_1b3e7f27
+    scripts_multihop_engine_multihopengine_8af60b42 -->|method| scripts_multihop_engine_multihopengine_load_grap_d7dd64a8
+    scripts_multihop_engine_multihopengine_8af60b42 -->|method| scripts_multihop_engine_multihopengine_decompose_0715a6b2
+    scripts_multihop_engine_multihopengine_8af60b42 -->|method| scripts_multihop_engine_multihopengine_traverse_56eaaed2
+    scripts_multihop_engine_multihopengine_8af60b42 -->|method| scripts_multihop_engine_multihopengine_hybrid_ra_eedd7020
+    scripts_niah_evaluator_niahevaluator_8cfbb7b0 -->|method| scripts_niah_evaluator_niahevaluator_init_27b0e20e
+    scripts_niah_evaluator_niahevaluator_8cfbb7b0 -->|method| scripts_niah_evaluator_niahevaluator_generate_sy_8e43e717
+    scripts_niah_evaluator_niahevaluator_8cfbb7b0 -->|method| scripts_niah_evaluator_niahevaluator_evaluate_si_cc1b1c9c
+    scripts_niah_evaluator_niahevaluator_8cfbb7b0 -->|method| scripts_niah_evaluator_niahevaluator_evaluate_mu_1b6c394a
+    scripts_benchmark_engine_run_evaluation_checks_d6dbc5e6 -->|calls| scripts_multihop_engine_multihopengine_8af60b42
+    scripts_benchmark_engine_run_evaluation_checks_d6dbc5e6 -->|calls| scripts_niah_evaluator_niahevaluator_8cfbb7b0
+    scripts_multihop_engine_multihopengine_init_1b3e7f27 -->|calls| scripts_multihop_engine_multihopengine_load_grap_d7dd64a8
+    scripts_niah_evaluator_niahevaluator_evaluate_mu_1b6c394a -->|calls| scripts_niah_evaluator_niahevaluator_generate_sy_8e43e717
+    scripts_niah_evaluator_niahevaluator_evaluate_si_cc1b1c9c -->|calls| scripts_niah_evaluator_niahevaluator_generate_sy_8e43e717
+    scripts_benchmark_engine_ca807eec -->|imports| scripts_multihop_engine_multihopengine_8af60b42
+    scripts_benchmark_engine_ca807eec -->|imports| scripts_niah_evaluator_niahevaluator_8cfbb7b0
+    scripts_benchmark_engine_ca807eec -->|imports| scripts_multihop_engine_3c7a33b5
+    scripts_benchmark_engine_ca807eec -->|imports| scripts_niah_evaluator_4a8d5a3e
+    %% Omitted for readability: 12 nodes, 0 edges
+    class scripts_multihop_engine_multihopengine_8af60b42 klass;
+    class scripts_multihop_engine_multihopengine_init_1b3e7f27 function;
+    class scripts_multihop_engine_multihopengine_load_grap_d7dd64a8 function;
+    class scripts_multihop_engine_multihopengine_decompose_0715a6b2 function;
+    class scripts_multihop_engine_multihopengine_traverse_56eaaed2 function;
+    class scripts_multihop_engine_multihopengine_hybrid_ra_eedd7020 function;
+    class scripts_multihop_engine_3c7a33b5 module;
+    class scripts_niah_evaluator_niahevaluator_8cfbb7b0 klass;
+    class scripts_niah_evaluator_niahevaluator_evaluate_mu_1b6c394a function;
+    class scripts_niah_evaluator_niahevaluator_init_27b0e20e function;
+    class scripts_niah_evaluator_niahevaluator_generate_sy_8e43e717 function;
+    class scripts_niah_evaluator_niahevaluator_evaluate_si_cc1b1c9c function;
+    class scripts_niah_evaluator_4a8d5a3e module;
+    class scripts_multihop_engine_py_any_43664188 klass;
+    class scripts_niah_evaluator_py_any_e926f712 klass;
     class scripts_benchmark_engine_ca807eec module;
     class scripts_benchmark_engine_run_evaluation_checks_d6dbc5e6 function;
+    class learning_neurons_n016_frontier_benchmark_evaluat_0328d780 concept;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -672,6 +712,214 @@ flowchart LR
 </tr>
 <tr>
   <td>1</td>
+  <td><code>MultiHopEngine</code><br><small style="color:var(--muted)">scripts/multihop_engine.py</small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>benchmark_engine.py</code><br><small style="color:var(--muted)">scripts/benchmark_engine.py</small><br><code>run_evaluation_checks()</code><br><small style="color:var(--muted)">scripts/benchmark_engine.py</small></td>
+  <td><code>__init__()</code><br><small style="color:var(--muted)">scripts/multihop_engine.py</small><br><code>_load_graph()</code><br><small style="color:var(--muted)">scripts/multihop_engine.py</small><br><code>decompose_query()</code><br><small style="color:var(--muted)">scripts/multihop_engine.py</small><br>+2 more</td>
+  <td>MultiHopEngine node in scripts/multihop_engine.py.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>NIAHEvaluator</code><br><small style="color:var(--muted)">scripts/niah_evaluator.py</small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>benchmark_engine.py</code><br><small style="color:var(--muted)">scripts/benchmark_engine.py</small><br><code>run_evaluation_checks()</code><br><small style="color:var(--muted)">scripts/benchmark_engine.py</small></td>
+  <td><code>__init__()</code><br><small style="color:var(--muted)">scripts/niah_evaluator.py</small><br><code>evaluate_multihop_ruler()</code><br><small style="color:var(--muted)">scripts/niah_evaluator.py</small><br><code>evaluate_single_needle()</code><br><small style="color:var(--muted)">scripts/niah_evaluator.py</small><br>+1 more</td>
+  <td>NIAHEvaluator node in scripts/niah_evaluator.py.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>run_evaluation_checks()</code><br><small style="color:var(--muted)">scripts/benchmark_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>MultiHopEngine</code><br><small style="color:var(--muted)">scripts/multihop_engine.py</small><br><code>NIAHEvaluator</code><br><small style="color:var(--muted)">scripts/niah_evaluator.py</small></td>
+  <td>run_evaluation_checks() node in scripts/benchmark_engine.py.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>.decompose_query()</code><br><small style="color:var(--muted)">scripts/multihop_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>MultiHopEngine</code><br><small style="color:var(--muted)">scripts/multihop_engine.py</small></td>
+  <td>No direct outbound edge</td>
+  <td>.decompose_query() node in scripts/multihop_engine.py.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>.hybrid_rank_fuse()</code><br><small style="color:var(--muted)">scripts/multihop_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>MultiHopEngine</code><br><small style="color:var(--muted)">scripts/multihop_engine.py</small></td>
+  <td>No direct outbound edge</td>
+  <td>.hybrid_rank_fuse() node in scripts/multihop_engine.py.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>.__init__()</code><br><small style="color:var(--muted)">scripts/multihop_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>MultiHopEngine</code><br><small style="color:var(--muted)">scripts/multihop_engine.py</small></td>
+  <td><code>_load_graph()</code><br><small style="color:var(--muted)">scripts/multihop_engine.py</small></td>
+  <td>.__init__() node in scripts/multihop_engine.py.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>._load_graph()</code><br><small style="color:var(--muted)">scripts/multihop_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>__init__()</code><br><small style="color:var(--muted)">scripts/multihop_engine.py</small><br><code>MultiHopEngine</code><br><small style="color:var(--muted)">scripts/multihop_engine.py</small></td>
+  <td>No direct outbound edge</td>
+  <td>Builds dependency relationships and graph data.</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>.traverse_multihop()</code><br><small style="color:var(--muted)">scripts/multihop_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>MultiHopEngine</code><br><small style="color:var(--muted)">scripts/multihop_engine.py</small></td>
+  <td>No direct outbound edge</td>
+  <td>.traverse_multihop() node in scripts/multihop_engine.py.</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>.evaluate_multihop_ruler()</code><br><small style="color:var(--muted)">scripts/niah_evaluator.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>NIAHEvaluator</code><br><small style="color:var(--muted)">scripts/niah_evaluator.py</small></td>
+  <td><code>generate_synthetic_haystack()</code><br><small style="color:var(--muted)">scripts/niah_evaluator.py</small></td>
+  <td>.evaluate_multihop_ruler() node in scripts/niah_evaluator.py.</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>.evaluate_single_needle()</code><br><small style="color:var(--muted)">scripts/niah_evaluator.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>NIAHEvaluator</code><br><small style="color:var(--muted)">scripts/niah_evaluator.py</small></td>
+  <td><code>generate_synthetic_haystack()</code><br><small style="color:var(--muted)">scripts/niah_evaluator.py</small></td>
+  <td>.evaluate_single_needle() node in scripts/niah_evaluator.py.</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>.generate_synthetic_haystack()</code><br><small style="color:var(--muted)">scripts/niah_evaluator.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>evaluate_multihop_ruler()</code><br><small style="color:var(--muted)">scripts/niah_evaluator.py</small><br><code>evaluate_single_needle()</code><br><small style="color:var(--muted)">scripts/niah_evaluator.py</small><br><code>NIAHEvaluator</code><br><small style="color:var(--muted)">scripts/niah_evaluator.py</small></td>
+  <td>No direct outbound edge</td>
+  <td>.generate_synthetic_haystack() node in scripts/niah_evaluator.py.</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>.__init__()</code><br><small style="color:var(--muted)">scripts/niah_evaluator.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>NIAHEvaluator</code><br><small style="color:var(--muted)">scripts/niah_evaluator.py</small></td>
+  <td>No direct outbound edge</td>
+  <td>.__init__() node in scripts/niah_evaluator.py.</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>benchmark_engine.py</code><br><small style="color:var(--muted)">scripts/benchmark_engine.py</small></td>
+  <td><span class="tag tag-class">Module</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>multihop_engine.py</code><br><small style="color:var(--muted)">scripts/multihop_engine.py</small><br><code>MultiHopEngine</code><br><small style="color:var(--muted)">scripts/multihop_engine.py</small><br><code>niah_evaluator.py</code><br><small style="color:var(--muted)">scripts/niah_evaluator.py</small><br>+1 more</td>
+  <td>Module file in scripts/benchmark_engine.py.</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>multihop_engine.py</code><br><small style="color:var(--muted)">scripts/multihop_engine.py</small></td>
+  <td><span class="tag tag-class">Module</span></td>
+  <td><code>benchmark_engine.py</code><br><small style="color:var(--muted)">scripts/benchmark_engine.py</small></td>
+  <td>No direct outbound edge</td>
+  <td>Module file in scripts/multihop_engine.py.</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>Any</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Any node in project.</td>
+</tr>
+<tr>
+  <td>16</td>
+  <td><code>niah_evaluator.py</code><br><small style="color:var(--muted)">scripts/niah_evaluator.py</small></td>
+  <td><span class="tag tag-class">Module</span></td>
+  <td><code>benchmark_engine.py</code><br><small style="color:var(--muted)">scripts/benchmark_engine.py</small></td>
+  <td>No direct outbound edge</td>
+  <td>Module file in scripts/niah_evaluator.py.</td>
+</tr>
+<tr>
+  <td>17</td>
+  <td><code>Any</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Any node in project.</td>
+</tr>
+<tr>
+  <td>18</td>
+  <td><code>Local Benchmark Evaluator &amp; Verification Harness for Claudia 2.0 Includes SWE-…</code><br><small style="color:var(--muted)">scripts/benchmark_engine.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Local Benchmark Evaluator &amp; Verification Harness for Claudia 2.0 Includes SWE-….</td>
+</tr>
+<tr>
+  <td>19</td>
+  <td><code>Multi-Hop Query Decomposer &amp; GraphRAG Traversal Engine Author: Claudia…</code><br><small style="color:var(--muted)">scripts/multihop_engine.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Multi-Hop Query Decomposer &amp; GraphRAG Traversal Engine Author: Claudia….</td>
+</tr>
+<tr>
+  <td>20</td>
+  <td><code>Decomposes complex questions into atomic 1-hop sub-queries.</code><br><small style="color:var(--muted)">scripts/multihop_engine.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Decomposes complex questions into atomic 1-hop sub-queries..</td>
+</tr>
+<tr>
+  <td>21</td>
+  <td><code>Traverse knowledge graph from start entity up to max_depth hops.</code><br><small style="color:var(--muted)">scripts/multihop_engine.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Traverse knowledge graph from start entity up to max_depth hops..</td>
+</tr>
+<tr>
+  <td>22</td>
+  <td><code>Reciprocal Rank Fusion (RRF) combining keyword and graph results.</code><br><small style="color:var(--muted)">scripts/multihop_engine.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Reciprocal Rank Fusion (RRF) combining keyword and graph results..</td>
+</tr>
+<tr>
+  <td>23</td>
+  <td><code>Synthetic Needle-In-A-Haystack (NIAH) &amp; Multi-Hop RULER Evaluator Author:…</code><br><small style="color:var(--muted)">scripts/niah_evaluator.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Synthetic Needle-In-A-Haystack (NIAH) &amp; Multi-Hop RULER Evaluator Author:….</td>
+</tr>
+<tr>
+  <td>24</td>
+  <td><code>Generates synthetic haystack with embedded secret needles at a given depth.</code><br><small style="color:var(--muted)">scripts/niah_evaluator.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Generates synthetic haystack with embedded secret needles at a given depth..</td>
+</tr>
+<tr>
+  <td>25</td>
+  <td><code>Evaluates 1-needle retrieval at specified context depth.</code><br><small style="color:var(--muted)">scripts/niah_evaluator.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Evaluates 1-needle retrieval at specified context depth..</td>
+</tr>
+<tr>
+  <td>26</td>
+  <td><code>Evaluates 3-hop associative chain: Fact A -&gt; Fact B -&gt; Fact C -&gt; Target Value.</code><br><small style="color:var(--muted)">scripts/niah_evaluator.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Evaluates 3-hop associative chain: Fact A -&gt; Fact B -&gt; Fact C -&gt; Target Value..</td>
+</tr>
+<tr>
+  <td>27</td>
   <td><code>N016_frontier_benchmark_evaluator.md</code><br><small style="color:var(--muted)">learning/neurons/N016_frontier_benchmark_evaluator.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
@@ -679,7 +927,7 @@ flowchart LR
   <td>Documentation node describing N016_frontier_benchmark_evaluator.md.</td>
 </tr>
 <tr>
-  <td>2</td>
+  <td>28</td>
   <td><code>6 Parameter Tolok Ukur Puncak:</code><br><small style="color:var(--muted)">learning/neurons/N016_frontier_benchmark_evaluator.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
@@ -687,7 +935,7 @@ flowchart LR
   <td>Documentation node describing 6 Parameter Tolok Ukur Puncak:.</td>
 </tr>
 <tr>
-  <td>3</td>
+  <td>29</td>
   <td><code>Karakteristik</code><br><small style="color:var(--muted)">learning/neurons/N016_frontier_benchmark_evaluator.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
@@ -695,36 +943,12 @@ flowchart LR
   <td>Documentation node describing Karakteristik.</td>
 </tr>
 <tr>
-  <td>4</td>
+  <td>30</td>
   <td><code>Lokasi Monitoring Realtime:</code><br><small style="color:var(--muted)">learning/neurons/N016_frontier_benchmark_evaluator.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
   <td>Documentation node describing Lokasi Monitoring Realtime:.</td>
-</tr>
-<tr>
-  <td>5</td>
-  <td><code>run_evaluation_checks()</code><br><small style="color:var(--muted)">scripts/benchmark_engine.py</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>run_evaluation_checks() node in scripts/benchmark_engine.py.</td>
-</tr>
-<tr>
-  <td>6</td>
-  <td><code>benchmark_engine.py</code><br><small style="color:var(--muted)">scripts/benchmark_engine.py</small></td>
-  <td><span class="tag tag-class">Module</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Module file in scripts/benchmark_engine.py.</td>
-</tr>
-<tr>
-  <td>7</td>
-  <td><code>Local Benchmark Evaluator &amp; Verification Harness for Claudia</code><br><small style="color:var(--muted)">scripts/benchmark_engine.py</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Design note for Local Benchmark Evaluator &amp; Verification Harness for Claudia.</td>
 </tr>
 </table>
 
@@ -733,25 +957,27 @@ flowchart LR
     <h4>Key Files</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>learning/neurons/N016_frontier_benchmark_evaluator.md</code></td><td>4 nodes</td></tr>
+      <tr><td><code>scripts/multihop_engine.py</code></td><td>11 nodes</td></tr>
+<tr><td><code>scripts/niah_evaluator.py</code></td><td>10 nodes</td></tr>
+<tr><td><code>learning/neurons/N016_frontier_benchmark_evaluator.md</code></td><td>4 nodes</td></tr>
 <tr><td><code>scripts/benchmark_engine.py</code></td><td>3 nodes</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x4, explains x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: method x9, explains x9, contains x6, calls x5. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
 
 <!-- ====== 5. CLI & Skill Installers ====== -->
 <h2 id="cli-skills">5. CLI &amp; Skill Installers</h2>
-<p>CLI &amp; Skill Installers groups implementation around ponytail, skills, skillmd, agents, mostly in ponytail/README.md, ponytail/README.ko.md, ponytail/README.es.md. This section covers 199 nodes and 195 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>CLI &amp; Skill Installers groups implementation around ponytail, skills, skillmd, agents, mostly in ponytail/README.md, ponytail/README.ko.md, ponytail/README.es.md. This section covers 200 nodes and 196 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: CLI &amp; Skill Installers (199 nodes, 195 edges)
+    %% Section: CLI &amp; Skill Installers (200 nodes, 196 edges)
     subgraph cli_skills_ponytail_hooks_ponytail_runtime_js_26b6c942["ponytail/hooks/ponytail-runtime.js"]
         ponytail_hooks_ponytail_runtime_writehookoutput_07e5df53("writeHookOutput()<br/><small>ponytail/hooks/ponytail-runtime.js</small>")
         ponytail_hooks_ponytail_runtime_readmode_fb740cca("readMode()<br/><small>ponytail/hooks/ponytail-runtime.js</small>")
@@ -760,20 +986,20 @@ flowchart LR
         ponytail_hooks_ponytail_runtime_iscopilot_40d5c103("isCopilot<br/><small>ponytail/hooks/ponytail-runtime.js</small>")
         ponytail_hooks_ponytail_runtime_b60ec3ea("ponytail-runtime.js")
     end
-    subgraph cli_skills_ponytail_hooks_ponytail_activate_js_3b33dc66["ponytail/hooks/ponytail-activate.js"]
-        ponytail_hooks_ponytail_activate_5d3f34a7("ponytail-activate.js")
-        ponytail_hooks_ponytail_activate_claudedir_44b8f662("claudeDir<br/><small>ponytail/hooks/ponytail-activate.js</small>")
-        ponytail_hooks_ponytail_activate_fs_8d2d4aaa("fs<br/><small>ponytail/hooks/ponytail-activate.js</small>")
-    end
     subgraph cli_skills_ponytail_hooks_ponytail_config_js_5d3ef804["ponytail/hooks/ponytail-config.js"]
         ponytail_hooks_ponytail_config_isdeactivationcom_6a0a6708("isDeactivationCommand()<br/><small>ponytail/hooks/ponytail-config.js</small>")
         ponytail_hooks_ponytail_config_getclaudedir_cdda0ee2("getClaudeDir()<br/><small>ponytail/hooks/ponytail-config.js</small>")
         ponytail_hooks_ponytail_config_isshellsafe_89f20b44("isShellSafe()<br/><small>ponytail/hooks/ponytail-config.js</small>")
+        ponytail_hooks_ponytail_config_getconfigdir_11eb74d4("getConfigDir()<br/><small>ponytail/hooks/ponytail-config.js</small>")
     end
     subgraph cli_skills_ponytail_hooks_ponytail_subagent_js_d88fe1c9["ponytail/hooks/ponytail-subagent.js"]
         ponytail_hooks_ponytail_subagent_e36b1d4c("ponytail-subagent.js")
         ponytail_hooks_ponytail_subagent_finish_9e2e8d69("finish()<br/><small>ponytail/hooks/ponytail-subagent.js</small>")
         ponytail_hooks_ponytail_subagent_inject_74197907("inject()<br/><small>ponytail/hooks/ponytail-subagent.js</small>")
+    end
+    subgraph cli_skills_ponytail_hooks_ponytail_activate_js_3b33dc66["ponytail/hooks/ponytail-activate.js"]
+        ponytail_hooks_ponytail_activate_5d3f34a7("ponytail-activate.js")
+        ponytail_hooks_ponytail_activate_claudedir_44b8f662("claudeDir<br/><small>ponytail/hooks/ponytail-activate.js</small>")
     end
     subgraph cli_skills_ponytail_hooks_ponytail_mode_tracker_909f5329["ponytail/hooks/ponytail-mode-tracker.js"]
         ponytail_hooks_ponytail_mode_tracker_febd017e("ponytail-mode-tracker.js")
@@ -801,25 +1027,25 @@ flowchart LR
     ponytail_hooks_ponytail_mode_tracker_febd017e -->|imports| ponytail_hooks_ponytail_runtime_writehookoutput_07e5df53
     ponytail_hooks_ponytail_mode_tracker_febd017e -->|imports| ponytail_hooks_ponytail_runtime_b60ec3ea
     ponytail_hooks_ponytail_runtime_b60ec3ea -->|imports| ponytail_hooks_ponytail_config_getclaudedir_cdda0ee2
+    ponytail_hooks_ponytail_runtime_b60ec3ea -->|imports| ponytail_hooks_ponytail_config_getconfigdir_11eb74d4
     ponytail_hooks_ponytail_subagent_e36b1d4c -->|imports| ponytail_hooks_ponytail_runtime_readmode_fb740cca
     ponytail_hooks_ponytail_subagent_e36b1d4c -->|imports| ponytail_hooks_ponytail_runtime_writehookoutput_07e5df53
-    ponytail_hooks_ponytail_subagent_e36b1d4c -->|imports| ponytail_hooks_ponytail_runtime_b60ec3ea
-    %% Omitted for readability: 181 nodes, 1 edges
+    %% Omitted for readability: 182 nodes, 2 edges
     class ponytail_hooks_ponytail_runtime_writehookoutput_07e5df53 ui;
     class ponytail_hooks_ponytail_runtime_readmode_fb740cca function;
     class ponytail_hooks_ponytail_runtime_setmode_7e45b828 function;
     class ponytail_hooks_ponytail_runtime_clearmode_d66148e2 function;
     class ponytail_hooks_ponytail_runtime_iscopilot_40d5c103 function;
     class ponytail_hooks_ponytail_runtime_b60ec3ea module;
-    class ponytail_hooks_ponytail_activate_5d3f34a7 module;
-    class ponytail_hooks_ponytail_activate_claudedir_44b8f662 function;
-    class ponytail_hooks_ponytail_activate_fs_8d2d4aaa function;
     class ponytail_hooks_ponytail_config_isdeactivationcom_6a0a6708 entry;
     class ponytail_hooks_ponytail_config_getclaudedir_cdda0ee2 function;
     class ponytail_hooks_ponytail_config_isshellsafe_89f20b44 function;
+    class ponytail_hooks_ponytail_config_getconfigdir_11eb74d4 function;
     class ponytail_hooks_ponytail_subagent_e36b1d4c module;
     class ponytail_hooks_ponytail_subagent_finish_9e2e8d69 function;
     class ponytail_hooks_ponytail_subagent_inject_74197907 function;
+    class ponytail_hooks_ponytail_activate_5d3f34a7 module;
+    class ponytail_hooks_ponytail_activate_claudedir_44b8f662 function;
     class ponytail_hooks_ponytail_mode_tracker_febd017e module;
     class ponytail_hooks_ponytail_mode_tracker_finish_01f4ad14 function;
     class ponytail_scripts_uninstall_a236f983 module;
@@ -854,6 +1080,14 @@ flowchart LR
 </tr>
 <tr>
   <td>2</td>
+  <td><code>getConfigDir()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>getConfigPath()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>ponytail-config.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>ponytail-runtime.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small></td>
+  <td>No direct outbound edge</td>
+  <td>Reads, resolves, or persists project configuration.</td>
+</tr>
+<tr>
+  <td>3</td>
   <td><code>isDeactivationCommand()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
   <td><span class="tag tag-cmd">Entry</span></td>
   <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>ponytail-config.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br>+2 more</td>
@@ -861,7 +1095,7 @@ flowchart LR
   <td>isDeactivationCommand() node in ponytail/hooks/ponytail-config.js.</td>
 </tr>
 <tr>
-  <td>3</td>
+  <td>4</td>
   <td><code>isShellSafe()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>ponytail-activate.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small><br><code>ponytail-config.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
@@ -869,7 +1103,7 @@ flowchart LR
   <td>isShellSafe() node in ponytail/hooks/ponytail-config.js.</td>
 </tr>
 <tr>
-  <td>4</td>
+  <td>5</td>
   <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>ponytail-mode-tracker.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small></td>
@@ -877,7 +1111,7 @@ flowchart LR
   <td>finish() node in ponytail/hooks/ponytail-mode-tracker.js.</td>
 </tr>
 <tr>
-  <td>5</td>
+  <td>6</td>
   <td><code>clearMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br><code>ponytail-activate.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small><br><code>ponytail-mode-tracker.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br>+1 more</td>
@@ -885,7 +1119,7 @@ flowchart LR
   <td>clearMode() node in ponytail/hooks/ponytail-runtime.js.</td>
 </tr>
 <tr>
-  <td>6</td>
+  <td>7</td>
   <td><code>readMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br><code>ponytail-mode-tracker.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br><code>ponytail-runtime.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small><br>+1 more</td>
@@ -893,7 +1127,7 @@ flowchart LR
   <td>readMode() node in ponytail/hooks/ponytail-runtime.js.</td>
 </tr>
 <tr>
-  <td>7</td>
+  <td>8</td>
   <td><code>setMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br><code>ponytail-activate.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small><br><code>ponytail-mode-tracker.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br>+1 more</td>
@@ -901,7 +1135,7 @@ flowchart LR
   <td>setMode() node in ponytail/hooks/ponytail-runtime.js.</td>
 </tr>
 <tr>
-  <td>8</td>
+  <td>9</td>
   <td><code>writeHookOutput()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br><code>inject()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-subagent.js</small><br><code>ponytail-activate.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small><br>+3 more</td>
@@ -909,7 +1143,7 @@ flowchart LR
   <td>writeHookOutput() node in ponytail/hooks/ponytail-runtime.js.</td>
 </tr>
 <tr>
-  <td>9</td>
+  <td>10</td>
   <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-subagent.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>ponytail-subagent.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-subagent.js</small></td>
@@ -917,7 +1151,7 @@ flowchart LR
   <td>finish() node in ponytail/hooks/ponytail-subagent.js.</td>
 </tr>
 <tr>
-  <td>10</td>
+  <td>11</td>
   <td><code>inject()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-subagent.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-subagent.js</small></td>
@@ -925,7 +1159,7 @@ flowchart LR
   <td>inject() node in ponytail/hooks/ponytail-subagent.js.</td>
 </tr>
 <tr>
-  <td>11</td>
+  <td>12</td>
   <td><code>removeIfExists()</code><br><small style="color:var(--muted)">ponytail/scripts/uninstall.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -933,7 +1167,7 @@ flowchart LR
   <td>removeIfExists() node in ponytail/scripts/uninstall.js.</td>
 </tr>
 <tr>
-  <td>12</td>
+  <td>13</td>
   <td><code>ponytail-activate.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small></td>
   <td><span class="tag tag-class">Module</span></td>
   <td>External entry / no inbound edge</td>
@@ -941,7 +1175,7 @@ flowchart LR
   <td>ponytail-activate.js node in ponytail/hooks/ponytail-activate.js.</td>
 </tr>
 <tr>
-  <td>13</td>
+  <td>14</td>
   <td><code>claudeDir</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -949,7 +1183,7 @@ flowchart LR
   <td>claudeDir node in ponytail/hooks/ponytail-activate.js.</td>
 </tr>
 <tr>
-  <td>14</td>
+  <td>15</td>
   <td><code>{
   clearMode,
   isCodex,
@@ -969,7 +1203,7 @@ flowchart LR
 } node in ponytail/hooks/ponytail-activate.js.</td>
 </tr>
 <tr>
-  <td>15</td>
+  <td>16</td>
   <td><code>fs</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -977,7 +1211,7 @@ flowchart LR
   <td>fs node in ponytail/hooks/ponytail-activate.js.</td>
 </tr>
 <tr>
-  <td>16</td>
+  <td>17</td>
   <td><code>{ getDefaultMode, getClaudeDir, isShellSafe }</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -985,7 +1219,7 @@ flowchart LR
   <td>{ getDefaultMode, getClaudeDir, isShellSafe } node in ponytail/hooks/ponytail-activate.js.</td>
 </tr>
 <tr>
-  <td>17</td>
+  <td>18</td>
   <td><code>{ getPonytailInstructions }</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -993,7 +1227,7 @@ flowchart LR
   <td>{ getPonytailInstructions } node in ponytail/hooks/ponytail-activate.js.</td>
 </tr>
 <tr>
-  <td>18</td>
+  <td>19</td>
   <td><code>mode</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -1001,7 +1235,7 @@ flowchart LR
   <td>mode node in ponytail/hooks/ponytail-activate.js.</td>
 </tr>
 <tr>
-  <td>19</td>
+  <td>20</td>
   <td><code>output</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -1009,7 +1243,7 @@ flowchart LR
   <td>output node in ponytail/hooks/ponytail-activate.js.</td>
 </tr>
 <tr>
-  <td>20</td>
+  <td>21</td>
   <td><code>path</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -1017,7 +1251,7 @@ flowchart LR
   <td>path node in ponytail/hooks/ponytail-activate.js.</td>
 </tr>
 <tr>
-  <td>21</td>
+  <td>22</td>
   <td><code>settingsPath</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -1025,7 +1259,7 @@ flowchart LR
   <td>settingsPath node in ponytail/hooks/ponytail-activate.js.</td>
 </tr>
 <tr>
-  <td>22</td>
+  <td>23</td>
   <td><code>ponytail-mode-tracker.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small></td>
   <td><span class="tag tag-class">Module</span></td>
   <td>External entry / no inbound edge</td>
@@ -1033,7 +1267,7 @@ flowchart LR
   <td>ponytail-mode-tracker.js node in ponytail/hooks/ponytail-mode-tracker.js.</td>
 </tr>
 <tr>
-  <td>23</td>
+  <td>24</td>
   <td><code>{ clearMode, isQoder, readMode, setMode, writeHookOutput }</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1041,7 +1275,7 @@ flowchart LR
   <td>{ clearMode, isQoder, readMode, setMode, writeHookOutput } node in ponytail/hooks/ponytail-mode-tracker.js.</td>
 </tr>
 <tr>
-  <td>24</td>
+  <td>25</td>
   <td><code>{ getDefaultMode, isDeactivationCommand, writeDefaultMode }</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small></td>
   <td><span class="tag tag-cmd">Entry</span></td>
   <td>External entry / no inbound edge</td>
@@ -1049,7 +1283,7 @@ flowchart LR
   <td>{ getDefaultMode, isDeactivationCommand, writeDefaultMode } node in ponytail/hooks/ponytail-mode-tracker.js.</td>
 </tr>
 <tr>
-  <td>25</td>
+  <td>26</td>
   <td><code>{ getPonytailInstructions }</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -1057,7 +1291,7 @@ flowchart LR
   <td>{ getPonytailInstructions } node in ponytail/hooks/ponytail-mode-tracker.js.</td>
 </tr>
 <tr>
-  <td>26</td>
+  <td>27</td>
   <td><code>ponytail-runtime.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small></td>
   <td><span class="tag tag-class">Module</span></td>
   <td><code>ponytail-activate.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small><br><code>ponytail-mode-tracker.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br><code>ponytail-subagent.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-subagent.js</small></td>
@@ -1065,7 +1299,7 @@ flowchart LR
   <td>ponytail-runtime.js node in ponytail/hooks/ponytail-runtime.js.</td>
 </tr>
 <tr>
-  <td>27</td>
+  <td>28</td>
   <td><code>fs</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -1073,7 +1307,7 @@ flowchart LR
   <td>fs node in ponytail/hooks/ponytail-runtime.js.</td>
 </tr>
 <tr>
-  <td>28</td>
+  <td>29</td>
   <td><code>{ getClaudeDir, getConfigDir }</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -1081,20 +1315,12 @@ flowchart LR
   <td>Reads, resolves, or persists project configuration.</td>
 </tr>
 <tr>
-  <td>29</td>
+  <td>30</td>
   <td><code>isCopilot</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>ponytail-activate.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small></td>
   <td>No direct outbound edge</td>
   <td>isCopilot node in ponytail/hooks/ponytail-runtime.js.</td>
-</tr>
-<tr>
-  <td>30</td>
-  <td><code>os</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>os node in ponytail/hooks/ponytail-runtime.js.</td>
 </tr>
 </table>
 
@@ -1115,7 +1341,7 @@ flowchart LR
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x160, imports x15, calls x7, indirect call x6. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x160, imports x16, calls x7, indirect call x6. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -1278,16 +1504,15 @@ flowchart LR
 
 <!-- ====== 8. Tests & Fixtures ====== -->
 <h2 id="tests-fixtures">8. Tests &amp; Fixtures</h2>
-<p>Tests &amp; Fixtures groups implementation around ponytail, hooks, extension, configjs, mostly in ponytail/hooks/ponytail-config.js, ponytail/pi-extension/index.js, ponytail/hooks/ponytail-instructions.js. This section covers 52 nodes and 100 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Tests &amp; Fixtures groups implementation around ponytail, hooks, extension, configjs, mostly in ponytail/hooks/ponytail-config.js, ponytail/pi-extension/index.js, ponytail/hooks/ponytail-instructions.js. This section covers 51 nodes and 98 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Tests &amp; Fixtures (52 nodes, 100 edges)
+    %% Section: Tests &amp; Fixtures (51 nodes, 98 edges)
     subgraph tests_fixtures_ponytail_hooks_ponytail_config_js_298a56c8["ponytail/hooks/ponytail-config.js"]
-        ponytail_hooks_ponytail_config_getconfigpath_99a2d710("getConfigPath()<br/><small>ponytail/hooks/ponytail-config.js</small>")
-        ponytail_hooks_ponytail_config_getconfigdir_11eb74d4("getConfigDir()<br/><small>ponytail/hooks/ponytail-config.js</small>")
         ponytail_hooks_ponytail_config_getdefaultmode_e08b0a47("getDefaultMode()<br/><small>ponytail/hooks/ponytail-config.js</small>")
+        ponytail_hooks_ponytail_config_getconfigpath_99a2d710("getConfigPath()<br/><small>ponytail/hooks/ponytail-config.js</small>")
         ponytail_hooks_ponytail_config_gethidestatus_b7520fb0("getHideStatus()<br/><small>ponytail/hooks/ponytail-config.js</small>")
         ponytail_hooks_ponytail_config_getquietstartup_e3631449("getQuietStartup()<br/><small>ponytail/hooks/ponytail-config.js</small>")
         ponytail_hooks_ponytail_config_normalizepersiste_56f04243("normalizePersistedMode()<br/><small>ponytail/hooks/ponytail-config.js</small>")
@@ -1300,17 +1525,17 @@ flowchart LR
         ponytail_hooks_ponytail_instructions_getponytail_3d13839b("getPonytailInstructions()<br/><small>ponytail/hooks/ponytail-instructions.js</small>")
         ponytail_hooks_ponytail_instructions_getfallback_9542b159("getFallbackInstructions()<br/><small>ponytail/hooks/ponytail-instructions.js</small>")
     end
+    subgraph tests_fixtures_ponytail_pi_extension_index_js_2ee43314["ponytail/pi-extension/index.js"]
+        ponytail_pi_extension_index_9d2d2187("index.js")
+        ponytail_pi_extension_index_ponytailextension_a321ba46("ponytailExtension()<br/><small>ponytail/pi-extension/index.js</small>")
+        ponytail_pi_extension_index_parseponytailcommand_4d211fdf("parsePonytailCommand()<br/><small>ponytail/pi-extension/index.js</small>")
+    end
     subgraph tests_fixtures_opencode_plugins_ponytail_mjs_99abdf46[".opencode/plugins/ponytail.mjs"]
         ponytail_opencode_plugins_ponytail_b70099ee("ponytail.mjs")
         ponytail_opencode_plugins_ponytail_readmode_6df6db11("readMode()<br/><small>.opencode/plugins/ponytail.mjs</small>")
     end
-    subgraph tests_fixtures_ponytail_pi_extension_index_js_2ee43314["ponytail/pi-extension/index.js"]
-        ponytail_pi_extension_index_9d2d2187("index.js")
-        ponytail_pi_extension_index_ponytailextension_a321ba46("ponytailExtension()<br/><small>ponytail/pi-extension/index.js</small>")
-    end
     ponytail_pi_extension_test_extension_test_9b4fdc90("extension.test.js")
     ponytail_pi_extension_test_helpers_test_2bad389e("helpers.test.js")
-    ponytail_hooks_ponytail_config_getconfigpath_99a2d710 -->|calls| ponytail_hooks_ponytail_config_getconfigdir_11eb74d4
     ponytail_hooks_ponytail_config_getdefaultmode_e08b0a47 -->|calls| ponytail_hooks_ponytail_config_getconfigpath_99a2d710
     ponytail_hooks_ponytail_config_gethidestatus_b7520fb0 -->|calls| ponytail_hooks_ponytail_config_getconfigpath_99a2d710
     ponytail_hooks_ponytail_config_getquietstartup_e3631449 -->|calls| ponytail_hooks_ponytail_config_getconfigpath_99a2d710
@@ -1325,6 +1550,9 @@ flowchart LR
     ponytail_hooks_ponytail_instructions_getponytail_3d13839b -->|calls| ponytail_hooks_ponytail_instructions_getfallback_9542b159
     ponytail_opencode_plugins_ponytail_readmode_6df6db11 -->|calls| ponytail_hooks_ponytail_config_getdefaultmode_e08b0a47
     ponytail_opencode_plugins_ponytail_readmode_6df6db11 -->|calls| ponytail_hooks_ponytail_config_normalizepersiste_56f04243
+    ponytail_pi_extension_index_parseponytailcommand_4d211fdf -->|calls| ponytail_hooks_ponytail_config_normalizepersiste_56f04243
+    ponytail_pi_extension_index_parseponytailcommand_4d211fdf -->|calls| ponytail_hooks_ponytail_config_normalizemode_03b6d2b3
+    ponytail_pi_extension_index_ponytailextension_a321ba46 -->|calls| ponytail_pi_extension_index_parseponytailcommand_4d211fdf
     ponytail_pi_extension_index_ponytailextension_a321ba46 -->|calls| ponytail_hooks_ponytail_config_writedefaultmode_f0661819
     ponytail_pi_extension_index_ponytailextension_a321ba46 -->|calls| ponytail_hooks_ponytail_config_getquietstartup_e3631449
     ponytail_pi_extension_index_ponytailextension_a321ba46 -->|calls| ponytail_hooks_ponytail_instructions_getponytail_3d13839b
@@ -1332,12 +1560,9 @@ flowchart LR
     ponytail_pi_extension_index_ponytailextension_a321ba46 -->|calls| ponytail_hooks_ponytail_config_gethidestatus_b7520fb0
     ponytail_pi_extension_index_ponytailextension_a321ba46 -->|calls| ponytail_hooks_ponytail_config_normalizepersiste_56f04243
     ponytail_opencode_plugins_ponytail_b70099ee -->|imports| ponytail_hooks_ponytail_instructions_getponytail_3d13839b
-    ponytail_opencode_plugins_ponytail_b70099ee -->|imports| ponytail_hooks_ponytail_config_getdefaultmode_e08b0a47
-    ponytail_opencode_plugins_ponytail_b70099ee -->|imports| ponytail_hooks_ponytail_config_normalizepersiste_56f04243
-    %% Omitted for readability: 34 nodes, 11 edges
-    class ponytail_hooks_ponytail_config_getconfigpath_99a2d710 function;
-    class ponytail_hooks_ponytail_config_getconfigdir_11eb74d4 function;
+    %% Omitted for readability: 33 nodes, 14 edges
     class ponytail_hooks_ponytail_config_getdefaultmode_e08b0a47 function;
+    class ponytail_hooks_ponytail_config_getconfigpath_99a2d710 function;
     class ponytail_hooks_ponytail_config_gethidestatus_b7520fb0 function;
     class ponytail_hooks_ponytail_config_getquietstartup_e3631449 function;
     class ponytail_hooks_ponytail_config_normalizepersiste_56f04243 function;
@@ -1347,10 +1572,11 @@ flowchart LR
     class ponytail_hooks_ponytail_instructions_filterskill_1b655263 function;
     class ponytail_hooks_ponytail_instructions_getponytail_3d13839b function;
     class ponytail_hooks_ponytail_instructions_getfallback_9542b159 function;
-    class ponytail_opencode_plugins_ponytail_b70099ee function;
-    class ponytail_opencode_plugins_ponytail_readmode_6df6db11 function;
     class ponytail_pi_extension_index_9d2d2187 module;
     class ponytail_pi_extension_index_ponytailextension_a321ba46 function;
+    class ponytail_pi_extension_index_parseponytailcommand_4d211fdf entry;
+    class ponytail_opencode_plugins_ponytail_b70099ee function;
+    class ponytail_opencode_plugins_ponytail_readmode_6df6db11 function;
     class ponytail_pi_extension_test_extension_test_9b4fdc90 test;
     class ponytail_pi_extension_test_helpers_test_2bad389e test;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
@@ -1376,14 +1602,6 @@ flowchart LR
 </tr>
 <tr>
   <td>1</td>
-  <td><code>getConfigDir()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>getConfigPath()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>ponytail-config.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>ponytail-runtime.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small></td>
-  <td>No direct outbound edge</td>
-  <td>Reads, resolves, or persists project configuration.</td>
-</tr>
-<tr>
-  <td>2</td>
   <td><code>getConfigPath()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>getDefaultMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>getHideStatus()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>getQuietStartup()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br>+3 more</td>
@@ -1391,7 +1609,7 @@ flowchart LR
   <td>Reads, resolves, or persists project configuration.</td>
 </tr>
 <tr>
-  <td>3</td>
+  <td>2</td>
   <td><code>getDefaultMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>ponytail-activate.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small><br>+5 more</td>
@@ -1399,7 +1617,7 @@ flowchart LR
   <td>getDefaultMode() node in ponytail/hooks/ponytail-config.js.</td>
 </tr>
 <tr>
-  <td>4</td>
+  <td>3</td>
   <td><code>getHideStatus()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>ponytail-config.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>ponytailExtension()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
@@ -1407,7 +1625,7 @@ flowchart LR
   <td>getHideStatus() node in ponytail/hooks/ponytail-config.js.</td>
 </tr>
 <tr>
-  <td>5</td>
+  <td>4</td>
   <td><code>getQuietStartup()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>ponytail-config.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>ponytailExtension()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
@@ -1415,7 +1633,7 @@ flowchart LR
   <td>getQuietStartup() node in ponytail/hooks/ponytail-config.js.</td>
 </tr>
 <tr>
-  <td>6</td>
+  <td>5</td>
   <td><code>normalizeConfigMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>normalizePersistedMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>ponytail-config.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
@@ -1423,7 +1641,7 @@ flowchart LR
   <td>Reads, resolves, or persists project configuration.</td>
 </tr>
 <tr>
-  <td>7</td>
+  <td>6</td>
   <td><code>normalizeMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>filterSkillBodyForMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br><code>getPonytailInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br>+5 more</td>
@@ -1431,7 +1649,7 @@ flowchart LR
   <td>normalizeMode() node in ponytail/hooks/ponytail-config.js.</td>
 </tr>
 <tr>
-  <td>8</td>
+  <td>7</td>
   <td><code>normalizePersistedMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>getPonytailInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>parsePonytailCommand()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br>+6 more</td>
@@ -1439,7 +1657,7 @@ flowchart LR
   <td>normalizePersistedMode() node in ponytail/hooks/ponytail-config.js.</td>
 </tr>
 <tr>
-  <td>9</td>
+  <td>8</td>
   <td><code>writeDefaultMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>ponytail-config.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br>+2 more</td>
@@ -1447,7 +1665,7 @@ flowchart LR
   <td>writeDefaultMode() node in ponytail/hooks/ponytail-config.js.</td>
 </tr>
 <tr>
-  <td>10</td>
+  <td>9</td>
   <td><code>filterSkillBodyForMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>getPonytailInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>ponytail-instructions.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small></td>
@@ -1455,7 +1673,7 @@ flowchart LR
   <td>filterSkillBodyForMode() node in ponytail/hooks/ponytail-instructions.js.</td>
 </tr>
 <tr>
-  <td>11</td>
+  <td>10</td>
   <td><code>getFallbackInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>getPonytailInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br><code>ponytail-instructions.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small></td>
@@ -1463,7 +1681,7 @@ flowchart LR
   <td>getFallbackInstructions() node in ponytail/hooks/ponytail-instructions.js.</td>
 </tr>
 <tr>
-  <td>12</td>
+  <td>11</td>
   <td><code>getPonytailInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>inject()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-subagent.js</small><br>+6 more</td>
@@ -1471,7 +1689,7 @@ flowchart LR
   <td>getPonytailInstructions() node in ponytail/hooks/ponytail-instructions.js.</td>
 </tr>
 <tr>
-  <td>13</td>
+  <td>12</td>
   <td><code>parseCommandFile()</code><br><small style="color:var(--muted)">.opencode/plugins/ponytail-frontmatter.cjs</small></td>
   <td><span class="tag tag-cmd">Entry</span></td>
   <td><code>ponytail-frontmatter.cjs</code><br><small style="color:var(--muted)">.opencode/plugins/ponytail-frontmatter.cjs</small><br><code>ponytail.mjs</code><br><small style="color:var(--muted)">.opencode/plugins/ponytail.mjs</small></td>
@@ -1479,7 +1697,7 @@ flowchart LR
   <td>parseCommandFile() node in .opencode/plugins/ponytail-frontmatter.cjs.</td>
 </tr>
 <tr>
-  <td>14</td>
+  <td>13</td>
   <td><code>readMode()</code><br><small style="color:var(--muted)">.opencode/plugins/ponytail.mjs</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -1487,7 +1705,7 @@ flowchart LR
   <td>readMode() node in .opencode/plugins/ponytail.mjs.</td>
 </tr>
 <tr>
-  <td>15</td>
+  <td>14</td>
   <td><code>writeMode()</code><br><small style="color:var(--muted)">.opencode/plugins/ponytail.mjs</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -1495,7 +1713,7 @@ flowchart LR
   <td>writeMode() node in .opencode/plugins/ponytail.mjs.</td>
 </tr>
 <tr>
-  <td>16</td>
+  <td>15</td>
   <td><code>parsePonytailCommand()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
   <td><span class="tag tag-cmd">Entry</span></td>
   <td><code>helpers.test.js</code><br><small style="color:var(--muted)">pi-extension/test/helpers.test.js</small><br><code>ponytailExtension()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
@@ -1503,7 +1721,7 @@ flowchart LR
   <td>parsePonytailCommand() node in ponytail/pi-extension/index.js.</td>
 </tr>
 <tr>
-  <td>17</td>
+  <td>16</td>
   <td><code>ponytailExtension()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>createPiHarness()</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small><br><code>extension.test.js</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small></td>
@@ -1511,7 +1729,7 @@ flowchart LR
   <td>ponytailExtension() node in ponytail/pi-extension/index.js.</td>
 </tr>
 <tr>
-  <td>18</td>
+  <td>17</td>
   <td><code>syncStatus()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -1519,7 +1737,7 @@ flowchart LR
   <td>syncStatus() node in ponytail/pi-extension/index.js.</td>
 </tr>
 <tr>
-  <td>19</td>
+  <td>18</td>
   <td><code>resolveSessionMode()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>helpers.test.js</code><br><small style="color:var(--muted)">pi-extension/test/helpers.test.js</small><br><code>ponytailExtension()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
@@ -1527,7 +1745,7 @@ flowchart LR
   <td>resolveSessionMode() node in ponytail/pi-extension/index.js.</td>
 </tr>
 <tr>
-  <td>20</td>
+  <td>19</td>
   <td><code>createCommandContext()</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small></td>
   <td><span class="tag tag-func">Test</span></td>
   <td>External entry / no inbound edge</td>
@@ -1535,7 +1753,7 @@ flowchart LR
   <td>createCommandContext() node in pi-extension/test/extension.test.js.</td>
 </tr>
 <tr>
-  <td>21</td>
+  <td>20</td>
   <td><code>createPiHarness()</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small></td>
   <td><span class="tag tag-func">Test</span></td>
   <td>External entry / no inbound edge</td>
@@ -1543,7 +1761,7 @@ flowchart LR
   <td>createPiHarness() node in pi-extension/test/extension.test.js.</td>
 </tr>
 <tr>
-  <td>22</td>
+  <td>21</td>
   <td><code>notify()</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small></td>
   <td><span class="tag tag-func">Test</span></td>
   <td>External entry / no inbound edge</td>
@@ -1551,7 +1769,7 @@ flowchart LR
   <td>notify() node in pi-extension/test/extension.test.js.</td>
 </tr>
 <tr>
-  <td>23</td>
+  <td>22</td>
   <td><code>withTempConfig()</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small></td>
   <td><span class="tag tag-func">Test</span></td>
   <td>External entry / no inbound edge</td>
@@ -1559,7 +1777,7 @@ flowchart LR
   <td>Reads, resolves, or persists project configuration.</td>
 </tr>
 <tr>
-  <td>24</td>
+  <td>23</td>
   <td><code>ponytail-config.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
   <td><span class="tag tag-class">Module</span></td>
   <td><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>ponytail-activate.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small><br><code>ponytail-instructions.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br>+4 more</td>
@@ -1567,7 +1785,7 @@ flowchart LR
   <td>Reads, resolves, or persists project configuration.</td>
 </tr>
 <tr>
-  <td>25</td>
+  <td>24</td>
   <td><code>fs</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -1575,7 +1793,7 @@ flowchart LR
   <td>fs node in ponytail/hooks/ponytail-config.js.</td>
 </tr>
 <tr>
-  <td>26</td>
+  <td>25</td>
   <td><code>os</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -1583,7 +1801,7 @@ flowchart LR
   <td>os node in ponytail/hooks/ponytail-config.js.</td>
 </tr>
 <tr>
-  <td>27</td>
+  <td>26</td>
   <td><code>path</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -1591,7 +1809,7 @@ flowchart LR
   <td>path node in ponytail/hooks/ponytail-config.js.</td>
 </tr>
 <tr>
-  <td>28</td>
+  <td>27</td>
   <td><code>RUNTIME_MODES</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
   <td><span class="tag tag-class">Class</span></td>
   <td><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
@@ -1599,7 +1817,7 @@ flowchart LR
   <td>RUNTIME_MODES node in ponytail/hooks/ponytail-config.js.</td>
 </tr>
 <tr>
-  <td>29</td>
+  <td>28</td>
   <td><code>VALID_MODES</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
   <td><span class="tag tag-class">Class</span></td>
   <td>External entry / no inbound edge</td>
@@ -1607,12 +1825,20 @@ flowchart LR
   <td>VALID_MODES node in ponytail/hooks/ponytail-config.js.</td>
 </tr>
 <tr>
-  <td>30</td>
+  <td>29</td>
   <td><code>ponytail-instructions.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small></td>
   <td><span class="tag tag-class">Module</span></td>
   <td><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>ponytail-activate.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small><br><code>ponytail-mode-tracker.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br>+2 more</td>
   <td><code>filterSkillBodyForMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br><code>getFallbackInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br><code>getPonytailInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br>+3 more</td>
   <td>ponytail-instructions.js node in ponytail/hooks/ponytail-instructions.js.</td>
+</tr>
+<tr>
+  <td>30</td>
+  <td><code>{ DEFAULT_MODE, normalizeMode, normalizePersistedMode }</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>{ DEFAULT_MODE, normalizeMode, normalizePersistedMode } node in ponytail/hooks/ponytail-instructions.js.</td>
 </tr>
 </table>
 
@@ -1621,7 +1847,7 @@ flowchart LR
     <h4>Key Files</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>ponytail/hooks/ponytail-config.js</code></td><td>15 nodes</td></tr>
+      <tr><td><code>ponytail/hooks/ponytail-config.js</code></td><td>14 nodes</td></tr>
 <tr><td><code>ponytail/pi-extension/index.js</code></td><td>11 nodes</td></tr>
 <tr><td><code>.opencode/plugins/ponytail.mjs</code></td><td>9 nodes</td></tr>
 <tr><td><code>ponytail/hooks/ponytail-instructions.js</code></td><td>9 nodes</td></tr>
@@ -1632,7 +1858,7 @@ flowchart LR
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x32, calls x27, imports x20, indirect call x13. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x32, calls x26, imports x20, indirect call x12. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -2939,8 +3165,8 @@ flowchart LR
   <div class="card">
     <h4>Graph</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>Nodes</td><td>508</td></tr>
-      <tr><td>Edges</td><td>533</td></tr>
+      <tr><td>Nodes</td><td>531</td></tr>
+      <tr><td>Edges</td><td>564</td></tr>
       <tr><td>Hyperedges</td><td>0</td></tr>
       <tr><td>Communities</td><td>74</td></tr>
       <tr><td>Documented Sections</td><td>15</td></tr>
@@ -2949,7 +3175,7 @@ flowchart LR
   <div class="card">
     <h4>Edge Confidence</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>EXTRACTED</td><td>511</td></tr>
+      <tr><td>EXTRACTED</td><td>542</td></tr>
       <tr><td>INFERRED</td><td>22</td></tr>
       <tr><td>AMBIGUOUS</td><td>0</td></tr>
     </table>
@@ -2958,7 +3184,7 @@ flowchart LR
 
 <div style="text-align:center; padding:40px 0; color: var(--muted); font-size:0.9rem;">
   <p>Agent_Claudia_Autonomus — Architecture Documentation</p>
-  <p>Generated: 2026-08-23 18:22 UTC · graphify callflow-html</p>
+  <p>Generated: 2026-08-23 18:32 UTC · graphify callflow-html</p>
 </div>
 
 </div><!-- .container -->

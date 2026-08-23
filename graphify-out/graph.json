@@ -4,16 +4,30 @@
   "graph": {},
   "nodes": [
     {
-      "id": "ponytail_hooks_ponytail_config_getconfigdir",
-      "label": "getConfigDir()",
+      "id": "scripts_multihop_engine_multihopengine",
+      "label": "MultiHopEngine",
       "_callable": true,
+      "_callable_class": true,
       "_origin": "ast",
-      "community": 0,
-      "community_name": "ponytail-config.js",
+      "community": 22,
+      "community_name": "MultiHopEngine",
       "file_type": "code",
-      "norm_label": "getconfigdir()",
-      "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L54"
+      "norm_label": "multihopengine",
+      "source_file": "scripts/multihop_engine.py",
+      "source_location": "L11"
+    },
+    {
+      "id": "scripts_niah_evaluator_niahevaluator",
+      "label": "NIAHEvaluator",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "MultiHopEngine",
+      "file_type": "code",
+      "norm_label": "niahevaluator",
+      "source_file": "scripts/niah_evaluator.py",
+      "source_location": "L13"
     },
     {
       "id": "ponytail_hooks_ponytail_config_getconfigpath",
@@ -292,6 +306,18 @@
       "source_location": "L71"
     },
     {
+      "id": "ponytail_hooks_ponytail_config_getconfigdir",
+      "label": "getConfigDir()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ponytail-activate.js",
+      "file_type": "code",
+      "norm_label": "getconfigdir()",
+      "source_file": "ponytail/hooks/ponytail-config.js",
+      "source_location": "L54"
+    },
+    {
       "id": "ponytail_hooks_ponytail_config_isdeactivationcommand",
       "label": "isDeactivationCommand()",
       "_callable": true,
@@ -417,11 +443,119 @@
       "_callable": true,
       "_origin": "ast",
       "community": 22,
-      "community_name": "benchmark_engine.py",
+      "community_name": "MultiHopEngine",
       "file_type": "code",
       "norm_label": "run_evaluation_checks()",
       "source_file": "scripts/benchmark_engine.py",
-      "source_location": "L7"
+      "source_location": "L15"
+    },
+    {
+      "id": "scripts_multihop_engine_multihopengine_decompose_query",
+      "label": ".decompose_query()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "MultiHopEngine",
+      "file_type": "code",
+      "norm_label": ".decompose_query()",
+      "source_file": "scripts/multihop_engine.py",
+      "source_location": "L40"
+    },
+    {
+      "id": "scripts_multihop_engine_multihopengine_hybrid_rank_fuse",
+      "label": ".hybrid_rank_fuse()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "MultiHopEngine",
+      "file_type": "code",
+      "norm_label": ".hybrid_rank_fuse()",
+      "source_file": "scripts/multihop_engine.py",
+      "source_location": "L87"
+    },
+    {
+      "id": "scripts_multihop_engine_multihopengine_init",
+      "label": ".__init__()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "MultiHopEngine",
+      "file_type": "code",
+      "norm_label": ".__init__()",
+      "source_file": "scripts/multihop_engine.py",
+      "source_location": "L12"
+    },
+    {
+      "id": "scripts_multihop_engine_multihopengine_load_graph",
+      "label": "._load_graph()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "MultiHopEngine",
+      "file_type": "code",
+      "norm_label": "._load_graph()",
+      "source_file": "scripts/multihop_engine.py",
+      "source_location": "L19"
+    },
+    {
+      "id": "scripts_multihop_engine_multihopengine_traverse_multihop",
+      "label": ".traverse_multihop()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "MultiHopEngine",
+      "file_type": "code",
+      "norm_label": ".traverse_multihop()",
+      "source_file": "scripts/multihop_engine.py",
+      "source_location": "L53"
+    },
+    {
+      "id": "scripts_niah_evaluator_niahevaluator_evaluate_multihop_ruler",
+      "label": ".evaluate_multihop_ruler()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "MultiHopEngine",
+      "file_type": "code",
+      "norm_label": ".evaluate_multihop_ruler()",
+      "source_file": "scripts/niah_evaluator.py",
+      "source_location": "L76"
+    },
+    {
+      "id": "scripts_niah_evaluator_niahevaluator_evaluate_single_needle",
+      "label": ".evaluate_single_needle()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "MultiHopEngine",
+      "file_type": "code",
+      "norm_label": ".evaluate_single_needle()",
+      "source_file": "scripts/niah_evaluator.py",
+      "source_location": "L44"
+    },
+    {
+      "id": "scripts_niah_evaluator_niahevaluator_generate_synthetic_haystack",
+      "label": ".generate_synthetic_haystack()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "MultiHopEngine",
+      "file_type": "code",
+      "norm_label": ".generate_synthetic_haystack()",
+      "source_file": "scripts/niah_evaluator.py",
+      "source_location": "L24"
+    },
+    {
+      "id": "scripts_niah_evaluator_niahevaluator_init",
+      "label": ".__init__()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "MultiHopEngine",
+      "file_type": "code",
+      "norm_label": ".__init__()",
+      "source_file": "scripts/niah_evaluator.py",
+      "source_location": "L14"
     },
     {
       "id": "learning_scripts_grow_neurons_grow_neural_mesh",
@@ -2609,22 +2743,154 @@
       "label": "benchmark_engine.py",
       "_origin": "ast",
       "community": 22,
-      "community_name": "benchmark_engine.py",
+      "community_name": "MultiHopEngine",
       "file_type": "code",
       "norm_label": "benchmark_engine.py",
       "source_file": "scripts/benchmark_engine.py",
       "source_location": "L1"
     },
     {
-      "id": "scripts_benchmark_engine_rationale_1",
-      "label": "Local Benchmark Evaluator & Verification Harness for Claudia",
+      "id": "scripts_multihop_engine",
+      "label": "multihop_engine.py",
       "_origin": "ast",
       "community": 22,
-      "community_name": "benchmark_engine.py",
+      "community_name": "MultiHopEngine",
+      "file_type": "code",
+      "norm_label": "multihop_engine.py",
+      "source_file": "scripts/multihop_engine.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_multihop_engine_py_any",
+      "label": "Any",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "MultiHopEngine",
+      "file_type": "code",
+      "norm_label": "any",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "scripts_niah_evaluator",
+      "label": "niah_evaluator.py",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "MultiHopEngine",
+      "file_type": "code",
+      "norm_label": "niah_evaluator.py",
+      "source_file": "scripts/niah_evaluator.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_niah_evaluator_py_any",
+      "label": "Any",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "MultiHopEngine",
+      "file_type": "code",
+      "norm_label": "any",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "scripts_benchmark_engine_rationale_1",
+      "label": "Local Benchmark Evaluator & Verification Harness for Claudia 2.0 Includes SWE-\u2026",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "MultiHopEngine",
       "file_type": "rationale",
-      "norm_label": "local benchmark evaluator & verification harness for claudia",
+      "norm_label": "local benchmark evaluator & verification harness for claudia 2.0 includes swe-...",
       "source_file": "scripts/benchmark_engine.py",
       "source_location": "L1"
+    },
+    {
+      "id": "scripts_multihop_engine_rationale_1",
+      "label": "Multi-Hop Query Decomposer & GraphRAG Traversal Engine Author: Claudia\u2026",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "MultiHopEngine",
+      "file_type": "rationale",
+      "norm_label": "multi-hop query decomposer & graphrag traversal engine author: claudia...",
+      "source_file": "scripts/multihop_engine.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_multihop_engine_rationale_41",
+      "label": "Decomposes complex questions into atomic 1-hop sub-queries.",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "MultiHopEngine",
+      "file_type": "rationale",
+      "norm_label": "decomposes complex questions into atomic 1-hop sub-queries.",
+      "source_file": "scripts/multihop_engine.py",
+      "source_location": "L41"
+    },
+    {
+      "id": "scripts_multihop_engine_rationale_54",
+      "label": "Traverse knowledge graph from start entity up to max_depth hops.",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "MultiHopEngine",
+      "file_type": "rationale",
+      "norm_label": "traverse knowledge graph from start entity up to max_depth hops.",
+      "source_file": "scripts/multihop_engine.py",
+      "source_location": "L54"
+    },
+    {
+      "id": "scripts_multihop_engine_rationale_88",
+      "label": "Reciprocal Rank Fusion (RRF) combining keyword and graph results.",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "MultiHopEngine",
+      "file_type": "rationale",
+      "norm_label": "reciprocal rank fusion (rrf) combining keyword and graph results.",
+      "source_file": "scripts/multihop_engine.py",
+      "source_location": "L88"
+    },
+    {
+      "id": "scripts_niah_evaluator_rationale_1",
+      "label": "Synthetic Needle-In-A-Haystack (NIAH) & Multi-Hop RULER Evaluator Author:\u2026",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "MultiHopEngine",
+      "file_type": "rationale",
+      "norm_label": "synthetic needle-in-a-haystack (niah) & multi-hop ruler evaluator author:...",
+      "source_file": "scripts/niah_evaluator.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_niah_evaluator_rationale_25",
+      "label": "Generates synthetic haystack with embedded secret needles at a given depth.",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "MultiHopEngine",
+      "file_type": "rationale",
+      "norm_label": "generates synthetic haystack with embedded secret needles at a given depth.",
+      "source_file": "scripts/niah_evaluator.py",
+      "source_location": "L25"
+    },
+    {
+      "id": "scripts_niah_evaluator_rationale_45",
+      "label": "Evaluates 1-needle retrieval at specified context depth.",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "MultiHopEngine",
+      "file_type": "rationale",
+      "norm_label": "evaluates 1-needle retrieval at specified context depth.",
+      "source_file": "scripts/niah_evaluator.py",
+      "source_location": "L45"
+    },
+    {
+      "id": "scripts_niah_evaluator_rationale_77",
+      "label": "Evaluates 3-hop associative chain: Fact A -> Fact B -> Fact C -> Target Value.",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "MultiHopEngine",
+      "file_type": "rationale",
+      "norm_label": "evaluates 3-hop associative chain: fact a -> fact b -> fact c -> target value.",
+      "source_file": "scripts/niah_evaluator.py",
+      "source_location": "L77"
     },
     {
       "id": "agents_skills_ponytail_audit_skill",
@@ -6535,6 +6801,66 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_benchmark_engine_run_evaluation_checks",
+      "target": "scripts_multihop_engine_multihopengine",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/benchmark_engine.py",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_benchmark_engine_run_evaluation_checks",
+      "target": "scripts_niah_evaluator_niahevaluator",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/benchmark_engine.py",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_multihop_engine_multihopengine_init",
+      "target": "scripts_multihop_engine_multihopengine_load_graph",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/multihop_engine.py",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_niah_evaluator_niahevaluator_evaluate_multihop_ruler",
+      "target": "scripts_niah_evaluator_niahevaluator_generate_synthetic_haystack",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/niah_evaluator.py",
+      "source_location": "L90",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_niah_evaluator_niahevaluator_evaluate_single_needle",
+      "target": "scripts_niah_evaluator_niahevaluator_generate_synthetic_haystack",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/niah_evaluator.py",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
       "source": "ponytail_pi_extension_index_ponytailextension",
       "target": "ponytail_pi_extension_index_ponytailextension_syncstatus",
       "relation": "contains",
@@ -6544,6 +6870,42 @@
       "context": "call",
       "source_file": "ponytail/pi-extension/index.js",
       "source_location": "L71",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_multihop_engine_multihopengine_traverse_multihop",
+      "target": "scripts_multihop_engine_py_any",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "scripts/multihop_engine.py",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_niah_evaluator_niahevaluator_evaluate_multihop_ruler",
+      "target": "scripts_niah_evaluator_py_any",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "scripts/niah_evaluator.py",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_niah_evaluator_niahevaluator_evaluate_single_needle",
+      "target": "scripts_niah_evaluator_py_any",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "scripts/niah_evaluator.py",
+      "source_location": "L44",
       "weight": 1.0
     },
     {
@@ -7339,6 +7701,30 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_benchmark_engine",
+      "target": "scripts_multihop_engine_multihopengine",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scripts/benchmark_engine.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_benchmark_engine",
+      "target": "scripts_niah_evaluator_niahevaluator",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scripts/benchmark_engine.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
       "source": "ponytail_hooks_ponytail_activate",
       "target": "ponytail_hooks_ponytail_config",
       "relation": "imports_from",
@@ -7552,6 +7938,30 @@
       "context": "import",
       "source_file": "ponytail/scripts/uninstall.js",
       "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_benchmark_engine",
+      "target": "scripts_multihop_engine",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scripts/benchmark_engine.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_benchmark_engine",
+      "target": "scripts_niah_evaluator",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scripts/benchmark_engine.py",
+      "source_location": "L13",
       "weight": 1.0
     },
     {
@@ -11577,7 +11987,29 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/benchmark_engine.py",
-      "source_location": "L7",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_multihop_engine",
+      "target": "scripts_multihop_engine_multihopengine",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/multihop_engine.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_niah_evaluator",
+      "target": "scripts_niah_evaluator_niahevaluator",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/niah_evaluator.py",
+      "source_location": "L13",
       "weight": 1.0
     },
     {
@@ -11735,6 +12167,105 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_multihop_engine_multihopengine",
+      "target": "scripts_multihop_engine_multihopengine_init",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/multihop_engine.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_multihop_engine_multihopengine",
+      "target": "scripts_multihop_engine_multihopengine_load_graph",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/multihop_engine.py",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_multihop_engine_multihopengine",
+      "target": "scripts_multihop_engine_multihopengine_decompose_query",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/multihop_engine.py",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_multihop_engine_multihopengine",
+      "target": "scripts_multihop_engine_multihopengine_traverse_multihop",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/multihop_engine.py",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_multihop_engine_multihopengine",
+      "target": "scripts_multihop_engine_multihopengine_hybrid_rank_fuse",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/multihop_engine.py",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_niah_evaluator_niahevaluator",
+      "target": "scripts_niah_evaluator_niahevaluator_init",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/niah_evaluator.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_niah_evaluator_niahevaluator",
+      "target": "scripts_niah_evaluator_niahevaluator_generate_synthetic_haystack",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/niah_evaluator.py",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_niah_evaluator_niahevaluator",
+      "target": "scripts_niah_evaluator_niahevaluator_evaluate_single_needle",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/niah_evaluator.py",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_niah_evaluator_niahevaluator",
+      "target": "scripts_niah_evaluator_niahevaluator_evaluate_multihop_ruler",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/niah_evaluator.py",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
       "source": "learning_scripts_grow_neurons_rationale_1",
       "target": "learning_scripts_grow_neurons",
       "relation": "rationale_for",
@@ -11754,6 +12285,94 @@
       "confidence_score": 1.0,
       "source_file": "scripts/benchmark_engine.py",
       "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_multihop_engine_rationale_1",
+      "target": "scripts_multihop_engine",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/multihop_engine.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_multihop_engine_rationale_41",
+      "target": "scripts_multihop_engine_multihopengine_decompose_query",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/multihop_engine.py",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_multihop_engine_rationale_54",
+      "target": "scripts_multihop_engine_multihopengine_traverse_multihop",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/multihop_engine.py",
+      "source_location": "L54",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_multihop_engine_rationale_88",
+      "target": "scripts_multihop_engine_multihopengine_hybrid_rank_fuse",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/multihop_engine.py",
+      "source_location": "L88",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_niah_evaluator_rationale_1",
+      "target": "scripts_niah_evaluator",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/niah_evaluator.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_niah_evaluator_rationale_25",
+      "target": "scripts_niah_evaluator_niahevaluator_generate_synthetic_haystack",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/niah_evaluator.py",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_niah_evaluator_rationale_45",
+      "target": "scripts_niah_evaluator_niahevaluator_evaluate_single_needle",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/niah_evaluator.py",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_niah_evaluator_rationale_77",
+      "target": "scripts_niah_evaluator_niahevaluator_evaluate_multihop_ruler",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/niah_evaluator.py",
+      "source_location": "L77",
       "weight": 1.0
     },
     {
@@ -12066,5 +12685,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "36b0162669487a9fe4cbb0470cd923a8ece03c7c"
+  "built_at_commit": "73812bde693f5bfe1e1735a8ebc3cbc16efbc49a"
 }

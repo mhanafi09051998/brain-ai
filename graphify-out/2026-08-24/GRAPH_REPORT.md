@@ -1,16 +1,16 @@
-# Graph Report - Agent_Claudia_Autonomus  (2026-08-23)
+# Graph Report - Agent_Claudia_Autonomus  (2026-08-24)
 
 ## Corpus Check
-- 90 files · ~63,548 words
+- 92 files · ~63,614 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 486 nodes · 511 edges · 73 communities (49 shown, 24 thin omitted)
+- 508 nodes · 533 edges · 74 communities (50 shown, 24 thin omitted)
 - Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1877f52e`
+- Built from commit: `36b01626`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -80,6 +80,7 @@
 - user_profile.md
 - vps_infrastructure.md
 - ponytail-statusline.sh script
+- opencode.json
 
 ## God Nodes (most connected - your core abstractions)
 1. `Install` - 15 edges
@@ -108,11 +109,11 @@
 ## Import Cycles
 - None detected.
 
-## Communities (73 total, 24 thin omitted)
+## Communities (74 total, 24 thin omitted)
 
 ### Community 0 - "ponytail-config.js"
 Cohesion: 0.08
-Nodes (39): fs, getConfigPath(), getDefaultMode(), getHideStatus(), getQuietStartup(), normalizeConfigMode(), normalizeMode(), normalizePersistedMode() (+31 more)
+Nodes (40): fs, getConfigDir(), getConfigPath(), getDefaultMode(), getHideStatus(), getQuietStartup(), normalizeConfigMode(), normalizeMode() (+32 more)
 
 ### Community 1 - "ponytail/package.json"
 Cohesion: 0.05
@@ -120,13 +121,13 @@ Nodes (40): author, name, url, bugs, url, description, exports, ./plugin (+32 mo
 
 ### Community 2 - "ponytail-activate.js"
 Cohesion: 0.07
-Nodes (37): claudeDir, {
+Nodes (36): claudeDir, {
   clearMode,
   isCodex,
   isCopilot,
   setMode,
   writeHookOutput,
-}, fs, { getDefaultMode, getClaudeDir, isShellSafe }, { getPonytailInstructions }, mode, output, path (+29 more)
+}, fs, { getDefaultMode, getClaudeDir, isShellSafe }, { getPonytailInstructions }, mode, output, path (+28 more)
 
 ### Community 3 - "Install"
 Cohesion: 0.07
@@ -280,22 +281,26 @@ Nodes (3): Alur Pembelajaran, Self-Learning Framework, Struktur Folder
 Cohesion: 0.50
 Nodes (3): Boundaries, Output, Scan
 
+### Community 73 - "opencode.json"
+Cohesion: 0.10
+Nodes (21): models, npm, options, modalities, name, agent, explorer, description (+13 more)
+
 ## Knowledge Gaps
-- **305 isolated node(s):** `__dirname`, `require`, `{ getPonytailInstructions }`, `{ getDefaultMode, normalizePersistedMode }`, `{ parseCommandFile }` (+300 more)
+- **315 isolated node(s):** `$schema`, `npm`, `baseURL`, `apiKey`, `name` (+310 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **24 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **What connects `__dirname`, `require`, `{ getPonytailInstructions }` to the rest of the system?**
-  _305 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `$schema`, `npm`, `baseURL` to the rest of the system?**
+  _315 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `ponytail-config.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.07686274509803921 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07541478129713423 - nodes in this community are weakly interconnected._
 - **Should `ponytail/package.json` be split into smaller, more focused modules?**
   _Cohesion score 0.05365853658536585 - nodes in this community are weakly interconnected._
 - **Should `ponytail-activate.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.0664451827242525 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06852497096399536 - nodes in this community are weakly interconnected._
 - **Should `Install` be split into smaller, more focused modules?**
   _Cohesion score 0.07407407407407407 - nodes in this community are weakly interconnected._
 - **Should `README.es.md` be split into smaller, more focused modules?**
