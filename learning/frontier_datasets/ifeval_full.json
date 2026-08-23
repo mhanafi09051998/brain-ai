@@ -1,0 +1,26 @@
+[
+  {
+    "id": "ifeval_forbidden_words",
+    "title": "IFEval: Zero Forbidden Words Invariant",
+    "prompt": "Write a 2-sentence summary of cloud technology without using the words: internet, server, computer, or web.",
+    "verify": "lambda res: not bool(re.search(r'\\b(internet|server|computer|web)\\b', res, re.I)) and len(res.strip()) > 10"
+  },
+  {
+    "id": "ifeval_json_schema",
+    "title": "IFEval: Strict JSON Schema Without Markdown",
+    "prompt": "Provide a JSON object with keys 'status' (string 'success') and 'code' (integer 200). Output raw JSON only.",
+    "verify": "lambda res: json.loads(re.search(r'\\{.*\\}', res, re.S).group(0)) == {'status': 'success', 'code': 200}"
+  },
+  {
+    "id": "ifeval_line_count",
+    "title": "IFEval: Exact 3 Non-Empty Lines",
+    "prompt": "Write a 3-line poem about algorithms. Output exactly 3 non-empty lines, no intro or markdown title.",
+    "verify": "lambda res: len([l for l in res.strip().split('\\n') if l.strip()]) == 3"
+  },
+  {
+    "id": "ifeval_uppercase_constraint",
+    "title": "IFEval: 100% Uppercase Letters Invariant",
+    "prompt": "Output the sentence 'AUTONOMOUS AI ENGINEERING IS LIVE' in all uppercase letters. Do not output lowercase characters.",
+    "verify": "lambda res: res.strip() == res.strip().upper() and len(res.strip()) > 5"
+  }
+]

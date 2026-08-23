@@ -74,11 +74,15 @@
   "72": "ponytail-review.md",
   "73": "opencode.json",
   "74": "parallel_runner.py",
+  "75": "zolu_learn_server.js",
+  "76": "diagnose_browser.js",
+  "77": "test_playwright.js",
   "78": "ingest_frontier_knowledge.py",
   "79": "official_runner_real.py",
   "80": "Neuron N017: Program-Aided Mathematical Reasoning & AIME Invariants",
   "81": "Neuron N018: RepoMap AST Compression & SWE-bench Precision",
   "82": "Neuron N019: BFCL Tool Schema & IFEval Strict Format Oracle",
   "83": "debug_tau.py",
-  "84": "test_direct_router.py"
+  "84": "test_direct_router.py",
+  "85": "verify_ecosystem_playwright.js"
 }

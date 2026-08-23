@@ -1,0 +1,44 @@
+[
+  {
+    "id": "bfcl_db_rollback",
+    "title": "BFCL: Database Savepoint Rollback",
+    "prompt": "Call function 'database_rollback' with parameters savepoint_id='sp_10' and force=true.",
+    "expected_func": "database_rollback",
+    "expected_args": {
+      "savepoint_id": "sp_10",
+      "force": true
+    }
+  },
+  {
+    "id": "bfcl_aws_s3_multipart",
+    "title": "BFCL: AWS S3 Multipart Upload Completion",
+    "prompt": "Call function 'complete_multipart_upload' with bucket='enterprise-storage', key='logs/telemetry.tar.gz', and upload_id='mp_99182'.",
+    "expected_func": "complete_multipart_upload",
+    "expected_args": {
+      "bucket": "enterprise-storage",
+      "key": "logs/telemetry.tar.gz",
+      "upload_id": "mp_99182"
+    }
+  },
+  {
+    "id": "bfcl_k8s_scale",
+    "title": "BFCL: Kubernetes HPA Autoscaler Patch",
+    "prompt": "Call function 'patch_deployment_replicas' with deployment_name='claudia-worker-pool', replicas=5, and namespace='prod'.",
+    "expected_func": "patch_deployment_replicas",
+    "expected_args": {
+      "deployment_name": "claudia-worker-pool",
+      "replicas": 5,
+      "namespace": "prod"
+    }
+  },
+  {
+    "id": "bfcl_stripe_payment_capture",
+    "title": "BFCL: Stripe Payment Intent Capture",
+    "prompt": "Call function 'capture_payment_intent' with intent_id='pi_3MtwBwLkdIwHu7ix28a3tqPa' and amount_to_capture=5000.",
+    "expected_func": "capture_payment_intent",
+    "expected_args": {
+      "intent_id": "pi_3MtwBwLkdIwHu7ix28a3tqPa",
+      "amount_to_capture": 5000
+    }
+  }
+]

@@ -30,18 +30,6 @@
       "source_location": "L13"
     },
     {
-      "id": "ponytail_hooks_ponytail_config_getconfigdir",
-      "label": "getConfigDir()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ponytail-config.js",
-      "file_type": "code",
-      "norm_label": "getconfigdir()",
-      "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L54"
-    },
-    {
       "id": "ponytail_hooks_ponytail_config_getconfigpath",
       "label": "getConfigPath()",
       "_callable": true,
@@ -316,6 +304,18 @@
       "norm_label": "getclaudedir()",
       "source_file": "ponytail/hooks/ponytail-config.js",
       "source_location": "L71"
+    },
+    {
+      "id": "ponytail_hooks_ponytail_config_getconfigdir",
+      "label": "getConfigDir()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ponytail-activate.js",
+      "file_type": "code",
+      "norm_label": "getconfigdir()",
+      "source_file": "ponytail/hooks/ponytail-config.js",
+      "source_location": "L54"
     },
     {
       "id": "ponytail_hooks_ponytail_config_isdeactivationcommand",
@@ -690,16 +690,16 @@
       "source_location": "L56"
     },
     {
-      "id": "scripts_ingest_frontier_knowledge_build_offline_frontier_corpus",
-      "label": "build_offline_frontier_corpus()",
+      "id": "scripts_ingest_frontier_knowledge_build_all_frontier_datasets",
+      "label": "build_all_frontier_datasets()",
       "_callable": true,
       "_origin": "ast",
       "community": 78,
       "community_name": "ingest_frontier_knowledge.py",
       "file_type": "code",
-      "norm_label": "build_offline_frontier_corpus()",
+      "norm_label": "build_all_frontier_datasets()",
       "source_file": "scripts/ingest_frontier_knowledge.py",
-      "source_location": "L41"
+      "source_location": "L24"
     },
     {
       "id": "scripts_ingest_frontier_knowledge_ensure_dirs",
@@ -711,19 +711,19 @@
       "file_type": "code",
       "norm_label": "ensure_dirs()",
       "source_file": "scripts/ingest_frontier_knowledge.py",
-      "source_location": "L22"
+      "source_location": "L21"
     },
     {
-      "id": "scripts_ingest_frontier_knowledge_fetch_json",
-      "label": "fetch_json()",
+      "id": "scripts_official_runner_real_eval_single_task",
+      "label": "eval_single_task()",
       "_callable": true,
       "_origin": "ast",
-      "community": 78,
-      "community_name": "ingest_frontier_knowledge.py",
+      "community": 79,
+      "community_name": "official_runner_real.py",
       "file_type": "code",
-      "norm_label": "fetch_json()",
-      "source_file": "scripts/ingest_frontier_knowledge.py",
-      "source_location": "L25"
+      "norm_label": "eval_single_task()",
+      "source_file": "scripts/official_runner_real.py",
+      "source_location": "L207"
     },
     {
       "id": "scripts_official_runner_real_init_db",
@@ -735,7 +735,7 @@
       "file_type": "code",
       "norm_label": "init_db()",
       "source_file": "scripts/official_runner_real.py",
-      "source_location": "L20"
+      "source_location": "L22"
     },
     {
       "id": "scripts_official_runner_real_query_llm",
@@ -747,19 +747,31 @@
       "file_type": "code",
       "norm_label": "query_llm()",
       "source_file": "scripts/official_runner_real.py",
-      "source_location": "L37"
+      "source_location": "L39"
     },
     {
-      "id": "scripts_official_runner_real_run_single_evaluation",
-      "label": "run_single_evaluation()",
+      "id": "scripts_official_runner_real_run_parallel_subagents_step",
+      "label": "run_parallel_subagents_step()",
       "_callable": true,
       "_origin": "ast",
       "community": 79,
       "community_name": "official_runner_real.py",
       "file_type": "code",
-      "norm_label": "run_single_evaluation()",
+      "norm_label": "run_parallel_subagents_step()",
       "source_file": "scripts/official_runner_real.py",
-      "source_location": "L131"
+      "source_location": "L279"
+    },
+    {
+      "id": "scripts_official_runner_real_run_safe_python",
+      "label": "run_safe_python()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 79,
+      "community_name": "official_runner_real.py",
+      "file_type": "code",
+      "norm_label": "run_safe_python()",
+      "source_file": "scripts/official_runner_real.py",
+      "source_location": "L77"
     },
     {
       "id": "ponytail_hooks_ponytail_config",
@@ -6475,25 +6487,14 @@
     },
     {
       "id": "scripts_ingest_frontier_knowledge_rationale_1",
-      "label": "Automated Frontier Dataset & Knowledge Ingester for Claudia 2.0 Scrapes\u2026",
+      "label": "Automated Frontier Dataset Scraper & Knowledge Ingester for Claudia 2.0 Ingests\u2026",
       "_origin": "ast",
       "community": 78,
       "community_name": "ingest_frontier_knowledge.py",
       "file_type": "rationale",
-      "norm_label": "automated frontier dataset & knowledge ingester for claudia 2.0 scrapes...",
+      "norm_label": "automated frontier dataset scraper & knowledge ingester for claudia 2.0 ingests...",
       "source_file": "scripts/ingest_frontier_knowledge.py",
       "source_location": "L1"
-    },
-    {
-      "id": "scripts_ingest_frontier_knowledge_rationale_42",
-      "label": "Builds comprehensive, clean JSON benchmark corpus for continuous learning.",
-      "_origin": "ast",
-      "community": 78,
-      "community_name": "ingest_frontier_knowledge.py",
-      "file_type": "rationale",
-      "norm_label": "builds comprehensive, clean json benchmark corpus for continuous learning.",
-      "source_file": "scripts/ingest_frontier_knowledge.py",
-      "source_location": "L42"
     },
     {
       "id": "scripts_official_runner_real",
@@ -6516,6 +6517,17 @@
       "norm_label": "real production ai benchmark evaluator for claudia (9router llm engine) tests...",
       "source_file": "scripts/official_runner_real.py",
       "source_location": "L1"
+    },
+    {
+      "id": "scripts_official_runner_real_rationale_78",
+      "label": "Safely execute Python code generated by LLM to verify invariant.",
+      "_origin": "ast",
+      "community": 79,
+      "community_name": "official_runner_real.py",
+      "file_type": "rationale",
+      "norm_label": "safely execute python code generated by llm to verify invariant.",
+      "source_file": "scripts/official_runner_real.py",
+      "source_location": "L78"
     },
     {
       "id": "ponytail_skills_ponytail_skill",
@@ -7434,7 +7446,7 @@
       "weight": 1.0
     },
     {
-      "source": "scripts_ingest_frontier_knowledge_build_offline_frontier_corpus",
+      "source": "scripts_ingest_frontier_knowledge_build_all_frontier_datasets",
       "target": "scripts_ingest_frontier_knowledge_ensure_dirs",
       "relation": "calls",
       "_origin": "ast",
@@ -7442,7 +7454,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/ingest_frontier_knowledge.py",
-      "source_location": "L45",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -7482,19 +7494,7 @@
       "weight": 1.0
     },
     {
-      "source": "scripts_official_runner_real_run_single_evaluation",
-      "target": "scripts_official_runner_real_init_db",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/official_runner_real.py",
-      "source_location": "L132",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_official_runner_real_run_single_evaluation",
+      "source": "scripts_official_runner_real_eval_single_task",
       "target": "scripts_official_runner_real_query_llm",
       "relation": "calls",
       "_origin": "ast",
@@ -7502,7 +7502,31 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/official_runner_real.py",
-      "source_location": "L146",
+      "source_location": "L220",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_official_runner_real_eval_single_task",
+      "target": "scripts_official_runner_real_run_safe_python",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/official_runner_real.py",
+      "source_location": "L235",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_official_runner_real_run_parallel_subagents_step",
+      "target": "scripts_official_runner_real_init_db",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/official_runner_real.py",
+      "source_location": "L280",
       "weight": 1.0
     },
     {
@@ -12789,29 +12813,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/ingest_frontier_knowledge.py",
-      "source_location": "L22",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
       "source": "scripts_ingest_frontier_knowledge",
-      "target": "scripts_ingest_frontier_knowledge_fetch_json",
+      "target": "scripts_ingest_frontier_knowledge_build_all_frontier_datasets",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/ingest_frontier_knowledge.py",
-      "source_location": "L25",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_ingest_frontier_knowledge",
-      "target": "scripts_ingest_frontier_knowledge_build_offline_frontier_corpus",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/ingest_frontier_knowledge.py",
-      "source_location": "L41",
+      "source_location": "L24",
       "weight": 1.0
     },
     {
@@ -12838,13 +12851,13 @@
     },
     {
       "source": "scripts_official_runner_real",
-      "target": "scripts_official_runner_real_run_single_evaluation",
+      "target": "scripts_official_runner_real_eval_single_task",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/official_runner_real.py",
-      "source_location": "L131",
+      "source_location": "L207",
       "weight": 1.0
     },
     {
@@ -12855,7 +12868,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/official_runner_real.py",
-      "source_location": "L20",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_official_runner_real",
+      "target": "scripts_official_runner_real_run_parallel_subagents_step",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/official_runner_real.py",
+      "source_location": "L279",
       "weight": 1.0
     },
     {
@@ -12866,7 +12890,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/official_runner_real.py",
-      "source_location": "L37",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_official_runner_real",
+      "target": "scripts_official_runner_real_run_safe_python",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/official_runner_real.py",
+      "source_location": "L77",
       "weight": 1.0
     },
     {
@@ -13376,17 +13411,6 @@
       "weight": 1.0
     },
     {
-      "source": "scripts_ingest_frontier_knowledge_rationale_42",
-      "target": "scripts_ingest_frontier_knowledge_build_offline_frontier_corpus",
-      "relation": "rationale_for",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/ingest_frontier_knowledge.py",
-      "source_location": "L42",
-      "weight": 1.0
-    },
-    {
       "source": "scripts_multihop_engine_rationale_1",
       "target": "scripts_multihop_engine",
       "relation": "rationale_for",
@@ -13486,6 +13510,17 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_official_runner_real_rationale_78",
+      "target": "scripts_official_runner_real_run_safe_python",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/official_runner_real.py",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
       "source": "scripts_parallel_runner_rationale_1",
       "target": "scripts_parallel_runner",
       "relation": "rationale_for",
@@ -13562,6 +13597,18 @@
       "context": "argument",
       "source_file": "ponytail/hooks/ponytail-subagent.js",
       "source_location": "L74",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_official_runner_real_run_parallel_subagents_step",
+      "target": "scripts_official_runner_real_eval_single_task",
+      "relation": "indirect_call",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "argument",
+      "source_file": "scripts/official_runner_real.py",
+      "source_location": "L285",
       "weight": 1.0
     },
     {
@@ -13830,5 +13877,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "0027f9213bf8f52ee35f51df61b2de84fb7ebc81"
+  "built_at_commit": "aec3707fcfb8dcfdb46092182f5327a38545a94c"
 }
