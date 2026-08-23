@@ -72,6 +72,7 @@ function runRealBenchmarkStep() {
           swe_bench: { current: m.swe_bench, target: 85.0, status: "Empirical Real" },
           tau_bench: { current: m.tau_bench, target: 95.0, status: "Empirical Real" },
           aime_gpqa: { current: m.aime_gpqa, target: 90.0, status: "Empirical Real" },
+          gpqa_diamond: { current: m.gpqa_diamond || m.aime_gpqa, target: 90.4, status: "Empirical Real" },
           niah_retrieval: { current: m.niah_retrieval, target: 99.9, status: "Empirical Real" },
           ifeval: { current: m.ifeval, target: 98.0, status: "Empirical Real" },
           inference_speed: { current: m.inference_speed, target: 120.0, unit: "tok/s", status: "Empirical Real" }

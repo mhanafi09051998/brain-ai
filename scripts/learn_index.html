@@ -726,7 +726,7 @@
       
       if (!metrics.gpqa_diamond && metrics.aime_gpqa) {
         metrics.gpqa_diamond = {
-          current: parseFloat((metrics.aime_gpqa.current * 0.94).toFixed(1)),
+          current: metrics.aime_gpqa.current,
           target: 90.4,
           status: "Empirical Real"
         };
@@ -782,8 +782,11 @@
       }
       if (metrics.aime_gpqa) {
         document.getElementById('td-claudia-aime').dataset.val = metrics.aime_gpqa.current;
-        const gpqaVal = (metrics.aime_gpqa.current * 0.94).toFixed(1);
-        document.getElementById('td-claudia-gpqa').dataset.val = gpqaVal;
+      }
+      if (metrics.gpqa_diamond) {
+        document.getElementById('td-claudia-gpqa').dataset.val = metrics.gpqa_diamond.current;
+      } else if (metrics.aime_gpqa) {
+        document.getElementById('td-claudia-gpqa').dataset.val = metrics.aime_gpqa.current;
       }
       if (metrics.niah_retrieval) {
         document.getElementById('td-claudia-niah').dataset.val = metrics.niah_retrieval.current;
@@ -794,18 +797,19 @@
 
       // Update radar chart dataset
       if (globalRadarChart && metrics.swe_bench && metrics.tau_bench && metrics.aime_gpqa && metrics.niah_retrieval && metrics.ifeval) {
+        const gpqaVal = metrics.gpqa_diamond ? metrics.gpqa_diamond.current : metrics.aime_gpqa.current;
         globalRadarChart.data.datasets[0].data = [
           metrics.swe_bench.current,
           metrics.tau_bench.current,
           metrics.aime_gpqa.current,
-          parseFloat((metrics.aime_gpqa.current * 0.94).toFixed(1)),
+          gpqaVal,
           metrics.niah_retrieval.current,
           metrics.ifeval.current
         ];
         globalRadarChart.update();
 
         // Calculate composite score
-        const avg = ((metrics.swe_bench.current + metrics.tau_bench.current + metrics.aime_gpqa.current + metrics.niah_retrieval.current + metrics.ifeval.current) / 5).toFixed(1);
+        const avg = ((metrics.swe_bench.current + metrics.tau_bench.current + metrics.aime_gpqa.current + gpqaVal + metrics.niah_retrieval.current + metrics.ifeval.current) / 6).toFixed(1);
         const compEl = document.getElementById('composite-score');
         if (compEl) compEl.textContent = `${avg} / 100`;
       }

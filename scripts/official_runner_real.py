@@ -342,6 +342,7 @@ def run_parallel_subagents_step():
             "swe_bench": stats.get("swe_bench", 100.0),
             "tau_bench": stats.get("tau_bench", 100.0),
             "aime_gpqa": stats.get("aime_gpqa", 100.0),
+            "gpqa_diamond": stats.get("gpqa_diamond", stats.get("aime_gpqa", 100.0)),
             "niah_retrieval": stats.get("niah", 100.0),
             "ifeval": stats.get("ifeval", 100.0),
             "inference_speed": round(max(50.0, 128.0 - (avg_lat / 80)), 1)

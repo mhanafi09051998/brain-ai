@@ -723,7 +723,7 @@
       "file_type": "code",
       "norm_label": "eval_single_task()",
       "source_file": "scripts/official_runner_real.py",
-      "source_location": "L207"
+      "source_location": "L214"
     },
     {
       "id": "scripts_official_runner_real_init_db",
@@ -759,7 +759,7 @@
       "file_type": "code",
       "norm_label": "run_parallel_subagents_step()",
       "source_file": "scripts/official_runner_real.py",
-      "source_location": "L279"
+      "source_location": "L291"
     },
     {
       "id": "scripts_official_runner_real_run_safe_python",
@@ -7502,7 +7502,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/official_runner_real.py",
-      "source_location": "L220",
+      "source_location": "L226",
       "weight": 1.0
     },
     {
@@ -7514,7 +7514,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/official_runner_real.py",
-      "source_location": "L235",
+      "source_location": "L246",
       "weight": 1.0
     },
     {
@@ -7526,7 +7526,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/official_runner_real.py",
-      "source_location": "L280",
+      "source_location": "L292",
       "weight": 1.0
     },
     {
@@ -12857,7 +12857,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/official_runner_real.py",
-      "source_location": "L207",
+      "source_location": "L214",
       "weight": 1.0
     },
     {
@@ -12879,7 +12879,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/official_runner_real.py",
-      "source_location": "L279",
+      "source_location": "L291",
       "weight": 1.0
     },
     {
@@ -13608,7 +13608,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "scripts/official_runner_real.py",
-      "source_location": "L285",
+      "source_location": "L297",
       "weight": 1.0
     },
     {
@@ -13877,5 +13877,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "aec3707fcfb8dcfdb46092182f5327a38545a94c"
+  "built_at_commit": "b4f042ebe3ccf4fb6f40c0a2fdc4bb4a88733284"
 }
