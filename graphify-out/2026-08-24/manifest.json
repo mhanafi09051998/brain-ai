@@ -654,15 +654,15 @@
     "semantic_hash": ""
   },
   "scripts/ingest_frontier_knowledge.py": {
-    "mtime": 1787511860.187513,
-    "seen": 1787511965.0234702,
-    "ast_hash": "e87472281265d7035bbba57699566eb3",
+    "mtime": 1787514521.1556098,
+    "seen": 1787514556.619476,
+    "ast_hash": "5eb78b4daf35336eb2369c6870730274",
     "semantic_hash": ""
   },
   "scripts/official_runner_real.py": {
-    "mtime": 1787511661.4606562,
-    "seen": 1787511965.0234702,
-    "ast_hash": "c164597e8eaebf1fa590359aa5261b70",
+    "mtime": 1787514667.2646296,
+    "seen": 1787514686.9711678,
+    "ast_hash": "1e795050f4966f5fd20c2b85607fd8a0",
     "semantic_hash": ""
   },
   "scripts/test_direct_router.py": {
@@ -723,6 +723,36 @@
     "mtime": 1787512161.894404,
     "seen": 1787514469.92971,
     "ast_hash": "5b0a288de3204e0e44965f45889b50c8",
+    "semantic_hash": ""
+  },
+  "learning/frontier_datasets/aime_2024_full.json": {
+    "mtime": 1787514523.2913609,
+    "seen": 1787514556.619476,
+    "ast_hash": "86f84c3158b47c68dffd8ca02a5e6f01",
+    "semantic_hash": ""
+  },
+  "learning/frontier_datasets/gpqa_diamond.json": {
+    "mtime": 1787514523.2913609,
+    "seen": 1787514556.619476,
+    "ast_hash": "6c041d5ad22e754388ad05c9d5fe7c27",
+    "semantic_hash": ""
+  },
+  "learning/frontier_datasets/ifeval_full.json": {
+    "mtime": 1787514523.2924187,
+    "seen": 1787514556.619476,
+    "ast_hash": "0a7bcd91a42c1063b9d7da4069c3448f",
+    "semantic_hash": ""
+  },
+  "learning/frontier_datasets/swe_bench_verified.json": {
+    "mtime": 1787514523.292945,
+    "seen": 1787514556.619476,
+    "ast_hash": "9c55a5c8313952f5e2031121a6b2ac08",
+    "semantic_hash": ""
+  },
+  "learning/frontier_datasets/tau_bfcl_suite.json": {
+    "mtime": 1787514523.2924187,
+    "seen": 1787514556.619476,
+    "ast_hash": "7448f56bfe2c158862b552cd3b52f8fc",
     "semantic_hash": ""
   }
 }
