@@ -85,7 +85,7 @@ function runRealBenchmarkStep() {
   });
 }
 
-const intervalTimer = setInterval(runRealBenchmarkStep, 60000);
+const intervalTimer = setInterval(runRealBenchmarkStep, 3500);
 runRealBenchmarkStep();
 
 const server = app.listen(PORT, '0.0.0.0', () => {
