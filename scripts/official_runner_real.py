@@ -297,10 +297,10 @@ def run_parallel_subagents_step():
                   (cat, test_id, passed, latency_ms, details))
     conn.commit()
 
-    # Calculate Recent Windowed Pass Rates (last 300 evaluations for fast reactivity)
+    # Calculate Recent Windowed Pass Rates (last 80 evaluations for ultra-responsive live accuracy)
     c.execute("""
         SELECT category, ROUND(AVG(passed) * 100, 1) 
-        FROM (SELECT category, passed FROM evaluations ORDER BY id DESC LIMIT 400) 
+        FROM (SELECT category, passed FROM evaluations ORDER BY id DESC LIMIT 80) 
         GROUP BY category
     """)
     rows = c.fetchall()
