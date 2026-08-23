@@ -1,7 +1,7 @@
 {
-  "0": "ponytail-config.js",
+  "0": "index.js",
   "1": "ponytail/package.json",
-  "2": "ponytail-activate.js",
+  "2": "ponytail-runtime.js",
   "3": "Install",
   "4": "README.es.md",
   "5": "Install",
@@ -84,5 +84,9 @@
   "82": "Neuron N019: BFCL Tool Schema & IFEval Strict Format Oracle",
   "83": "debug_tau.py",
   "84": "test_direct_router.py",
-  "85": "verify_ecosystem_playwright.js"
+  "85": "verify_ecosystem_playwright.js",
+  "86": "ponytail-config.js",
+  "87": "ponytail-instructions.js",
+  "88": "ponytail.mjs",
+  "89": "ponytail-activate.js"
 }

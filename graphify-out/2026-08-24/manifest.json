@@ -660,9 +660,9 @@
     "semantic_hash": ""
   },
   "scripts/official_runner_real.py": {
-    "mtime": 1787515217.5103004,
-    "seen": 1787515244.3378663,
-    "ast_hash": "b1854227c6f79e1318c8929136ceaf90",
+    "mtime": 1787515374.2136457,
+    "seen": 1787515399.9727185,
+    "ast_hash": "606c2438e51f1643b004205dbe2782c8",
     "semantic_hash": ""
   },
   "scripts/test_direct_router.py": {
