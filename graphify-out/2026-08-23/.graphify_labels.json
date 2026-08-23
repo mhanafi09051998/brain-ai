@@ -1,7 +1,7 @@
 {
-  "0": "ponytail-config.js",
+  "0": "index.js",
   "1": "ponytail/package.json",
-  "2": "ponytail-activate.js",
+  "2": "ponytail-runtime.js",
   "3": "Install",
   "4": "README.es.md",
   "5": "Install",
@@ -15,13 +15,13 @@
   "13": "Ponytail, lazy senior dev mode",
   "14": "Ponytail, lazy senior dev mode",
   "15": "Ponytail, lazy senior dev mode",
-  "16": "uninstall.js",
+  "16": "ponytail-config.js",
   "17": "Ponytail, lazy senior dev mode",
   "18": "Pembelajaran & Standar Tetap (Learnings & Fixed Rules) - Claudia",
   "19": "Neuron N008: Persistent Live Session Checkpoint & Infrastructure State",
   "20": "pi-extension/package.json",
   "21": "⚡ CLAUDIA 2.0",
-  "22": "zolu_kas_dashboard_page.tsx",
+  "22": "ponytailExtension",
   "23": ".agents/skills/ponytail-audit/SKILL.md",
   "24": "Ponytail Gain",
   "25": ".agents/skills/ponytail-review/SKILL.md",
@@ -71,5 +71,7 @@
   "69": "ponytail-debt.md",
   "70": "ponytail-gain.md",
   "71": "ponytail-help.md",
-  "72": "ponytail-review.md"
+  "72": "ponytail-review.md",
+  "73": "ponytail-activate.js",
+  "74": "ponytail.mjs"
 }
