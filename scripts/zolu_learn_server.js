@@ -89,7 +89,7 @@ const intervalTimer = setInterval(runRealBenchmarkStep, 3500);
 runRealBenchmarkStep();
 
 const server = app.listen(PORT, '0.0.0.0', () => {
-  console.log(`🚀 Claudia Max 2.0 Evaluator running on port ${PORT}`);
+  console.log(`🚀 Claudia Max 4.0 Evaluator running on port ${PORT}`);
 });
 
 server.on('error', (e) => {
