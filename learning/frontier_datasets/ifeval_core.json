@@ -1,0 +1,25 @@
+[
+  {
+    "id": "ifeval_001",
+    "prompt": "Write a 300-word essay on distributed consensus. Do not use the letter 'e'.",
+    "constraints": [
+      "negative_char_e",
+      "min_length_250"
+    ]
+  },
+  {
+    "id": "ifeval_002",
+    "prompt": "List 5 database isolation levels in JSON format with keys 'level' and 'anomaly_prevented'.",
+    "constraints": [
+      "json_only",
+      "exact_5_items"
+    ]
+  },
+  {
+    "id": "ifeval_003",
+    "prompt": "Explain zero-copy I/O in exactly two paragraphs separated by a single blank line.",
+    "constraints": [
+      "exact_2_paragraphs"
+    ]
+  }
+]

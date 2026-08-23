@@ -1,0 +1,20 @@
+[
+  {
+    "id": "aime_2024_i_1",
+    "problem": "Find the number of ordered pairs of integers (x, y) such that x^2 + y^2 = 10000 and x <= y.",
+    "answer": 16,
+    "domain": "Diophantine Geometry"
+  },
+  {
+    "id": "aime_2024_i_2",
+    "problem": "Let S be the set of positive integers n <= 1000 such that n is divisible by 4 and has distinct non-zero digits. What is |S| mod 2?",
+    "answer": 0,
+    "domain": "Number Theory / Combinatorics"
+  },
+  {
+    "id": "aime_2024_ii_3",
+    "problem": "A sequence satisfies a_1 = 1, a_{n+1} = a_n + n. What is a_10?",
+    "answer": 46,
+    "domain": "Recurrence Relations"
+  }
+]

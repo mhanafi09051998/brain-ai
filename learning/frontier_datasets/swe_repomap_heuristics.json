@@ -1,0 +1,11 @@
+{
+  "ast_visitor_rules": [
+    "Always parse caller references before modifying shared libraries.",
+    "Maintain WSGI string wire invariant for Python 3 header decoding.",
+    "Use \\A and \\Z anchors in security regex validators to prevent multiline injection."
+  ],
+  "repo_map_compression": {
+    "ranking_algorithm": "PageRank on Tree-Sitter AST Call Graph",
+    "target_context_tokens": 1024
+  }
+}

@@ -1,23 +1,23 @@
 # Graph Report - Agent_Claudia_Autonomus  (2026-08-24)
 
 ## Corpus Check
-- 94 files · ~64,660 words
+- 104 files · ~69,215 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 531 nodes · 564 edges · 74 communities (51 shown, 23 thin omitted)
+- 556 nodes · 585 edges · 85 communities (62 shown, 23 thin omitted)
 - Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `73812bde`
+- Built from commit: `03d42bce`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- ponytail-config.js
+- index.js
 - ponytail/package.json
-- ponytail-activate.js
+- ponytail-runtime.js
 - Install
 - README.es.md
 - Install
@@ -81,6 +81,15 @@
 - vps_infrastructure.md
 - ponytail-statusline.sh script
 - opencode.json
+- ponytail-config.js
+- ponytailExtension
+- ponytail-activate.js
+- ponytail.mjs
+- ingest_frontier_knowledge.py
+- official_runner_real.py
+- Neuron N017: Program-Aided Mathematical Reasoning & AIME Invariants
+- Neuron N018: RepoMap AST Compression & SWE-bench Precision
+- Neuron N019: BFCL Tool Schema & IFEval Strict Format Oracle
 
 ## God Nodes (most connected - your core abstractions)
 1. `Install` - 15 edges
@@ -95,39 +104,33 @@
 10. `⚡ CLAUDIA 2.0` - 9 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `readMode()` --calls--> `getDefaultMode()`  [EXTRACTED]
+  ponytail/.opencode/plugins/ponytail.mjs → ponytail/hooks/ponytail-config.js
+- `readMode()` --calls--> `normalizePersistedMode()`  [EXTRACTED]
+  ponytail/.opencode/plugins/ponytail.mjs → ponytail/hooks/ponytail-config.js
+- `ponytailExtension()` --calls--> `normalizePersistedMode()`  [EXTRACTED]
+  ponytail/pi-extension/index.js → ponytail/hooks/ponytail-config.js
 - `ponytailExtension()` --calls--> `isDeactivationCommand()`  [EXTRACTED]
   ponytail/pi-extension/index.js → ponytail/hooks/ponytail-config.js
 - `finish()` --calls--> `getDefaultMode()`  [EXTRACTED]
   ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-config.js
-- `finish()` --calls--> `writeDefaultMode()`  [EXTRACTED]
-  ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-config.js
-- `finish()` --calls--> `getPonytailInstructions()`  [EXTRACTED]
-  ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-instructions.js
-- `inject()` --calls--> `getPonytailInstructions()`  [EXTRACTED]
-  ponytail/hooks/ponytail-subagent.js → ponytail/hooks/ponytail-instructions.js
 
 ## Import Cycles
 - None detected.
 
-## Communities (74 total, 23 thin omitted)
+## Communities (85 total, 23 thin omitted)
 
-### Community 0 - "ponytail-config.js"
-Cohesion: 0.08
-Nodes (39): fs, getConfigPath(), getDefaultMode(), getHideStatus(), getQuietStartup(), normalizeConfigMode(), normalizeMode(), normalizePersistedMode() (+31 more)
+### Community 0 - "index.js"
+Cohesion: 0.18
+Nodes (18): normalizeMode(), normalizePersistedMode(), { DEFAULT_MODE, normalizeMode, normalizePersistedMode }, filterSkillBodyForMode(), fs, getFallbackInstructions(), getPonytailInstructions(), INDEPENDENT_MODES (+10 more)
 
 ### Community 1 - "ponytail/package.json"
 Cohesion: 0.05
 Nodes (40): author, name, url, bugs, url, description, exports, ./plugin (+32 more)
 
-### Community 2 - "ponytail-activate.js"
-Cohesion: 0.07
-Nodes (37): claudeDir, {
-  clearMode,
-  isCodex,
-  isCopilot,
-  setMode,
-  writeHookOutput,
-}, fs, { getDefaultMode, getClaudeDir, isShellSafe }, { getPonytailInstructions }, mode, output, path (+29 more)
+### Community 2 - "ponytail-runtime.js"
+Cohesion: 0.12
+Nodes (22): getConfigDir(), isDeactivationCommand(), { clearMode, isQoder, readMode, setMode, writeHookOutput }, finish(), { getDefaultMode, isDeactivationCommand, writeDefaultMode }, { getPonytailInstructions }, clearMode(), fs (+14 more)
 
 ### Community 3 - "Install"
 Cohesion: 0.07
@@ -289,8 +292,50 @@ Nodes (3): Boundaries, Output, Scan
 Cohesion: 0.10
 Nodes (21): models, npm, options, modalities, name, agent, explorer, description (+13 more)
 
+### Community 74 - "ponytail-config.js"
+Cohesion: 0.15
+Nodes (11): fs, getClaudeDir(), normalizeConfigMode(), os, path, RUNTIME_MODES, VALID_MODES, fs (+3 more)
+
+### Community 75 - "ponytailExtension"
+Cohesion: 0.23
+Nodes (7): getConfigPath(), getDefaultMode(), getHideStatus(), getQuietStartup(), writeDefaultMode(), ponytailExtension(), createPiHarness()
+
+### Community 76 - "ponytail-activate.js"
+Cohesion: 0.18
+Nodes (10): claudeDir, {
+  clearMode,
+  isCodex,
+  isCopilot,
+  setMode,
+  writeHookOutput,
+}, fs, { getDefaultMode, getClaudeDir, isShellSafe }, { getPonytailInstructions }, mode, output, path (+2 more)
+
+### Community 77 - "ponytail.mjs"
+Cohesion: 0.20
+Nodes (8): __dirname, parseCommandFile(), { getDefaultMode, normalizePersistedMode }, { getPonytailInstructions }, { parseCommandFile }, readMode(), require, statePath
+
+### Community 78 - "ingest_frontier_knowledge.py"
+Cohesion: 0.40
+Nodes (4): build_offline_frontier_corpus(), ensure_dirs(), Automated Frontier Dataset & Knowledge Ingester for Claudia 2.0 Scrapes…, Builds comprehensive, clean JSON benchmark corpus for continuous learning.
+
+### Community 79 - "official_runner_real.py"
+Cohesion: 0.60
+Nodes (4): init_db(), query_llm(), Real Production AI Benchmark Evaluator for Claudia (9Router LLM Engine) Tests…, run_single_evaluation()
+
+### Community 80 - "Neuron N017: Program-Aided Mathematical Reasoning & AIME Invariants"
+Cohesion: 0.50
+Nodes (3): 🧮 4 Pilar Heuristik AIME & Olympiad:, 📌 Domain & Karakteristik, Neuron N017: Program-Aided Mathematical Reasoning & AIME Invariants
+
+### Community 81 - "Neuron N018: RepoMap AST Compression & SWE-bench Precision"
+Cohesion: 0.50
+Nodes (3): 🛠️ 4 Aturan Emas Resolusi SWE-bench:, 📌 Domain & Karakteristik, Neuron N018: RepoMap AST Compression & SWE-bench Precision
+
+### Community 82 - "Neuron N019: BFCL Tool Schema & IFEval Strict Format Oracle"
+Cohesion: 0.50
+Nodes (3): 📋 4 Aturan Disiplin Eksekusi:, 📌 Domain & Karakteristik, Neuron N019: BFCL Tool Schema & IFEval Strict Format Oracle
+
 ## Knowledge Gaps
-- **315 isolated node(s):** `$schema`, `npm`, `baseURL`, `apiKey`, `name` (+310 more)
+- **321 isolated node(s):** `$schema`, `npm`, `baseURL`, `apiKey`, `name` (+316 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **23 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -298,16 +343,16 @@ Nodes (21): models, npm, options, modalities, name, agent, explorer, description
 _Questions this graph is uniquely positioned to answer:_
 
 - **What connects `$schema`, `npm`, `baseURL` to the rest of the system?**
-  _315 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `ponytail-config.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.07686274509803921 - nodes in this community are weakly interconnected._
+  _321 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `ponytail/package.json` be split into smaller, more focused modules?**
   _Cohesion score 0.05365853658536585 - nodes in this community are weakly interconnected._
-- **Should `ponytail-activate.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.0664451827242525 - nodes in this community are weakly interconnected._
+- **Should `ponytail-runtime.js` be split into smaller, more focused modules?**
+  _Cohesion score 0.12333333333333334 - nodes in this community are weakly interconnected._
 - **Should `Install` be split into smaller, more focused modules?**
   _Cohesion score 0.07407407407407407 - nodes in this community are weakly interconnected._
 - **Should `README.es.md` be split into smaller, more focused modules?**
   _Cohesion score 0.08695652173913043 - nodes in this community are weakly interconnected._
 - **Should `Install` be split into smaller, more focused modules?**
   _Cohesion score 0.09090909090909091 - nodes in this community are weakly interconnected._
+- **Should `MultiHopEngine` be split into smaller, more focused modules?**
+  _Cohesion score 0.10153846153846154 - nodes in this community are weakly interconnected._

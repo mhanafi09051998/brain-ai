@@ -18,6 +18,10 @@ Dokumen memori modular terdistribusi Claudia. Memori dipecah menjadi neuron-neur
 11. **[`N013_deep_storage_and_distributed_db.md`](file:///D:/Agent_Claudia_Autonomus/learning/neurons/N013_deep_storage_and_distributed_db.md)** — **Deep Storage & Distributed DB**: LSM-Tree vs B+ Tree, MemTable/SSTable Compaction, 2PC & Saga Transactions, HNSW Vector Indexing.
 12. **[`N014_zero_trust_security_and_cryptography.md`](file:///D:/Agent_Claudia_Autonomus/learning/neurons/N014_zero_trust_security_and_cryptography.md)** — **Zero-Trust Security & Cryptography**: PASETO Tokens, Constant-Time Hash, mTLS, STRIDE Threat Modeling, eBPF Kernel Probing.
 13. **[`N015_compiler_ast_and_system_profiling.md`](file:///D:/Agent_Claudia_Autonomus/learning/neurons/N015_compiler_ast_and_system_profiling.md)** — **Compiler AST & Diagnostics**: Tree-Sitter Visitor Pattern, WebAssembly WASM, CPU Flamegraphs, Event Loop Lag Profiling.
+14. **[`N016_frontier_benchmark_evaluator.md`](file:///D:/Agent_Claudia_Autonomus/learning/neurons/N016_frontier_benchmark_evaluator.md)** — **Frontier Benchmark Evaluator**: Telemetri live 6 parameter di `learn.zolu.my.id`.
+15. **[`N017_program_aided_math.md`](file:///D:/Agent_Claudia_Autonomus/learning/neurons/N017_program_aided_math.md)** — **Program-Aided Math & AIME Invariants**: Gaussian integers, Diophantine parity, recurrence closed-form.
+16. **[`N018_repomap_swebench.md`](file:///D:/Agent_Claudia_Autonomus/learning/neurons/N018_repomap_swebench.md)** — **RepoMap AST Compression & SWE-bench**: Aider PageRank AST call graph, root-cause diff.
+17. **[`N019_bfcl_ifeval_oracle.md`](file:///D:/Agent_Claudia_Autonomus/learning/neurons/N019_bfcl_ifeval_oracle.md)** — **BFCL Tool Schema & IFEval Oracle**: Strict negative constraint checking, tool schema rollback.
 
 
 
