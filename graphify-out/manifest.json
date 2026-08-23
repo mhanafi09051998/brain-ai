@@ -6,10 +6,10 @@
     "semantic_hash": ""
   },
   "learning/NEURON_INDEX.json": {
-    "mtime": 1787405648.6926944,
-    "seen": 1787440966.9016154,
-    "ast_hash": "ae46fab2e0d70558e8d2a3ebcfc3fa39",
-    "semantic_hash": "ae46fab2e0d70558e8d2a3ebcfc3fa39"
+    "mtime": 1787491304.172027,
+    "seen": 1787491321.3417857,
+    "ast_hash": "1fb4505e612814a7c2a2204ce9f3cbb9",
+    "semantic_hash": ""
   },
   "learning/scripts/grow_neurons.py": {
     "mtime": 1787405645.569641,
@@ -324,9 +324,9 @@
     "semantic_hash": ""
   },
   "memory.md": {
-    "mtime": 1787490786.9590697,
-    "seen": 1787490827.4109864,
-    "ast_hash": "81a7f5d66e99e6c62d0d1cb0a8500dd2",
+    "mtime": 1787491312.2196908,
+    "seen": 1787491321.3417857,
+    "ast_hash": "396705dba87ed2d42083b44757bfc951",
     "semantic_hash": ""
   },
   "memory/neurons/ai_engine_9router.md": {
@@ -615,6 +615,24 @@
     "mtime": 1787491151.523421,
     "seen": 1787491157.4474912,
     "ast_hash": "bdb9b45e0b9467e552f8b7afd32288ee",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N009_peak_algorithms_codex.md": {
+    "mtime": 1787491296.310493,
+    "seen": 1787491321.3417857,
+    "ast_hash": "f7cce696678c03987d3cbb949a9bb4a3",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N010_distributed_systems_design.md": {
+    "mtime": 1787491296.310493,
+    "seen": 1787491321.3417857,
+    "ast_hash": "53c3564879acd65b7e725bf7b39dab0e",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N011_mechanical_sympathy_perf.md": {
+    "mtime": 1787491296.310493,
+    "seen": 1787491321.3417857,
+    "ast_hash": "6dabad28bf91ebe3f5afbf1041020c06",
     "semantic_hash": ""
   }
 }

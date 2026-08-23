@@ -1,7 +1,7 @@
 # Graph Report - Agent_Claudia_Autonomus  (2026-08-23)
 
 ## Corpus Check
-- 82 files · ~284,978 words
+- 82 files · ~285,022 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1ceb3681`
+- Built from commit: `1a00f434`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -167,7 +167,7 @@ Nodes (7): Configure Default Mode, Deactivate, Levels, More, Ponytail Help, Skil
 
 ### Community 18 - "Ponytail, lazy senior dev mode"
 Cohesion: 0.29
-Nodes (6): Graphify Knowledge Graph:, Not lazy about:, Persona & Communication, Ponytail, lazy senior dev mode, Rules:, The Minimality Ladder
+Nodes (6): Graphify & Auto-Sync Knowledge Graph:, Not lazy about:, Persona & Communication, Ponytail, lazy senior dev mode, Rules:, The Minimality Ladder
 
 ### Community 19 - "Ponytail, lazy senior dev mode"
 Cohesion: 0.29
@@ -175,7 +175,7 @@ Nodes (6): Graphify Knowledge Graph:, Not lazy about:, Persona & Communication, 
 
 ### Community 20 - "Ponytail, lazy senior dev mode"
 Cohesion: 0.29
-Nodes (6): Graphify Knowledge Graph:, Not lazy about:, Persona & Communication, Ponytail, lazy senior dev mode, Rules:, The Minimality Ladder
+Nodes (6): Graphify & Auto-Sync Knowledge Graph:, Not lazy about:, Persona & Communication, Ponytail, lazy senior dev mode, Rules:, The Minimality Ladder
 
 ### Community 21 - "Ponytail, lazy senior dev mode"
 Cohesion: 0.29

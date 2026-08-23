@@ -11,6 +11,10 @@ Dokumen memori modular terdistribusi Claudia. Memori dipecah menjadi neuron-neur
 4. **[`vps_infrastructure.md`](file:///D:/Agent_Claudia_Autonomus/memory/neurons/vps_infrastructure.md)** — Arsitektur Cloud VPS, SQLite WAL engine, port-port aktif, dan status layanan PM2.
 5. **[`ai_engine_9router.md`](file:///D:/Agent_Claudia_Autonomus/memory/neurons/ai_engine_9router.md)** — 9Router API gateway, API key, spesifikasi `prod.zolu.my.id` (Port 3012), dan code generator scaffolding.
 6. **[`N008_live_session_checkpoint.md`](file:///D:/Agent_Claudia_Autonomus/learning/neurons/N008_live_session_checkpoint.md)** — **Live Session State Checkpoint**: Credentials admin (dikelola via `.env` / `.secrets`), Nextcloud (3015), Jellyfin (3016), Invite Portal `join.zolu.my.id` (3017), storage paths, subtitle cleaner, dan spesifikasi 1 TB SSD.
+7. **[`N009_peak_algorithms_codex.md`](file:///D:/Agent_Claudia_Autonomus/learning/neurons/N009_peak_algorithms_codex.md)** — **Peak Algorithmic Codex**: Graph SCC (Tarjan), Probabilistic Filters (Bloom/HyperLogLog), Segment Tree, Lock-Free Concurrency.
+8. **[`N010_distributed_systems_design.md`](file:///D:/Agent_Claudia_Autonomus/learning/neurons/N010_distributed_systems_design.md)** — **High-Scale Distributed Systems**: Raft/Paxos, Consistent Hashing, CQRS, Event Sourcing, Circuit Breakers.
+9. **[`N011_mechanical_sympathy_perf.md`](file:///D:/Agent_Claudia_Autonomus/learning/neurons/N011_mechanical_sympathy_perf.md)** — **Mechanical Sympathy & Zero-Copy**: L1/L2 Cache Locality, `sendfile`/`splice` Zero-Copy, `io_uring` kernel event multiplexing.
+
 
 
 
