@@ -604,17 +604,5 @@
     "seen": 1787495567.1661987,
     "ast_hash": "5eb0e850fdd3a3c97bbbf7d80c13dc1d",
     "semantic_hash": ""
-  },
-  ".claudia/settings.json": {
-    "mtime": 1787509298.8582664,
-    "seen": 1787509365.03831,
-    "ast_hash": "dad56d90699a9f21c14478b55a4b45d4",
-    "semantic_hash": ""
-  },
-  "opencode.json": {
-    "mtime": 1787507982.8265324,
-    "seen": 1787509365.03831,
-    "ast_hash": "050b11b9b718e6b29e092fcd8001b7da",
-    "semantic_hash": ""
   }
 }

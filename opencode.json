@@ -1,0 +1,34 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "9router": {
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "https://9router.zolu.my.id/v1",
+        "apiKey": "sk-b2a2f6c6f8228b4b-prod01-71d3127b"
+      },
+      "models": {
+        "ag/gemini-3.7-flash-high": {
+          "name": "Gemini 3.7 Flash High (9Router)",
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "model": "9router/ag/gemini-3.7-flash-high",
+  "agent": {
+    "explorer": {
+      "description": "Fast explorer subagent for codebase exploration",
+      "mode": "subagent",
+      "model": "9router/ag/gemini-3.7-flash-high"
+    }
+  }
+}

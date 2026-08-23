@@ -1,0 +1,850 @@
+{
+  "communities": {
+    "0": [
+      "ponytail_hooks_ponytail_config",
+      "ponytail_hooks_ponytail_config_fs",
+      "ponytail_hooks_ponytail_config_getconfigdir",
+      "ponytail_hooks_ponytail_config_getconfigpath",
+      "ponytail_hooks_ponytail_config_getdefaultmode",
+      "ponytail_hooks_ponytail_config_gethidestatus",
+      "ponytail_hooks_ponytail_config_getquietstartup",
+      "ponytail_hooks_ponytail_config_isdeactivationcommand",
+      "ponytail_hooks_ponytail_config_normalizeconfigmode",
+      "ponytail_hooks_ponytail_config_normalizemode",
+      "ponytail_hooks_ponytail_config_normalizepersistedmode",
+      "ponytail_hooks_ponytail_config_os",
+      "ponytail_hooks_ponytail_config_path",
+      "ponytail_hooks_ponytail_config_runtime_modes",
+      "ponytail_hooks_ponytail_config_valid_modes",
+      "ponytail_hooks_ponytail_config_writedefaultmode",
+      "ponytail_hooks_ponytail_instructions",
+      "ponytail_hooks_ponytail_instructions_default_mode_normalizemode_normalizepersistedmode",
+      "ponytail_hooks_ponytail_instructions_filterskillbodyformode",
+      "ponytail_hooks_ponytail_instructions_fs",
+      "ponytail_hooks_ponytail_instructions_getfallbackinstructions",
+      "ponytail_hooks_ponytail_instructions_getponytailinstructions",
+      "ponytail_hooks_ponytail_instructions_independent_modes",
+      "ponytail_hooks_ponytail_instructions_path",
+      "ponytail_hooks_ponytail_instructions_skill_path",
+      "ponytail_opencode_plugins_ponytail",
+      "ponytail_opencode_plugins_ponytail_dirname",
+      "ponytail_opencode_plugins_ponytail_frontmatter",
+      "ponytail_opencode_plugins_ponytail_frontmatter_parsecommandfile",
+      "ponytail_opencode_plugins_ponytail_getdefaultmode_normalizepersistedmode",
+      "ponytail_opencode_plugins_ponytail_getponytailinstructions",
+      "ponytail_opencode_plugins_ponytail_parsecommandfile",
+      "ponytail_opencode_plugins_ponytail_readmode",
+      "ponytail_opencode_plugins_ponytail_require",
+      "ponytail_opencode_plugins_ponytail_statepath",
+      "ponytail_opencode_plugins_ponytail_writemode",
+      "ponytail_pi_extension_index",
+      "ponytail_pi_extension_index_default_mode_runtime_modes_getdefaultmode_getquietstartup_gethidestatus_normalizemode_normalizepersistedmode_isdeactivationcommand_writedefaultmode",
+      "ponytail_pi_extension_index_getponytailinstructions_filterskillbodyformode",
+      "ponytail_pi_extension_index_parseponytailcommand",
+      "ponytail_pi_extension_index_ponytailextension",
+      "ponytail_pi_extension_index_ponytailextension_syncstatus",
+      "ponytail_pi_extension_index_readdefaultmode",
+      "ponytail_pi_extension_index_readquietstartup",
+      "ponytail_pi_extension_index_require",
+      "ponytail_pi_extension_index_resolvesessionmode",
+      "ponytail_pi_extension_index_runtime_mode_list",
+      "ponytail_pi_extension_test_extension_test",
+      "ponytail_pi_extension_test_extension_test_createcommandcontext",
+      "ponytail_pi_extension_test_extension_test_createpiharness",
+      "ponytail_pi_extension_test_extension_test_notify",
+      "ponytail_pi_extension_test_extension_test_withtempconfig",
+      "ponytail_pi_extension_test_helpers_test"
+    ],
+    "1": [
+      "ponytail_package",
+      "ponytail_package_author",
+      "ponytail_package_author_name",
+      "ponytail_package_author_url",
+      "ponytail_package_bugs",
+      "ponytail_package_bugs_url",
+      "ponytail_package_description",
+      "ponytail_package_exports",
+      "ponytail_package_exports_plugin",
+      "ponytail_package_files",
+      "ponytail_package_homepage",
+      "ponytail_package_keywords",
+      "ponytail_package_license",
+      "ponytail_package_main",
+      "ponytail_package_name",
+      "ponytail_package_pi",
+      "ponytail_package_pi_extensions",
+      "ponytail_package_pi_skills",
+      "ponytail_package_publishconfig",
+      "ponytail_package_publishconfig_access",
+      "ponytail_package_repository",
+      "ponytail_package_repository_type",
+      "ponytail_package_repository_url",
+      "ponytail_package_scripts",
+      "ponytail_package_scripts_test",
+      "ponytail_package_version",
+      "ref_agents_md",
+      "ref_assets",
+      "ref_hooks",
+      "ref_license",
+      "ref_opencode",
+      "ref_opencode_plugin",
+      "ref_pi",
+      "ref_pi_extension",
+      "ref_pi_extension_index_js",
+      "ref_pi_package",
+      "ref_ponytail",
+      "ref_qoder",
+      "ref_qoder_plugin",
+      "ref_scripts_uninstall_js",
+      "ref_skills"
+    ],
+    "2": [
+      "ponytail_hooks_ponytail_activate",
+      "ponytail_hooks_ponytail_activate_claudedir",
+      "ponytail_hooks_ponytail_activate_clearmode_iscodex_iscopilot_setmode_writehookoutput",
+      "ponytail_hooks_ponytail_activate_fs",
+      "ponytail_hooks_ponytail_activate_getdefaultmode_getclaudedir_isshellsafe",
+      "ponytail_hooks_ponytail_activate_getponytailinstructions",
+      "ponytail_hooks_ponytail_activate_mode",
+      "ponytail_hooks_ponytail_activate_output",
+      "ponytail_hooks_ponytail_activate_path",
+      "ponytail_hooks_ponytail_activate_settingspath",
+      "ponytail_hooks_ponytail_config_isshellsafe",
+      "ponytail_hooks_ponytail_mode_tracker",
+      "ponytail_hooks_ponytail_mode_tracker_clearmode_isqoder_readmode_setmode_writehookoutput",
+      "ponytail_hooks_ponytail_mode_tracker_finish",
+      "ponytail_hooks_ponytail_mode_tracker_getdefaultmode_isdeactivationcommand_writedefaultmode",
+      "ponytail_hooks_ponytail_mode_tracker_getponytailinstructions",
+      "ponytail_hooks_ponytail_runtime",
+      "ponytail_hooks_ponytail_runtime_clearmode",
+      "ponytail_hooks_ponytail_runtime_fs",
+      "ponytail_hooks_ponytail_runtime_getclaudedir_getconfigdir",
+      "ponytail_hooks_ponytail_runtime_iscopilot",
+      "ponytail_hooks_ponytail_runtime_os",
+      "ponytail_hooks_ponytail_runtime_path",
+      "ponytail_hooks_ponytail_runtime_readmode",
+      "ponytail_hooks_ponytail_runtime_setmode",
+      "ponytail_hooks_ponytail_runtime_statedir",
+      "ponytail_hooks_ponytail_runtime_statepath",
+      "ponytail_hooks_ponytail_runtime_writehookoutput",
+      "ponytail_hooks_ponytail_subagent",
+      "ponytail_hooks_ponytail_subagent_finish",
+      "ponytail_hooks_ponytail_subagent_getponytailinstructions",
+      "ponytail_hooks_ponytail_subagent_inject",
+      "ponytail_hooks_ponytail_subagent_mode",
+      "ponytail_hooks_ponytail_subagent_readmode_writehookoutput"
+    ],
+    "3": [
+      "ponytail_qoder_rules_ponytail",
+      "ponytail_qoder_rules_ponytail_ponytail_lazy_senior_dev_mode",
+      "ponytail_readme",
+      "ponytail_readme_antigravity_cli",
+      "ponytail_readme_before_after",
+      "ponytail_readme_claude_code",
+      "ponytail_readme_codewhale",
+      "ponytail_readme_codex",
+      "ponytail_readme_commands",
+      "ponytail_readme_development",
+      "ponytail_readme_devin_cli",
+      "ponytail_readme_faq",
+      "ponytail_readme_gemini_cli",
+      "ponytail_readme_github_copilot_cli",
+      "ponytail_readme_hermes_agent",
+      "ponytail_readme_how_it_works",
+      "ponytail_readme_install",
+      "ponytail_readme_license",
+      "ponytail_readme_numbers",
+      "ponytail_readme_openclaw",
+      "ponytail_readme_opencode",
+      "ponytail_readme_pi_agent_harness",
+      "ponytail_readme_qoder",
+      "ponytail_readme_sponsors",
+      "ponytail_readme_star_history",
+      "ponytail_readme_swival",
+      "ponytail_readme_uninstall"
+    ],
+    "4": [
+      "ponytail_agents",
+      "ponytail_agents_ponytail_lazy_senior_dev_mode",
+      "ponytail_readme_es",
+      "ponytail_readme_es_antes_después",
+      "ponytail_readme_es_antigravity_cli",
+      "ponytail_readme_es_claude_code",
+      "ponytail_readme_es_codewhale",
+      "ponytail_readme_es_codex",
+      "ponytail_readme_es_comandos",
+      "ponytail_readme_es_cómo_funciona",
+      "ponytail_readme_es_desarrollo",
+      "ponytail_readme_es_devin_cli",
+      "ponytail_readme_es_faq",
+      "ponytail_readme_es_gemini_cli",
+      "ponytail_readme_es_github_copilot_cli",
+      "ponytail_readme_es_historial_de_estrellas",
+      "ponytail_readme_es_instalación",
+      "ponytail_readme_es_licencia",
+      "ponytail_readme_es_números",
+      "ponytail_readme_es_openclaw",
+      "ponytail_readme_es_opencode",
+      "ponytail_readme_es_patrocinadores",
+      "ponytail_readme_es_pi_agent_harness"
+    ],
+    "5": [
+      "ponytail_readme_ko",
+      "ponytail_readme_ko_antigravity_cli",
+      "ponytail_readme_ko_before_after",
+      "ponytail_readme_ko_claude_code",
+      "ponytail_readme_ko_codewhale",
+      "ponytail_readme_ko_codex",
+      "ponytail_readme_ko_commands",
+      "ponytail_readme_ko_development",
+      "ponytail_readme_ko_devin_cli",
+      "ponytail_readme_ko_faq",
+      "ponytail_readme_ko_gemini_cli",
+      "ponytail_readme_ko_github_copilot_cli",
+      "ponytail_readme_ko_how_it_works",
+      "ponytail_readme_ko_install",
+      "ponytail_readme_ko_license",
+      "ponytail_readme_ko_numbers",
+      "ponytail_readme_ko_openclaw",
+      "ponytail_readme_ko_opencode",
+      "ponytail_readme_ko_pi_agent_harness",
+      "ponytail_readme_ko_sponsors",
+      "ponytail_readme_ko_star_history",
+      "ponytail_readme_ko_swival"
+    ],
+    "6": [
+      "prod_planner",
+      "prod_planner_1_1_tech_stack_standar",
+      "prod_planner_1_arsitektur_sistem_spesifikasi_inti",
+      "prod_planner_2_aturan_modularity_maintenance_max_300_lines_file",
+      "prod_planner_3_struktur_direktori_proyek_modular_layout",
+      "prod_planner_4_skema_database_sqlite_wal_mode",
+      "prod_planner_5_integrasi_mesin_ai_9router_lib_ai_router_client_ts",
+      "prod_planner_6_prompting_invariant_modular_code_decomposition",
+      "prod_planner_7_tahapan_implementasi_deployment",
+      "prod_planner_production_planning_specification_zolu_ai_web_production_engine"
+    ],
+    "7": [
+      "agents_skills_ponytail_skill",
+      "agents_skills_ponytail_skill_boundaries",
+      "agents_skills_ponytail_skill_intensity",
+      "agents_skills_ponytail_skill_output",
+      "agents_skills_ponytail_skill_persistence",
+      "agents_skills_ponytail_skill_ponytail",
+      "agents_skills_ponytail_skill_rules",
+      "agents_skills_ponytail_skill_the_ladder",
+      "agents_skills_ponytail_skill_when_not_to_be_lazy"
+    ],
+    "8": [
+      "ponytail_skills_ponytail_skill",
+      "ponytail_skills_ponytail_skill_boundaries",
+      "ponytail_skills_ponytail_skill_intensity",
+      "ponytail_skills_ponytail_skill_output",
+      "ponytail_skills_ponytail_skill_persistence",
+      "ponytail_skills_ponytail_skill_ponytail",
+      "ponytail_skills_ponytail_skill_rules",
+      "ponytail_skills_ponytail_skill_the_ladder",
+      "ponytail_skills_ponytail_skill_when_not_to_be_lazy"
+    ],
+    "9": [
+      "toolkit_readme",
+      "toolkit_readme_1_biome_biomejs_biome_linter_formatter_rust",
+      "toolkit_readme_2_playwright_playwright_chromium_headless_ui_end_to_end_testing",
+      "toolkit_readme_3_hono_hono_ultra_lightweight_edge_web_framework",
+      "toolkit_readme_4_zod_zod_runtime_schema_validation",
+      "toolkit_readme_5_drizzle_orm_drizzle_orm_better_sqlite3_zero_bloat_type_safe_database",
+      "toolkit_readme_6_puppeteer_puppeteer_headless_chrome_automation",
+      "toolkit_readme_daftar_modul_framework",
+      "toolkit_readme_standar_keamanan_vetting"
+    ],
+    "10": [
+      "agents_skills_ponytail_help_skill",
+      "agents_skills_ponytail_help_skill_configure_default_mode",
+      "agents_skills_ponytail_help_skill_deactivate",
+      "agents_skills_ponytail_help_skill_levels",
+      "agents_skills_ponytail_help_skill_more",
+      "agents_skills_ponytail_help_skill_ponytail_help",
+      "agents_skills_ponytail_help_skill_skills",
+      "agents_skills_ponytail_help_skill_update"
+    ],
+    "11": [
+      "identity",
+      "identity_1_ponytail_lazy_senior_dev_engine",
+      "identity_2_graphify_knowledge_graph_structural_memory",
+      "identity_3_9router_ai_gateway_model_routing",
+      "identity_core_engines_workflows",
+      "identity_identity_claudia",
+      "identity_karakter_gaya_komunikasi",
+      "identity_self_learning_loop"
+    ],
+    "12": [
+      "ponytail_skills_ponytail_help_skill",
+      "ponytail_skills_ponytail_help_skill_configure_default_mode",
+      "ponytail_skills_ponytail_help_skill_deactivate",
+      "ponytail_skills_ponytail_help_skill_levels",
+      "ponytail_skills_ponytail_help_skill_more",
+      "ponytail_skills_ponytail_help_skill_ponytail_help",
+      "ponytail_skills_ponytail_help_skill_skills",
+      "ponytail_skills_ponytail_help_skill_update"
+    ],
+    "13": [
+      "agents",
+      "agents_graphify_auto_sync_knowledge_graph",
+      "agents_not_lazy_about",
+      "agents_persona_communication",
+      "agents_ponytail_lazy_senior_dev_mode",
+      "agents_rules",
+      "agents_the_minimality_ladder"
+    ],
+    "14": [
+      "agents_rules_ponytail",
+      "agents_rules_ponytail_graphify_knowledge_graph",
+      "agents_rules_ponytail_not_lazy_about",
+      "agents_rules_ponytail_persona_communication",
+      "agents_rules_ponytail_ponytail_lazy_senior_dev_mode",
+      "agents_rules_ponytail_rules",
+      "agents_rules_ponytail_the_minimality_ladder"
+    ],
+    "15": [
+      "gemini",
+      "gemini_graphify_auto_sync_knowledge_graph",
+      "gemini_not_lazy_about",
+      "gemini_persona_communication",
+      "gemini_ponytail_lazy_senior_dev_mode",
+      "gemini_rules",
+      "gemini_the_minimality_ladder"
+    ],
+    "16": [
+      "ponytail_hooks_ponytail_config_getclaudedir",
+      "ponytail_scripts_uninstall",
+      "ponytail_scripts_uninstall_fs",
+      "ponytail_scripts_uninstall_getconfigpath_getclaudedir",
+      "ponytail_scripts_uninstall_path",
+      "ponytail_scripts_uninstall_removeifexists",
+      "ponytail_scripts_uninstall_settingspath"
+    ],
+    "17": [
+      "windsurf_rules_ponytail",
+      "windsurf_rules_ponytail_graphify_knowledge_graph",
+      "windsurf_rules_ponytail_not_lazy_about",
+      "windsurf_rules_ponytail_persona_communication",
+      "windsurf_rules_ponytail_ponytail_lazy_senior_dev_mode",
+      "windsurf_rules_ponytail_rules",
+      "windsurf_rules_ponytail_the_minimality_ladder"
+    ],
+    "18": [
+      "learning_feedback_log_mojoloker_learnings",
+      "learning_feedback_log_mojoloker_learnings_1_tampilan_mode",
+      "learning_feedback_log_mojoloker_learnings_2_dropdown_komponen_formulir",
+      "learning_feedback_log_mojoloker_learnings_3_responsivitas_mobile",
+      "learning_feedback_log_mojoloker_learnings_4_branding_desain_khusus_mojoloker",
+      "learning_feedback_log_mojoloker_learnings_pembelajaran_standar_tetap_learnings_fixed_rules_claudia"
+    ],
+    "19": [
+      "learning_neurons_n008_live_session_checkpoint",
+      "learning_neurons_n008_live_session_checkpoint_deployed_ecosystem_port_mappings",
+      "learning_neurons_n008_live_session_checkpoint_installed_autonomous_fullstack_security_toolkit",
+      "learning_neurons_n008_live_session_checkpoint_media_engine_strict_subtitle_cleaner",
+      "learning_neurons_n008_live_session_checkpoint_metadata",
+      "learning_neurons_n008_live_session_checkpoint_neuron_n008_persistent_live_session_checkpoint_infrastructure_state"
+    ],
+    "20": [
+      "ponytail_pi_extension_package",
+      "ponytail_pi_extension_package_name",
+      "ponytail_pi_extension_package_private",
+      "ponytail_pi_extension_package_scripts",
+      "ponytail_pi_extension_package_scripts_test",
+      "ponytail_pi_extension_package_type"
+    ],
+    "21": [
+      "readme",
+      "readme_arsitektur_memori_pengetahuan",
+      "readme_core_philosophy_the_minimality_ladder_ponytail",
+      "readme_memulai_quick_start",
+      "readme_persenjataan_fullstack_yang_terpasang",
+      "readme_standar_keamanan_manajemen_kredensial"
+    ],
+    "22": [
+      "zolu_kas_dashboard_page",
+      "zolu_kas_dashboard_page_categorystat",
+      "zolu_kas_dashboard_page_dashboardpage",
+      "zolu_kas_dashboard_page_toast",
+      "zolu_kas_dashboard_page_transaction",
+      "zolu_kas_dashboard_page_walletdata"
+    ],
+    "23": [
+      "agents_skills_ponytail_audit_skill",
+      "agents_skills_ponytail_audit_skill_boundaries",
+      "agents_skills_ponytail_audit_skill_hunt",
+      "agents_skills_ponytail_audit_skill_output",
+      "agents_skills_ponytail_audit_skill_tags"
+    ],
+    "24": [
+      "agents_skills_ponytail_gain_skill",
+      "agents_skills_ponytail_gain_skill_boundaries",
+      "agents_skills_ponytail_gain_skill_honesty_boundary",
+      "agents_skills_ponytail_gain_skill_ponytail_gain",
+      "agents_skills_ponytail_gain_skill_scoreboard"
+    ],
+    "25": [
+      "agents_skills_ponytail_review_skill",
+      "agents_skills_ponytail_review_skill_boundaries",
+      "agents_skills_ponytail_review_skill_examples",
+      "agents_skills_ponytail_review_skill_format",
+      "agents_skills_ponytail_review_skill_scoring"
+    ],
+    "26": [
+      "learning_knowledge_base_core_stack",
+      "learning_knowledge_base_core_stack_1_database_storage",
+      "learning_knowledge_base_core_stack_2_web_service_stack",
+      "learning_knowledge_base_core_stack_3_engineering_intelligence_engines",
+      "learning_knowledge_base_core_stack_core_stack_architecture"
+    ],
+    "27": [
+      "learning_neurons_n001_executive_decisions",
+      "learning_neurons_n001_executive_decisions_core_concept",
+      "learning_neurons_n001_executive_decisions_neuron_n001_executive_decision_making",
+      "learning_neurons_n001_executive_decisions_synaptic_links",
+      "learning_neurons_n001_executive_decisions_triggers_heuristics"
+    ],
+    "28": [
+      "memory",
+      "memory_active_memory_neurons",
+      "memory_active_tasks_history",
+      "memory_claudia_neuron_memory_network",
+      "memory_prosedur_pembaruan_memori"
+    ],
+    "29": [
+      "ponytail_skills_ponytail_audit_skill",
+      "ponytail_skills_ponytail_audit_skill_boundaries",
+      "ponytail_skills_ponytail_audit_skill_hunt",
+      "ponytail_skills_ponytail_audit_skill_output",
+      "ponytail_skills_ponytail_audit_skill_tags"
+    ],
+    "30": [
+      "ponytail_skills_ponytail_gain_skill",
+      "ponytail_skills_ponytail_gain_skill_boundaries",
+      "ponytail_skills_ponytail_gain_skill_honesty_boundary",
+      "ponytail_skills_ponytail_gain_skill_ponytail_gain",
+      "ponytail_skills_ponytail_gain_skill_scoreboard"
+    ],
+    "31": [
+      "ponytail_skills_ponytail_review_skill",
+      "ponytail_skills_ponytail_review_skill_boundaries",
+      "ponytail_skills_ponytail_review_skill_examples",
+      "ponytail_skills_ponytail_review_skill_format",
+      "ponytail_skills_ponytail_review_skill_scoring"
+    ],
+    "32": [
+      "agents_skills_ponytail_debt_skill",
+      "agents_skills_ponytail_debt_skill_boundaries",
+      "agents_skills_ponytail_debt_skill_output",
+      "agents_skills_ponytail_debt_skill_scan"
+    ],
+    "33": [
+      "learning_feedback_log_readme",
+      "learning_feedback_log_readme_feedback_log",
+      "learning_feedback_log_readme_log_001_inisialisasi_persona",
+      "learning_feedback_log_readme_log_002_executive_decision_making_anti_pilihan_berlebih"
+    ],
+    "34": [
+      "learning_neurons_n003_mobile_first_ui",
+      "learning_neurons_n003_mobile_first_ui_core_concept",
+      "learning_neurons_n003_mobile_first_ui_neuron_n003_mobile_first_ui_compact_data_viz",
+      "learning_neurons_n003_mobile_first_ui_synaptic_links"
+    ],
+    "35": [
+      "learning_neurons_n004_ponytail_minimality",
+      "learning_neurons_n004_ponytail_minimality_core_concept",
+      "learning_neurons_n004_ponytail_minimality_neuron_n004_ponytail_minimality_ladder",
+      "learning_neurons_n004_ponytail_minimality_synaptic_links"
+    ],
+    "36": [
+      "learning_neurons_n005_graphify_knowledge",
+      "learning_neurons_n005_graphify_knowledge_core_concept",
+      "learning_neurons_n005_graphify_knowledge_neuron_n005_graphify_knowledge_network",
+      "learning_neurons_n005_graphify_knowledge_synaptic_links"
+    ],
+    "37": [
+      "learning_neurons_n006_9router_gateway",
+      "learning_neurons_n006_9router_gateway_core_concept",
+      "learning_neurons_n006_9router_gateway_neuron_n006_9router_gateway_engine",
+      "learning_neurons_n006_9router_gateway_synaptic_links"
+    ],
+    "38": [
+      "learning_neurons_n007_self_improving_loop",
+      "learning_neurons_n007_self_improving_loop_core_concept",
+      "learning_neurons_n007_self_improving_loop_neuron_n007_autonomous_self_improving_loop",
+      "learning_neurons_n007_self_improving_loop_synaptic_links"
+    ],
+    "39": [
+      "learning_neurons_n009_peak_algorithms_codex",
+      "learning_neurons_n009_peak_algorithms_codex_1_graph_network_flow_algorithms",
+      "learning_neurons_n009_peak_algorithms_codex_2_probabilistic_spatial_data_structures",
+      "learning_neurons_n009_peak_algorithms_codex_3_high_performance_concurrency_rate_limiting"
+    ],
+    "40": [
+      "learning_readme",
+      "learning_readme_alur_pembelajaran",
+      "learning_readme_self_learning_framework",
+      "learning_readme_struktur_folder"
+    ],
+    "41": [
+      "ponytail_skills_ponytail_debt_skill",
+      "ponytail_skills_ponytail_debt_skill_boundaries",
+      "ponytail_skills_ponytail_debt_skill_output",
+      "ponytail_skills_ponytail_debt_skill_scan"
+    ],
+    "42": [
+      "agents_skills_graphify_skill",
+      "agents_skills_graphify_skill_graphify",
+      "agents_skills_graphify_skill_usage"
+    ],
+    "43": [
+      "learning_knowledge_base_readme",
+      "learning_knowledge_base_readme_knowledge_base_index",
+      "learning_knowledge_base_readme_topik_aktif"
+    ],
+    "44": [
+      "learning_neurons_n002_vps_remote_ops",
+      "learning_neurons_n002_vps_remote_ops_core_concept",
+      "learning_neurons_n002_vps_remote_ops_neuron_n002_vps_remote_operations_pipeline"
+    ],
+    "45": [
+      "learning_neurons_n010_distributed_systems_design",
+      "learning_neurons_n010_distributed_systems_design_1_konsensus_replikasi",
+      "learning_neurons_n010_distributed_systems_design_2_pola_arsitektur_resilien"
+    ],
+    "46": [
+      "learning_neurons_n011_mechanical_sympathy_perf",
+      "learning_neurons_n011_mechanical_sympathy_perf_1_cpu_cache_locality_data_oriented_design",
+      "learning_neurons_n011_mechanical_sympathy_perf_2_zero_copy_i_o_asynchronous_event_loops"
+    ],
+    "47": [
+      "learning_neurons_n012_deep_search_and_graph_rag",
+      "learning_neurons_n012_deep_search_and_graph_rag_1_hybrid_search_reciprocal_rank_fusion_rrf",
+      "learning_neurons_n012_deep_search_and_graph_rag_2_multi_hop_graphrag_ast_code_navigation"
+    ],
+    "48": [
+      "learning_neurons_n013_deep_storage_and_distributed_db",
+      "learning_neurons_n013_deep_storage_and_distributed_db_1_storage_engine_internals_lsm_tree_vs_b_tree",
+      "learning_neurons_n013_deep_storage_and_distributed_db_2_distributed_transactions_vector_indexing"
+    ],
+    "49": [
+      "learning_neurons_n014_zero_trust_security_and_cryptography",
+      "learning_neurons_n014_zero_trust_security_and_cryptography_1_modern_cryptography_token_architecture",
+      "learning_neurons_n014_zero_trust_security_and_cryptography_2_threat_modeling_runtime_protection"
+    ],
+    "50": [
+      "learning_neurons_n015_compiler_ast_and_system_profiling",
+      "learning_neurons_n015_compiler_ast_and_system_profiling_1_abstract_syntax_tree_ast_code_transformation",
+      "learning_neurons_n015_compiler_ast_and_system_profiling_2_production_profiling_post_mortem_diagnostics"
+    ],
+    "51": [
+      "learning_playbooks_graphify_workflow",
+      "learning_playbooks_graphify_workflow_ekstraksi_refresh_graf",
+      "learning_playbooks_graphify_workflow_playbook_graphify_workflow"
+    ],
+    "52": [
+      "learning_playbooks_readme",
+      "learning_playbooks_readme_daftar_playbook",
+      "learning_playbooks_readme_playbooks"
+    ],
+    "53": [
+      "learning_playbooks_self_improving",
+      "learning_playbooks_self_improving_4_langkah_siklus_self_improving",
+      "learning_playbooks_self_improving_playbook_self_improving_mechanism"
+    ],
+    "54": [
+      "learning_scripts_grow_neurons",
+      "learning_scripts_grow_neurons_grow_neural_mesh",
+      "learning_scripts_grow_neurons_rationale_1"
+    ],
+    "55": [
+      "scripts_auto_sync_github",
+      "scripts_auto_sync_github_auto_sync",
+      "scripts_auto_sync_github_run_cmd"
+    ],
+    "56": [
+      "agents_rules_graphify",
+      "agents_rules_graphify_graphify"
+    ],
+    "57": [
+      "agents_workflows_graphify",
+      "agents_workflows_graphify_workflow_graphify"
+    ],
+    "58": [
+      "learning_reflections_readme",
+      "learning_reflections_readme_reflections_memory_aggregations"
+    ],
+    "59": [
+      "memory_neurons_ai_engine_9router",
+      "memory_neurons_ai_engine_9router_neuron_memory_9router_ai_engine_web_production"
+    ],
+    "60": [
+      "memory_neurons_mojoloker_brand",
+      "memory_neurons_mojoloker_brand_neuron_memory_mojoloker_domain_brand_identity"
+    ],
+    "61": [
+      "memory_neurons_ui_ux_design_rules",
+      "memory_neurons_ui_ux_design_rules_neuron_memory_standar_desain_ui_ux_aturan_kode"
+    ],
+    "62": [
+      "memory_neurons_user_profile",
+      "memory_neurons_user_profile_neuron_memory_user_profile_persona"
+    ],
+    "63": [
+      "memory_neurons_vps_infrastructure",
+      "memory_neurons_vps_infrastructure_neuron_memory_vps_infrastructure_services"
+    ],
+    "64": [
+      "ponytail_hooks_ponytail_statusline_sh__entry",
+      "ponytail_hooks_ponytail_statusline_sh_ponytail_hooks_ponytail_statusline"
+    ],
+    "65": [
+      "ecosystem_config"
+    ],
+    "66": [
+      "ponytail_hooks_ponytail_statusline_ps1_ponytail_hooks_ponytail_statusline"
+    ],
+    "67": [
+      "ponytail_opencode_command_ponytail"
+    ],
+    "68": [
+      "ponytail_opencode_command_ponytail_audit"
+    ],
+    "69": [
+      "ponytail_opencode_command_ponytail_debt"
+    ],
+    "70": [
+      "ponytail_opencode_command_ponytail_gain"
+    ],
+    "71": [
+      "ponytail_opencode_command_ponytail_help"
+    ],
+    "72": [
+      "ponytail_opencode_command_ponytail_review"
+    ]
+  },
+  "cohesion": {
+    "0": 0.07474600870827286,
+    "1": 0.05365853658536585,
+    "2": 0.0873440285204991,
+    "3": 0.07407407407407407,
+    "4": 0.08695652173913043,
+    "5": 0.09090909090909091,
+    "6": 0.2,
+    "7": 0.2222222222222222,
+    "8": 0.2222222222222222,
+    "9": 0.2222222222222222,
+    "10": 0.25,
+    "11": 0.25,
+    "12": 0.25,
+    "13": 0.2857142857142857,
+    "14": 0.2857142857142857,
+    "15": 0.2857142857142857,
+    "16": 0.2857142857142857,
+    "17": 0.2857142857142857,
+    "18": 0.3333333333333333,
+    "19": 0.3333333333333333,
+    "20": 0.3333333333333333,
+    "21": 0.3333333333333333,
+    "22": 0.3333333333333333,
+    "23": 0.4,
+    "24": 0.4,
+    "25": 0.4,
+    "26": 0.4,
+    "27": 0.4,
+    "28": 0.4,
+    "29": 0.4,
+    "30": 0.4,
+    "31": 0.4,
+    "32": 0.5,
+    "33": 0.5,
+    "34": 0.5,
+    "35": 0.5,
+    "36": 0.5,
+    "37": 0.5,
+    "38": 0.5,
+    "39": 0.5,
+    "40": 0.5,
+    "41": 0.5,
+    "42": 0.6666666666666666,
+    "43": 0.6666666666666666,
+    "44": 0.6666666666666666,
+    "45": 0.6666666666666666,
+    "46": 0.6666666666666666,
+    "47": 0.6666666666666666,
+    "48": 0.6666666666666666,
+    "49": 0.6666666666666666,
+    "50": 0.6666666666666666,
+    "51": 0.6666666666666666,
+    "52": 0.6666666666666666,
+    "53": 0.6666666666666666,
+    "54": 0.6666666666666666,
+    "55": 1.0,
+    "56": 1.0,
+    "57": 1.0,
+    "58": 1.0,
+    "59": 1.0,
+    "60": 1.0,
+    "61": 1.0,
+    "62": 1.0,
+    "63": 1.0,
+    "64": 1.0,
+    "65": 1.0,
+    "66": 1.0,
+    "67": 1.0,
+    "68": 1.0,
+    "69": 1.0,
+    "70": 1.0,
+    "71": 1.0,
+    "72": 1.0
+  },
+  "gods": [
+    {
+      "id": "ponytail_readme_install",
+      "label": "Install",
+      "degree": 15
+    },
+    {
+      "id": "ponytail_hooks_ponytail_instructions_getponytailinstructions",
+      "label": "getPonytailInstructions()",
+      "degree": 13
+    },
+    {
+      "id": "ponytail_pi_extension_index_ponytailextension",
+      "label": "ponytailExtension()",
+      "degree": 13
+    },
+    {
+      "id": "ponytail_readme_ko_install",
+      "label": "Install",
+      "degree": 12
+    },
+    {
+      "id": "ponytail_hooks_ponytail_config_normalizepersistedmode",
+      "label": "normalizePersistedMode()",
+      "degree": 11
+    },
+    {
+      "id": "ponytail_package_files",
+      "label": "files",
+      "degree": 11
+    },
+    {
+      "id": "ponytail_readme_es_instalación",
+      "label": "Instalación",
+      "degree": 11
+    },
+    {
+      "id": "ponytail_hooks_ponytail_config_getdefaultmode",
+      "label": "getDefaultMode()",
+      "degree": 9
+    },
+    {
+      "id": "ponytail_hooks_ponytail_mode_tracker_finish",
+      "label": "finish()",
+      "degree": 9
+    },
+    {
+      "id": "ponytail_hooks_ponytail_config_normalizemode",
+      "label": "normalizeMode()",
+      "degree": 8
+    }
+  ],
+  "surprises": [
+    {
+      "source": "finish()",
+      "target": "getDefaultMode()",
+      "source_files": [
+        "ponytail/hooks/ponytail-mode-tracker.js",
+        "ponytail/hooks/ponytail-config.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "finish()",
+      "target": "isDeactivationCommand()",
+      "source_files": [
+        "ponytail/hooks/ponytail-mode-tracker.js",
+        "ponytail/hooks/ponytail-config.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "finish()",
+      "target": "writeDefaultMode()",
+      "source_files": [
+        "ponytail/hooks/ponytail-mode-tracker.js",
+        "ponytail/hooks/ponytail-config.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "finish()",
+      "target": "getPonytailInstructions()",
+      "source_files": [
+        "ponytail/hooks/ponytail-mode-tracker.js",
+        "ponytail/hooks/ponytail-instructions.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "inject()",
+      "target": "getPonytailInstructions()",
+      "source_files": [
+        "ponytail/hooks/ponytail-subagent.js",
+        "ponytail/hooks/ponytail-instructions.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    }
+  ],
+  "questions": [
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `CategoryStat`, `Toast`, `Transaction` to the rest of the system?",
+      "why": "301 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `ponytail-config.js` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.07474600870827286 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `ponytail/package.json` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.05365853658536585 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `ponytail-activate.js` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.0873440285204991 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Install` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.07407407407407407 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `README.es.md` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.08695652173913043 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Install` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.09090909090909091 - nodes in this community are weakly interconnected."
+    }
+  ]
+}
