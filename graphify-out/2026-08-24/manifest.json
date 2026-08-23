@@ -606,9 +606,9 @@
     "semantic_hash": ""
   },
   ".claudia/settings.json": {
-    "mtime": 1787516847.7706854,
-    "seen": 1787516876.570004,
-    "ast_hash": "cfe02f77365438905644bace5ad2db79",
+    "mtime": 1787519556.8805127,
+    "seen": 1787519566.4557292,
+    "ast_hash": "a2654ef6c12be99edb7dde0e22a46507",
     "semantic_hash": ""
   },
   "opencode.json": {
@@ -753,6 +753,18 @@
     "mtime": 1787514523.2924187,
     "seen": 1787514556.619476,
     "ast_hash": "7448f56bfe2c158862b552cd3b52f8fc",
+    "semantic_hash": ""
+  },
+  "scripts/claudiacode_server.js": {
+    "mtime": 1787517436.3920605,
+    "seen": 1787517487.3373945,
+    "ast_hash": "a483a8a2705d60b8d727bf149740c5e0",
+    "semantic_hash": ""
+  },
+  "scripts/claudiacode_login.html": {
+    "mtime": 1787517432.357074,
+    "seen": 1787517487.3373945,
+    "ast_hash": "f1f5dec6bb4ab7c275fadc577da33ec5",
     "semantic_hash": ""
   }
 }

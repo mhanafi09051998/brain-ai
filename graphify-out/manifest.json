@@ -766,5 +766,11 @@
     "seen": 1787517487.3373945,
     "ast_hash": "f1f5dec6bb4ab7c275fadc577da33ec5",
     "semantic_hash": ""
+  },
+  ".claudia/mcp.json": {
+    "mtime": 1787519742.5359206,
+    "seen": 1787519760.5116878,
+    "ast_hash": "16dfbb04d0aea7824aab724313d4334f",
+    "semantic_hash": ""
   }
 }

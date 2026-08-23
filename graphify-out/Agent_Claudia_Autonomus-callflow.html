@@ -60,7 +60,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 <div class="container">
 
 <h1>Agent_Claudia_Autonomus — Complete Call Flow &amp; Architecture Documentation</h1>
-<p class="subtitle">Generated from graphify knowledge graph: 595 nodes, 627 edges, 87 communities. Commit: dc6d4ba</p>
+<p class="subtitle">Generated from graphify knowledge graph: 601 nodes, 633 edges, 88 communities. Commit: d0d645b</p>
 
 <div class="nav">
     <a href="#overview">Architecture Overview</a>
@@ -90,11 +90,11 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 flowchart LR
     EXTRACT_PIPELINE_5F350230("Extraction Pipeline<br/><small>22 nodes</small>")
     class EXTRACT_PIPELINE_5F350230 module;
-    BUILD_GRAPH_321CBB04("Graph Build<br/><small>82 nodes</small>")
+    BUILD_GRAPH_321CBB04("Graph Build<br/><small>88 nodes</small>")
     class BUILD_GRAPH_321CBB04 module;
     ANALYSIS_CLUSTERING_C79796DA("Analysis &amp; Clustering<br/><small>36 nodes</small>")
     class ANALYSIS_CLUSTERING_C79796DA module;
-    CLI_SKILLS_9964CBB8("CLI &amp; Skill Installers<br/><small>199 nodes</small>")
+    CLI_SKILLS_9964CBB8("CLI &amp; Skill Installers<br/><small>197 nodes</small>")
     class CLI_SKILLS_9964CBB8 module;
     INGEST_CACHE_UPDATE_FF457338("Ingestion &amp; Updates<br/><small>4 nodes</small>")
     class INGEST_CACHE_UPDATE_FF457338 module;
@@ -102,7 +102,7 @@ flowchart LR
     class SERVE_API_35EC8E86 module;
     SECURITY_GLOBAL_5B9C6A04("Security &amp; Global Graph<br/><small>3 nodes</small>")
     class SECURITY_GLOBAL_5B9C6A04 module;
-    TESTS_FIXTURES_B84B1DCC("Tests &amp; Fixtures<br/><small>54 nodes</small>")
+    TESTS_FIXTURES_B84B1DCC("Tests &amp; Fixtures<br/><small>56 nodes</small>")
     class TESTS_FIXTURES_B84B1DCC module;
     ZOLU_LEARN_SERVER_JS_C42CA56A("zolu_learn_server.js<br/><small>16 nodes</small>")
     class ZOLU_LEARN_SERVER_JS_C42CA56A module;
@@ -118,8 +118,8 @@ flowchart LR
     class PONYTAIL_LAZY_SENIOR_DEV_MODE_36116E_97C13027 module;
     OTHER_D0941E68("Other<br/><small>131 nodes</small>")
     class OTHER_D0941E68 module;
-    CLI_SKILLS_9964CBB8 -->|imports x19| TESTS_FIXTURES_B84B1DCC
-    TESTS_FIXTURES_B84B1DCC -->|indirect call x5| CLI_SKILLS_9964CBB8
+    CLI_SKILLS_9964CBB8 -->|imports x18| TESTS_FIXTURES_B84B1DCC
+    TESTS_FIXTURES_B84B1DCC -->|calls x6| CLI_SKILLS_9964CBB8
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -136,7 +136,7 @@ flowchart LR
     <h4>Architecture Layers</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>Layer</th><th>Nodes</th><th>Communities</th></tr>
-      <tr><td>Extraction Pipeline</td><td>22</td><td><code>79, 81, 48, 50</code></td></tr><tr><td>Graph Build</td><td>82</td><td><code>1, 73, 9, 20, 82</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>36</td><td><code>22, 74, 16</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>199</td><td><code>2, 3, 4, 5, 7, 8, 10, 12, 23, 24, 25, 29, 30, 31, 32, 39, 41, 42, 67, 68, 69, 70, 71, 72</code></td></tr><tr><td>Ingestion &amp; Updates</td><td>4</td><td><code>78</code></td></tr><tr><td>Serving API</td><td>4</td><td><code>47, 84</code></td></tr><tr><td>Security &amp; Global Graph</td><td>3</td><td><code>49</code></td></tr><tr><td>Tests &amp; Fixtures</td><td>54</td><td><code>0, 77</code></td></tr><tr><td>zolu_learn_server.js</td><td>16</td><td><code>75</code></td></tr><tr><td>⚡ CLAUDIA 2.0</td><td>10</td><td><code>21</code></td></tr><tr><td>Production Planning Specification: Zolu AI Web Production Engine</td><td>10</td><td><code>6</code></td></tr><tr><td>Core Engines &amp; Workflows</td><td>8</td><td><code>11</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>8</td><td><code>13</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>8</td><td><code>15</code></td></tr><tr><td>Other</td><td>131</td><td><code>14, 17, 18, 19, 86, 26, 27, 28, 33, 34, 35, 36, 37, 38, 40, 80, 43, 44, 45, 46, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 76, 85, 65, 66, 83</code></td></tr>
+      <tr><td>Extraction Pipeline</td><td>22</td><td><code>79, 81, 48, 50</code></td></tr><tr><td>Graph Build</td><td>88</td><td><code>1, 73, 9, 20, 87, 82</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>36</td><td><code>22, 74, 16</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>197</td><td><code>2, 3, 4, 5, 7, 8, 10, 12, 23, 24, 25, 29, 30, 31, 32, 39, 41, 42, 67, 68, 69, 70, 71, 72</code></td></tr><tr><td>Ingestion &amp; Updates</td><td>4</td><td><code>78</code></td></tr><tr><td>Serving API</td><td>4</td><td><code>47, 84</code></td></tr><tr><td>Security &amp; Global Graph</td><td>3</td><td><code>49</code></td></tr><tr><td>Tests &amp; Fixtures</td><td>56</td><td><code>0, 77</code></td></tr><tr><td>zolu_learn_server.js</td><td>16</td><td><code>75</code></td></tr><tr><td>⚡ CLAUDIA 2.0</td><td>10</td><td><code>21</code></td></tr><tr><td>Production Planning Specification: Zolu AI Web Production Engine</td><td>10</td><td><code>6</code></td></tr><tr><td>Core Engines &amp; Workflows</td><td>8</td><td><code>11</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>8</td><td><code>13</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>8</td><td><code>15</code></td></tr><tr><td>Other</td><td>131</td><td><code>14, 17, 18, 19, 86, 26, 27, 28, 33, 34, 35, 36, 37, 38, 40, 80, 43, 44, 45, 46, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 76, 85, 65, 66, 83</code></td></tr>
     </table>
   </div>
   <div class="card">
@@ -148,7 +148,7 @@ flowchart LR
   <div class="card">
     <h4>Graph Report Highlights</h4>
     <ul>
-      <li>595 nodes · 627 edges · 87 communities (61 shown, 26 thin omitted)</li>
+      <li>601 nodes · 633 edges · 88 communities (62 shown, 26 thin omitted)</li>
       <li>Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 25 edges (avg confidence: 0.85)</li>
       <li>Token cost: 0 input · 0 output</li>
       <li>1. `Install` - 15 edges</li>
@@ -436,12 +436,12 @@ flowchart LR
 
 <!-- ====== 3. Graph Build ====== -->
 <h2 id="build-graph">3. Graph Build</h2>
-<p>Graph Build groups implementation around ponytail, packagejson, opencodejson, toolkit, mostly in ponytail/package.json, opencode.json, toolkit/README.md. This section covers 82 nodes and 82 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Graph Build groups implementation around ponytail, packagejson, opencodejson, toolkit, mostly in ponytail/package.json, opencode.json, toolkit/README.md. This section covers 88 nodes and 88 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Graph Build (82 nodes, 82 edges)
+    %% Section: Graph Build (88 nodes, 88 edges)
     subgraph build_graph_ponytail_package_json_1d0e4d1a["ponytail/package.json"]
         ponytail_package_61b18d19("ponytail/package.json")
         ponytail_package_files_a3aaab99("files<br/><small>ponytail/package.json</small>")
@@ -479,7 +479,7 @@ flowchart LR
     ponytail_package_keywords_a90fca4c -->|extends| ref_skills_11db073e
     ponytail_package_61b18d19 -->|contains| ponytail_package_files_a3aaab99
     ponytail_package_61b18d19 -->|contains| ponytail_package_keywords_a90fca4c
-    %% Omitted for readability: 64 nodes, 0 edges
+    %% Omitted for readability: 70 nodes, 0 edges
     class ponytail_package_61b18d19 function;
     class ponytail_package_files_a3aaab99 function;
     class ponytail_package_keywords_a90fca4c function;
@@ -769,13 +769,14 @@ flowchart LR
       <tr><td><code>ponytail/package.json</code></td><td>41 nodes</td></tr>
 <tr><td><code>opencode.json</code></td><td>22 nodes</td></tr>
 <tr><td><code>toolkit/README.md</code></td><td>9 nodes</td></tr>
+<tr><td><code>.claudia/mcp.json</code></td><td>6 nodes</td></tr>
 <tr><td><code>ponytail/pi-extension/package.json</code></td><td>6 nodes</td></tr>
 <tr><td><code>learning/neurons/N019_bfcl_ifeval_oracle.md</code></td><td>4 nodes</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x60, extends x22. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x62, extends x22, references x4. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -1136,45 +1137,38 @@ flowchart LR
 
 <!-- ====== 5. CLI & Skill Installers ====== -->
 <h2 id="cli-skills">5. CLI &amp; Skill Installers</h2>
-<p>CLI &amp; Skill Installers groups implementation around ponytail, skills, skillmd, agents, mostly in ponytail/README.md, ponytail/README.ko.md, ponytail/README.es.md. This section covers 199 nodes and 195 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>CLI &amp; Skill Installers groups implementation around ponytail, skills, skillmd, agents, mostly in ponytail/README.md, ponytail/README.ko.md, ponytail/README.es.md. This section covers 197 nodes and 188 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: CLI &amp; Skill Installers (199 nodes, 195 edges)
+    %% Section: CLI &amp; Skill Installers (197 nodes, 188 edges)
     subgraph cli_skills_ponytail_hooks_ponytail_runtime_js_26b6c942["ponytail/hooks/ponytail-runtime.js"]
         ponytail_hooks_ponytail_runtime_writehookoutput_07e5df53("writeHookOutput()<br/><small>ponytail/hooks/ponytail-runtime.js</small>")
-        ponytail_hooks_ponytail_runtime_readmode_fb740cca("readMode()<br/><small>ponytail/hooks/ponytail-runtime.js</small>")
-        ponytail_hooks_ponytail_runtime_setmode_7e45b828("setMode()<br/><small>ponytail/hooks/ponytail-runtime.js</small>")
         ponytail_hooks_ponytail_runtime_clearmode_d66148e2("clearMode()<br/><small>ponytail/hooks/ponytail-runtime.js</small>")
         ponytail_hooks_ponytail_runtime_iscopilot_40d5c103("isCopilot<br/><small>ponytail/hooks/ponytail-runtime.js</small>")
+        ponytail_hooks_ponytail_runtime_setmode_7e45b828("setMode()<br/><small>ponytail/hooks/ponytail-runtime.js</small>")
         ponytail_hooks_ponytail_runtime_b60ec3ea("ponytail-runtime.js")
+        ponytail_hooks_ponytail_runtime_readmode_fb740cca("readMode()<br/><small>ponytail/hooks/ponytail-runtime.js</small>")
     end
     subgraph cli_skills_ponytail_hooks_ponytail_activate_js_3b33dc66["ponytail/hooks/ponytail-activate.js"]
         ponytail_hooks_ponytail_activate_5d3f34a7("ponytail-activate.js")
         ponytail_hooks_ponytail_activate_claudedir_44b8f662("claudeDir<br/><small>ponytail/hooks/ponytail-activate.js</small>")
         ponytail_hooks_ponytail_activate_fs_8d2d4aaa("fs<br/><small>ponytail/hooks/ponytail-activate.js</small>")
-    end
-    subgraph cli_skills_ponytail_hooks_ponytail_config_js_5d3ef804["ponytail/hooks/ponytail-config.js"]
-        ponytail_hooks_ponytail_config_isdeactivationcom_6a0a6708("isDeactivationCommand()<br/><small>ponytail/hooks/ponytail-config.js</small>")
-        ponytail_hooks_ponytail_config_getclaudedir_cdda0ee2("getClaudeDir()<br/><small>ponytail/hooks/ponytail-config.js</small>")
-        ponytail_hooks_ponytail_config_isshellsafe_89f20b44("isShellSafe()<br/><small>ponytail/hooks/ponytail-config.js</small>")
+        ponytail_hooks_ponytail_activate_mode_1816a010("mode<br/><small>ponytail/hooks/ponytail-activate.js</small>")
+        ponytail_hooks_ponytail_activate_output_90c5866a("output<br/><small>ponytail/hooks/ponytail-activate.js</small>")
     end
     subgraph cli_skills_ponytail_hooks_ponytail_subagent_js_d88fe1c9["ponytail/hooks/ponytail-subagent.js"]
         ponytail_hooks_ponytail_subagent_e36b1d4c("ponytail-subagent.js")
         ponytail_hooks_ponytail_subagent_finish_9e2e8d69("finish()<br/><small>ponytail/hooks/ponytail-subagent.js</small>")
         ponytail_hooks_ponytail_subagent_inject_74197907("inject()<br/><small>ponytail/hooks/ponytail-subagent.js</small>")
     end
-    subgraph cli_skills_ponytail_hooks_ponytail_mode_tracker_909f5329["ponytail/hooks/ponytail-mode-tracker.js"]
-        ponytail_hooks_ponytail_mode_tracker_febd017e("ponytail-mode-tracker.js")
-        ponytail_hooks_ponytail_mode_tracker_finish_01f4ad14("finish()<br/><small>ponytail/hooks/ponytail-mode-tracker.js</small>")
+    subgraph cli_skills_ponytail_hooks_ponytail_config_js_5d3ef804["ponytail/hooks/ponytail-config.js"]
+        ponytail_hooks_ponytail_config_getclaudedir_cdda0ee2("getClaudeDir()<br/><small>ponytail/hooks/ponytail-config.js</small>")
+        ponytail_hooks_ponytail_config_isshellsafe_89f20b44("isShellSafe()<br/><small>ponytail/hooks/ponytail-config.js</small>")
     end
+    ponytail_hooks_ponytail_mode_tracker_febd017e("ponytail-mode-tracker.js")
     ponytail_scripts_uninstall_a236f983("uninstall.js")
-    ponytail_hooks_ponytail_mode_tracker_finish_01f4ad14 -->|calls| ponytail_hooks_ponytail_runtime_writehookoutput_07e5df53
-    ponytail_hooks_ponytail_mode_tracker_finish_01f4ad14 -->|calls| ponytail_hooks_ponytail_runtime_readmode_fb740cca
-    ponytail_hooks_ponytail_mode_tracker_finish_01f4ad14 -->|calls| ponytail_hooks_ponytail_runtime_setmode_7e45b828
-    ponytail_hooks_ponytail_mode_tracker_finish_01f4ad14 -->|calls| ponytail_hooks_ponytail_runtime_clearmode_d66148e2
-    ponytail_hooks_ponytail_mode_tracker_finish_01f4ad14 -->|calls| ponytail_hooks_ponytail_config_isdeactivationcom_6a0a6708
     ponytail_hooks_ponytail_subagent_finish_9e2e8d69 -->|calls| ponytail_hooks_ponytail_subagent_inject_74197907
     ponytail_hooks_ponytail_subagent_inject_74197907 -->|calls| ponytail_hooks_ponytail_runtime_writehookoutput_07e5df53
     ponytail_hooks_ponytail_activate_5d3f34a7 -->|imports| ponytail_hooks_ponytail_config_getclaudedir_cdda0ee2
@@ -1184,7 +1178,6 @@ flowchart LR
     ponytail_hooks_ponytail_activate_5d3f34a7 -->|imports| ponytail_hooks_ponytail_runtime_setmode_7e45b828
     ponytail_hooks_ponytail_activate_5d3f34a7 -->|imports| ponytail_hooks_ponytail_runtime_writehookoutput_07e5df53
     ponytail_hooks_ponytail_activate_5d3f34a7 -->|imports| ponytail_hooks_ponytail_runtime_b60ec3ea
-    ponytail_hooks_ponytail_mode_tracker_febd017e -->|imports| ponytail_hooks_ponytail_config_isdeactivationcom_6a0a6708
     ponytail_hooks_ponytail_mode_tracker_febd017e -->|imports| ponytail_hooks_ponytail_runtime_clearmode_d66148e2
     ponytail_hooks_ponytail_mode_tracker_febd017e -->|imports| ponytail_hooks_ponytail_runtime_readmode_fb740cca
     ponytail_hooks_ponytail_mode_tracker_febd017e -->|imports| ponytail_hooks_ponytail_runtime_setmode_7e45b828
@@ -1194,24 +1187,25 @@ flowchart LR
     ponytail_hooks_ponytail_subagent_e36b1d4c -->|imports| ponytail_hooks_ponytail_runtime_readmode_fb740cca
     ponytail_hooks_ponytail_subagent_e36b1d4c -->|imports| ponytail_hooks_ponytail_runtime_writehookoutput_07e5df53
     ponytail_hooks_ponytail_subagent_e36b1d4c -->|imports| ponytail_hooks_ponytail_runtime_b60ec3ea
-    %% Omitted for readability: 181 nodes, 1 edges
+    ponytail_scripts_uninstall_a236f983 -->|imports| ponytail_hooks_ponytail_config_getclaudedir_cdda0ee2
+    %% Omitted for readability: 179 nodes, 0 edges
     class ponytail_hooks_ponytail_runtime_writehookoutput_07e5df53 ui;
-    class ponytail_hooks_ponytail_runtime_readmode_fb740cca function;
-    class ponytail_hooks_ponytail_runtime_setmode_7e45b828 function;
     class ponytail_hooks_ponytail_runtime_clearmode_d66148e2 function;
     class ponytail_hooks_ponytail_runtime_iscopilot_40d5c103 function;
+    class ponytail_hooks_ponytail_runtime_setmode_7e45b828 function;
     class ponytail_hooks_ponytail_runtime_b60ec3ea module;
+    class ponytail_hooks_ponytail_runtime_readmode_fb740cca function;
     class ponytail_hooks_ponytail_activate_5d3f34a7 module;
     class ponytail_hooks_ponytail_activate_claudedir_44b8f662 function;
     class ponytail_hooks_ponytail_activate_fs_8d2d4aaa function;
-    class ponytail_hooks_ponytail_config_isdeactivationcom_6a0a6708 entry;
-    class ponytail_hooks_ponytail_config_getclaudedir_cdda0ee2 function;
-    class ponytail_hooks_ponytail_config_isshellsafe_89f20b44 function;
+    class ponytail_hooks_ponytail_activate_mode_1816a010 function;
+    class ponytail_hooks_ponytail_activate_output_90c5866a function;
     class ponytail_hooks_ponytail_subagent_e36b1d4c module;
     class ponytail_hooks_ponytail_subagent_finish_9e2e8d69 function;
     class ponytail_hooks_ponytail_subagent_inject_74197907 function;
+    class ponytail_hooks_ponytail_config_getclaudedir_cdda0ee2 function;
+    class ponytail_hooks_ponytail_config_isshellsafe_89f20b44 function;
     class ponytail_hooks_ponytail_mode_tracker_febd017e module;
-    class ponytail_hooks_ponytail_mode_tracker_finish_01f4ad14 function;
     class ponytail_scripts_uninstall_a236f983 module;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
@@ -1244,14 +1238,6 @@ flowchart LR
 </tr>
 <tr>
   <td>2</td>
-  <td><code>isDeactivationCommand()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
-  <td><span class="tag tag-cmd">Entry</span></td>
-  <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>ponytail-config.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br>+2 more</td>
-  <td>No direct outbound edge</td>
-  <td>isDeactivationCommand() node in ponytail/hooks/ponytail-config.js.</td>
-</tr>
-<tr>
-  <td>3</td>
   <td><code>isShellSafe()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>ponytail-activate.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small><br><code>ponytail-config.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
@@ -1259,15 +1245,7 @@ flowchart LR
   <td>isShellSafe() node in ponytail/hooks/ponytail-config.js.</td>
 </tr>
 <tr>
-  <td>4</td>
-  <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>ponytail-mode-tracker.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small></td>
-  <td><code>clearMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small><br><code>getDefaultMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>getPonytailInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br>+5 more</td>
-  <td>finish() node in ponytail/hooks/ponytail-mode-tracker.js.</td>
-</tr>
-<tr>
-  <td>5</td>
+  <td>3</td>
   <td><code>clearMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br><code>ponytail-activate.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small><br><code>ponytail-mode-tracker.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br>+1 more</td>
@@ -1275,7 +1253,7 @@ flowchart LR
   <td>clearMode() node in ponytail/hooks/ponytail-runtime.js.</td>
 </tr>
 <tr>
-  <td>6</td>
+  <td>4</td>
   <td><code>readMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br><code>ponytail-mode-tracker.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br><code>ponytail-runtime.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small><br>+1 more</td>
@@ -1283,7 +1261,7 @@ flowchart LR
   <td>readMode() node in ponytail/hooks/ponytail-runtime.js.</td>
 </tr>
 <tr>
-  <td>7</td>
+  <td>5</td>
   <td><code>setMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br><code>ponytail-activate.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small><br><code>ponytail-mode-tracker.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br>+1 more</td>
@@ -1291,7 +1269,7 @@ flowchart LR
   <td>setMode() node in ponytail/hooks/ponytail-runtime.js.</td>
 </tr>
 <tr>
-  <td>8</td>
+  <td>6</td>
   <td><code>writeHookOutput()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br><code>inject()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-subagent.js</small><br><code>ponytail-activate.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small><br>+3 more</td>
@@ -1299,7 +1277,7 @@ flowchart LR
   <td>writeHookOutput() node in ponytail/hooks/ponytail-runtime.js.</td>
 </tr>
 <tr>
-  <td>9</td>
+  <td>7</td>
   <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-subagent.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>ponytail-subagent.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-subagent.js</small></td>
@@ -1307,7 +1285,7 @@ flowchart LR
   <td>finish() node in ponytail/hooks/ponytail-subagent.js.</td>
 </tr>
 <tr>
-  <td>10</td>
+  <td>8</td>
   <td><code>inject()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-subagent.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-subagent.js</small></td>
@@ -1315,7 +1293,7 @@ flowchart LR
   <td>inject() node in ponytail/hooks/ponytail-subagent.js.</td>
 </tr>
 <tr>
-  <td>11</td>
+  <td>9</td>
   <td><code>removeIfExists()</code><br><small style="color:var(--muted)">ponytail/scripts/uninstall.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -1323,7 +1301,7 @@ flowchart LR
   <td>removeIfExists() node in ponytail/scripts/uninstall.js.</td>
 </tr>
 <tr>
-  <td>12</td>
+  <td>10</td>
   <td><code>ponytail-activate.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small></td>
   <td><span class="tag tag-class">Module</span></td>
   <td>External entry / no inbound edge</td>
@@ -1331,7 +1309,7 @@ flowchart LR
   <td>ponytail-activate.js node in ponytail/hooks/ponytail-activate.js.</td>
 </tr>
 <tr>
-  <td>13</td>
+  <td>11</td>
   <td><code>claudeDir</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -1339,7 +1317,7 @@ flowchart LR
   <td>claudeDir node in ponytail/hooks/ponytail-activate.js.</td>
 </tr>
 <tr>
-  <td>14</td>
+  <td>12</td>
   <td><code>{
   clearMode,
   isCodex,
@@ -1359,7 +1337,7 @@ flowchart LR
 } node in ponytail/hooks/ponytail-activate.js.</td>
 </tr>
 <tr>
-  <td>15</td>
+  <td>13</td>
   <td><code>fs</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -1367,7 +1345,7 @@ flowchart LR
   <td>fs node in ponytail/hooks/ponytail-activate.js.</td>
 </tr>
 <tr>
-  <td>16</td>
+  <td>14</td>
   <td><code>{ getDefaultMode, getClaudeDir, isShellSafe }</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -1375,7 +1353,7 @@ flowchart LR
   <td>{ getDefaultMode, getClaudeDir, isShellSafe } node in ponytail/hooks/ponytail-activate.js.</td>
 </tr>
 <tr>
-  <td>17</td>
+  <td>15</td>
   <td><code>{ getPonytailInstructions }</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -1383,7 +1361,7 @@ flowchart LR
   <td>{ getPonytailInstructions } node in ponytail/hooks/ponytail-activate.js.</td>
 </tr>
 <tr>
-  <td>18</td>
+  <td>16</td>
   <td><code>mode</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -1391,7 +1369,7 @@ flowchart LR
   <td>mode node in ponytail/hooks/ponytail-activate.js.</td>
 </tr>
 <tr>
-  <td>19</td>
+  <td>17</td>
   <td><code>output</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -1399,7 +1377,7 @@ flowchart LR
   <td>output node in ponytail/hooks/ponytail-activate.js.</td>
 </tr>
 <tr>
-  <td>20</td>
+  <td>18</td>
   <td><code>path</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -1407,7 +1385,7 @@ flowchart LR
   <td>path node in ponytail/hooks/ponytail-activate.js.</td>
 </tr>
 <tr>
-  <td>21</td>
+  <td>19</td>
   <td><code>settingsPath</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -1415,7 +1393,7 @@ flowchart LR
   <td>settingsPath node in ponytail/hooks/ponytail-activate.js.</td>
 </tr>
 <tr>
-  <td>22</td>
+  <td>20</td>
   <td><code>ponytail-mode-tracker.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small></td>
   <td><span class="tag tag-class">Module</span></td>
   <td>External entry / no inbound edge</td>
@@ -1423,7 +1401,7 @@ flowchart LR
   <td>ponytail-mode-tracker.js node in ponytail/hooks/ponytail-mode-tracker.js.</td>
 </tr>
 <tr>
-  <td>23</td>
+  <td>21</td>
   <td><code>{ clearMode, isQoder, readMode, setMode, writeHookOutput }</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1431,7 +1409,7 @@ flowchart LR
   <td>{ clearMode, isQoder, readMode, setMode, writeHookOutput } node in ponytail/hooks/ponytail-mode-tracker.js.</td>
 </tr>
 <tr>
-  <td>24</td>
+  <td>22</td>
   <td><code>{ getDefaultMode, isDeactivationCommand, writeDefaultMode }</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small></td>
   <td><span class="tag tag-cmd">Entry</span></td>
   <td>External entry / no inbound edge</td>
@@ -1439,7 +1417,7 @@ flowchart LR
   <td>{ getDefaultMode, isDeactivationCommand, writeDefaultMode } node in ponytail/hooks/ponytail-mode-tracker.js.</td>
 </tr>
 <tr>
-  <td>25</td>
+  <td>23</td>
   <td><code>{ getPonytailInstructions }</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -1447,7 +1425,7 @@ flowchart LR
   <td>{ getPonytailInstructions } node in ponytail/hooks/ponytail-mode-tracker.js.</td>
 </tr>
 <tr>
-  <td>26</td>
+  <td>24</td>
   <td><code>ponytail-runtime.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small></td>
   <td><span class="tag tag-class">Module</span></td>
   <td><code>ponytail-activate.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small><br><code>ponytail-mode-tracker.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br><code>ponytail-subagent.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-subagent.js</small></td>
@@ -1455,7 +1433,7 @@ flowchart LR
   <td>ponytail-runtime.js node in ponytail/hooks/ponytail-runtime.js.</td>
 </tr>
 <tr>
-  <td>27</td>
+  <td>25</td>
   <td><code>fs</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -1463,7 +1441,7 @@ flowchart LR
   <td>fs node in ponytail/hooks/ponytail-runtime.js.</td>
 </tr>
 <tr>
-  <td>28</td>
+  <td>26</td>
   <td><code>{ getClaudeDir, getConfigDir }</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -1471,7 +1449,7 @@ flowchart LR
   <td>Reads, resolves, or persists project configuration.</td>
 </tr>
 <tr>
-  <td>29</td>
+  <td>27</td>
   <td><code>isCopilot</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>ponytail-activate.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small></td>
@@ -1479,12 +1457,28 @@ flowchart LR
   <td>isCopilot node in ponytail/hooks/ponytail-runtime.js.</td>
 </tr>
 <tr>
-  <td>30</td>
+  <td>28</td>
   <td><code>os</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
   <td>os node in ponytail/hooks/ponytail-runtime.js.</td>
+</tr>
+<tr>
+  <td>29</td>
+  <td><code>path</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>path node in ponytail/hooks/ponytail-runtime.js.</td>
+</tr>
+<tr>
+  <td>30</td>
+  <td><code>stateDir</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>stateDir node in ponytail/hooks/ponytail-runtime.js.</td>
 </tr>
 </table>
 
@@ -1505,7 +1499,7 @@ flowchart LR
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x160, imports x15, calls x7, indirect call x6. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x160, imports x14, indirect call x5, references x4. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -1768,12 +1762,12 @@ flowchart LR
 
 <!-- ====== 9. Tests & Fixtures ====== -->
 <h2 id="tests-fixtures">9. Tests &amp; Fixtures</h2>
-<p>Tests &amp; Fixtures groups implementation around ponytail, hooks, extension, configjs, mostly in ponytail/hooks/ponytail-config.js, ponytail/pi-extension/index.js, ponytail/hooks/ponytail-instructions.js. This section covers 54 nodes and 101 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Tests &amp; Fixtures groups implementation around ponytail, hooks, configjs, extension, mostly in ponytail/hooks/ponytail-config.js, ponytail/pi-extension/index.js, ponytail/hooks/ponytail-instructions.js. This section covers 56 nodes and 108 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Tests &amp; Fixtures (54 nodes, 101 edges)
+    %% Section: Tests &amp; Fixtures (56 nodes, 108 edges)
     subgraph tests_fixtures_ponytail_hooks_ponytail_config_js_298a56c8["ponytail/hooks/ponytail-config.js"]
         ponytail_hooks_ponytail_config_getconfigpath_99a2d710("getConfigPath()<br/><small>ponytail/hooks/ponytail-config.js</small>")
         ponytail_hooks_ponytail_config_getconfigdir_11eb74d4("getConfigDir()<br/><small>ponytail/hooks/ponytail-config.js</small>")
@@ -1798,8 +1792,8 @@ flowchart LR
         ponytail_pi_extension_index_9d2d2187("index.js")
         ponytail_pi_extension_index_ponytailextension_a321ba46("ponytailExtension()<br/><small>ponytail/pi-extension/index.js</small>")
     end
-    ponytail_pi_extension_test_extension_test_9b4fdc90("extension.test.js")
     ponytail_pi_extension_test_helpers_test_2bad389e("helpers.test.js")
+    ponytail_hooks_ponytail_mode_tracker_finish_01f4ad14("finish()<br/><small>ponytail/hooks/ponytail-mode-tracker.js</small>")
     ponytail_hooks_ponytail_config_getconfigpath_99a2d710 -->|calls| ponytail_hooks_ponytail_config_getconfigdir_11eb74d4
     ponytail_hooks_ponytail_config_getdefaultmode_e08b0a47 -->|calls| ponytail_hooks_ponytail_config_getconfigpath_99a2d710
     ponytail_hooks_ponytail_config_gethidestatus_b7520fb0 -->|calls| ponytail_hooks_ponytail_config_getconfigpath_99a2d710
@@ -1813,6 +1807,9 @@ flowchart LR
     ponytail_hooks_ponytail_instructions_getponytail_3d13839b -->|calls| ponytail_hooks_ponytail_config_normalizemode_03b6d2b3
     ponytail_hooks_ponytail_instructions_getponytail_3d13839b -->|calls| ponytail_hooks_ponytail_instructions_filterskill_1b655263
     ponytail_hooks_ponytail_instructions_getponytail_3d13839b -->|calls| ponytail_hooks_ponytail_instructions_getfallback_9542b159
+    ponytail_hooks_ponytail_mode_tracker_finish_01f4ad14 -->|calls| ponytail_hooks_ponytail_instructions_getponytail_3d13839b
+    ponytail_hooks_ponytail_mode_tracker_finish_01f4ad14 -->|calls| ponytail_hooks_ponytail_config_writedefaultmode_f0661819
+    ponytail_hooks_ponytail_mode_tracker_finish_01f4ad14 -->|calls| ponytail_hooks_ponytail_config_getdefaultmode_e08b0a47
     ponytail_opencode_plugins_ponytail_readmode_6df6db11 -->|calls| ponytail_hooks_ponytail_config_getdefaultmode_e08b0a47
     ponytail_opencode_plugins_ponytail_readmode_6df6db11 -->|calls| ponytail_hooks_ponytail_config_normalizepersiste_56f04243
     ponytail_pi_extension_index_ponytailextension_a321ba46 -->|calls| ponytail_hooks_ponytail_config_writedefaultmode_f0661819
@@ -1821,10 +1818,7 @@ flowchart LR
     ponytail_pi_extension_index_ponytailextension_a321ba46 -->|calls| ponytail_hooks_ponytail_config_getdefaultmode_e08b0a47
     ponytail_pi_extension_index_ponytailextension_a321ba46 -->|calls| ponytail_hooks_ponytail_config_gethidestatus_b7520fb0
     ponytail_pi_extension_index_ponytailextension_a321ba46 -->|calls| ponytail_hooks_ponytail_config_normalizepersiste_56f04243
-    ponytail_opencode_plugins_ponytail_b70099ee -->|imports| ponytail_hooks_ponytail_instructions_getponytail_3d13839b
-    ponytail_opencode_plugins_ponytail_b70099ee -->|imports| ponytail_hooks_ponytail_config_getdefaultmode_e08b0a47
-    ponytail_opencode_plugins_ponytail_b70099ee -->|imports| ponytail_hooks_ponytail_config_normalizepersiste_56f04243
-    %% Omitted for readability: 36 nodes, 11 edges
+    %% Omitted for readability: 38 nodes, 12 edges
     class ponytail_hooks_ponytail_config_getconfigpath_99a2d710 function;
     class ponytail_hooks_ponytail_config_getconfigdir_11eb74d4 function;
     class ponytail_hooks_ponytail_config_getdefaultmode_e08b0a47 function;
@@ -1841,8 +1835,8 @@ flowchart LR
     class ponytail_opencode_plugins_ponytail_readmode_6df6db11 function;
     class ponytail_pi_extension_index_9d2d2187 module;
     class ponytail_pi_extension_index_ponytailextension_a321ba46 function;
-    class ponytail_pi_extension_test_extension_test_9b4fdc90 test;
     class ponytail_pi_extension_test_helpers_test_2bad389e test;
+    class ponytail_hooks_ponytail_mode_tracker_finish_01f4ad14 function;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -1906,6 +1900,14 @@ flowchart LR
 </tr>
 <tr>
   <td>6</td>
+  <td><code>isDeactivationCommand()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td><span class="tag tag-cmd">Entry</span></td>
+  <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>ponytail-config.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br>+2 more</td>
+  <td>No direct outbound edge</td>
+  <td>isDeactivationCommand() node in ponytail/hooks/ponytail-config.js.</td>
+</tr>
+<tr>
+  <td>7</td>
   <td><code>normalizeConfigMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>normalizePersistedMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>ponytail-config.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
@@ -1913,7 +1915,7 @@ flowchart LR
   <td>Reads, resolves, or persists project configuration.</td>
 </tr>
 <tr>
-  <td>7</td>
+  <td>8</td>
   <td><code>normalizeMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>filterSkillBodyForMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br><code>getPonytailInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br>+5 more</td>
@@ -1921,7 +1923,7 @@ flowchart LR
   <td>normalizeMode() node in ponytail/hooks/ponytail-config.js.</td>
 </tr>
 <tr>
-  <td>8</td>
+  <td>9</td>
   <td><code>normalizePersistedMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>getPonytailInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>parsePonytailCommand()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br>+6 more</td>
@@ -1929,7 +1931,7 @@ flowchart LR
   <td>normalizePersistedMode() node in ponytail/hooks/ponytail-config.js.</td>
 </tr>
 <tr>
-  <td>9</td>
+  <td>10</td>
   <td><code>writeDefaultMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>ponytail-config.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br>+2 more</td>
@@ -1937,7 +1939,7 @@ flowchart LR
   <td>writeDefaultMode() node in ponytail/hooks/ponytail-config.js.</td>
 </tr>
 <tr>
-  <td>10</td>
+  <td>11</td>
   <td><code>filterSkillBodyForMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>getPonytailInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>ponytail-instructions.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small></td>
@@ -1945,7 +1947,7 @@ flowchart LR
   <td>filterSkillBodyForMode() node in ponytail/hooks/ponytail-instructions.js.</td>
 </tr>
 <tr>
-  <td>11</td>
+  <td>12</td>
   <td><code>getFallbackInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>getPonytailInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br><code>ponytail-instructions.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small></td>
@@ -1953,7 +1955,7 @@ flowchart LR
   <td>getFallbackInstructions() node in ponytail/hooks/ponytail-instructions.js.</td>
 </tr>
 <tr>
-  <td>12</td>
+  <td>13</td>
   <td><code>getPonytailInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>inject()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-subagent.js</small><br>+6 more</td>
@@ -1961,7 +1963,15 @@ flowchart LR
   <td>getPonytailInstructions() node in ponytail/hooks/ponytail-instructions.js.</td>
 </tr>
 <tr>
-  <td>13</td>
+  <td>14</td>
+  <td><code>finish()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>ponytail-mode-tracker.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small></td>
+  <td><code>clearMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-runtime.js</small><br><code>getDefaultMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>getPonytailInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br>+5 more</td>
+  <td>finish() node in ponytail/hooks/ponytail-mode-tracker.js.</td>
+</tr>
+<tr>
+  <td>15</td>
   <td><code>parseCommandFile()</code><br><small style="color:var(--muted)">.opencode/plugins/ponytail-frontmatter.cjs</small></td>
   <td><span class="tag tag-cmd">Entry</span></td>
   <td><code>ponytail-frontmatter.cjs</code><br><small style="color:var(--muted)">.opencode/plugins/ponytail-frontmatter.cjs</small><br><code>ponytail.mjs</code><br><small style="color:var(--muted)">.opencode/plugins/ponytail.mjs</small></td>
@@ -1969,7 +1979,7 @@ flowchart LR
   <td>parseCommandFile() node in .opencode/plugins/ponytail-frontmatter.cjs.</td>
 </tr>
 <tr>
-  <td>14</td>
+  <td>16</td>
   <td><code>readMode()</code><br><small style="color:var(--muted)">.opencode/plugins/ponytail.mjs</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -1977,7 +1987,7 @@ flowchart LR
   <td>readMode() node in .opencode/plugins/ponytail.mjs.</td>
 </tr>
 <tr>
-  <td>15</td>
+  <td>17</td>
   <td><code>writeMode()</code><br><small style="color:var(--muted)">.opencode/plugins/ponytail.mjs</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -1985,7 +1995,7 @@ flowchart LR
   <td>writeMode() node in .opencode/plugins/ponytail.mjs.</td>
 </tr>
 <tr>
-  <td>16</td>
+  <td>18</td>
   <td><code>parsePonytailCommand()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
   <td><span class="tag tag-cmd">Entry</span></td>
   <td><code>helpers.test.js</code><br><small style="color:var(--muted)">pi-extension/test/helpers.test.js</small><br><code>ponytailExtension()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
@@ -1993,7 +2003,7 @@ flowchart LR
   <td>parsePonytailCommand() node in ponytail/pi-extension/index.js.</td>
 </tr>
 <tr>
-  <td>17</td>
+  <td>19</td>
   <td><code>ponytailExtension()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>createPiHarness()</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small><br><code>extension.test.js</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small></td>
@@ -2001,7 +2011,7 @@ flowchart LR
   <td>ponytailExtension() node in ponytail/pi-extension/index.js.</td>
 </tr>
 <tr>
-  <td>18</td>
+  <td>20</td>
   <td><code>syncStatus()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -2009,7 +2019,7 @@ flowchart LR
   <td>syncStatus() node in ponytail/pi-extension/index.js.</td>
 </tr>
 <tr>
-  <td>19</td>
+  <td>21</td>
   <td><code>resolveSessionMode()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>helpers.test.js</code><br><small style="color:var(--muted)">pi-extension/test/helpers.test.js</small><br><code>ponytailExtension()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
@@ -2017,7 +2027,7 @@ flowchart LR
   <td>resolveSessionMode() node in ponytail/pi-extension/index.js.</td>
 </tr>
 <tr>
-  <td>20</td>
+  <td>22</td>
   <td><code>createCommandContext()</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small></td>
   <td><span class="tag tag-func">Test</span></td>
   <td>External entry / no inbound edge</td>
@@ -2025,7 +2035,7 @@ flowchart LR
   <td>createCommandContext() node in pi-extension/test/extension.test.js.</td>
 </tr>
 <tr>
-  <td>21</td>
+  <td>23</td>
   <td><code>createPiHarness()</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small></td>
   <td><span class="tag tag-func">Test</span></td>
   <td>External entry / no inbound edge</td>
@@ -2033,7 +2043,7 @@ flowchart LR
   <td>createPiHarness() node in pi-extension/test/extension.test.js.</td>
 </tr>
 <tr>
-  <td>22</td>
+  <td>24</td>
   <td><code>notify()</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small></td>
   <td><span class="tag tag-func">Test</span></td>
   <td>External entry / no inbound edge</td>
@@ -2041,7 +2051,7 @@ flowchart LR
   <td>notify() node in pi-extension/test/extension.test.js.</td>
 </tr>
 <tr>
-  <td>23</td>
+  <td>25</td>
   <td><code>withTempConfig()</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small></td>
   <td><span class="tag tag-func">Test</span></td>
   <td>External entry / no inbound edge</td>
@@ -2049,7 +2059,7 @@ flowchart LR
   <td>Reads, resolves, or persists project configuration.</td>
 </tr>
 <tr>
-  <td>24</td>
+  <td>26</td>
   <td><code>ponytail-config.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
   <td><span class="tag tag-class">Module</span></td>
   <td><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>ponytail-activate.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small><br><code>ponytail-instructions.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br>+4 more</td>
@@ -2057,7 +2067,7 @@ flowchart LR
   <td>Reads, resolves, or persists project configuration.</td>
 </tr>
 <tr>
-  <td>25</td>
+  <td>27</td>
   <td><code>fs</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -2065,7 +2075,7 @@ flowchart LR
   <td>fs node in ponytail/hooks/ponytail-config.js.</td>
 </tr>
 <tr>
-  <td>26</td>
+  <td>28</td>
   <td><code>os</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -2073,7 +2083,7 @@ flowchart LR
   <td>os node in ponytail/hooks/ponytail-config.js.</td>
 </tr>
 <tr>
-  <td>27</td>
+  <td>29</td>
   <td><code>path</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -2081,28 +2091,12 @@ flowchart LR
   <td>path node in ponytail/hooks/ponytail-config.js.</td>
 </tr>
 <tr>
-  <td>28</td>
+  <td>30</td>
   <td><code>RUNTIME_MODES</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
   <td><span class="tag tag-class">Class</span></td>
   <td><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
   <td>No direct outbound edge</td>
   <td>RUNTIME_MODES node in ponytail/hooks/ponytail-config.js.</td>
-</tr>
-<tr>
-  <td>29</td>
-  <td><code>VALID_MODES</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>VALID_MODES node in ponytail/hooks/ponytail-config.js.</td>
-</tr>
-<tr>
-  <td>30</td>
-  <td><code>ponytail-instructions.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small></td>
-  <td><span class="tag tag-class">Module</span></td>
-  <td><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>ponytail-activate.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-activate.js</small><br><code>ponytail-mode-tracker.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-mode-tracker.js</small><br>+2 more</td>
-  <td><code>filterSkillBodyForMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br><code>getFallbackInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br><code>getPonytailInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br>+3 more</td>
-  <td>ponytail-instructions.js node in ponytail/hooks/ponytail-instructions.js.</td>
 </tr>
 </table>
 
@@ -2111,19 +2105,19 @@ flowchart LR
     <h4>Key Files</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>ponytail/hooks/ponytail-config.js</code></td><td>15 nodes</td></tr>
+      <tr><td><code>ponytail/hooks/ponytail-config.js</code></td><td>16 nodes</td></tr>
 <tr><td><code>ponytail/pi-extension/index.js</code></td><td>11 nodes</td></tr>
 <tr><td><code>.opencode/plugins/ponytail.mjs</code></td><td>9 nodes</td></tr>
 <tr><td><code>ponytail/hooks/ponytail-instructions.js</code></td><td>9 nodes</td></tr>
 <tr><td><code>pi-extension/test/extension.test.js</code></td><td>5 nodes</td></tr>
 <tr><td><code>.opencode/plugins/ponytail-frontmatter.cjs</code></td><td>2 nodes</td></tr>
 <tr><td><code>scripts/test_playwright.js</code></td><td>2 nodes</td></tr>
-<tr><td><code>pi-extension/test/helpers.test.js</code></td><td>1 nodes</td></tr>
+<tr><td><code>ponytail/hooks/ponytail-mode-tracker.js</code></td><td>1 nodes</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x33, calls x27, imports x20, indirect call x13. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x33, calls x32, imports x21, indirect call x14. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -3391,17 +3385,17 @@ flowchart LR
   <div class="card">
     <h4>Graph</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>Nodes</td><td>595</td></tr>
-      <tr><td>Edges</td><td>627</td></tr>
+      <tr><td>Nodes</td><td>601</td></tr>
+      <tr><td>Edges</td><td>633</td></tr>
       <tr><td>Hyperedges</td><td>0</td></tr>
-      <tr><td>Communities</td><td>87</td></tr>
+      <tr><td>Communities</td><td>88</td></tr>
       <tr><td>Documented Sections</td><td>15</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Edge Confidence</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>EXTRACTED</td><td>602</td></tr>
+      <tr><td>EXTRACTED</td><td>608</td></tr>
       <tr><td>INFERRED</td><td>25</td></tr>
       <tr><td>AMBIGUOUS</td><td>0</td></tr>
     </table>
@@ -3410,7 +3404,7 @@ flowchart LR
 
 <div style="text-align:center; padding:40px 0; color: var(--muted); font-size:0.9rem;">
   <p>Agent_Claudia_Autonomus — Architecture Documentation</p>
-  <p>Generated: 2026-08-23 20:38 UTC · graphify callflow-html</p>
+  <p>Generated: 2026-08-23 21:16 UTC · graphify callflow-html</p>
 </div>
 
 </div><!-- .container -->

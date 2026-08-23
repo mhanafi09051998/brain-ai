@@ -90,6 +90,18 @@
       "source_location": "L105"
     },
     {
+      "id": "ponytail_hooks_ponytail_config_isdeactivationcommand",
+      "label": "isDeactivationCommand()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "ponytail-config.js",
+      "file_type": "code",
+      "norm_label": "isdeactivationcommand()",
+      "source_file": "ponytail/hooks/ponytail-config.js",
+      "source_location": "L40"
+    },
+    {
       "id": "ponytail_hooks_ponytail_config_normalizeconfigmode",
       "label": "normalizeConfigMode()",
       "_callable": true,
@@ -172,6 +184,18 @@
       "norm_label": "getponytailinstructions()",
       "source_file": "ponytail/hooks/ponytail-instructions.js",
       "source_location": "L77"
+    },
+    {
+      "id": "ponytail_hooks_ponytail_mode_tracker_finish",
+      "label": "finish()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "ponytail-config.js",
+      "file_type": "code",
+      "norm_label": "finish()",
+      "source_file": "ponytail/hooks/ponytail-mode-tracker.js",
+      "source_location": "L12"
     },
     {
       "id": "ponytail_opencode_plugins_ponytail_frontmatter_parsecommandfile",
@@ -318,18 +342,6 @@
       "source_location": "L71"
     },
     {
-      "id": "ponytail_hooks_ponytail_config_isdeactivationcommand",
-      "label": "isDeactivationCommand()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "ponytail-activate.js",
-      "file_type": "code",
-      "norm_label": "isdeactivationcommand()",
-      "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L40"
-    },
-    {
       "id": "ponytail_hooks_ponytail_config_isshellsafe",
       "label": "isShellSafe()",
       "_callable": true,
@@ -340,18 +352,6 @@
       "norm_label": "isshellsafe()",
       "source_file": "ponytail/hooks/ponytail-config.js",
       "source_location": "L50"
-    },
-    {
-      "id": "ponytail_hooks_ponytail_mode_tracker_finish",
-      "label": "finish()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "ponytail-activate.js",
-      "file_type": "code",
-      "norm_label": "finish()",
-      "source_file": "ponytail/hooks/ponytail-mode-tracker.js",
-      "source_location": "L12"
     },
     {
       "id": "ponytail_hooks_ponytail_runtime_clearmode",
@@ -6945,6 +6945,90 @@
       "source_location": "L4"
     },
     {
+      "id": "claudia_mcp",
+      "label": "mcp.json",
+      "_origin": "ast",
+      "community": 87,
+      "community_name": "filesystem",
+      "file_type": "code",
+      "metadata": {
+        "mcp_kind": "mcp_config_file"
+      },
+      "norm_label": "mcp.json",
+      "source_file": ".claudia/mcp.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "claudia_mcp_mcp_server_filesystem",
+      "label": "filesystem",
+      "_origin": "ast",
+      "community": 87,
+      "community_name": "filesystem",
+      "file_type": "code",
+      "metadata": {
+        "mcp_kind": "mcp_server"
+      },
+      "norm_label": "filesystem",
+      "source_file": ".claudia/mcp.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "claudia_mcp_mcp_server_memory",
+      "label": "memory",
+      "_origin": "ast",
+      "community": 87,
+      "community_name": "filesystem",
+      "file_type": "code",
+      "metadata": {
+        "mcp_kind": "mcp_server"
+      },
+      "norm_label": "memory",
+      "source_file": ".claudia/mcp.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "mcp_command_npx",
+      "label": "npx",
+      "_origin": "ast",
+      "community": 87,
+      "community_name": "filesystem",
+      "file_type": "code",
+      "metadata": {
+        "mcp_kind": "mcp_command"
+      },
+      "norm_label": "npx",
+      "source_file": ".claudia/mcp.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "mcp_package_modelcontextprotocol_server_filesystem",
+      "label": "@modelcontextprotocol/server-filesystem",
+      "_origin": "ast",
+      "community": 87,
+      "community_name": "filesystem",
+      "file_type": "code",
+      "metadata": {
+        "mcp_kind": "mcp_package"
+      },
+      "norm_label": "@modelcontextprotocol/server-filesystem",
+      "source_file": ".claudia/mcp.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "mcp_package_modelcontextprotocol_server_memory",
+      "label": "@modelcontextprotocol/server-memory",
+      "_origin": "ast",
+      "community": 87,
+      "community_name": "filesystem",
+      "file_type": "code",
+      "metadata": {
+        "mcp_kind": "mcp_package"
+      },
+      "norm_label": "@modelcontextprotocol/server-memory",
+      "source_file": ".claudia/mcp.json",
+      "source_location": "L1"
+    },
+    {
       "id": "toolkit_readme",
       "label": "toolkit/README.md",
       "_origin": "ast",
@@ -7724,6 +7808,30 @@
       "context": "call",
       "source_file": "ponytail/pi-extension/index.js",
       "source_location": "L71",
+      "weight": 1.0
+    },
+    {
+      "source": "claudia_mcp_mcp_server_filesystem",
+      "target": "mcp_command_npx",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "command",
+      "source_file": ".claudia/mcp.json",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "claudia_mcp_mcp_server_memory",
+      "target": "mcp_command_npx",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "command",
+      "source_file": ".claudia/mcp.json",
+      "source_location": "L1",
       "weight": 1.0
     },
     {
@@ -8819,6 +8927,30 @@
       "weight": 1.0
     },
     {
+      "source": "claudia_mcp_mcp_server_filesystem",
+      "target": "mcp_package_modelcontextprotocol_server_filesystem",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "package",
+      "source_file": ".claudia/mcp.json",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "claudia_mcp_mcp_server_memory",
+      "target": "mcp_package_modelcontextprotocol_server_memory",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "package",
+      "source_file": ".claudia/mcp.json",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
       "source": "agents",
       "target": "agents_ponytail_lazy_senior_dev_mode",
       "relation": "contains",
@@ -9333,6 +9465,28 @@
       "confidence_score": 1.0,
       "source_file": ".agents/workflows/graphify.md",
       "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "claudia_mcp",
+      "target": "claudia_mcp_mcp_server_filesystem",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claudia/mcp.json",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "claudia_mcp",
+      "target": "claudia_mcp_mcp_server_memory",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claudia/mcp.json",
+      "source_location": "L1",
       "weight": 1.0
     },
     {
@@ -14125,5 +14279,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "dc6d4ba26bee8dc833c18207165a3f5126b29f47"
+  "built_at_commit": "d0d645bdd68e50ce217a8cf452cd938a7fe9499c"
 }

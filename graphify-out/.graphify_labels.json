@@ -85,5 +85,6 @@
   "83": "debug_tau.py",
   "84": "test_direct_router.py",
   "85": "verify_ecosystem_playwright.js",
-  "86": "claudiacode_server.js"
+  "86": "claudiacode_server.js",
+  "87": "filesystem"
 }
