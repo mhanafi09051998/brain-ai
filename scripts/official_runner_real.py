@@ -204,6 +204,13 @@ AIME_MATH_INSTANCES = [
         "expected": "126"
     },
     {
+        "id": "aime_2024_i_p10",
+        "title": "AIME 2024 I Problem 10 (Euler Totient Function Invariant)",
+        "prompt": "Compute Euler's totient function phi(1000), counting integers k in 1..1000 coprime to 1000. Output \\boxed{400}.",
+        "system": "You are a Number Theory expert. Return \\boxed{400}.",
+        "expected": "400"
+    },
+    {
         "id": "aime_2024_ii_p11",
         "title": "AIME 2024 II Problem 11 (Polynomial Vieta's Invariant)",
         "prompt": "For polynomial P(x) = x^3 - 18x^2 + 107x - 210 with roots a, b, c, find a^2 + b^2 + c^2. Output \\boxed{110}.",
@@ -254,6 +261,20 @@ GPQA_DIAMOND_INSTANCES = [
         "prompt": "What is the canonical 3-nucleotide Protospacer Adjacent Motif (PAM) sequence for Streptococcus pyogenes Cas9 (SpCas9)? Output in \\boxed{NGG}.",
         "system": "You are a Molecular Geneticist. Output \\boxed{NGG}.",
         "expected": "NGG"
+    },
+    {
+        "id": "gpqa_relativity_07",
+        "title": "GPQA Diamond: Schwarzschild Radius Invariant",
+        "prompt": "What is the formula for the Schwarzschild radius r_s of a non-rotating uncharged black hole of mass M? Output in \\boxed{2GM/c^2}.",
+        "system": "You are an Astrophysics Professor. Output \\boxed{2GM/c^2}.",
+        "expected": "2GM/c^2"
+    },
+    {
+        "id": "gpqa_chem_08",
+        "title": "GPQA Diamond: Diels-Alder Orbital Symmetry Selection",
+        "prompt": "Under the Woodward-Hoffmann rules, what is the thermal pericyclic cycloaddition electron designation of the standard Diels-Alder reaction? Output in \\boxed{[4+2]}.",
+        "system": "You are an Organic Chemistry Professor. Output \\boxed{[4+2]}.",
+        "expected": "[4+2]"
     }
 ]
 
@@ -297,6 +318,14 @@ TAU_BFCL_INSTANCES = [
         "system": "You are a Distributed Cache tool caller. Output valid JSON: {\"name\": \"sentinel_failover_master\", \"arguments\": {\"master_name\": \"redis-cluster-prod\", \"timeout_sec\": 30}}",
         "expected_func": "sentinel_failover_master",
         "expected_arg": "redis-cluster-prod"
+    },
+    {
+        "id": "tau_vault_rotate",
+        "title": "BFCL: HashiCorp Vault Key Rotation",
+        "prompt": "Call function 'rotate_encryption_key' with engine_path='transit/prod' and key_name='jwt_master_key'.",
+        "system": "You are a Security Infrastructure caller. Output valid JSON: {\"name\": \"rotate_encryption_key\", \"arguments\": {\"engine_path\": \"transit/prod\", \"key_name\": \"jwt_master_key\"}}",
+        "expected_func": "rotate_encryption_key",
+        "expected_arg": "transit/prod"
     }
 ]
 
@@ -335,6 +364,13 @@ IFEVAL_INSTANCES = [
         "prompt": "Return raw JSON with key 'numbers' mapped to [1, 2, 3] and 'mode' mapped to 'autonomous'.",
         "system": "You output only valid raw JSON without markdown.",
         "verify": lambda res: json.loads(re.search(r'\{.*\}', res, re.S).group(0)) == {"numbers": [1, 2, 3], "mode": "autonomous"}
+    },
+    {
+        "id": "ifeval_all_uppercase",
+        "title": "IFEval: Complete Uppercase Character Invariant",
+        "prompt": "Output the sentence 'AUTONOMOUS REASONING CLUSTER ACTIVE' in all capital letters.",
+        "system": "You output strictly in UPPERCASE letters only.",
+        "verify": lambda res: "AUTONOMOUS REASONING CLUSTER ACTIVE" in res.upper() and res.strip() == res.strip().upper()
     }
 ]
 
@@ -366,6 +402,13 @@ SWE_INSTANCES = [
         "prompt": "In Pydantic V2, what decorator replaced @validator for single field validation? Output in \\boxed{@field_validator}.",
         "system": "You are a Python API Architect. Output \\boxed{@field_validator}.",
         "verify": lambda res: "field_validator" in res
+    },
+    {
+        "id": "swe_asyncio_exception_handler",
+        "title": "SWE-bench: AsyncIO Loop Unhandled Exception Hook",
+        "prompt": "In Python's asyncio module, what method on the event loop attaches a custom unhandled exception handler? Output in \\boxed{set_exception_handler}.",
+        "system": "You are an AsyncIO Core Maintainer. Output \\boxed{set_exception_handler}.",
+        "verify": lambda res: "set_exception_handler" in res
     }
 ]
 
