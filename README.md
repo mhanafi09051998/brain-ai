@@ -15,6 +15,11 @@
   Engineered for autonomous end-to-end software delivery, minimalist CLI terminal IDE, continuous empirical self-verification, zero-copy high performance, and multi-service cloud orchestration.
 </p>
 
+```bash
+# 🚀 Instant Run Claudia Code
+claudia
+```
+
 ---
 
 </div>
