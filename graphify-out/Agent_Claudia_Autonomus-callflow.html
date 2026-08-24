@@ -60,7 +60,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 <div class="container">
 
 <h1>Agent_Claudia_Autonomus — Complete Call Flow &amp; Architecture Documentation</h1>
-<p class="subtitle">Generated from graphify knowledge graph: 713 nodes, 756 edges, 94 communities. Commit: ea436a6</p>
+<p class="subtitle">Generated from graphify knowledge graph: 838 nodes, 874 edges, 101 communities. Commit: 9c8ff02</p>
 
 <div class="nav">
     <a href="#overview">Architecture Overview</a>
@@ -70,14 +70,14 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
     <a href="#cli-skills">CLI &amp; Skill Installers</a>
     <a href="#ingest-cache-update">Ingestion &amp; Updates</a>
     <a href="#serve-api">Serving API</a>
+    <a href="#security-global">Security &amp; Global Graph</a>
     <a href="#tests-fixtures">Tests &amp; Fixtures</a>
     <a href="#ponytail-runtime-js">ponytail-runtime.js</a>
     <a href="#zolu-learn-server-js">zolu_learn_server.js</a>
     <a href="#ponytail-lazy-senior-dev-mode">Ponytail, lazy senior dev mode</a>
-    <a href="#ponytail-activate-js">ponytail-activate.js</a>
     <a href="#4-pilar-mikrostruktur-eksekusi-kuantitatif">? 4 Pilar Mikrostruktur &amp; Eksekusi Kuantitatif</a>
+    <a href="#ponytail-activate-js">ponytail-activate.js</a>
     <a href="#claudia-2-0-v5-0-0-apex">⚡ CLAUDIA 2.0 (v5.0.0 Apex)</a>
-    <a href="#5-invarian-pertahanan-zero-day-keamanan-kernel">🎯 5 Invarian Pertahanan Zero-Day &amp; Keamanan Kernel</a>
     <a href="#other">Other</a>
 </div>
 
@@ -88,7 +88,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    EXTRACT_PIPELINE_5F350230("Extraction Pipeline<br/><small>66 nodes</small>")
+    EXTRACT_PIPELINE_5F350230("Extraction Pipeline<br/><small>124 nodes</small>")
     class EXTRACT_PIPELINE_5F350230 module;
     BUILD_GRAPH_321CBB04("Graph Build<br/><small>70 nodes</small>")
     class BUILD_GRAPH_321CBB04 module;
@@ -96,11 +96,13 @@ flowchart LR
     class ANALYSIS_CLUSTERING_C79796DA module;
     CLI_SKILLS_9964CBB8("CLI &amp; Skill Installers<br/><small>231 nodes</small>")
     class CLI_SKILLS_9964CBB8 module;
-    INGEST_CACHE_UPDATE_FF457338("Ingestion &amp; Updates<br/><small>9 nodes</small>")
+    INGEST_CACHE_UPDATE_FF457338("Ingestion &amp; Updates<br/><small>27 nodes</small>")
     class INGEST_CACHE_UPDATE_FF457338 module;
     SERVE_API_35EC8E86("Serving API<br/><small>16 nodes</small>")
     class SERVE_API_35EC8E86 module;
-    TESTS_FIXTURES_B84B1DCC("Tests &amp; Fixtures<br/><small>28 nodes</small>")
+    SECURITY_GLOBAL_5B9C6A04("Security &amp; Global Graph<br/><small>31 nodes</small>")
+    class SECURITY_GLOBAL_5B9C6A04 module;
+    TESTS_FIXTURES_B84B1DCC("Tests &amp; Fixtures<br/><small>46 nodes</small>")
     class TESTS_FIXTURES_B84B1DCC module;
     PONYTAIL_RUNTIME_JS_104C1C7B("ponytail-runtime.js<br/><small>19 nodes</small>")
     class PONYTAIL_RUNTIME_JS_104C1C7B module;
@@ -108,28 +110,26 @@ flowchart LR
     class ZOLU_LEARN_SERVER_JS_C42CA56A module;
     PONYTAIL_LAZY_SENIOR_DEV_MODE_87509AA5("Ponytail, lazy senior dev mode<br/><small>14 nodes</small>")
     class PONYTAIL_LAZY_SENIOR_DEV_MODE_87509AA5 module;
-    PONYTAIL_ACTIVATE_JS_BF701BE9("ponytail-activate.js<br/><small>10 nodes</small>")
-    class PONYTAIL_ACTIVATE_JS_BF701BE9 module;
     SECTION_4_PILAR_MIKROSTRUKTUR_EKSEKUSI_KUANTITAT_A379D6B8("? 4 Pilar Mikrostruktur &amp; Eksekusi Kuantitatif<br/><small>10 nodes</small>")
     class SECTION_4_PILAR_MIKROSTRUKTUR_EKSEKUSI_KUANTITAT_A379D6B8 module;
+    PONYTAIL_ACTIVATE_JS_BF701BE9("ponytail-activate.js<br/><small>10 nodes</small>")
+    class PONYTAIL_ACTIVATE_JS_BF701BE9 module;
     CLAUDIA_2_0_V5_0_0_APEX_2BF2B1E7("⚡ CLAUDIA 2.0 (v5.0.0 Apex)<br/><small>10 nodes</small>")
     class CLAUDIA_2_0_V5_0_0_APEX_2BF2B1E7 module;
-    SECTION_5_INVARIAN_PERTAHANAN_ZERO_DAY_KEAMANAN_74849F2E("🎯 5 Invarian Pertahanan Zero-Day &amp; Keamanan Kernel<br/><small>9 nodes</small>")
-    class SECTION_5_INVARIAN_PERTAHANAN_ZERO_DAY_KEAMANAN_74849F2E module;
-    OTHER_D0941E68("Other<br/><small>145 nodes</small>")
+    OTHER_D0941E68("Other<br/><small>154 nodes</small>")
     class OTHER_D0941E68 module;
-    PONYTAIL_RUNTIME_JS_104C1C7B -->|imports x7| CLI_SKILLS_9964CBB8
     TESTS_FIXTURES_B84B1DCC -->|calls x7| ANALYSIS_CLUSTERING_C79796DA
     TESTS_FIXTURES_B84B1DCC -->|calls x7| CLI_SKILLS_9964CBB8
+    PONYTAIL_RUNTIME_JS_104C1C7B -->|imports x7| CLI_SKILLS_9964CBB8
     CLI_SKILLS_9964CBB8 -->|indirect call x5| TESTS_FIXTURES_B84B1DCC
     PONYTAIL_ACTIVATE_JS_BF701BE9 -->|imports x5| PONYTAIL_RUNTIME_JS_104C1C7B
     ANALYSIS_CLUSTERING_C79796DA -->|imports x4| PONYTAIL_RUNTIME_JS_104C1C7B
-    PONYTAIL_RUNTIME_JS_104C1C7B -->|calls x4| ANALYSIS_CLUSTERING_C79796DA
     TESTS_FIXTURES_B84B1DCC -->|calls x4| PONYTAIL_RUNTIME_JS_104C1C7B
+    PONYTAIL_RUNTIME_JS_104C1C7B -->|calls x4| ANALYSIS_CLUSTERING_C79796DA
     PONYTAIL_ACTIVATE_JS_BF701BE9 -->|imports x4| CLI_SKILLS_9964CBB8
-    CLI_SKILLS_9964CBB8 -->|imports x3| ANALYSIS_CLUSTERING_C79796DA
+    CLI_SKILLS_9964CBB8 -->|indirect call x3| ANALYSIS_CLUSTERING_C79796DA
     ANALYSIS_CLUSTERING_C79796DA -->|calls x2| TESTS_FIXTURES_B84B1DCC
-    PONYTAIL_ACTIVATE_JS_BF701BE9 -->|imports x2| ANALYSIS_CLUSTERING_C79796DA
+    CLI_SKILLS_9964CBB8 -->|indirect call x2| PONYTAIL_RUNTIME_JS_104C1C7B
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -146,7 +146,7 @@ flowchart LR
     <h4>Architecture Layers</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>Layer</th><th>Nodes</th><th>Communities</th></tr>
-      <tr><td>Extraction Pipeline</td><td>66</td><td><code>89, 90, 13, 16, 51, 62, 63</code></td></tr><tr><td>Graph Build</td><td>70</td><td><code>1, 91, 93, 34, 87, 88</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>58</td><td><code>3, 10, 18, 35</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>231</td><td><code>0, 2, 4, 5, 7, 12, 19, 22, 23, 25, 36, 37, 38, 41, 42, 43, 44, 49, 53, 57, 79, 81, 82, 83, 84, 85, 86</code></td></tr><tr><td>Ingestion &amp; Updates</td><td>9</td><td><code>40, 54</code></td></tr><tr><td>Serving API</td><td>16</td><td><code>92, 61</code></td></tr><tr><td>Tests &amp; Fixtures</td><td>28</td><td><code>8, 26</code></td></tr><tr><td>ponytail-runtime.js</td><td>19</td><td><code>6</code></td></tr><tr><td>zolu_learn_server.js</td><td>18</td><td><code>9</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>14</td><td><code>11</code></td></tr><tr><td>ponytail-activate.js</td><td>10</td><td><code>14</code></td></tr><tr><td>? 4 Pilar Mikrostruktur &amp; Eksekusi Kuantitatif</td><td>10</td><td><code>15</code></td></tr><tr><td>⚡ CLAUDIA 2.0 (v5.0.0 Apex)</td><td>10</td><td><code>17</code></td></tr><tr><td>🎯 5 Invarian Pertahanan Zero-Day &amp; Keamanan Kernel</td><td>9</td><td><code>20</code></td></tr><tr><td>Other</td><td>145</td><td><code>21, 24, 27, 28, 29, 30, 31, 32, 33, 39, 45, 46, 47, 48, 50, 52, 55, 56, 58, 59, 60, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 80</code></td></tr>
+      <tr><td>Extraction Pipeline</td><td>124</td><td><code>94, 96, 10, 9, 99, 17, 19, 56, 67, 68</code></td></tr><tr><td>Graph Build</td><td>70</td><td><code>1, 14, 34, 39, 92, 93</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>58</td><td><code>3, 12, 22, 40</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>231</td><td><code>0, 2, 4, 5, 11, 16, 23, 26, 27, 29, 41, 42, 43, 46, 47, 48, 49, 54, 58, 62, 84, 86, 87, 88, 89, 90, 91</code></td></tr><tr><td>Ingestion &amp; Updates</td><td>27</td><td><code>98, 45, 59</code></td></tr><tr><td>Serving API</td><td>16</td><td><code>15, 66</code></td></tr><tr><td>Security &amp; Global Graph</td><td>31</td><td><code>95, 100</code></td></tr><tr><td>Tests &amp; Fixtures</td><td>46</td><td><code>6, 97, 30</code></td></tr><tr><td>ponytail-runtime.js</td><td>19</td><td><code>7</code></td></tr><tr><td>zolu_learn_server.js</td><td>18</td><td><code>8</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>14</td><td><code>13</code></td></tr><tr><td>? 4 Pilar Mikrostruktur &amp; Eksekusi Kuantitatif</td><td>10</td><td><code>18</code></td></tr><tr><td>ponytail-activate.js</td><td>10</td><td><code>20</code></td></tr><tr><td>⚡ CLAUDIA 2.0 (v5.0.0 Apex)</td><td>10</td><td><code>21</code></td></tr><tr><td>Other</td><td>154</td><td><code>24, 25, 28, 31, 32, 33, 35, 36, 37, 38, 44, 50, 51, 52, 53, 55, 57, 60, 61, 63, 64, 65, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 85</code></td></tr>
     </table>
   </div>
   <div class="card">
@@ -158,7 +158,7 @@ flowchart LR
   <div class="card">
     <h4>Graph Report Highlights</h4>
     <ul>
-      <li>713 nodes · 756 edges · 94 communities (73 shown, 21 thin omitted)</li>
+      <li>838 nodes · 874 edges · 101 communities (80 shown, 21 thin omitted)</li>
       <li>Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 26 edges (avg confidence: 0.85)</li>
       <li>Token cost: 0 input · 0 output</li>
       <li>1. `Install` - 15 edges</li>
@@ -170,12 +170,12 @@ flowchart LR
 <hr>
 <!-- ====== 2. Extraction Pipeline ====== -->
 <h2 id="extract-pipeline">2. Extraction Pipeline</h2>
-<p>Extraction Pipeline groups implementation around learning, neurons, python, rust, mostly in learning/neurons/N029_modern_systems_rust_go.md, learning/neurons/N033_python_high_performance.md, scripts/official_runner_real.py. This section covers 66 nodes and 66 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Extraction Pipeline groups implementation around learning, neurons, python, memory, mostly in learning/neurons/N035_event_driven_streaming_cqrs.md, learning/neurons/N034_runtime_profiler_memory_oracle.md, learning/neurons/N033_python_high_performance.md. This section covers 124 nodes and 121 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Extraction Pipeline (66 nodes, 66 edges)
+    %% Section: Extraction Pipeline (124 nodes, 121 edges)
     subgraph extract_pipeline_scripts_official_runner_real_py_07127ff5["scripts/official_runner_real.py"]
         scripts_official_runner_real_eval_single_task_f1c884df("eval_single_task()<br/><small>scripts/official_runner_real.py</small>")
         scripts_official_runner_real_query_llm_4b97cef4("query_llm()<br/><small>scripts/official_runner_real.py</small>")
@@ -208,7 +208,7 @@ flowchart LR
     scripts_official_runner_real_query_llm_4b97cef4 -->|calls| scripts_official_runner_real_get_cache_key_d004d64a
     scripts_official_runner_real_run_parallel_subage_2f19b7d6 -->|calls| scripts_official_runner_real_init_db_7ae4b421
     scripts_official_runner_real_verify_math_gpqa_6ab5771b -->|calls| scripts_official_runner_real_run_safe_python_47e4350d
-    %% Omitted for readability: 48 nodes, 0 edges
+    %% Omitted for readability: 106 nodes, 0 edges
     class scripts_official_runner_real_eval_single_task_f1c884df function;
     class scripts_official_runner_real_query_llm_4b97cef4 function;
     class scripts_official_runner_real_run_parallel_subage_2f19b7d6 function;
@@ -250,243 +250,243 @@ flowchart LR
 </tr>
 <tr>
   <td>1</td>
-  <td><code>N029_modern_systems_rust_go.md</code><br><small style="color:var(--muted)">learning/neurons/N029_modern_systems_rust_go.md</small></td>
+  <td><code>N035_event_driven_streaming_cqrs.md</code><br><small style="color:var(--muted)">learning/neurons/N035_event_driven_streaming_cqrs.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing N029_modern_systems_rust_go.md.</td>
+  <td>Documentation node describing N035_event_driven_streaming_cqrs.md.</td>
 </tr>
 <tr>
   <td>2</td>
-  <td><code>1.1. Rust 2024 Edition Paradigms</code><br><small style="color:var(--muted)">learning/neurons/N029_modern_systems_rust_go.md</small></td>
+  <td><code>🚀 1. Modern Streaming Engine Mechanics: Kafka vs. Redpanda vs. NATS JetStream</code><br><small style="color:var(--muted)">learning/neurons/N035_event_driven_streaming_cqrs.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing 1.1. Rust 2024 Edition Paradigms.</td>
+  <td>Documentation node describing 🚀 1. Modern Streaming Engine Mechanics: Kafka vs. Redpanda vs. NATS JetStream.</td>
 </tr>
 <tr>
   <td>3</td>
-  <td><code>1.2. Tokio Multi-Threaded Work-Stealing Scheduler</code><br><small style="color:var(--muted)">learning/neurons/N029_modern_systems_rust_go.md</small></td>
+  <td><code>🏛️ 2. CQRS &amp; Event Sourcing Architecture</code><br><small style="color:var(--muted)">learning/neurons/N035_event_driven_streaming_cqrs.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing 1.2. Tokio Multi-Threaded Work-Stealing Scheduler.</td>
+  <td>Documentation node describing 🏛️ 2. CQRS &amp; Event Sourcing Architecture.</td>
 </tr>
 <tr>
   <td>4</td>
-  <td><code>🦀 1. Rust 2024 Edition &amp; Async Tokio Runtime Invariants</code><br><small style="color:var(--muted)">learning/neurons/N029_modern_systems_rust_go.md</small></td>
+  <td><code>📦 3. Transactional Outbox Pattern &amp; CDC Invariant</code><br><small style="color:var(--muted)">learning/neurons/N035_event_driven_streaming_cqrs.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing 🦀 1. Rust 2024 Edition &amp; Async Tokio Runtime Invariants.</td>
+  <td>Documentation node describing 📦 3. Transactional Outbox Pattern &amp; CDC Invariant.</td>
 </tr>
 <tr>
   <td>5</td>
-  <td><code>2.1. Atomic Memory Orderings (`std::sync::atomic::Ordering`)</code><br><small style="color:var(--muted)">learning/neurons/N029_modern_systems_rust_go.md</small></td>
+  <td><code>🛡️ 4. Resilient Delivery, Poison Pill Isolation &amp; Multi-Tier DLQ</code><br><small style="color:var(--muted)">learning/neurons/N035_event_driven_streaming_cqrs.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing 2.1. Atomic Memory Orderings (`std::sync::atomic::Ordering`).</td>
+  <td>Documentation node describing 🛡️ 4. Resilient Delivery, Poison Pill Isolation &amp; Multi-Tier DLQ.</td>
 </tr>
 <tr>
   <td>6</td>
-  <td><code>2.2. Lock-Free Single-Producer Single-Consumer (SPSC) Ring Buffer</code><br><small style="color:var(--muted)">learning/neurons/N029_modern_systems_rust_go.md</small></td>
+  <td><code>🔑 5. End-to-End Idempotency &amp; Deduplication Invariants</code><br><small style="color:var(--muted)">learning/neurons/N035_event_driven_streaming_cqrs.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing 2.2. Lock-Free Single-Producer Single-Consumer (SPSC) Ring Buffer.</td>
+  <td>Documentation node describing 🔑 5. End-to-End Idempotency &amp; Deduplication Invariants.</td>
 </tr>
 <tr>
   <td>7</td>
-  <td><code>⚡ 2. Lock-Free Concurrency &amp; Hardware Memory Models</code><br><small style="color:var(--muted)">learning/neurons/N029_modern_systems_rust_go.md</small></td>
+  <td><code>🧪 6. Invariant Self-Check Executable (Pure Python Standard Library)</code><br><small style="color:var(--muted)">learning/neurons/N035_event_driven_streaming_cqrs.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing ⚡ 2. Lock-Free Concurrency &amp; Hardware Memory Models.</td>
+  <td>Documentation node describing 🧪 6. Invariant Self-Check Executable (Pure Python Standard Library).</td>
 </tr>
 <tr>
   <td>8</td>
-  <td><code>3.1. Go 1.23+ Standard Iterators (`iter.Seq` &amp; `iter.Seq2`)</code><br><small style="color:var(--muted)">learning/neurons/N029_modern_systems_rust_go.md</small></td>
+  <td><code>A. Apache Kafka (KRaft Metadata &amp; Zero-Copy Transfer)</code><br><small style="color:var(--muted)">learning/neurons/N035_event_driven_streaming_cqrs.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing 3.1. Go 1.23+ Standard Iterators (`iter.Seq` &amp; `iter.Seq2`).</td>
+  <td>Documentation node describing A. Apache Kafka (KRaft Metadata &amp; Zero-Copy Transfer).</td>
 </tr>
 <tr>
   <td>9</td>
-  <td><code>3.2. Go Memory &amp; Garbage Collection Invariants</code><br><small style="color:var(--muted)">learning/neurons/N029_modern_systems_rust_go.md</small></td>
+  <td><code>A. Klasifikasi Error</code><br><small style="color:var(--muted)">learning/neurons/N035_event_driven_streaming_cqrs.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing 3.2. Go Memory &amp; Garbage Collection Invariants.</td>
+  <td>Documentation node describing A. Klasifikasi Error.</td>
 </tr>
 <tr>
   <td>10</td>
-  <td><code>🐹 3. Go 1.23+ Range-Over-Func Iterators &amp; High-Throughput Patterns</code><br><small style="color:var(--muted)">learning/neurons/N029_modern_systems_rust_go.md</small></td>
+  <td><code>A. Realitas At-Least-Once Delivery</code><br><small style="color:var(--muted)">learning/neurons/N035_event_driven_streaming_cqrs.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing 🐹 3. Go 1.23+ Range-Over-Func Iterators &amp; High-Throughput Patterns.</td>
+  <td>Documentation node describing A. Realitas At-Least-Once Delivery.</td>
 </tr>
 <tr>
   <td>11</td>
-  <td><code>4.1. Zero-Copy Buffer Architecture (Rust &amp; Go)</code><br><small style="color:var(--muted)">learning/neurons/N029_modern_systems_rust_go.md</small></td>
+  <td><code>A. State as a Left Fold over Immutable Events</code><br><small style="color:var(--muted)">learning/neurons/N035_event_driven_streaming_cqrs.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing 4.1. Zero-Copy Buffer Architecture (Rust &amp; Go).</td>
+  <td>Documentation node describing A. State as a Left Fold over Immutable Events.</td>
 </tr>
 <tr>
   <td>12</td>
-  <td><code>4.2. Linux Kernel High-Performance I/O (`io_uring` &amp; Kernel Splice)</code><br><small style="color:var(--muted)">learning/neurons/N029_modern_systems_rust_go.md</small></td>
+  <td><code>A. The Dual-Write Hazard</code><br><small style="color:var(--muted)">learning/neurons/N035_event_driven_streaming_cqrs.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing 4.2. Linux Kernel High-Performance I/O (`io_uring` &amp; Kernel Splice).</td>
+  <td>Documentation node describing A. The Dual-Write Hazard.</td>
 </tr>
 <tr>
   <td>13</td>
-  <td><code>🚀 4. Zero-Copy Buffers &amp; Linux I/O Subsystems</code><br><small style="color:var(--muted)">learning/neurons/N029_modern_systems_rust_go.md</small></td>
+  <td><code>B. 3 Strategi Idempotensi Consumer</code><br><small style="color:var(--muted)">learning/neurons/N035_event_driven_streaming_cqrs.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing 🚀 4. Zero-Copy Buffers &amp; Linux I/O Subsystems.</td>
+  <td>Documentation node describing B. 3 Strategi Idempotensi Consumer.</td>
 </tr>
 <tr>
   <td>14</td>
-  <td><code>🛡️ 5. Memory Safety Invariants &amp; Lifetime Guarantees</code><br><small style="color:var(--muted)">learning/neurons/N029_modern_systems_rust_go.md</small></td>
+  <td><code>B. Aggregate Root &amp; Optimistic Concurrency Control (OCC)</code><br><small style="color:var(--muted)">learning/neurons/N035_event_driven_streaming_cqrs.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing 🛡️ 5. Memory Safety Invariants &amp; Lifetime Guarantees.</td>
+  <td>Documentation node describing B. Aggregate Root &amp; Optimistic Concurrency Control (OCC).</td>
 </tr>
 <tr>
   <td>15</td>
-  <td><code>🔒 Disiplin Eksekusi</code><br><small style="color:var(--muted)">learning/neurons/N029_modern_systems_rust_go.md</small></td>
+  <td><code>B. Multi-Tier Retry &amp; Exponential Backoff Invariant</code><br><small style="color:var(--muted)">learning/neurons/N035_event_driven_streaming_cqrs.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing 🔒 Disiplin Eksekusi.</td>
+  <td>Documentation node describing B. Multi-Tier Retry &amp; Exponential Backoff Invariant.</td>
 </tr>
 <tr>
   <td>16</td>
-  <td><code>Neuron N029: Modern Systems Engineering (Rust 2024 Edition &amp; Go 1.23+ High-Throughput Runtimes)</code><br><small style="color:var(--muted)">learning/neurons/N029_modern_systems_rust_go.md</small></td>
+  <td><code>B. Outbox Schema Invariant (PostgreSQL DDL)</code><br><small style="color:var(--muted)">learning/neurons/N035_event_driven_streaming_cqrs.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing Neuron N029: Modern Systems Engineering (Rust 2024 Edition &amp; Go 1.23+ High-Throughput Runtimes).</td>
+  <td>Documentation node describing B. Outbox Schema Invariant (PostgreSQL DDL).</td>
 </tr>
 <tr>
   <td>17</td>
-  <td><code>💻 Pure Python Executable Invariant Verification Suite</code><br><small style="color:var(--muted)">learning/neurons/N029_modern_systems_rust_go.md</small></td>
+  <td><code>B. Redpanda (C++20, Seastar Thread-per-Core, Direct I/O)</code><br><small style="color:var(--muted)">learning/neurons/N035_event_driven_streaming_cqrs.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing 💻 Pure Python Executable Invariant Verification Suite.</td>
+  <td>Documentation node describing B. Redpanda (C++20, Seastar Thread-per-Core, Direct I/O).</td>
 </tr>
 <tr>
   <td>18</td>
-  <td><code>N033_python_high_performance.md</code><br><small style="color:var(--muted)">learning/neurons/N033_python_high_performance.md</small></td>
+  <td><code>C. NATS JetStream (Go-Native, Subject-Based Routing, Ultra-Lightweight)</code><br><small style="color:var(--muted)">learning/neurons/N035_event_driven_streaming_cqrs.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing N033_python_high_performance.md.</td>
+  <td>Documentation node describing C. NATS JetStream (Go-Native, Subject-Based Routing, Ultra-Lightweight).</td>
 </tr>
 <tr>
   <td>19</td>
-  <td><code>1. CPython 3.12+ Adaptive Specialization &amp; Free-Threaded (No-GIL) Architecture</code><br><small style="color:var(--muted)">learning/neurons/N033_python_high_performance.md</small></td>
+  <td><code>C. Reliable Outbox Dispatch Patterns</code><br><small style="color:var(--muted)">learning/neurons/N035_event_driven_streaming_cqrs.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing 1. CPython 3.12+ Adaptive Specialization &amp; Free-Threaded (No-GIL) Architecture.</td>
+  <td>Documentation node describing C. Reliable Outbox Dispatch Patterns.</td>
 </tr>
 <tr>
   <td>20</td>
-  <td><code>2. Structured Concurrency &amp; Exception Groups (PEP 654 / PEP 678 / Python 3.11–3.12+)</code><br><small style="color:var(--muted)">learning/neurons/N033_python_high_performance.md</small></td>
+  <td><code>C. Snapshotting Invariant</code><br><small style="color:var(--muted)">learning/neurons/N035_event_driven_streaming_cqrs.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing 2. Structured Concurrency &amp; Exception Groups (PEP 654 / PEP 678 / Python 3.11–3.12+).</td>
+  <td>Documentation node describing C. Snapshotting Invariant.</td>
 </tr>
 <tr>
   <td>21</td>
-  <td><code>3. Columnar SIMD Vectorization &amp; Apache Arrow Model (Polars vs Pandas)</code><br><small style="color:var(--muted)">learning/neurons/N033_python_high_performance.md</small></td>
+  <td><code>D. Architectural Engine Matrix</code><br><small style="color:var(--muted)">learning/neurons/N035_event_driven_streaming_cqrs.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing 3. Columnar SIMD Vectorization &amp; Apache Arrow Model (Polars vs Pandas).</td>
+  <td>Documentation node describing D. Architectural Engine Matrix.</td>
 </tr>
 <tr>
   <td>22</td>
-  <td><code>4. Modern Zero-Cost Typing, Type Guards &amp; Static Invariants (Python 3.10–3.12+)</code><br><small style="color:var(--muted)">learning/neurons/N033_python_high_performance.md</small></td>
+  <td><code>Neuron N035: Ultra-Scale Event-Driven Streaming &amp; CQRS Architecture</code><br><small style="color:var(--muted)">learning/neurons/N035_event_driven_streaming_cqrs.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing 4. Modern Zero-Cost Typing, Type Guards &amp; Static Invariants (Python 3.10–3.12+).</td>
+  <td>Documentation node describing Neuron N035: Ultra-Scale Event-Driven Streaming &amp; CQRS Architecture.</td>
 </tr>
 <tr>
   <td>23</td>
-  <td><code>5. Invariant Self-Check Executable (Pure Python 3.12 Standard Library)</code><br><small style="color:var(--muted)">learning/neurons/N033_python_high_performance.md</small></td>
+  <td><code>N034_runtime_profiler_memory_oracle.md</code><br><small style="color:var(--muted)">learning/neurons/N034_runtime_profiler_memory_oracle.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing N034_runtime_profiler_memory_oracle.md.</td>
+</tr>
+<tr>
+  <td>24</td>
+  <td><code>1. Continuous In-Kernel eBPF Profiling &amp; Tracing Architecture</code><br><small style="color:var(--muted)">learning/neurons/N034_runtime_profiler_memory_oracle.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 1. Continuous In-Kernel eBPF Profiling &amp; Tracing Architecture.</td>
+</tr>
+<tr>
+  <td>25</td>
+  <td><code>2. Sampling Profilers &amp; Multi-Runtime Stack Unwinding (py-spy, pprof)</code><br><small style="color:var(--muted)">learning/neurons/N034_runtime_profiler_memory_oracle.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 2. Sampling Profilers &amp; Multi-Runtime Stack Unwinding (py-spy, pprof).</td>
+</tr>
+<tr>
+  <td>26</td>
+  <td><code>3. Sub-Millisecond Flamegraph &amp; CPU Contention Analysis</code><br><small style="color:var(--muted)">learning/neurons/N034_runtime_profiler_memory_oracle.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 3. Sub-Millisecond Flamegraph &amp; CPU Contention Analysis.</td>
+</tr>
+<tr>
+  <td>27</td>
+  <td><code>4. Memory Leak Oracle, Heap Profiling &amp; Advanced Allocator Internals</code><br><small style="color:var(--muted)">learning/neurons/N034_runtime_profiler_memory_oracle.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 4. Memory Leak Oracle, Heap Profiling &amp; Advanced Allocator Internals.</td>
+</tr>
+<tr>
+  <td>28</td>
+  <td><code>5. Invariant Self-Check Executable (Pure Python 3.12 Standard Library)</code><br><small style="color:var(--muted)">learning/neurons/N034_runtime_profiler_memory_oracle.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
   <td>Documentation node describing 5. Invariant Self-Check Executable (Pure Python 3.12 Standard Library).</td>
 </tr>
 <tr>
-  <td>24</td>
-  <td><code>A. `asyncio.TaskGroup` vs Legacy `asyncio.gather`</code><br><small style="color:var(--muted)">learning/neurons/N033_python_high_performance.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing A. `asyncio.TaskGroup` vs Legacy `asyncio.gather`.</td>
-</tr>
-<tr>
-  <td>25</td>
-  <td><code>A. Memory Layout: Row-Oriented vs Columnar Data</code><br><small style="color:var(--muted)">learning/neurons/N033_python_high_performance.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing A. Memory Layout: Row-Oriented vs Columnar Data.</td>
-</tr>
-<tr>
-  <td>26</td>
-  <td><code>A. Specializing Adaptive Interpreter &amp; Tier 2 JIT (PEP 659 &amp; PEP 744)</code><br><small style="color:var(--muted)">learning/neurons/N033_python_high_performance.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing A. Specializing Adaptive Interpreter &amp; Tier 2 JIT (PEP 659 &amp; PEP 744).</td>
-</tr>
-<tr>
-  <td>27</td>
-  <td><code>A. Strict Type Narrowing: `TypeGuard` vs `TypeIs`</code><br><small style="color:var(--muted)">learning/neurons/N033_python_high_performance.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing A. Strict Type Narrowing: `TypeGuard` vs `TypeIs`.</td>
-</tr>
-<tr>
-  <td>28</td>
-  <td><code>B. Exception Groups (`ExceptionGroup` / `BaseExceptionGroup`) &amp; `except*` Syntax</code><br><small style="color:var(--muted)">learning/neurons/N033_python_high_performance.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing B. Exception Groups (`ExceptionGroup` / `BaseExceptionGroup`) &amp; `except*` Syntax.</td>
-</tr>
-<tr>
   <td>29</td>
-  <td><code>B. Free-Threaded Execution (PEP 703 / Python 3.13+ `--disable-gil`)</code><br><small style="color:var(--muted)">learning/neurons/N033_python_high_performance.md</small></td>
+  <td><code>A. Algoritma Konstruksi Flamegraph</code><br><small style="color:var(--muted)">learning/neurons/N034_runtime_profiler_memory_oracle.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing B. Free-Threaded Execution (PEP 703 / Python 3.13+ `--disable-gil`).</td>
+  <td>Documentation node describing A. Algoritma Konstruksi Flamegraph.</td>
 </tr>
 <tr>
   <td>30</td>
-  <td><code>B. Polars LazyFrame &amp; Query Optimizer Passes</code><br><small style="color:var(--muted)">learning/neurons/N033_python_high_performance.md</small></td>
+  <td><code>A. Arsitektur Heap Allocator Modern (jemalloc &amp; mimalloc)</code><br><small style="color:var(--muted)">learning/neurons/N034_runtime_profiler_memory_oracle.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing B. Polars LazyFrame &amp; Query Optimizer Passes.</td>
+  <td>Documentation node describing A. Arsitektur Heap Allocator Modern (jemalloc &amp; mimalloc).</td>
 </tr>
 </table>
 
@@ -495,18 +495,19 @@ flowchart LR
     <h4>Key Files</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>learning/neurons/N029_modern_systems_rust_go.md</code></td><td>17 nodes</td></tr>
+      <tr><td><code>learning/neurons/N035_event_driven_streaming_cqrs.md</code></td><td>22 nodes</td></tr>
+<tr><td><code>learning/neurons/N034_runtime_profiler_memory_oracle.md</code></td><td>20 nodes</td></tr>
+<tr><td><code>learning/neurons/N029_modern_systems_rust_go.md</code></td><td>17 nodes</td></tr>
 <tr><td><code>learning/neurons/N033_python_high_performance.md</code></td><td>17 nodes</td></tr>
+<tr><td><code>learning/neurons/N040_meta_cognitive_self_reflection.md</code></td><td>16 nodes</td></tr>
 <tr><td><code>scripts/official_runner_real.py</code></td><td>12 nodes</td></tr>
 <tr><td><code>learning/neurons/N026_vision_dom_spatial_reasoning.md</code></td><td>10 nodes</td></tr>
 <tr><td><code>learning/neurons/N018_repomap_swebench.md</code></td><td>4 nodes</td></tr>
-<tr><td><code>learning/neurons/N013_deep_storage_and_distributed_db.md</code></td><td>3 nodes</td></tr>
-<tr><td><code>learning/neurons/N015_compiler_ast_and_system_profiling.md</code></td><td>3 nodes</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x56, calls x6, explains x3, indirect call x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x111, calls x6, explains x3, indirect call x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -1238,29 +1239,29 @@ flowchart LR
     subgraph cli_skills_ponytail_hooks_ponytail_config_js_5d3ef804["ponytail/hooks/ponytail-config.js"]
         ponytail_hooks_ponytail_config_gethidestatus_b7520fb0("getHideStatus()<br/><small>ponytail/hooks/ponytail-config.js</small>")
         ponytail_hooks_ponytail_config_getquietstartup_e3631449("getQuietStartup()<br/><small>ponytail/hooks/ponytail-config.js</small>")
-        ponytail_hooks_ponytail_config_getdefaultmode_e08b0a47("getDefaultMode()<br/><small>ponytail/hooks/ponytail-config.js</small>")
         ponytail_hooks_ponytail_config_getconfigpath_99a2d710("getConfigPath()<br/><small>ponytail/hooks/ponytail-config.js</small>")
         ponytail_hooks_ponytail_config_getconfigdir_11eb74d4("getConfigDir()<br/><small>ponytail/hooks/ponytail-config.js</small>")
-        ponytail_hooks_ponytail_config_1f171eac("ponytail-config.js")
+        ponytail_hooks_ponytail_config_getdefaultmode_e08b0a47("getDefaultMode()<br/><small>ponytail/hooks/ponytail-config.js</small>")
         ponytail_hooks_ponytail_config_getclaudedir_cdda0ee2("getClaudeDir()<br/><small>ponytail/hooks/ponytail-config.js</small>")
+        ponytail_hooks_ponytail_config_1f171eac("ponytail-config.js")
     end
     subgraph cli_skills_opencode_plugins_ponytail_frontmatter_d123f0ce[".opencode/plugins/ponytail-frontmatter.cjs"]
         ponytail_opencode_plugins_ponytail_frontmatter_p_5d2c27cd("parseCommandFile()<br/><small>.opencode/plugins/ponytail-frontmatter.cjs</small>")
         ponytail_opencode_plugins_ponytail_frontmatter_e526c9f5("ponytail-frontmatter.cjs")
     end
     ponytail_scripts_uninstall_a236f983("uninstall.js")
-    ponytail_hooks_ponytail_config_getdefaultmode_e08b0a47 -->|calls| ponytail_hooks_ponytail_config_getconfigpath_99a2d710
-    ponytail_opencode_plugins_ponytail_readmode_6df6db11 -->|calls| ponytail_hooks_ponytail_config_getdefaultmode_e08b0a47
     ponytail_hooks_ponytail_config_getconfigpath_99a2d710 -->|calls| ponytail_hooks_ponytail_config_getconfigdir_11eb74d4
     ponytail_hooks_ponytail_config_gethidestatus_b7520fb0 -->|calls| ponytail_hooks_ponytail_config_getconfigpath_99a2d710
     ponytail_hooks_ponytail_config_getquietstartup_e3631449 -->|calls| ponytail_hooks_ponytail_config_getconfigpath_99a2d710
+    ponytail_hooks_ponytail_config_getdefaultmode_e08b0a47 -->|calls| ponytail_hooks_ponytail_config_getconfigpath_99a2d710
+    ponytail_opencode_plugins_ponytail_readmode_6df6db11 -->|calls| ponytail_hooks_ponytail_config_getdefaultmode_e08b0a47
+    ponytail_scripts_uninstall_a236f983 -->|imports| ponytail_hooks_ponytail_config_getclaudedir_cdda0ee2
+    ponytail_scripts_uninstall_a236f983 -->|imports| ponytail_hooks_ponytail_config_getconfigpath_99a2d710
+    ponytail_scripts_uninstall_a236f983 -->|imports| ponytail_hooks_ponytail_config_1f171eac
     ponytail_opencode_plugins_ponytail_b70099ee -->|imports| ponytail_hooks_ponytail_config_getdefaultmode_e08b0a47
     ponytail_opencode_plugins_ponytail_b70099ee -->|imports| ponytail_opencode_plugins_ponytail_frontmatter_p_5d2c27cd
     ponytail_opencode_plugins_ponytail_b70099ee -->|imports| ponytail_hooks_ponytail_config_1f171eac
     ponytail_opencode_plugins_ponytail_b70099ee -->|imports| ponytail_opencode_plugins_ponytail_frontmatter_e526c9f5
-    ponytail_scripts_uninstall_a236f983 -->|imports| ponytail_hooks_ponytail_config_getclaudedir_cdda0ee2
-    ponytail_scripts_uninstall_a236f983 -->|imports| ponytail_hooks_ponytail_config_getconfigpath_99a2d710
-    ponytail_scripts_uninstall_a236f983 -->|imports| ponytail_hooks_ponytail_config_1f171eac
     %% Omitted for readability: 213 nodes, 0 edges
     class ponytail_opencode_plugins_ponytail_b70099ee function;
     class ponytail_opencode_plugins_ponytail_readmode_6df6db11 function;
@@ -1272,11 +1273,11 @@ flowchart LR
     class ponytail_opencode_plugins_ponytail_getponytailin_1b9cdc3b function;
     class ponytail_hooks_ponytail_config_gethidestatus_b7520fb0 function;
     class ponytail_hooks_ponytail_config_getquietstartup_e3631449 function;
-    class ponytail_hooks_ponytail_config_getdefaultmode_e08b0a47 function;
     class ponytail_hooks_ponytail_config_getconfigpath_99a2d710 function;
     class ponytail_hooks_ponytail_config_getconfigdir_11eb74d4 function;
-    class ponytail_hooks_ponytail_config_1f171eac module;
+    class ponytail_hooks_ponytail_config_getdefaultmode_e08b0a47 function;
     class ponytail_hooks_ponytail_config_getclaudedir_cdda0ee2 function;
+    class ponytail_hooks_ponytail_config_1f171eac module;
     class ponytail_opencode_plugins_ponytail_frontmatter_p_5d2c27cd entry;
     class ponytail_opencode_plugins_ponytail_frontmatter_e526c9f5 function;
     class ponytail_scripts_uninstall_a236f983 module;
@@ -1567,12 +1568,24 @@ flowchart LR
 
 <!-- ====== 6. Ingestion & Updates ====== -->
 <h2 id="ingest-cache-update">6. Ingestion &amp; Updates</h2>
-<p>Ingestion &amp; Updates groups implementation around tensor, simd, frontier, n027, mostly in learning/neurons/N027_tensor_simd_vectorization.md, scripts/ingest_frontier_knowledge.py. This section covers 9 nodes and 8 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Ingestion &amp; Updates groups implementation around learning, neurons, webrtc, dsp, mostly in learning/neurons/N039_webrtc_av_dsp_streaming.md, learning/neurons/N027_tensor_simd_vectorization.md, scripts/ingest_frontier_knowledge.py. This section covers 27 nodes and 25 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Ingestion &amp; Updates (9 nodes, 8 edges)
+    %% Section: Ingestion &amp; Updates (27 nodes, 25 edges)
+    subgraph ingest_cache_update_learning_neurons_N039_webrtc_6bc70e31["learning/neurons/N039_webrtc_av_dsp_streaming.md"]
+        learning_neurons_n039_webrtc_av_dsp_streaming_1_ded5aa05("1.1. End-to-End Latency Budget Breakdow...<br/><small>learning/neurons/N039_webrtc_av_dsp_streaming.md</small>")
+        learning_neurons_n039_webrtc_av_dsp_streaming_1_c615e22d("1.2. WebRTC Transport Protocol Stack &amp;...<br/><small>learning/neurons/N039_webrtc_av_dsp_streaming.md</small>")
+        learning_neurons_n039_webrtc_av_dsp_streaming_1_851a03a1("1.3. Transport-Wide Congestion Control...<br/><small>learning/neurons/N039_webrtc_av_dsp_streaming.md</small>")
+        learning_neurons_n039_webrtc_av_dsp_streaming_2_203fb1bc("2.1. Topologi Media: Matriks Perbanding...<br/><small>learning/neurons/N039_webrtc_av_dsp_streaming.md</small>")
+        learning_neurons_n039_webrtc_av_dsp_streaming_2_3af6f18c("2.2. SFU Zero-Decode Routing &amp; RTP Stre...<br/><small>learning/neurons/N039_webrtc_av_dsp_streaming.md</small>")
+        learning_neurons_n039_webrtc_av_dsp_streaming_2_4642851b("2.3. Simulcast vs AV1 Scalable Video Co...<br/><small>learning/neurons/N039_webrtc_av_dsp_streaming.md</small>")
+        learning_neurons_n039_webrtc_av_dsp_streaming_3_c2ef4959("3.1. Real-Time Audio DSP Engine (AEC3,...<br/><small>learning/neurons/N039_webrtc_av_dsp_streaming.md</small>")
+        learning_neurons_n039_webrtc_av_dsp_streaming_3_68a52c37("3.2. AV1 Real-Time Hardware Transcoding...<br/><small>learning/neurons/N039_webrtc_av_dsp_streaming.md</small>")
+        learning_neurons_n039_webrtc_av_dsp_streaming_4_d08dec25("4.1. RFC 3550 Inter-Arrival Jitter Esti...<br/><small>learning/neurons/N039_webrtc_av_dsp_streaming.md</small>")
+        learning_neurons_n039_webrtc_av_dsp_streaming_4_d94c99ca("4.2. Time-Scale Modification via WSOLA...<br/><small>learning/neurons/N039_webrtc_av_dsp_streaming.md</small>")
+    end
     subgraph ingest_cache_update_learning_neurons_N027_tensor_52b6901b["learning/neurons/N027_tensor_simd_vectorization.md"]
         learning_neurons_n027_tensor_simd_vectorization_17c44570("1. SIMD, Fused Multiply-Add (FMA) &amp; Ten...<br/><small>learning/neurons/N027_tensor_simd_vectorization.md</small>")
         learning_neurons_n027_tensor_simd_vectorization_04b7ba55("2. 64-Byte Cache Line Alignment &amp; False...<br/><small>learning/neurons/N027_tensor_simd_vectorization.md</small>")
@@ -1584,9 +1597,19 @@ flowchart LR
         scripts_ingest_frontier_knowledge_build_all_fron_ff8b9479("all frontier datasets()<br/><small>scripts/ingest_frontier_knowledge.py</small>")
         scripts_ingest_frontier_knowledge_ensure_dirs_f31a27a1("ensure_dirs()<br/><small>scripts/ingest_frontier_knowledge.py</small>")
         scripts_ingest_frontier_knowledge_6c3229fe("ingest_frontier_knowledge.py")
-        scripts_ingest_frontier_knowledge_rationale_1_f077d939("Automated Frontier Dataset Scraper &amp; Kn...<br/><small>scripts/ingest_frontier_knowledge.py</small>")
     end
     scripts_ingest_frontier_knowledge_build_all_fron_ff8b9479 -->|calls| scripts_ingest_frontier_knowledge_ensure_dirs_f31a27a1
+    %% Omitted for readability: 9 nodes, 0 edges
+    class learning_neurons_n039_webrtc_av_dsp_streaming_1_ded5aa05 concept;
+    class learning_neurons_n039_webrtc_av_dsp_streaming_1_c615e22d concept;
+    class learning_neurons_n039_webrtc_av_dsp_streaming_1_851a03a1 concept;
+    class learning_neurons_n039_webrtc_av_dsp_streaming_2_203fb1bc concept;
+    class learning_neurons_n039_webrtc_av_dsp_streaming_2_3af6f18c concept;
+    class learning_neurons_n039_webrtc_av_dsp_streaming_2_4642851b concept;
+    class learning_neurons_n039_webrtc_av_dsp_streaming_3_c2ef4959 concept;
+    class learning_neurons_n039_webrtc_av_dsp_streaming_3_68a52c37 concept;
+    class learning_neurons_n039_webrtc_av_dsp_streaming_4_d08dec25 concept;
+    class learning_neurons_n039_webrtc_av_dsp_streaming_4_d94c99ca concept;
     class learning_neurons_n027_tensor_simd_vectorization_17c44570 concept;
     class learning_neurons_n027_tensor_simd_vectorization_04b7ba55 concept;
     class learning_neurons_n027_tensor_simd_vectorization_f2f3d496 concept;
@@ -1595,7 +1618,6 @@ flowchart LR
     class scripts_ingest_frontier_knowledge_build_all_fron_ff8b9479 function;
     class scripts_ingest_frontier_knowledge_ensure_dirs_f31a27a1 function;
     class scripts_ingest_frontier_knowledge_6c3229fe module;
-    class scripts_ingest_frontier_knowledge_rationale_1_f077d939 concept;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -1619,6 +1641,150 @@ flowchart LR
 </tr>
 <tr>
   <td>1</td>
+  <td><code>N039_webrtc_av_dsp_streaming.md</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing N039_webrtc_av_dsp_streaming.md.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>1.1. End-to-End Latency Budget Breakdown ($&lt; 100\text{ ms}$)</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 1.1. End-to-End Latency Budget Breakdown ($&lt; 100\text{ ms}$).</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>1.2. WebRTC Transport Protocol Stack &amp; Cryptographic Handshake</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 1.2. WebRTC Transport Protocol Stack &amp; Cryptographic Handshake.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>1.3. Transport-Wide Congestion Control (TWCC - RFC 8888) &amp; BWE Algorithms</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 1.3. Transport-Wide Congestion Control (TWCC - RFC 8888) &amp; BWE Algorithms.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>🌐 1. Ultra-Low Latency (&lt;100ms) WebRTC Architecture &amp; Transport Pipeline</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🌐 1. Ultra-Low Latency (&lt;100ms) WebRTC Architecture &amp; Transport Pipeline.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>2.1. Topologi Media: Matriks Perbandingan Kritis</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 2.1. Topologi Media: Matriks Perbandingan Kritis.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>2.2. SFU Zero-Decode Routing &amp; RTP Stream Rewriting</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 2.2. SFU Zero-Decode Routing &amp; RTP Stream Rewriting.</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>2.3. Simulcast vs AV1 Scalable Video Coding (SVC)</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 2.3. Simulcast vs AV1 Scalable Video Coding (SVC).</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>🏢 2. Media Topology: SFU vs MCU vs Mesh &amp; Scalable Video Routing</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🏢 2. Media Topology: SFU vs MCU vs Mesh &amp; Scalable Video Routing.</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>3.1. Real-Time Audio DSP Engine (AEC3, NS, AGC2 &amp; Opus)</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 3.1. Real-Time Audio DSP Engine (AEC3, NS, AGC2 &amp; Opus).</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>3.2. AV1 Real-Time Hardware Transcoding &amp; Codec Invariants</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 3.2. AV1 Real-Time Hardware Transcoding &amp; Codec Invariants.</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>🎙️ 3. Audio/Video DSP Pipelines, Opus &amp; AV1 Hardware Transcoding</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🎙️ 3. Audio/Video DSP Pipelines, Opus &amp; AV1 Hardware Transcoding.</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>4.1. RFC 3550 Inter-Arrival Jitter Estimation &amp; Playout Target</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 4.1. RFC 3550 Inter-Arrival Jitter Estimation &amp; Playout Target.</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>4.2. Time-Scale Modification via WSOLA (Waveform Similarity Overlap-Add)</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 4.2. Time-Scale Modification via WSOLA (Waveform Similarity Overlap-Add).</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>4.3. Hybrid Loss Recovery &amp; Packet Loss Concealment (PLC)</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 4.3. Hybrid Loss Recovery &amp; Packet Loss Concealment (PLC).</td>
+</tr>
+<tr>
+  <td>16</td>
+  <td><code>🛡️ 4. Adaptive Jitter Buffer (NetEq) &amp; Packet Loss Concealment (PLC)</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🛡️ 4. Adaptive Jitter Buffer (NetEq) &amp; Packet Loss Concealment (PLC).</td>
+</tr>
+<tr>
+  <td>17</td>
+  <td><code>🧪 5. Invariant Self-Check Executable (Pure Python Standard Library)</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🧪 5. Invariant Self-Check Executable (Pure Python Standard Library).</td>
+</tr>
+<tr>
+  <td>18</td>
+  <td><code>Neuron N039: Real-Time WebRTC, Audio/Video DSP &amp; AV1 Streaming</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Neuron N039: Real-Time WebRTC, Audio/Video DSP &amp; AV1 Streaming.</td>
+</tr>
+<tr>
+  <td>19</td>
   <td><code>N027_tensor_simd_vectorization.md</code><br><small style="color:var(--muted)">learning/neurons/N027_tensor_simd_vectorization.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
@@ -1626,7 +1792,7 @@ flowchart LR
   <td>Documentation node describing N027_tensor_simd_vectorization.md.</td>
 </tr>
 <tr>
-  <td>2</td>
+  <td>20</td>
   <td><code>1. SIMD, Fused Multiply-Add (FMA) &amp; Tensor Core Vectorization</code><br><small style="color:var(--muted)">learning/neurons/N027_tensor_simd_vectorization.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
@@ -1634,7 +1800,7 @@ flowchart LR
   <td>Documentation node describing 1. SIMD, Fused Multiply-Add (FMA) &amp; Tensor Core Vectorization.</td>
 </tr>
 <tr>
-  <td>3</td>
+  <td>21</td>
   <td><code>2. 64-Byte Cache Line Alignment &amp; False Sharing</code><br><small style="color:var(--muted)">learning/neurons/N027_tensor_simd_vectorization.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
@@ -1642,7 +1808,7 @@ flowchart LR
   <td>Documentation node describing 2. 64-Byte Cache Line Alignment &amp; False Sharing.</td>
 </tr>
 <tr>
-  <td>4</td>
+  <td>22</td>
   <td><code>3. Roofline Model &amp; L1/L2/L3 Cache Tiling</code><br><small style="color:var(--muted)">learning/neurons/N027_tensor_simd_vectorization.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
@@ -1650,7 +1816,7 @@ flowchart LR
   <td>Documentation node describing 3. Roofline Model &amp; L1/L2/L3 Cache Tiling.</td>
 </tr>
 <tr>
-  <td>5</td>
+  <td>23</td>
   <td><code>4. Invariant Self-Check (Stdlib Python)</code><br><small style="color:var(--muted)">learning/neurons/N027_tensor_simd_vectorization.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
@@ -1658,7 +1824,7 @@ flowchart LR
   <td>Documentation node describing 4. Invariant Self-Check (Stdlib Python).</td>
 </tr>
 <tr>
-  <td>6</td>
+  <td>24</td>
   <td><code>build_all_frontier_datasets()</code><br><small style="color:var(--muted)">scripts/ingest_frontier_knowledge.py</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -1666,7 +1832,7 @@ flowchart LR
   <td>build_all_frontier_datasets() node in scripts/ingest_frontier_knowledge.py.</td>
 </tr>
 <tr>
-  <td>7</td>
+  <td>25</td>
   <td><code>ensure_dirs()</code><br><small style="color:var(--muted)">scripts/ingest_frontier_knowledge.py</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>all frontier datasets()</code><br><small style="color:var(--muted)">scripts/ingest_frontier_knowledge.py</small></td>
@@ -1674,7 +1840,7 @@ flowchart LR
   <td>ensure_dirs() node in scripts/ingest_frontier_knowledge.py.</td>
 </tr>
 <tr>
-  <td>8</td>
+  <td>26</td>
   <td><code>ingest_frontier_knowledge.py</code><br><small style="color:var(--muted)">scripts/ingest_frontier_knowledge.py</small></td>
   <td><span class="tag tag-class">Module</span></td>
   <td>External entry / no inbound edge</td>
@@ -1682,7 +1848,7 @@ flowchart LR
   <td>Module file in scripts/ingest_frontier_knowledge.py.</td>
 </tr>
 <tr>
-  <td>9</td>
+  <td>27</td>
   <td><code>Automated Frontier Dataset Scraper &amp; Knowledge Ingester for Claudia 2.0 Ingests…</code><br><small style="color:var(--muted)">scripts/ingest_frontier_knowledge.py</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
@@ -1696,13 +1862,14 @@ flowchart LR
     <h4>Key Files</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>learning/neurons/N027_tensor_simd_vectorization.md</code></td><td>5 nodes</td></tr>
+      <tr><td><code>learning/neurons/N039_webrtc_av_dsp_streaming.md</code></td><td>18 nodes</td></tr>
+<tr><td><code>learning/neurons/N027_tensor_simd_vectorization.md</code></td><td>5 nodes</td></tr>
 <tr><td><code>scripts/ingest_frontier_knowledge.py</code></td><td>4 nodes</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x6, calls x1, explains x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x23, calls x1, explains x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -1735,8 +1902,6 @@ flowchart LR
         learning_neurons_n012_deep_search_and_graph_rag_40652cab("1. Hybrid Search &amp; Reciprocal Rank Fusi...<br/><small>learning/neurons/N012_deep_search_and_graph_rag.md</small>")
         learning_neurons_n012_deep_search_and_graph_rag_7faa8608("2. Multi-Hop GraphRAG &amp; AST Code Naviga...<br/><small>learning/neurons/N012_deep_search_and_graph_rag.md</small>")
     end
-    learning_neurons_n012_deep_search_and_graph_rag_cd1f2e79 -->|contains| learning_neurons_n012_deep_search_and_graph_rag_7faa8608
-    learning_neurons_n012_deep_search_and_graph_rag_cd1f2e79 -->|contains| learning_neurons_n012_deep_search_and_graph_rag_40652cab
     learning_neurons_n031_modern_data_storage_pgvect_2227788e -->|contains| learning_neurons_n031_modern_data_storage_pgvect_7ab3a3a3
     learning_neurons_n031_modern_data_storage_pgvect_49618dde -->|contains| learning_neurons_n031_modern_data_storage_pgvect_7cd72e51
     learning_neurons_n031_modern_data_storage_pgvect_49618dde -->|contains| learning_neurons_n031_modern_data_storage_pgvect_27063b51
@@ -1749,6 +1914,8 @@ flowchart LR
     learning_neurons_n031_modern_data_storage_pgvect_7ab3a3a3 -->|contains| learning_neurons_n031_modern_data_storage_pgvect_ece50c02
     learning_neurons_n031_modern_data_storage_pgvect_7ab3a3a3 -->|contains| learning_neurons_n031_modern_data_storage_pgvect_0456fe18
     learning_neurons_n031_modern_data_storage_pgvect_7ab3a3a3 -->|contains| learning_neurons_n031_modern_data_storage_pgvect_26cfe147
+    learning_neurons_n012_deep_search_and_graph_rag_cd1f2e79 -->|contains| learning_neurons_n012_deep_search_and_graph_rag_7faa8608
+    learning_neurons_n012_deep_search_and_graph_rag_cd1f2e79 -->|contains| learning_neurons_n012_deep_search_and_graph_rag_40652cab
     class learning_neurons_n031_modern_data_storage_pgvect_7ab3a3a3 concept;
     class learning_neurons_n031_modern_data_storage_pgvect_49618dde concept;
     class learning_neurons_n031_modern_data_storage_pgvect_26cfe147 concept;
@@ -1932,14 +2099,358 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 8. Tests & Fixtures ====== -->
-<h2 id="tests-fixtures">8. Tests &amp; Fixtures</h2>
-<p>Tests &amp; Fixtures groups implementation around ponytail, test, extension, indexjs, mostly in ponytail/pi-extension/index.js, scripts/test_brain.py, pi-extension/test/extension.test.js. This section covers 28 nodes and 43 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<!-- ====== 8. Security & Global Graph ====== -->
+<h2 id="security-global">8. Security &amp; Global Graph</h2>
+<p>Security &amp; Global Graph groups implementation around learning, neurons, wasi, wasm, mostly in learning/neurons/N037_wasm_wasi_microvm_sandboxing.md, learning/neurons/N038_red_team_pentest_cve_patching.md. This section covers 31 nodes and 29 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Tests &amp; Fixtures (28 nodes, 43 edges)
+    %% Section: Security &amp; Global Graph (31 nodes, 29 edges)
+    subgraph security_global_learning_neurons_N037_wasm_wasi_16924d4f["learning/neurons/N037_wasm_wasi_microvm_sandboxing.md"]
+        learning_neurons_n037_wasm_wasi_microvm_sandboxi_e86ca146("Neuron N037: WebAssembly (WASM), WASI &amp;...<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
+        learning_neurons_n037_wasm_wasi_microvm_sandboxi_0553eee9("🛡️ 1. WebAssembly Linear Memory Sandbox...<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
+        learning_neurons_n037_wasm_wasi_microvm_sandboxi_a21954b2("🚀 4. Micro-VMs &amp; Hardware-Assisted Virt...<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
+        learning_neurons_n037_wasm_wasi_microvm_sandboxi_d6898bb4("🌐 2. WASI (WebAssembly System Interface...<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
+        learning_neurons_n037_wasm_wasi_microvm_sandboxi_78a6f825("⚡ 3. High-Performance Runtimes (Wasmtim...<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
+        learning_neurons_n037_wasm_wasi_microvm_sandboxi_49e91d0b("⚡ 5. V8 Isolates &amp; Ultra-Dense Edge Com...<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
+        learning_neurons_n037_wasm_wasi_microvm_sandboxi_90247e40("1.1. Linear Memory Model &amp; Page Granula...<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
+        learning_neurons_n037_wasm_wasi_microvm_sandboxi_237d218e("1.2. Hardware Guard Pages &amp; Zero-Cost S...<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
+        learning_neurons_n037_wasm_wasi_microvm_sandboxi_77914e3c("1.3. Shadow Stack &amp; Control-Flow Integr...<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
+        learning_neurons_n037_wasm_wasi_microvm_sandboxi_bd2d55ca("2.1. Paradigma Capability-Based Securit...<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
+        learning_neurons_n037_wasm_wasi_microvm_sandboxi_3896004c("2.2. Evolusi WASI &amp; The Component Model...<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
+        learning_neurons_n037_wasm_wasi_microvm_sandboxi_62cdee95("3.1. Wasmtime &amp; Cranelift JIT Invariants<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
+        learning_neurons_n037_wasm_wasi_microvm_sandboxi_8ab7433d("3.2. Extism Universal Plugin Framework<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
+        learning_neurons_n037_wasm_wasi_microvm_sandboxi_aad29d59("4.1. Hardware Virtualization (KVM: /de...<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
+        learning_neurons_n037_wasm_wasi_microvm_sandboxi_bbb2ae2f("4.2. Arsitektur Firecracker Micro-VM<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
+        learning_neurons_n037_wasm_wasi_microvm_sandboxi_3d3644da("4.3. Confinement &amp; The Firecracker Jailer<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
+    end
+    subgraph security_global_learning_neurons_N038_red_team_p_c9327303["learning/neurons/N038_red_team_pentest_cve_patching.md"]
+        learning_neurons_n038_red_team_pentest_cve_patch_8d4df8e3("🎯 5 Invarian Utama Autonomous Red Team...<br/><small>learning/neurons/N038_red_team_pentest_cve_patching.md</small>")
+        learning_neurons_n038_red_team_pentest_cve_patch_f5362f2c("Neuron N038: Autonomous Red Team, Penet...<br/><small>learning/neurons/N038_red_team_pentest_cve_patching.md</small>")
+    end
+    learning_neurons_n038_red_team_pentest_cve_patch_f5362f2c -->|contains| learning_neurons_n038_red_team_pentest_cve_patch_8d4df8e3
+    learning_neurons_n037_wasm_wasi_microvm_sandboxi_0553eee9 -->|contains| learning_neurons_n037_wasm_wasi_microvm_sandboxi_90247e40
+    learning_neurons_n037_wasm_wasi_microvm_sandboxi_0553eee9 -->|contains| learning_neurons_n037_wasm_wasi_microvm_sandboxi_237d218e
+    learning_neurons_n037_wasm_wasi_microvm_sandboxi_0553eee9 -->|contains| learning_neurons_n037_wasm_wasi_microvm_sandboxi_77914e3c
+    learning_neurons_n037_wasm_wasi_microvm_sandboxi_d6898bb4 -->|contains| learning_neurons_n037_wasm_wasi_microvm_sandboxi_bd2d55ca
+    learning_neurons_n037_wasm_wasi_microvm_sandboxi_d6898bb4 -->|contains| learning_neurons_n037_wasm_wasi_microvm_sandboxi_3896004c
+    learning_neurons_n037_wasm_wasi_microvm_sandboxi_78a6f825 -->|contains| learning_neurons_n037_wasm_wasi_microvm_sandboxi_62cdee95
+    learning_neurons_n037_wasm_wasi_microvm_sandboxi_78a6f825 -->|contains| learning_neurons_n037_wasm_wasi_microvm_sandboxi_8ab7433d
+    learning_neurons_n037_wasm_wasi_microvm_sandboxi_a21954b2 -->|contains| learning_neurons_n037_wasm_wasi_microvm_sandboxi_aad29d59
+    learning_neurons_n037_wasm_wasi_microvm_sandboxi_a21954b2 -->|contains| learning_neurons_n037_wasm_wasi_microvm_sandboxi_bbb2ae2f
+    learning_neurons_n037_wasm_wasi_microvm_sandboxi_a21954b2 -->|contains| learning_neurons_n037_wasm_wasi_microvm_sandboxi_3d3644da
+    learning_neurons_n037_wasm_wasi_microvm_sandboxi_e86ca146 -->|contains| learning_neurons_n037_wasm_wasi_microvm_sandboxi_0553eee9
+    learning_neurons_n037_wasm_wasi_microvm_sandboxi_e86ca146 -->|contains| learning_neurons_n037_wasm_wasi_microvm_sandboxi_a21954b2
+    learning_neurons_n037_wasm_wasi_microvm_sandboxi_e86ca146 -->|contains| learning_neurons_n037_wasm_wasi_microvm_sandboxi_49e91d0b
+    learning_neurons_n037_wasm_wasi_microvm_sandboxi_e86ca146 -->|contains| learning_neurons_n037_wasm_wasi_microvm_sandboxi_d6898bb4
+    learning_neurons_n037_wasm_wasi_microvm_sandboxi_e86ca146 -->|contains| learning_neurons_n037_wasm_wasi_microvm_sandboxi_78a6f825
+    %% Omitted for readability: 13 nodes, 0 edges
+    class learning_neurons_n037_wasm_wasi_microvm_sandboxi_e86ca146 concept;
+    class learning_neurons_n037_wasm_wasi_microvm_sandboxi_0553eee9 concept;
+    class learning_neurons_n037_wasm_wasi_microvm_sandboxi_a21954b2 concept;
+    class learning_neurons_n037_wasm_wasi_microvm_sandboxi_d6898bb4 concept;
+    class learning_neurons_n037_wasm_wasi_microvm_sandboxi_78a6f825 concept;
+    class learning_neurons_n037_wasm_wasi_microvm_sandboxi_49e91d0b concept;
+    class learning_neurons_n037_wasm_wasi_microvm_sandboxi_90247e40 concept;
+    class learning_neurons_n037_wasm_wasi_microvm_sandboxi_237d218e concept;
+    class learning_neurons_n037_wasm_wasi_microvm_sandboxi_77914e3c concept;
+    class learning_neurons_n037_wasm_wasi_microvm_sandboxi_bd2d55ca concept;
+    class learning_neurons_n037_wasm_wasi_microvm_sandboxi_3896004c concept;
+    class learning_neurons_n037_wasm_wasi_microvm_sandboxi_62cdee95 concept;
+    class learning_neurons_n037_wasm_wasi_microvm_sandboxi_8ab7433d concept;
+    class learning_neurons_n037_wasm_wasi_microvm_sandboxi_aad29d59 concept;
+    class learning_neurons_n037_wasm_wasi_microvm_sandboxi_bbb2ae2f concept;
+    class learning_neurons_n037_wasm_wasi_microvm_sandboxi_3d3644da concept;
+    class learning_neurons_n038_red_team_pentest_cve_patch_8d4df8e3 concept;
+    class learning_neurons_n038_red_team_pentest_cve_patch_f5362f2c concept;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>N037_wasm_wasi_microvm_sandboxing.md</code><br><small style="color:var(--muted)">learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing N037_wasm_wasi_microvm_sandboxing.md.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>1.1. Linear Memory Model &amp; Page Granularity</code><br><small style="color:var(--muted)">learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 1.1. Linear Memory Model &amp; Page Granularity.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>1.2. Hardware Guard Pages &amp; Zero-Cost Signal Traps</code><br><small style="color:var(--muted)">learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 1.2. Hardware Guard Pages &amp; Zero-Cost Signal Traps.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>1.3. Shadow Stack &amp; Control-Flow Integrity (CFI)</code><br><small style="color:var(--muted)">learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 1.3. Shadow Stack &amp; Control-Flow Integrity (CFI).</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>🛡️ 1. WebAssembly Linear Memory Sandboxing &amp; Hardware Intercepts</code><br><small style="color:var(--muted)">learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🛡️ 1. WebAssembly Linear Memory Sandboxing &amp; Hardware Intercepts.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>2.1. Paradigma Capability-Based Security (Zero Ambient Authority)</code><br><small style="color:var(--muted)">learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 2.1. Paradigma Capability-Based Security (Zero Ambient Authority).</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>2.2. Evolusi WASI &amp; The Component Model (WASI Preview 2 / Wasm 2.0)</code><br><small style="color:var(--muted)">learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 2.2. Evolusi WASI &amp; The Component Model (WASI Preview 2 / Wasm 2.0).</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>🌐 2. WASI (WebAssembly System Interface) &amp; Capability-Based Security</code><br><small style="color:var(--muted)">learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🌐 2. WASI (WebAssembly System Interface) &amp; Capability-Based Security.</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>3.1. Wasmtime &amp; Cranelift JIT Invariants</code><br><small style="color:var(--muted)">learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 3.1. Wasmtime &amp; Cranelift JIT Invariants.</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>3.2. Extism Universal Plugin Framework</code><br><small style="color:var(--muted)">learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 3.2. Extism Universal Plugin Framework.</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>⚡ 3. High-Performance Runtimes (Wasmtime) &amp; Universal Plugins (Extism)</code><br><small style="color:var(--muted)">learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing ⚡ 3. High-Performance Runtimes (Wasmtime) &amp; Universal Plugins (Extism).</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>4.1. Hardware Virtualization (KVM: `/dev/kvm`)</code><br><small style="color:var(--muted)">learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 4.1. Hardware Virtualization (KVM: `/dev/kvm`).</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>4.2. Arsitektur Firecracker Micro-VM</code><br><small style="color:var(--muted)">learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 4.2. Arsitektur Firecracker Micro-VM.</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>4.3. Confinement &amp; The Firecracker Jailer</code><br><small style="color:var(--muted)">learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 4.3. Confinement &amp; The Firecracker Jailer.</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>🚀 4. Micro-VMs &amp; Hardware-Assisted Virtualization (Firecracker &amp; KVM)</code><br><small style="color:var(--muted)">learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🚀 4. Micro-VMs &amp; Hardware-Assisted Virtualization (Firecracker &amp; KVM).</td>
+</tr>
+<tr>
+  <td>16</td>
+  <td><code>5.1. Arsitektur V8 Isolate (Cloudflare Workers / Deno Core)</code><br><small style="color:var(--muted)">learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 5.1. Arsitektur V8 Isolate (Cloudflare Workers / Deno Core).</td>
+</tr>
+<tr>
+  <td>17</td>
+  <td><code>5.2. Startup Latency &amp; V8 Snapshots</code><br><small style="color:var(--muted)">learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 5.2. Startup Latency &amp; V8 Snapshots.</td>
+</tr>
+<tr>
+  <td>18</td>
+  <td><code>⚡ 5. V8 Isolates &amp; Ultra-Dense Edge Compute</code><br><small style="color:var(--muted)">learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing ⚡ 5. V8 Isolates &amp; Ultra-Dense Edge Compute.</td>
+</tr>
+<tr>
+  <td>19</td>
+  <td><code>📊 6. Matriks Perbandingan Teknologi Sandboxing</code><br><small style="color:var(--muted)">learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 📊 6. Matriks Perbandingan Teknologi Sandboxing.</td>
+</tr>
+<tr>
+  <td>20</td>
+  <td><code>🎯 7. Zero-Trust Untrusted Plugin Execution Pipeline</code><br><small style="color:var(--muted)">learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🎯 7. Zero-Trust Untrusted Plugin Execution Pipeline.</td>
+</tr>
+<tr>
+  <td>21</td>
+  <td><code>🧪 8. Invariant Self-Check Executable (Pure Python Standard Library)</code><br><small style="color:var(--muted)">learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🧪 8. Invariant Self-Check Executable (Pure Python Standard Library).</td>
+</tr>
+<tr>
+  <td>22</td>
+  <td><code>Neuron N037: WebAssembly (WASM), WASI &amp; Micro-VM Sandboxing</code><br><small style="color:var(--muted)">learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Neuron N037: WebAssembly (WASM), WASI &amp; Micro-VM Sandboxing.</td>
+</tr>
+<tr>
+  <td>23</td>
+  <td><code>N038_red_team_pentest_cve_patching.md</code><br><small style="color:var(--muted)">learning/neurons/N038_red_team_pentest_cve_patching.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing N038_red_team_pentest_cve_patching.md.</td>
+</tr>
+<tr>
+  <td>24</td>
+  <td><code>1. Grammar &amp; Mutation-Based OWASP Top 10 Fuzzing Engine</code><br><small style="color:var(--muted)">learning/neurons/N038_red_team_pentest_cve_patching.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 1. Grammar &amp; Mutation-Based OWASP Top 10 Fuzzing Engine.</td>
+</tr>
+<tr>
+  <td>25</td>
+  <td><code>2. AST-Based Static Application Security Testing (SAST) &amp; Taint Engine</code><br><small style="color:var(--muted)">learning/neurons/N038_red_team_pentest_cve_patching.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 2. AST-Based Static Application Security Testing (SAST) &amp; Taint Engine.</td>
+</tr>
+<tr>
+  <td>26</td>
+  <td><code>3. Dynamic Application Security Testing (DAST) &amp; Security Header/Token Oracle</code><br><small style="color:var(--muted)">learning/neurons/N038_red_team_pentest_cve_patching.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 3. Dynamic Application Security Testing (DAST) &amp; Security Header/Token Oracle.</td>
+</tr>
+<tr>
+  <td>27</td>
+  <td><code>4. Autonomous AST-Level Vulnerability Remediation &amp; Automated CVE Patching</code><br><small style="color:var(--muted)">learning/neurons/N038_red_team_pentest_cve_patching.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 4. Autonomous AST-Level Vulnerability Remediation &amp; Automated CVE Patching.</td>
+</tr>
+<tr>
+  <td>28</td>
+  <td><code>🎯 5 Invarian Utama Autonomous Red Team &amp; Automated CVE Patching</code><br><small style="color:var(--muted)">learning/neurons/N038_red_team_pentest_cve_patching.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🎯 5 Invarian Utama Autonomous Red Team &amp; Automated CVE Patching.</td>
+</tr>
+<tr>
+  <td>29</td>
+  <td><code>5. Software Bill of Materials (SBOM) &amp; Supply Chain Security</code><br><small style="color:var(--muted)">learning/neurons/N038_red_team_pentest_cve_patching.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 5. Software Bill of Materials (SBOM) &amp; Supply Chain Security.</td>
+</tr>
+<tr>
+  <td>30</td>
+  <td><code>💻 Algoritma Deterministik (Pure Python Standard Library)</code><br><small style="color:var(--muted)">learning/neurons/N038_red_team_pentest_cve_patching.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 💻 Algoritma Deterministik (Pure Python Standard Library).</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</code></td><td>22 nodes</td></tr>
+<tr><td><code>learning/neurons/N038_red_team_pentest_cve_patching.md</code></td><td>9 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x29. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 9. Tests & Fixtures ====== -->
+<h2 id="tests-fixtures">9. Tests &amp; Fixtures</h2>
+<p>Tests &amp; Fixtures groups implementation around test, ponytail, product, n036, mostly in learning/neurons/N036_fullstack_product_synthesizer.md, ponytail/pi-extension/index.js, scripts/test_brain.py. This section covers 46 nodes and 60 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: Tests &amp; Fixtures (46 nodes, 60 edges)
     subgraph tests_fixtures_scripts_test_brain_py_3e905d7c["scripts/test_brain.py"]
         scripts_test_brain_run_all_d04a7277("run_all()<br/><small>scripts/test_brain.py</small>")
         scripts_test_brain_test_neuron_network_f6cb234e("test_neuron_network()<br/><small>scripts/test_brain.py</small>")
@@ -1987,7 +2498,7 @@ flowchart LR
     ponytail_pi_extension_test_helpers_test_2bad389e -->|imports| ponytail_pi_extension_index_readdefaultmode_0c7fe894
     ponytail_pi_extension_test_helpers_test_2bad389e -->|imports| ponytail_pi_extension_index_resolvesessionmode_cc594ff1
     ponytail_pi_extension_test_helpers_test_2bad389e -->|imports| ponytail_pi_extension_index_9d2d2187
-    %% Omitted for readability: 10 nodes, 0 edges
+    %% Omitted for readability: 28 nodes, 0 edges
     class scripts_test_brain_run_all_d04a7277 test;
     class scripts_test_brain_test_neuron_network_f6cb234e test;
     class scripts_test_brain_test_memory_layer_8fb937f3 test;
@@ -2209,67 +2720,83 @@ flowchart LR
 </tr>
 <tr>
   <td>21</td>
-  <td><code>run_all()</code><br><small style="color:var(--muted)">scripts/test_brain.py</small></td>
-  <td><span class="tag tag-func">Test</span></td>
+  <td><code>N036_fullstack_product_synthesizer.md</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
-  <td><code>test_ide_bridges()</code><br><small style="color:var(--muted)">scripts/test_brain.py</small><br><code>test_identity_tamper_lock()</code><br><small style="color:var(--muted)">scripts/test_brain.py</small><br><code>test_knowledge_graph()</code><br><small style="color:var(--muted)">scripts/test_brain.py</small><br>+3 more</td>
-  <td>run_all() node in scripts/test_brain.py.</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing N036_fullstack_product_synthesizer.md.</td>
 </tr>
 <tr>
   <td>22</td>
-  <td><code>test_ide_bridges()</code><br><small style="color:var(--muted)">scripts/test_brain.py</small></td>
-  <td><span class="tag tag-func">Test</span></td>
-  <td><code>run_all()</code><br><small style="color:var(--muted)">scripts/test_brain.py</small></td>
+  <td><code>🏗️ 1. 0-to-1 Full-Stack Product Synthesis Architecture</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Verifies imports, entry points, or version behavior.</td>
+  <td>Documentation node describing 🏗️ 1. 0-to-1 Full-Stack Product Synthesis Architecture.</td>
 </tr>
 <tr>
   <td>23</td>
-  <td><code>test_identity_tamper_lock()</code><br><small style="color:var(--muted)">scripts/test_brain.py</small></td>
-  <td><span class="tag tag-func">Test</span></td>
-  <td><code>run_all()</code><br><small style="color:var(--muted)">scripts/test_brain.py</small></td>
+  <td><code>🗄️ 2. Database Layer &amp; Dual-Dialect Drizzle Schema Synthesis</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Verifies imports, entry points, or version behavior.</td>
+  <td>Documentation node describing 🗄️ 2. Database Layer &amp; Dual-Dialect Drizzle Schema Synthesis.</td>
 </tr>
 <tr>
   <td>24</td>
-  <td><code>test_knowledge_graph()</code><br><small style="color:var(--muted)">scripts/test_brain.py</small></td>
-  <td><span class="tag tag-func">Test</span></td>
-  <td><code>run_all()</code><br><small style="color:var(--muted)">scripts/test_brain.py</small></td>
+  <td><code>⚡ 3. API Gateway &amp; Sub-Millisecond Type-Safe RPC Layer (Hono v4)</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Builds dependency relationships and graph data.</td>
+  <td>Documentation node describing ⚡ 3. API Gateway &amp; Sub-Millisecond Type-Safe RPC Layer (Hono v4).</td>
 </tr>
 <tr>
   <td>25</td>
-  <td><code>test_memory_layer()</code><br><small style="color:var(--muted)">scripts/test_brain.py</small></td>
-  <td><span class="tag tag-func">Test</span></td>
-  <td><code>run_all()</code><br><small style="color:var(--muted)">scripts/test_brain.py</small></td>
+  <td><code>🎨 4. Frontend UI Engine &amp; Next.js 15 App Router + Tailwind v4</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Verifies imports, entry points, or version behavior.</td>
+  <td>Documentation node describing 🎨 4. Frontend UI Engine &amp; Next.js 15 App Router + Tailwind v4.</td>
 </tr>
 <tr>
   <td>26</td>
-  <td><code>test_neuron_network()</code><br><small style="color:var(--muted)">scripts/test_brain.py</small></td>
-  <td><span class="tag tag-func">Test</span></td>
-  <td><code>run_all()</code><br><small style="color:var(--muted)">scripts/test_brain.py</small></td>
+  <td><code>🎭 5. Playwright E2E Test Oracle &amp; Zero-Flakiness Testing Matrix</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Verifies imports, entry points, or version behavior.</td>
+  <td>Documentation node describing 🎭 5. Playwright E2E Test Oracle &amp; Zero-Flakiness Testing Matrix.</td>
 </tr>
 <tr>
   <td>27</td>
-  <td><code>test_security_and_secrets()</code><br><small style="color:var(--muted)">scripts/test_brain.py</small></td>
-  <td><span class="tag tag-func">Test</span></td>
-  <td><code>run_all()</code><br><small style="color:var(--muted)">scripts/test_brain.py</small></td>
+  <td><code>📋 6. Autonomous 0-to-1 Synthesis Pipeline Checklist</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Verifies imports, entry points, or version behavior.</td>
+  <td>Documentation node describing 📋 6. Autonomous 0-to-1 Synthesis Pipeline Checklist.</td>
 </tr>
 <tr>
   <td>28</td>
-  <td><code>test_brain.py</code><br><small style="color:var(--muted)">scripts/test_brain.py</small></td>
-  <td><span class="tag tag-func">Test</span></td>
+  <td><code>🧪 7. Runnable Pure Standard Library Test Invariants</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Module file in scripts/test_brain.py.</td>
+  <td>Documentation node describing 🧪 7. Runnable Pure Standard Library Test Invariants.</td>
+</tr>
+<tr>
+  <td>29</td>
+  <td><code>A. Dual-Engine Dialect Compatibility (PostgreSQL 17 &amp; SQLite WAL)</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing A. Dual-Engine Dialect Compatibility (PostgreSQL 17 &amp; SQLite WAL).</td>
+</tr>
+<tr>
+  <td>30</td>
+  <td><code>A. Server Components First &amp; Optimistic Server Actions</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing A. Server Components First &amp; Optimistic Server Actions.</td>
 </tr>
 </table>
 
@@ -2278,7 +2805,8 @@ flowchart LR
     <h4>Key Files</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>ponytail/pi-extension/index.js</code></td><td>11 nodes</td></tr>
+      <tr><td><code>learning/neurons/N036_fullstack_product_synthesizer.md</code></td><td>18 nodes</td></tr>
+<tr><td><code>ponytail/pi-extension/index.js</code></td><td>11 nodes</td></tr>
 <tr><td><code>scripts/test_brain.py</code></td><td>8 nodes</td></tr>
 <tr><td><code>pi-extension/test/extension.test.js</code></td><td>5 nodes</td></tr>
 <tr><td><code>ponytail/hooks/ponytail-config.js</code></td><td>3 nodes</td></tr>
@@ -2287,13 +2815,13 @@ flowchart LR
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x21, calls x13, imports x7, imports x2. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x38, calls x13, imports x7, imports x2. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
 
-<!-- ====== 9. ponytail-runtime.js ====== -->
-<h2 id="ponytail-runtime-js">9. ponytail-runtime.js</h2>
+<!-- ====== 10. ponytail-runtime.js ====== -->
+<h2 id="ponytail-runtime-js">10. ponytail-runtime.js</h2>
 <p>ponytail-runtime.js groups implementation around ponytail, hooks, runtimejs, mode, mostly in ponytail/hooks/ponytail-runtime.js, ponytail/hooks/ponytail-mode-tracker.js, ponytail/hooks/ponytail-config.js. This section covers 19 nodes and 28 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -2548,8 +3076,8 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 10. zolu_learn_server.js ====== -->
-<h2 id="zolu-learn-server-js">10. zolu_learn_server.js</h2>
+<!-- ====== 11. zolu_learn_server.js ====== -->
+<h2 id="zolu-learn-server-js">11. zolu_learn_server.js</h2>
 <p>zolu_learn_server.js groups implementation around zolu, learn, serverjs, scripts, mostly in scripts/zolu_learn_server.js. This section covers 18 nodes and 18 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -2775,8 +3303,8 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 11. Ponytail, lazy senior dev mode ====== -->
-<h2 id="ponytail-lazy-senior-dev-mode">11. Ponytail, lazy senior dev mode</h2>
+<!-- ====== 12. Ponytail, lazy senior dev mode ====== -->
+<h2 id="ponytail-lazy-senior-dev-mode">12. Ponytail, lazy senior dev mode</h2>
 <p>Ponytail, lazy senior dev mode groups implementation around agentsmd, memorymd, lazy, claudiamd, mostly in AGENTS.md, memory.md, CLAUDIA.md. This section covers 14 nodes and 13 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -2980,8 +3508,163 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 12. ponytail-activate.js ====== -->
-<h2 id="ponytail-activate-js">12. ponytail-activate.js</h2>
+<!-- ====== 13. ? 4 Pilar Mikrostruktur & Eksekusi Kuantitatif ====== -->
+<h2 id="4-pilar-mikrostruktur-eksekusi-kuantitatif">13. ? 4 Pilar Mikrostruktur &amp; Eksekusi Kuantitatif</h2>
+<p>? 4 Pilar Mikrostruktur &amp; Eksekusi Kuantitatif groups implementation around orderbook, n025, hft, microstructuremd, mostly in learning/neurons/N025_hft_orderbook_microstructure.md. This section covers 10 nodes and 9 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: ? 4 Pilar Mikrostruktur &amp; Eksekusi Kuantitatif (10 nodes, 9 edges)
+    learning_neurons_n025_hft_orderbook_microstructu_fcaf0c63("? 4 Pilar Mikrostruktur &amp; Eksekusi Kuan...<br/><small>learning/neurons/N025_hft_orderbook_microstructure.md</small>")
+    learning_neurons_n025_hft_orderbook_microstructu_4e26fc31("Neuron N025: High-Frequency Orderbook M...<br/><small>learning/neurons/N025_hft_orderbook_microstructure.md</small>")
+    learning_neurons_n025_hft_orderbook_microstructu_b725f105("hft orderbook microstructure.md<br/><small>learning/neurons/N025_hft_orderbook_microstructure.md</small>")
+    learning_neurons_n025_hft_orderbook_microstructu_176e3e41("1. L2/L3 Orderbook Delta &amp; Micro-Price...<br/><small>learning/neurons/N025_hft_orderbook_microstructure.md</small>")
+    learning_neurons_n025_hft_orderbook_microstructu_9919e5fb("2. Gold (XAU/USD) &amp; DEX Cross-Venue Arb...<br/><small>learning/neurons/N025_hft_orderbook_microstructure.md</small>")
+    learning_neurons_n025_hft_orderbook_microstructu_5e373221("3. Fractional Kelly Criterion &amp; Risk of...<br/><small>learning/neurons/N025_hft_orderbook_microstructure.md</small>")
+    learning_neurons_n025_hft_orderbook_microstructu_b3a48de4("4. Dynamic Slippage &amp; Almgren-Chriss Ma...<br/><small>learning/neurons/N025_hft_orderbook_microstructure.md</small>")
+    learning_neurons_n025_hft_orderbook_microstructu_1ebe7232("?? Domain &amp; Arsitektur<br/><small>learning/neurons/N025_hft_orderbook_microstructure.md</small>")
+    learning_neurons_n025_hft_orderbook_microstructu_d37e6a99("?? Invariant Ringkas<br/><small>learning/neurons/N025_hft_orderbook_microstructure.md</small>")
+    learning_neurons_n025_hft_orderbook_microstructu_ab1d7dad("?? Zero-Dependency Stdlib Python Implem...<br/><small>learning/neurons/N025_hft_orderbook_microstructure.md</small>")
+    learning_neurons_n025_hft_orderbook_microstructu_b725f105 -->|contains| learning_neurons_n025_hft_orderbook_microstructu_4e26fc31
+    learning_neurons_n025_hft_orderbook_microstructu_fcaf0c63 -->|contains| learning_neurons_n025_hft_orderbook_microstructu_176e3e41
+    learning_neurons_n025_hft_orderbook_microstructu_fcaf0c63 -->|contains| learning_neurons_n025_hft_orderbook_microstructu_9919e5fb
+    learning_neurons_n025_hft_orderbook_microstructu_fcaf0c63 -->|contains| learning_neurons_n025_hft_orderbook_microstructu_5e373221
+    learning_neurons_n025_hft_orderbook_microstructu_fcaf0c63 -->|contains| learning_neurons_n025_hft_orderbook_microstructu_b3a48de4
+    learning_neurons_n025_hft_orderbook_microstructu_4e26fc31 -->|contains| learning_neurons_n025_hft_orderbook_microstructu_d37e6a99
+    learning_neurons_n025_hft_orderbook_microstructu_4e26fc31 -->|contains| learning_neurons_n025_hft_orderbook_microstructu_1ebe7232
+    learning_neurons_n025_hft_orderbook_microstructu_4e26fc31 -->|contains| learning_neurons_n025_hft_orderbook_microstructu_ab1d7dad
+    learning_neurons_n025_hft_orderbook_microstructu_4e26fc31 -->|contains| learning_neurons_n025_hft_orderbook_microstructu_fcaf0c63
+    class learning_neurons_n025_hft_orderbook_microstructu_fcaf0c63 concept;
+    class learning_neurons_n025_hft_orderbook_microstructu_4e26fc31 concept;
+    class learning_neurons_n025_hft_orderbook_microstructu_b725f105 concept;
+    class learning_neurons_n025_hft_orderbook_microstructu_176e3e41 concept;
+    class learning_neurons_n025_hft_orderbook_microstructu_9919e5fb concept;
+    class learning_neurons_n025_hft_orderbook_microstructu_5e373221 concept;
+    class learning_neurons_n025_hft_orderbook_microstructu_b3a48de4 concept;
+    class learning_neurons_n025_hft_orderbook_microstructu_1ebe7232 concept;
+    class learning_neurons_n025_hft_orderbook_microstructu_d37e6a99 concept;
+    class learning_neurons_n025_hft_orderbook_microstructu_ab1d7dad concept;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>N025_hft_orderbook_microstructure.md</code><br><small style="color:var(--muted)">learning/neurons/N025_hft_orderbook_microstructure.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing N025_hft_orderbook_microstructure.md.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>1. L2/L3 Orderbook Delta &amp; Micro-Price Dynamics</code><br><small style="color:var(--muted)">learning/neurons/N025_hft_orderbook_microstructure.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 1. L2/L3 Orderbook Delta &amp; Micro-Price Dynamics.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>2. Gold (XAU/USD) &amp; DEX Cross-Venue Arbitrage</code><br><small style="color:var(--muted)">learning/neurons/N025_hft_orderbook_microstructure.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 2. Gold (XAU/USD) &amp; DEX Cross-Venue Arbitrage.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>3. Fractional Kelly Criterion &amp; Risk of Ruin</code><br><small style="color:var(--muted)">learning/neurons/N025_hft_orderbook_microstructure.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 3. Fractional Kelly Criterion &amp; Risk of Ruin.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>4. Dynamic Slippage &amp; Almgren-Chriss Market Impact</code><br><small style="color:var(--muted)">learning/neurons/N025_hft_orderbook_microstructure.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 4. Dynamic Slippage &amp; Almgren-Chriss Market Impact.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>? 4 Pilar Mikrostruktur &amp; Eksekusi Kuantitatif</code><br><small style="color:var(--muted)">learning/neurons/N025_hft_orderbook_microstructure.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing ? 4 Pilar Mikrostruktur &amp; Eksekusi Kuantitatif.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>?? Domain &amp; Arsitektur</code><br><small style="color:var(--muted)">learning/neurons/N025_hft_orderbook_microstructure.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing ?? Domain &amp; Arsitektur.</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>?? Invariant Ringkas</code><br><small style="color:var(--muted)">learning/neurons/N025_hft_orderbook_microstructure.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing ?? Invariant Ringkas.</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>Neuron N025: High-Frequency Orderbook Microstructure &amp; HFT Quant Engine</code><br><small style="color:var(--muted)">learning/neurons/N025_hft_orderbook_microstructure.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Neuron N025: High-Frequency Orderbook Microstructure &amp; HFT Quant Engine.</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>?? Zero-Dependency Stdlib Python Implementation &amp; Self-Check</code><br><small style="color:var(--muted)">learning/neurons/N025_hft_orderbook_microstructure.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing ?? Zero-Dependency Stdlib Python Implementation &amp; Self-Check.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>learning/neurons/N025_hft_orderbook_microstructure.md</code></td><td>10 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x9. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 14. ponytail-activate.js ====== -->
+<h2 id="ponytail-activate-js">14. ponytail-activate.js</h2>
 <p>ponytail-activate.js groups implementation around ponytail, activatejs, hooks, claudedir, mostly in ponytail/hooks/ponytail-activate.js. This section covers 10 nodes and 9 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -3147,163 +3830,8 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 13. ? 4 Pilar Mikrostruktur & Eksekusi Kuantitatif ====== -->
-<h2 id="4-pilar-mikrostruktur-eksekusi-kuantitatif">13. ? 4 Pilar Mikrostruktur &amp; Eksekusi Kuantitatif</h2>
-<p>? 4 Pilar Mikrostruktur &amp; Eksekusi Kuantitatif groups implementation around orderbook, n025, hft, microstructuremd, mostly in learning/neurons/N025_hft_orderbook_microstructure.md. This section covers 10 nodes and 9 internal edges; the diagram shows only representative relationships to stay readable.</p>
-
-<div class="mermaid">
-%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
-flowchart LR
-    %% Section: ? 4 Pilar Mikrostruktur &amp; Eksekusi Kuantitatif (10 nodes, 9 edges)
-    learning_neurons_n025_hft_orderbook_microstructu_fcaf0c63("? 4 Pilar Mikrostruktur &amp; Eksekusi Kuan...<br/><small>learning/neurons/N025_hft_orderbook_microstructure.md</small>")
-    learning_neurons_n025_hft_orderbook_microstructu_4e26fc31("Neuron N025: High-Frequency Orderbook M...<br/><small>learning/neurons/N025_hft_orderbook_microstructure.md</small>")
-    learning_neurons_n025_hft_orderbook_microstructu_b725f105("hft orderbook microstructure.md<br/><small>learning/neurons/N025_hft_orderbook_microstructure.md</small>")
-    learning_neurons_n025_hft_orderbook_microstructu_176e3e41("1. L2/L3 Orderbook Delta &amp; Micro-Price...<br/><small>learning/neurons/N025_hft_orderbook_microstructure.md</small>")
-    learning_neurons_n025_hft_orderbook_microstructu_9919e5fb("2. Gold (XAU/USD) &amp; DEX Cross-Venue Arb...<br/><small>learning/neurons/N025_hft_orderbook_microstructure.md</small>")
-    learning_neurons_n025_hft_orderbook_microstructu_5e373221("3. Fractional Kelly Criterion &amp; Risk of...<br/><small>learning/neurons/N025_hft_orderbook_microstructure.md</small>")
-    learning_neurons_n025_hft_orderbook_microstructu_b3a48de4("4. Dynamic Slippage &amp; Almgren-Chriss Ma...<br/><small>learning/neurons/N025_hft_orderbook_microstructure.md</small>")
-    learning_neurons_n025_hft_orderbook_microstructu_1ebe7232("?? Domain &amp; Arsitektur<br/><small>learning/neurons/N025_hft_orderbook_microstructure.md</small>")
-    learning_neurons_n025_hft_orderbook_microstructu_d37e6a99("?? Invariant Ringkas<br/><small>learning/neurons/N025_hft_orderbook_microstructure.md</small>")
-    learning_neurons_n025_hft_orderbook_microstructu_ab1d7dad("?? Zero-Dependency Stdlib Python Implem...<br/><small>learning/neurons/N025_hft_orderbook_microstructure.md</small>")
-    learning_neurons_n025_hft_orderbook_microstructu_b725f105 -->|contains| learning_neurons_n025_hft_orderbook_microstructu_4e26fc31
-    learning_neurons_n025_hft_orderbook_microstructu_fcaf0c63 -->|contains| learning_neurons_n025_hft_orderbook_microstructu_176e3e41
-    learning_neurons_n025_hft_orderbook_microstructu_fcaf0c63 -->|contains| learning_neurons_n025_hft_orderbook_microstructu_9919e5fb
-    learning_neurons_n025_hft_orderbook_microstructu_fcaf0c63 -->|contains| learning_neurons_n025_hft_orderbook_microstructu_5e373221
-    learning_neurons_n025_hft_orderbook_microstructu_fcaf0c63 -->|contains| learning_neurons_n025_hft_orderbook_microstructu_b3a48de4
-    learning_neurons_n025_hft_orderbook_microstructu_4e26fc31 -->|contains| learning_neurons_n025_hft_orderbook_microstructu_d37e6a99
-    learning_neurons_n025_hft_orderbook_microstructu_4e26fc31 -->|contains| learning_neurons_n025_hft_orderbook_microstructu_1ebe7232
-    learning_neurons_n025_hft_orderbook_microstructu_4e26fc31 -->|contains| learning_neurons_n025_hft_orderbook_microstructu_ab1d7dad
-    learning_neurons_n025_hft_orderbook_microstructu_4e26fc31 -->|contains| learning_neurons_n025_hft_orderbook_microstructu_fcaf0c63
-    class learning_neurons_n025_hft_orderbook_microstructu_fcaf0c63 concept;
-    class learning_neurons_n025_hft_orderbook_microstructu_4e26fc31 concept;
-    class learning_neurons_n025_hft_orderbook_microstructu_b725f105 concept;
-    class learning_neurons_n025_hft_orderbook_microstructu_176e3e41 concept;
-    class learning_neurons_n025_hft_orderbook_microstructu_9919e5fb concept;
-    class learning_neurons_n025_hft_orderbook_microstructu_5e373221 concept;
-    class learning_neurons_n025_hft_orderbook_microstructu_b3a48de4 concept;
-    class learning_neurons_n025_hft_orderbook_microstructu_1ebe7232 concept;
-    class learning_neurons_n025_hft_orderbook_microstructu_d37e6a99 concept;
-    class learning_neurons_n025_hft_orderbook_microstructu_ab1d7dad concept;
-    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
-    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
-    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
-    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
-    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
-    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
-    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
-    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
-    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
-</div>
-
-<h3>Call Details</h3>
-<table class="call-table">
-<tr>
-  <th style="width:5%">#</th>
-  <th style="width:28%">Node</th>
-  <th style="width:10%">Type</th>
-  <th style="width:17%">Caller</th>
-  <th style="width:20%">Callees</th>
-  <th style="width:20%">Description</th>
-</tr>
-<tr>
-  <td>1</td>
-  <td><code>N025_hft_orderbook_microstructure.md</code><br><small style="color:var(--muted)">learning/neurons/N025_hft_orderbook_microstructure.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing N025_hft_orderbook_microstructure.md.</td>
-</tr>
-<tr>
-  <td>2</td>
-  <td><code>1. L2/L3 Orderbook Delta &amp; Micro-Price Dynamics</code><br><small style="color:var(--muted)">learning/neurons/N025_hft_orderbook_microstructure.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 1. L2/L3 Orderbook Delta &amp; Micro-Price Dynamics.</td>
-</tr>
-<tr>
-  <td>3</td>
-  <td><code>2. Gold (XAU/USD) &amp; DEX Cross-Venue Arbitrage</code><br><small style="color:var(--muted)">learning/neurons/N025_hft_orderbook_microstructure.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 2. Gold (XAU/USD) &amp; DEX Cross-Venue Arbitrage.</td>
-</tr>
-<tr>
-  <td>4</td>
-  <td><code>3. Fractional Kelly Criterion &amp; Risk of Ruin</code><br><small style="color:var(--muted)">learning/neurons/N025_hft_orderbook_microstructure.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 3. Fractional Kelly Criterion &amp; Risk of Ruin.</td>
-</tr>
-<tr>
-  <td>5</td>
-  <td><code>4. Dynamic Slippage &amp; Almgren-Chriss Market Impact</code><br><small style="color:var(--muted)">learning/neurons/N025_hft_orderbook_microstructure.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 4. Dynamic Slippage &amp; Almgren-Chriss Market Impact.</td>
-</tr>
-<tr>
-  <td>6</td>
-  <td><code>? 4 Pilar Mikrostruktur &amp; Eksekusi Kuantitatif</code><br><small style="color:var(--muted)">learning/neurons/N025_hft_orderbook_microstructure.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing ? 4 Pilar Mikrostruktur &amp; Eksekusi Kuantitatif.</td>
-</tr>
-<tr>
-  <td>7</td>
-  <td><code>?? Domain &amp; Arsitektur</code><br><small style="color:var(--muted)">learning/neurons/N025_hft_orderbook_microstructure.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing ?? Domain &amp; Arsitektur.</td>
-</tr>
-<tr>
-  <td>8</td>
-  <td><code>?? Invariant Ringkas</code><br><small style="color:var(--muted)">learning/neurons/N025_hft_orderbook_microstructure.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing ?? Invariant Ringkas.</td>
-</tr>
-<tr>
-  <td>9</td>
-  <td><code>Neuron N025: High-Frequency Orderbook Microstructure &amp; HFT Quant Engine</code><br><small style="color:var(--muted)">learning/neurons/N025_hft_orderbook_microstructure.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Neuron N025: High-Frequency Orderbook Microstructure &amp; HFT Quant Engine.</td>
-</tr>
-<tr>
-  <td>10</td>
-  <td><code>?? Zero-Dependency Stdlib Python Implementation &amp; Self-Check</code><br><small style="color:var(--muted)">learning/neurons/N025_hft_orderbook_microstructure.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing ?? Zero-Dependency Stdlib Python Implementation &amp; Self-Check.</td>
-</tr>
-</table>
-
-<div class="grid">
-  <div class="card">
-    <h4>Key Files</h4>
-    <table style="width:100%;font-size:0.85rem;">
-      <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>learning/neurons/N025_hft_orderbook_microstructure.md</code></td><td>10 nodes</td></tr>
-    </table>
-  </div>
-  <div class="card">
-    <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x9. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
-  </div>
-</div>
-<hr>
-
-<!-- ====== 14. ⚡ CLAUDIA 2.0 (v5.0.0 Apex) ====== -->
-<h2 id="claudia-2-0-v5-0-0-apex">14. ⚡ CLAUDIA 2.0 (v5.0.0 Apex)</h2>
+<!-- ====== 15. ⚡ CLAUDIA 2.0 (v5.0.0 Apex) ====== -->
+<h2 id="claudia-2-0-v5-0-0-apex">15. ⚡ CLAUDIA 2.0 (v5.0.0 Apex)</h2>
 <p>⚡ CLAUDIA 2.0 (v5.0.0 Apex) groups implementation around readmemd, cognitive, neural, mesh, mostly in README.md. This section covers 10 nodes and 9 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -3457,40 +3985,71 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 15. 🎯 5 Invarian Pertahanan Zero-Day & Keamanan Kernel ====== -->
-<h2 id="5-invarian-pertahanan-zero-day-keamanan-kernel">15. 🎯 5 Invarian Pertahanan Zero-Day &amp; Keamanan Kernel</h2>
-<p>🎯 5 Invarian Pertahanan Zero-Day &amp; Keamanan Kernel groups implementation around zero, day, kernel, n023, mostly in learning/neurons/N023_zero_day_kernel_defense.md. This section covers 9 nodes and 8 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<!-- ====== 16. Other ====== -->
+<h2 id="other">16. Other</h2>
+<p>Other groups implementation around learning, neurons, rules, scripts, mostly in learning/neurons/N023_zero_day_kernel_defense.md, learning/neurons/N024_post_quantum_cryptography.md, identity.md. This section covers 154 nodes and 126 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: 🎯 5 Invarian Pertahanan Zero-Day &amp; Keamanan Kernel (9 nodes, 8 edges)
-    learning_neurons_n023_zero_day_kernel_defense_5_f5d8fde7("🎯 5 Invarian Pertahanan Zero-Day &amp; Keam...<br/><small>learning/neurons/N023_zero_day_kernel_defense.md</small>")
-    learning_neurons_n023_zero_day_kernel_defense_ne_7bf46e4b("Neuron N023: Autonomous Zero-Day Exploi...<br/><small>learning/neurons/N023_zero_day_kernel_defense.md</small>")
-    learning_neurons_n023_zero_day_kernel_defense_bf993c4f("day kernel defense.md<br/><small>learning/neurons/N023_zero_day_kernel_defense.md</small>")
-    learning_neurons_n023_zero_day_kernel_defense_1_0149fc81("1. ROP &amp; JOP Gadget Chain Disruption (C...<br/><small>learning/neurons/N023_zero_day_kernel_defense.md</small>")
-    learning_neurons_n023_zero_day_kernel_defense_2_02512425("2. Linux eBPF Telemetry &amp; Kernel Space...<br/><small>learning/neurons/N023_zero_day_kernel_defense.md</small>")
-    learning_neurons_n023_zero_day_kernel_defense_3_8ba2bdd1("3. Spatial &amp; Temporal Buffer Overrun Pr...<br/><small>learning/neurons/N023_zero_day_kernel_defense.md</small>")
-    learning_neurons_n023_zero_day_kernel_defense_4_28c68d41("4. Dynamic &amp; Static Taint Flow Tracking...<br/><small>learning/neurons/N023_zero_day_kernel_defense.md</small>")
-    learning_neurons_n023_zero_day_kernel_defense_5_82e62a46("5. Autonomous Zero-Day Containment &amp; An...<br/><small>learning/neurons/N023_zero_day_kernel_defense.md</small>")
-    learning_neurons_n023_zero_day_kernel_defense_al_99cda3ef("💻 Algoritma Deterministik (Pure Python...<br/><small>learning/neurons/N023_zero_day_kernel_defense.md</small>")
-    learning_neurons_n023_zero_day_kernel_defense_bf993c4f -->|contains| learning_neurons_n023_zero_day_kernel_defense_ne_7bf46e4b
-    learning_neurons_n023_zero_day_kernel_defense_5_f5d8fde7 -->|contains| learning_neurons_n023_zero_day_kernel_defense_1_0149fc81
-    learning_neurons_n023_zero_day_kernel_defense_5_f5d8fde7 -->|contains| learning_neurons_n023_zero_day_kernel_defense_2_02512425
-    learning_neurons_n023_zero_day_kernel_defense_5_f5d8fde7 -->|contains| learning_neurons_n023_zero_day_kernel_defense_3_8ba2bdd1
-    learning_neurons_n023_zero_day_kernel_defense_5_f5d8fde7 -->|contains| learning_neurons_n023_zero_day_kernel_defense_4_28c68d41
-    learning_neurons_n023_zero_day_kernel_defense_5_f5d8fde7 -->|contains| learning_neurons_n023_zero_day_kernel_defense_5_82e62a46
-    learning_neurons_n023_zero_day_kernel_defense_ne_7bf46e4b -->|contains| learning_neurons_n023_zero_day_kernel_defense_al_99cda3ef
-    learning_neurons_n023_zero_day_kernel_defense_ne_7bf46e4b -->|contains| learning_neurons_n023_zero_day_kernel_defense_5_f5d8fde7
-    class learning_neurons_n023_zero_day_kernel_defense_5_f5d8fde7 concept;
-    class learning_neurons_n023_zero_day_kernel_defense_ne_7bf46e4b concept;
-    class learning_neurons_n023_zero_day_kernel_defense_bf993c4f concept;
-    class learning_neurons_n023_zero_day_kernel_defense_1_0149fc81 concept;
-    class learning_neurons_n023_zero_day_kernel_defense_2_02512425 concept;
-    class learning_neurons_n023_zero_day_kernel_defense_3_8ba2bdd1 concept;
-    class learning_neurons_n023_zero_day_kernel_defense_4_28c68d41 concept;
-    class learning_neurons_n023_zero_day_kernel_defense_5_82e62a46 concept;
-    class learning_neurons_n023_zero_day_kernel_defense_al_99cda3ef concept;
+    %% Section: Other (154 nodes, 126 edges)
+    subgraph other_scripts_train_trading_engine_py_11e67fc6["scripts/train_trading_engine.py"]
+        scripts_train_trading_engine_train_and_synthesiz_daac8636("and synthesize neuron()<br/><small>scripts/train_trading_engine.py</small>")
+        scripts_train_trading_engine_fetch_binance_kline_d42e122f("fetch_binance_klines()<br/><small>scripts/train_trading_engine.py</small>")
+        scripts_train_trading_engine_calculate_ema_e9e4f150("calculate_ema()<br/><small>scripts/train_trading_engine.py</small>")
+        scripts_train_trading_engine_calculate_rsi_791aba17("calculate_rsi()<br/><small>scripts/train_trading_engine.py</small>")
+        scripts_train_trading_engine_calculate_atr_b5014e19("calculate_atr()<br/><small>scripts/train_trading_engine.py</small>")
+        scripts_train_trading_engine_detect_smc_fair_val_25a7d8da("detect_smc_fair_value_gaps()<br/><small>scripts/train_trading_engine.py</small>")
+    end
+    subgraph other_scripts_masterpiece_completer_py_c54b059e["scripts/masterpiece_completer.py"]
+        scripts_masterpiece_completer_main_7d166087("main()<br/><small>scripts/masterpiece_completer.py</small>")
+        scripts_masterpiece_completer_fetch_tmdb_poster_f35f627d("fetch_tmdb_poster()<br/><small>scripts/masterpiece_completer.py</small>")
+        scripts_masterpiece_completer_search_apibay_09c31864("search_apibay()<br/><small>scripts/masterpiece_completer.py</small>")
+    end
+    subgraph other_scripts_record_learning_py_aebcc6c8["scripts/record_learning.py"]
+        scripts_record_learning_main_6e954c2e("main()<br/><small>scripts/record_learning.py</small>")
+        scripts_record_learning_record_new_learning_a696848e("record_new_learning()<br/><small>scripts/record_learning.py</small>")
+        scripts_record_learning_slugify_f506ddc6("slugify()<br/><small>scripts/record_learning.py</small>")
+    end
+    subgraph other_learning_scripts_grow_neurons_py_af9d11e7["learning/scripts/grow_neurons.py"]
+        learning_scripts_grow_neurons_grow_neural_mesh_124978b0("grow_neural_mesh()<br/><small>learning/scripts/grow_neurons.py</small>")
+        learning_scripts_grow_neurons_115f26f1("grow_neurons.py")
+    end
+    subgraph other_scripts_auto_sync_github_py_b1a54535["scripts/auto_sync_github.py"]
+        scripts_auto_sync_github_auto_sync_3fc2238d("auto_sync()<br/><small>scripts/auto_sync_github.py</small>")
+        scripts_auto_sync_github_run_cmd_a02b4f49("run_cmd()<br/><small>scripts/auto_sync_github.py</small>")
+    end
+    ecosystem_config_803395df("ecosystem.config.cjs")
+    ponytail_hooks_ponytail_statusline_ps1_ponytail_82c5179b("ponytail-statusline.ps1")
+    scripts_train_trading_engine_train_and_synthesiz_daac8636 -->|calls| scripts_train_trading_engine_fetch_binance_kline_d42e122f
+    scripts_train_trading_engine_train_and_synthesiz_daac8636 -->|calls| scripts_train_trading_engine_calculate_ema_e9e4f150
+    scripts_train_trading_engine_train_and_synthesiz_daac8636 -->|calls| scripts_train_trading_engine_calculate_rsi_791aba17
+    scripts_train_trading_engine_train_and_synthesiz_daac8636 -->|calls| scripts_train_trading_engine_calculate_atr_b5014e19
+    scripts_train_trading_engine_train_and_synthesiz_daac8636 -->|calls| scripts_train_trading_engine_detect_smc_fair_val_25a7d8da
+    scripts_masterpiece_completer_main_7d166087 -->|calls| scripts_masterpiece_completer_fetch_tmdb_poster_f35f627d
+    scripts_masterpiece_completer_main_7d166087 -->|calls| scripts_masterpiece_completer_search_apibay_09c31864
+    scripts_record_learning_main_6e954c2e -->|calls| scripts_record_learning_record_new_learning_a696848e
+    scripts_record_learning_record_new_learning_a696848e -->|calls| scripts_record_learning_slugify_f506ddc6
+    scripts_auto_sync_github_auto_sync_3fc2238d -->|calls| scripts_auto_sync_github_run_cmd_a02b4f49
+    %% Omitted for readability: 136 nodes, 0 edges
+    class scripts_train_trading_engine_train_and_synthesiz_daac8636 function;
+    class scripts_train_trading_engine_fetch_binance_kline_d42e122f function;
+    class scripts_train_trading_engine_calculate_ema_e9e4f150 function;
+    class scripts_train_trading_engine_calculate_rsi_791aba17 function;
+    class scripts_train_trading_engine_calculate_atr_b5014e19 function;
+    class scripts_train_trading_engine_detect_smc_fair_val_25a7d8da function;
+    class scripts_masterpiece_completer_main_7d166087 function;
+    class scripts_masterpiece_completer_fetch_tmdb_poster_f35f627d function;
+    class scripts_masterpiece_completer_search_apibay_09c31864 api;
+    class scripts_record_learning_main_6e954c2e function;
+    class scripts_record_learning_record_new_learning_a696848e function;
+    class scripts_record_learning_slugify_f506ddc6 function;
+    class learning_scripts_grow_neurons_grow_neural_mesh_124978b0 function;
+    class learning_scripts_grow_neurons_115f26f1 module;
+    class scripts_auto_sync_github_auto_sync_3fc2238d function;
+    class scripts_auto_sync_github_run_cmd_a02b4f49 function;
+    class ecosystem_config_803395df function;
+    class ponytail_hooks_ponytail_statusline_ps1_ponytail_82c5179b function;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -3584,6 +4143,174 @@ flowchart LR
   <td>No direct outbound edge</td>
   <td>Documentation node describing Neuron N023: Autonomous Zero-Day Exploit Defense &amp; Kernel Memory Safety.</td>
 </tr>
+<tr>
+  <td>10</td>
+  <td><code>N024_post_quantum_cryptography.md</code><br><small style="color:var(--muted)">learning/neurons/N024_post_quantum_cryptography.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing N024_post_quantum_cryptography.md.</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>1. Ancaman Kuantum &amp; Paradigma Baru Kriptografi</code><br><small style="color:var(--muted)">learning/neurons/N024_post_quantum_cryptography.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 1. Ancaman Kuantum &amp; Paradigma Baru Kriptografi.</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>2. Arsitektur Standar NIST PQC (FIPS 203 / 204)</code><br><small style="color:var(--muted)">learning/neurons/N024_post_quantum_cryptography.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 2. Arsitektur Standar NIST PQC (FIPS 203 / 204).</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>3. Fondasi Aljabar Kisi (Lattice-Based Foundations)</code><br><small style="color:var(--muted)">learning/neurons/N024_post_quantum_cryptography.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 3. Fondasi Aljabar Kisi (Lattice-Based Foundations).</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>4. Imunitas Timing Side-Channel &amp; Disiplin Constant-Time</code><br><small style="color:var(--muted)">learning/neurons/N024_post_quantum_cryptography.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 4. Imunitas Timing Side-Channel &amp; Disiplin Constant-Time.</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>5. Pertahanan Berlapis: Hybrid Post-Quantum Key Exchange</code><br><small style="color:var(--muted)">learning/neurons/N024_post_quantum_cryptography.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 5. Pertahanan Berlapis: Hybrid Post-Quantum Key Exchange.</td>
+</tr>
+<tr>
+  <td>16</td>
+  <td><code>6. Verifikasi Deterministik (Pure Python Stdlib Implementation)</code><br><small style="color:var(--muted)">learning/neurons/N024_post_quantum_cryptography.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 6. Verifikasi Deterministik (Pure Python Stdlib Implementation).</td>
+</tr>
+<tr>
+  <td>17</td>
+  <td><code>7. Disiplin Integrasi &amp; Operasional Claudia</code><br><small style="color:var(--muted)">learning/neurons/N024_post_quantum_cryptography.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 7. Disiplin Integrasi &amp; Operasional Claudia.</td>
+</tr>
+<tr>
+  <td>18</td>
+  <td><code>Neuron N024: Post-Quantum Cryptography &amp; ML-KEM/ML-DSA (FIPS 203/204)</code><br><small style="color:var(--muted)">learning/neurons/N024_post_quantum_cryptography.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Neuron N024: Post-Quantum Cryptography &amp; ML-KEM/ML-DSA (FIPS 203/204).</td>
+</tr>
+<tr>
+  <td>19</td>
+  <td><code>identity.md</code><br><small style="color:var(--muted)">identity.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing identity.md.</td>
+</tr>
+<tr>
+  <td>20</td>
+  <td><code>1. Ponytail (Lazy Senior Dev Engine)</code><br><small style="color:var(--muted)">identity.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 1. Ponytail (Lazy Senior Dev Engine).</td>
+</tr>
+<tr>
+  <td>21</td>
+  <td><code>2. Graphify (Knowledge Graph &amp; Structural Memory)</code><br><small style="color:var(--muted)">identity.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 2. Graphify (Knowledge Graph &amp; Structural Memory).</td>
+</tr>
+<tr>
+  <td>22</td>
+  <td><code>3. 9Router (AI Gateway &amp; Model Routing)</code><br><small style="color:var(--muted)">identity.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 3. 9Router (AI Gateway &amp; Model Routing).</td>
+</tr>
+<tr>
+  <td>23</td>
+  <td><code>Core Engines &amp; Workflows</code><br><small style="color:var(--muted)">identity.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Core Engines &amp; Workflows.</td>
+</tr>
+<tr>
+  <td>24</td>
+  <td><code>Identity: Claudia</code><br><small style="color:var(--muted)">identity.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Identity: Claudia.</td>
+</tr>
+<tr>
+  <td>25</td>
+  <td><code>Karakter &amp; Gaya Komunikasi</code><br><small style="color:var(--muted)">identity.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Karakter &amp; Gaya Komunikasi.</td>
+</tr>
+<tr>
+  <td>26</td>
+  <td><code>Self-Learning Loop</code><br><small style="color:var(--muted)">identity.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Self-Learning Loop.</td>
+</tr>
+<tr>
+  <td>27</td>
+  <td><code>.agents/rules/ponytail.md</code><br><small style="color:var(--muted)">.agents/rules/ponytail.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing .agents/rules/ponytail.md.</td>
+</tr>
+<tr>
+  <td>28</td>
+  <td><code>Graphify Knowledge Graph:</code><br><small style="color:var(--muted)">.agents/rules/ponytail.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Graphify Knowledge Graph:.</td>
+</tr>
+<tr>
+  <td>29</td>
+  <td><code>Not lazy about:</code><br><small style="color:var(--muted)">.agents/rules/ponytail.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Not lazy about:.</td>
+</tr>
+<tr>
+  <td>30</td>
+  <td><code>Persona &amp; Communication</code><br><small style="color:var(--muted)">.agents/rules/ponytail.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Persona &amp; Communication.</td>
+</tr>
 </table>
 
 <div class="grid">
@@ -3592,361 +4319,18 @@ flowchart LR
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
       <tr><td><code>learning/neurons/N023_zero_day_kernel_defense.md</code></td><td>9 nodes</td></tr>
-    </table>
-  </div>
-  <div class="card">
-    <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x8. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
-  </div>
-</div>
-<hr>
-
-<!-- ====== 16. Other ====== -->
-<h2 id="other">16. Other</h2>
-<p>Other groups implementation around learning, neurons, rules, scripts, mostly in learning/neurons/N024_post_quantum_cryptography.md, identity.md, .agents/rules/ponytail.md. This section covers 145 nodes and 118 internal edges; the diagram shows only representative relationships to stay readable.</p>
-
-<div class="mermaid">
-%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
-flowchart LR
-    %% Section: Other (145 nodes, 118 edges)
-    subgraph other_scripts_train_trading_engine_py_11e67fc6["scripts/train_trading_engine.py"]
-        scripts_train_trading_engine_train_and_synthesiz_daac8636("and synthesize neuron()<br/><small>scripts/train_trading_engine.py</small>")
-        scripts_train_trading_engine_fetch_binance_kline_d42e122f("fetch_binance_klines()<br/><small>scripts/train_trading_engine.py</small>")
-        scripts_train_trading_engine_calculate_ema_e9e4f150("calculate_ema()<br/><small>scripts/train_trading_engine.py</small>")
-        scripts_train_trading_engine_calculate_rsi_791aba17("calculate_rsi()<br/><small>scripts/train_trading_engine.py</small>")
-        scripts_train_trading_engine_calculate_atr_b5014e19("calculate_atr()<br/><small>scripts/train_trading_engine.py</small>")
-        scripts_train_trading_engine_detect_smc_fair_val_25a7d8da("detect_smc_fair_value_gaps()<br/><small>scripts/train_trading_engine.py</small>")
-    end
-    subgraph other_scripts_masterpiece_completer_py_c54b059e["scripts/masterpiece_completer.py"]
-        scripts_masterpiece_completer_main_7d166087("main()<br/><small>scripts/masterpiece_completer.py</small>")
-        scripts_masterpiece_completer_fetch_tmdb_poster_f35f627d("fetch_tmdb_poster()<br/><small>scripts/masterpiece_completer.py</small>")
-        scripts_masterpiece_completer_search_apibay_09c31864("search_apibay()<br/><small>scripts/masterpiece_completer.py</small>")
-    end
-    subgraph other_scripts_record_learning_py_aebcc6c8["scripts/record_learning.py"]
-        scripts_record_learning_main_6e954c2e("main()<br/><small>scripts/record_learning.py</small>")
-        scripts_record_learning_record_new_learning_a696848e("record_new_learning()<br/><small>scripts/record_learning.py</small>")
-        scripts_record_learning_slugify_f506ddc6("slugify()<br/><small>scripts/record_learning.py</small>")
-    end
-    subgraph other_learning_scripts_grow_neurons_py_af9d11e7["learning/scripts/grow_neurons.py"]
-        learning_scripts_grow_neurons_grow_neural_mesh_124978b0("grow_neural_mesh()<br/><small>learning/scripts/grow_neurons.py</small>")
-        learning_scripts_grow_neurons_115f26f1("grow_neurons.py")
-    end
-    subgraph other_scripts_auto_sync_github_py_b1a54535["scripts/auto_sync_github.py"]
-        scripts_auto_sync_github_auto_sync_3fc2238d("auto_sync()<br/><small>scripts/auto_sync_github.py</small>")
-        scripts_auto_sync_github_run_cmd_a02b4f49("run_cmd()<br/><small>scripts/auto_sync_github.py</small>")
-    end
-    ecosystem_config_803395df("ecosystem.config.cjs")
-    ponytail_hooks_ponytail_statusline_ps1_ponytail_82c5179b("ponytail-statusline.ps1")
-    scripts_train_trading_engine_train_and_synthesiz_daac8636 -->|calls| scripts_train_trading_engine_fetch_binance_kline_d42e122f
-    scripts_train_trading_engine_train_and_synthesiz_daac8636 -->|calls| scripts_train_trading_engine_calculate_ema_e9e4f150
-    scripts_train_trading_engine_train_and_synthesiz_daac8636 -->|calls| scripts_train_trading_engine_calculate_rsi_791aba17
-    scripts_train_trading_engine_train_and_synthesiz_daac8636 -->|calls| scripts_train_trading_engine_calculate_atr_b5014e19
-    scripts_train_trading_engine_train_and_synthesiz_daac8636 -->|calls| scripts_train_trading_engine_detect_smc_fair_val_25a7d8da
-    scripts_masterpiece_completer_main_7d166087 -->|calls| scripts_masterpiece_completer_fetch_tmdb_poster_f35f627d
-    scripts_masterpiece_completer_main_7d166087 -->|calls| scripts_masterpiece_completer_search_apibay_09c31864
-    scripts_record_learning_main_6e954c2e -->|calls| scripts_record_learning_record_new_learning_a696848e
-    scripts_record_learning_record_new_learning_a696848e -->|calls| scripts_record_learning_slugify_f506ddc6
-    scripts_auto_sync_github_auto_sync_3fc2238d -->|calls| scripts_auto_sync_github_run_cmd_a02b4f49
-    %% Omitted for readability: 127 nodes, 0 edges
-    class scripts_train_trading_engine_train_and_synthesiz_daac8636 function;
-    class scripts_train_trading_engine_fetch_binance_kline_d42e122f function;
-    class scripts_train_trading_engine_calculate_ema_e9e4f150 function;
-    class scripts_train_trading_engine_calculate_rsi_791aba17 function;
-    class scripts_train_trading_engine_calculate_atr_b5014e19 function;
-    class scripts_train_trading_engine_detect_smc_fair_val_25a7d8da function;
-    class scripts_masterpiece_completer_main_7d166087 function;
-    class scripts_masterpiece_completer_fetch_tmdb_poster_f35f627d function;
-    class scripts_masterpiece_completer_search_apibay_09c31864 api;
-    class scripts_record_learning_main_6e954c2e function;
-    class scripts_record_learning_record_new_learning_a696848e function;
-    class scripts_record_learning_slugify_f506ddc6 function;
-    class learning_scripts_grow_neurons_grow_neural_mesh_124978b0 function;
-    class learning_scripts_grow_neurons_115f26f1 module;
-    class scripts_auto_sync_github_auto_sync_3fc2238d function;
-    class scripts_auto_sync_github_run_cmd_a02b4f49 function;
-    class ecosystem_config_803395df function;
-    class ponytail_hooks_ponytail_statusline_ps1_ponytail_82c5179b function;
-    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
-    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
-    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
-    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
-    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
-    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
-    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
-    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
-    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
-</div>
-
-<h3>Call Details</h3>
-<table class="call-table">
-<tr>
-  <th style="width:5%">#</th>
-  <th style="width:28%">Node</th>
-  <th style="width:10%">Type</th>
-  <th style="width:17%">Caller</th>
-  <th style="width:20%">Callees</th>
-  <th style="width:20%">Description</th>
-</tr>
-<tr>
-  <td>1</td>
-  <td><code>N024_post_quantum_cryptography.md</code><br><small style="color:var(--muted)">learning/neurons/N024_post_quantum_cryptography.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing N024_post_quantum_cryptography.md.</td>
-</tr>
-<tr>
-  <td>2</td>
-  <td><code>1. Ancaman Kuantum &amp; Paradigma Baru Kriptografi</code><br><small style="color:var(--muted)">learning/neurons/N024_post_quantum_cryptography.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 1. Ancaman Kuantum &amp; Paradigma Baru Kriptografi.</td>
-</tr>
-<tr>
-  <td>3</td>
-  <td><code>2. Arsitektur Standar NIST PQC (FIPS 203 / 204)</code><br><small style="color:var(--muted)">learning/neurons/N024_post_quantum_cryptography.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 2. Arsitektur Standar NIST PQC (FIPS 203 / 204).</td>
-</tr>
-<tr>
-  <td>4</td>
-  <td><code>3. Fondasi Aljabar Kisi (Lattice-Based Foundations)</code><br><small style="color:var(--muted)">learning/neurons/N024_post_quantum_cryptography.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 3. Fondasi Aljabar Kisi (Lattice-Based Foundations).</td>
-</tr>
-<tr>
-  <td>5</td>
-  <td><code>4. Imunitas Timing Side-Channel &amp; Disiplin Constant-Time</code><br><small style="color:var(--muted)">learning/neurons/N024_post_quantum_cryptography.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 4. Imunitas Timing Side-Channel &amp; Disiplin Constant-Time.</td>
-</tr>
-<tr>
-  <td>6</td>
-  <td><code>5. Pertahanan Berlapis: Hybrid Post-Quantum Key Exchange</code><br><small style="color:var(--muted)">learning/neurons/N024_post_quantum_cryptography.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 5. Pertahanan Berlapis: Hybrid Post-Quantum Key Exchange.</td>
-</tr>
-<tr>
-  <td>7</td>
-  <td><code>6. Verifikasi Deterministik (Pure Python Stdlib Implementation)</code><br><small style="color:var(--muted)">learning/neurons/N024_post_quantum_cryptography.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 6. Verifikasi Deterministik (Pure Python Stdlib Implementation).</td>
-</tr>
-<tr>
-  <td>8</td>
-  <td><code>7. Disiplin Integrasi &amp; Operasional Claudia</code><br><small style="color:var(--muted)">learning/neurons/N024_post_quantum_cryptography.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 7. Disiplin Integrasi &amp; Operasional Claudia.</td>
-</tr>
-<tr>
-  <td>9</td>
-  <td><code>Neuron N024: Post-Quantum Cryptography &amp; ML-KEM/ML-DSA (FIPS 203/204)</code><br><small style="color:var(--muted)">learning/neurons/N024_post_quantum_cryptography.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Neuron N024: Post-Quantum Cryptography &amp; ML-KEM/ML-DSA (FIPS 203/204).</td>
-</tr>
-<tr>
-  <td>10</td>
-  <td><code>identity.md</code><br><small style="color:var(--muted)">identity.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing identity.md.</td>
-</tr>
-<tr>
-  <td>11</td>
-  <td><code>1. Ponytail (Lazy Senior Dev Engine)</code><br><small style="color:var(--muted)">identity.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 1. Ponytail (Lazy Senior Dev Engine).</td>
-</tr>
-<tr>
-  <td>12</td>
-  <td><code>2. Graphify (Knowledge Graph &amp; Structural Memory)</code><br><small style="color:var(--muted)">identity.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 2. Graphify (Knowledge Graph &amp; Structural Memory).</td>
-</tr>
-<tr>
-  <td>13</td>
-  <td><code>3. 9Router (AI Gateway &amp; Model Routing)</code><br><small style="color:var(--muted)">identity.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 3. 9Router (AI Gateway &amp; Model Routing).</td>
-</tr>
-<tr>
-  <td>14</td>
-  <td><code>Core Engines &amp; Workflows</code><br><small style="color:var(--muted)">identity.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Core Engines &amp; Workflows.</td>
-</tr>
-<tr>
-  <td>15</td>
-  <td><code>Identity: Claudia</code><br><small style="color:var(--muted)">identity.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Identity: Claudia.</td>
-</tr>
-<tr>
-  <td>16</td>
-  <td><code>Karakter &amp; Gaya Komunikasi</code><br><small style="color:var(--muted)">identity.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Karakter &amp; Gaya Komunikasi.</td>
-</tr>
-<tr>
-  <td>17</td>
-  <td><code>Self-Learning Loop</code><br><small style="color:var(--muted)">identity.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Self-Learning Loop.</td>
-</tr>
-<tr>
-  <td>18</td>
-  <td><code>.agents/rules/ponytail.md</code><br><small style="color:var(--muted)">.agents/rules/ponytail.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing .agents/rules/ponytail.md.</td>
-</tr>
-<tr>
-  <td>19</td>
-  <td><code>Graphify Knowledge Graph:</code><br><small style="color:var(--muted)">.agents/rules/ponytail.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Graphify Knowledge Graph:.</td>
-</tr>
-<tr>
-  <td>20</td>
-  <td><code>Not lazy about:</code><br><small style="color:var(--muted)">.agents/rules/ponytail.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Not lazy about:.</td>
-</tr>
-<tr>
-  <td>21</td>
-  <td><code>Persona &amp; Communication</code><br><small style="color:var(--muted)">.agents/rules/ponytail.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Persona &amp; Communication.</td>
-</tr>
-<tr>
-  <td>22</td>
-  <td><code>Ponytail, lazy senior dev mode</code><br><small style="color:var(--muted)">.agents/rules/ponytail.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Ponytail, lazy senior dev mode.</td>
-</tr>
-<tr>
-  <td>23</td>
-  <td><code>Rules:</code><br><small style="color:var(--muted)">.agents/rules/ponytail.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Rules:.</td>
-</tr>
-<tr>
-  <td>24</td>
-  <td><code>The Minimality Ladder</code><br><small style="color:var(--muted)">.agents/rules/ponytail.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing The Minimality Ladder.</td>
-</tr>
-<tr>
-  <td>25</td>
-  <td><code>N021_quantitative_gold_crypto_trading.md</code><br><small style="color:var(--muted)">learning/neurons/N021_quantitative_gold_crypto_trading.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing N021_quantitative_gold_crypto_trading.md.</td>
-</tr>
-<tr>
-  <td>26</td>
-  <td><code>1. Manajemen Risiko &amp; Position Sizing (The Golden Law)</code><br><small style="color:var(--muted)">learning/neurons/N021_quantitative_gold_crypto_trading.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 1. Manajemen Risiko &amp; Position Sizing (The Golden Law).</td>
-</tr>
-<tr>
-  <td>27</td>
-  <td><code>2. Logika Pasar Emas (XAU/USD Macro &amp; Microstructure)</code><br><small style="color:var(--muted)">learning/neurons/N021_quantitative_gold_crypto_trading.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 2. Logika Pasar Emas (XAU/USD Macro &amp; Microstructure).</td>
-</tr>
-<tr>
-  <td>28</td>
-  <td><code>3. Logika Pasar Kripto &amp; Smart Money Concepts (SMC)</code><br><small style="color:var(--muted)">learning/neurons/N021_quantitative_gold_crypto_trading.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 3. Logika Pasar Kripto &amp; Smart Money Concepts (SMC).</td>
-</tr>
-<tr>
-  <td>29</td>
-  <td><code>💻 Algoritma Deterministik (Pure Python Implementation)</code><br><small style="color:var(--muted)">learning/neurons/N021_quantitative_gold_crypto_trading.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 💻 Algoritma Deterministik (Pure Python Implementation).</td>
-</tr>
-<tr>
-  <td>30</td>
-  <td><code>🎯 Invarian Inti Perdagangan Kuantitatif (Trading Invariants)</code><br><small style="color:var(--muted)">learning/neurons/N021_quantitative_gold_crypto_trading.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 🎯 Invarian Inti Perdagangan Kuantitatif (Trading Invariants).</td>
-</tr>
-</table>
-
-<div class="grid">
-  <div class="card">
-    <h4>Key Files</h4>
-    <table style="width:100%;font-size:0.85rem;">
-      <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>learning/neurons/N024_post_quantum_cryptography.md</code></td><td>9 nodes</td></tr>
+<tr><td><code>learning/neurons/N024_post_quantum_cryptography.md</code></td><td>9 nodes</td></tr>
 <tr><td><code>identity.md</code></td><td>8 nodes</td></tr>
 <tr><td><code>.agents/rules/ponytail.md</code></td><td>7 nodes</td></tr>
 <tr><td><code>.windsurf/rules/ponytail.md</code></td><td>7 nodes</td></tr>
 <tr><td><code>learning/neurons/N021_quantitative_gold_crypto_trading.md</code></td><td>7 nodes</td></tr>
 <tr><td><code>learning/neurons/N028_autonomous_self_healing_chaos.md</code></td><td>7 nodes</td></tr>
 <tr><td><code>scripts/train_trading_engine.py</code></td><td>7 nodes</td></tr>
-<tr><td><code>learning/feedback_log/mojoloker_learnings.md</code></td><td>6 nodes</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x107, calls x10, explains x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x115, calls x10, explains x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -3957,17 +4341,17 @@ flowchart LR
   <div class="card">
     <h4>Graph</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>Nodes</td><td>713</td></tr>
-      <tr><td>Edges</td><td>756</td></tr>
+      <tr><td>Nodes</td><td>838</td></tr>
+      <tr><td>Edges</td><td>874</td></tr>
       <tr><td>Hyperedges</td><td>0</td></tr>
-      <tr><td>Communities</td><td>94</td></tr>
+      <tr><td>Communities</td><td>101</td></tr>
       <tr><td>Documented Sections</td><td>15</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Edge Confidence</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>EXTRACTED</td><td>730</td></tr>
+      <tr><td>EXTRACTED</td><td>848</td></tr>
       <tr><td>INFERRED</td><td>26</td></tr>
       <tr><td>AMBIGUOUS</td><td>0</td></tr>
     </table>
@@ -3976,7 +4360,7 @@ flowchart LR
 
 <div style="text-align:center; padding:40px 0; color: var(--muted); font-size:0.9rem;">
   <p>Agent_Claudia_Autonomus — Architecture Documentation</p>
-  <p>Generated: 2026-08-24 11:40 UTC · graphify callflow-html</p>
+  <p>Generated: 2026-08-24 11:48 UTC · graphify callflow-html</p>
 </div>
 
 </div><!-- .container -->

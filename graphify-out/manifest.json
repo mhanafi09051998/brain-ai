@@ -6,10 +6,10 @@
     "semantic_hash": "dd15119fb2196a241d762fb6eacacf90"
   },
   "learning/NEURON_INDEX.json": {
-    "mtime": 1787571489.2938602,
-    "seen": 1787571529.8417928,
-    "ast_hash": "02477d9af9a32027c4c53987be14cc90",
-    "semantic_hash": "02477d9af9a32027c4c53987be14cc90"
+    "mtime": 1787572041.8641918,
+    "seen": 1787572093.9756832,
+    "ast_hash": "ce25fd7fd537f0cc1c927244264ee6e0",
+    "semantic_hash": ""
   },
   "learning/scripts/grow_neurons.py": {
     "mtime": 1787405645.569641,
@@ -312,9 +312,9 @@
     "semantic_hash": ""
   },
   "memory.md": {
-    "mtime": 1787571552.3929627,
-    "seen": 1787571636.8890107,
-    "ast_hash": "3e8a974eb9a5882eca0048f2dc1f9d43",
+    "mtime": 1787572056.6663737,
+    "seen": 1787572093.9756832,
+    "ast_hash": "231e9842475dee7509f0365c40fbe729",
     "semantic_hash": ""
   },
   "memory/neurons/ai_engine_9router.md": {
@@ -648,9 +648,9 @@
     "semantic_hash": ""
   },
   "scripts/learn_index.html": {
-    "mtime": 1787571603.0432603,
-    "seen": 1787571636.8890107,
-    "ast_hash": "d7b53297085844973c737fb6a638532a",
+    "mtime": 1787571963.9399168,
+    "seen": 1787572093.9756832,
+    "ast_hash": "be8eb9945e0e6d2826f592a890e379dd",
     "semantic_hash": ""
   },
   "scripts/parallel_runner.py": {
@@ -768,10 +768,10 @@
     "semantic_hash": "2c4ea5f3ae82e76915288bda6b031944"
   },
   "scripts/build_neural_mesh_ui.py": {
-    "mtime": 1787571602.939618,
-    "seen": 1787571636.8890107,
-    "ast_hash": "d0986ae615536c79c34ccb124da65ac6",
-    "semantic_hash": ""
+    "mtime": 1787571950.1205003,
+    "seen": 1787572016.15806,
+    "ast_hash": "3182618133381e0357a646a687b5994b",
+    "semantic_hash": "3182618133381e0357a646a687b5994b"
   },
   "scripts/masterpiece_completer.py": {
     "mtime": 1787570513.5775359,
@@ -855,6 +855,48 @@
     "mtime": 1787571435.1407504,
     "seen": 1787571636.8890107,
     "ast_hash": "fec46df2b7e5b81ce21f2c3b8b077d8f",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N034_runtime_profiler_memory_oracle.md": {
+    "mtime": 1787571937.9043033,
+    "seen": 1787572093.9756832,
+    "ast_hash": "c0c644256e8c8d5f3ec24ec4074abb1d",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N035_event_driven_streaming_cqrs.md": {
+    "mtime": 1787571885.8164067,
+    "seen": 1787572093.9756832,
+    "ast_hash": "9bc4ec4c3a7ec24d3283adfacd2d81c2",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N036_fullstack_product_synthesizer.md": {
+    "mtime": 1787571922.4004219,
+    "seen": 1787572093.9756832,
+    "ast_hash": "c073c8f604630d1d38446cf142c82288",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N037_wasm_wasi_microvm_sandboxing.md": {
+    "mtime": 1787571936.8065422,
+    "seen": 1787572093.9756832,
+    "ast_hash": "4b05b765bdf39317fbc63ad53c6fb307",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N038_red_team_pentest_cve_patching.md": {
+    "mtime": 1787571937.1209087,
+    "seen": 1787572093.9756832,
+    "ast_hash": "3c3cde0391c377dcd7fbdc136bfe5d32",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N039_webrtc_av_dsp_streaming.md": {
+    "mtime": 1787571888.8397431,
+    "seen": 1787572093.9756832,
+    "ast_hash": "39d8e0f1176c8f464039c86157330788",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N040_meta_cognitive_self_reflection.md": {
+    "mtime": 1787571976.628183,
+    "seen": 1787572093.9756832,
+    "ast_hash": "47299f01b733b29a161b23ca50f263d8",
     "semantic_hash": ""
   }
 }

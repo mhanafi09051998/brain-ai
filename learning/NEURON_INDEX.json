@@ -1,83 +1,64 @@
 {
   "version": "1.2.0",
-  "updated_at": "2026-08-24T18:38:09.290201",
-  "total_neurons": 33,
-  "total_synapses": 52,
+  "updated_at": "2026-08-24T18:46:18.440087",
+  "total_neurons": 40,
+  "total_synapses": 22,
   "mesh_density": 0.0492,
   "neurons": [
     {
       "id": "N001",
       "label": "Neuron N001: Executive Decision Making",
       "file": "N001_executive_decisions.md",
-      "connections": [
-        "N004",
-        "N007"
-      ],
-      "synapse_count": 2,
+      "connections": [],
+      "synapse_count": 0,
       "size_bytes": 851
     },
     {
       "id": "N002",
       "label": "Neuron N002: VPS Remote Operations & Pipeline",
       "file": "N002_vps_remote_ops.md",
-      "connections": [
-        "N004",
-        "N006"
-      ],
-      "synapse_count": 2,
+      "connections": [],
+      "synapse_count": 0,
       "size_bytes": 1181
     },
     {
       "id": "N003",
       "label": "Neuron N003: Mobile-First UI & Compact Data Viz",
       "file": "N003_mobile_first_ui.md",
-      "connections": [
-        "N001",
-        "N004"
-      ],
-      "synapse_count": 2,
+      "connections": [],
+      "synapse_count": 0,
       "size_bytes": 1330
     },
     {
       "id": "N004",
       "label": "Neuron N004: Ponytail Minimality Ladder",
       "file": "N004_ponytail_minimality.md",
-      "connections": [
-        "N001",
-        "N005"
-      ],
-      "synapse_count": 2,
+      "connections": [],
+      "synapse_count": 0,
       "size_bytes": 671
     },
     {
       "id": "N005",
       "label": "Neuron N005: Graphify Knowledge Network",
       "file": "N005_graphify_knowledge.md",
-      "connections": [
-        "N007"
-      ],
-      "synapse_count": 1,
+      "connections": [],
+      "synapse_count": 0,
       "size_bytes": 565
     },
     {
       "id": "N006",
       "label": "Neuron N006: 9Router Gateway Engine",
       "file": "N006_9router_gateway.md",
-      "connections": [
-        "N002"
-      ],
-      "synapse_count": 1,
+      "connections": [],
+      "synapse_count": 0,
       "size_bytes": 478
     },
     {
       "id": "N007",
       "label": "Neuron N007: Autonomous Self-Improving Loop",
       "file": "N007_self_improving_loop.md",
-      "connections": [
-        "N001",
-        "N004"
-      ],
-      "synapse_count": 2,
+      "connections": [],
+      "synapse_count": 0,
       "size_bytes": 696
     },
     {
@@ -252,13 +233,8 @@
       "id": "N027",
       "label": "# 1. SIMD, Fused Multiply-Add (FMA) & Tensor Core Vectorization",
       "file": "N027_tensor_simd_vectorization.md",
-      "connections": [
-        "N004",
-        "N009",
-        "N011",
-        "N015"
-      ],
-      "synapse_count": 4,
+      "connections": [],
+      "synapse_count": 0,
       "size_bytes": 5654
     },
     {
@@ -273,44 +249,24 @@
       "id": "N029",
       "label": "Neuron N029: Modern Systems Engineering (Rust 2024 Edition & Go 1.23+ High-Throughput Runtimes)",
       "file": "N029_modern_systems_rust_go.md",
-      "connections": [
-        "N004",
-        "N009",
-        "N011",
-        "N015",
-        "N025",
-        "N027"
-      ],
-      "synapse_count": 6,
-      "size_bytes": 20586
+      "connections": [],
+      "synapse_count": 0,
+      "size_bytes": 20589
     },
     {
       "id": "N030",
       "label": "Neuron N030: Next-Gen Fullstack & Edge Engineering (Next.js 15, React 19 Compiler, Bun 1.2, Hono v4, Tailwind v4)",
       "file": "N030_nextgen_fullstack_edge.md",
-      "connections": [
-        "N003",
-        "N004",
-        "N006",
-        "N011",
-        "N015",
-        "N026"
-      ],
-      "synapse_count": 6,
+      "connections": [],
+      "synapse_count": 0,
       "size_bytes": 16425
     },
     {
       "id": "N031",
       "label": "Neuron N031: Modern Data Architecture & Hybrid Search (PostgreSQL 17, pgvector HNSW, Drizzle ORM, SQLite WAL)",
       "file": "N031_modern_data_storage_pgvector.md",
-      "connections": [
-        "N004",
-        "N009",
-        "N011",
-        "N012",
-        "N013"
-      ],
-      "synapse_count": 5,
+      "connections": [],
+      "synapse_count": 0,
       "size_bytes": 17258
     },
     {
@@ -325,15 +281,80 @@
       "id": "N033",
       "label": "Neuron N033: Python 3.12+ High-Performance & Concurrency",
       "file": "N033_python_high_performance.md",
+      "connections": [],
+      "synapse_count": 0,
+      "size_bytes": 13727
+    },
+    {
+      "id": "N034",
+      "label": "Neuron N034: Autonomous Runtime Profiler, Flamegraph & Memory Leak Oracle",
+      "file": "N034_runtime_profiler_memory_oracle.md",
+      "connections": [],
+      "synapse_count": 0,
+      "size_bytes": 33743
+    },
+    {
+      "id": "N035",
+      "label": "Neuron N035: Ultra-Scale Event-Driven Streaming & CQRS Architecture",
+      "file": "N035_event_driven_streaming_cqrs.md",
+      "connections": [],
+      "synapse_count": 0,
+      "size_bytes": 32314
+    },
+    {
+      "id": "N036",
+      "label": "Neuron N036: Autonomous Full-Stack Product Synthesizer & E2E Test Oracle",
+      "file": "N036_fullstack_product_synthesizer.md",
+      "connections": [
+        "N003",
+        "N004",
+        "N007",
+        "N014",
+        "N026",
+        "N028",
+        "N030",
+        "N031"
+      ],
+      "synapse_count": 8,
+      "size_bytes": 31587
+    },
+    {
+      "id": "N037",
+      "label": "Neuron N037: WebAssembly (WASM), WASI & Micro-VM Sandboxing",
+      "file": "N037_wasm_wasi_microvm_sandboxing.md",
+      "connections": [],
+      "synapse_count": 0,
+      "size_bytes": 31586
+    },
+    {
+      "id": "N038",
+      "label": "Neuron N038: Autonomous Red Team, Penetration Testing & Automated CVE Patching",
+      "file": "N038_red_team_pentest_cve_patching.md",
       "connections": [
         "N004",
-        "N009",
-        "N011",
+        "N014",
         "N015",
-        "N027"
+        "N023",
+        "N028"
       ],
       "synapse_count": 5,
-      "size_bytes": 13727
+      "size_bytes": 36889
+    },
+    {
+      "id": "N039",
+      "label": "Neuron N039: Real-Time WebRTC, Audio/Video DSP & AV1 Streaming",
+      "file": "N039_webrtc_av_dsp_streaming.md",
+      "connections": [],
+      "synapse_count": 0,
+      "size_bytes": 39819
+    },
+    {
+      "id": "N040",
+      "label": "Neuron N040: Meta-Cognitive Self-Reflection & Recursive Self-Correction",
+      "file": "N040_meta_cognitive_self_reflection.md",
+      "connections": [],
+      "synapse_count": 0,
+      "size_bytes": 28269
     }
   ]
 }
