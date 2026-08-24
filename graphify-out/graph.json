@@ -90,18 +90,6 @@
       "source_location": "L105"
     },
     {
-      "id": "ponytail_hooks_ponytail_config_isdeactivationcommand",
-      "label": "isDeactivationCommand()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ponytail-config.js",
-      "file_type": "code",
-      "norm_label": "isdeactivationcommand()",
-      "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L40"
-    },
-    {
       "id": "ponytail_hooks_ponytail_config_normalizeconfigmode",
       "label": "normalizeConfigMode()",
       "_callable": true,
@@ -184,18 +172,6 @@
       "norm_label": "getponytailinstructions()",
       "source_file": "ponytail/hooks/ponytail-instructions.js",
       "source_location": "L77"
-    },
-    {
-      "id": "ponytail_hooks_ponytail_mode_tracker_finish",
-      "label": "finish()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ponytail-config.js",
-      "file_type": "code",
-      "norm_label": "finish()",
-      "source_file": "ponytail/hooks/ponytail-mode-tracker.js",
-      "source_location": "L12"
     },
     {
       "id": "ponytail_opencode_plugins_ponytail_frontmatter_parsecommandfile",
@@ -342,6 +318,18 @@
       "source_location": "L71"
     },
     {
+      "id": "ponytail_hooks_ponytail_config_isdeactivationcommand",
+      "label": "isDeactivationCommand()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ponytail-activate.js",
+      "file_type": "code",
+      "norm_label": "isdeactivationcommand()",
+      "source_file": "ponytail/hooks/ponytail-config.js",
+      "source_location": "L40"
+    },
+    {
       "id": "ponytail_hooks_ponytail_config_isshellsafe",
       "label": "isShellSafe()",
       "_callable": true,
@@ -352,6 +340,18 @@
       "norm_label": "isshellsafe()",
       "source_file": "ponytail/hooks/ponytail-config.js",
       "source_location": "L50"
+    },
+    {
+      "id": "ponytail_hooks_ponytail_mode_tracker_finish",
+      "label": "finish()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ponytail-activate.js",
+      "file_type": "code",
+      "norm_label": "finish()",
+      "source_file": "ponytail/hooks/ponytail-mode-tracker.js",
+      "source_location": "L12"
     },
     {
       "id": "ponytail_hooks_ponytail_runtime_clearmode",
@@ -2839,7 +2839,7 @@
       "label": "README.md",
       "_origin": "ast",
       "community": 21,
-      "community_name": "\u26a1 CLAUDIA 2.0",
+      "community_name": "\u26a1 CLAUDIA 2.0 (v5.0.0 Apex)",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "readme.md",
@@ -2851,91 +2851,91 @@
       "label": "\ud83c\udf0c 1. Filosofi Rekayasa Inti: *The Minimality Ladder*",
       "_origin": "ast",
       "community": 21,
-      "community_name": "\u26a1 CLAUDIA 2.0",
+      "community_name": "\u26a1 CLAUDIA 2.0 (v5.0.0 Apex)",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\ud83c\udf0c 1. filosofi rekayasa inti: *the minimality ladder*",
       "source_file": "README.md",
-      "source_location": "L21"
+      "source_location": "L27"
     },
     {
       "id": "readme_2_cognitive_neural_mesh_16_master_neurons",
       "label": "\ud83e\udde0 2. Cognitive Neural Mesh (16 Master Neurons)",
       "_origin": "ast",
       "community": 21,
-      "community_name": "\u26a1 CLAUDIA 2.0",
+      "community_name": "\u26a1 CLAUDIA 2.0 (v5.0.0 Apex)",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\ud83e\udde0 2. cognitive neural mesh (16 master neurons)",
       "source_file": "README.md",
-      "source_location": "L43"
+      "source_location": "L49"
     },
     {
       "id": "readme_3_framework_tolok_ukur_6_parameter_frontier_real_evaluator",
       "label": "\ud83e\uddea 3. Framework Tolok Ukur 6 Parameter (Frontier Real Evaluator)",
       "_origin": "ast",
       "community": 21,
-      "community_name": "\u26a1 CLAUDIA 2.0",
+      "community_name": "\u26a1 CLAUDIA 2.0 (v5.0.0 Apex)",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\ud83e\uddea 3. framework tolok ukur 6 parameter (frontier real evaluator)",
       "source_file": "README.md",
-      "source_location": "L119"
+      "source_location": "L125"
     },
     {
       "id": "readme_4_ekosistem_layanan_aktif_production_cluster",
       "label": "\ud83c\udf10 4. Ekosistem Layanan Aktif (*Production Cluster*)",
       "_origin": "ast",
       "community": 21,
-      "community_name": "\u26a1 CLAUDIA 2.0",
+      "community_name": "\u26a1 CLAUDIA 2.0 (v5.0.0 Apex)",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\ud83c\udf10 4. ekosistem layanan aktif (*production cluster*)",
       "source_file": "README.md",
-      "source_location": "L144"
+      "source_location": "L150"
     },
     {
       "id": "readme_5_telemetri_vps_kecepatan_jaringan_real_time",
       "label": "\ud83d\udcca 5. Telemetri VPS & Kecepatan Jaringan Real-Time",
       "_origin": "ast",
       "community": 21,
-      "community_name": "\u26a1 CLAUDIA 2.0",
+      "community_name": "\u26a1 CLAUDIA 2.0 (v5.0.0 Apex)",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\ud83d\udcca 5. telemetri vps & kecepatan jaringan real-time",
       "source_file": "README.md",
-      "source_location": "L161"
+      "source_location": "L167"
     },
     {
       "id": "readme_6_persenjataan_toolkit_terpasang",
       "label": "\ud83d\udee0\ufe0f 6. Persenjataan & Toolkit Terpasang",
       "_origin": "ast",
       "community": 21,
-      "community_name": "\u26a1 CLAUDIA 2.0",
+      "community_name": "\u26a1 CLAUDIA 2.0 (v5.0.0 Apex)",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\ud83d\udee0\ufe0f 6. persenjataan & toolkit terpasang",
       "source_file": "README.md",
-      "source_location": "L172"
+      "source_location": "L178"
     },
     {
       "id": "readme_7_zero_trust_security_vault_isolation",
       "label": "\ud83d\udd12 7. Zero-Trust Security & Vault Isolation",
       "_origin": "ast",
       "community": 21,
-      "community_name": "\u26a1 CLAUDIA 2.0",
+      "community_name": "\u26a1 CLAUDIA 2.0 (v5.0.0 Apex)",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\ud83d\udd12 7. zero-trust security & vault isolation",
       "source_file": "README.md",
-      "source_location": "L185"
+      "source_location": "L191"
     },
     {
       "id": "readme_autonomous_senior_engineering_partner_cognitive_neural_mesh",
       "label": "*Autonomous Senior Engineering Partner & Cognitive Neural Mesh*",
       "_origin": "ast",
       "community": 21,
-      "community_name": "\u26a1 CLAUDIA 2.0",
+      "community_name": "\u26a1 CLAUDIA 2.0 (v5.0.0 Apex)",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "*autonomous senior engineering partner & cognitive neural mesh*",
@@ -2943,14 +2943,14 @@
       "source_location": "L4"
     },
     {
-      "id": "readme_claudia_2_0",
-      "label": "\u26a1 CLAUDIA 2.0",
+      "id": "readme_claudia_2_0_v5_0_0_apex",
+      "label": "\u26a1 CLAUDIA 2.0 (v5.0.0 Apex)",
       "_origin": "ast",
       "community": 21,
-      "community_name": "\u26a1 CLAUDIA 2.0",
+      "community_name": "\u26a1 CLAUDIA 2.0 (v5.0.0 Apex)",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "\u26a1 claudia 2.0",
+      "norm_label": "\u26a1 claudia 2.0 (v5.0.0 apex)",
       "source_file": "README.md",
       "source_location": "L3"
     },
@@ -3454,7 +3454,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\udccb active tasks & history",
       "source_file": "memory.md",
-      "source_location": "L37"
+      "source_location": "L38"
     },
     {
       "id": "memory_claudia_neuron_memory_network",
@@ -3478,7 +3478,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\udccb prosedur pembaruan memori",
       "source_file": "memory.md",
-      "source_location": "L31"
+      "source_location": "L32"
     },
     {
       "id": "ponytail_skills_ponytail_audit_skill",
@@ -4142,7 +4142,7 @@
       "node_kind": "heading",
       "norm_label": "synaptic links",
       "source_file": "learning/neurons/N003_mobile_first_ui.md",
-      "source_location": "L10"
+      "source_location": "L11"
     },
     {
       "id": "learning_neurons_n004_ponytail_minimality",
@@ -6898,7 +6898,7 @@
       "file_type": "code",
       "norm_label": "app",
       "source_file": "scripts/claudiacode_server.js",
-      "source_location": "L6"
+      "source_location": "L8"
     },
     {
       "id": "scripts_claudiacode_server_compression",
@@ -6923,6 +6923,39 @@
       "source_location": "L3"
     },
     {
+      "id": "scripts_claudiacode_server_database",
+      "label": "Database",
+      "_origin": "ast",
+      "community": 86,
+      "community_name": "claudiacode_server.js",
+      "file_type": "code",
+      "norm_label": "database",
+      "source_file": "scripts/claudiacode_server.js",
+      "source_location": "L6"
+    },
+    {
+      "id": "scripts_claudiacode_server_db",
+      "label": "db",
+      "_origin": "ast",
+      "community": 86,
+      "community_name": "claudiacode_server.js",
+      "file_type": "code",
+      "norm_label": "db",
+      "source_file": "scripts/claudiacode_server.js",
+      "source_location": "L13"
+    },
+    {
+      "id": "scripts_claudiacode_server_db_path",
+      "label": "DB_PATH",
+      "_origin": "ast",
+      "community": 86,
+      "community_name": "claudiacode_server.js",
+      "file_type": "code",
+      "norm_label": "db_path",
+      "source_file": "scripts/claudiacode_server.js",
+      "source_location": "L10"
+    },
+    {
       "id": "scripts_claudiacode_server_express",
       "label": "express",
       "_origin": "ast",
@@ -6932,6 +6965,17 @@
       "norm_label": "express",
       "source_file": "scripts/claudiacode_server.js",
       "source_location": "L1"
+    },
+    {
+      "id": "scripts_claudiacode_server_fs",
+      "label": "fs",
+      "_origin": "ast",
+      "community": 86,
+      "community_name": "claudiacode_server.js",
+      "file_type": "code",
+      "norm_label": "fs",
+      "source_file": "scripts/claudiacode_server.js",
+      "source_location": "L5"
     },
     {
       "id": "scripts_claudiacode_server_path",
@@ -7027,6 +7071,150 @@
       "norm_label": "@modelcontextprotocol/server-memory",
       "source_file": ".claudia/mcp.json",
       "source_location": "L1"
+    },
+    {
+      "id": "learning_neurons_n020_session_continuity_checkpoint",
+      "label": "N020_session_continuity_checkpoint.md",
+      "_origin": "ast",
+      "community": 88,
+      "community_name": "Neuron N020: Autonomous Cross-Session Memory & Resilient Checkpoint Continuity",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "n020_session_continuity_checkpoint.md",
+      "source_file": "learning/neurons/N020_session_continuity_checkpoint.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "learning_neurons_n020_session_continuity_checkpoint_1_inisialisasi_otomatis_cold_start_traversal",
+      "label": "1. Inisialisasi Otomatis (Cold Start Traversal)",
+      "_origin": "ast",
+      "community": 88,
+      "community_name": "Neuron N020: Autonomous Cross-Session Memory & Resilient Checkpoint Continuity",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. inisialisasi otomatis (cold start traversal)",
+      "source_file": "learning/neurons/N020_session_continuity_checkpoint.md",
+      "source_location": "L26"
+    },
+    {
+      "id": "learning_neurons_n020_session_continuity_checkpoint_2_protokol_penanganan_saat_kena_limit_terpotong",
+      "label": "2. Protokol Penanganan Saat Kena Limit / Terpotong",
+      "_origin": "ast",
+      "community": 88,
+      "community_name": "Neuron N020: Autonomous Cross-Session Memory & Resilient Checkpoint Continuity",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. protokol penanganan saat kena limit / terpotong",
+      "source_file": "learning/neurons/N020_session_continuity_checkpoint.md",
+      "source_location": "L31"
+    },
+    {
+      "id": "learning_neurons_n020_session_continuity_checkpoint_kebijakan_integritas_anti_data_loss",
+      "label": "\ud83d\udd12 Kebijakan Integritas & Anti-Data Loss",
+      "_origin": "ast",
+      "community": 88,
+      "community_name": "Neuron N020: Autonomous Cross-Session Memory & Resilient Checkpoint Continuity",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udd12 kebijakan integritas & anti-data loss",
+      "source_file": "learning/neurons/N020_session_continuity_checkpoint.md",
+      "source_location": "L43"
+    },
+    {
+      "id": "learning_neurons_n020_session_continuity_checkpoint_mekanisme_penyimpanan_state_permanen_snapshot_ledger",
+      "label": "\ud83d\udcbe Mekanisme Penyimpanan State Permanen (Snapshot Ledger)",
+      "_origin": "ast",
+      "community": 88,
+      "community_name": "Neuron N020: Autonomous Cross-Session Memory & Resilient Checkpoint Continuity",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udcbe mekanisme penyimpanan state permanen (snapshot ledger)",
+      "source_file": "learning/neurons/N020_session_continuity_checkpoint.md",
+      "source_location": "L8"
+    },
+    {
+      "id": "learning_neurons_n020_session_continuity_checkpoint_neuron_n020_autonomous_cross_session_memory_resilient_checkpoint_continuity",
+      "label": "Neuron N020: Autonomous Cross-Session Memory & Resilient Checkpoint Continuity",
+      "_origin": "ast",
+      "community": 88,
+      "community_name": "Neuron N020: Autonomous Cross-Session Memory & Resilient Checkpoint Continuity",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "neuron n020: autonomous cross-session memory & resilient checkpoint continuity",
+      "source_file": "learning/neurons/N020_session_continuity_checkpoint.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "learning_neurons_n020_session_continuity_checkpoint_protokol_resume_lintas_ide_model",
+      "label": "\ud83d\udd04 Protokol Resume Lintas IDE & Model",
+      "_origin": "ast",
+      "community": 88,
+      "community_name": "Neuron N020: Autonomous Cross-Session Memory & Resilient Checkpoint Continuity",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udd04 protokol resume lintas ide & model",
+      "source_file": "learning/neurons/N020_session_continuity_checkpoint.md",
+      "source_location": "L22"
+    },
+    {
+      "id": "learning_neurons_n020_session_continuity_checkpoint_tujuan_arsitektur",
+      "label": "\ud83d\udccc Tujuan Arsitektur",
+      "_origin": "ast",
+      "community": 88,
+      "community_name": "Neuron N020: Autonomous Cross-Session Memory & Resilient Checkpoint Continuity",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udccc tujuan arsitektur",
+      "source_file": "learning/neurons/N020_session_continuity_checkpoint.md",
+      "source_location": "L3"
+    },
+    {
+      "id": "claudia",
+      "label": "CLAUDIA.md",
+      "_origin": "ast",
+      "community": 89,
+      "community_name": "CLAUDIA.md \u2014 Project Instructions & Architecture Rules",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "claudia.md",
+      "source_file": "CLAUDIA.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "claudia_claudia_md_project_instructions_architecture_rules",
+      "label": "CLAUDIA.md \u2014 Project Instructions & Architecture Rules",
+      "_origin": "ast",
+      "community": 89,
+      "community_name": "CLAUDIA.md \u2014 Project Instructions & Architecture Rules",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "claudia.md \u2014 project instructions & architecture rules",
+      "source_file": "CLAUDIA.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "claudia_the_minimality_ladder_directives",
+      "label": "The Minimality Ladder Directives:",
+      "_origin": "ast",
+      "community": 89,
+      "community_name": "CLAUDIA.md \u2014 Project Instructions & Architecture Rules",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "the minimality ladder directives:",
+      "source_file": "CLAUDIA.md",
+      "source_location": "L3"
+    },
+    {
+      "id": "claudia_verification",
+      "label": "Verification:",
+      "_origin": "ast",
+      "community": 89,
+      "community_name": "CLAUDIA.md \u2014 Project Instructions & Architecture Rules",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "verification:",
+      "source_file": "CLAUDIA.md",
+      "source_location": "L10"
     },
     {
       "id": "toolkit_readme",
@@ -9468,6 +9656,39 @@
       "weight": 1.0
     },
     {
+      "source": "claudia",
+      "target": "claudia_claudia_md_project_instructions_architecture_rules",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDIA.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "claudia_claudia_md_project_instructions_architecture_rules",
+      "target": "claudia_verification",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDIA.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "claudia_claudia_md_project_instructions_architecture_rules",
+      "target": "claudia_the_minimality_ladder_directives",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDIA.md",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
       "source": "claudia_mcp",
       "target": "claudia_mcp_mcp_server_filesystem",
       "relation": "contains",
@@ -9882,7 +10103,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "learning/neurons/N003_mobile_first_ui.md",
-      "source_location": "L10",
+      "source_location": "L11",
       "weight": 1.0
     },
     {
@@ -10381,6 +10602,83 @@
       "weight": 1.0
     },
     {
+      "source": "learning_neurons_n020_session_continuity_checkpoint",
+      "target": "learning_neurons_n020_session_continuity_checkpoint_neuron_n020_autonomous_cross_session_memory_resilient_checkpoint_continuity",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N020_session_continuity_checkpoint.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n020_session_continuity_checkpoint_neuron_n020_autonomous_cross_session_memory_resilient_checkpoint_continuity",
+      "target": "learning_neurons_n020_session_continuity_checkpoint_protokol_resume_lintas_ide_model",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N020_session_continuity_checkpoint.md",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n020_session_continuity_checkpoint_neuron_n020_autonomous_cross_session_memory_resilient_checkpoint_continuity",
+      "target": "learning_neurons_n020_session_continuity_checkpoint_tujuan_arsitektur",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N020_session_continuity_checkpoint.md",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n020_session_continuity_checkpoint_neuron_n020_autonomous_cross_session_memory_resilient_checkpoint_continuity",
+      "target": "learning_neurons_n020_session_continuity_checkpoint_kebijakan_integritas_anti_data_loss",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N020_session_continuity_checkpoint.md",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n020_session_continuity_checkpoint_neuron_n020_autonomous_cross_session_memory_resilient_checkpoint_continuity",
+      "target": "learning_neurons_n020_session_continuity_checkpoint_mekanisme_penyimpanan_state_permanen_snapshot_ledger",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N020_session_continuity_checkpoint.md",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n020_session_continuity_checkpoint_protokol_resume_lintas_ide_model",
+      "target": "learning_neurons_n020_session_continuity_checkpoint_1_inisialisasi_otomatis_cold_start_traversal",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N020_session_continuity_checkpoint.md",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n020_session_continuity_checkpoint_protokol_resume_lintas_ide_model",
+      "target": "learning_neurons_n020_session_continuity_checkpoint_2_protokol_penanganan_saat_kena_limit_terpotong",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N020_session_continuity_checkpoint.md",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
       "source": "learning_playbooks_graphify_workflow",
       "target": "learning_playbooks_graphify_workflow_playbook_graphify_workflow",
       "relation": "contains",
@@ -10520,7 +10818,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "memory.md",
-      "source_location": "L31",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -10531,7 +10829,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "memory.md",
-      "source_location": "L37",
+      "source_location": "L38",
       "weight": 1.0
     },
     {
@@ -12967,7 +13265,7 @@
     },
     {
       "source": "readme",
-      "target": "readme_claudia_2_0",
+      "target": "readme_claudia_2_0_v5_0_0_apex",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -12977,73 +13275,73 @@
       "weight": 1.0
     },
     {
-      "source": "readme_claudia_2_0",
+      "source": "readme_claudia_2_0_v5_0_0_apex",
       "target": "readme_3_framework_tolok_ukur_6_parameter_frontier_real_evaluator",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L119",
+      "source_location": "L125",
       "weight": 1.0
     },
     {
-      "source": "readme_claudia_2_0",
+      "source": "readme_claudia_2_0_v5_0_0_apex",
       "target": "readme_4_ekosistem_layanan_aktif_production_cluster",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L144",
+      "source_location": "L150",
       "weight": 1.0
     },
     {
-      "source": "readme_claudia_2_0",
+      "source": "readme_claudia_2_0_v5_0_0_apex",
       "target": "readme_5_telemetri_vps_kecepatan_jaringan_real_time",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L161",
+      "source_location": "L167",
       "weight": 1.0
     },
     {
-      "source": "readme_claudia_2_0",
+      "source": "readme_claudia_2_0_v5_0_0_apex",
       "target": "readme_6_persenjataan_toolkit_terpasang",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L172",
+      "source_location": "L178",
       "weight": 1.0
     },
     {
-      "source": "readme_claudia_2_0",
+      "source": "readme_claudia_2_0_v5_0_0_apex",
       "target": "readme_7_zero_trust_security_vault_isolation",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L185",
+      "source_location": "L191",
       "weight": 1.0
     },
     {
-      "source": "readme_claudia_2_0",
+      "source": "readme_claudia_2_0_v5_0_0_apex",
       "target": "readme_1_filosofi_rekayasa_inti_the_minimality_ladder",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L21",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
-      "source": "readme_claudia_2_0",
+      "source": "readme_claudia_2_0_v5_0_0_apex",
       "target": "readme_autonomous_senior_engineering_partner_cognitive_neural_mesh",
       "relation": "contains",
       "_origin": "ast",
@@ -13054,14 +13352,14 @@
       "weight": 1.0
     },
     {
-      "source": "readme_claudia_2_0",
+      "source": "readme_claudia_2_0_v5_0_0_apex",
       "target": "readme_2_cognitive_neural_mesh_16_master_neurons",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L43",
+      "source_location": "L49",
       "weight": 1.0
     },
     {
@@ -13110,6 +13408,28 @@
     },
     {
       "source": "scripts_claudiacode_server",
+      "target": "scripts_claudiacode_server_db_path",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/claudiacode_server.js",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_claudiacode_server",
+      "target": "scripts_claudiacode_server_db",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/claudiacode_server.js",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_claudiacode_server",
       "target": "scripts_claudiacode_server_compression",
       "relation": "contains",
       "_origin": "ast",
@@ -13143,13 +13463,35 @@
     },
     {
       "source": "scripts_claudiacode_server",
-      "target": "scripts_claudiacode_server_app",
+      "target": "scripts_claudiacode_server_fs",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/claudiacode_server.js",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_claudiacode_server",
+      "target": "scripts_claudiacode_server_database",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/claudiacode_server.js",
       "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_claudiacode_server",
+      "target": "scripts_claudiacode_server_app",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/claudiacode_server.js",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -14279,5 +14621,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "d0d645bdd68e50ce217a8cf452cd938a7fe9499c"
+  "built_at_commit": "40de5f376fbdd95158e39f18d67d72d6c93a3280"
 }
