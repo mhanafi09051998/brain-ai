@@ -170,44 +170,78 @@
       box.classList.remove('hidden');
     }
 
-    function handleAuth(e, mode) {
+    async function handleAuth(e, mode) {
       e.preventDefault();
       
-      let username, email;
-      if (mode === 'login') {
-        const idVal = document.getElementById('login-identifier').value.trim();
-        const isEmail = idVal.includes('@');
-        username = isEmail ? idVal.split('@')[0] : idVal;
-        email = isEmail ? idVal : `${username.toLowerCase()}@zolu.my.id`;
-      } else {
-        username = document.getElementById('reg-username').value.trim();
-        email = document.getElementById('reg-email').value.trim();
-      }
-
-      const token = 'cc_live_' + btoa(username + ':' + Date.now()).replace(/=/g, '');
-
-      // Hide forms, show success
-      document.getElementById('form-login').classList.add('hidden');
-      document.getElementById('form-register').classList.add('hidden');
-      document.getElementById('tab-login').parentElement.classList.add('hidden');
-      document.getElementById('auth-success').classList.remove('hidden');
-      document.getElementById('succ-user').textContent = `${username} (${email})`;
-      document.getElementById('token-display').value = token;
-
-      // Save locally
-      localStorage.setItem('claudia_user', JSON.stringify({ username, email, token }));
-
-      // Redirect if OAuth callback exists
-      if (oauthCallback) {
-        const target = new URL(oauthCallback);
-        target.searchParams.set('token', token);
-        target.searchParams.set('username', username);
-        target.searchParams.set('email', email);
-        target.searchParams.set('plan', 'Apex Master');
+      const submitBtn = mode === 'login' ? document.getElementById('btn-login') : document.getElementById('btn-register');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Processing...';
+      
+      try {
+        let payload = {};
+        let endpoint = '/api/login';
         
-        setTimeout(() => {
-          window.location.href = target.toString();
-        }, 800);
+        if (mode === 'login') {
+          endpoint = '/api/login';
+          payload = {
+            identifier: document.getElementById('login-identifier').value.trim(),
+            password: document.getElementById('login-password').value
+          };
+        } else {
+          endpoint = '/api/register';
+          payload = {
+            name: document.getElementById('reg-name').value.trim(),
+            username: document.getElementById('reg-username').value.trim(),
+            email: document.getElementById('reg-email').value.trim(),
+            password: document.getElementById('reg-password').value,
+            os_type: navigator.platform || 'unknown'
+          };
+        }
+
+        const res = await fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        const data = await res.json();
+        if (!res.ok) {
+          throw new Error(data.error || 'Authentication failed');
+        }
+
+        const username = data.user.username;
+        const email = data.user.email;
+        const plan = data.user.plan || 'Apex Master';
+        const token = data.token;
+
+        // Hide forms, show success
+        document.getElementById('form-login').classList.add('hidden');
+        document.getElementById('form-register').classList.add('hidden');
+        document.getElementById('tab-login').parentElement.classList.add('hidden');
+        document.getElementById('auth-success').classList.remove('hidden');
+        document.getElementById('succ-user').textContent = `${username} (${email})`;
+        document.getElementById('token-display').value = token;
+
+        // Save locally
+        localStorage.setItem('claudia_user', JSON.stringify({ username, email, plan, token }));
+
+        // Redirect if OAuth callback exists
+        if (oauthCallback) {
+          const target = new URL(oauthCallback);
+          target.searchParams.set('token', token);
+          target.searchParams.set('username', username);
+          target.searchParams.set('email', email);
+          target.searchParams.set('plan', plan);
+          
+          setTimeout(() => {
+            window.location.href = target.toString();
+          }, 800);
+        }
+      } catch (err) {
+        showAlert(err.message, true);
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
       }
     }
 
