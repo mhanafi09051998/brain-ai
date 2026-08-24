@@ -639,7 +639,7 @@
       "file_type": "code",
       "norm_label": "run_all()",
       "source_file": "scripts/test_brain.py",
-      "source_location": "L87"
+      "source_location": "L111"
     },
     {
       "id": "scripts_test_brain_test_ide_bridges",
@@ -652,6 +652,18 @@
       "norm_label": "test_ide_bridges()",
       "source_file": "scripts/test_brain.py",
       "source_location": "L81"
+    },
+    {
+      "id": "scripts_test_brain_test_identity_tamper_lock",
+      "label": "test_identity_tamper_lock()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "test_brain.py",
+      "file_type": "code",
+      "norm_label": "test_identity_tamper_lock()",
+      "source_file": "scripts/test_brain.py",
+      "source_location": "L87"
     },
     {
       "id": "scripts_test_brain_test_knowledge_graph",
@@ -7375,7 +7387,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/test_brain.py",
-      "source_location": "L90",
+      "source_location": "L114",
       "weight": 1.0
     },
     {
@@ -7387,7 +7399,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/test_brain.py",
-      "source_location": "L91",
+      "source_location": "L115",
       "weight": 1.0
     },
     {
@@ -7399,7 +7411,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/test_brain.py",
-      "source_location": "L92",
+      "source_location": "L116",
       "weight": 1.0
     },
     {
@@ -7411,7 +7423,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/test_brain.py",
-      "source_location": "L93",
+      "source_location": "L117",
       "weight": 1.0
     },
     {
@@ -7423,7 +7435,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/test_brain.py",
-      "source_location": "L94",
+      "source_location": "L118",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_brain_run_all",
+      "target": "scripts_test_brain_test_identity_tamper_lock",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/test_brain.py",
+      "source_location": "L119",
       "weight": 1.0
     },
     {
@@ -12633,6 +12657,17 @@
     },
     {
       "source": "scripts_test_brain",
+      "target": "scripts_test_brain_run_all",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/test_brain.py",
+      "source_location": "L111",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_brain",
       "target": "scripts_test_brain_test_neuron_network",
       "relation": "contains",
       "_origin": "ast",
@@ -12688,7 +12723,7 @@
     },
     {
       "source": "scripts_test_brain",
-      "target": "scripts_test_brain_run_all",
+      "target": "scripts_test_brain_test_identity_tamper_lock",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -13549,5 +13584,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "ba498f471bff01f0beff640a07e731cbb3a38f7e"
+  "built_at_commit": "34f2a45090ddede1abc47153194bd658c1a078a3"
 }

@@ -90,6 +90,18 @@
       "source_location": "L105"
     },
     {
+      "id": "ponytail_hooks_ponytail_config_isdeactivationcommand",
+      "label": "isDeactivationCommand()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "ponytail-config.js",
+      "file_type": "code",
+      "norm_label": "isdeactivationcommand()",
+      "source_file": "ponytail/hooks/ponytail-config.js",
+      "source_location": "L40"
+    },
+    {
       "id": "ponytail_hooks_ponytail_config_normalizeconfigmode",
       "label": "normalizeConfigMode()",
       "_callable": true,
@@ -172,6 +184,18 @@
       "norm_label": "getponytailinstructions()",
       "source_file": "ponytail/hooks/ponytail-instructions.js",
       "source_location": "L77"
+    },
+    {
+      "id": "ponytail_hooks_ponytail_mode_tracker_finish",
+      "label": "finish()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "ponytail-config.js",
+      "file_type": "code",
+      "norm_label": "finish()",
+      "source_file": "ponytail/hooks/ponytail-mode-tracker.js",
+      "source_location": "L12"
     },
     {
       "id": "ponytail_opencode_plugins_ponytail_frontmatter_parsecommandfile",
@@ -354,18 +378,6 @@
       "source_location": "L71"
     },
     {
-      "id": "ponytail_hooks_ponytail_config_isdeactivationcommand",
-      "label": "isDeactivationCommand()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "ponytail-activate.js",
-      "file_type": "code",
-      "norm_label": "isdeactivationcommand()",
-      "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L40"
-    },
-    {
       "id": "ponytail_hooks_ponytail_config_isshellsafe",
       "label": "isShellSafe()",
       "_callable": true,
@@ -376,18 +388,6 @@
       "norm_label": "isshellsafe()",
       "source_file": "ponytail/hooks/ponytail-config.js",
       "source_location": "L50"
-    },
-    {
-      "id": "ponytail_hooks_ponytail_mode_tracker_finish",
-      "label": "finish()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "ponytail-activate.js",
-      "file_type": "code",
-      "norm_label": "finish()",
-      "source_file": "ponytail/hooks/ponytail-mode-tracker.js",
-      "source_location": "L12"
     },
     {
       "id": "ponytail_hooks_ponytail_runtime_clearmode",
@@ -592,6 +592,78 @@
       "norm_label": ".__init__()",
       "source_file": "scripts/niah_evaluator.py",
       "source_location": "L14"
+    },
+    {
+      "id": "scripts_train_trading_engine_calculate_atr",
+      "label": "calculate_atr()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "train_trading_engine.py",
+      "file_type": "code",
+      "norm_label": "calculate_atr()",
+      "source_file": "scripts/train_trading_engine.py",
+      "source_location": "L78"
+    },
+    {
+      "id": "scripts_train_trading_engine_calculate_ema",
+      "label": "calculate_ema()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "train_trading_engine.py",
+      "file_type": "code",
+      "norm_label": "calculate_ema()",
+      "source_file": "scripts/train_trading_engine.py",
+      "source_location": "L46"
+    },
+    {
+      "id": "scripts_train_trading_engine_calculate_rsi",
+      "label": "calculate_rsi()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "train_trading_engine.py",
+      "file_type": "code",
+      "norm_label": "calculate_rsi()",
+      "source_file": "scripts/train_trading_engine.py",
+      "source_location": "L55"
+    },
+    {
+      "id": "scripts_train_trading_engine_detect_smc_fair_value_gaps",
+      "label": "detect_smc_fair_value_gaps()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "train_trading_engine.py",
+      "file_type": "code",
+      "norm_label": "detect_smc_fair_value_gaps()",
+      "source_file": "scripts/train_trading_engine.py",
+      "source_location": "L90"
+    },
+    {
+      "id": "scripts_train_trading_engine_fetch_binance_klines",
+      "label": "fetch_binance_klines()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "train_trading_engine.py",
+      "file_type": "code",
+      "norm_label": "fetch_binance_klines()",
+      "source_file": "scripts/train_trading_engine.py",
+      "source_location": "L24"
+    },
+    {
+      "id": "scripts_train_trading_engine_train_and_synthesize_neuron",
+      "label": "train_and_synthesize_neuron()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "train_trading_engine.py",
+      "file_type": "code",
+      "norm_label": "train_and_synthesize_neuron()",
+      "source_file": "scripts/train_trading_engine.py",
+      "source_location": "L113"
     },
     {
       "id": "learning_scripts_grow_neurons_grow_neural_mesh",
@@ -3526,6 +3598,17 @@
       "norm_label": "triggers & heuristics",
       "source_file": "learning/neurons/N001_executive_decisions.md",
       "source_location": "L13"
+    },
+    {
+      "id": "scripts_train_trading_engine",
+      "label": "train_trading_engine.py",
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "train_trading_engine.py",
+      "file_type": "code",
+      "norm_label": "train_trading_engine.py",
+      "source_file": "scripts/train_trading_engine.py",
+      "source_location": "L1"
     },
     {
       "id": "ponytail_skills_ponytail_audit_skill",
@@ -7448,6 +7531,66 @@
       "context": "call",
       "source_file": "scripts/test_brain.py",
       "source_location": "L119",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_train_trading_engine_train_and_synthesize_neuron",
+      "target": "scripts_train_trading_engine_fetch_binance_klines",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/train_trading_engine.py",
+      "source_location": "L121",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_train_trading_engine_train_and_synthesize_neuron",
+      "target": "scripts_train_trading_engine_calculate_ema",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/train_trading_engine.py",
+      "source_location": "L125",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_train_trading_engine_train_and_synthesize_neuron",
+      "target": "scripts_train_trading_engine_calculate_rsi",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/train_trading_engine.py",
+      "source_location": "L127",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_train_trading_engine_train_and_synthesize_neuron",
+      "target": "scripts_train_trading_engine_calculate_atr",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/train_trading_engine.py",
+      "source_location": "L128",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_train_trading_engine_train_and_synthesize_neuron",
+      "target": "scripts_train_trading_engine_detect_smc_fair_value_gaps",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/train_trading_engine.py",
+      "source_location": "L129",
       "weight": 1.0
     },
     {
@@ -12733,6 +12876,72 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_train_trading_engine",
+      "target": "scripts_train_trading_engine_train_and_synthesize_neuron",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/train_trading_engine.py",
+      "source_location": "L113",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_train_trading_engine",
+      "target": "scripts_train_trading_engine_fetch_binance_klines",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/train_trading_engine.py",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_train_trading_engine",
+      "target": "scripts_train_trading_engine_calculate_ema",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/train_trading_engine.py",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_train_trading_engine",
+      "target": "scripts_train_trading_engine_calculate_rsi",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/train_trading_engine.py",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_train_trading_engine",
+      "target": "scripts_train_trading_engine_calculate_atr",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/train_trading_engine.py",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_train_trading_engine",
+      "target": "scripts_train_trading_engine_detect_smc_fair_value_gaps",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/train_trading_engine.py",
+      "source_location": "L90",
+      "weight": 1.0
+    },
+    {
       "source": "scripts_zolu_learn_server",
       "target": "scripts_zolu_learn_server_express",
       "relation": "contains",
@@ -13584,5 +13793,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "34f2a45090ddede1abc47153194bd658c1a078a3"
+  "built_at_commit": "d81e1a6fcb351ddca73eb02aae2b084128f477d9"
 }

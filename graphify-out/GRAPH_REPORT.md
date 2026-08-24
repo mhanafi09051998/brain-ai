@@ -1,16 +1,16 @@
 # Graph Report - Agent_Claudia_Autonomus  (2026-08-24)
 
 ## Corpus Check
-- 112 files · ~77,004 words
+- 113 files · ~78,098 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 564 nodes · 609 edges · 81 communities (58 shown, 23 thin omitted)
+- 571 nodes · 620 edges · 82 communities (59 shown, 23 thin omitted)
 - Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 25 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `34f2a450`
+- Built from commit: `d81e1a6f`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -42,6 +42,7 @@
 - .agents/skills/ponytail-review/SKILL.md
 - Core Stack & Architecture
 - Neuron N001: Executive Decision Making
+- train_trading_engine.py
 - ponytail/skills/ponytail-audit/SKILL.md
 - Ponytail Gain
 - ponytail/skills/ponytail-review/SKILL.md
@@ -101,25 +102,25 @@
 10. `⚡ CLAUDIA 2.0 (v5.0.0 Apex)` - 9 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `ponytailExtension()` --calls--> `isDeactivationCommand()`  [EXTRACTED]
-  ponytail/pi-extension/index.js → ponytail/hooks/ponytail-config.js
-- `finish()` --calls--> `getDefaultMode()`  [EXTRACTED]
-  ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-config.js
-- `finish()` --calls--> `writeDefaultMode()`  [EXTRACTED]
-  ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-config.js
-- `finish()` --calls--> `getPonytailInstructions()`  [EXTRACTED]
-  ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-instructions.js
 - `inject()` --calls--> `getPonytailInstructions()`  [EXTRACTED]
   ponytail/hooks/ponytail-subagent.js → ponytail/hooks/ponytail-instructions.js
+- `finish()` --calls--> `clearMode()`  [EXTRACTED]
+  ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-runtime.js
+- `finish()` --calls--> `readMode()`  [EXTRACTED]
+  ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-runtime.js
+- `finish()` --calls--> `setMode()`  [EXTRACTED]
+  ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-runtime.js
+- `finish()` --calls--> `writeHookOutput()`  [EXTRACTED]
+  ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-runtime.js
 
 ## Import Cycles
 - None detected.
 
-## Communities (81 total, 23 thin omitted)
+## Communities (82 total, 23 thin omitted)
 
 ### Community 0 - "ponytail-config.js"
-Cohesion: 0.08
-Nodes (40): fs, getConfigDir(), getConfigPath(), getDefaultMode(), getHideStatus(), getQuietStartup(), normalizeConfigMode(), normalizeMode() (+32 more)
+Cohesion: 0.07
+Nodes (42): fs, getConfigDir(), getConfigPath(), getDefaultMode(), getHideStatus(), getQuietStartup(), isDeactivationCommand(), normalizeConfigMode() (+34 more)
 
 ### Community 1 - "ponytail/package.json"
 Cohesion: 0.05
@@ -127,13 +128,13 @@ Nodes (40): author, name, url, bugs, url, description, exports, ./plugin (+32 mo
 
 ### Community 2 - "ponytail-activate.js"
 Cohesion: 0.07
-Nodes (36): claudeDir, {
+Nodes (34): claudeDir, {
   clearMode,
   isCodex,
   isCopilot,
   setMode,
   writeHookOutput,
-}, fs, { getDefaultMode, getClaudeDir, isShellSafe }, { getPonytailInstructions }, mode, output, path (+28 more)
+}, fs, { getDefaultMode, getClaudeDir, isShellSafe }, { getPonytailInstructions }, mode, output, path (+26 more)
 
 ### Community 3 - "Install"
 Cohesion: 0.07
@@ -230,6 +231,10 @@ Nodes (4): 1. Database & Storage, 2. Web & Service Stack, 3. Engineering & Intel
 ### Community 27 - "Neuron N001: Executive Decision Making"
 Cohesion: 0.40
 Nodes (4): Core Concept, Neuron N001: Executive Decision Making, Synaptic Links, Triggers & Heuristics
+
+### Community 28 - "train_trading_engine.py"
+Cohesion: 0.52
+Nodes (6): calculate_atr(), calculate_ema(), calculate_rsi(), detect_smc_fair_value_gaps(), fetch_binance_klines(), train_and_synthesize_neuron()
 
 ### Community 29 - "ponytail/skills/ponytail-audit/SKILL.md"
 Cohesion: 0.40
@@ -330,11 +335,11 @@ _Questions this graph is uniquely positioned to answer:_
 - **What connects `__dirname`, `require`, `{ getPonytailInstructions }` to the rest of the system?**
   _316 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `ponytail-config.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.07541478129713423 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07477288609364081 - nodes in this community are weakly interconnected._
 - **Should `ponytail/package.json` be split into smaller, more focused modules?**
   _Cohesion score 0.05365853658536585 - nodes in this community are weakly interconnected._
 - **Should `ponytail-activate.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.06852497096399536 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._
 - **Should `Install` be split into smaller, more focused modules?**
   _Cohesion score 0.07407407407407407 - nodes in this community are weakly interconnected._
 - **Should `README.es.md` be split into smaller, more focused modules?**

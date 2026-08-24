@@ -748,5 +748,11 @@
     "seen": 1787569507.2380357,
     "ast_hash": "e958fb53035f74602788d64326a2b20f",
     "semantic_hash": ""
+  },
+  "scripts/train_trading_engine.py": {
+    "mtime": 1787569945.0492089,
+    "seen": 1787569963.7407098,
+    "ast_hash": "14f5709f501e0cc499854ddb9486e902",
+    "semantic_hash": ""
   }
 }
