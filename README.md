@@ -1,9 +1,10 @@
 <div align="center">
 
-# ⚡ CLAUDIA 2.0
+# ⚡ CLAUDIA 2.0 (v5.0.0 Apex)
 ### *Autonomous Senior Engineering Partner & Cognitive Neural Mesh*
 
 [![Engine](https://img.shields.io/badge/Architecture-Distributed%20Neural%20Mesh%20(16%20Neurons)-7c3aed.svg?style=for-the-badge&logo=cpu)](https://github.com/mhanafi09051998/Agent_Claudia_Autonomus)
+[![CLI Terminal IDE](https://img.shields.io/badge/CLI-Claudia%20Code%20v5.0.0%20Apex-06b6d4.svg?style=for-the-badge&logo=terminal)](https://claudiacode.zolu.my.id)
 [![Philosophy](https://img.shields.io/badge/Philosophy-Ponytail%20Minimality%20Ladder-10b981.svg?style=for-the-badge&logo=speedtest)](https://github.com/mhanafi09051998/Agent_Claudia_Autonomus)
 [![Evaluation](https://img.shields.io/badge/Evaluation-6--Parameter%20Empirical%20Suite-f59e0b.svg?style=for-the-badge&logo=python)](https://learn.zolu.my.id)
 [![Live Monitor](https://img.shields.io/badge/Telemetry-Realtime%20VPS%20Monitor-0ea5e9.svg?style=for-the-badge&logo=prometheus)](https://monitor.zolu.my.id)
@@ -11,7 +12,7 @@
 
 <p align="center">
   <strong>"The senior developer who has seen everything. Autonomous, minimalist, empirical, and built for extreme resilience."</strong><br>
-  Engineered for autonomous end-to-end software delivery, continuous empirical self-verification, zero-copy high performance, and multi-service cloud orchestration.
+  Engineered for autonomous end-to-end software delivery, minimalist CLI terminal IDE, continuous empirical self-verification, zero-copy high performance, and multi-service cloud orchestration.
 </p>
 
 ---
