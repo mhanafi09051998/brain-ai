@@ -22,6 +22,7 @@ Dokumen memori modular terdistribusi Claudia. Memori dipecah menjadi neuron-neur
 15. **[`N017_program_aided_math.md`](file:///D:/Agent_Claudia_Autonomus/learning/neurons/N017_program_aided_math.md)** — **Program-Aided Math & AIME Invariants**: Gaussian integers, Diophantine parity, recurrence closed-form.
 16. **[`N018_repomap_swebench.md`](file:///D:/Agent_Claudia_Autonomus/learning/neurons/N018_repomap_swebench.md)** — **RepoMap AST Compression & SWE-bench**: Aider PageRank AST call graph, root-cause diff.
 17. **[`N019_bfcl_ifeval_oracle.md`](file:///D:/Agent_Claudia_Autonomus/learning/neurons/N019_bfcl_ifeval_oracle.md)** — **BFCL Tool Schema & IFEval Oracle**: Strict negative constraint checking, tool schema rollback.
+18. **[`N020_session_continuity_checkpoint.md`](file:///D:/Agent_Claudia_Autonomus/learning/neurons/N020_session_continuity_checkpoint.md)** — **Session Continuity & Resilient Multi-IDE Checkpoint**: Penyimpanan state persisten di `memory/session_checkpoint.json` agar sesi dapat dilanjutkan kapan saja lintas model, IDE, dan limitasi koneksi.
 
 
 
