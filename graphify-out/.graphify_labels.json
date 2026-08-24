@@ -5,8 +5,10 @@
   "3": "Install",
   "4": "README.es.md",
   "5": "Install",
+  "6": "test_brain.py",
   "7": "Ponytail",
   "8": "Ponytail",
+  "9": "copilot-instructions.md",
   "10": "Ponytail Help",
   "11": "Core Engines & Workflows",
   "12": "Ponytail Help",
@@ -24,7 +26,6 @@
   "25": ".agents/skills/ponytail-review/SKILL.md",
   "26": "Core Stack & Architecture",
   "27": "Neuron N001: Executive Decision Making",
-  "28": "Claudia Neuron Memory Network",
   "29": "ponytail/skills/ponytail-audit/SKILL.md",
   "30": "Ponytail Gain",
   "31": "ponytail/skills/ponytail-review/SKILL.md",
@@ -77,7 +78,5 @@
   "81": "Neuron N018: RepoMap AST Compression & SWE-bench Precision",
   "82": "Neuron N019: BFCL Tool Schema & IFEval Strict Format Oracle",
   "86": "claudiacode_server.js",
-  "87": "filesystem",
-  "88": "Neuron N020: Autonomous Cross-Session Memory & Resilient Checkpoint Continuity",
-  "89": "CLAUDIA.md — Project Instructions & Architecture Rules"
+  "88": "Neuron N020: Autonomous Cross-Session Memory & Resilient Checkpoint Continuity"
 }

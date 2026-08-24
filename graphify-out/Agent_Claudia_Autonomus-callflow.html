@@ -60,7 +60,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 <div class="container">
 
 <h1>Agent_Claudia_Autonomus — Complete Call Flow &amp; Architecture Documentation</h1>
-<p class="subtitle">Generated from graphify knowledge graph: 560 nodes, 598 edges, 81 communities. Commit: bb3f7d6</p>
+<p class="subtitle">Generated from graphify knowledge graph: 559 nodes, 602 edges, 80 communities. Commit: bcda959</p>
 
 <div class="nav">
     <a href="#overview">Architecture Overview</a>
@@ -73,9 +73,9 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
     <a href="#security-global">Security &amp; Global Graph</a>
     <a href="#tests-fixtures">Tests &amp; Fixtures</a>
     <a href="#zolu-learn-server-js">zolu_learn_server.js</a>
+    <a href="#ponytail-lazy-senior-dev-mode">Ponytail, lazy senior dev mode</a>
     <a href="#claudia-2-0-v5-0-0-apex">⚡ CLAUDIA 2.0 (v5.0.0 Apex)</a>
     <a href="#core-engines-workflows">Core Engines &amp; Workflows</a>
-    <a href="#ponytail-lazy-senior-dev-mode">Ponytail, lazy senior dev mode</a>
     <a href="#neuron-n020-autonomous-cross-session-memory-resi">Neuron N020: Autonomous Cross-Session Memory &amp; Resilient Checkpoint Continuity</a>
     <a href="#ponytail-lazy-senior-dev-mode-36116e">Ponytail, lazy senior dev mode</a>
     <a href="#other">Other</a>
@@ -90,11 +90,11 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 flowchart LR
     EXTRACT_PIPELINE_5F350230("Extraction Pipeline<br/><small>22 nodes</small>")
     class EXTRACT_PIPELINE_5F350230 module;
-    BUILD_GRAPH_321CBB04("Graph Build<br/><small>57 nodes</small>")
+    BUILD_GRAPH_321CBB04("Graph Build<br/><small>51 nodes</small>")
     class BUILD_GRAPH_321CBB04 module;
     ANALYSIS_CLUSTERING_C79796DA("Analysis &amp; Clustering<br/><small>46 nodes</small>")
     class ANALYSIS_CLUSTERING_C79796DA module;
-    CLI_SKILLS_9964CBB8("CLI &amp; Skill Installers<br/><small>199 nodes</small>")
+    CLI_SKILLS_9964CBB8("CLI &amp; Skill Installers<br/><small>200 nodes</small>")
     class CLI_SKILLS_9964CBB8 module;
     INGEST_CACHE_UPDATE_FF457338("Ingestion &amp; Updates<br/><small>4 nodes</small>")
     class INGEST_CACHE_UPDATE_FF457338 module;
@@ -102,21 +102,21 @@ flowchart LR
     class SERVE_API_35EC8E86 module;
     SECURITY_GLOBAL_5B9C6A04("Security &amp; Global Graph<br/><small>3 nodes</small>")
     class SECURITY_GLOBAL_5B9C6A04 module;
-    TESTS_FIXTURES_B84B1DCC("Tests &amp; Fixtures<br/><small>52 nodes</small>")
+    TESTS_FIXTURES_B84B1DCC("Tests &amp; Fixtures<br/><small>59 nodes</small>")
     class TESTS_FIXTURES_B84B1DCC module;
     ZOLU_LEARN_SERVER_JS_C42CA56A("zolu_learn_server.js<br/><small>16 nodes</small>")
     class ZOLU_LEARN_SERVER_JS_C42CA56A module;
+    PONYTAIL_LAZY_SENIOR_DEV_MODE_87509AA5("Ponytail, lazy senior dev mode<br/><small>14 nodes</small>")
+    class PONYTAIL_LAZY_SENIOR_DEV_MODE_87509AA5 module;
     CLAUDIA_2_0_V5_0_0_APEX_2BF2B1E7("⚡ CLAUDIA 2.0 (v5.0.0 Apex)<br/><small>10 nodes</small>")
     class CLAUDIA_2_0_V5_0_0_APEX_2BF2B1E7 module;
     CORE_ENGINES_WORKFLOWS_6F8507CD("Core Engines &amp; Workflows<br/><small>8 nodes</small>")
     class CORE_ENGINES_WORKFLOWS_6F8507CD module;
-    PONYTAIL_LAZY_SENIOR_DEV_MODE_87509AA5("Ponytail, lazy senior dev mode<br/><small>8 nodes</small>")
-    class PONYTAIL_LAZY_SENIOR_DEV_MODE_87509AA5 module;
     NEURON_N020_AUTONOMOUS_CROSS_SESSION_MEMORY_RESI_CDD11DAE("Neuron N020: Autonomous Cross-Session Memory &amp; Resilient Checkpoint Continuity<br/><small>8 nodes</small>")
     class NEURON_N020_AUTONOMOUS_CROSS_SESSION_MEMORY_RESI_CDD11DAE module;
     PONYTAIL_LAZY_SENIOR_DEV_MODE_36116E_97C13027("Ponytail, lazy senior dev mode<br/><small>7 nodes</small>")
     class PONYTAIL_LAZY_SENIOR_DEV_MODE_36116E_97C13027 module;
-    OTHER_D0941E68("Other<br/><small>117 nodes</small>")
+    OTHER_D0941E68("Other<br/><small>108 nodes</small>")
     class OTHER_D0941E68 module;
     CLI_SKILLS_9964CBB8 -->|imports x19| TESTS_FIXTURES_B84B1DCC
     TESTS_FIXTURES_B84B1DCC -->|indirect call x5| CLI_SKILLS_9964CBB8
@@ -136,7 +136,7 @@ flowchart LR
     <h4>Architecture Layers</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>Layer</th><th>Nodes</th><th>Communities</th></tr>
-      <tr><td>Extraction Pipeline</td><td>22</td><td><code>79, 81, 48, 50</code></td></tr><tr><td>Graph Build</td><td>57</td><td><code>1, 20, 87, 82</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>46</td><td><code>22, 86, 74, 16</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>199</td><td><code>2, 3, 4, 5, 7, 8, 10, 12, 23, 24, 25, 29, 30, 31, 32, 39, 41, 42, 67, 68, 69, 70, 71, 72</code></td></tr><tr><td>Ingestion &amp; Updates</td><td>4</td><td><code>78</code></td></tr><tr><td>Serving API</td><td>3</td><td><code>47</code></td></tr><tr><td>Security &amp; Global Graph</td><td>3</td><td><code>49</code></td></tr><tr><td>Tests &amp; Fixtures</td><td>52</td><td><code>0</code></td></tr><tr><td>zolu_learn_server.js</td><td>16</td><td><code>75</code></td></tr><tr><td>⚡ CLAUDIA 2.0 (v5.0.0 Apex)</td><td>10</td><td><code>21</code></td></tr><tr><td>Core Engines &amp; Workflows</td><td>8</td><td><code>11</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>8</td><td><code>13</code></td></tr><tr><td>Neuron N020: Autonomous Cross-Session Memory &amp; Resilient Checkpoint Continuity</td><td>8</td><td><code>88</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>7</td><td><code>14</code></td></tr><tr><td>Other</td><td>117</td><td><code>17, 18, 19, 26, 27, 28, 33, 34, 35, 36, 37, 38, 40, 80, 89, 43, 44, 45, 46, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66</code></td></tr>
+      <tr><td>Extraction Pipeline</td><td>22</td><td><code>79, 81, 48, 50</code></td></tr><tr><td>Graph Build</td><td>51</td><td><code>1, 20, 82</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>46</td><td><code>22, 86, 74, 16</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>200</td><td><code>2, 3, 4, 5, 7, 8, 10, 12, 23, 24, 25, 29, 30, 31, 32, 39, 41, 42, 67, 68, 69, 70, 71, 72, 9</code></td></tr><tr><td>Ingestion &amp; Updates</td><td>4</td><td><code>78</code></td></tr><tr><td>Serving API</td><td>3</td><td><code>47</code></td></tr><tr><td>Security &amp; Global Graph</td><td>3</td><td><code>49</code></td></tr><tr><td>Tests &amp; Fixtures</td><td>59</td><td><code>0, 6</code></td></tr><tr><td>zolu_learn_server.js</td><td>16</td><td><code>75</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>14</td><td><code>13</code></td></tr><tr><td>⚡ CLAUDIA 2.0 (v5.0.0 Apex)</td><td>10</td><td><code>21</code></td></tr><tr><td>Core Engines &amp; Workflows</td><td>8</td><td><code>11</code></td></tr><tr><td>Neuron N020: Autonomous Cross-Session Memory &amp; Resilient Checkpoint Continuity</td><td>8</td><td><code>88</code></td></tr><tr><td>Ponytail, lazy senior dev mode</td><td>7</td><td><code>14</code></td></tr><tr><td>Other</td><td>108</td><td><code>17, 18, 19, 26, 27, 33, 34, 35, 36, 37, 38, 40, 80, 43, 44, 45, 46, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66</code></td></tr>
     </table>
   </div>
   <div class="card">
@@ -148,7 +148,7 @@ flowchart LR
   <div class="card">
     <h4>Graph Report Highlights</h4>
     <ul>
-      <li>560 nodes · 598 edges · 81 communities (58 shown, 23 thin omitted)</li>
+      <li>559 nodes · 602 edges · 80 communities (57 shown, 23 thin omitted)</li>
       <li>Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 25 edges (avg confidence: 0.85)</li>
       <li>Token cost: 0 input · 0 output</li>
       <li>1. `Install` - 15 edges</li>
@@ -436,16 +436,17 @@ flowchart LR
 
 <!-- ====== 3. Graph Build ====== -->
 <h2 id="build-graph">3. Graph Build</h2>
-<p>Graph Build groups implementation around ponytail, packagejson, extension, mcpjson, mostly in ponytail/package.json, ponytail/pi-extension/package.json, .claudia/mcp.json. This section covers 57 nodes and 58 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Graph Build groups implementation around ponytail, packagejson, extension, n019, mostly in ponytail/package.json, ponytail/pi-extension/package.json, learning/neurons/N019_bfcl_ifeval_oracle.md. This section covers 51 nodes and 52 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Graph Build (57 nodes, 58 edges)
+    %% Section: Graph Build (51 nodes, 52 edges)
     subgraph build_graph_ponytail_package_json_1d0e4d1a["ponytail/package.json"]
         ponytail_package_61b18d19("ponytail/package.json")
         ponytail_package_files_a3aaab99("files<br/><small>ponytail/package.json</small>")
         ponytail_package_keywords_a90fca4c("keywords<br/><small>ponytail/package.json</small>")
+        ponytail_package_author_b927fe6b("author<br/><small>ponytail/package.json</small>")
         ref_agents_md_d06f2a86("AGENTS.md<br/><small>ponytail/package.json</small>")
         ref_assets_3dad4e7f("assets/<br/><small>ponytail/package.json</small>")
         ref_hooks_b06872a5("hooks/<br/><small>ponytail/package.json</small>")
@@ -459,10 +460,7 @@ flowchart LR
         ref_opencode_plugin_608e621f("opencode-plugin<br/><small>ponytail/package.json</small>")
         ref_pi_ce243ce0("pi<br/><small>ponytail/package.json</small>")
     end
-    subgraph build_graph_claudia_mcp_json_3f6ce056[".claudia/mcp.json"]
-        claudia_mcp_50cdaa92("mcp.json")
-        claudia_mcp_mcp_server_filesystem_cc0f37e2("filesystem<br/><small>.claudia/mcp.json</small>")
-    end
+    learning_neurons_n019_bfcl_ifeval_oracle_neuron_fae9a95a("Neuron N019: BFCL Tool Schema &amp; IFEval...<br/><small>learning/neurons/N019_bfcl_ifeval_oracle.md</small>")
     ponytail_pi_extension_package_882df0b1("pi-extension/package.json")
     ponytail_package_files_a3aaab99 -->|extends| ref_agents_md_d06f2a86
     ponytail_package_files_a3aaab99 -->|extends| ref_assets_3dad4e7f
@@ -481,11 +479,12 @@ flowchart LR
     ponytail_package_keywords_a90fca4c -->|extends| ref_skills_11db073e
     ponytail_package_61b18d19 -->|contains| ponytail_package_files_a3aaab99
     ponytail_package_61b18d19 -->|contains| ponytail_package_keywords_a90fca4c
-    claudia_mcp_50cdaa92 -->|contains| claudia_mcp_mcp_server_filesystem_cc0f37e2
-    %% Omitted for readability: 39 nodes, 0 edges
+    ponytail_package_61b18d19 -->|contains| ponytail_package_author_b927fe6b
+    %% Omitted for readability: 33 nodes, 0 edges
     class ponytail_package_61b18d19 function;
     class ponytail_package_files_a3aaab99 function;
     class ponytail_package_keywords_a90fca4c function;
+    class ponytail_package_author_b927fe6b function;
     class ref_agents_md_d06f2a86 klass;
     class ref_assets_3dad4e7f async;
     class ref_hooks_b06872a5 ui;
@@ -498,8 +497,7 @@ flowchart LR
     class ref_skills_11db073e function;
     class ref_opencode_plugin_608e621f function;
     class ref_pi_ce243ce0 function;
-    class claudia_mcp_50cdaa92 function;
-    class claudia_mcp_mcp_server_filesystem_cc0f37e2 function;
+    class learning_neurons_n019_bfcl_ifeval_oracle_neuron_fae9a95a concept;
     class ponytail_pi_extension_package_882df0b1 function;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
@@ -770,14 +768,13 @@ flowchart LR
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
       <tr><td><code>ponytail/package.json</code></td><td>41 nodes</td></tr>
-<tr><td><code>.claudia/mcp.json</code></td><td>6 nodes</td></tr>
 <tr><td><code>ponytail/pi-extension/package.json</code></td><td>6 nodes</td></tr>
 <tr><td><code>learning/neurons/N019_bfcl_ifeval_oracle.md</code></td><td>4 nodes</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x35, extends x19, references x4. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x33, extends x19. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -1139,12 +1136,12 @@ flowchart LR
 
 <!-- ====== 5. CLI & Skill Installers ====== -->
 <h2 id="cli-skills">5. CLI &amp; Skill Installers</h2>
-<p>CLI &amp; Skill Installers groups implementation around ponytail, skills, skillmd, agents, mostly in ponytail/README.md, ponytail/README.ko.md, ponytail/README.es.md. This section covers 199 nodes and 195 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>CLI &amp; Skill Installers groups implementation around ponytail, skills, skillmd, agents, mostly in ponytail/README.md, ponytail/README.ko.md, ponytail/README.es.md. This section covers 200 nodes and 195 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: CLI &amp; Skill Installers (199 nodes, 195 edges)
+    %% Section: CLI &amp; Skill Installers (200 nodes, 195 edges)
     subgraph cli_skills_ponytail_hooks_ponytail_runtime_js_26b6c942["ponytail/hooks/ponytail-runtime.js"]
         ponytail_hooks_ponytail_runtime_writehookoutput_07e5df53("writeHookOutput()<br/><small>ponytail/hooks/ponytail-runtime.js</small>")
         ponytail_hooks_ponytail_runtime_readmode_fb740cca("readMode()<br/><small>ponytail/hooks/ponytail-runtime.js</small>")
@@ -1197,7 +1194,7 @@ flowchart LR
     ponytail_hooks_ponytail_subagent_e36b1d4c -->|imports| ponytail_hooks_ponytail_runtime_readmode_fb740cca
     ponytail_hooks_ponytail_subagent_e36b1d4c -->|imports| ponytail_hooks_ponytail_runtime_writehookoutput_07e5df53
     ponytail_hooks_ponytail_subagent_e36b1d4c -->|imports| ponytail_hooks_ponytail_runtime_b60ec3ea
-    %% Omitted for readability: 181 nodes, 1 edges
+    %% Omitted for readability: 182 nodes, 1 edges
     class ponytail_hooks_ponytail_runtime_writehookoutput_07e5df53 ui;
     class ponytail_hooks_ponytail_runtime_readmode_fb740cca function;
     class ponytail_hooks_ponytail_runtime_setmode_7e45b828 function;
@@ -1758,12 +1755,12 @@ flowchart LR
 
 <!-- ====== 9. Tests & Fixtures ====== -->
 <h2 id="tests-fixtures">9. Tests &amp; Fixtures</h2>
-<p>Tests &amp; Fixtures groups implementation around ponytail, hooks, extension, configjs, mostly in ponytail/hooks/ponytail-config.js, ponytail/pi-extension/index.js, ponytail/hooks/ponytail-instructions.js. This section covers 52 nodes and 100 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Tests &amp; Fixtures groups implementation around ponytail, hooks, test, extension, mostly in ponytail/hooks/ponytail-config.js, ponytail/pi-extension/index.js, ponytail/hooks/ponytail-instructions.js. This section covers 59 nodes and 111 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Tests &amp; Fixtures (52 nodes, 100 edges)
+    %% Section: Tests &amp; Fixtures (59 nodes, 111 edges)
     subgraph tests_fixtures_ponytail_hooks_ponytail_config_js_298a56c8["ponytail/hooks/ponytail-config.js"]
         ponytail_hooks_ponytail_config_getconfigpath_99a2d710("getConfigPath()<br/><small>ponytail/hooks/ponytail-config.js</small>")
         ponytail_hooks_ponytail_config_getconfigdir_11eb74d4("getConfigDir()<br/><small>ponytail/hooks/ponytail-config.js</small>")
@@ -1788,8 +1785,8 @@ flowchart LR
         ponytail_pi_extension_index_9d2d2187("index.js")
         ponytail_pi_extension_index_ponytailextension_a321ba46("ponytailExtension()<br/><small>ponytail/pi-extension/index.js</small>")
     end
-    ponytail_pi_extension_test_extension_test_9b4fdc90("extension.test.js")
     ponytail_pi_extension_test_helpers_test_2bad389e("helpers.test.js")
+    scripts_test_brain_run_all_d04a7277("run_all()<br/><small>scripts/test_brain.py</small>")
     ponytail_hooks_ponytail_config_getconfigpath_99a2d710 -->|calls| ponytail_hooks_ponytail_config_getconfigdir_11eb74d4
     ponytail_hooks_ponytail_config_getdefaultmode_e08b0a47 -->|calls| ponytail_hooks_ponytail_config_getconfigpath_99a2d710
     ponytail_hooks_ponytail_config_gethidestatus_b7520fb0 -->|calls| ponytail_hooks_ponytail_config_getconfigpath_99a2d710
@@ -1814,7 +1811,7 @@ flowchart LR
     ponytail_opencode_plugins_ponytail_b70099ee -->|imports| ponytail_hooks_ponytail_instructions_getponytail_3d13839b
     ponytail_opencode_plugins_ponytail_b70099ee -->|imports| ponytail_hooks_ponytail_config_getdefaultmode_e08b0a47
     ponytail_opencode_plugins_ponytail_b70099ee -->|imports| ponytail_hooks_ponytail_config_normalizepersiste_56f04243
-    %% Omitted for readability: 34 nodes, 11 edges
+    %% Omitted for readability: 41 nodes, 9 edges
     class ponytail_hooks_ponytail_config_getconfigpath_99a2d710 function;
     class ponytail_hooks_ponytail_config_getconfigdir_11eb74d4 function;
     class ponytail_hooks_ponytail_config_getdefaultmode_e08b0a47 function;
@@ -1831,8 +1828,8 @@ flowchart LR
     class ponytail_opencode_plugins_ponytail_readmode_6df6db11 function;
     class ponytail_pi_extension_index_9d2d2187 module;
     class ponytail_pi_extension_index_ponytailextension_a321ba46 function;
-    class ponytail_pi_extension_test_extension_test_9b4fdc90 test;
     class ponytail_pi_extension_test_helpers_test_2bad389e test;
+    class scripts_test_brain_run_all_d04a7277 test;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -2105,6 +2102,7 @@ flowchart LR
 <tr><td><code>ponytail/pi-extension/index.js</code></td><td>11 nodes</td></tr>
 <tr><td><code>.opencode/plugins/ponytail.mjs</code></td><td>9 nodes</td></tr>
 <tr><td><code>ponytail/hooks/ponytail-instructions.js</code></td><td>9 nodes</td></tr>
+<tr><td><code>scripts/test_brain.py</code></td><td>7 nodes</td></tr>
 <tr><td><code>pi-extension/test/extension.test.js</code></td><td>5 nodes</td></tr>
 <tr><td><code>.opencode/plugins/ponytail-frontmatter.cjs</code></td><td>2 nodes</td></tr>
 <tr><td><code>pi-extension/test/helpers.test.js</code></td><td>1 nodes</td></tr>
@@ -2112,7 +2110,7 @@ flowchart LR
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x32, calls x27, imports x20, indirect call x13. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x38, calls x32, imports x20, indirect call x13. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -2324,8 +2322,213 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 11. ⚡ CLAUDIA 2.0 (v5.0.0 Apex) ====== -->
-<h2 id="claudia-2-0-v5-0-0-apex">11. ⚡ CLAUDIA 2.0 (v5.0.0 Apex)</h2>
+<!-- ====== 11. Ponytail, lazy senior dev mode ====== -->
+<h2 id="ponytail-lazy-senior-dev-mode">11. Ponytail, lazy senior dev mode</h2>
+<p>Ponytail, lazy senior dev mode groups implementation around agentsmd, memorymd, lazy, claudiamd, mostly in AGENTS.md, memory.md, CLAUDIA.md. This section covers 14 nodes and 13 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: Ponytail, lazy senior dev mode (14 nodes, 13 edges)
+    subgraph ponytail_lazy_senior_dev_mode_AGENTS_md_f16793b1["AGENTS.md"]
+        agents_ponytail_lazy_senior_dev_mode_470b7aad("Ponytail, lazy senior dev mode<br/><small>AGENTS.md</small>")
+        agents_e7052aeb("AGENTS.md")
+        agents_the_minimality_ladder_8a04368d("The Minimality Ladder<br/><small>AGENTS.md</small>")
+        agents_kerahasiaan_arsitektur_perlindungan_hak_c_d32e5fa8("?? Kerahasiaan Arsitektur &amp; Perlindunga...<br/><small>AGENTS.md</small>")
+        agents_graphify_auto_sync_knowledge_graph_92975fe8("Graphify &amp; Auto-Sync Knowledge Graph:<br/><small>AGENTS.md</small>")
+        agents_not_lazy_about_0082a118("Not lazy about:<br/><small>AGENTS.md</small>")
+        agents_persona_communication_22bdb463("Persona &amp; Communication<br/><small>AGENTS.md</small>")
+        agents_rules_a75588b1("Rules:<br/><small>AGENTS.md</small>")
+    end
+    subgraph ponytail_lazy_senior_dev_mode_memory_md_86837e3e["memory.md"]
+        memory_claudia_neuron_memory_network_ccf6bccf("Claudia Neuron Memory Network<br/><small>memory.md</small>")
+        memory_81c5d49b("memory.md")
+        memory_active_tasks_history_d3b1c074("📋 Active Tasks &amp; History<br/><small>memory.md</small>")
+        memory_prosedur_pembaruan_memori_976b0af3("📋 Prosedur Pembaruan Memori<br/><small>memory.md</small>")
+        memory_active_memory_neurons_a4be1f28("🧠 Active Memory Neurons<br/><small>memory.md</small>")
+    end
+    claudia_568095ee("CLAUDIA.md")
+    claudia_568095ee -->|references| agents_e7052aeb
+    claudia_568095ee -->|references| memory_81c5d49b
+    agents_e7052aeb -->|contains| agents_ponytail_lazy_senior_dev_mode_470b7aad
+    agents_ponytail_lazy_senior_dev_mode_470b7aad -->|contains| agents_the_minimality_ladder_8a04368d
+    agents_ponytail_lazy_senior_dev_mode_470b7aad -->|contains| agents_rules_a75588b1
+    agents_ponytail_lazy_senior_dev_mode_470b7aad -->|contains| agents_not_lazy_about_0082a118
+    agents_ponytail_lazy_senior_dev_mode_470b7aad -->|contains| agents_graphify_auto_sync_knowledge_graph_92975fe8
+    agents_ponytail_lazy_senior_dev_mode_470b7aad -->|contains| agents_kerahasiaan_arsitektur_perlindungan_hak_c_d32e5fa8
+    agents_ponytail_lazy_senior_dev_mode_470b7aad -->|contains| agents_persona_communication_22bdb463
+    memory_81c5d49b -->|contains| memory_claudia_neuron_memory_network_ccf6bccf
+    memory_claudia_neuron_memory_network_ccf6bccf -->|contains| memory_prosedur_pembaruan_memori_976b0af3
+    memory_claudia_neuron_memory_network_ccf6bccf -->|contains| memory_active_tasks_history_d3b1c074
+    memory_claudia_neuron_memory_network_ccf6bccf -->|contains| memory_active_memory_neurons_a4be1f28
+    class agents_ponytail_lazy_senior_dev_mode_470b7aad concept;
+    class agents_e7052aeb concept;
+    class agents_the_minimality_ladder_8a04368d concept;
+    class agents_kerahasiaan_arsitektur_perlindungan_hak_c_d32e5fa8 concept;
+    class agents_graphify_auto_sync_knowledge_graph_92975fe8 concept;
+    class agents_not_lazy_about_0082a118 concept;
+    class agents_persona_communication_22bdb463 concept;
+    class agents_rules_a75588b1 concept;
+    class memory_claudia_neuron_memory_network_ccf6bccf concept;
+    class memory_81c5d49b concept;
+    class memory_active_tasks_history_d3b1c074 concept;
+    class memory_prosedur_pembaruan_memori_976b0af3 concept;
+    class memory_active_memory_neurons_a4be1f28 concept;
+    class claudia_568095ee concept;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>AGENTS.md</code><br><small style="color:var(--muted)">AGENTS.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing AGENTS.md.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>Graphify &amp; Auto-Sync Knowledge Graph:</code><br><small style="color:var(--muted)">AGENTS.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Graphify &amp; Auto-Sync Knowledge Graph:.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>?? Kerahasiaan Arsitektur &amp; Perlindungan Hak Cipta (Proprietary IP Shield):</code><br><small style="color:var(--muted)">AGENTS.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing ?? Kerahasiaan Arsitektur &amp; Perlindungan Hak Cipta (Proprietary IP Shield):.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>Not lazy about:</code><br><small style="color:var(--muted)">AGENTS.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Not lazy about:.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>Persona &amp; Communication</code><br><small style="color:var(--muted)">AGENTS.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Persona &amp; Communication.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>Ponytail, lazy senior dev mode</code><br><small style="color:var(--muted)">AGENTS.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Ponytail, lazy senior dev mode.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>Rules:</code><br><small style="color:var(--muted)">AGENTS.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Rules:.</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>The Minimality Ladder</code><br><small style="color:var(--muted)">AGENTS.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing The Minimality Ladder.</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>CLAUDIA.md</code><br><small style="color:var(--muted)">CLAUDIA.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing CLAUDIA.md.</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>memory.md</code><br><small style="color:var(--muted)">memory.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing memory.md.</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>🧠 Active Memory Neurons</code><br><small style="color:var(--muted)">memory.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🧠 Active Memory Neurons.</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>📋 Active Tasks &amp; History</code><br><small style="color:var(--muted)">memory.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 📋 Active Tasks &amp; History.</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>Claudia Neuron Memory Network</code><br><small style="color:var(--muted)">memory.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Claudia Neuron Memory Network.</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>📋 Prosedur Pembaruan Memori</code><br><small style="color:var(--muted)">memory.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 📋 Prosedur Pembaruan Memori.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>AGENTS.md</code></td><td>8 nodes</td></tr>
+<tr><td><code>memory.md</code></td><td>5 nodes</td></tr>
+<tr><td><code>CLAUDIA.md</code></td><td>1 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x11, references x2. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 12. ⚡ CLAUDIA 2.0 (v5.0.0 Apex) ====== -->
+<h2 id="claudia-2-0-v5-0-0-apex">12. ⚡ CLAUDIA 2.0 (v5.0.0 Apex)</h2>
 <p>⚡ CLAUDIA 2.0 (v5.0.0 Apex) groups implementation around readmemd, cognitive, neural, mesh, mostly in README.md. This section covers 10 nodes and 9 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -2479,8 +2682,8 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 12. Core Engines & Workflows ====== -->
-<h2 id="core-engines-workflows">12. Core Engines &amp; Workflows</h2>
+<!-- ====== 13. Core Engines & Workflows ====== -->
+<h2 id="core-engines-workflows">13. Core Engines &amp; Workflows</h2>
 <p>Core Engines &amp; Workflows groups implementation around identitymd, ponytail, lazy, senior, mostly in identity.md. This section covers 8 nodes and 7 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -2603,139 +2806,6 @@ flowchart LR
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
       <tr><td><code>identity.md</code></td><td>8 nodes</td></tr>
-    </table>
-  </div>
-  <div class="card">
-    <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x7. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
-  </div>
-</div>
-<hr>
-
-<!-- ====== 13. Ponytail, lazy senior dev mode ====== -->
-<h2 id="ponytail-lazy-senior-dev-mode">13. Ponytail, lazy senior dev mode</h2>
-<p>Ponytail, lazy senior dev mode groups implementation around agentsmd, lazy, graphify, auto, mostly in AGENTS.md. This section covers 8 nodes and 7 internal edges; the diagram shows only representative relationships to stay readable.</p>
-
-<div class="mermaid">
-%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
-flowchart LR
-    %% Section: Ponytail, lazy senior dev mode (8 nodes, 7 edges)
-    agents_ponytail_lazy_senior_dev_mode_470b7aad("Ponytail, lazy senior dev mode<br/><small>AGENTS.md</small>")
-    agents_e7052aeb("AGENTS.md")
-    agents_the_minimality_ladder_8a04368d("The Minimality Ladder<br/><small>AGENTS.md</small>")
-    agents_rules_a75588b1("Rules:<br/><small>AGENTS.md</small>")
-    agents_not_lazy_about_0082a118("Not lazy about:<br/><small>AGENTS.md</small>")
-    agents_graphify_auto_sync_knowledge_graph_92975fe8("Graphify &amp; Auto-Sync Knowledge Graph:<br/><small>AGENTS.md</small>")
-    agents_kerahasiaan_arsitektur_perlindungan_hak_c_d32e5fa8("?? Kerahasiaan Arsitektur &amp; Perlindunga...<br/><small>AGENTS.md</small>")
-    agents_persona_communication_22bdb463("Persona &amp; Communication<br/><small>AGENTS.md</small>")
-    agents_e7052aeb -->|contains| agents_ponytail_lazy_senior_dev_mode_470b7aad
-    agents_ponytail_lazy_senior_dev_mode_470b7aad -->|contains| agents_the_minimality_ladder_8a04368d
-    agents_ponytail_lazy_senior_dev_mode_470b7aad -->|contains| agents_rules_a75588b1
-    agents_ponytail_lazy_senior_dev_mode_470b7aad -->|contains| agents_not_lazy_about_0082a118
-    agents_ponytail_lazy_senior_dev_mode_470b7aad -->|contains| agents_graphify_auto_sync_knowledge_graph_92975fe8
-    agents_ponytail_lazy_senior_dev_mode_470b7aad -->|contains| agents_kerahasiaan_arsitektur_perlindungan_hak_c_d32e5fa8
-    agents_ponytail_lazy_senior_dev_mode_470b7aad -->|contains| agents_persona_communication_22bdb463
-    class agents_ponytail_lazy_senior_dev_mode_470b7aad concept;
-    class agents_e7052aeb concept;
-    class agents_the_minimality_ladder_8a04368d concept;
-    class agents_rules_a75588b1 concept;
-    class agents_not_lazy_about_0082a118 concept;
-    class agents_graphify_auto_sync_knowledge_graph_92975fe8 concept;
-    class agents_kerahasiaan_arsitektur_perlindungan_hak_c_d32e5fa8 concept;
-    class agents_persona_communication_22bdb463 concept;
-    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
-    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
-    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
-    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
-    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
-    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
-    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
-    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
-    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
-</div>
-
-<h3>Call Details</h3>
-<table class="call-table">
-<tr>
-  <th style="width:5%">#</th>
-  <th style="width:28%">Node</th>
-  <th style="width:10%">Type</th>
-  <th style="width:17%">Caller</th>
-  <th style="width:20%">Callees</th>
-  <th style="width:20%">Description</th>
-</tr>
-<tr>
-  <td>1</td>
-  <td><code>AGENTS.md</code><br><small style="color:var(--muted)">AGENTS.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing AGENTS.md.</td>
-</tr>
-<tr>
-  <td>2</td>
-  <td><code>Graphify &amp; Auto-Sync Knowledge Graph:</code><br><small style="color:var(--muted)">AGENTS.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Graphify &amp; Auto-Sync Knowledge Graph:.</td>
-</tr>
-<tr>
-  <td>3</td>
-  <td><code>?? Kerahasiaan Arsitektur &amp; Perlindungan Hak Cipta (Proprietary IP Shield):</code><br><small style="color:var(--muted)">AGENTS.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing ?? Kerahasiaan Arsitektur &amp; Perlindungan Hak Cipta (Proprietary IP Shield):.</td>
-</tr>
-<tr>
-  <td>4</td>
-  <td><code>Not lazy about:</code><br><small style="color:var(--muted)">AGENTS.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Not lazy about:.</td>
-</tr>
-<tr>
-  <td>5</td>
-  <td><code>Persona &amp; Communication</code><br><small style="color:var(--muted)">AGENTS.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Persona &amp; Communication.</td>
-</tr>
-<tr>
-  <td>6</td>
-  <td><code>Ponytail, lazy senior dev mode</code><br><small style="color:var(--muted)">AGENTS.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Ponytail, lazy senior dev mode.</td>
-</tr>
-<tr>
-  <td>7</td>
-  <td><code>Rules:</code><br><small style="color:var(--muted)">AGENTS.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Rules:.</td>
-</tr>
-<tr>
-  <td>8</td>
-  <td><code>The Minimality Ladder</code><br><small style="color:var(--muted)">AGENTS.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing The Minimality Ladder.</td>
-</tr>
-</table>
-
-<div class="grid">
-  <div class="card">
-    <h4>Key Files</h4>
-    <table style="width:100%;font-size:0.85rem;">
-      <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>AGENTS.md</code></td><td>8 nodes</td></tr>
     </table>
   </div>
   <div class="card">
@@ -3002,12 +3072,12 @@ flowchart LR
 
 <!-- ====== 16. Other ====== -->
 <h2 id="other">16. Other</h2>
-<p>Other groups implementation around learning, neurons, readmemd, memory, mostly in .windsurf/rules/ponytail.md, learning/feedback_log/mojoloker_learnings.md, learning/neurons/N008_live_session_checkpoint.md. This section covers 117 nodes and 83 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Other groups implementation around learning, neurons, readmemd, ponytail, mostly in .windsurf/rules/ponytail.md, learning/feedback_log/mojoloker_learnings.md, learning/neurons/N008_live_session_checkpoint.md. This section covers 108 nodes and 76 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Other (117 nodes, 83 edges)
+    %% Section: Other (108 nodes, 76 edges)
     subgraph other_windsurf_rules_ponytail_md_eaa01a8d[".windsurf/rules/ponytail.md"]
         windsurf_rules_ponytail_d58f346f(".windsurf/rules/ponytail.md")
         windsurf_rules_ponytail_graphify_knowledge_graph_c8e3387f("Graphify Knowledge Graph:<br/><small>.windsurf/rules/ponytail.md</small>")
@@ -3039,7 +3109,7 @@ flowchart LR
     ecosystem_config_803395df("ecosystem.config.cjs")
     ponytail_hooks_ponytail_statusline_ps1_ponytail_82c5179b("ponytail-statusline.ps1")
     scripts_auto_sync_github_auto_sync_3fc2238d -->|calls| scripts_auto_sync_github_run_cmd_a02b4f49
-    %% Omitted for readability: 99 nodes, 0 edges
+    %% Omitted for readability: 90 nodes, 0 edges
     class windsurf_rules_ponytail_d58f346f concept;
     class windsurf_rules_ponytail_graphify_knowledge_graph_c8e3387f concept;
     class windsurf_rules_ponytail_not_lazy_about_71ec2975 concept;
@@ -3313,11 +3383,11 @@ flowchart LR
 </tr>
 <tr>
   <td>30</td>
-  <td><code>memory.md</code><br><small style="color:var(--muted)">memory.md</small></td>
+  <td><code>feedback_log/README.md</code><br><small style="color:var(--muted)">learning/feedback_log/README.md</small></td>
   <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing memory.md.</td>
+  <td>Documentation node describing feedback_log/README.md.</td>
 </tr>
 </table>
 
@@ -3331,14 +3401,14 @@ flowchart LR
 <tr><td><code>learning/neurons/N008_live_session_checkpoint.md</code></td><td>6 nodes</td></tr>
 <tr><td><code>learning/knowledge_base/core_stack.md</code></td><td>5 nodes</td></tr>
 <tr><td><code>learning/neurons/N001_executive_decisions.md</code></td><td>5 nodes</td></tr>
-<tr><td><code>memory.md</code></td><td>5 nodes</td></tr>
-<tr><td><code>CLAUDIA.md</code></td><td>4 nodes</td></tr>
 <tr><td><code>learning/README.md</code></td><td>4 nodes</td></tr>
+<tr><td><code>learning/feedback_log/README.md</code></td><td>4 nodes</td></tr>
+<tr><td><code>learning/neurons/N003_mobile_first_ui.md</code></td><td>4 nodes</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x81, calls x1, explains x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x74, calls x1, explains x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -3349,17 +3419,17 @@ flowchart LR
   <div class="card">
     <h4>Graph</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>Nodes</td><td>560</td></tr>
-      <tr><td>Edges</td><td>598</td></tr>
+      <tr><td>Nodes</td><td>559</td></tr>
+      <tr><td>Edges</td><td>602</td></tr>
       <tr><td>Hyperedges</td><td>0</td></tr>
-      <tr><td>Communities</td><td>81</td></tr>
+      <tr><td>Communities</td><td>80</td></tr>
       <tr><td>Documented Sections</td><td>15</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Edge Confidence</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>EXTRACTED</td><td>573</td></tr>
+      <tr><td>EXTRACTED</td><td>577</td></tr>
       <tr><td>INFERRED</td><td>25</td></tr>
       <tr><td>AMBIGUOUS</td><td>0</td></tr>
     </table>
@@ -3368,7 +3438,7 @@ flowchart LR
 
 <div style="text-align:center; padding:40px 0; color: var(--muted); font-size:0.9rem;">
   <p>Agent_Claudia_Autonomus — Architecture Documentation</p>
-  <p>Generated: 2026-08-24 10:46 UTC · graphify callflow-html</p>
+  <p>Generated: 2026-08-24 10:50 UTC · graphify callflow-html</p>
 </div>
 
 </div><!-- .container -->

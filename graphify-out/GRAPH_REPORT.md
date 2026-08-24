@@ -1,16 +1,16 @@
 # Graph Report - Agent_Claudia_Autonomus  (2026-08-24)
 
 ## Corpus Check
-- 112 files · ~335,671 words
+- 110 files · ~76,312 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 560 nodes · 598 edges · 81 communities (58 shown, 23 thin omitted)
+- 559 nodes · 602 edges · 80 communities (57 shown, 23 thin omitted)
 - Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 25 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `bb3f7d61`
+- Built from commit: `bcda9597`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -21,6 +21,7 @@
 - Install
 - README.es.md
 - Install
+- test_brain.py
 - Ponytail
 - Ponytail
 - Ponytail Help
@@ -40,7 +41,6 @@
 - .agents/skills/ponytail-review/SKILL.md
 - Core Stack & Architecture
 - Neuron N001: Executive Decision Making
-- Claudia Neuron Memory Network
 - ponytail/skills/ponytail-audit/SKILL.md
 - Ponytail Gain
 - ponytail/skills/ponytail-review/SKILL.md
@@ -85,9 +85,7 @@
 - Neuron N018: RepoMap AST Compression & SWE-bench Precision
 - Neuron N019: BFCL Tool Schema & IFEval Strict Format Oracle
 - claudiacode_server.js
-- filesystem
 - Neuron N020: Autonomous Cross-Session Memory & Resilient Checkpoint Continuity
-- CLAUDIA.md — Project Instructions & Architecture Rules
 
 ## God Nodes (most connected - your core abstractions)
 1. `Install` - 15 edges
@@ -116,7 +114,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (81 total, 23 thin omitted)
+## Communities (80 total, 23 thin omitted)
 
 ### Community 0 - "ponytail-config.js"
 Cohesion: 0.08
@@ -148,6 +146,10 @@ Nodes (21): Ponytail, lazy senior dev mode, Antes / después, Antigravity CLI, C
 Cohesion: 0.09
 Nodes (21): Antigravity CLI, Before / after, Claude Code, CodeWhale, Codex, Commands, Development, Devin CLI (+13 more)
 
+### Community 6 - "test_brain.py"
+Cohesion: 0.52
+Nodes (6): run_all(), test_ide_bridges(), test_knowledge_graph(), test_memory_layer(), test_neuron_network(), test_security_and_secrets()
+
 ### Community 7 - "Ponytail"
 Cohesion: 0.22
 Nodes (8): Boundaries, Intensity, Output, Persistence, Ponytail, Rules, The ladder, When NOT to be lazy
@@ -169,8 +171,8 @@ Cohesion: 0.25
 Nodes (7): Configure Default Mode, Deactivate, Levels, More, Ponytail Help, Skills, Update
 
 ### Community 13 - "Ponytail, lazy senior dev mode"
-Cohesion: 0.25
-Nodes (7): Graphify & Auto-Sync Knowledge Graph:, ?? Kerahasiaan Arsitektur & Perlindungan Hak Cipta (Proprietary IP Shield):, Not lazy about:, Persona & Communication, Ponytail, lazy senior dev mode, Rules:, The Minimality Ladder
+Cohesion: 0.14
+Nodes (11): Graphify & Auto-Sync Knowledge Graph:, ?? Kerahasiaan Arsitektur & Perlindungan Hak Cipta (Proprietary IP Shield):, Not lazy about:, Persona & Communication, Ponytail, lazy senior dev mode, Rules:, The Minimality Ladder, 🧠 Active Memory Neurons (+3 more)
 
 ### Community 14 - "Ponytail, lazy senior dev mode"
 Cohesion: 0.29
@@ -223,10 +225,6 @@ Nodes (4): 1. Database & Storage, 2. Web & Service Stack, 3. Engineering & Intel
 ### Community 27 - "Neuron N001: Executive Decision Making"
 Cohesion: 0.40
 Nodes (4): Core Concept, Neuron N001: Executive Decision Making, Synaptic Links, Triggers & Heuristics
-
-### Community 28 - "Claudia Neuron Memory Network"
-Cohesion: 0.40
-Nodes (4): 🧠 Active Memory Neurons, 📋 Active Tasks & History, Claudia Neuron Memory Network, 📋 Prosedur Pembaruan Memori
 
 ### Community 29 - "ponytail/skills/ponytail-audit/SKILL.md"
 Cohesion: 0.40
@@ -312,28 +310,20 @@ Nodes (3): 📋 4 Aturan Disiplin Eksekusi:, 📌 Domain & Karakteristik, Neuron
 Cohesion: 0.20
 Nodes (9): app, compression, cors, Database, db, DB_PATH, express, fs (+1 more)
 
-### Community 87 - "filesystem"
-Cohesion: 0.40
-Nodes (5): filesystem, memory, npx, @modelcontextprotocol/server-filesystem, @modelcontextprotocol/server-memory
-
 ### Community 88 - "Neuron N020: Autonomous Cross-Session Memory & Resilient Checkpoint Continuity"
 Cohesion: 0.25
 Nodes (7): 1. Inisialisasi Otomatis (Cold Start Traversal), 2. Protokol Penanganan Saat Kena Limit / Terpotong, 🔒 Kebijakan Integritas & Anti-Data Loss, 💾 Mekanisme Penyimpanan State Permanen (Snapshot Ledger), Neuron N020: Autonomous Cross-Session Memory & Resilient Checkpoint Continuity, 🔄 Protokol Resume Lintas IDE & Model, 📌 Tujuan Arsitektur
 
-### Community 89 - "CLAUDIA.md — Project Instructions & Architecture Rules"
-Cohesion: 0.50
-Nodes (3): CLAUDIA.md — Project Instructions & Architecture Rules, The Minimality Ladder Directives:, Verification:
-
 ## Knowledge Gaps
-- **320 isolated node(s):** `@modelcontextprotocol/server-filesystem`, `@modelcontextprotocol/server-memory`, `__dirname`, `require`, `{ getPonytailInstructions }` (+315 more)
+- **316 isolated node(s):** `__dirname`, `require`, `{ getPonytailInstructions }`, `{ getDefaultMode, normalizePersistedMode }`, `{ parseCommandFile }` (+311 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **23 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **What connects `@modelcontextprotocol/server-filesystem`, `@modelcontextprotocol/server-memory`, `__dirname` to the rest of the system?**
-  _320 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `__dirname`, `require`, `{ getPonytailInstructions }` to the rest of the system?**
+  _316 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `ponytail-config.js` be split into smaller, more focused modules?**
   _Cohesion score 0.07541478129713423 - nodes in this community are weakly interconnected._
 - **Should `ponytail/package.json` be split into smaller, more focused modules?**

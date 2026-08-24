@@ -1,9 +1,9 @@
-﻿{
+{
   "version": "2.1.0",
   "updated_at": "2026-08-24T02:05:00",
-  "total_neurons": 19,
-  "total_synapses": 58,
-  "mesh_density": 0.44,
+  "total_neurons": 20,
+  "total_synapses": 61,
+  "mesh_density": 0.45,
   "neurons": [
     {"id": "N001", "label": "Neuron N001: Executive Decision Making", "file": "N001_executive_decisions.md", "connections": ["N004", "N007"]},
     {"id": "N002", "label": "Neuron N002: VPS Remote Operations & Pipeline", "file": "N002_vps_remote_ops.md", "connections": ["N004", "N006", "N008"]},
@@ -23,6 +23,7 @@
     {"id": "N016", "label": "Neuron N016: Frontier Benchmark Evaluator & Continuous Evolution", "file": "N016_frontier_benchmark_evaluator.md", "connections": ["N007", "N017", "N018", "N019"]},
     {"id": "N017", "label": "Neuron N017: Program-Aided Mathematical Reasoning & AIME Invariants", "file": "N017_program_aided_math.md", "connections": ["N009", "N016"]},
     {"id": "N018", "label": "Neuron N018: RepoMap AST Compression & SWE-bench Precision", "file": "N018_repomap_swebench.md", "connections": ["N012", "N015", "N016"]},
-    {"id": "N019", "label": "Neuron N019: BFCL Tool Schema & IFEval Strict Format Oracle", "file": "N019_bfcl_ifeval_oracle.md", "connections": ["N006", "N014", "N016"]}
+    {"id": "N019", "label": "Neuron N019: BFCL Tool Schema & IFEval Strict Format Oracle", "file": "N019_bfcl_ifeval_oracle.md", "connections": ["N006", "N014", "N016"]},
+    {"id": "N020", "label": "Neuron N020: Session Continuity & Resilient Multi-IDE Checkpoint", "file": "N020_session_continuity_checkpoint.md", "connections": ["N008", "N016", "N019"]}
   ]
 }
