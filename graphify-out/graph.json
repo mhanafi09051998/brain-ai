@@ -306,6 +306,42 @@
       "source_location": "L43"
     },
     {
+      "id": "scripts_record_learning_main",
+      "label": "main()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "record_learning.py",
+      "file_type": "code",
+      "norm_label": "main()",
+      "source_file": "scripts/record_learning.py",
+      "source_location": "L122"
+    },
+    {
+      "id": "scripts_record_learning_record_new_learning",
+      "label": "record_new_learning()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "record_learning.py",
+      "file_type": "code",
+      "norm_label": "record_new_learning()",
+      "source_file": "scripts/record_learning.py",
+      "source_location": "L29"
+    },
+    {
+      "id": "scripts_record_learning_slugify",
+      "label": "slugify()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "record_learning.py",
+      "file_type": "code",
+      "norm_label": "slugify()",
+      "source_file": "scripts/record_learning.py",
+      "source_location": "L24"
+    },
+    {
       "id": "ponytail_hooks_ponytail_config_getclaudedir",
       "label": "getClaudeDir()",
       "_callable": true,
@@ -1960,14 +1996,14 @@
       "source_location": "L1"
     },
     {
-      "id": "agents_graphify_auto_sync_knowledge_graph",
-      "label": "Graphify & Auto-Sync Knowledge Graph:",
+      "id": "agents_graphify_brain_verification_continuous_learning_loop",
+      "label": "Graphify, Brain Verification & Continuous Learning Loop:",
       "_origin": "ast",
       "community": 13,
       "community_name": "Ponytail, lazy senior dev mode",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "graphify & auto-sync knowledge graph:",
+      "norm_label": "graphify, brain verification & continuous learning loop:",
       "source_file": "AGENTS.md",
       "source_location": "L40"
     },
@@ -1981,7 +2017,7 @@
       "node_kind": "heading",
       "norm_label": "?? kerahasiaan arsitektur & perlindungan hak cipta (proprietary ip shield):",
       "source_file": "AGENTS.md",
-      "source_location": "L45"
+      "source_location": "L47"
     },
     {
       "id": "agents_not_lazy_about",
@@ -2198,6 +2234,17 @@
       "norm_label": "the minimality ladder",
       "source_file": ".agents/rules/ponytail.md",
       "source_location": "L12"
+    },
+    {
+      "id": "scripts_record_learning",
+      "label": "record_learning.py",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "record_learning.py",
+      "file_type": "code",
+      "norm_label": "record_learning.py",
+      "source_file": "scripts/record_learning.py",
+      "source_location": "L1"
     },
     {
       "id": "learning_neurons_n016_frontier_benchmark_evaluator",
@@ -7296,6 +7343,30 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_record_learning_main",
+      "target": "scripts_record_learning_record_new_learning",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/record_learning.py",
+      "source_location": "L130",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_record_learning_record_new_learning",
+      "target": "scripts_record_learning_slugify",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/record_learning.py",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
       "source": "scripts_test_brain_run_all",
       "target": "scripts_test_brain_test_neuron_network",
       "relation": "calls",
@@ -8481,7 +8552,7 @@
     },
     {
       "source": "agents_ponytail_lazy_senior_dev_mode",
-      "target": "agents_graphify_auto_sync_knowledge_graph",
+      "target": "agents_graphify_brain_verification_continuous_learning_loop",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -8498,7 +8569,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L45",
+      "source_location": "L47",
       "weight": 1.0
     },
     {
@@ -12528,6 +12599,39 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_record_learning",
+      "target": "scripts_record_learning_main",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/record_learning.py",
+      "source_location": "L122",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_record_learning",
+      "target": "scripts_record_learning_slugify",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/record_learning.py",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_record_learning",
+      "target": "scripts_record_learning_record_new_learning",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/record_learning.py",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
       "source": "scripts_test_brain",
       "target": "scripts_test_brain_test_neuron_network",
       "relation": "contains",
@@ -13445,5 +13549,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "bcda95972acfb9404488bad7b96885a859da86df"
+  "built_at_commit": "ba498f471bff01f0beff640a07e731cbb3a38f7e"
 }

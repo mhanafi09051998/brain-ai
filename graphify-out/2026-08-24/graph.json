@@ -594,6 +594,78 @@
       "source_location": "L11"
     },
     {
+      "id": "scripts_test_brain_run_all",
+      "label": "run_all()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "test_brain.py",
+      "file_type": "code",
+      "norm_label": "run_all()",
+      "source_file": "scripts/test_brain.py",
+      "source_location": "L87"
+    },
+    {
+      "id": "scripts_test_brain_test_ide_bridges",
+      "label": "test_ide_bridges()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "test_brain.py",
+      "file_type": "code",
+      "norm_label": "test_ide_bridges()",
+      "source_file": "scripts/test_brain.py",
+      "source_location": "L81"
+    },
+    {
+      "id": "scripts_test_brain_test_knowledge_graph",
+      "label": "test_knowledge_graph()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "test_brain.py",
+      "file_type": "code",
+      "norm_label": "test_knowledge_graph()",
+      "source_file": "scripts/test_brain.py",
+      "source_location": "L45"
+    },
+    {
+      "id": "scripts_test_brain_test_memory_layer",
+      "label": "test_memory_layer()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "test_brain.py",
+      "file_type": "code",
+      "norm_label": "test_memory_layer()",
+      "source_file": "scripts/test_brain.py",
+      "source_location": "L36"
+    },
+    {
+      "id": "scripts_test_brain_test_neuron_network",
+      "label": "test_neuron_network()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "test_brain.py",
+      "file_type": "code",
+      "norm_label": "test_neuron_network()",
+      "source_file": "scripts/test_brain.py",
+      "source_location": "L20"
+    },
+    {
+      "id": "scripts_test_brain_test_security_and_secrets",
+      "label": "test_security_and_secrets()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "test_brain.py",
+      "file_type": "code",
+      "norm_label": "test_security_and_secrets()",
+      "source_file": "scripts/test_brain.py",
+      "source_location": "L55"
+    },
+    {
       "id": "scripts_parallel_runner_eval_single_task",
       "label": "eval_single_task()",
       "_callable": true,
@@ -1972,6 +2044,78 @@
       "source_location": "L12"
     },
     {
+      "id": "claudia",
+      "label": "CLAUDIA.md",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "Ponytail, lazy senior dev mode",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "claudia.md",
+      "source_file": "CLAUDIA.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "memory",
+      "label": "memory.md",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "Ponytail, lazy senior dev mode",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "memory.md",
+      "source_file": "memory.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "memory_active_memory_neurons",
+      "label": "\ud83e\udde0 Active Memory Neurons",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "Ponytail, lazy senior dev mode",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83e\udde0 active memory neurons",
+      "source_file": "memory.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "memory_active_tasks_history",
+      "label": "\ud83d\udccb Active Tasks & History",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "Ponytail, lazy senior dev mode",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udccb active tasks & history",
+      "source_file": "memory.md",
+      "source_location": "L38"
+    },
+    {
+      "id": "memory_claudia_neuron_memory_network",
+      "label": "Claudia Neuron Memory Network",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "Ponytail, lazy senior dev mode",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "claudia neuron memory network",
+      "source_file": "memory.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "memory_prosedur_pembaruan_memori",
+      "label": "\ud83d\udccb Prosedur Pembaruan Memori",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "Ponytail, lazy senior dev mode",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udccb prosedur pembaruan memori",
+      "source_file": "memory.md",
+      "source_location": "L32"
+    },
+    {
       "id": "agents_rules_ponytail",
       "label": ".agents/rules/ponytail.md",
       "_origin": "ast",
@@ -3323,66 +3467,6 @@
       "norm_label": "triggers & heuristics",
       "source_file": "learning/neurons/N001_executive_decisions.md",
       "source_location": "L13"
-    },
-    {
-      "id": "memory",
-      "label": "memory.md",
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "Claudia Neuron Memory Network",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "memory.md",
-      "source_file": "memory.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "memory_active_memory_neurons",
-      "label": "\ud83e\udde0 Active Memory Neurons",
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "Claudia Neuron Memory Network",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\ud83e\udde0 active memory neurons",
-      "source_file": "memory.md",
-      "source_location": "L7"
-    },
-    {
-      "id": "memory_active_tasks_history",
-      "label": "\ud83d\udccb Active Tasks & History",
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "Claudia Neuron Memory Network",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\ud83d\udccb active tasks & history",
-      "source_file": "memory.md",
-      "source_location": "L38"
-    },
-    {
-      "id": "memory_claudia_neuron_memory_network",
-      "label": "Claudia Neuron Memory Network",
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "Claudia Neuron Memory Network",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "claudia neuron memory network",
-      "source_file": "memory.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "memory_prosedur_pembaruan_memori",
-      "label": "\ud83d\udccb Prosedur Pembaruan Memori",
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "Claudia Neuron Memory Network",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\ud83d\udccb prosedur pembaruan memori",
-      "source_file": "memory.md",
-      "source_location": "L32"
     },
     {
       "id": "ponytail_skills_ponytail_audit_skill",
@@ -5503,6 +5587,17 @@
       "source_location": "L1"
     },
     {
+      "id": "scripts_test_brain",
+      "label": "test_brain.py",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "test_brain.py",
+      "file_type": "code",
+      "norm_label": "test_brain.py",
+      "source_file": "scripts/test_brain.py",
+      "source_location": "L1"
+    },
+    {
       "id": "memory_neurons_mojoloker_brand",
       "label": "mojoloker_brand.md",
       "_origin": "ast",
@@ -6443,90 +6538,6 @@
       "source_location": "L4"
     },
     {
-      "id": "claudia_mcp",
-      "label": "mcp.json",
-      "_origin": "ast",
-      "community": 87,
-      "community_name": "filesystem",
-      "file_type": "code",
-      "metadata": {
-        "mcp_kind": "mcp_config_file"
-      },
-      "norm_label": "mcp.json",
-      "source_file": ".claudia/mcp.json",
-      "source_location": "L1"
-    },
-    {
-      "id": "claudia_mcp_mcp_server_filesystem",
-      "label": "filesystem",
-      "_origin": "ast",
-      "community": 87,
-      "community_name": "filesystem",
-      "file_type": "code",
-      "metadata": {
-        "mcp_kind": "mcp_server"
-      },
-      "norm_label": "filesystem",
-      "source_file": ".claudia/mcp.json",
-      "source_location": "L1"
-    },
-    {
-      "id": "claudia_mcp_mcp_server_memory",
-      "label": "memory",
-      "_origin": "ast",
-      "community": 87,
-      "community_name": "filesystem",
-      "file_type": "code",
-      "metadata": {
-        "mcp_kind": "mcp_server"
-      },
-      "norm_label": "memory",
-      "source_file": ".claudia/mcp.json",
-      "source_location": "L1"
-    },
-    {
-      "id": "mcp_command_npx",
-      "label": "npx",
-      "_origin": "ast",
-      "community": 87,
-      "community_name": "filesystem",
-      "file_type": "code",
-      "metadata": {
-        "mcp_kind": "mcp_command"
-      },
-      "norm_label": "npx",
-      "source_file": ".claudia/mcp.json",
-      "source_location": "L1"
-    },
-    {
-      "id": "mcp_package_modelcontextprotocol_server_filesystem",
-      "label": "@modelcontextprotocol/server-filesystem",
-      "_origin": "ast",
-      "community": 87,
-      "community_name": "filesystem",
-      "file_type": "code",
-      "metadata": {
-        "mcp_kind": "mcp_package"
-      },
-      "norm_label": "@modelcontextprotocol/server-filesystem",
-      "source_file": ".claudia/mcp.json",
-      "source_location": "L1"
-    },
-    {
-      "id": "mcp_package_modelcontextprotocol_server_memory",
-      "label": "@modelcontextprotocol/server-memory",
-      "_origin": "ast",
-      "community": 87,
-      "community_name": "filesystem",
-      "file_type": "code",
-      "metadata": {
-        "mcp_kind": "mcp_package"
-      },
-      "norm_label": "@modelcontextprotocol/server-memory",
-      "source_file": ".claudia/mcp.json",
-      "source_location": "L1"
-    },
-    {
       "id": "learning_neurons_n020_session_continuity_checkpoint",
       "label": "N020_session_continuity_checkpoint.md",
       "_origin": "ast",
@@ -6623,52 +6634,16 @@
       "source_location": "L3"
     },
     {
-      "id": "claudia",
-      "label": "CLAUDIA.md",
+      "id": "github_copilot_instructions",
+      "label": "copilot-instructions.md",
       "_origin": "ast",
-      "community": 89,
-      "community_name": "CLAUDIA.md \u2014 Project Instructions & Architecture Rules",
+      "community": 9,
+      "community_name": "copilot-instructions.md",
       "file_type": "document",
       "node_kind": "page",
-      "norm_label": "claudia.md",
-      "source_file": "CLAUDIA.md",
+      "norm_label": "copilot-instructions.md",
+      "source_file": ".github/copilot-instructions.md",
       "source_location": "L1"
-    },
-    {
-      "id": "claudia_claudia_md_project_instructions_architecture_rules",
-      "label": "CLAUDIA.md \u2014 Project Instructions & Architecture Rules",
-      "_origin": "ast",
-      "community": 89,
-      "community_name": "CLAUDIA.md \u2014 Project Instructions & Architecture Rules",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "claudia.md \u2014 project instructions & architecture rules",
-      "source_file": "CLAUDIA.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "claudia_the_minimality_ladder_directives",
-      "label": "The Minimality Ladder Directives:",
-      "_origin": "ast",
-      "community": 89,
-      "community_name": "CLAUDIA.md \u2014 Project Instructions & Architecture Rules",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "the minimality ladder directives:",
-      "source_file": "CLAUDIA.md",
-      "source_location": "L3"
-    },
-    {
-      "id": "claudia_verification",
-      "label": "Verification:",
-      "_origin": "ast",
-      "community": 89,
-      "community_name": "CLAUDIA.md \u2014 Project Instructions & Architecture Rules",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "verification:",
-      "source_file": "CLAUDIA.md",
-      "source_location": "L10"
     }
   ],
   "links": [
@@ -7321,6 +7296,66 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_test_brain_run_all",
+      "target": "scripts_test_brain_test_neuron_network",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/test_brain.py",
+      "source_location": "L90",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_brain_run_all",
+      "target": "scripts_test_brain_test_memory_layer",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/test_brain.py",
+      "source_location": "L91",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_brain_run_all",
+      "target": "scripts_test_brain_test_knowledge_graph",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/test_brain.py",
+      "source_location": "L92",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_brain_run_all",
+      "target": "scripts_test_brain_test_security_and_secrets",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/test_brain.py",
+      "source_location": "L93",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_brain_run_all",
+      "target": "scripts_test_brain_test_ide_bridges",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/test_brain.py",
+      "source_location": "L94",
+      "weight": 1.0
+    },
+    {
       "source": "scripts_zolu_learn_server_runrealbenchmarkstep",
       "target": "scripts_zolu_learn_server_broadcaststate",
       "relation": "calls",
@@ -7342,30 +7377,6 @@
       "context": "call",
       "source_file": "ponytail/pi-extension/index.js",
       "source_location": "L71",
-      "weight": 1.0
-    },
-    {
-      "source": "claudia_mcp_mcp_server_filesystem",
-      "target": "mcp_command_npx",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "command",
-      "source_file": ".claudia/mcp.json",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
-      "source": "claudia_mcp_mcp_server_memory",
-      "target": "mcp_command_npx",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "command",
-      "source_file": ".claudia/mcp.json",
-      "source_location": "L1",
       "weight": 1.0
     },
     {
@@ -8425,30 +8436,6 @@
       "weight": 1.0
     },
     {
-      "source": "claudia_mcp_mcp_server_filesystem",
-      "target": "mcp_package_modelcontextprotocol_server_filesystem",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "package",
-      "source_file": ".claudia/mcp.json",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
-      "source": "claudia_mcp_mcp_server_memory",
-      "target": "mcp_package_modelcontextprotocol_server_memory",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "package",
-      "source_file": ".claudia/mcp.json",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
       "source": "agents",
       "target": "agents_ponytail_lazy_senior_dev_mode",
       "relation": "contains",
@@ -8963,61 +8950,6 @@
       "confidence_score": 1.0,
       "source_file": ".agents/workflows/graphify.md",
       "source_location": "L6",
-      "weight": 1.0
-    },
-    {
-      "source": "claudia",
-      "target": "claudia_claudia_md_project_instructions_architecture_rules",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "CLAUDIA.md",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
-      "source": "claudia_claudia_md_project_instructions_architecture_rules",
-      "target": "claudia_verification",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "CLAUDIA.md",
-      "source_location": "L10",
-      "weight": 1.0
-    },
-    {
-      "source": "claudia_claudia_md_project_instructions_architecture_rules",
-      "target": "claudia_the_minimality_ladder_directives",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "CLAUDIA.md",
-      "source_location": "L3",
-      "weight": 1.0
-    },
-    {
-      "source": "claudia_mcp",
-      "target": "claudia_mcp_mcp_server_filesystem",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".claudia/mcp.json",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
-      "source": "claudia_mcp",
-      "target": "claudia_mcp_mcp_server_memory",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".claudia/mcp.json",
-      "source_location": "L1",
       "weight": 1.0
     },
     {
@@ -12596,6 +12528,72 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_test_brain",
+      "target": "scripts_test_brain_test_neuron_network",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/test_brain.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_brain",
+      "target": "scripts_test_brain_test_memory_layer",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/test_brain.py",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_brain",
+      "target": "scripts_test_brain_test_knowledge_graph",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/test_brain.py",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_brain",
+      "target": "scripts_test_brain_test_security_and_secrets",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/test_brain.py",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_brain",
+      "target": "scripts_test_brain_test_ide_bridges",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/test_brain.py",
+      "source_location": "L81",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_brain",
+      "target": "scripts_test_brain_run_all",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/test_brain.py",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
       "source": "scripts_zolu_learn_server",
       "target": "scripts_zolu_learn_server_express",
       "relation": "contains",
@@ -13080,6 +13078,28 @@
       "weight": 1.0
     },
     {
+      "source": "claudia",
+      "target": "agents",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDIA.md",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "claudia",
+      "target": "memory",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDIA.md",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
       "source": "ponytail_readme",
       "target": "ponytail_qoder_rules_ponytail",
       "relation": "references",
@@ -13425,5 +13445,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "bb3f7d61f10ebc8b7ea37e9922952b3dfcf79dd4"
+  "built_at_commit": "bcda95972acfb9404488bad7b96885a859da86df"
 }

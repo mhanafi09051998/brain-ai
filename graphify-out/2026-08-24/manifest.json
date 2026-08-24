@@ -6,9 +6,9 @@
     "semantic_hash": "dd15119fb2196a241d762fb6eacacf90"
   },
   "learning/NEURON_INDEX.json": {
-    "mtime": 1787511902.5285332,
-    "seen": 1787511965.0234702,
-    "ast_hash": "5faab239ce315dc3d8328bfcb58265fb",
+    "mtime": 1787568587.5511084,
+    "seen": 1787568624.1769688,
+    "ast_hash": "cfe8850b8a57e03ca7b1c5ac5136afc1",
     "semantic_hash": ""
   },
   "learning/scripts/grow_neurons.py": {
@@ -587,12 +587,6 @@
     "ast_hash": "5eb0e850fdd3a3c97bbbf7d80c13dc1d",
     "semantic_hash": ""
   },
-  ".claudia/settings.json": {
-    "mtime": 1787530193.3937516,
-    "seen": 1787567518.4210677,
-    "ast_hash": "a2654ef6c12be99edb7dde0e22a46507",
-    "semantic_hash": ""
-  },
   "scripts/multihop_engine.py": {
     "mtime": 1787509881.1532185,
     "seen": 1787509974.6198688,
@@ -713,18 +707,6 @@
     "ast_hash": "7a54a6afb5f1537edea649fa60ca62de",
     "semantic_hash": ""
   },
-  ".claudia/mcp.json": {
-    "mtime": 1787529655.40277,
-    "seen": 1787567518.4210677,
-    "ast_hash": "16dfbb04d0aea7824aab724313d4334f",
-    "semantic_hash": ""
-  },
-  ".claudia/todos.json": {
-    "mtime": 1787530041.6014853,
-    "seen": 1787567518.4210677,
-    "ast_hash": "3ff1700699f68ff4d3bc3ede9b448045",
-    "semantic_hash": ""
-  },
   "memory/session_checkpoint.json": {
     "mtime": 1787530575.8646376,
     "seen": 1787567518.4237177,
@@ -732,15 +714,27 @@
     "semantic_hash": ""
   },
   "CLAUDIA.md": {
-    "mtime": 1787530192.955087,
-    "seen": 1787567518.4330297,
-    "ast_hash": "8a51a528264422fcdd96f3aabd4d7edf",
+    "mtime": 1787568528.3602884,
+    "seen": 1787568624.1775155,
+    "ast_hash": "3395b443d949279c5c902baa479d7f0a",
     "semantic_hash": ""
   },
   "learning/neurons/N020_session_continuity_checkpoint.md": {
     "mtime": 1787530568.9408295,
     "seen": 1787567518.4395263,
     "ast_hash": "6b0513aa16f55ed9b0b81f98e3e7deee",
+    "semantic_hash": ""
+  },
+  "scripts/test_brain.py": {
+    "mtime": 1787568594.9344296,
+    "seen": 1787568624.1775155,
+    "ast_hash": "4774842c1bd6a33a2df8b6f846a46b6a",
+    "semantic_hash": ""
+  },
+  ".github/copilot-instructions.md": {
+    "mtime": 1787568528.3602884,
+    "seen": 1787568624.1775155,
+    "ast_hash": "3395b443d949279c5c902baa479d7f0a",
     "semantic_hash": ""
   }
 }
