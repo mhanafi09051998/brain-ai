@@ -1,16 +1,16 @@
 # Graph Report - Agent_Claudia_Autonomus  (2026-08-24)
 
 ## Corpus Check
-- 114 files · ~336,884 words
+- 112 files · ~335,671 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 592 nodes · 629 edges · 83 communities (60 shown, 23 thin omitted)
+- 560 nodes · 598 edges · 81 communities (58 shown, 23 thin omitted)
 - Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 25 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ea14856e`
+- Built from commit: `bb3f7d61`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -21,7 +21,6 @@
 - Install
 - README.es.md
 - Install
-- Production Planning Specification: Zolu AI Web Production Engine
 - Ponytail
 - Ponytail
 - Ponytail Help
@@ -78,7 +77,6 @@
 - user_profile.md
 - vps_infrastructure.md
 - ponytail-statusline.sh script
-- opencode.json
 - parallel_runner.py
 - zolu_learn_server.js
 - ingest_frontier_knowledge.py
@@ -118,7 +116,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (83 total, 23 thin omitted)
+## Communities (81 total, 23 thin omitted)
 
 ### Community 0 - "ponytail-config.js"
 Cohesion: 0.08
@@ -149,10 +147,6 @@ Nodes (21): Ponytail, lazy senior dev mode, Antes / después, Antigravity CLI, C
 ### Community 5 - "Install"
 Cohesion: 0.09
 Nodes (21): Antigravity CLI, Before / after, Claude Code, CodeWhale, Codex, Commands, Development, Devin CLI (+13 more)
-
-### Community 6 - "Production Planning Specification: Zolu AI Web Production Engine"
-Cohesion: 0.20
-Nodes (9): 1.1 Tech Stack Standar, 1. Arsitektur Sistem & Spesifikasi Inti, 2. Aturan Modularity & Maintenance (Max 300 Lines/File), 3. Struktur Direktori Proyek (Modular Layout), 4. Skema Database SQLite (WAL Mode), 5. Integrasi Mesin AI 9Router (`lib/ai/router_client.ts`), 6. Prompting Invariant: Modular Code Decomposition, 7. Tahapan Implementasi & Deployment (+1 more)
 
 ### Community 7 - "Ponytail"
 Cohesion: 0.22
@@ -286,10 +280,6 @@ Nodes (3): Alur Pembelajaran, Self-Learning Framework, Struktur Folder
 Cohesion: 0.50
 Nodes (3): Boundaries, Output, Scan
 
-### Community 73 - "opencode.json"
-Cohesion: 0.10
-Nodes (21): models, npm, options, modalities, name, agent, explorer, description (+13 more)
-
 ### Community 74 - "parallel_runner.py"
 Cohesion: 0.53
 Nodes (5): eval_single_task(), init_db(), query_llm(), High-Speed Parallel Subagent Benchmark Evaluator for Claudia Features Valid…, run_parallel_subagents_step()
@@ -335,15 +325,15 @@ Cohesion: 0.50
 Nodes (3): CLAUDIA.md — Project Instructions & Architecture Rules, The Minimality Ladder Directives:, Verification:
 
 ## Knowledge Gaps
-- **337 isolated node(s):** `@modelcontextprotocol/server-filesystem`, `@modelcontextprotocol/server-memory`, `$schema`, `npm`, `baseURL` (+332 more)
+- **320 isolated node(s):** `@modelcontextprotocol/server-filesystem`, `@modelcontextprotocol/server-memory`, `__dirname`, `require`, `{ getPonytailInstructions }` (+315 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **23 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **What connects `@modelcontextprotocol/server-filesystem`, `@modelcontextprotocol/server-memory`, `$schema` to the rest of the system?**
-  _337 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `@modelcontextprotocol/server-filesystem`, `@modelcontextprotocol/server-memory`, `__dirname` to the rest of the system?**
+  _320 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `ponytail-config.js` be split into smaller, more focused modules?**
   _Cohesion score 0.07541478129713423 - nodes in this community are weakly interconnected._
 - **Should `ponytail/package.json` be split into smaller, more focused modules?**

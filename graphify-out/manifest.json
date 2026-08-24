@@ -449,12 +449,6 @@
     "ast_hash": "421e40917db6cc732864011799da3235",
     "semantic_hash": ""
   },
-  "prod_planner.md": {
-    "mtime": 1787449701.2613695,
-    "seen": 1787476501.9923196,
-    "ast_hash": "685c535c7cece0724ee5b9d96994ec44",
-    "semantic_hash": ""
-  },
   "ponytail/assets/benchmark-3model.svg": {
     "mtime": 499162500.0,
     "seen": 1787476501.9923196,
@@ -597,12 +591,6 @@
     "mtime": 1787530193.3937516,
     "seen": 1787567518.4210677,
     "ast_hash": "a2654ef6c12be99edb7dde0e22a46507",
-    "semantic_hash": ""
-  },
-  "opencode.json": {
-    "mtime": 1787507982.8265324,
-    "seen": 1787509365.03831,
-    "ast_hash": "050b11b9b718e6b29e092fcd8001b7da",
     "semantic_hash": ""
   },
   "scripts/multihop_engine.py": {
