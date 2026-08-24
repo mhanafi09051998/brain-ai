@@ -6,10 +6,10 @@
     "semantic_hash": "dd15119fb2196a241d762fb6eacacf90"
   },
   "learning/NEURON_INDEX.json": {
-    "mtime": 1787571118.1202838,
-    "seen": 1787571129.7342086,
-    "ast_hash": "c16ef2b1de63c8e22b02afe4c2f9a226",
-    "semantic_hash": "c16ef2b1de63c8e22b02afe4c2f9a226"
+    "mtime": 1787571489.2938602,
+    "seen": 1787571529.8417928,
+    "ast_hash": "02477d9af9a32027c4c53987be14cc90",
+    "semantic_hash": "02477d9af9a32027c4c53987be14cc90"
   },
   "learning/scripts/grow_neurons.py": {
     "mtime": 1787405645.569641,
@@ -312,9 +312,9 @@
     "semantic_hash": ""
   },
   "memory.md": {
-    "mtime": 1787571058.1429305,
-    "seen": 1787571079.7454798,
-    "ast_hash": "cf58f4570f9c59595bf09bee779b5d49",
+    "mtime": 1787571121.5725536,
+    "seen": 1787571222.7985854,
+    "ast_hash": "99fcd938db205363a21d322b06442673",
     "semantic_hash": ""
   },
   "memory/neurons/ai_engine_9router.md": {
@@ -648,9 +648,9 @@
     "semantic_hash": ""
   },
   "scripts/learn_index.html": {
-    "mtime": 1787570849.8848958,
-    "seen": 1787571079.7454798,
-    "ast_hash": "9c330013d110debc07d03bf3cc1c7161",
+    "mtime": 1787571179.1845117,
+    "seen": 1787571222.7985854,
+    "ast_hash": "6c7c170f66b47e2b6cf963945ecd225a",
     "semantic_hash": ""
   },
   "scripts/parallel_runner.py": {
@@ -768,10 +768,10 @@
     "semantic_hash": "2c4ea5f3ae82e76915288bda6b031944"
   },
   "scripts/build_neural_mesh_ui.py": {
-    "mtime": 1787570849.7843087,
-    "seen": 1787570985.4410963,
-    "ast_hash": "63ee25484dafc8499e7134847a84e902",
-    "semantic_hash": "63ee25484dafc8499e7134847a84e902"
+    "mtime": 1787571179.0858,
+    "seen": 1787571484.9844625,
+    "ast_hash": "cc77bbb85e3532b49b9d55fa1e90a425",
+    "semantic_hash": "cc77bbb85e3532b49b9d55fa1e90a425"
   },
   "scripts/masterpiece_completer.py": {
     "mtime": 1787570513.5775359,
@@ -819,6 +819,12 @@
     "mtime": 1787571012.8614366,
     "seen": 1787571079.7454798,
     "ast_hash": "bd2e2007e08f5d526a7ac1817d0f4b95",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N023_zero_day_kernel_defense.md": {
+    "mtime": 1787571069.0456536,
+    "seen": 1787571222.7985854,
+    "ast_hash": "bd1350b7f92d3d97a6ec564e032e7a74",
     "semantic_hash": ""
   }
 }

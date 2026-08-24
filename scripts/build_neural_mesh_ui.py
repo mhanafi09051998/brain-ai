@@ -65,7 +65,7 @@ html = """<!DOCTYPE html>
           <h1 class="font-extrabold text-base tracking-tight text-white">Claudia 5.0 Max</h1>
           <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 font-mono font-bold border border-emerald-500/30">World Frontier Edition</span>
         </div>
-        <p class="text-[11px] text-slate-400 font-medium">Gahar Inovasi Teknologi &bull; 28 Autonomous Master Neurons</p>
+        <p class="text-[11px] text-slate-400 font-medium">Gahar Inovasi Teknologi &bull; 33 Master Neurons &bull; Modern Full-Stack Ready</p>
       </div>
     </div>
 
@@ -73,11 +73,11 @@ html = """<!DOCTYPE html>
     <div class="flex items-center gap-3 pointer-events-auto">
       <div class="glass-card px-4 py-2.5 rounded-xl flex items-center gap-2.5 text-xs font-mono text-slate-300">
         <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 pulse-indicator"></span>
-        <span>Firing Throughput: <strong class="text-emerald-400" id="firing-rate">184 Hz</strong></span>
+        <span>Cognitive Throughput: <strong class="text-emerald-400" id="firing-rate">212 Hz</strong></span>
       </div>
       <div class="glass-card px-4 py-2.5 rounded-xl flex items-center gap-2.5 text-xs font-mono text-slate-300">
         <i class="fa-solid fa-bolt text-amber-400"></i>
-        <span>Synapses: <strong class="text-amber-300">98 Active Pathways</strong></span>
+        <span>Synapses: <strong class="text-amber-300">124 Active Pathways</strong></span>
       </div>
     </div>
   </header>
@@ -85,13 +85,13 @@ html = """<!DOCTYPE html>
   <!-- Neuron Detail Inspector Modal (Bottom Right) -->
   <div id="inspector" class="absolute bottom-6 right-6 w-96 glass-card p-5 rounded-2xl z-10 border border-indigo-500/20 transition-all duration-300 transform translate-y-2 opacity-95">
     <div class="flex items-center justify-between mb-2">
-      <span class="text-xs font-mono font-bold text-indigo-400 px-2 py-0.5 rounded bg-indigo-500/10 border border-indigo-500/20" id="inspect-id">N028</span>
+      <span class="text-xs font-mono font-bold text-indigo-400 px-2 py-0.5 rounded bg-indigo-500/10 border border-indigo-500/20" id="inspect-id">N030</span>
       <span class="text-[11px] font-mono text-emerald-400 flex items-center gap-1.5">
         <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Synapse Online
       </span>
     </div>
-    <h3 class="font-bold text-sm text-white mb-1.5 tracking-tight" id="inspect-title">Autonomous System Self-Healing</h3>
-    <p class="text-xs text-slate-400 leading-relaxed mb-3" id="inspect-desc">Level-triggered state reconciliation, adaptive failure detection, chaos mesh resilience, dan zero data loss recovery.</p>
+    <h3 class="font-bold text-sm text-white mb-1.5 tracking-tight" id="inspect-title">Next-Gen Fullstack & Edge Engineering</h3>
+    <p class="text-xs text-slate-400 leading-relaxed mb-3" id="inspect-desc">Next.js 15, React 19 Compiler, Bun 1.2, Hono v4, Tailwind v4, edge V8 isolates & sub-millisecond RPC.</p>
     <div class="pt-2.5 border-t border-slate-800 flex items-center justify-between text-[11px] font-mono text-slate-500">
       <span>Connected Synapses: <strong class="text-slate-300" id="inspect-conns">6 nodes</strong></span>
       <span class="text-purple-400">Hover / Drag node</span>
@@ -103,7 +103,7 @@ html = """<!DOCTYPE html>
     <div class="text-[10px] uppercase font-mono tracking-wider text-slate-500 mb-1">Neuron Cognitive Stream</div>
     <div class="text-xs font-mono text-emerald-400 truncate flex items-center gap-2" id="feed-line">
       <i class="fa-solid fa-wave-square text-emerald-400 text-xs"></i>
-      <span>Claudia 5.0 Max: 28-Neuron Mesh fully operational</span>
+      <span>Claudia 5.0 Max: 33 Master Neurons synchronized</span>
     </div>
   </div>
 
@@ -119,23 +119,23 @@ html = """<!DOCTYPE html>
     window.addEventListener('resize', resize);
     resize();
 
-    // 28 Active Autonomous Neurons Data
+    // 33 Active Autonomous Master Neurons Data
     const neuronsData = [
       { id: "N001", label: "Executive Decisions", category: "Core", desc: "Keputusan teknis cepat tanpa keraguan, root-cause first.", conns: ["N004", "N007", "N022"] },
-      { id: "N002", label: "VPS Remote Ops", category: "Infra", desc: "SSH tunneling otomatis, supervisi PM2, isolasi port & deploy.", conns: ["N004", "N006", "N008", "N028"] },
-      { id: "N003", label: "Mobile-First UI/UX", category: "Interface", desc: "Zero browser native popups, light mode default, max 300 LOC.", conns: ["N001", "N004", "N026"] },
-      { id: "N004", label: "Ponytail Minimality", category: "Core", desc: "YAGNI, standard library first, eliminasi kode berlebih.", conns: ["N001", "N005", "N011", "N027"] },
+      { id: "N002", label: "VPS Remote Ops", category: "Infra", desc: "SSH tunneling otomatis, supervisi PM2, isolasi port & deploy.", conns: ["N004", "N006", "N008", "N028", "N032"] },
+      { id: "N003", label: "Mobile-First UI/UX", category: "Interface", desc: "Zero browser native popups, light mode default, max 300 LOC.", conns: ["N001", "N004", "N026", "N030"] },
+      { id: "N004", label: "Ponytail Minimality", category: "Core", desc: "YAGNI, standard library first, eliminasi kode berlebih.", conns: ["N001", "N005", "N011", "N027", "N029"] },
       { id: "N005", label: "Graphify Knowledge", category: "Memory", desc: "AST code dependency mapper & modular graph RAG.", conns: ["N007", "N009", "N012", "N026"] },
-      { id: "N006", label: "9Router Gateway", category: "Gateway", desc: "Low-latency LLM gateway & multi-provider routing.", conns: ["N002", "N010", "N014", "N024"] },
+      { id: "N006", label: "9Router Gateway", category: "Gateway", desc: "Low-latency LLM gateway & multi-provider routing.", conns: ["N002", "N010", "N014", "N024", "N030"] },
       { id: "N007", label: "Self-Improving Loop", category: "Core", desc: "Pencatatan invarian otomatis via record_learning.py.", conns: ["N001", "N004", "N008", "N015", "N028"] },
-      { id: "N008", label: "Live Session State", category: "State", desc: "State persistensi ekosistem server, Jellyfin & Cloud NAS.", conns: ["N002", "N006", "N010", "N028"] },
-      { id: "N009", label: "Peak Algorithms", category: "Math", desc: "Tarjan SCC, Segment Tree, Bloom Filter, Lock-Free.", conns: ["N004", "N005", "N011", "N013", "N017", "N025"] },
-      { id: "N010", label: "Distributed Systems", category: "Infra", desc: "Raft/Paxos consensus, CQRS, 2PC & Saga transactions.", conns: ["N006", "N008", "N009", "N013", "N022"] },
-      { id: "N011", label: "Mechanical Sympathy", category: "Perf", desc: "L1/L2 cache locality, Linux sendfile zero-copy, io_uring.", conns: ["N004", "N009", "N010", "N015", "N027"] },
-      { id: "N012", label: "Deep Search GraphRAG", category: "Memory", desc: "BM25 + Dense vector semantic, RRF, multi-hop traversal.", conns: ["N005", "N009", "N015", "N018", "N026"] },
-      { id: "N013", label: "Deep Storage & LSM", category: "Infra", desc: "MemTable/SSTable compaction, WAL, HNSW vector index.", conns: ["N009", "N010", "N011"] },
+      { id: "N008", label: "Live Session State", category: "State", desc: "State persistensi ekosistem server, Jellyfin & Cloud NAS.", conns: ["N002", "N006", "N010", "N028", "N032"] },
+      { id: "N009", label: "Peak Algorithms", category: "Math", desc: "Tarjan SCC, Segment Tree, Bloom Filter, Lock-Free.", conns: ["N004", "N005", "N011", "N013", "N017", "N025", "N029"] },
+      { id: "N010", label: "Distributed Systems", category: "Infra", desc: "Raft/Paxos consensus, CQRS, 2PC & Saga transactions.", conns: ["N006", "N008", "N009", "N013", "N022", "N028"] },
+      { id: "N011", label: "Mechanical Sympathy", category: "Perf", desc: "L1/L2 cache locality, Linux sendfile zero-copy, io_uring.", conns: ["N004", "N009", "N010", "N015", "N027", "N029"] },
+      { id: "N012", label: "Deep Search GraphRAG", category: "Memory", desc: "BM25 + Dense vector semantic, RRF, multi-hop traversal.", conns: ["N005", "N009", "N015", "N018", "N026", "N031"] },
+      { id: "N013", label: "Deep Storage & LSM", category: "Infra", desc: "MemTable/SSTable compaction, WAL, HNSW vector index.", conns: ["N009", "N010", "N011", "N031"] },
       { id: "N014", label: "Zero-Trust Security", category: "Security", desc: "PASETO tokens, constant-time crypto, tamper signature.", conns: ["N006", "N008", "N010", "N018", "N023", "N024"] },
-      { id: "N015", label: "Compiler AST & Profiler", category: "Perf", desc: "Tree-Sitter AST visitors, WASM, CPU flamegraphs.", conns: ["N005", "N007", "N011", "N012", "N018", "N027"] },
+      { id: "N015", label: "Compiler AST & Profiler", category: "Perf", desc: "Tree-Sitter AST visitors, WASM, CPU flamegraphs.", conns: ["N005", "N007", "N011", "N012", "N018", "N027", "N029"] },
       { id: "N016", label: "Benchmark Evaluator", category: "Eval", desc: "Framework pengujian empiris 6 parameter deterministik.", conns: ["N007", "N017", "N018", "N019", "N022", "N028"] },
       { id: "N017", label: "Program-Aided Math", category: "Math", desc: "Invariant proof, Diophantine modular parity, PAL.", conns: ["N009", "N016", "N024", "N025"] },
       { id: "N018", label: "RepoMap AST SWE-bench", category: "Eval", desc: "PageRank AST callgraph, root-cause patch precision.", conns: ["N012", "N015", "N016", "N023"] },
@@ -148,23 +148,28 @@ html = """<!DOCTYPE html>
       { id: "N025", label: "HFT Orderbook Microstructure", category: "Finance", desc: "L2/L3 orderbook delta, Stoikov micro-price, Kelly criterion.", conns: ["N009", "N017", "N021", "N027"] },
       { id: "N026", label: "Vision-DOM Geometry AST", category: "Multimodal", desc: "Pixel-to-DOM layout tree, viewport coordinate bounds, OCR alignment.", conns: ["N003", "N005", "N012"] },
       { id: "N027", label: "Tensor SIMD Vectorization", category: "Perf", desc: "512-bit AVX-512 FMA registers, 64-byte cache alignment, SoA.", conns: ["N004", "N011", "N015", "N025"] },
-      { id: "N028", label: "Autonomous Self-Healing", category: "Infra", desc: "Level-triggered state reconciliation, adaptive failure detection.", conns: ["N002", "N007", "N008", "N010", "N016", "N022", "N023"] }
+      { id: "N028", label: "Autonomous Self-Healing", category: "Infra", desc: "Level-triggered state reconciliation, adaptive failure detection.", conns: ["N002", "N007", "N008", "N010", "N016", "N022", "N023"] },
+      { id: "N029", label: "Modern Systems Rust & Go", category: "Stack", desc: "Rust 2024 async Tokio, lock-free SPSC, Go 1.23 iter.Seq.", conns: ["N004", "N009", "N011", "N015", "N027"] },
+      { id: "N030", label: "Next-Gen Fullstack & Edge", category: "Stack", desc: "Next.js 15, React 19 Compiler, Bun 1.2, Hono v4, Tailwind v4.", conns: ["N003", "N006", "N026", "N031", "N032"] },
+      { id: "N031", label: "Modern Data pgvector & ORM", category: "Stack", desc: "PostgreSQL 17 HNSW vector search, RRF, Drizzle ORM, SQLite WAL.", conns: ["N012", "N013", "N030"] },
+      { id: "N032", label: "Cloud-Native Edge Infra", category: "Stack", desc: "Caddy 2.8+ HTTP/3 QUIC, Docker Distroless, PM2 cluster.", conns: ["N002", "N008", "N028", "N030"] },
+      { id: "N033", label: "Python 3.12+ Concurrency", category: "Stack", desc: "Free-Threaded No-GIL, asyncio TaskGroups, Polars Arrow.", conns: ["N004", "N009", "N011", "N015", "N027"] }
     ];
 
     const nodes = [];
     const centerX = width / 2;
     const centerY = height / 2;
-    const radiusBase = Math.min(width, height) * 0.38;
+    const radiusBase = Math.min(width, height) * 0.39;
 
     neuronsData.forEach((data, i) => {
-      const angle = (i / neuronsData.length) * Math.PI * 2 + (Math.random() * 0.15);
-      const r = radiusBase * (0.50 + Math.random() * 0.55);
+      const angle = (i / neuronsData.length) * Math.PI * 2 + (Math.random() * 0.12);
+      const r = radiusBase * (0.48 + Math.random() * 0.58);
       nodes.push({
         ...data,
         x: centerX + Math.cos(angle) * r,
         y: centerY + Math.sin(angle) * r,
-        vx: (Math.random() - 0.5) * 0.35,
-        vy: (Math.random() - 0.5) * 0.35,
+        vx: (Math.random() - 0.5) * 0.32,
+        vy: (Math.random() - 0.5) * 0.32,
         radius: 8 + Math.random() * 4,
         baseRadius: 9,
         pulse: Math.random() * Math.PI * 2,
@@ -188,8 +193,8 @@ html = """<!DOCTYPE html>
             from: source,
             to: target,
             progress: 0,
-            speed: 0.009 + Math.random() * 0.014,
-            color: Math.random() > 0.3 ? '#a855f7' : '#10b981',
+            speed: 0.009 + Math.random() * 0.015,
+            color: Math.random() > 0.35 ? '#a855f7' : (Math.random() > 0.5 ? '#10b981' : '#38bdf8'),
             size: 2.5 + Math.random() * 2
           });
         }
@@ -251,14 +256,14 @@ html = """<!DOCTYPE html>
     function animate() {
       ctx.clearRect(0, 0, width, height);
 
-      const bgGrad = ctx.createRadialGradient(width/2, height/2, 50, width/2, height/2, width * 0.65);
-      bgGrad.addColorStop(0, 'rgba(124, 58, 237, 0.11)');
+      const bgGrad = ctx.createRadialGradient(width/2, height/2, 50, width/2, height/2, width * 0.68);
+      bgGrad.addColorStop(0, 'rgba(124, 58, 237, 0.12)');
       bgGrad.addColorStop(0.5, 'rgba(16, 185, 129, 0.05)');
       bgGrad.addColorStop(1, 'rgba(3, 6, 17, 0)');
       ctx.fillStyle = bgGrad;
       ctx.fillRect(0, 0, width, height);
 
-      if (Math.random() < 0.4) spawnSignal();
+      if (Math.random() < 0.45) spawnSignal();
 
       nodes.forEach(node => {
         if (node !== draggedNode) {
@@ -281,8 +286,8 @@ html = """<!DOCTYPE html>
 
               const isHighlighted = (source.isHovered || target.isHovered);
               ctx.strokeStyle = isHighlighted 
-                ? 'rgba(167, 139, 250, 0.75)' 
-                : 'rgba(99, 102, 241, 0.15)';
+                ? 'rgba(167, 139, 250, 0.8)' 
+                : 'rgba(99, 102, 241, 0.14)';
               ctx.lineWidth = isHighlighted ? 2.2 : 1;
               ctx.stroke();
             }
@@ -324,8 +329,9 @@ html = """<!DOCTYPE html>
 
         ctx.beginPath();
         ctx.arc(node.x, node.y, currentRadius, 0, Math.PI * 2);
-        ctx.fillStyle = node.isHovered ? '#38bdf8' : (parseInt(node.id.replace('N','')) >= 22 ? '#10b981' : '#a855f7');
-        ctx.shadowColor = node.isHovered ? '#38bdf8' : '#a855f7';
+        const nid = parseInt(node.id.replace('N',''));
+        ctx.fillStyle = node.isHovered ? '#38bdf8' : (nid >= 29 ? '#38bdf8' : (nid >= 22 ? '#10b981' : '#a855f7'));
+        ctx.shadowColor = node.isHovered ? '#38bdf8' : (nid >= 29 ? '#38bdf8' : '#a855f7');
         ctx.shadowBlur = 16;
         ctx.fill();
         ctx.shadowBlur = 0;
@@ -342,12 +348,12 @@ html = """<!DOCTYPE html>
     animate();
 
     setInterval(() => {
-      const rate = 175 + Math.floor(Math.random() * 40);
+      const rate = 205 + Math.floor(Math.random() * 45);
       const el = document.getElementById('firing-rate');
       if (el) el.innerText = `${rate} Hz`;
     }, 1000);
 
-    updateInspector(nodeMap["N028"] || nodes[0]);
+    updateInspector(nodeMap["N030"] || nodes[0]);
   </script>
 </body>
 </html>
@@ -355,4 +361,4 @@ html = """<!DOCTYPE html>
 
 with open('scripts/learn_index.html', 'w', encoding='utf-8') as f:
     f.write(html)
-print("SUCCESS: 28-Neuron Synapse Canvas generated in scripts/learn_index.html")
+print("SUCCESS: 33-Neuron Synapse Canvas generated in scripts/learn_index.html")

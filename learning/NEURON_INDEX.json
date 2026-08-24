@@ -1,9 +1,9 @@
 {
-  "version": "1.1.0",
-  "updated_at": "2026-08-24T18:32:00.000000",
-  "total_neurons": 28,
-  "total_synapses": 41,
-  "mesh_density": 0.0542,
+  "version": "1.2.0",
+  "updated_at": "2026-08-24T18:38:09.290201",
+  "total_neurons": 33,
+  "total_synapses": 52,
+  "mesh_density": 0.0492,
   "neurons": [
     {
       "id": "N001",
@@ -90,7 +90,7 @@
     },
     {
       "id": "N009",
-      "label": "N009_peak_algorithms_codex.md",
+      "label": "# 1. Graph & Network Flow Algorithms",
       "file": "N009_peak_algorithms_codex.md",
       "connections": [],
       "synapse_count": 0,
@@ -98,7 +98,7 @@
     },
     {
       "id": "N010",
-      "label": "N010_distributed_systems_design.md",
+      "label": "# 1. Konsensus & Replikasi",
       "file": "N010_distributed_systems_design.md",
       "connections": [],
       "synapse_count": 0,
@@ -106,7 +106,7 @@
     },
     {
       "id": "N011",
-      "label": "N011_mechanical_sympathy_perf.md",
+      "label": "# 1. CPU Cache Locality & Data-Oriented Design",
       "file": "N011_mechanical_sympathy_perf.md",
       "connections": [],
       "synapse_count": 0,
@@ -114,7 +114,7 @@
     },
     {
       "id": "N012",
-      "label": "N012_deep_search_and_graph_rag.md",
+      "label": "# 1. Hybrid Search & Reciprocal Rank Fusion (RRF)",
       "file": "N012_deep_search_and_graph_rag.md",
       "connections": [],
       "synapse_count": 0,
@@ -122,7 +122,7 @@
     },
     {
       "id": "N013",
-      "label": "N013_deep_storage_and_distributed_db.md",
+      "label": "# 1. Storage Engine Internals: LSM-Tree vs B+ Tree",
       "file": "N013_deep_storage_and_distributed_db.md",
       "connections": [],
       "synapse_count": 0,
@@ -130,7 +130,7 @@
     },
     {
       "id": "N014",
-      "label": "N014_zero_trust_security_and_cryptography.md",
+      "label": "# 1. Modern Cryptography & Token Architecture",
       "file": "N014_zero_trust_security_and_cryptography.md",
       "connections": [],
       "synapse_count": 0,
@@ -138,7 +138,7 @@
     },
     {
       "id": "N015",
-      "label": "N015_compiler_ast_and_system_profiling.md",
+      "label": "# 1. Abstract Syntax Tree (AST) & Code Transformation",
       "file": "N015_compiler_ast_and_system_profiling.md",
       "connections": [],
       "synapse_count": 0,
@@ -146,7 +146,7 @@
     },
     {
       "id": "N016",
-      "label": "N016_frontier_benchmark_evaluator.md",
+      "label": "# Karakteristik",
       "file": "N016_frontier_benchmark_evaluator.md",
       "connections": [],
       "synapse_count": 0,
@@ -213,29 +213,16 @@
       "id": "N023",
       "label": "Neuron N023: Autonomous Zero-Day Exploit Defense & Kernel Memory Safety",
       "file": "N023_zero_day_kernel_defense.md",
-      "connections": [
-        "N004",
-        "N006",
-        "N010",
-        "N011",
-        "N014",
-        "N015"
-      ],
-      "synapse_count": 6,
-      "size_bytes": 10500
+      "connections": [],
+      "synapse_count": 0,
+      "size_bytes": 16271
     },
     {
       "id": "N024",
       "label": "Neuron N024: Post-Quantum Cryptography & ML-KEM/ML-DSA (FIPS 203/204)",
       "file": "N024_post_quantum_cryptography.md",
-      "connections": [
-        "N004",
-        "N006",
-        "N010",
-        "N014",
-        "N023"
-      ],
-      "synapse_count": 5,
+      "connections": [],
+      "synapse_count": 0,
       "size_bytes": 12592
     },
     {
@@ -263,7 +250,7 @@
     },
     {
       "id": "N027",
-      "label": "N027_tensor_simd_vectorization.md",
+      "label": "# 1. SIMD, Fused Multiply-Add (FMA) & Tensor Core Vectorization",
       "file": "N027_tensor_simd_vectorization.md",
       "connections": [
         "N004",
@@ -281,6 +268,72 @@
       "connections": [],
       "synapse_count": 0,
       "size_bytes": 8902
+    },
+    {
+      "id": "N029",
+      "label": "Neuron N029: Modern Systems Engineering (Rust 2024 Edition & Go 1.23+ High-Throughput Runtimes)",
+      "file": "N029_modern_systems_rust_go.md",
+      "connections": [
+        "N004",
+        "N009",
+        "N011",
+        "N015",
+        "N025",
+        "N027"
+      ],
+      "synapse_count": 6,
+      "size_bytes": 20586
+    },
+    {
+      "id": "N030",
+      "label": "Neuron N030: Next-Gen Fullstack & Edge Engineering (Next.js 15, React 19 Compiler, Bun 1.2, Hono v4, Tailwind v4)",
+      "file": "N030_nextgen_fullstack_edge.md",
+      "connections": [
+        "N003",
+        "N004",
+        "N006",
+        "N011",
+        "N015",
+        "N026"
+      ],
+      "synapse_count": 6,
+      "size_bytes": 16425
+    },
+    {
+      "id": "N031",
+      "label": "Neuron N031: Modern Data Architecture & Hybrid Search (PostgreSQL 17, pgvector HNSW, Drizzle ORM, SQLite WAL)",
+      "file": "N031_modern_data_storage_pgvector.md",
+      "connections": [
+        "N004",
+        "N009",
+        "N011",
+        "N012",
+        "N013"
+      ],
+      "synapse_count": 5,
+      "size_bytes": 17258
+    },
+    {
+      "id": "N032",
+      "label": "Neuron N032: Cloud-Native Edge Infrastructure & Zero-Downtime Operations",
+      "file": "N032_cloud_native_edge_infra.md",
+      "connections": [],
+      "synapse_count": 0,
+      "size_bytes": 24627
+    },
+    {
+      "id": "N033",
+      "label": "Neuron N033: Python 3.12+ High-Performance & Concurrency",
+      "file": "N033_python_high_performance.md",
+      "connections": [
+        "N004",
+        "N009",
+        "N011",
+        "N015",
+        "N027"
+      ],
+      "synapse_count": 5,
+      "size_bytes": 13727
     }
   ]
 }

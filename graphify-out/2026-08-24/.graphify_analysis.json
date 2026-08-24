@@ -411,6 +411,17 @@
       "agents_skills_ponytail_skill_when_not_to_be_lazy"
     ],
     "20": [
+      "learning_neurons_n023_zero_day_kernel_defense",
+      "learning_neurons_n023_zero_day_kernel_defense_1_rop_jop_gadget_chain_disruption_control_flow_integrity",
+      "learning_neurons_n023_zero_day_kernel_defense_2_linux_ebpf_telemetry_kernel_space_lsm_probing",
+      "learning_neurons_n023_zero_day_kernel_defense_3_spatial_temporal_buffer_overrun_protection",
+      "learning_neurons_n023_zero_day_kernel_defense_4_dynamic_static_taint_flow_tracking_source_to_sink_invariants",
+      "learning_neurons_n023_zero_day_kernel_defense_5_autonomous_zero_day_containment_anomaly_profiling",
+      "learning_neurons_n023_zero_day_kernel_defense_5_invarian_pertahanan_zero_day_keamanan_kernel",
+      "learning_neurons_n023_zero_day_kernel_defense_algoritma_deterministik_pure_python_standard_library",
+      "learning_neurons_n023_zero_day_kernel_defense_neuron_n023_autonomous_zero_day_exploit_defense_kernel_memory_safety"
+    ],
+    "21": [
       "learning_neurons_n024_post_quantum_cryptography",
       "learning_neurons_n024_post_quantum_cryptography_1_ancaman_kuantum_paradigma_baru_kriptografi",
       "learning_neurons_n024_post_quantum_cryptography_2_arsitektur_standar_nist_pqc_fips_203_204",
@@ -421,7 +432,7 @@
       "learning_neurons_n024_post_quantum_cryptography_7_disiplin_integrasi_operasional_claudia",
       "learning_neurons_n024_post_quantum_cryptography_neuron_n024_post_quantum_cryptography_ml_kem_ml_dsa_fips_203_204"
     ],
-    "21": [
+    "22": [
       "ponytail_skills_ponytail_skill",
       "ponytail_skills_ponytail_skill_boundaries",
       "ponytail_skills_ponytail_skill_intensity",
@@ -432,7 +443,7 @@
       "ponytail_skills_ponytail_skill_the_ladder",
       "ponytail_skills_ponytail_skill_when_not_to_be_lazy"
     ],
-    "22": [
+    "23": [
       "agents_skills_ponytail_help_skill",
       "agents_skills_ponytail_help_skill_configure_default_mode",
       "agents_skills_ponytail_help_skill_deactivate",
@@ -442,7 +453,7 @@
       "agents_skills_ponytail_help_skill_skills",
       "agents_skills_ponytail_help_skill_update"
     ],
-    "23": [
+    "24": [
       "identity",
       "identity_1_ponytail_lazy_senior_dev_engine",
       "identity_2_graphify_knowledge_graph_structural_memory",
@@ -452,7 +463,7 @@
       "identity_karakter_gaya_komunikasi",
       "identity_self_learning_loop"
     ],
-    "24": [
+    "25": [
       "ponytail_skills_ponytail_help_skill",
       "ponytail_skills_ponytail_help_skill_configure_default_mode",
       "ponytail_skills_ponytail_help_skill_deactivate",
@@ -462,7 +473,7 @@
       "ponytail_skills_ponytail_help_skill_skills",
       "ponytail_skills_ponytail_help_skill_update"
     ],
-    "25": [
+    "26": [
       "scripts_test_brain",
       "scripts_test_brain_run_all",
       "scripts_test_brain_test_ide_bridges",
@@ -472,7 +483,7 @@
       "scripts_test_brain_test_neuron_network",
       "scripts_test_brain_test_security_and_secrets"
     ],
-    "26": [
+    "27": [
       "agents_rules_ponytail",
       "agents_rules_ponytail_graphify_knowledge_graph",
       "agents_rules_ponytail_not_lazy_about",
@@ -481,7 +492,7 @@
       "agents_rules_ponytail_rules",
       "agents_rules_ponytail_the_minimality_ladder"
     ],
-    "27": [
+    "28": [
       "learning_neurons_n021_quantitative_gold_crypto_trading",
       "learning_neurons_n021_quantitative_gold_crypto_trading_1_manajemen_risiko_position_sizing_the_golden_law",
       "learning_neurons_n021_quantitative_gold_crypto_trading_2_logika_pasar_emas_xau_usd_macro_microstructure",
@@ -490,7 +501,7 @@
       "learning_neurons_n021_quantitative_gold_crypto_trading_invarian_inti_perdagangan_kuantitatif_trading_invariants",
       "learning_neurons_n021_quantitative_gold_crypto_trading_n021_quantitative_gold_xau_usd_crypto_trading_systems"
     ],
-    "28": [
+    "29": [
       "learning_neurons_n028_autonomous_self_healing_chaos",
       "learning_neurons_n028_autonomous_self_healing_chaos_1_automated_node_recovery_failure_detection",
       "learning_neurons_n028_autonomous_self_healing_chaos_2_level_triggered_state_reconciliation_loop",
@@ -499,7 +510,7 @@
       "learning_neurons_n028_autonomous_self_healing_chaos_neuron_n028_autonomous_system_self_healing_distributed_chaos_invariants",
       "learning_neurons_n028_autonomous_self_healing_chaos_pure_python_runnable_implementation_stdlib_zero_dependency"
     ],
-    "29": [
+    "30": [
       "scripts_train_trading_engine",
       "scripts_train_trading_engine_calculate_atr",
       "scripts_train_trading_engine_calculate_ema",
@@ -508,7 +519,7 @@
       "scripts_train_trading_engine_fetch_binance_klines",
       "scripts_train_trading_engine_train_and_synthesize_neuron"
     ],
-    "30": [
+    "31": [
       "windsurf_rules_ponytail",
       "windsurf_rules_ponytail_graphify_knowledge_graph",
       "windsurf_rules_ponytail_not_lazy_about",
@@ -517,7 +528,7 @@
       "windsurf_rules_ponytail_rules",
       "windsurf_rules_ponytail_the_minimality_ladder"
     ],
-    "31": [
+    "32": [
       "learning_feedback_log_mojoloker_learnings",
       "learning_feedback_log_mojoloker_learnings_1_tampilan_mode",
       "learning_feedback_log_mojoloker_learnings_2_dropdown_komponen_formulir",
@@ -525,7 +536,7 @@
       "learning_feedback_log_mojoloker_learnings_4_branding_desain_khusus_mojoloker",
       "learning_feedback_log_mojoloker_learnings_pembelajaran_standar_tetap_learnings_fixed_rules_claudia"
     ],
-    "32": [
+    "33": [
       "learning_neurons_n008_live_session_checkpoint",
       "learning_neurons_n008_live_session_checkpoint_deployed_ecosystem_port_mappings",
       "learning_neurons_n008_live_session_checkpoint_installed_autonomous_fullstack_security_toolkit",
@@ -533,7 +544,7 @@
       "learning_neurons_n008_live_session_checkpoint_metadata",
       "learning_neurons_n008_live_session_checkpoint_neuron_n008_persistent_live_session_checkpoint_infrastructure_state"
     ],
-    "33": [
+    "34": [
       "ponytail_pi_extension_package",
       "ponytail_pi_extension_package_name",
       "ponytail_pi_extension_package_private",
@@ -541,7 +552,7 @@
       "ponytail_pi_extension_package_scripts_test",
       "ponytail_pi_extension_package_type"
     ],
-    "34": [
+    "35": [
       "scripts_parallel_runner",
       "scripts_parallel_runner_eval_single_task",
       "scripts_parallel_runner_init_db",
@@ -549,267 +560,267 @@
       "scripts_parallel_runner_rationale_1",
       "scripts_parallel_runner_run_parallel_subagents_step"
     ],
-    "35": [
+    "36": [
       "agents_skills_ponytail_audit_skill",
       "agents_skills_ponytail_audit_skill_boundaries",
       "agents_skills_ponytail_audit_skill_hunt",
       "agents_skills_ponytail_audit_skill_output",
       "agents_skills_ponytail_audit_skill_tags"
     ],
-    "36": [
+    "37": [
       "agents_skills_ponytail_gain_skill",
       "agents_skills_ponytail_gain_skill_boundaries",
       "agents_skills_ponytail_gain_skill_honesty_boundary",
       "agents_skills_ponytail_gain_skill_ponytail_gain",
       "agents_skills_ponytail_gain_skill_scoreboard"
     ],
-    "37": [
+    "38": [
       "agents_skills_ponytail_review_skill",
       "agents_skills_ponytail_review_skill_boundaries",
       "agents_skills_ponytail_review_skill_examples",
       "agents_skills_ponytail_review_skill_format",
       "agents_skills_ponytail_review_skill_scoring"
     ],
-    "38": [
+    "39": [
       "learning_knowledge_base_core_stack",
       "learning_knowledge_base_core_stack_1_database_storage",
       "learning_knowledge_base_core_stack_2_web_service_stack",
       "learning_knowledge_base_core_stack_3_engineering_intelligence_engines",
       "learning_knowledge_base_core_stack_core_stack_architecture"
     ],
-    "39": [
+    "40": [
       "learning_neurons_n027_tensor_simd_vectorization",
       "learning_neurons_n027_tensor_simd_vectorization_1_simd_fused_multiply_add_fma_tensor_core_vectorization",
       "learning_neurons_n027_tensor_simd_vectorization_2_64_byte_cache_line_alignment_false_sharing",
       "learning_neurons_n027_tensor_simd_vectorization_3_roofline_model_l1_l2_l3_cache_tiling",
       "learning_neurons_n027_tensor_simd_vectorization_4_invariant_self_check_stdlib_python"
     ],
-    "40": [
+    "41": [
       "ponytail_skills_ponytail_audit_skill",
       "ponytail_skills_ponytail_audit_skill_boundaries",
       "ponytail_skills_ponytail_audit_skill_hunt",
       "ponytail_skills_ponytail_audit_skill_output",
       "ponytail_skills_ponytail_audit_skill_tags"
     ],
-    "41": [
+    "42": [
       "ponytail_skills_ponytail_gain_skill",
       "ponytail_skills_ponytail_gain_skill_boundaries",
       "ponytail_skills_ponytail_gain_skill_honesty_boundary",
       "ponytail_skills_ponytail_gain_skill_ponytail_gain",
       "ponytail_skills_ponytail_gain_skill_scoreboard"
     ],
-    "42": [
+    "43": [
       "ponytail_skills_ponytail_review_skill",
       "ponytail_skills_ponytail_review_skill_boundaries",
       "ponytail_skills_ponytail_review_skill_examples",
       "ponytail_skills_ponytail_review_skill_format",
       "ponytail_skills_ponytail_review_skill_scoring"
     ],
-    "43": [
+    "44": [
       "agents_skills_ponytail_debt_skill",
       "agents_skills_ponytail_debt_skill_boundaries",
       "agents_skills_ponytail_debt_skill_output",
       "agents_skills_ponytail_debt_skill_scan"
     ],
-    "44": [
+    "45": [
       "learning_feedback_log_readme",
       "learning_feedback_log_readme_feedback_log",
       "learning_feedback_log_readme_log_001_inisialisasi_persona",
       "learning_feedback_log_readme_log_002_executive_decision_making_anti_pilihan_berlebih"
     ],
-    "45": [
+    "46": [
       "learning_neurons_n003_mobile_first_ui",
       "learning_neurons_n003_mobile_first_ui_core_concept",
       "learning_neurons_n003_mobile_first_ui_neuron_n003_mobile_first_ui_compact_data_viz",
       "learning_neurons_n003_mobile_first_ui_synaptic_links"
     ],
-    "46": [
+    "47": [
       "learning_neurons_n005_graphify_knowledge",
       "learning_neurons_n005_graphify_knowledge_core_concept",
       "learning_neurons_n005_graphify_knowledge_neuron_n005_graphify_knowledge_network",
       "learning_neurons_n005_graphify_knowledge_synaptic_links"
     ],
-    "47": [
+    "48": [
       "learning_neurons_n006_9router_gateway",
       "learning_neurons_n006_9router_gateway_core_concept",
       "learning_neurons_n006_9router_gateway_neuron_n006_9router_gateway_engine",
       "learning_neurons_n006_9router_gateway_synaptic_links"
     ],
-    "48": [
+    "49": [
       "learning_neurons_n009_peak_algorithms_codex",
       "learning_neurons_n009_peak_algorithms_codex_1_graph_network_flow_algorithms",
       "learning_neurons_n009_peak_algorithms_codex_2_probabilistic_spatial_data_structures",
       "learning_neurons_n009_peak_algorithms_codex_3_high_performance_concurrency_rate_limiting"
     ],
-    "49": [
+    "50": [
       "learning_neurons_n017_program_aided_math",
       "learning_neurons_n017_program_aided_math_4_pilar_heuristik_aime_olympiad",
       "learning_neurons_n017_program_aided_math_domain_karakteristik",
       "learning_neurons_n017_program_aided_math_neuron_n017_program_aided_mathematical_reasoning_aime_invariants"
     ],
-    "50": [
+    "51": [
       "learning_neurons_n018_repomap_swebench",
       "learning_neurons_n018_repomap_swebench_4_aturan_emas_resolusi_swe_bench",
       "learning_neurons_n018_repomap_swebench_domain_karakteristik",
       "learning_neurons_n018_repomap_swebench_neuron_n018_repomap_ast_compression_swe_bench_precision"
     ],
-    "51": [
+    "52": [
       "learning_readme",
       "learning_readme_alur_pembelajaran",
       "learning_readme_self_learning_framework",
       "learning_readme_struktur_folder"
     ],
-    "52": [
+    "53": [
       "ponytail_skills_ponytail_debt_skill",
       "ponytail_skills_ponytail_debt_skill_boundaries",
       "ponytail_skills_ponytail_debt_skill_output",
       "ponytail_skills_ponytail_debt_skill_scan"
     ],
-    "53": [
+    "54": [
       "scripts_ingest_frontier_knowledge",
       "scripts_ingest_frontier_knowledge_build_all_frontier_datasets",
       "scripts_ingest_frontier_knowledge_ensure_dirs",
       "scripts_ingest_frontier_knowledge_rationale_1"
     ],
-    "54": [
+    "55": [
       "scripts_masterpiece_completer",
       "scripts_masterpiece_completer_fetch_tmdb_poster",
       "scripts_masterpiece_completer_main",
       "scripts_masterpiece_completer_search_apibay"
     ],
-    "55": [
+    "56": [
       "scripts_record_learning",
       "scripts_record_learning_main",
       "scripts_record_learning_record_new_learning",
       "scripts_record_learning_slugify"
     ],
-    "56": [
+    "57": [
       "agents_skills_graphify_skill",
       "agents_skills_graphify_skill_graphify",
       "agents_skills_graphify_skill_usage"
     ],
-    "57": [
+    "58": [
       "learning_knowledge_base_readme",
       "learning_knowledge_base_readme_knowledge_base_index",
       "learning_knowledge_base_readme_topik_aktif"
     ],
-    "58": [
+    "59": [
       "learning_neurons_n002_vps_remote_ops",
       "learning_neurons_n002_vps_remote_ops_core_concept",
       "learning_neurons_n002_vps_remote_ops_neuron_n002_vps_remote_operations_pipeline"
     ],
-    "59": [
+    "60": [
       "learning_neurons_n011_mechanical_sympathy_perf",
       "learning_neurons_n011_mechanical_sympathy_perf_1_cpu_cache_locality_data_oriented_design",
       "learning_neurons_n011_mechanical_sympathy_perf_2_zero_copy_i_o_asynchronous_event_loops"
     ],
-    "60": [
+    "61": [
       "learning_neurons_n012_deep_search_and_graph_rag",
       "learning_neurons_n012_deep_search_and_graph_rag_1_hybrid_search_reciprocal_rank_fusion_rrf",
       "learning_neurons_n012_deep_search_and_graph_rag_2_multi_hop_graphrag_ast_code_navigation"
     ],
-    "61": [
+    "62": [
       "learning_neurons_n013_deep_storage_and_distributed_db",
       "learning_neurons_n013_deep_storage_and_distributed_db_1_storage_engine_internals_lsm_tree_vs_b_tree",
       "learning_neurons_n013_deep_storage_and_distributed_db_2_distributed_transactions_vector_indexing"
     ],
-    "62": [
+    "63": [
       "learning_neurons_n015_compiler_ast_and_system_profiling",
       "learning_neurons_n015_compiler_ast_and_system_profiling_1_abstract_syntax_tree_ast_code_transformation",
       "learning_neurons_n015_compiler_ast_and_system_profiling_2_production_profiling_post_mortem_diagnostics"
     ],
-    "63": [
+    "64": [
       "learning_playbooks_graphify_workflow",
       "learning_playbooks_graphify_workflow_ekstraksi_refresh_graf",
       "learning_playbooks_graphify_workflow_playbook_graphify_workflow"
     ],
-    "64": [
+    "65": [
       "learning_playbooks_readme",
       "learning_playbooks_readme_daftar_playbook",
       "learning_playbooks_readme_playbooks"
     ],
-    "65": [
+    "66": [
       "learning_playbooks_self_improving",
       "learning_playbooks_self_improving_4_langkah_siklus_self_improving",
       "learning_playbooks_self_improving_playbook_self_improving_mechanism"
     ],
-    "66": [
+    "67": [
       "learning_scripts_grow_neurons",
       "learning_scripts_grow_neurons_grow_neural_mesh",
       "learning_scripts_grow_neurons_rationale_1"
     ],
-    "67": [
+    "68": [
       "scripts_auto_sync_github",
       "scripts_auto_sync_github_auto_sync",
       "scripts_auto_sync_github_run_cmd"
     ],
-    "68": [
+    "69": [
       "agents_rules_graphify",
       "agents_rules_graphify_graphify"
     ],
-    "69": [
+    "70": [
       "agents_workflows_graphify",
       "agents_workflows_graphify_workflow_graphify"
     ],
-    "70": [
+    "71": [
       "learning_reflections_readme",
       "learning_reflections_readme_reflections_memory_aggregations"
     ],
-    "71": [
+    "72": [
       "memory_neurons_ai_engine_9router",
       "memory_neurons_ai_engine_9router_neuron_memory_9router_ai_engine_web_production"
     ],
-    "72": [
+    "73": [
       "memory_neurons_mojoloker_brand",
       "memory_neurons_mojoloker_brand_neuron_memory_mojoloker_domain_brand_identity"
     ],
-    "73": [
+    "74": [
       "memory_neurons_ui_ux_design_rules",
       "memory_neurons_ui_ux_design_rules_neuron_memory_standar_desain_ui_ux_aturan_kode"
     ],
-    "74": [
+    "75": [
       "memory_neurons_user_profile",
       "memory_neurons_user_profile_neuron_memory_user_profile_persona"
     ],
-    "75": [
+    "76": [
       "memory_neurons_vps_infrastructure",
       "memory_neurons_vps_infrastructure_neuron_memory_vps_infrastructure_services"
     ],
-    "76": [
+    "77": [
       "ponytail_hooks_ponytail_statusline_sh__entry",
       "ponytail_hooks_ponytail_statusline_sh_ponytail_hooks_ponytail_statusline"
     ],
-    "77": [
+    "78": [
       "ecosystem_config"
     ],
-    "78": [
+    "79": [
       "github_copilot_instructions"
     ],
-    "79": [
+    "80": [
       "ponytail_hooks_ponytail_statusline_ps1_ponytail_hooks_ponytail_statusline"
     ],
-    "80": [
+    "81": [
       "ponytail_opencode_command_ponytail"
     ],
-    "81": [
+    "82": [
       "ponytail_opencode_command_ponytail_audit"
     ],
-    "82": [
+    "83": [
       "ponytail_opencode_command_ponytail_debt"
     ],
-    "83": [
+    "84": [
       "ponytail_opencode_command_ponytail_gain"
     ],
-    "84": [
+    "85": [
       "ponytail_opencode_command_ponytail_help"
     ],
-    "85": [
+    "86": [
       "ponytail_opencode_command_ponytail_review"
     ],
-    "86": [
+    "87": [
       "scripts_build_learn_ui"
     ],
-    "87": [
+    "88": [
       "scripts_build_neural_mesh_ui"
     ]
   },
@@ -836,20 +847,20 @@
     "19": 0.2222222222222222,
     "20": 0.2222222222222222,
     "21": 0.2222222222222222,
-    "22": 0.25,
+    "22": 0.2222222222222222,
     "23": 0.25,
     "24": 0.25,
-    "25": 0.4642857142857143,
-    "26": 0.2857142857142857,
+    "25": 0.25,
+    "26": 0.4642857142857143,
     "27": 0.2857142857142857,
     "28": 0.2857142857142857,
-    "29": 0.5238095238095238,
-    "30": 0.2857142857142857,
-    "31": 0.3333333333333333,
+    "29": 0.2857142857142857,
+    "30": 0.5238095238095238,
+    "31": 0.2857142857142857,
     "32": 0.3333333333333333,
     "33": 0.3333333333333333,
-    "34": 0.5333333333333333,
-    "35": 0.4,
+    "34": 0.3333333333333333,
+    "35": 0.5333333333333333,
     "36": 0.4,
     "37": 0.4,
     "38": 0.4,
@@ -857,7 +868,7 @@
     "40": 0.4,
     "41": 0.4,
     "42": 0.4,
-    "43": 0.5,
+    "43": 0.4,
     "44": 0.5,
     "45": 0.5,
     "46": 0.5,
@@ -867,10 +878,10 @@
     "50": 0.5,
     "51": 0.5,
     "52": 0.5,
-    "53": 0.6666666666666666,
-    "54": 0.8333333333333334,
+    "53": 0.5,
+    "54": 0.6666666666666666,
     "55": 0.8333333333333334,
-    "56": 0.6666666666666666,
+    "56": 0.8333333333333334,
     "57": 0.6666666666666666,
     "58": 0.6666666666666666,
     "59": 0.6666666666666666,
@@ -881,7 +892,7 @@
     "64": 0.6666666666666666,
     "65": 0.6666666666666666,
     "66": 0.6666666666666666,
-    "67": 1.0,
+    "67": 0.6666666666666666,
     "68": 1.0,
     "69": 1.0,
     "70": 1.0,
@@ -901,7 +912,8 @@
     "84": 1.0,
     "85": 1.0,
     "86": 1.0,
-    "87": 1.0
+    "87": 1.0,
+    "88": 1.0
   },
   "gods": [
     {
@@ -910,13 +922,13 @@
       "degree": 15
     },
     {
-      "id": "ponytail_pi_extension_index_ponytailextension",
-      "label": "ponytailExtension()",
+      "id": "ponytail_hooks_ponytail_instructions_getponytailinstructions",
+      "label": "getPonytailInstructions()",
       "degree": 13
     },
     {
-      "id": "ponytail_hooks_ponytail_instructions_getponytailinstructions",
-      "label": "getPonytailInstructions()",
+      "id": "ponytail_pi_extension_index_ponytailextension",
+      "label": "ponytailExtension()",
       "degree": 13
     },
     {
@@ -940,13 +952,13 @@
       "degree": 11
     },
     {
-      "id": "ponytail_hooks_ponytail_mode_tracker_finish",
-      "label": "finish()",
+      "id": "ponytail_hooks_ponytail_config_getdefaultmode",
+      "label": "getDefaultMode()",
       "degree": 9
     },
     {
-      "id": "ponytail_hooks_ponytail_config_getdefaultmode",
-      "label": "getDefaultMode()",
+      "id": "ponytail_hooks_ponytail_mode_tracker_finish",
+      "label": "finish()",
       "degree": 9
     },
     {
@@ -956,28 +968,6 @@
     }
   ],
   "surprises": [
-    {
-      "source": "getPonytailInstructions()",
-      "target": "normalizePersistedMode()",
-      "source_files": [
-        "ponytail/hooks/ponytail-instructions.js",
-        "ponytail/hooks/ponytail-config.js"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "calls",
-      "why": "bridges separate communities"
-    },
-    {
-      "source": "readMode()",
-      "target": "normalizePersistedMode()",
-      "source_files": [
-        "ponytail/.opencode/plugins/ponytail.mjs",
-        "ponytail/hooks/ponytail-config.js"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "calls",
-      "why": "bridges separate communities"
-    },
     {
       "source": "parsePonytailCommand()",
       "target": "normalizeMode()",
@@ -990,10 +980,10 @@
       "why": "bridges separate communities"
     },
     {
-      "source": "ponytailExtension()",
-      "target": "getDefaultMode()",
+      "source": "getPonytailInstructions()",
+      "target": "normalizePersistedMode()",
       "source_files": [
-        "ponytail/pi-extension/index.js",
+        "ponytail/hooks/ponytail-instructions.js",
         "ponytail/hooks/ponytail-config.js"
       ],
       "confidence": "EXTRACTED",
@@ -1001,11 +991,33 @@
       "why": "bridges separate communities"
     },
     {
+      "source": "finish()",
+      "target": "getPonytailInstructions()",
+      "source_files": [
+        "ponytail/hooks/ponytail-mode-tracker.js",
+        "ponytail/hooks/ponytail-instructions.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
       "source": "ponytailExtension()",
-      "target": "getHideStatus()",
+      "target": "getPonytailInstructions()",
       "source_files": [
         "ponytail/pi-extension/index.js",
-        "ponytail/hooks/ponytail-config.js"
+        "ponytail/hooks/ponytail-instructions.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "inject()",
+      "target": "writeHookOutput()",
+      "source_files": [
+        "ponytail/hooks/ponytail-subagent.js",
+        "ponytail/hooks/ponytail-runtime.js"
       ],
       "confidence": "EXTRACTED",
       "relation": "calls",
