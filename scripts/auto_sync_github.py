@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 import subprocess, os, sys, datetime, tempfile
 
 if sys.platform == "win32":
@@ -54,13 +54,13 @@ def auto_sync():
     pscp_cmd = f'& "C:\\Program Files\\PuTTY\\pscp.exe" -i "$env:USERPROFILE\\.ssh\\vps_ubuntu.ppk" "{temp_bundle}" ubuntu@169.58.92.168:/home/ubuntu/claudia_repo.bundle'
     subprocess.run(["powershell", "-Command", pscp_cmd], capture_output=True, timeout=60)
     
-    vps_push_cmd = 'ssh vps-ubuntu "cd /home/ubuntu/Agent_Claudia_Autonomus && (git pull /home/ubuntu/claudia_repo.bundle main || git reset --hard origin/main) && git push origin main && rm -f /home/ubuntu/claudia_repo.bundle"'
-    res_out, res_err, code = run_cmd(vps_push_cmd)
+    vps_sync_cmd = '& "C:\\Program Files\\PuTTY\\plink.exe" -batch -ssh ubuntu@169.58.92.168 -pw "kZn6giai9TEvwW?" "cd /home/ubuntu/Agent_Claudia_Autonomus && git pull /home/ubuntu/claudia_repo.bundle main --no-edit && git push origin main && rm -f /home/ubuntu/claudia_repo.bundle"'
+    res = subprocess.run(["powershell", "-Command", vps_sync_cmd], capture_output=True, text=True, timeout=90)
     
-    if code == 0:
-        print("[SUKSES] Berhasil sinkronisasi dan push pembelajaran ke repositori GitHub!")
+    if res.returncode == 0 and "Everything up-to-date" in res.stdout or "main -> main" in res.stdout or "main -> main" in res.stderr:
+        print("[SUKSES] Berhasil sinkronisasi dan push memori neuron ke repositori GitHub!")
     else:
-        print("[CATATAN] Output push:", res_out, res_err)
+        print("[STATUS] Output push:", res.stdout.strip(), res.stderr.strip())
 
 if __name__ == "__main__":
     auto_sync()
