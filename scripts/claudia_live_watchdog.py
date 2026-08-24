@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """
-Claudia 5.0 Max — 24/7 Autonomous Live Quant & Server Health Watchdog
+Claudia 5.0 Max — 24/7 Autonomous Live Gold Quant & Server Health Watchdog
 Features:
-1. Real-Time Gold (XAU/USD / PAXG) & Crypto (BTC/ETH) Quantitative Market Scanner (FVG, EMA 20/50, RSI, ATR 1:3 RRR).
+1. Real-Time Gold (XAU/USD / PAXG) Quantitative Market Scanner (FVG, EMA 20/50, RSI, ATR 1:3 RRR).
+   -> Pushed EXCLUSIVELY to Dedicated Gold Trading Bot (***TELEGRAM_TOKEN_REMOVED***).
 2. Autonomous PM2 Server Health Guard & Memory Leak Circuit Breaker (Zero-Downtime Auto-Heal).
-3. Autonomous Neural Learning & Incident Auto-Logger.
-4. Direct Telegram Notification Bridge to Mas Hanafi.
+   -> Pushed to System Server Bot (***TELEGRAM_TOKEN_REMOVED***).
+3. Zero crypto position notifications (Pure XAU/USD Gold Focus).
+4. Autonomous Neural Learning & Incident Auto-Logger.
 """
 
 import os
@@ -18,7 +20,8 @@ import subprocess
 from datetime import datetime
 
 # Configuration
-TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "***TELEGRAM_TOKEN_REMOVED***")
+TELEGRAM_SERVER_BOT_TOKEN = os.environ.get("TELEGRAM_SERVER_BOT_TOKEN", "***TELEGRAM_TOKEN_REMOVED***")
+TELEGRAM_GOLD_BOT_TOKEN = os.environ.get("TELEGRAM_GOLD_BOT_TOKEN", "***TELEGRAM_TOKEN_REMOVED***")
 TARGET_CHAT_ID = int(os.environ.get("TELEGRAM_CHAT_ID", "***CHAT_ID_REMOVED***"))
 POLL_INTERVAL_SEC = 60
 MEMORY_LIMIT_MB = 450.0
@@ -30,10 +33,10 @@ TELEMETRY_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__
 last_alert_time = {}
 service_restart_counts = {}
 
-def send_telegram(text: str) -> bool:
-    """Send alert to Mas Hanafi via Telegram Bot API."""
+def send_telegram_gold(text: str) -> bool:
+    """Send dedicated Gold (XAU/USD) position alert to Mas Hanafi."""
     try:
-        url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
+        url = f"https://api.telegram.org/bot{TELEGRAM_GOLD_BOT_TOKEN}/sendMessage"
         payload = json.dumps({
             "chat_id": TARGET_CHAT_ID,
             "text": text,
@@ -44,7 +47,24 @@ def send_telegram(text: str) -> bool:
         with urllib.request.urlopen(req, timeout=10) as resp:
             return resp.status == 200
     except Exception as e:
-        print(f"[ERROR] Failed to send Telegram: {e}")
+        print(f"[ERROR] Failed to send Gold Telegram: {e}")
+        return False
+
+def send_telegram_server(text: str) -> bool:
+    """Send server health & critical self-heal alert to system channel."""
+    try:
+        url = f"https://api.telegram.org/bot{TELEGRAM_SERVER_BOT_TOKEN}/sendMessage"
+        payload = json.dumps({
+            "chat_id": TARGET_CHAT_ID,
+            "text": text,
+            "parse_mode": "HTML",
+            "disable_web_page_preview": True
+        }).encode("utf-8")
+        req = urllib.request.Request(url, data=payload, headers={"Content-Type": "application/json"})
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            return resp.status == 200
+    except Exception as e:
+        print(f"[ERROR] Failed to send Server Telegram: {e}")
         return False
 
 def log_event(event_type: str, details: dict):
@@ -62,10 +82,10 @@ def log_event(event_type: str, details: dict):
         print(f"[WARN] Failed to write event log: {e}")
 
 # ==========================================
-# 📈 1. QUANTITATIVE MARKET SCANNER
+# 🟡 1. QUANTITATIVE GOLD (XAU/USD) SCANNER
 # ==========================================
 def fetch_klines(symbol: str, interval: str = "15m", limit: int = 50):
-    """Fetch public OHLCV klines from Binance with multi-endpoint fallback."""
+    """Fetch public OHLCV klines with multi-endpoint fallback."""
     endpoints = [
         f"https://api.binance.com/api/v3/klines?symbol={symbol}&interval={interval}&limit={limit}",
         f"https://data-api.binance.vision/api/v3/klines?symbol={symbol}&interval={interval}&limit={limit}",
@@ -75,7 +95,7 @@ def fetch_klines(symbol: str, interval: str = "15m", limit: int = 50):
     for url in endpoints:
         try:
             req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 Claudia/5.0"})
-            with urllib.request.urlopen(req, timeout=5) as resp:
+            with urllib.request.urlopen(req, timeout=6) as resp:
                 data = json.loads(resp.read().decode())
                 candles = []
                 for c in data:
@@ -152,8 +172,10 @@ def calculate_indicators(candles):
         "bearish_fvg": bearish_fvg
     }
 
-def scan_market_pair(symbol: str, label: str):
-    """Scan pair for A+ Institutional Setup."""
+def scan_gold_market():
+    """Scan Gold (PAXGUSDT / XAU/USD) for A+ Institutional Setup."""
+    symbol = "PAXGUSDT"
+    label = "Emas (XAU/USD)"
     candles = fetch_klines(symbol, interval="15m", limit=60)
     if not candles:
         return None
@@ -166,17 +188,17 @@ def scan_market_pair(symbol: str, label: str):
     atr = ind["atr"]
     now_ts = time.time()
     
-    # Check cooldown (30 mins per symbol)
+    # Check cooldown (30 mins per signal)
     last_t = last_alert_time.get(symbol, 0)
     if (now_ts - last_t) < 1800:
         return None
     
     signal = None
-    # BULLISH A+ SETUP: Bullish FVG, Price > EMA20 > EMA50, RSI in healthy zone (40-65)
+    # BULLISH A+ SETUP: Bullish FVG, Price > EMA20 > EMA50, RSI in healthy zone (40-68)
     if ind["bullish_fvg"] and (price > ind["ema20"] >= ind["ema50"]) and (40 <= ind["rsi"] <= 68):
-        sl = round(price - (1.5 * atr), 2 if "PAXG" in symbol else 1)
-        tp1 = round(price + (3.0 * atr), 2 if "PAXG" in symbol else 1)
-        tp2 = round(price + (4.5 * atr), 2 if "PAXG" in symbol else 1)
+        sl = round(price - (1.5 * atr), 2)
+        tp1 = round(price + (3.0 * atr), 2)
+        tp2 = round(price + (4.5 * atr), 2)
         rrr = round((tp1 - price) / (price - sl), 1)
         
         signal = {
@@ -194,9 +216,9 @@ def scan_market_pair(symbol: str, label: str):
     
     # BEARISH A+ SETUP: Bearish FVG, Price < EMA20 <= EMA50, RSI in healthy zone (32-60)
     elif ind["bearish_fvg"] and (price < ind["ema20"] <= ind["ema50"]) and (32 <= ind["rsi"] <= 60):
-        sl = round(price + (1.5 * atr), 2 if "PAXG" in symbol else 1)
-        tp1 = round(price - (3.0 * atr), 2 if "PAXG" in symbol else 1)
-        tp2 = round(price - (4.5 * atr), 2 if "PAXG" in symbol else 1)
+        sl = round(price + (1.5 * atr), 2)
+        tp1 = round(price - (3.0 * atr), 2)
+        tp2 = round(price - (4.5 * atr), 2)
         rrr = round((price - tp1) / (sl - price), 1)
         
         signal = {
@@ -215,10 +237,10 @@ def scan_market_pair(symbol: str, label: str):
     if signal:
         last_alert_time[symbol] = now_ts
         msg = (
-            f"🎯 <b>CLAUDIA 5.0 QUANT ALERT: {signal['label']}</b>\n"
+            f"🟡 <b>CLAUDIA 5.0 GOLD QUANT ALERT: XAU/USD</b>\n"
             f"━━━━━━━━━━━━━━━━━━━━━\n"
-            f"📊 <b>Arah:</b> <code>{signal['action']}</code>\n"
-            f"💵 <b>Entri:</b> <code>${signal['entry']}</code>\n"
+            f"📊 <b>Arah Posisi:</b> <code>{signal['action']}</code>\n"
+            f"💵 <b>Harga Entri:</b> <code>${signal['entry']}</code>\n"
             f"🛑 <b>Stop Loss (SL):</b> <code>${signal['sl']}</code>\n"
             f"🎯 <b>Take Profit 1 (TP1):</b> <code>${signal['tp1']}</code> (RRR {signal['rrr']})\n"
             f"🎯 <b>Take Profit 2 (TP2):</b> <code>${signal['tp2']}</code>\n"
@@ -227,9 +249,9 @@ def scan_market_pair(symbol: str, label: str):
             f"━━━━━━━━━━━━━━━━━━━━━\n"
             f"⏰ <i>Waktu: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} WIB</i>"
         )
-        send_telegram(msg)
-        log_event("QUANT_SIGNAL", signal)
-        print(f"[QUANT SIGNAL] Dispatched {symbol} {signal['action']} @ ${price}")
+        send_telegram_gold(msg)
+        log_event("GOLD_QUANT_SIGNAL", signal)
+        print(f"[GOLD SIGNAL] Dispatched XAU/USD {signal['action']} @ ${price} to Gold Bot")
         return signal
 
     return None
@@ -242,7 +264,7 @@ def inspect_and_heal_services():
     try:
         res = subprocess.run(["pm2", "jlist"], capture_output=True, text=True, timeout=10)
         if res.returncode != 0 or not res.stdout.strip():
-            return
+            return 0, 0
         
         services = json.loads(res.stdout)
         healed = []
@@ -282,7 +304,7 @@ def inspect_and_heal_services():
                     f"━━━━━━━━━━━━━━━━━━━━━\n"
                     f"⏰ <i>{datetime.now().strftime('%Y-%m-%d %H:%M:%S')} WIB</i>"
                 )
-                send_telegram(msg)
+                send_telegram_server(msg)
                 log_event("SERVER_SELF_HEAL", {"service": name, "reason": heal_reason})
                 print(f"[SELF-HEAL] Repaired {name} (ID: {pm_id}) due to {heal_reason}")
                 
@@ -295,30 +317,29 @@ def inspect_and_heal_services():
 # 🔄 3. MASTER DAEMON LOOP
 # ==========================================
 def run_watchdog():
-    print(f"🚀 [CLAUDIA 5.0 MAX] Autonomous Live Quant & Server Watchdog Started.")
-    print(f"   - Monitoring Pairs: PAXGUSDT (Gold), BTCUSDT (Bitcoin), ETHUSDT (Ethereum)")
+    print(f"🚀 [CLAUDIA 5.0 MAX] Dedicated Gold Quant & Server Health Watchdog Started.")
+    print(f"   - Dedicated Gold Bot: Active (Token: 8893090639...)")
+    print(f"   - Monitoring Target: Emas (XAU/USD - PAXG)")
+    print(f"   - Crypto Position Signals: DISABLED")
     print(f"   - PM2 Auto-Healing: Active (< {MEMORY_LIMIT_MB} MB ceiling)")
-    print(f"   - Telegram Alerts: Enabled (Chat ID: {TARGET_CHAT_ID})")
     
-    # Startup notification
-    send_telegram(
-        f"🤖 <b>CLAUDIA 5.0 MAX: AUTONOMOUS DAEMON AKTIF</b>\n"
+    # Startup notification to Gold Bot
+    send_telegram_gold(
+        f"🟡 <b>CLAUDIA 5.0 GOLD QUANT TRADING BOT AKTIF</b>\n"
         f"━━━━━━━━━━━━━━━━━━━━━\n"
-        f"⚡ <b>Mode:</b> 24/7 Live Quant & Server Self-Healing Guard\n"
-        f"🟡 <b>Pasar:</b> Emas (XAU/USD - PAXG) & Kripto (BTC, ETH)\n"
-        f"🛡️ <b>Server:</b> 13 Layanan PM2 terpantau penuh\n"
+        f"⚡ <b>Fokus Pasar:</b> Emas (XAU/USD)\n"
+        f"📊 <b>Strategi:</b> SMC Fair Value Gap (FVG) + EMA 20/50 + ATR (Min RRR 1:3)\n"
+        f"🛡️ <b>Target Notifikasi:</b> Posisi Trading Emas Khusus Mas Hanafi\n"
         f"━━━━━━━━━━━━━━━━━━━━━\n"
-        f"✨ <i>Siap beroperasi dan memindai sinyal secara otonom.</i>"
+        f"✨ <i>Bot siap mengirimkan sinyal entri, TP, dan SL secara realtime.</i>"
     )
     
     scan_count = 0
     while True:
         try:
             scan_count += 1
-            # 1. Market Scans
-            scan_market_pair("PAXGUSDT", "Emas (XAU/USD)")
-            scan_market_pair("BTCUSDT", "Bitcoin (BTC/USDT)")
-            scan_market_pair("ETHUSDT", "Ethereum (ETH/USDT)")
+            # 1. Dedicated Gold Market Scan Only
+            scan_gold_market()
             
             # 2. Server Health Scans
             total_svc, healed_count = inspect_and_heal_services()
@@ -329,6 +350,7 @@ def run_watchdog():
                 "scan_cycles": scan_count,
                 "monitored_services": total_svc,
                 "total_healed": sum(service_restart_counts.values()),
+                "gold_bot_target": TARGET_CHAT_ID,
                 "status": "HEALTHY_OPERATIONAL"
             }
             try:
