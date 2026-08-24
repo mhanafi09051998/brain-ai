@@ -1,6 +1,53 @@
 {
   "communities": {
     "0": [
+      "ponytail_agents",
+      "ponytail_agents_ponytail_lazy_senior_dev_mode",
+      "ponytail_readme_es",
+      "ponytail_readme_es_antes_despu\u00e9s",
+      "ponytail_readme_es_antigravity_cli",
+      "ponytail_readme_es_claude_code",
+      "ponytail_readme_es_codewhale",
+      "ponytail_readme_es_codex",
+      "ponytail_readme_es_comandos",
+      "ponytail_readme_es_c\u00f3mo_funciona",
+      "ponytail_readme_es_desarrollo",
+      "ponytail_readme_es_devin_cli",
+      "ponytail_readme_es_faq",
+      "ponytail_readme_es_gemini_cli",
+      "ponytail_readme_es_github_copilot_cli",
+      "ponytail_readme_es_historial_de_estrellas",
+      "ponytail_readme_es_instalaci\u00f3n",
+      "ponytail_readme_es_licencia",
+      "ponytail_readme_es_n\u00fameros",
+      "ponytail_readme_es_openclaw",
+      "ponytail_readme_es_opencode",
+      "ponytail_readme_es_patrocinadores",
+      "ponytail_readme_es_pi_agent_harness",
+      "ponytail_readme_ko",
+      "ponytail_readme_ko_antigravity_cli",
+      "ponytail_readme_ko_before_after",
+      "ponytail_readme_ko_claude_code",
+      "ponytail_readme_ko_codewhale",
+      "ponytail_readme_ko_codex",
+      "ponytail_readme_ko_commands",
+      "ponytail_readme_ko_development",
+      "ponytail_readme_ko_devin_cli",
+      "ponytail_readme_ko_faq",
+      "ponytail_readme_ko_gemini_cli",
+      "ponytail_readme_ko_github_copilot_cli",
+      "ponytail_readme_ko_how_it_works",
+      "ponytail_readme_ko_install",
+      "ponytail_readme_ko_license",
+      "ponytail_readme_ko_numbers",
+      "ponytail_readme_ko_openclaw",
+      "ponytail_readme_ko_opencode",
+      "ponytail_readme_ko_pi_agent_harness",
+      "ponytail_readme_ko_sponsors",
+      "ponytail_readme_ko_star_history",
+      "ponytail_readme_ko_swival"
+    ],
+    "1": [
       "learning_neurons_n001_executive_decisions",
       "learning_neurons_n001_executive_decisions_core_concept",
       "learning_neurons_n001_executive_decisions_neuron_n001_executive_decision_making",
@@ -46,7 +93,7 @@
       "learning_neurons_n022_multi_agent_consensus_algoritma_deterministik_pure_python_standard_library",
       "learning_neurons_n022_multi_agent_consensus_neuron_n022_multi_agent_consensus_hierarchical_swarm_deliberation"
     ],
-    "1": [
+    "2": [
       "ponytail_package",
       "ponytail_package_author",
       "ponytail_package_author_name",
@@ -89,7 +136,7 @@
       "ref_scripts_uninstall_js",
       "ref_skills"
     ],
-    "2": [
+    "3": [
       "ponytail_qoder_rules_ponytail",
       "ponytail_qoder_rules_ponytail_ponytail_lazy_senior_dev_mode",
       "ponytail_readme",
@@ -118,7 +165,7 @@
       "ponytail_readme_swival",
       "ponytail_readme_uninstall"
     ],
-    "3": [
+    "4": [
       "scripts_benchmark_engine",
       "scripts_benchmark_engine_rationale_1",
       "scripts_benchmark_engine_run_evaluation_checks",
@@ -146,78 +193,143 @@
       "scripts_niah_evaluator_rationale_45",
       "scripts_niah_evaluator_rationale_77"
     ],
-    "4": [
-      "ponytail_agents",
-      "ponytail_agents_ponytail_lazy_senior_dev_mode",
-      "ponytail_readme_es",
-      "ponytail_readme_es_antes_despu\u00e9s",
-      "ponytail_readme_es_antigravity_cli",
-      "ponytail_readme_es_claude_code",
-      "ponytail_readme_es_codewhale",
-      "ponytail_readme_es_codex",
-      "ponytail_readme_es_comandos",
-      "ponytail_readme_es_c\u00f3mo_funciona",
-      "ponytail_readme_es_desarrollo",
-      "ponytail_readme_es_devin_cli",
-      "ponytail_readme_es_faq",
-      "ponytail_readme_es_gemini_cli",
-      "ponytail_readme_es_github_copilot_cli",
-      "ponytail_readme_es_historial_de_estrellas",
-      "ponytail_readme_es_instalaci\u00f3n",
-      "ponytail_readme_es_licencia",
-      "ponytail_readme_es_n\u00fameros",
-      "ponytail_readme_es_openclaw",
-      "ponytail_readme_es_opencode",
-      "ponytail_readme_es_patrocinadores",
-      "ponytail_readme_es_pi_agent_harness"
-    ],
     "5": [
-      "ponytail_readme_ko",
-      "ponytail_readme_ko_antigravity_cli",
-      "ponytail_readme_ko_before_after",
-      "ponytail_readme_ko_claude_code",
-      "ponytail_readme_ko_codewhale",
-      "ponytail_readme_ko_codex",
-      "ponytail_readme_ko_commands",
-      "ponytail_readme_ko_development",
-      "ponytail_readme_ko_devin_cli",
-      "ponytail_readme_ko_faq",
-      "ponytail_readme_ko_gemini_cli",
-      "ponytail_readme_ko_github_copilot_cli",
-      "ponytail_readme_ko_how_it_works",
-      "ponytail_readme_ko_install",
-      "ponytail_readme_ko_license",
-      "ponytail_readme_ko_numbers",
-      "ponytail_readme_ko_openclaw",
-      "ponytail_readme_ko_opencode",
-      "ponytail_readme_ko_pi_agent_harness",
-      "ponytail_readme_ko_sponsors",
-      "ponytail_readme_ko_star_history",
-      "ponytail_readme_ko_swival"
+      "learning_neurons_n035_event_driven_streaming_cqrs",
+      "learning_neurons_n035_event_driven_streaming_cqrs_1_modern_streaming_engine_mechanics_kafka_vs_redpanda_vs_nats_jetstream",
+      "learning_neurons_n035_event_driven_streaming_cqrs_2_cqrs_event_sourcing_architecture",
+      "learning_neurons_n035_event_driven_streaming_cqrs_3_transactional_outbox_pattern_cdc_invariant",
+      "learning_neurons_n035_event_driven_streaming_cqrs_4_resilient_delivery_poison_pill_isolation_multi_tier_dlq",
+      "learning_neurons_n035_event_driven_streaming_cqrs_5_end_to_end_idempotency_deduplication_invariants",
+      "learning_neurons_n035_event_driven_streaming_cqrs_6_invariant_self_check_executable_pure_python_standard_library",
+      "learning_neurons_n035_event_driven_streaming_cqrs_a_apache_kafka_kraft_metadata_zero_copy_transfer",
+      "learning_neurons_n035_event_driven_streaming_cqrs_a_klasifikasi_error",
+      "learning_neurons_n035_event_driven_streaming_cqrs_a_realitas_at_least_once_delivery",
+      "learning_neurons_n035_event_driven_streaming_cqrs_a_state_as_a_left_fold_over_immutable_events",
+      "learning_neurons_n035_event_driven_streaming_cqrs_a_the_dual_write_hazard",
+      "learning_neurons_n035_event_driven_streaming_cqrs_b_3_strategi_idempotensi_consumer",
+      "learning_neurons_n035_event_driven_streaming_cqrs_b_aggregate_root_optimistic_concurrency_control_occ",
+      "learning_neurons_n035_event_driven_streaming_cqrs_b_multi_tier_retry_exponential_backoff_invariant",
+      "learning_neurons_n035_event_driven_streaming_cqrs_b_outbox_schema_invariant_postgresql_ddl",
+      "learning_neurons_n035_event_driven_streaming_cqrs_b_redpanda_c_20_seastar_thread_per_core_direct_i_o",
+      "learning_neurons_n035_event_driven_streaming_cqrs_c_nats_jetstream_go_native_subject_based_routing_ultra_lightweight",
+      "learning_neurons_n035_event_driven_streaming_cqrs_c_reliable_outbox_dispatch_patterns",
+      "learning_neurons_n035_event_driven_streaming_cqrs_c_snapshotting_invariant",
+      "learning_neurons_n035_event_driven_streaming_cqrs_d_architectural_engine_matrix",
+      "learning_neurons_n035_event_driven_streaming_cqrs_neuron_n035_ultra_scale_event_driven_streaming_cqrs_architecture"
     ],
     "6": [
-      "ponytail_hooks_ponytail_config_normalizeconfigmode",
-      "ponytail_hooks_ponytail_config_normalizepersistedmode",
-      "ponytail_hooks_ponytail_config_runtime_modes",
-      "ponytail_pi_extension_index",
-      "ponytail_pi_extension_index_default_mode_runtime_modes_getdefaultmode_getquietstartup_gethidestatus_normalizemode_normalizepersistedmode_isdeactivationcommand_writedefaultmode",
-      "ponytail_pi_extension_index_getponytailinstructions_filterskillbodyformode",
-      "ponytail_pi_extension_index_parseponytailcommand",
-      "ponytail_pi_extension_index_ponytailextension",
-      "ponytail_pi_extension_index_ponytailextension_syncstatus",
-      "ponytail_pi_extension_index_readdefaultmode",
-      "ponytail_pi_extension_index_readquietstartup",
-      "ponytail_pi_extension_index_require",
-      "ponytail_pi_extension_index_resolvesessionmode",
-      "ponytail_pi_extension_index_runtime_mode_list",
-      "ponytail_pi_extension_test_extension_test",
-      "ponytail_pi_extension_test_extension_test_createcommandcontext",
-      "ponytail_pi_extension_test_extension_test_createpiharness",
-      "ponytail_pi_extension_test_extension_test_notify",
-      "ponytail_pi_extension_test_extension_test_withtempconfig",
-      "ponytail_pi_extension_test_helpers_test"
+      "learning_neurons_n037_wasm_wasi_microvm_sandboxing",
+      "learning_neurons_n037_wasm_wasi_microvm_sandboxing_1_1_linear_memory_model_page_granularity",
+      "learning_neurons_n037_wasm_wasi_microvm_sandboxing_1_2_hardware_guard_pages_zero_cost_signal_traps",
+      "learning_neurons_n037_wasm_wasi_microvm_sandboxing_1_3_shadow_stack_control_flow_integrity_cfi",
+      "learning_neurons_n037_wasm_wasi_microvm_sandboxing_1_webassembly_linear_memory_sandboxing_hardware_intercepts",
+      "learning_neurons_n037_wasm_wasi_microvm_sandboxing_2_1_paradigma_capability_based_security_zero_ambient_authority",
+      "learning_neurons_n037_wasm_wasi_microvm_sandboxing_2_2_evolusi_wasi_the_component_model_wasi_preview_2_wasm_2_0",
+      "learning_neurons_n037_wasm_wasi_microvm_sandboxing_2_wasi_webassembly_system_interface_capability_based_security",
+      "learning_neurons_n037_wasm_wasi_microvm_sandboxing_3_1_wasmtime_cranelift_jit_invariants",
+      "learning_neurons_n037_wasm_wasi_microvm_sandboxing_3_2_extism_universal_plugin_framework",
+      "learning_neurons_n037_wasm_wasi_microvm_sandboxing_3_high_performance_runtimes_wasmtime_universal_plugins_extism",
+      "learning_neurons_n037_wasm_wasi_microvm_sandboxing_4_1_hardware_virtualization_kvm_dev_kvm",
+      "learning_neurons_n037_wasm_wasi_microvm_sandboxing_4_2_arsitektur_firecracker_micro_vm",
+      "learning_neurons_n037_wasm_wasi_microvm_sandboxing_4_3_confinement_the_firecracker_jailer",
+      "learning_neurons_n037_wasm_wasi_microvm_sandboxing_4_micro_vms_hardware_assisted_virtualization_firecracker_kvm",
+      "learning_neurons_n037_wasm_wasi_microvm_sandboxing_5_1_arsitektur_v8_isolate_cloudflare_workers_deno_core",
+      "learning_neurons_n037_wasm_wasi_microvm_sandboxing_5_2_startup_latency_v8_snapshots",
+      "learning_neurons_n037_wasm_wasi_microvm_sandboxing_5_v8_isolates_ultra_dense_edge_compute",
+      "learning_neurons_n037_wasm_wasi_microvm_sandboxing_6_matriks_perbandingan_teknologi_sandboxing",
+      "learning_neurons_n037_wasm_wasi_microvm_sandboxing_7_zero_trust_untrusted_plugin_execution_pipeline",
+      "learning_neurons_n037_wasm_wasi_microvm_sandboxing_8_invariant_self_check_executable_pure_python_standard_library",
+      "learning_neurons_n037_wasm_wasi_microvm_sandboxing_neuron_n037_webassembly_wasm_wasi_micro_vm_sandboxing"
     ],
     "7": [
+      "learning_neurons_n044_statistical_arbitrage_pairs",
+      "learning_neurons_n044_statistical_arbitrage_pairs_1_cointegration_vs_correlation_econometric_stationarity",
+      "learning_neurons_n044_statistical_arbitrage_pairs_2_ornstein_uhlenbeck_ou_mean_reversion_stochastic_process",
+      "learning_neurons_n044_statistical_arbitrage_pairs_3_dynamic_online_hedge_ratio_via_2d_kalman_filter",
+      "learning_neurons_n044_statistical_arbitrage_pairs_4_gold_silver_xau_vs_xag_ratio_z_score_trading_engine",
+      "learning_neurons_n044_statistical_arbitrage_pairs_5_pure_python_standard_library_implementation_self_check",
+      "learning_neurons_n044_statistical_arbitrage_pairs_a_bahaya_korelasi_palsu_spurious_regression",
+      "learning_neurons_n044_statistical_arbitrage_pairs_a_konstruksi_spread_normalisasi_z_score_adaptif",
+      "learning_neurons_n044_statistical_arbitrage_pairs_a_mengapa_static_ols_rolling_window_gagal",
+      "learning_neurons_n044_statistical_arbitrage_pairs_a_persamaan_diferensial_stokastik_sde",
+      "learning_neurons_n044_statistical_arbitrage_pairs_b_definisi_formal_kointegrasi_order_of_integration",
+      "learning_neurons_n044_statistical_arbitrage_pairs_b_finite_state_machine_fsm_logika_eksekusi",
+      "learning_neurons_n044_statistical_arbitrage_pairs_b_formulasi_ruang_keadaan_state_space_formulation",
+      "learning_neurons_n044_statistical_arbitrage_pairs_b_solusi_analitik_integrasi_it\u00f4_distribusi_kondisional",
+      "learning_neurons_n044_statistical_arbitrage_pairs_c_ekstraksi_residual_inovasi_real_time",
+      "learning_neurons_n044_statistical_arbitrage_pairs_c_pembatas_friksi_likuiditas_slippage_hurdle",
+      "learning_neurons_n044_statistical_arbitrage_pairs_c_pemetaan_ar_1_diskrit_kalibrasi_parameter_mle",
+      "learning_neurons_n044_statistical_arbitrage_pairs_c_uji_akar_unit_augmented_dickey_fuller_adf",
+      "learning_neurons_n044_statistical_arbitrage_pairs_d_half_life_of_mean_reversion_tau_1_2_quantitative_filter",
+      "learning_neurons_n044_statistical_arbitrage_pairs_d_uji_kointegrasi_multivariat_johansen_vecm_framework",
+      "learning_neurons_n044_statistical_arbitrage_pairs_invarian_seleksi_pasangan",
+      "learning_neurons_n044_statistical_arbitrage_pairs_neuron_n044_statistical_arbitrage_pairs_trading_cointegration"
+    ],
+    "8": [
+      "learning_neurons_n034_runtime_profiler_memory_oracle",
+      "learning_neurons_n034_runtime_profiler_memory_oracle_1_continuous_in_kernel_ebpf_profiling_tracing_architecture",
+      "learning_neurons_n034_runtime_profiler_memory_oracle_2_sampling_profilers_multi_runtime_stack_unwinding_py_spy_pprof",
+      "learning_neurons_n034_runtime_profiler_memory_oracle_3_sub_millisecond_flamegraph_cpu_contention_analysis",
+      "learning_neurons_n034_runtime_profiler_memory_oracle_4_memory_leak_oracle_heap_profiling_advanced_allocator_internals",
+      "learning_neurons_n034_runtime_profiler_memory_oracle_5_invariant_self_check_executable_pure_python_3_12_standard_library",
+      "learning_neurons_n034_runtime_profiler_memory_oracle_a_algoritma_konstruksi_flamegraph",
+      "learning_neurons_n034_runtime_profiler_memory_oracle_a_arsitektur_heap_allocator_modern_jemalloc_mimalloc",
+      "learning_neurons_n034_runtime_profiler_memory_oracle_a_ebpf_subsystem_bpf_co_re_compile_once_run_everywhere",
+      "learning_neurons_n034_runtime_profiler_memory_oracle_a_sampling_profiling_vs_instrumentation_overhead",
+      "learning_neurons_n034_runtime_profiler_memory_oracle_b_cpython_stack_unwinding_internals_python_3_11_3_13",
+      "learning_neurons_n034_runtime_profiler_memory_oracle_b_on_cpu_off_cpu_profiling_engine",
+      "learning_neurons_n034_runtime_profiler_memory_oracle_b_taksonomi_anomali_memori_leak_vs_retention_vs_fragmentation",
+      "learning_neurons_n034_runtime_profiler_memory_oracle_b_varian_analisis_flamegraph",
+      "learning_neurons_n034_runtime_profiler_memory_oracle_c_google_continuous_profiling_standard_pprof_protocol",
+      "learning_neurons_n034_runtime_profiler_memory_oracle_c_hardware_performance_counters_pmu_pmc",
+      "learning_neurons_n034_runtime_profiler_memory_oracle_c_profiling_produksi_berbasis_jemalloc_jeprof",
+      "learning_neurons_n034_runtime_profiler_memory_oracle_d_cpython_memory_tracking_snapshot_diffing_tracemalloc",
+      "learning_neurons_n034_runtime_profiler_memory_oracle_d_thread_lock_contention_futex_oracle",
+      "learning_neurons_n034_runtime_profiler_memory_oracle_neuron_n034_autonomous_runtime_profiler_flamegraph_memory_leak_oracle"
+    ],
+    "9": [
+      "learning_neurons_n046_algorithmic_execution_engines",
+      "learning_neurons_n046_algorithmic_execution_engines_1_mathematical_taxonomy_execution_engine_foundations",
+      "learning_neurons_n046_algorithmic_execution_engines_2_execution_strategy_architectures",
+      "learning_neurons_n046_algorithmic_execution_engines_3_almgren_chriss_optimal_liquidation_framework",
+      "learning_neurons_n046_algorithmic_execution_engines_4_iceberg_order_detection_l3_hidden_liquidity_reconstruction",
+      "learning_neurons_n046_algorithmic_execution_engines_5_smart_order_routing_sor_engine_cross_venue_sweeper",
+      "learning_neurons_n046_algorithmic_execution_engines_6_comprehensive_stdlib_implementation_deterministic_verification",
+      "learning_neurons_n046_algorithmic_execution_engines_7_execution_invariants_operational_rules",
+      "learning_neurons_n046_algorithmic_execution_engines_a_benchmark_metrics_implementation_shortfall",
+      "learning_neurons_n046_algorithmic_execution_engines_a_consolidated_order_book_cob_reconstruction",
+      "learning_neurons_n046_algorithmic_execution_engines_a_iceberg_mechanism",
+      "learning_neurons_n046_algorithmic_execution_engines_a_mathematical_derivation_of_optimal_liquidation",
+      "learning_neurons_n046_algorithmic_execution_engines_a_time_weighted_average_price_twap_with_randomized_jitter",
+      "learning_neurons_n046_algorithmic_execution_engines_b_algoritma_deteksi_estimasi_hidden_size",
+      "learning_neurons_n046_algorithmic_execution_engines_b_routing_cost_objective_function",
+      "learning_neurons_n046_algorithmic_execution_engines_b_volume_weighted_average_price_vwap_engine",
+      "learning_neurons_n046_algorithmic_execution_engines_c_optimal_multi_venue_sweep_allocation_lagrangian_knapsack_solver",
+      "learning_neurons_n046_algorithmic_execution_engines_c_percentage_of_volume_pov_participation_rate",
+      "learning_neurons_n046_algorithmic_execution_engines_neuron_n046_algorithmic_execution_engines_smart_order_routing"
+    ],
+    "10": [
+      "learning_neurons_n049_financial_sentiment_news_nlp",
+      "learning_neurons_n049_financial_sentiment_news_nlp_1_1_invarian_kalender_ekonomi_berdampak_tinggi_high_impact_macro_triggers",
+      "learning_neurons_n049_financial_sentiment_news_nlp_1_2_standardized_economic_surprise_formula_z_score",
+      "learning_neurons_n049_financial_sentiment_news_nlp_1_high_speed_macroeconomic_calendar_parsing_economic_surprise_index",
+      "learning_neurons_n049_financial_sentiment_news_nlp_2_1_taksonomi_leksikon_bobot_sentimen_moneter_hawkish_vs_dovish",
+      "learning_neurons_n049_financial_sentiment_news_nlp_2_2_algoritma_pergeseran_valensi_penyangkalan_contextual_valence_shifting",
+      "learning_neurons_n049_financial_sentiment_news_nlp_2_3_differential_statement_parsing_delta_theta",
+      "learning_neurons_n049_financial_sentiment_news_nlp_2_central_bank_hawkish_dovish_token_classification_statement_delta_diffing",
+      "learning_neurons_n049_financial_sentiment_news_nlp_3_1_sec_edgar_feed_form_8_k_form_4_form_13f",
+      "learning_neurons_n049_financial_sentiment_news_nlp_3_2_cftc_commitments_of_traders_cot_positioning_imbalance",
+      "learning_neurons_n049_financial_sentiment_news_nlp_3_regulatory_filings_institutional_positioning_signals_sec_cftc",
+      "learning_neurons_n049_financial_sentiment_news_nlp_4_1_metrik_kecepatan_sosial_social_velocity_burst_detection",
+      "learning_neurons_n049_financial_sentiment_news_nlp_4_2_santiment_lunarcrush_volume_price_divergence_invariant",
+      "learning_neurons_n049_financial_sentiment_news_nlp_4_crypto_social_sentiment_alpha_velocity_narrative_mining",
+      "learning_neurons_n049_financial_sentiment_news_nlp_5_1_komposisi_skor_alpha_multi_faktor",
+      "learning_neurons_n049_financial_sentiment_news_nlp_5_2_guardrail_eksekusi_saat_berita_berdampak_tinggi_shock_circuit_breakers",
+      "learning_neurons_n049_financial_sentiment_news_nlp_5_algorithmic_trading_signal_generation_execution_guardrails",
+      "learning_neurons_n049_financial_sentiment_news_nlp_6_zero_dependency_stdlib_python_implementation_self_check",
+      "learning_neurons_n049_financial_sentiment_news_nlp_neuron_n049_financial_sentiment_nlp_high_impact_economic_news_parsing"
+    ],
+    "11": [
       "ponytail_hooks_ponytail_config_isdeactivationcommand",
       "ponytail_hooks_ponytail_config_writedefaultmode",
       "ponytail_hooks_ponytail_mode_tracker",
@@ -238,7 +350,107 @@
       "ponytail_hooks_ponytail_runtime_statepath",
       "ponytail_hooks_ponytail_runtime_writehookoutput"
     ],
-    "8": [
+    "12": [
+      "learning_neurons_n036_fullstack_product_synthesizer",
+      "learning_neurons_n036_fullstack_product_synthesizer_1_0_to_1_full_stack_product_synthesis_architecture",
+      "learning_neurons_n036_fullstack_product_synthesizer_2_database_layer_dual_dialect_drizzle_schema_synthesis",
+      "learning_neurons_n036_fullstack_product_synthesizer_3_api_gateway_sub_millisecond_type_safe_rpc_layer_hono_v4",
+      "learning_neurons_n036_fullstack_product_synthesizer_4_frontend_ui_engine_next_js_15_app_router_tailwind_v4",
+      "learning_neurons_n036_fullstack_product_synthesizer_5_playwright_e2e_test_oracle_zero_flakiness_testing_matrix",
+      "learning_neurons_n036_fullstack_product_synthesizer_6_autonomous_0_to_1_synthesis_pipeline_checklist",
+      "learning_neurons_n036_fullstack_product_synthesizer_7_runnable_pure_standard_library_test_invariants",
+      "learning_neurons_n036_fullstack_product_synthesizer_a_dual_engine_dialect_compatibility_postgresql_17_sqlite_wal",
+      "learning_neurons_n036_fullstack_product_synthesizer_a_server_components_first_optimistic_server_actions",
+      "learning_neurons_n036_fullstack_product_synthesizer_a_sub_millisecond_route_dispatching_strict_validation",
+      "learning_neurons_n036_fullstack_product_synthesizer_a_the_flakiness_zero_tolerance_manifesto",
+      "learning_neurons_n036_fullstack_product_synthesizer_a_the_minimality_ladder_in_full_stack_generation",
+      "learning_neurons_n036_fullstack_product_synthesizer_b_page_object_model_pom_standard",
+      "learning_neurons_n036_fullstack_product_synthesizer_b_relational_integrity_migration_invariants",
+      "learning_neurons_n036_fullstack_product_synthesizer_b_security_cors_rate_limiting_invariants",
+      "learning_neurons_n036_fullstack_product_synthesizer_c_critical_user_journey_cuj_e2e_spec",
+      "learning_neurons_n036_fullstack_product_synthesizer_neuron_n036_autonomous_full_stack_product_synthesizer_e2e_test_oracle"
+    ],
+    "13": [
+      "learning_neurons_n039_webrtc_av_dsp_streaming",
+      "learning_neurons_n039_webrtc_av_dsp_streaming_1_1_end_to_end_latency_budget_breakdown_100_text_ms",
+      "learning_neurons_n039_webrtc_av_dsp_streaming_1_2_webrtc_transport_protocol_stack_cryptographic_handshake",
+      "learning_neurons_n039_webrtc_av_dsp_streaming_1_3_transport_wide_congestion_control_twcc_rfc_8888_bwe_algorithms",
+      "learning_neurons_n039_webrtc_av_dsp_streaming_1_ultra_low_latency_100ms_webrtc_architecture_transport_pipeline",
+      "learning_neurons_n039_webrtc_av_dsp_streaming_2_1_topologi_media_matriks_perbandingan_kritis",
+      "learning_neurons_n039_webrtc_av_dsp_streaming_2_2_sfu_zero_decode_routing_rtp_stream_rewriting",
+      "learning_neurons_n039_webrtc_av_dsp_streaming_2_3_simulcast_vs_av1_scalable_video_coding_svc",
+      "learning_neurons_n039_webrtc_av_dsp_streaming_2_media_topology_sfu_vs_mcu_vs_mesh_scalable_video_routing",
+      "learning_neurons_n039_webrtc_av_dsp_streaming_3_1_real_time_audio_dsp_engine_aec3_ns_agc2_opus",
+      "learning_neurons_n039_webrtc_av_dsp_streaming_3_2_av1_real_time_hardware_transcoding_codec_invariants",
+      "learning_neurons_n039_webrtc_av_dsp_streaming_3_audio_video_dsp_pipelines_opus_av1_hardware_transcoding",
+      "learning_neurons_n039_webrtc_av_dsp_streaming_4_1_rfc_3550_inter_arrival_jitter_estimation_playout_target",
+      "learning_neurons_n039_webrtc_av_dsp_streaming_4_2_time_scale_modification_via_wsola_waveform_similarity_overlap_add",
+      "learning_neurons_n039_webrtc_av_dsp_streaming_4_3_hybrid_loss_recovery_packet_loss_concealment_plc",
+      "learning_neurons_n039_webrtc_av_dsp_streaming_4_adaptive_jitter_buffer_neteq_packet_loss_concealment_plc",
+      "learning_neurons_n039_webrtc_av_dsp_streaming_5_invariant_self_check_executable_pure_python_standard_library",
+      "learning_neurons_n039_webrtc_av_dsp_streaming_neuron_n039_real_time_webrtc_audio_video_dsp_av1_streaming"
+    ],
+    "14": [
+      "learning_neurons_n050_systematic_backtesting_wfa",
+      "learning_neurons_n050_systematic_backtesting_wfa_1_arsitektur_event_driven_vs_ilusi_simulasi_vektorik",
+      "learning_neurons_n050_systematic_backtesting_wfa_2_walk_forward_analysis_wfa_rolling_horizon_optimization",
+      "learning_neurons_n050_systematic_backtesting_wfa_3_combinatorial_purged_cross_validation_cpcv",
+      "learning_neurons_n050_systematic_backtesting_wfa_4_probabilistic_sharpe_ratio_psr_deflated_sharpe_ratio_dsr",
+      "learning_neurons_n050_systematic_backtesting_wfa_5_implementasi_deterministik_python_standard_library",
+      "learning_neurons_n050_systematic_backtesting_wfa_6_invarian_operasional_quant_guardrails",
+      "learning_neurons_n050_systematic_backtesting_wfa_a_7_jebakan_fatal_simulasi_vektorik_vectorized_backtest_pitfalls",
+      "learning_neurons_n050_systematic_backtesting_wfa_a_dua_pilar_cpcv_marcos_l\u00f3pez_de_prado",
+      "learning_neurons_n050_systematic_backtesting_wfa_a_metodologi_walk_forward",
+      "learning_neurons_n050_systematic_backtesting_wfa_a_momen_statistik_asymptotic_standard_error_of_sr",
+      "learning_neurons_n050_systematic_backtesting_wfa_b_kombinatorika_dan_probability_of_backtest_overfitting_pbo",
+      "learning_neurons_n050_systematic_backtesting_wfa_b_pemodelan_friksi_slippage_non_linear",
+      "learning_neurons_n050_systematic_backtesting_wfa_b_probabilistic_sharpe_ratio_psr",
+      "learning_neurons_n050_systematic_backtesting_wfa_b_walk_forward_efficiency_wfe_invariant",
+      "learning_neurons_n050_systematic_backtesting_wfa_c_deflated_sharpe_ratio_dsr_untuk_multiple_testing",
+      "learning_neurons_n050_systematic_backtesting_wfa_c_parameter_plateau_vs_needle_peak",
+      "learning_neurons_n050_systematic_backtesting_wfa_neuron_n050_systematic_backtesting_engine_walk_forward_optimization_wfa_cpcv_dsr"
+    ],
+    "15": [
+      "ponytail_hooks_ponytail_config",
+      "ponytail_hooks_ponytail_config_fs",
+      "ponytail_hooks_ponytail_config_getclaudedir",
+      "ponytail_hooks_ponytail_config_getconfigdir",
+      "ponytail_hooks_ponytail_config_getconfigpath",
+      "ponytail_hooks_ponytail_config_gethidestatus",
+      "ponytail_hooks_ponytail_config_getquietstartup",
+      "ponytail_hooks_ponytail_config_normalizeconfigmode",
+      "ponytail_hooks_ponytail_config_os",
+      "ponytail_hooks_ponytail_config_path",
+      "ponytail_hooks_ponytail_config_runtime_modes",
+      "ponytail_hooks_ponytail_config_valid_modes",
+      "ponytail_scripts_uninstall",
+      "ponytail_scripts_uninstall_fs",
+      "ponytail_scripts_uninstall_getconfigpath_getclaudedir",
+      "ponytail_scripts_uninstall_path",
+      "ponytail_scripts_uninstall_removeifexists",
+      "ponytail_scripts_uninstall_settingspath"
+    ],
+    "16": [
+      "ponytail_hooks_ponytail_config_normalizepersistedmode",
+      "ponytail_pi_extension_index",
+      "ponytail_pi_extension_index_default_mode_runtime_modes_getdefaultmode_getquietstartup_gethidestatus_normalizemode_normalizepersistedmode_isdeactivationcommand_writedefaultmode",
+      "ponytail_pi_extension_index_getponytailinstructions_filterskillbodyformode",
+      "ponytail_pi_extension_index_parseponytailcommand",
+      "ponytail_pi_extension_index_ponytailextension",
+      "ponytail_pi_extension_index_ponytailextension_syncstatus",
+      "ponytail_pi_extension_index_readdefaultmode",
+      "ponytail_pi_extension_index_readquietstartup",
+      "ponytail_pi_extension_index_require",
+      "ponytail_pi_extension_index_resolvesessionmode",
+      "ponytail_pi_extension_index_runtime_mode_list",
+      "ponytail_pi_extension_test_extension_test",
+      "ponytail_pi_extension_test_extension_test_createcommandcontext",
+      "ponytail_pi_extension_test_extension_test_createpiharness",
+      "ponytail_pi_extension_test_extension_test_notify",
+      "ponytail_pi_extension_test_extension_test_withtempconfig",
+      "ponytail_pi_extension_test_helpers_test"
+    ],
+    "17": [
       "scripts_zolu_learn_server",
       "scripts_zolu_learn_server_app",
       "scripts_zolu_learn_server_broadcaststate",
@@ -258,7 +470,7 @@
       "scripts_zolu_learn_server_state_file",
       "scripts_zolu_learn_server_updatequantmarketdata"
     ],
-    "9": [
+    "18": [
       "learning_neurons_n029_modern_systems_rust_go",
       "learning_neurons_n029_modern_systems_rust_go_1_1_rust_2024_edition_paradigms",
       "learning_neurons_n029_modern_systems_rust_go_1_2_tokio_multi_threaded_work_stealing_scheduler",
@@ -277,7 +489,7 @@
       "learning_neurons_n029_modern_systems_rust_go_neuron_n029_modern_systems_engineering_rust_2024_edition_go_1_23_high_throughput_runtimes",
       "learning_neurons_n029_modern_systems_rust_go_pure_python_executable_invariant_verification_suite"
     ],
-    "10": [
+    "19": [
       "learning_neurons_n033_python_high_performance",
       "learning_neurons_n033_python_high_performance_1_cpython_3_12_adaptive_specialization_free_threaded_no_gil_architecture",
       "learning_neurons_n033_python_high_performance_2_structured_concurrency_exception_groups_pep_654_pep_678_python_3_11_3_12",
@@ -296,26 +508,100 @@
       "learning_neurons_n033_python_high_performance_c_resource_lifecycle_zero_leak_context",
       "learning_neurons_n033_python_high_performance_neuron_n033_python_3_12_high_performance_concurrency"
     ],
-    "11": [
-      "ponytail_hooks_ponytail_config",
-      "ponytail_hooks_ponytail_config_fs",
-      "ponytail_hooks_ponytail_config_getclaudedir",
-      "ponytail_hooks_ponytail_config_getconfigdir",
-      "ponytail_hooks_ponytail_config_getconfigpath",
-      "ponytail_hooks_ponytail_config_gethidestatus",
-      "ponytail_hooks_ponytail_config_getquietstartup",
-      "ponytail_hooks_ponytail_config_isshellsafe",
-      "ponytail_hooks_ponytail_config_os",
-      "ponytail_hooks_ponytail_config_path",
-      "ponytail_hooks_ponytail_config_valid_modes",
-      "ponytail_scripts_uninstall",
-      "ponytail_scripts_uninstall_fs",
-      "ponytail_scripts_uninstall_getconfigpath_getclaudedir",
-      "ponytail_scripts_uninstall_path",
-      "ponytail_scripts_uninstall_removeifexists",
-      "ponytail_scripts_uninstall_settingspath"
+    "20": [
+      "learning_neurons_n041_macro_gold_intermarket",
+      "learning_neurons_n041_macro_gold_intermarket_1_tips_10_year_real_yields_the_fisher_opportunity_cost_engine",
+      "learning_neurons_n041_macro_gold_intermarket_2_multi_asset_dxy_regression_purchasing_power_numeraire",
+      "learning_neurons_n041_macro_gold_intermarket_3_fomc_interest_rate_path_taylor_rule_inflation_dynamics",
+      "learning_neurons_n041_macro_gold_intermarket_4_cftc_commitments_of_traders_cot_positioning_sentiment_squeeze",
+      "learning_neurons_n041_macro_gold_intermarket_5_central_bank_physical_reserve_flows_sovereign_de_dollarization",
+      "learning_neurons_n041_macro_gold_intermarket_6_macroeconomic_regime_classification_matrix",
+      "learning_neurons_n041_macro_gold_intermarket_7_zero_dependency_python_3_12_macro_gold_intermarket_engine",
+      "learning_neurons_n041_macro_gold_intermarket_a_dekomposisi_kategori_laporan_disaggregated_cot_comex_gold",
+      "learning_neurons_n041_macro_gold_intermarket_a_dxy_index_composition_fx_numeraire_effect",
+      "learning_neurons_n041_macro_gold_intermarket_a_fisher_equation_breakeven_inflation_bei",
+      "learning_neurons_n041_macro_gold_intermarket_a_sovereign_reserve_share_de_dollarization_index",
+      "learning_neurons_n041_macro_gold_intermarket_a_taylor_rule_specification_policy_gap",
+      "learning_neurons_n041_macro_gold_intermarket_b_52_week_percentile_rank_standardized_z_score",
+      "learning_neurons_n041_macro_gold_intermarket_b_ordinary_least_squares_ols_calibration_structural_alpha",
+      "learning_neurons_n041_macro_gold_intermarket_b_sofr_fed_funds_futures_implied_probabilities",
+      "learning_neurons_n041_macro_gold_intermarket_neuron_n041_macroeconomic_regime_gold_intermarket_dynamics"
     ],
-    "12": [
+    "21": [
+      "learning_neurons_n042_crypto_onchain_forensics",
+      "learning_neurons_n042_crypto_onchain_forensics_1_whale_wallet_clustering_address_graph_forensics",
+      "learning_neurons_n042_crypto_onchain_forensics_2_cex_net_inflows_outflows_exchange_reserve_dynamics",
+      "learning_neurons_n042_crypto_onchain_forensics_3_macro_on_chain_valuation_cycle_metrics",
+      "learning_neurons_n042_crypto_onchain_forensics_4_mempool_forensics_front_running_mev_detection",
+      "learning_neurons_n042_crypto_onchain_forensics_5_pure_python_3_12_executable_test_invariants_zero_dependency",
+      "learning_neurons_n042_crypto_onchain_forensics_a_eip_1559_mempool_transaction_ordering",
+      "learning_neurons_n042_crypto_onchain_forensics_a_exchange_netflow_reserve_invariants",
+      "learning_neurons_n042_crypto_onchain_forensics_a_market_value_to_realized_value_mvrv_mvrv_z_score",
+      "learning_neurons_n042_crypto_onchain_forensics_a_utxo_clustering_heuristics_entity_resolution",
+      "learning_neurons_n042_crypto_onchain_forensics_b_evm_account_based_graph_forensics_whale_tiers",
+      "learning_neurons_n042_crypto_onchain_forensics_b_sandwich_attack_forensic_invariants",
+      "learning_neurons_n042_crypto_onchain_forensics_b_spent_output_profit_ratio_sopr_asopr",
+      "learning_neurons_n042_crypto_onchain_forensics_b_whale_to_exchange_flow_ratio",
+      "learning_neurons_n042_crypto_onchain_forensics_c_network_value_to_transactions_nvt_ratio_nvt_signal",
+      "learning_neurons_n042_crypto_onchain_forensics_d_stablecoin_supply_ratio_ssr",
+      "learning_neurons_n042_crypto_onchain_forensics_neuron_n042_crypto_on_chain_forensics_whale_orderflow_analysis"
+    ],
+    "22": [
+      "learning_neurons_n045_volatility_options_greeks",
+      "learning_neurons_n045_volatility_options_greeks_1_garch_1_1_volatility_forecasting_term_structure_engine",
+      "learning_neurons_n045_volatility_options_greeks_2_black_scholes_merton_bsm_analytical_pricing_put_call_parity",
+      "learning_neurons_n045_volatility_options_greeks_3_complete_analytical_greeks_risk_sensitivities",
+      "learning_neurons_n045_volatility_options_greeks_4_implied_volatility_surface_robust_hybrid_inversion",
+      "learning_neurons_n045_volatility_options_greeks_5_0_dte_options_mechanics_net_gamma_exposure_gex_engine",
+      "learning_neurons_n045_volatility_options_greeks_6_pure_python_3_12_executable_implementation_self_check",
+      "learning_neurons_n045_volatility_options_greeks_a_algoritma_root_finding_inversion_hybrid_nr_bisection",
+      "learning_neurons_n045_volatility_options_greeks_a_continuous_risk_neutral_valuation_framework",
+      "learning_neurons_n045_volatility_options_greeks_a_dynamic_heteroskedasticity_clustering_mechanics",
+      "learning_neurons_n045_volatility_options_greeks_a_karakteristik_dinamika_greeks",
+      "learning_neurons_n045_volatility_options_greeks_a_mekanika_0_dte_zero_days_to_expiration",
+      "learning_neurons_n045_volatility_options_greeks_b_arbitrage_free_put_call_parity_invariant",
+      "learning_neurons_n045_volatility_options_greeks_b_formulasi_dollar_gex_deteksi_gamma_flip",
+      "learning_neurons_n045_volatility_options_greeks_b_parametrik_volatility_skew_smile",
+      "learning_neurons_n045_volatility_options_greeks_b_unconditional_long_run_variance_term_structure_forecasting",
+      "learning_neurons_n045_volatility_options_greeks_neuron_n045_volatility_modeling_options_greeks_garch_black_scholes_greeks_iv_surface_0_dte_gex"
+    ],
+    "23": [
+      "learning_neurons_n040_meta_cognitive_self_reflection",
+      "learning_neurons_n040_meta_cognitive_self_reflection_1_reflexion_loop_verbal_reinforcement_learning_architecture",
+      "learning_neurons_n040_meta_cognitive_self_reflection_2_tree_of_thoughts_tot_monte_carlo_tree_search_mcts_meta_prompting",
+      "learning_neurons_n040_meta_cognitive_self_reflection_3_epistemic_certainty_evaluation_semantic_entropy_calibration",
+      "learning_neurons_n040_meta_cognitive_self_reflection_4_zero_hallucination_guardrails_recursive_ast_self_correction",
+      "learning_neurons_n040_meta_cognitive_self_reflection_5_pure_python_3_12_executable_test_invariants_zero_dependency",
+      "learning_neurons_n040_meta_cognitive_self_reflection_a_axiom_grounding_premise_containment_check",
+      "learning_neurons_n040_meta_cognitive_self_reflection_a_epistemic_vs_aleatoric_uncertainty",
+      "learning_neurons_n040_meta_cognitive_self_reflection_a_non_linear_exploration_vs_linear_chain_of_thought",
+      "learning_neurons_n040_meta_cognitive_self_reflection_a_triad_component_architecture_actor_critic_reflector",
+      "learning_neurons_n040_meta_cognitive_self_reflection_b_episodic_semantic_memory_trajectory_pruning",
+      "learning_neurons_n040_meta_cognitive_self_reflection_b_monte_carlo_tree_search_mcts_policy_engine",
+      "learning_neurons_n040_meta_cognitive_self_reflection_b_recursive_ast_invariant_self_correction_pipeline",
+      "learning_neurons_n040_meta_cognitive_self_reflection_b_semantic_entropy_semantic_clustering_metric",
+      "learning_neurons_n040_meta_cognitive_self_reflection_neuron_n040_meta_cognitive_self_reflection_recursive_self_correction",
+      "learning_neurons_n040_meta_cognitive_self_reflection_operational_invariants_execution_checklist"
+    ],
+    "24": [
+      "learning_neurons_n047_automated_risk_drawdown_guard",
+      "learning_neurons_n047_automated_risk_drawdown_guard_1_dual_engine_value_at_risk_var_99_95",
+      "learning_neurons_n047_automated_risk_drawdown_guard_2_expected_shortfall_cvar_conditional_value_at_risk",
+      "learning_neurons_n047_automated_risk_drawdown_guard_3_multi_asset_portfolio_margin_buffer_leverage_ceiling",
+      "learning_neurons_n047_automated_risk_drawdown_guard_4_dynamic_trailing_high_water_mark_hwm_circuit_breakers",
+      "learning_neurons_n047_automated_risk_drawdown_guard_5_idempotent_hard_kill_switch_fail_safe_invariants",
+      "learning_neurons_n047_automated_risk_drawdown_guard_5_pilar_manajemen_risiko_kuantitatif",
+      "learning_neurons_n047_automated_risk_drawdown_guard_a_discrete_historical_cvar",
+      "learning_neurons_n047_automated_risk_drawdown_guard_a_parametric_cornish_fisher_var_fat_tail_skewness_adjusted",
+      "learning_neurons_n047_automated_risk_drawdown_guard_b_historical_simulation_var_non_parametric",
+      "learning_neurons_n047_automated_risk_drawdown_guard_b_parametric_normal_expected_shortfall",
+      "learning_neurons_n047_automated_risk_drawdown_guard_domain_arsitektur",
+      "learning_neurons_n047_automated_risk_drawdown_guard_invarian_operasional_disiplin_eksekusi",
+      "learning_neurons_n047_automated_risk_drawdown_guard_neuron_n047_automated_risk_engine_dynamic_drawdown_guard",
+      "learning_neurons_n047_automated_risk_drawdown_guard_state_machine_transisi_circuit_breaker",
+      "learning_neurons_n047_automated_risk_drawdown_guard_zero_dependency_stdlib_python_implementation_self_check"
+    ],
+    "25": [
       "ponytail_hooks_ponytail_config_normalizemode",
       "ponytail_hooks_ponytail_instructions",
       "ponytail_hooks_ponytail_instructions_default_mode_normalizemode_normalizepersistedmode",
@@ -333,7 +619,24 @@
       "ponytail_hooks_ponytail_subagent_mode",
       "ponytail_hooks_ponytail_subagent_readmode_writehookoutput"
     ],
-    "13": [
+    "26": [
+      "learning_neurons_n043_derivatives_futures_microstructure",
+      "learning_neurons_n043_derivatives_futures_microstructure_1_perpetual_swap_mechanics_funding_rate_arbitrage",
+      "learning_neurons_n043_derivatives_futures_microstructure_2_liquidation_heatmap_clusters_cascade_dynamics",
+      "learning_neurons_n043_derivatives_futures_microstructure_3_open_interest_oi_vs_price_action_divergence_matrix",
+      "learning_neurons_n043_derivatives_futures_microstructure_4_long_short_ratio_positioning_sentiment_skew",
+      "learning_neurons_n043_derivatives_futures_microstructure_5_cash_and_carry_basis_trading_term_structure_calendar_futures",
+      "learning_neurons_n043_derivatives_futures_microstructure_a_formula_deterministik_harga_likuidasi_p_text_liq",
+      "learning_neurons_n043_derivatives_futures_microstructure_a_formula_valuasi_basis_imbal_hasil_tahunan",
+      "learning_neurons_n043_derivatives_futures_microstructure_a_metrik_rasio_positioning",
+      "learning_neurons_n043_derivatives_futures_microstructure_a_premium_index_dynamic_funding_rate_formulation",
+      "learning_neurons_n043_derivatives_futures_microstructure_b_liquidation_heatmap_density_modeling",
+      "learning_neurons_n043_derivatives_futures_microstructure_invarian_operasional_disiplin_eksekusi",
+      "learning_neurons_n043_derivatives_futures_microstructure_neuron_n043_derivatives_futures_microstructure",
+      "learning_neurons_n043_derivatives_futures_microstructure_taksonomi_4_kuadran_rezim_oi",
+      "learning_neurons_n043_derivatives_futures_microstructure_zero_dependency_stdlib_python_implementation_self_check"
+    ],
+    "27": [
       "agents",
       "agents_graphify_brain_verification_continuous_learning_loop",
       "agents_kerahasiaan_arsitektur_perlindungan_hak_cipta_proprietary_ip_shield",
@@ -349,7 +652,7 @@
       "memory_claudia_neuron_memory_network",
       "memory_prosedur_pembaruan_memori"
     ],
-    "14": [
+    "28": [
       "learning_neurons_n032_cloud_native_edge_infra",
       "learning_neurons_n032_cloud_native_edge_infra_1_edge_ingress_caddyfile_blueprint_caddy_2_8_http_3_security_headers_passive_healthcheck",
       "learning_neurons_n032_cloud_native_edge_infra_1_modern_edge_ingress_transport_layer_caddy_2_8_http_3_quic_tls_1_3_0_rtt",
@@ -365,7 +668,7 @@
       "learning_neurons_n032_cloud_native_edge_infra_neuron_n032_cloud_native_edge_infrastructure_zero_downtime_operations",
       "learning_neurons_n032_cloud_native_edge_infra_production_configuration_blueprints"
     ],
-    "15": [
+    "29": [
       "learning_neurons_n031_modern_data_storage_pgvector",
       "learning_neurons_n031_modern_data_storage_pgvector_1_hybrid_search_architecture_postgresql_17_pgvector_hnsw_bm25",
       "learning_neurons_n031_modern_data_storage_pgvector_2_zero_bloat_schema_migrations_drizzle_orm_invariants",
@@ -380,7 +683,7 @@
       "learning_neurons_n031_modern_data_storage_pgvector_neuron_n031_modern_data_architecture_hybrid_search_postgresql_17_pgvector_hnsw_drizzle_orm_sqlite_wal",
       "learning_neurons_n031_modern_data_storage_pgvector_pure_python_runnable_implementation_stdlib_zero_dependency"
     ],
-    "16": [
+    "30": [
       "ponytail_hooks_ponytail_config_getdefaultmode",
       "ponytail_opencode_plugins_ponytail",
       "ponytail_opencode_plugins_ponytail_dirname",
@@ -394,7 +697,7 @@
       "ponytail_opencode_plugins_ponytail_statepath",
       "ponytail_opencode_plugins_ponytail_writemode"
     ],
-    "17": [
+    "31": [
       "scripts_official_runner_real",
       "scripts_official_runner_real_compress_ast_context",
       "scripts_official_runner_real_eval_single_task",
@@ -408,7 +711,33 @@
       "scripts_official_runner_real_run_safe_python",
       "scripts_official_runner_real_verify_math_gpqa"
     ],
-    "18": [
+    "32": [
+      "learning_neurons_n048_defi_mev_protection",
+      "learning_neurons_n048_defi_mev_protection_1_uniswap_v3_concentrated_liquidity_math_tick_geometry",
+      "learning_neurons_n048_defi_mev_protection_2_impermanent_loss_il_capital_efficiency_calculus",
+      "learning_neurons_n048_defi_mev_protection_3_flash_loan_atomic_arbitrage_architecture",
+      "learning_neurons_n048_defi_mev_protection_4_toxic_mev_dynamics_sandwich_attacks_jit_liquidity",
+      "learning_neurons_n048_defi_mev_protection_5_pilar_defi_liquidity_engineering_mev_defense",
+      "learning_neurons_n048_defi_mev_protection_5_searcher_builder_infrastructure_flashbots_jito_relays",
+      "learning_neurons_n048_defi_mev_protection_domain_arsitektur",
+      "learning_neurons_n048_defi_mev_protection_invariant_ringkas_operational_rules",
+      "learning_neurons_n048_defi_mev_protection_neuron_n048_defi_liquidity_engineering_cross_chain_mev_protection",
+      "learning_neurons_n048_defi_mev_protection_zero_dependency_stdlib_python_implementation_self_check"
+    ],
+    "33": [
+      "ponytail_hooks_ponytail_activate",
+      "ponytail_hooks_ponytail_activate_claudedir",
+      "ponytail_hooks_ponytail_activate_clearmode_iscodex_iscopilot_setmode_writehookoutput",
+      "ponytail_hooks_ponytail_activate_fs",
+      "ponytail_hooks_ponytail_activate_getdefaultmode_getclaudedir_isshellsafe",
+      "ponytail_hooks_ponytail_activate_getponytailinstructions",
+      "ponytail_hooks_ponytail_activate_mode",
+      "ponytail_hooks_ponytail_activate_output",
+      "ponytail_hooks_ponytail_activate_path",
+      "ponytail_hooks_ponytail_activate_settingspath",
+      "ponytail_hooks_ponytail_config_isshellsafe"
+    ],
+    "34": [
       "learning_neurons_n025_hft_orderbook_microstructure",
       "learning_neurons_n025_hft_orderbook_microstructure_1_l2_l3_orderbook_delta_micro_price_dynamics",
       "learning_neurons_n025_hft_orderbook_microstructure_2_gold_xau_usd_dex_cross_venue_arbitrage",
@@ -420,7 +749,7 @@
       "learning_neurons_n025_hft_orderbook_microstructure_neuron_n025_high_frequency_orderbook_microstructure_hft_quant_engine",
       "learning_neurons_n025_hft_orderbook_microstructure_zero_dependency_stdlib_python_implementation_self_check"
     ],
-    "19": [
+    "35": [
       "learning_neurons_n026_vision_dom_spatial_reasoning",
       "learning_neurons_n026_vision_dom_spatial_reasoning_1_viewport_coordinate_normalization_0_1000",
       "learning_neurons_n026_vision_dom_spatial_reasoning_2_recursive_effective_clipping_rect_visibility_pruning",
@@ -432,31 +761,7 @@
       "learning_neurons_n026_vision_dom_spatial_reasoning_implementasi_referensi_stdlib_python_spatial_ast_ocr_grounding",
       "learning_neurons_n026_vision_dom_spatial_reasoning_neuron_n026_multimodal_vision_language_spatial_reasoning_dom_geometry_ast"
     ],
-    "20": [
-      "ponytail_hooks_ponytail_activate",
-      "ponytail_hooks_ponytail_activate_claudedir",
-      "ponytail_hooks_ponytail_activate_clearmode_iscodex_iscopilot_setmode_writehookoutput",
-      "ponytail_hooks_ponytail_activate_fs",
-      "ponytail_hooks_ponytail_activate_getdefaultmode_getclaudedir_isshellsafe",
-      "ponytail_hooks_ponytail_activate_getponytailinstructions",
-      "ponytail_hooks_ponytail_activate_mode",
-      "ponytail_hooks_ponytail_activate_output",
-      "ponytail_hooks_ponytail_activate_path",
-      "ponytail_hooks_ponytail_activate_settingspath"
-    ],
-    "21": [
-      "readme",
-      "readme_1_filosofi_rekayasa_inti_the_minimality_ladder",
-      "readme_2_cognitive_neural_mesh_16_master_neurons",
-      "readme_3_framework_tolok_ukur_6_parameter_frontier_real_evaluator",
-      "readme_4_ekosistem_layanan_aktif_production_cluster",
-      "readme_5_telemetri_vps_kecepatan_jaringan_real_time",
-      "readme_6_persenjataan_toolkit_terpasang",
-      "readme_7_zero_trust_security_vault_isolation",
-      "readme_autonomous_senior_engineering_partner_cognitive_neural_mesh",
-      "readme_claudia_2_0_v5_0_0_apex"
-    ],
-    "22": [
+    "36": [
       "scripts_claudiacode_server",
       "scripts_claudiacode_server_app",
       "scripts_claudiacode_server_compression",
@@ -468,7 +773,7 @@
       "scripts_claudiacode_server_fs",
       "scripts_claudiacode_server_path"
     ],
-    "23": [
+    "37": [
       "agents_skills_ponytail_skill",
       "agents_skills_ponytail_skill_boundaries",
       "agents_skills_ponytail_skill_intensity",
@@ -479,7 +784,7 @@
       "agents_skills_ponytail_skill_the_ladder",
       "agents_skills_ponytail_skill_when_not_to_be_lazy"
     ],
-    "24": [
+    "38": [
       "learning_neurons_n023_zero_day_kernel_defense",
       "learning_neurons_n023_zero_day_kernel_defense_1_rop_jop_gadget_chain_disruption_control_flow_integrity",
       "learning_neurons_n023_zero_day_kernel_defense_2_linux_ebpf_telemetry_kernel_space_lsm_probing",
@@ -490,7 +795,7 @@
       "learning_neurons_n023_zero_day_kernel_defense_algoritma_deterministik_pure_python_standard_library",
       "learning_neurons_n023_zero_day_kernel_defense_neuron_n023_autonomous_zero_day_exploit_defense_kernel_memory_safety"
     ],
-    "25": [
+    "39": [
       "learning_neurons_n024_post_quantum_cryptography",
       "learning_neurons_n024_post_quantum_cryptography_1_ancaman_kuantum_paradigma_baru_kriptografi",
       "learning_neurons_n024_post_quantum_cryptography_2_arsitektur_standar_nist_pqc_fips_203_204",
@@ -501,7 +806,18 @@
       "learning_neurons_n024_post_quantum_cryptography_7_disiplin_integrasi_operasional_claudia",
       "learning_neurons_n024_post_quantum_cryptography_neuron_n024_post_quantum_cryptography_ml_kem_ml_dsa_fips_203_204"
     ],
-    "26": [
+    "40": [
+      "learning_neurons_n038_red_team_pentest_cve_patching",
+      "learning_neurons_n038_red_team_pentest_cve_patching_1_grammar_mutation_based_owasp_top_10_fuzzing_engine",
+      "learning_neurons_n038_red_team_pentest_cve_patching_2_ast_based_static_application_security_testing_sast_taint_engine",
+      "learning_neurons_n038_red_team_pentest_cve_patching_3_dynamic_application_security_testing_dast_security_header_token_oracle",
+      "learning_neurons_n038_red_team_pentest_cve_patching_4_autonomous_ast_level_vulnerability_remediation_automated_cve_patching",
+      "learning_neurons_n038_red_team_pentest_cve_patching_5_invarian_utama_autonomous_red_team_automated_cve_patching",
+      "learning_neurons_n038_red_team_pentest_cve_patching_5_software_bill_of_materials_sbom_supply_chain_security",
+      "learning_neurons_n038_red_team_pentest_cve_patching_algoritma_deterministik_pure_python_standard_library",
+      "learning_neurons_n038_red_team_pentest_cve_patching_neuron_n038_autonomous_red_team_penetration_testing_automated_cve_patching"
+    ],
+    "41": [
       "ponytail_skills_ponytail_skill",
       "ponytail_skills_ponytail_skill_boundaries",
       "ponytail_skills_ponytail_skill_intensity",
@@ -512,7 +828,7 @@
       "ponytail_skills_ponytail_skill_the_ladder",
       "ponytail_skills_ponytail_skill_when_not_to_be_lazy"
     ],
-    "27": [
+    "42": [
       "agents_skills_ponytail_help_skill",
       "agents_skills_ponytail_help_skill_configure_default_mode",
       "agents_skills_ponytail_help_skill_deactivate",
@@ -522,7 +838,7 @@
       "agents_skills_ponytail_help_skill_skills",
       "agents_skills_ponytail_help_skill_update"
     ],
-    "28": [
+    "43": [
       "identity",
       "identity_1_ponytail_lazy_senior_dev_engine",
       "identity_2_graphify_knowledge_graph_structural_memory",
@@ -532,7 +848,7 @@
       "identity_karakter_gaya_komunikasi",
       "identity_self_learning_loop"
     ],
-    "29": [
+    "44": [
       "ponytail_skills_ponytail_help_skill",
       "ponytail_skills_ponytail_help_skill_configure_default_mode",
       "ponytail_skills_ponytail_help_skill_deactivate",
@@ -542,7 +858,17 @@
       "ponytail_skills_ponytail_help_skill_skills",
       "ponytail_skills_ponytail_help_skill_update"
     ],
-    "30": [
+    "45": [
+      "readme",
+      "readme_1_filosofi_rekayasa_inti_the_minimality_ladder",
+      "readme_2_cognitive_neural_mesh_50_master_neurons_matrix",
+      "readme_3_frontier_benchmark_empirical_superiority_6_parameters",
+      "readme_4_institutional_quantitative_trading_engine_gold_crypto",
+      "readme_5_kerahasiaan_arsitektur_hak_cipta_intelektual",
+      "readme_autonomous_principal_ai_engineer_quantitative_hedge_fund_intelligence",
+      "readme_claudia_5_0_max_world_frontier_edition"
+    ],
+    "46": [
       "scripts_test_brain",
       "scripts_test_brain_run_all",
       "scripts_test_brain_test_ide_bridges",
@@ -552,7 +878,7 @@
       "scripts_test_brain_test_neuron_network",
       "scripts_test_brain_test_security_and_secrets"
     ],
-    "31": [
+    "47": [
       "agents_rules_ponytail",
       "agents_rules_ponytail_graphify_knowledge_graph",
       "agents_rules_ponytail_not_lazy_about",
@@ -561,7 +887,7 @@
       "agents_rules_ponytail_rules",
       "agents_rules_ponytail_the_minimality_ladder"
     ],
-    "32": [
+    "48": [
       "learning_neurons_n021_quantitative_gold_crypto_trading",
       "learning_neurons_n021_quantitative_gold_crypto_trading_1_manajemen_risiko_position_sizing_the_golden_law",
       "learning_neurons_n021_quantitative_gold_crypto_trading_2_logika_pasar_emas_xau_usd_macro_microstructure",
@@ -570,7 +896,7 @@
       "learning_neurons_n021_quantitative_gold_crypto_trading_invarian_inti_perdagangan_kuantitatif_trading_invariants",
       "learning_neurons_n021_quantitative_gold_crypto_trading_n021_quantitative_gold_xau_usd_crypto_trading_systems"
     ],
-    "33": [
+    "49": [
       "learning_neurons_n028_autonomous_self_healing_chaos",
       "learning_neurons_n028_autonomous_self_healing_chaos_1_automated_node_recovery_failure_detection",
       "learning_neurons_n028_autonomous_self_healing_chaos_2_level_triggered_state_reconciliation_loop",
@@ -579,7 +905,7 @@
       "learning_neurons_n028_autonomous_self_healing_chaos_neuron_n028_autonomous_system_self_healing_distributed_chaos_invariants",
       "learning_neurons_n028_autonomous_self_healing_chaos_pure_python_runnable_implementation_stdlib_zero_dependency"
     ],
-    "34": [
+    "50": [
       "learning_neurons_n030_nextgen_fullstack_edge",
       "learning_neurons_n030_nextgen_fullstack_edge_1_next_js_15_react_19_compiler_forget_architecture",
       "learning_neurons_n030_nextgen_fullstack_edge_2_edge_v8_isolates_sub_millisecond_routing_bun_1_2_hono_v4",
@@ -588,7 +914,7 @@
       "learning_neurons_n030_nextgen_fullstack_edge_5_pure_python_executable_invariant_verification_suite",
       "learning_neurons_n030_nextgen_fullstack_edge_neuron_n030_next_gen_fullstack_edge_engineering_next_js_15_react_19_compiler_bun_1_2_hono_v4_tailwind_v4"
     ],
-    "35": [
+    "51": [
       "scripts_train_trading_engine",
       "scripts_train_trading_engine_calculate_atr",
       "scripts_train_trading_engine_calculate_ema",
@@ -597,7 +923,7 @@
       "scripts_train_trading_engine_fetch_binance_klines",
       "scripts_train_trading_engine_train_and_synthesize_neuron"
     ],
-    "36": [
+    "52": [
       "windsurf_rules_ponytail",
       "windsurf_rules_ponytail_graphify_knowledge_graph",
       "windsurf_rules_ponytail_not_lazy_about",
@@ -606,7 +932,7 @@
       "windsurf_rules_ponytail_rules",
       "windsurf_rules_ponytail_the_minimality_ladder"
     ],
-    "37": [
+    "53": [
       "learning_feedback_log_mojoloker_learnings",
       "learning_feedback_log_mojoloker_learnings_1_tampilan_mode",
       "learning_feedback_log_mojoloker_learnings_2_dropdown_komponen_formulir",
@@ -614,7 +940,7 @@
       "learning_feedback_log_mojoloker_learnings_4_branding_desain_khusus_mojoloker",
       "learning_feedback_log_mojoloker_learnings_pembelajaran_standar_tetap_learnings_fixed_rules_claudia"
     ],
-    "38": [
+    "54": [
       "learning_neurons_n008_live_session_checkpoint",
       "learning_neurons_n008_live_session_checkpoint_deployed_ecosystem_port_mappings",
       "learning_neurons_n008_live_session_checkpoint_installed_autonomous_fullstack_security_toolkit",
@@ -622,7 +948,7 @@
       "learning_neurons_n008_live_session_checkpoint_metadata",
       "learning_neurons_n008_live_session_checkpoint_neuron_n008_persistent_live_session_checkpoint_infrastructure_state"
     ],
-    "39": [
+    "55": [
       "ponytail_pi_extension_package",
       "ponytail_pi_extension_package_name",
       "ponytail_pi_extension_package_private",
@@ -630,7 +956,7 @@
       "ponytail_pi_extension_package_scripts_test",
       "ponytail_pi_extension_package_type"
     ],
-    "40": [
+    "56": [
       "scripts_parallel_runner",
       "scripts_parallel_runner_eval_single_task",
       "scripts_parallel_runner_init_db",
@@ -638,365 +964,381 @@
       "scripts_parallel_runner_rationale_1",
       "scripts_parallel_runner_run_parallel_subagents_step"
     ],
-    "41": [
+    "57": [
       "agents_skills_ponytail_audit_skill",
       "agents_skills_ponytail_audit_skill_boundaries",
       "agents_skills_ponytail_audit_skill_hunt",
       "agents_skills_ponytail_audit_skill_output",
       "agents_skills_ponytail_audit_skill_tags"
     ],
-    "42": [
+    "58": [
       "agents_skills_ponytail_gain_skill",
       "agents_skills_ponytail_gain_skill_boundaries",
       "agents_skills_ponytail_gain_skill_honesty_boundary",
       "agents_skills_ponytail_gain_skill_ponytail_gain",
       "agents_skills_ponytail_gain_skill_scoreboard"
     ],
-    "43": [
+    "59": [
       "agents_skills_ponytail_review_skill",
       "agents_skills_ponytail_review_skill_boundaries",
       "agents_skills_ponytail_review_skill_examples",
       "agents_skills_ponytail_review_skill_format",
       "agents_skills_ponytail_review_skill_scoring"
     ],
-    "44": [
+    "60": [
       "learning_knowledge_base_core_stack",
       "learning_knowledge_base_core_stack_1_database_storage",
       "learning_knowledge_base_core_stack_2_web_service_stack",
       "learning_knowledge_base_core_stack_3_engineering_intelligence_engines",
       "learning_knowledge_base_core_stack_core_stack_architecture"
     ],
-    "45": [
+    "61": [
       "learning_neurons_n027_tensor_simd_vectorization",
       "learning_neurons_n027_tensor_simd_vectorization_1_simd_fused_multiply_add_fma_tensor_core_vectorization",
       "learning_neurons_n027_tensor_simd_vectorization_2_64_byte_cache_line_alignment_false_sharing",
       "learning_neurons_n027_tensor_simd_vectorization_3_roofline_model_l1_l2_l3_cache_tiling",
       "learning_neurons_n027_tensor_simd_vectorization_4_invariant_self_check_stdlib_python"
     ],
-    "46": [
+    "62": [
       "ponytail_skills_ponytail_audit_skill",
       "ponytail_skills_ponytail_audit_skill_boundaries",
       "ponytail_skills_ponytail_audit_skill_hunt",
       "ponytail_skills_ponytail_audit_skill_output",
       "ponytail_skills_ponytail_audit_skill_tags"
     ],
-    "47": [
+    "63": [
       "ponytail_skills_ponytail_gain_skill",
       "ponytail_skills_ponytail_gain_skill_boundaries",
       "ponytail_skills_ponytail_gain_skill_honesty_boundary",
       "ponytail_skills_ponytail_gain_skill_ponytail_gain",
       "ponytail_skills_ponytail_gain_skill_scoreboard"
     ],
-    "48": [
+    "64": [
       "ponytail_skills_ponytail_review_skill",
       "ponytail_skills_ponytail_review_skill_boundaries",
       "ponytail_skills_ponytail_review_skill_examples",
       "ponytail_skills_ponytail_review_skill_format",
       "ponytail_skills_ponytail_review_skill_scoring"
     ],
-    "49": [
+    "65": [
       "agents_skills_ponytail_debt_skill",
       "agents_skills_ponytail_debt_skill_boundaries",
       "agents_skills_ponytail_debt_skill_output",
       "agents_skills_ponytail_debt_skill_scan"
     ],
-    "50": [
+    "66": [
       "learning_feedback_log_readme",
       "learning_feedback_log_readme_feedback_log",
       "learning_feedback_log_readme_log_001_inisialisasi_persona",
       "learning_feedback_log_readme_log_002_executive_decision_making_anti_pilihan_berlebih"
     ],
-    "51": [
+    "67": [
       "learning_neurons_n003_mobile_first_ui",
       "learning_neurons_n003_mobile_first_ui_core_concept",
       "learning_neurons_n003_mobile_first_ui_neuron_n003_mobile_first_ui_compact_data_viz",
       "learning_neurons_n003_mobile_first_ui_synaptic_links"
     ],
-    "52": [
+    "68": [
       "learning_neurons_n005_graphify_knowledge",
       "learning_neurons_n005_graphify_knowledge_core_concept",
       "learning_neurons_n005_graphify_knowledge_neuron_n005_graphify_knowledge_network",
       "learning_neurons_n005_graphify_knowledge_synaptic_links"
     ],
-    "53": [
+    "69": [
       "learning_neurons_n006_9router_gateway",
       "learning_neurons_n006_9router_gateway_core_concept",
       "learning_neurons_n006_9router_gateway_neuron_n006_9router_gateway_engine",
       "learning_neurons_n006_9router_gateway_synaptic_links"
     ],
-    "54": [
+    "70": [
       "learning_neurons_n009_peak_algorithms_codex",
       "learning_neurons_n009_peak_algorithms_codex_1_graph_network_flow_algorithms",
       "learning_neurons_n009_peak_algorithms_codex_2_probabilistic_spatial_data_structures",
       "learning_neurons_n009_peak_algorithms_codex_3_high_performance_concurrency_rate_limiting"
     ],
-    "55": [
+    "71": [
       "learning_neurons_n017_program_aided_math",
       "learning_neurons_n017_program_aided_math_4_pilar_heuristik_aime_olympiad",
       "learning_neurons_n017_program_aided_math_domain_karakteristik",
       "learning_neurons_n017_program_aided_math_neuron_n017_program_aided_mathematical_reasoning_aime_invariants"
     ],
-    "56": [
+    "72": [
       "learning_neurons_n018_repomap_swebench",
       "learning_neurons_n018_repomap_swebench_4_aturan_emas_resolusi_swe_bench",
       "learning_neurons_n018_repomap_swebench_domain_karakteristik",
       "learning_neurons_n018_repomap_swebench_neuron_n018_repomap_ast_compression_swe_bench_precision"
     ],
-    "57": [
+    "73": [
       "learning_readme",
       "learning_readme_alur_pembelajaran",
       "learning_readme_self_learning_framework",
       "learning_readme_struktur_folder"
     ],
-    "58": [
+    "74": [
       "ponytail_skills_ponytail_debt_skill",
       "ponytail_skills_ponytail_debt_skill_boundaries",
       "ponytail_skills_ponytail_debt_skill_output",
       "ponytail_skills_ponytail_debt_skill_scan"
     ],
-    "59": [
+    "75": [
       "scripts_ingest_frontier_knowledge",
       "scripts_ingest_frontier_knowledge_build_all_frontier_datasets",
       "scripts_ingest_frontier_knowledge_ensure_dirs",
       "scripts_ingest_frontier_knowledge_rationale_1"
     ],
-    "60": [
+    "76": [
       "scripts_masterpiece_completer",
       "scripts_masterpiece_completer_fetch_tmdb_poster",
       "scripts_masterpiece_completer_main",
       "scripts_masterpiece_completer_search_apibay"
     ],
-    "61": [
+    "77": [
       "scripts_record_learning",
       "scripts_record_learning_main",
       "scripts_record_learning_record_new_learning",
       "scripts_record_learning_slugify"
     ],
-    "62": [
+    "78": [
       "agents_skills_graphify_skill",
       "agents_skills_graphify_skill_graphify",
       "agents_skills_graphify_skill_usage"
     ],
-    "63": [
+    "79": [
       "learning_knowledge_base_readme",
       "learning_knowledge_base_readme_knowledge_base_index",
       "learning_knowledge_base_readme_topik_aktif"
     ],
-    "64": [
+    "80": [
       "learning_neurons_n002_vps_remote_ops",
       "learning_neurons_n002_vps_remote_ops_core_concept",
       "learning_neurons_n002_vps_remote_ops_neuron_n002_vps_remote_operations_pipeline"
     ],
-    "65": [
+    "81": [
       "learning_neurons_n011_mechanical_sympathy_perf",
       "learning_neurons_n011_mechanical_sympathy_perf_1_cpu_cache_locality_data_oriented_design",
       "learning_neurons_n011_mechanical_sympathy_perf_2_zero_copy_i_o_asynchronous_event_loops"
     ],
-    "66": [
+    "82": [
       "learning_neurons_n012_deep_search_and_graph_rag",
       "learning_neurons_n012_deep_search_and_graph_rag_1_hybrid_search_reciprocal_rank_fusion_rrf",
       "learning_neurons_n012_deep_search_and_graph_rag_2_multi_hop_graphrag_ast_code_navigation"
     ],
-    "67": [
+    "83": [
       "learning_neurons_n013_deep_storage_and_distributed_db",
       "learning_neurons_n013_deep_storage_and_distributed_db_1_storage_engine_internals_lsm_tree_vs_b_tree",
       "learning_neurons_n013_deep_storage_and_distributed_db_2_distributed_transactions_vector_indexing"
     ],
-    "68": [
+    "84": [
       "learning_neurons_n015_compiler_ast_and_system_profiling",
       "learning_neurons_n015_compiler_ast_and_system_profiling_1_abstract_syntax_tree_ast_code_transformation",
       "learning_neurons_n015_compiler_ast_and_system_profiling_2_production_profiling_post_mortem_diagnostics"
     ],
-    "69": [
+    "85": [
       "learning_playbooks_graphify_workflow",
       "learning_playbooks_graphify_workflow_ekstraksi_refresh_graf",
       "learning_playbooks_graphify_workflow_playbook_graphify_workflow"
     ],
-    "70": [
+    "86": [
       "learning_playbooks_readme",
       "learning_playbooks_readme_daftar_playbook",
       "learning_playbooks_readme_playbooks"
     ],
-    "71": [
+    "87": [
       "learning_playbooks_self_improving",
       "learning_playbooks_self_improving_4_langkah_siklus_self_improving",
       "learning_playbooks_self_improving_playbook_self_improving_mechanism"
     ],
-    "72": [
+    "88": [
       "learning_scripts_grow_neurons",
       "learning_scripts_grow_neurons_grow_neural_mesh",
       "learning_scripts_grow_neurons_rationale_1"
     ],
-    "73": [
+    "89": [
       "scripts_auto_sync_github",
       "scripts_auto_sync_github_auto_sync",
       "scripts_auto_sync_github_run_cmd"
     ],
-    "74": [
+    "90": [
       "agents_rules_graphify",
       "agents_rules_graphify_graphify"
     ],
-    "75": [
+    "91": [
       "agents_workflows_graphify",
       "agents_workflows_graphify_workflow_graphify"
     ],
-    "76": [
+    "92": [
       "learning_reflections_readme",
       "learning_reflections_readme_reflections_memory_aggregations"
     ],
-    "77": [
+    "93": [
       "memory_neurons_ai_engine_9router",
       "memory_neurons_ai_engine_9router_neuron_memory_9router_ai_engine_web_production"
     ],
-    "78": [
+    "94": [
       "memory_neurons_mojoloker_brand",
       "memory_neurons_mojoloker_brand_neuron_memory_mojoloker_domain_brand_identity"
     ],
-    "79": [
+    "95": [
       "memory_neurons_ui_ux_design_rules",
       "memory_neurons_ui_ux_design_rules_neuron_memory_standar_desain_ui_ux_aturan_kode"
     ],
-    "80": [
+    "96": [
       "memory_neurons_user_profile",
       "memory_neurons_user_profile_neuron_memory_user_profile_persona"
     ],
-    "81": [
+    "97": [
       "memory_neurons_vps_infrastructure",
       "memory_neurons_vps_infrastructure_neuron_memory_vps_infrastructure_services"
     ],
-    "82": [
+    "98": [
       "ponytail_hooks_ponytail_statusline_sh__entry",
       "ponytail_hooks_ponytail_statusline_sh_ponytail_hooks_ponytail_statusline"
     ],
-    "83": [
+    "99": [
       "ecosystem_config"
     ],
-    "84": [
+    "100": [
       "github_copilot_instructions"
     ],
-    "85": [
+    "101": [
       "ponytail_hooks_ponytail_statusline_ps1_ponytail_hooks_ponytail_statusline"
     ],
-    "86": [
+    "102": [
       "ponytail_opencode_command_ponytail"
     ],
-    "87": [
+    "103": [
       "ponytail_opencode_command_ponytail_audit"
     ],
-    "88": [
+    "104": [
       "ponytail_opencode_command_ponytail_debt"
     ],
-    "89": [
+    "105": [
       "ponytail_opencode_command_ponytail_gain"
     ],
-    "90": [
+    "106": [
       "ponytail_opencode_command_ponytail_help"
     ],
-    "91": [
+    "107": [
       "ponytail_opencode_command_ponytail_review"
     ],
-    "92": [
+    "108": [
       "scripts_build_learn_ui"
     ],
-    "93": [
+    "109": [
       "scripts_build_neural_mesh_ui"
     ]
   },
   "cohesion": {
-    "0": 0.045454545454545456,
-    "1": 0.05365853658536585,
-    "2": 0.07407407407407407,
-    "3": 0.10153846153846154,
-    "4": 0.08695652173913043,
+    "0": 0.044444444444444446,
+    "1": 0.045454545454545456,
+    "2": 0.05365853658536585,
+    "3": 0.07407407407407407,
+    "4": 0.10153846153846154,
     "5": 0.09090909090909091,
-    "6": 0.15789473684210525,
-    "7": 0.16374269005847952,
-    "8": 0.11764705882352941,
-    "9": 0.11764705882352941,
-    "10": 0.11764705882352941,
-    "11": 0.15441176470588236,
-    "12": 0.18333333333333332,
-    "13": 0.14285714285714285,
-    "14": 0.14285714285714285,
-    "15": 0.15384615384615385,
-    "16": 0.19696969696969696,
-    "17": 0.2727272727272727,
-    "18": 0.2,
-    "19": 0.2,
-    "20": 0.2,
-    "21": 0.2,
-    "22": 0.2,
-    "23": 0.2222222222222222,
-    "24": 0.2222222222222222,
-    "25": 0.2222222222222222,
-    "26": 0.2222222222222222,
-    "27": 0.25,
-    "28": 0.25,
-    "29": 0.25,
-    "30": 0.4642857142857143,
-    "31": 0.2857142857142857,
-    "32": 0.2857142857142857,
-    "33": 0.2857142857142857,
-    "34": 0.2857142857142857,
-    "35": 0.5238095238095238,
-    "36": 0.2857142857142857,
-    "37": 0.3333333333333333,
-    "38": 0.3333333333333333,
-    "39": 0.3333333333333333,
-    "40": 0.5333333333333333,
-    "41": 0.4,
-    "42": 0.4,
-    "43": 0.4,
-    "44": 0.4,
-    "45": 0.4,
-    "46": 0.4,
-    "47": 0.4,
-    "48": 0.4,
-    "49": 0.5,
-    "50": 0.5,
-    "51": 0.5,
-    "52": 0.5,
-    "53": 0.5,
-    "54": 0.5,
-    "55": 0.5,
-    "56": 0.5,
-    "57": 0.5,
-    "58": 0.5,
-    "59": 0.6666666666666666,
-    "60": 0.8333333333333334,
-    "61": 0.8333333333333334,
-    "62": 0.6666666666666666,
-    "63": 0.6666666666666666,
-    "64": 0.6666666666666666,
-    "65": 0.6666666666666666,
-    "66": 0.6666666666666666,
-    "67": 0.6666666666666666,
-    "68": 0.6666666666666666,
-    "69": 0.6666666666666666,
-    "70": 0.6666666666666666,
-    "71": 0.6666666666666666,
-    "72": 0.6666666666666666,
-    "73": 1.0,
-    "74": 1.0,
-    "75": 1.0,
-    "76": 1.0,
-    "77": 1.0,
-    "78": 1.0,
-    "79": 1.0,
-    "80": 1.0,
-    "81": 1.0,
-    "82": 1.0,
-    "83": 1.0,
-    "84": 1.0,
-    "85": 1.0,
-    "86": 1.0,
-    "87": 1.0,
-    "88": 1.0,
+    "6": 0.09090909090909091,
+    "7": 0.09090909090909091,
+    "8": 0.1,
+    "9": 0.10526315789473684,
+    "10": 0.10526315789473684,
+    "11": 0.16374269005847952,
+    "12": 0.1111111111111111,
+    "13": 0.1111111111111111,
+    "14": 0.1111111111111111,
+    "15": 0.1437908496732026,
+    "16": 0.1830065359477124,
+    "17": 0.11764705882352941,
+    "18": 0.11764705882352941,
+    "19": 0.11764705882352941,
+    "20": 0.11764705882352941,
+    "21": 0.11764705882352941,
+    "22": 0.11764705882352941,
+    "23": 0.125,
+    "24": 0.125,
+    "25": 0.18333333333333332,
+    "26": 0.13333333333333333,
+    "27": 0.14285714285714285,
+    "28": 0.14285714285714285,
+    "29": 0.15384615384615385,
+    "30": 0.19696969696969696,
+    "31": 0.2727272727272727,
+    "32": 0.18181818181818182,
+    "33": 0.18181818181818182,
+    "34": 0.2,
+    "35": 0.2,
+    "36": 0.2,
+    "37": 0.2222222222222222,
+    "38": 0.2222222222222222,
+    "39": 0.2222222222222222,
+    "40": 0.2222222222222222,
+    "41": 0.2222222222222222,
+    "42": 0.25,
+    "43": 0.25,
+    "44": 0.25,
+    "45": 0.25,
+    "46": 0.4642857142857143,
+    "47": 0.2857142857142857,
+    "48": 0.2857142857142857,
+    "49": 0.2857142857142857,
+    "50": 0.2857142857142857,
+    "51": 0.5238095238095238,
+    "52": 0.2857142857142857,
+    "53": 0.3333333333333333,
+    "54": 0.3333333333333333,
+    "55": 0.3333333333333333,
+    "56": 0.5333333333333333,
+    "57": 0.4,
+    "58": 0.4,
+    "59": 0.4,
+    "60": 0.4,
+    "61": 0.4,
+    "62": 0.4,
+    "63": 0.4,
+    "64": 0.4,
+    "65": 0.5,
+    "66": 0.5,
+    "67": 0.5,
+    "68": 0.5,
+    "69": 0.5,
+    "70": 0.5,
+    "71": 0.5,
+    "72": 0.5,
+    "73": 0.5,
+    "74": 0.5,
+    "75": 0.6666666666666666,
+    "76": 0.8333333333333334,
+    "77": 0.8333333333333334,
+    "78": 0.6666666666666666,
+    "79": 0.6666666666666666,
+    "80": 0.6666666666666666,
+    "81": 0.6666666666666666,
+    "82": 0.6666666666666666,
+    "83": 0.6666666666666666,
+    "84": 0.6666666666666666,
+    "85": 0.6666666666666666,
+    "86": 0.6666666666666666,
+    "87": 0.6666666666666666,
+    "88": 0.6666666666666666,
     "89": 1.0,
     "90": 1.0,
     "91": 1.0,
     "92": 1.0,
-    "93": 1.0
+    "93": 1.0,
+    "94": 1.0,
+    "95": 1.0,
+    "96": 1.0,
+    "97": 1.0,
+    "98": 1.0,
+    "99": 1.0,
+    "100": 1.0,
+    "101": 1.0,
+    "102": 1.0,
+    "103": 1.0,
+    "104": 1.0,
+    "105": 1.0,
+    "106": 1.0,
+    "107": 1.0,
+    "108": 1.0,
+    "109": 1.0
   },
   "gods": [
     {
@@ -1025,19 +1367,14 @@
       "degree": 11
     },
     {
-      "id": "ponytail_package_files",
-      "label": "files",
-      "degree": 11
-    },
-    {
       "id": "ponytail_readme_es_instalaci\u00f3n",
       "label": "Instalaci\u00f3n",
       "degree": 11
     },
     {
-      "id": "ponytail_hooks_ponytail_config_getdefaultmode",
-      "label": "getDefaultMode()",
-      "degree": 9
+      "id": "ponytail_package_files",
+      "label": "files",
+      "degree": 11
     },
     {
       "id": "ponytail_hooks_ponytail_mode_tracker_finish",
@@ -1045,15 +1382,20 @@
       "degree": 9
     },
     {
-      "id": "readme_claudia_2_0_v5_0_0_apex",
-      "label": "\u26a1 CLAUDIA 2.0 (v5.0.0 Apex)",
+      "id": "ponytail_hooks_ponytail_config_getdefaultmode",
+      "label": "getDefaultMode()",
+      "degree": 9
+    },
+    {
+      "id": "learning_neurons_n037_wasm_wasi_microvm_sandboxing_neuron_n037_webassembly_wasm_wasi_micro_vm_sandboxing",
+      "label": "Neuron N037: WebAssembly (WASM), WASI & Micro-VM Sandboxing",
       "degree": 9
     }
   ],
   "surprises": [
     {
-      "source": "parsePonytailCommand()",
-      "target": "normalizeMode()",
+      "source": "ponytailExtension()",
+      "target": "isDeactivationCommand()",
       "source_files": [
         "ponytail/pi-extension/index.js",
         "ponytail/hooks/ponytail-config.js"
@@ -1063,10 +1405,21 @@
       "why": "bridges separate communities"
     },
     {
-      "source": "getPonytailInstructions()",
-      "target": "normalizePersistedMode()",
+      "source": "ponytailExtension()",
+      "target": "writeDefaultMode()",
       "source_files": [
-        "ponytail/hooks/ponytail-instructions.js",
+        "ponytail/pi-extension/index.js",
+        "ponytail/hooks/ponytail-config.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "finish()",
+      "target": "getDefaultMode()",
+      "source_files": [
+        "ponytail/hooks/ponytail-mode-tracker.js",
         "ponytail/hooks/ponytail-config.js"
       ],
       "confidence": "EXTRACTED",
@@ -1078,17 +1431,6 @@
       "target": "getPonytailInstructions()",
       "source_files": [
         "ponytail/hooks/ponytail-mode-tracker.js",
-        "ponytail/hooks/ponytail-instructions.js"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "calls",
-      "why": "bridges separate communities"
-    },
-    {
-      "source": "ponytailExtension()",
-      "target": "getPonytailInstructions()",
-      "source_files": [
-        "ponytail/pi-extension/index.js",
         "ponytail/hooks/ponytail-instructions.js"
       ],
       "confidence": "EXTRACTED",
