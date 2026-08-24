@@ -51,14 +51,13 @@ def auto_sync():
 
     run_cmd(f'git bundle create "{temp_bundle}" --all')
     
-    pscp_cmd = f'& "C:\\Program Files\\PuTTY\\pscp.exe" -i "$env:USERPROFILE\\.ssh\\vps_ubuntu.ppk" "{temp_bundle}" ubuntu@169.58.92.168:/home/ubuntu/claudia_repo.bundle'
-    subprocess.run(["powershell", "-Command", pscp_cmd], capture_output=True, timeout=60)
+    scp_res = subprocess.run(["scp", "-o", "BatchMode=yes", temp_bundle, "vps_claudia:/home/ubuntu/claudia_repo.bundle"], capture_output=True, text=True, timeout=30)
     
-    vps_sync_cmd = '& "C:\\Program Files\\PuTTY\\plink.exe" -batch -i "$env:USERPROFILE\\.ssh\\vps_ubuntu.ppk" ubuntu@169.58.92.168 "cd /home/ubuntu/Agent_Claudia_Autonomus && git pull /home/ubuntu/claudia_repo.bundle main --no-edit && git push origin main && rm -f /home/ubuntu/claudia_repo.bundle"'
-    res = subprocess.run(["powershell", "-Command", vps_sync_cmd], capture_output=True, text=True, timeout=90)
+    vps_sync_cmd = 'cd /home/ubuntu/Agent_Claudia_Autonomus && git pull /home/ubuntu/claudia_repo.bundle main --no-edit && git push origin main && rm -f /home/ubuntu/claudia_repo.bundle'
+    res = subprocess.run(["ssh", "-o", "BatchMode=yes", "vps_claudia", vps_sync_cmd], capture_output=True, text=True, timeout=60)
     
-    if res.returncode == 0 and "Everything up-to-date" in res.stdout or "main -> main" in res.stdout or "main -> main" in res.stderr:
-        print("[SUKSES] Berhasil sinkronisasi dan push memori neuron ke repositori GitHub!")
+    if res.returncode == 0:
+        print("[SUKSES] Berhasil sinkronisasi dan push 40 Master Neurons ke repositori GitHub & VPS!")
     else:
         print("[STATUS] Output push:", res.stdout.strip(), res.stderr.strip())
 
