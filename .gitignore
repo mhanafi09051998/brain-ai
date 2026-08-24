@@ -55,3 +55,6 @@ yarn-error.log*
 graphify-out/cache/
 .tempmediaStorage/
 .system_generated/
+
+opencode.json
+prod_planner.md
