@@ -54,7 +54,7 @@ def auto_sync():
     pscp_cmd = f'& "C:\\Program Files\\PuTTY\\pscp.exe" -i "$env:USERPROFILE\\.ssh\\vps_ubuntu.ppk" "{temp_bundle}" ubuntu@169.58.92.168:/home/ubuntu/claudia_repo.bundle'
     subprocess.run(["powershell", "-Command", pscp_cmd], capture_output=True, timeout=60)
     
-    vps_sync_cmd = '& "C:\\Program Files\\PuTTY\\plink.exe" -batch -ssh ubuntu@169.58.92.168 -pw "kZn6giai9TEvwW?" "cd /home/ubuntu/Agent_Claudia_Autonomus && git pull /home/ubuntu/claudia_repo.bundle main --no-edit && git push origin main && rm -f /home/ubuntu/claudia_repo.bundle"'
+    vps_sync_cmd = '& "C:\\Program Files\\PuTTY\\plink.exe" -batch -i "$env:USERPROFILE\\.ssh\\vps_ubuntu.ppk" ubuntu@169.58.92.168 "cd /home/ubuntu/Agent_Claudia_Autonomus && git pull /home/ubuntu/claudia_repo.bundle main --no-edit && git push origin main && rm -f /home/ubuntu/claudia_repo.bundle"'
     res = subprocess.run(["powershell", "-Command", vps_sync_cmd], capture_output=True, text=True, timeout=90)
     
     if res.returncode == 0 and "Everything up-to-date" in res.stdout or "main -> main" in res.stdout or "main -> main" in res.stderr:

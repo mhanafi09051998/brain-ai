@@ -9,7 +9,7 @@ const app = express();
 const PORT = 3005;
 const STATE_FILE = path.join(__dirname, 'data/state.json');
 const RUNNER_SCRIPT = '/home/ubuntu/benchmarks/official_runner.py';
-const ROUTER_API_KEY = 'sk-b2a2f6c6f8228b4b-prod01-71d3127b';
+const ROUTER_API_KEY = process.env.ANTHROPIC_AUTH_TOKEN || process.env.ROUTER_API_KEY || '';
 
 let clients = [];
 

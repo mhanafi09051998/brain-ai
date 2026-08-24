@@ -16,7 +16,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 DB_PATH = "/home/ubuntu/benchmarks/benchmark_results.db"
 ROUTER_URL = "http://127.0.0.1:3040/v1/chat/completions"
-ROUTER_KEY = "sk-b2a2f6c6f8228b4b-prod01-71d3127b"
+ROUTER_KEY = os.environ.get("ANTHROPIC_AUTH_TOKEN") or os.environ.get("ROUTER_API_KEY", "")
 
 def init_db():
     conn = sqlite3.connect(DB_PATH, timeout=20.0)
