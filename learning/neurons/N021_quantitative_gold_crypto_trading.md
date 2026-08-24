@@ -1,7 +1,7 @@
 # N021: Quantitative Gold (XAU/USD) & Crypto Trading Systems
 
 - **Kategori:** Quantitative Finance & Algorithmic Trading
-- **Tanggal Pelatihan:** 2026-08-24 18:28:54
+- **Tanggal Pelatihan:** 2026-08-24 14:26:40
 - **Status:** Active Operational Invariant
 
 ---

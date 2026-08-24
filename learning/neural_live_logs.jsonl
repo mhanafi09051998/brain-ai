@@ -1,0 +1,15 @@
+{"timestamp": "2026-08-24T15:53:36.845055", "type": "GOLD_RADAR_ALERT", "details": {"direction": "BUY (LONG)", "price": 4655.21, "score": 4, "missing": 1}}
+{"timestamp": "2026-08-24T15:53:53.310041", "type": "GOLD_RADAR_ALERT", "details": {"direction": "BUY (LONG)", "price": 4658.91, "score": 4, "missing": 1}}
+{"timestamp": "2026-08-24T15:54:02.279154", "type": "GOLD_RADAR_ALERT", "details": {"direction": "BUY (LONG)", "price": 4657.09, "score": 4, "missing": 1}}
+{"timestamp": "2026-08-24T15:54:17.851129", "type": "GOLD_RADAR_ALERT", "details": {"direction": "BUY (LONG)", "price": 4659.57, "score": 4, "missing": 1}}
+{"timestamp": "2026-08-24T15:54:22.505496", "type": "GOLD_RADAR_ALERT", "details": {"direction": "BUY (LONG)", "price": 4659.57, "score": 4, "missing": 1}}
+{"timestamp": "2026-08-24T16:09:25.536508", "type": "GOLD_RADAR_ALERT", "details": {"direction": "BUY (LONG)", "price": 4665.47, "score": 4, "missing": 1}}
+{"timestamp": "2026-08-24T16:09:31.314264", "type": "GOLD_RADAR_ALERT", "details": {"direction": "BUY (LONG)", "price": 4665.28, "score": 4, "missing": 1}}
+{"timestamp": "2026-08-24T16:24:33.924004", "type": "GOLD_RADAR_ALERT", "details": {"direction": "BUY (LONG)", "price": 4662.89, "score": 4, "missing": 1}}
+{"timestamp": "2026-08-24T16:24:39.535181", "type": "GOLD_RADAR_ALERT", "details": {"direction": "BUY (LONG)", "price": 4662.1, "score": 4, "missing": 1}}
+{"timestamp": "2026-08-24T16:39:41.696556", "type": "GOLD_RADAR_ALERT", "details": {"direction": "BUY (LONG)", "price": 4669.76, "score": 3, "missing": 2}}
+{"timestamp": "2026-08-24T16:39:47.994998", "type": "GOLD_RADAR_ALERT", "details": {"direction": "BUY (LONG)", "price": 4669.76, "score": 3, "missing": 2}}
+{"timestamp": "2026-08-24T16:45:45.328583", "type": "GOLD_RADAR_ALERT", "details": {"direction": "BUY (LONG)", "price": 4666.41, "score": 4, "missing": 1}}
+{"timestamp": "2026-08-24T16:45:51.469083", "type": "GOLD_RADAR_ALERT", "details": {"direction": "BUY (LONG)", "price": 4666.41, "score": 4, "missing": 1}}
+{"timestamp": "2026-08-24T17:00:53.280374", "type": "GOLD_RADAR_ALERT", "details": {"direction": "BUY (LONG)", "price": 4662.1, "score": 4, "missing": 1}}
+{"timestamp": "2026-08-24T17:00:59.622486", "type": "GOLD_RADAR_ALERT", "details": {"direction": "BUY (LONG)", "price": 4662.11, "score": 4, "missing": 1}}
