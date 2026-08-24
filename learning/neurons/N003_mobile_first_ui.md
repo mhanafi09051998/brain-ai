@@ -2,6 +2,7 @@
 
 ## Core Concept
 Prinsip adaptasi UI densitas tinggi (seperti kalender arus kas, grafik metrik, tabel data) pada layar sempit:
+- **Zero Native Browser Popups**: Dilarang keras menggunakan `alert()`, `confirm()`, atau `prompt()`. Semua dialog, konfirmasi aksi, dan notifikasi wajib berupa komponen modal/toast in-page website dengan backdrop blur dan transisi halus.
 - **Kalender Grid (7 Kolom)**: Layar mobile (~360px–400px) hanya memiliki ~40px per kolom. Teks mata uang panjang (`+Rp 1.500.000`) pasti overflow jika dipaksakan.
 - **Solusi**: Gunakan indikator dot visual (`w-1.5 h-1.5 rounded-full bg-emerald-500`) pada mode mobile (`flex sm:hidden`), dan teks angka penuh pada desktop (`hidden sm:block`).
 - **Tinggi Cell**: Turunkan dari `min-h-[85px]` menjadi `min-h-[44px] sm:min-h-[85px]` agar tidak memakan seluruh viewport ponsel.
