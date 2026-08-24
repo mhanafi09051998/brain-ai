@@ -20,7 +20,7 @@
   "18": "Pembelajaran & Standar Tetap (Learnings & Fixed Rules) - Claudia",
   "19": "Neuron N008: Persistent Live Session Checkpoint & Infrastructure State",
   "20": "pi-extension/package.json",
-  "21": "⚡ CLAUDIA 2.0",
+  "21": "⚡ CLAUDIA 2.0 (v5.0.0 Apex)",
   "22": "MultiHopEngine",
   "23": ".agents/skills/ponytail-audit/SKILL.md",
   "24": "Ponytail Gain",
@@ -86,5 +86,7 @@
   "84": "test_direct_router.py",
   "85": "verify_ecosystem_playwright.js",
   "86": "claudiacode_server.js",
-  "87": "filesystem"
+  "87": "filesystem",
+  "88": "Neuron N020: Autonomous Cross-Session Memory & Resilient Checkpoint Continuity",
+  "89": "CLAUDIA.md — Project Instructions & Architecture Rules"
 }

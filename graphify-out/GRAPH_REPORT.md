@@ -1,16 +1,16 @@
 # Graph Report - Agent_Claudia_Autonomus  (2026-08-24)
 
 ## Corpus Check
-- 121 files · ~338,097 words
+- 114 files · ~336,884 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 617 nodes · 647 edges · 90 communities (64 shown, 26 thin omitted)
+- 592 nodes · 629 edges · 83 communities (60 shown, 23 thin omitted)
 - Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 25 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `40de5f37`
+- Built from commit: `ea14856e`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -24,11 +24,9 @@
 - Production Planning Specification: Zolu AI Web Production Engine
 - Ponytail
 - Ponytail
-- 📦 Daftar Modul & Framework
 - Ponytail Help
 - Core Engines & Workflows
 - Ponytail Help
-- Ponytail, lazy senior dev mode
 - Ponytail, lazy senior dev mode
 - Ponytail, lazy senior dev mode
 - N016_frontier_benchmark_evaluator.md
@@ -83,14 +81,11 @@
 - opencode.json
 - parallel_runner.py
 - zolu_learn_server.js
-- diagnose_browser.js
-- test_playwright.js
 - ingest_frontier_knowledge.py
 - official_runner_real.py
 - Neuron N017: Program-Aided Mathematical Reasoning & AIME Invariants
 - Neuron N018: RepoMap AST Compression & SWE-bench Precision
 - Neuron N019: BFCL Tool Schema & IFEval Strict Format Oracle
-- verify_ecosystem_playwright.js
 - claudiacode_server.js
 - filesystem
 - Neuron N020: Autonomous Cross-Session Memory & Resilient Checkpoint Continuity
@@ -123,7 +118,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (90 total, 26 thin omitted)
+## Communities (83 total, 23 thin omitted)
 
 ### Community 0 - "ponytail-config.js"
 Cohesion: 0.08
@@ -167,10 +162,6 @@ Nodes (8): Boundaries, Intensity, Output, Persistence, Ponytail, Rules, The ladd
 Cohesion: 0.22
 Nodes (8): Boundaries, Intensity, Output, Persistence, Ponytail, Rules, The ladder, When NOT to be lazy
 
-### Community 9 - "📦 Daftar Modul & Framework"
-Cohesion: 0.22
-Nodes (8): 1. **Biome (`@biomejs/biome`)** - *Linter & Formatter Rust*, 2. **Playwright (`playwright` + Chromium Headless)** - *UI & End-to-End Testing*, 3. **Hono (`hono`)** - *Ultra-Lightweight Edge Web Framework*, 4. **Zod (`zod`)** - *Runtime Schema Validation*, 5. **Drizzle ORM (`drizzle-orm` + `better-sqlite3`)** - *Zero-Bloat Type-Safe Database*, 6. **Puppeteer (`puppeteer`)** - *Headless Chrome Automation*, 📦 Daftar Modul & Framework, 🔒 Standar Keamanan & Vetting
-
 ### Community 10 - "Ponytail Help"
 Cohesion: 0.25
 Nodes (7): Configure Default Mode, Deactivate, Levels, More, Ponytail Help, Skills, Update
@@ -190,10 +181,6 @@ Nodes (7): Graphify & Auto-Sync Knowledge Graph:, ?? Kerahasiaan Arsitektur & Pe
 ### Community 14 - "Ponytail, lazy senior dev mode"
 Cohesion: 0.29
 Nodes (6): Graphify Knowledge Graph:, Not lazy about:, Persona & Communication, Ponytail, lazy senior dev mode, Rules:, The Minimality Ladder
-
-### Community 15 - "Ponytail, lazy senior dev mode"
-Cohesion: 0.25
-Nodes (7): Graphify & Auto-Sync Knowledge Graph:, ?? Kerahasiaan Arsitektur & Perlindungan Hak Cipta (Proprietary IP Shield):, Not lazy about:, Persona & Communication, Ponytail, lazy senior dev mode, Rules:, The Minimality Ladder
 
 ### Community 16 - "N016_frontier_benchmark_evaluator.md"
 Cohesion: 0.50
@@ -348,15 +335,15 @@ Cohesion: 0.50
 Nodes (3): CLAUDIA.md — Project Instructions & Architecture Rules, The Minimality Ladder Directives:, Verification:
 
 ## Knowledge Gaps
-- **353 isolated node(s):** `@modelcontextprotocol/server-filesystem`, `@modelcontextprotocol/server-memory`, `$schema`, `npm`, `baseURL` (+348 more)
+- **337 isolated node(s):** `@modelcontextprotocol/server-filesystem`, `@modelcontextprotocol/server-memory`, `$schema`, `npm`, `baseURL` (+332 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **26 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **23 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **What connects `@modelcontextprotocol/server-filesystem`, `@modelcontextprotocol/server-memory`, `$schema` to the rest of the system?**
-  _353 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _337 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `ponytail-config.js` be split into smaller, more focused modules?**
   _Cohesion score 0.07541478129713423 - nodes in this community are weakly interconnected._
 - **Should `ponytail/package.json` be split into smaller, more focused modules?**

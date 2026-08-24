@@ -2056,102 +2056,6 @@
       "source_location": "L12"
     },
     {
-      "id": "gemini",
-      "label": "GEMINI.md",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "Ponytail, lazy senior dev mode",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "gemini.md",
-      "source_file": "GEMINI.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "gemini_graphify_auto_sync_knowledge_graph",
-      "label": "Graphify & Auto-Sync Knowledge Graph:",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "Ponytail, lazy senior dev mode",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "graphify & auto-sync knowledge graph:",
-      "source_file": "GEMINI.md",
-      "source_location": "L40"
-    },
-    {
-      "id": "gemini_kerahasiaan_arsitektur_perlindungan_hak_cipta_proprietary_ip_shield",
-      "label": "?? Kerahasiaan Arsitektur & Perlindungan Hak Cipta (Proprietary IP Shield):",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "Ponytail, lazy senior dev mode",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "?? kerahasiaan arsitektur & perlindungan hak cipta (proprietary ip shield):",
-      "source_file": "GEMINI.md",
-      "source_location": "L45"
-    },
-    {
-      "id": "gemini_not_lazy_about",
-      "label": "Not lazy about:",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "Ponytail, lazy senior dev mode",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "not lazy about:",
-      "source_file": "GEMINI.md",
-      "source_location": "L37"
-    },
-    {
-      "id": "gemini_persona_communication",
-      "label": "Persona & Communication",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "Ponytail, lazy senior dev mode",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "persona & communication",
-      "source_file": "GEMINI.md",
-      "source_location": "L5"
-    },
-    {
-      "id": "gemini_ponytail_lazy_senior_dev_mode",
-      "label": "Ponytail, lazy senior dev mode",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "Ponytail, lazy senior dev mode",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "ponytail, lazy senior dev mode",
-      "source_file": "GEMINI.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "gemini_rules",
-      "label": "Rules:",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "Ponytail, lazy senior dev mode",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "rules:",
-      "source_file": "GEMINI.md",
-      "source_location": "L27"
-    },
-    {
-      "id": "gemini_the_minimality_ladder",
-      "label": "The Minimality Ladder",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "Ponytail, lazy senior dev mode",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "the minimality ladder",
-      "source_file": "GEMINI.md",
-      "source_location": "L12"
-    },
-    {
       "id": "learning_neurons_n016_frontier_benchmark_evaluator",
       "label": "N016_frontier_benchmark_evaluator.md",
       "_origin": "ast",
@@ -6467,50 +6371,6 @@
       "source_location": "L10"
     },
     {
-      "id": "scripts_diagnose_browser",
-      "label": "diagnose_browser.js",
-      "_origin": "ast",
-      "community": 76,
-      "community_name": "diagnose_browser.js",
-      "file_type": "code",
-      "norm_label": "diagnose_browser.js",
-      "source_file": "scripts/diagnose_browser.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "scripts_diagnose_browser_chromium",
-      "label": "{ chromium }",
-      "_origin": "ast",
-      "community": 76,
-      "community_name": "diagnose_browser.js",
-      "file_type": "code",
-      "norm_label": "{ chromium }",
-      "source_file": "scripts/diagnose_browser.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "scripts_test_playwright",
-      "label": "test_playwright.js",
-      "_origin": "ast",
-      "community": 77,
-      "community_name": "test_playwright.js",
-      "file_type": "code",
-      "norm_label": "test_playwright.js",
-      "source_file": "scripts/test_playwright.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "scripts_test_playwright_chromium",
-      "label": "{ chromium }",
-      "_origin": "ast",
-      "community": 77,
-      "community_name": "test_playwright.js",
-      "file_type": "code",
-      "norm_label": "{ chromium }",
-      "source_file": "scripts/test_playwright.js",
-      "source_location": "L1"
-    },
-    {
       "id": "scripts_ingest_frontier_knowledge",
       "label": "ingest_frontier_knowledge.py",
       "_origin": "ast",
@@ -6832,50 +6692,6 @@
       "node_kind": "heading",
       "norm_label": "neuron n019: bfcl tool schema & ifeval strict format oracle",
       "source_file": "learning/neurons/N019_bfcl_ifeval_oracle.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "scripts_debug_tau",
-      "label": "debug_tau.py",
-      "_origin": "ast",
-      "community": 83,
-      "community_name": "debug_tau.py",
-      "file_type": "code",
-      "norm_label": "debug_tau.py",
-      "source_file": "scripts/debug_tau.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "scripts_test_direct_router",
-      "label": "test_direct_router.py",
-      "_origin": "ast",
-      "community": 84,
-      "community_name": "test_direct_router.py",
-      "file_type": "code",
-      "norm_label": "test_direct_router.py",
-      "source_file": "scripts/test_direct_router.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "scripts_verify_ecosystem_playwright",
-      "label": "verify_ecosystem_playwright.js",
-      "_origin": "ast",
-      "community": 85,
-      "community_name": "verify_ecosystem_playwright.js",
-      "file_type": "code",
-      "norm_label": "verify_ecosystem_playwright.js",
-      "source_file": "scripts/verify_ecosystem_playwright.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "scripts_verify_ecosystem_playwright_chromium",
-      "label": "{ chromium }",
-      "_origin": "ast",
-      "community": 85,
-      "community_name": "verify_ecosystem_playwright.js",
-      "file_type": "code",
-      "norm_label": "{ chromium }",
-      "source_file": "scripts/verify_ecosystem_playwright.js",
       "source_location": "L1"
     },
     {
@@ -7215,114 +7031,6 @@
       "norm_label": "verification:",
       "source_file": "CLAUDIA.md",
       "source_location": "L10"
-    },
-    {
-      "id": "toolkit_readme",
-      "label": "toolkit/README.md",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "\ud83d\udce6 Daftar Modul & Framework",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "toolkit/readme.md",
-      "source_file": "toolkit/README.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "toolkit_readme_1_biome_biomejs_biome_linter_formatter_rust",
-      "label": "1. **Biome (`@biomejs/biome`)** - *Linter & Formatter Rust*",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "\ud83d\udce6 Daftar Modul & Framework",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "1. **biome (`@biomejs/biome`)** - *linter & formatter rust*",
-      "source_file": "toolkit/README.md",
-      "source_location": "L9"
-    },
-    {
-      "id": "toolkit_readme_2_playwright_playwright_chromium_headless_ui_end_to_end_testing",
-      "label": "2. **Playwright (`playwright` + Chromium Headless)** - *UI & End-to-End Testing*",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "\ud83d\udce6 Daftar Modul & Framework",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "2. **playwright (`playwright` + chromium headless)** - *ui & end-to-end testing*",
-      "source_file": "toolkit/README.md",
-      "source_location": "L14"
-    },
-    {
-      "id": "toolkit_readme_3_hono_hono_ultra_lightweight_edge_web_framework",
-      "label": "3. **Hono (`hono`)** - *Ultra-Lightweight Edge Web Framework*",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "\ud83d\udce6 Daftar Modul & Framework",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "3. **hono (`hono`)** - *ultra-lightweight edge web framework*",
-      "source_file": "toolkit/README.md",
-      "source_location": "L18"
-    },
-    {
-      "id": "toolkit_readme_4_zod_zod_runtime_schema_validation",
-      "label": "4. **Zod (`zod`)** - *Runtime Schema Validation*",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "\ud83d\udce6 Daftar Modul & Framework",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "4. **zod (`zod`)** - *runtime schema validation*",
-      "source_file": "toolkit/README.md",
-      "source_location": "L22"
-    },
-    {
-      "id": "toolkit_readme_5_drizzle_orm_drizzle_orm_better_sqlite3_zero_bloat_type_safe_database",
-      "label": "5. **Drizzle ORM (`drizzle-orm` + `better-sqlite3`)** - *Zero-Bloat Type-Safe Database*",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "\ud83d\udce6 Daftar Modul & Framework",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "5. **drizzle orm (`drizzle-orm` + `better-sqlite3`)** - *zero-bloat type-safe database*",
-      "source_file": "toolkit/README.md",
-      "source_location": "L25"
-    },
-    {
-      "id": "toolkit_readme_6_puppeteer_puppeteer_headless_chrome_automation",
-      "label": "6. **Puppeteer (`puppeteer`)** - *Headless Chrome Automation*",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "\ud83d\udce6 Daftar Modul & Framework",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "6. **puppeteer (`puppeteer`)** - *headless chrome automation*",
-      "source_file": "toolkit/README.md",
-      "source_location": "L28"
-    },
-    {
-      "id": "toolkit_readme_daftar_modul_framework",
-      "label": "\ud83d\udce6 Daftar Modul & Framework",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "\ud83d\udce6 Daftar Modul & Framework",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\ud83d\udce6 daftar modul & framework",
-      "source_file": "toolkit/README.md",
-      "source_location": "L7"
-    },
-    {
-      "id": "toolkit_readme_standar_keamanan_vetting",
-      "label": "\ud83d\udd12 Standar Keamanan & Vetting",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "\ud83d\udce6 Daftar Modul & Framework",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\ud83d\udd12 standar keamanan & vetting",
-      "source_file": "toolkit/README.md",
-      "source_location": "L33"
     }
   ],
   "links": [
@@ -9708,83 +9416,6 @@
       "confidence_score": 1.0,
       "source_file": ".claudia/mcp.json",
       "source_location": "L1",
-      "weight": 1.0
-    },
-    {
-      "source": "gemini",
-      "target": "gemini_ponytail_lazy_senior_dev_mode",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "GEMINI.md",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
-      "source": "gemini_ponytail_lazy_senior_dev_mode",
-      "target": "gemini_the_minimality_ladder",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "GEMINI.md",
-      "source_location": "L12",
-      "weight": 1.0
-    },
-    {
-      "source": "gemini_ponytail_lazy_senior_dev_mode",
-      "target": "gemini_rules",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "GEMINI.md",
-      "source_location": "L27",
-      "weight": 1.0
-    },
-    {
-      "source": "gemini_ponytail_lazy_senior_dev_mode",
-      "target": "gemini_not_lazy_about",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "GEMINI.md",
-      "source_location": "L37",
-      "weight": 1.0
-    },
-    {
-      "source": "gemini_ponytail_lazy_senior_dev_mode",
-      "target": "gemini_graphify_auto_sync_knowledge_graph",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "GEMINI.md",
-      "source_location": "L40",
-      "weight": 1.0
-    },
-    {
-      "source": "gemini_ponytail_lazy_senior_dev_mode",
-      "target": "gemini_kerahasiaan_arsitektur_perlindungan_hak_cipta_proprietary_ip_shield",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "GEMINI.md",
-      "source_location": "L45",
-      "weight": 1.0
-    },
-    {
-      "source": "gemini_ponytail_lazy_senior_dev_mode",
-      "target": "gemini_persona_communication",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "GEMINI.md",
-      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -13495,17 +13126,6 @@
       "weight": 1.0
     },
     {
-      "source": "scripts_diagnose_browser",
-      "target": "scripts_diagnose_browser_chromium",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/diagnose_browser.js",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
       "source": "scripts_ingest_frontier_knowledge",
       "target": "scripts_ingest_frontier_knowledge_ensure_dirs",
       "relation": "contains",
@@ -13682,28 +13302,6 @@
       "weight": 1.0
     },
     {
-      "source": "scripts_test_playwright",
-      "target": "scripts_test_playwright_chromium",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/test_playwright.js",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_ecosystem_playwright",
-      "target": "scripts_verify_ecosystem_playwright_chromium",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/verify_ecosystem_playwright.js",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
       "source": "scripts_zolu_learn_server",
       "target": "scripts_zolu_learn_server_express",
       "relation": "contains",
@@ -13855,94 +13453,6 @@
       "confidence_score": 1.0,
       "source_file": "scripts/zolu_learn_server.js",
       "source_location": "L91",
-      "weight": 1.0
-    },
-    {
-      "source": "toolkit_readme",
-      "target": "toolkit_readme_standar_keamanan_vetting",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "toolkit/README.md",
-      "source_location": "L33",
-      "weight": 1.0
-    },
-    {
-      "source": "toolkit_readme",
-      "target": "toolkit_readme_daftar_modul_framework",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "toolkit/README.md",
-      "source_location": "L7",
-      "weight": 1.0
-    },
-    {
-      "source": "toolkit_readme_daftar_modul_framework",
-      "target": "toolkit_readme_2_playwright_playwright_chromium_headless_ui_end_to_end_testing",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "toolkit/README.md",
-      "source_location": "L14",
-      "weight": 1.0
-    },
-    {
-      "source": "toolkit_readme_daftar_modul_framework",
-      "target": "toolkit_readme_3_hono_hono_ultra_lightweight_edge_web_framework",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "toolkit/README.md",
-      "source_location": "L18",
-      "weight": 1.0
-    },
-    {
-      "source": "toolkit_readme_daftar_modul_framework",
-      "target": "toolkit_readme_4_zod_zod_runtime_schema_validation",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "toolkit/README.md",
-      "source_location": "L22",
-      "weight": 1.0
-    },
-    {
-      "source": "toolkit_readme_daftar_modul_framework",
-      "target": "toolkit_readme_5_drizzle_orm_drizzle_orm_better_sqlite3_zero_bloat_type_safe_database",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "toolkit/README.md",
-      "source_location": "L25",
-      "weight": 1.0
-    },
-    {
-      "source": "toolkit_readme_daftar_modul_framework",
-      "target": "toolkit_readme_6_puppeteer_puppeteer_headless_chrome_automation",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "toolkit/README.md",
-      "source_location": "L28",
-      "weight": 1.0
-    },
-    {
-      "source": "toolkit_readme_daftar_modul_framework",
-      "target": "toolkit_readme_1_biome_biomejs_biome_linter_formatter_rust",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "toolkit/README.md",
-      "source_location": "L9",
       "weight": 1.0
     },
     {
@@ -14621,5 +14131,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "40de5f376fbdd95158e39f18d67d72d6c93a3280"
+  "built_at_commit": "ea14856e3965c63690c79f9cffc4895232ec56e5"
 }

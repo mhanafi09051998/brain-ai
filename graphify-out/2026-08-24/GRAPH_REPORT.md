@@ -1,16 +1,16 @@
 # Graph Report - Agent_Claudia_Autonomus  (2026-08-24)
 
 ## Corpus Check
-- 117 files · ~335,564 words
+- 121 files · ~338,097 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 601 nodes · 633 edges · 88 communities (62 shown, 26 thin omitted)
+- 617 nodes · 647 edges · 90 communities (64 shown, 26 thin omitted)
 - Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 25 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d0d645bd`
+- Built from commit: `40de5f37`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -36,7 +36,7 @@
 - Pembelajaran & Standar Tetap (Learnings & Fixed Rules) - Claudia
 - Neuron N008: Persistent Live Session Checkpoint & Infrastructure State
 - pi-extension/package.json
-- ⚡ CLAUDIA 2.0
+- ⚡ CLAUDIA 2.0 (v5.0.0 Apex)
 - MultiHopEngine
 - .agents/skills/ponytail-audit/SKILL.md
 - Ponytail Gain
@@ -93,6 +93,8 @@
 - verify_ecosystem_playwright.js
 - claudiacode_server.js
 - filesystem
+- Neuron N020: Autonomous Cross-Session Memory & Resilient Checkpoint Continuity
+- CLAUDIA.md — Project Instructions & Architecture Rules
 
 ## God Nodes (most connected - your core abstractions)
 1. `Install` - 15 edges
@@ -104,28 +106,28 @@
 7. `Instalación` - 11 edges
 8. `getDefaultMode()` - 9 edges
 9. `finish()` - 9 edges
-10. `⚡ CLAUDIA 2.0` - 9 edges
+10. `⚡ CLAUDIA 2.0 (v5.0.0 Apex)` - 9 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `ponytailExtension()` --calls--> `isDeactivationCommand()`  [EXTRACTED]
+  ponytail/pi-extension/index.js → ponytail/hooks/ponytail-config.js
+- `finish()` --calls--> `getDefaultMode()`  [EXTRACTED]
+  ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-config.js
+- `finish()` --calls--> `writeDefaultMode()`  [EXTRACTED]
+  ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-config.js
+- `finish()` --calls--> `getPonytailInstructions()`  [EXTRACTED]
+  ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-instructions.js
 - `inject()` --calls--> `getPonytailInstructions()`  [EXTRACTED]
   ponytail/hooks/ponytail-subagent.js → ponytail/hooks/ponytail-instructions.js
-- `finish()` --calls--> `clearMode()`  [EXTRACTED]
-  ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-runtime.js
-- `finish()` --calls--> `readMode()`  [EXTRACTED]
-  ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-runtime.js
-- `finish()` --calls--> `setMode()`  [EXTRACTED]
-  ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-runtime.js
-- `finish()` --calls--> `writeHookOutput()`  [EXTRACTED]
-  ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-runtime.js
 
 ## Import Cycles
 - None detected.
 
-## Communities (88 total, 26 thin omitted)
+## Communities (90 total, 26 thin omitted)
 
 ### Community 0 - "ponytail-config.js"
-Cohesion: 0.07
-Nodes (42): fs, getConfigDir(), getConfigPath(), getDefaultMode(), getHideStatus(), getQuietStartup(), isDeactivationCommand(), normalizeConfigMode() (+34 more)
+Cohesion: 0.08
+Nodes (40): fs, getConfigDir(), getConfigPath(), getDefaultMode(), getHideStatus(), getQuietStartup(), normalizeConfigMode(), normalizeMode() (+32 more)
 
 ### Community 1 - "ponytail/package.json"
 Cohesion: 0.05
@@ -133,13 +135,13 @@ Nodes (40): author, name, url, bugs, url, description, exports, ./plugin (+32 mo
 
 ### Community 2 - "ponytail-activate.js"
 Cohesion: 0.07
-Nodes (34): claudeDir, {
+Nodes (36): claudeDir, {
   clearMode,
   isCodex,
   isCopilot,
   setMode,
   writeHookOutput,
-}, fs, { getDefaultMode, getClaudeDir, isShellSafe }, { getPonytailInstructions }, mode, output, path (+26 more)
+}, fs, { getDefaultMode, getClaudeDir, isShellSafe }, { getPonytailInstructions }, mode, output, path (+28 more)
 
 ### Community 3 - "Install"
 Cohesion: 0.07
@@ -213,7 +215,7 @@ Nodes (5): 🚀 Deployed Ecosystem & Port Mappings, 🛠️ Installed Autonomous
 Cohesion: 0.33
 Nodes (5): name, private, scripts, test, type
 
-### Community 21 - "⚡ CLAUDIA 2.0"
+### Community 21 - "⚡ CLAUDIA 2.0 (v5.0.0 Apex)"
 Cohesion: 0.20
 Nodes (9): 🌌 1. Filosofi Rekayasa Inti: *The Minimality Ladder*, 🧠 2. Cognitive Neural Mesh (16 Master Neurons), 🧪 3. Framework Tolok Ukur 6 Parameter (Frontier Real Evaluator), 🌐 4. Ekosistem Layanan Aktif (*Production Cluster*), 📊 5. Telemetri VPS & Kecepatan Jaringan Real-Time, 🛠️ 6. Persenjataan & Toolkit Terpasang, 🔒 7. Zero-Trust Security & Vault Isolation, *Autonomous Senior Engineering Partner & Cognitive Neural Mesh* (+1 more)
 
@@ -330,15 +332,23 @@ Cohesion: 0.50
 Nodes (3): 📋 4 Aturan Disiplin Eksekusi:, 📌 Domain & Karakteristik, Neuron N019: BFCL Tool Schema & IFEval Strict Format Oracle
 
 ### Community 86 - "claudiacode_server.js"
-Cohesion: 0.33
-Nodes (5): app, compression, cors, express, path
+Cohesion: 0.20
+Nodes (9): app, compression, cors, Database, db, DB_PATH, express, fs (+1 more)
 
 ### Community 87 - "filesystem"
 Cohesion: 0.40
 Nodes (5): filesystem, memory, npx, @modelcontextprotocol/server-filesystem, @modelcontextprotocol/server-memory
 
+### Community 88 - "Neuron N020: Autonomous Cross-Session Memory & Resilient Checkpoint Continuity"
+Cohesion: 0.25
+Nodes (7): 1. Inisialisasi Otomatis (Cold Start Traversal), 2. Protokol Penanganan Saat Kena Limit / Terpotong, 🔒 Kebijakan Integritas & Anti-Data Loss, 💾 Mekanisme Penyimpanan State Permanen (Snapshot Ledger), Neuron N020: Autonomous Cross-Session Memory & Resilient Checkpoint Continuity, 🔄 Protokol Resume Lintas IDE & Model, 📌 Tujuan Arsitektur
+
+### Community 89 - "CLAUDIA.md — Project Instructions & Architecture Rules"
+Cohesion: 0.50
+Nodes (3): CLAUDIA.md — Project Instructions & Architecture Rules, The Minimality Ladder Directives:, Verification:
+
 ## Knowledge Gaps
-- **342 isolated node(s):** `@modelcontextprotocol/server-filesystem`, `@modelcontextprotocol/server-memory`, `$schema`, `npm`, `baseURL` (+337 more)
+- **353 isolated node(s):** `@modelcontextprotocol/server-filesystem`, `@modelcontextprotocol/server-memory`, `$schema`, `npm`, `baseURL` (+348 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **26 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -346,13 +356,13 @@ Nodes (5): filesystem, memory, npx, @modelcontextprotocol/server-filesystem, @mo
 _Questions this graph is uniquely positioned to answer:_
 
 - **What connects `@modelcontextprotocol/server-filesystem`, `@modelcontextprotocol/server-memory`, `$schema` to the rest of the system?**
-  _342 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _353 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `ponytail-config.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.07477288609364081 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07541478129713423 - nodes in this community are weakly interconnected._
 - **Should `ponytail/package.json` be split into smaller, more focused modules?**
   _Cohesion score 0.05365853658536585 - nodes in this community are weakly interconnected._
 - **Should `ponytail-activate.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06852497096399536 - nodes in this community are weakly interconnected._
 - **Should `Install` be split into smaller, more focused modules?**
   _Cohesion score 0.07407407407407407 - nodes in this community are weakly interconnected._
 - **Should `README.es.md` be split into smaller, more focused modules?**

@@ -264,9 +264,9 @@
     "semantic_hash": ""
   },
   "learning/neurons/N003_mobile_first_ui.md": {
-    "mtime": 1787405627.027714,
-    "seen": 1787476501.9923196,
-    "ast_hash": "e5bee79c47e9cbcc0842183504475d6e",
+    "mtime": 1787530945.2600663,
+    "seen": 1787567518.4347317,
+    "ast_hash": "a19dbf6cfaa53b2256d538c08810d109",
     "semantic_hash": ""
   },
   "learning/neurons/N004_ponytail_minimality.md": {
@@ -318,9 +318,9 @@
     "semantic_hash": ""
   },
   "memory.md": {
-    "mtime": 1787511923.1253743,
-    "seen": 1787511965.0234702,
-    "ast_hash": "578d9b8dd1f287d8f135e898ea8d7dca",
+    "mtime": 1787530588.4688306,
+    "seen": 1787567518.4400723,
+    "ast_hash": "ea1c1a7f74309fde53ca24d9091c5956",
     "semantic_hash": ""
   },
   "memory/neurons/ai_engine_9router.md": {
@@ -336,9 +336,9 @@
     "semantic_hash": ""
   },
   "memory/neurons/ui_ux_design_rules.md": {
-    "mtime": 1787489976.3458316,
-    "seen": 1787489982.0037174,
-    "ast_hash": "dbc794c552afbc18a76b274e93736915",
+    "mtime": 1787530926.9562798,
+    "seen": 1787567518.4406197,
+    "ast_hash": "0c24c9ddd838196fcc1bf3b4a3ac8d75",
     "semantic_hash": ""
   },
   "memory/neurons/user_profile.md": {
@@ -534,9 +534,9 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1787498988.6453516,
-    "seen": 1787498994.7109625,
-    "ast_hash": "0d90a02c5f22c3475ef3028b79adab95",
+    "mtime": 1787531280.720428,
+    "seen": 1787567518.4330297,
+    "ast_hash": "e1d2800917a4a1d51546ea24b4e0edf8",
     "semantic_hash": ""
   },
   "toolkit/README.md": {
@@ -546,9 +546,9 @@
     "semantic_hash": ""
   },
   "scripts/auto_sync_github.py": {
-    "mtime": 1787501039.3569202,
-    "seen": 1787501064.5178685,
-    "ast_hash": "0ec3cb7f6312dd9139e276bfa24ed8fb",
+    "mtime": 1787567554.80636,
+    "seen": 1787567565.4553957,
+    "ast_hash": "5774568dcaa749ac4c23b3a68c545fd1",
     "semantic_hash": ""
   },
   "learning/neurons/N009_peak_algorithms_codex.md": {
@@ -606,8 +606,8 @@
     "semantic_hash": ""
   },
   ".claudia/settings.json": {
-    "mtime": 1787528553.6730762,
-    "seen": 1787528573.2796373,
+    "mtime": 1787530193.3937516,
+    "seen": 1787567518.4210677,
     "ast_hash": "a2654ef6c12be99edb7dde0e22a46507",
     "semantic_hash": ""
   },
@@ -756,27 +756,45 @@
     "semantic_hash": ""
   },
   "scripts/claudiacode_server.js": {
-    "mtime": 1787517436.3920605,
-    "seen": 1787517487.3373945,
-    "ast_hash": "a483a8a2705d60b8d727bf149740c5e0",
+    "mtime": 1787531553.0974753,
+    "seen": 1787567518.4280295,
+    "ast_hash": "a00c235a4c084465e2205d9137953801",
     "semantic_hash": ""
   },
   "scripts/claudiacode_login.html": {
-    "mtime": 1787517432.357074,
-    "seen": 1787517487.3373945,
-    "ast_hash": "f1f5dec6bb4ab7c275fadc577da33ec5",
+    "mtime": 1787531564.9779315,
+    "seen": 1787567518.4448588,
+    "ast_hash": "7a54a6afb5f1537edea649fa60ca62de",
     "semantic_hash": ""
   },
   ".claudia/mcp.json": {
-    "mtime": 1787528557.6746902,
-    "seen": 1787528573.2796373,
+    "mtime": 1787529655.40277,
+    "seen": 1787567518.4210677,
     "ast_hash": "16dfbb04d0aea7824aab724313d4334f",
     "semantic_hash": ""
   },
   ".claudia/todos.json": {
-    "mtime": 1787528557.2462645,
-    "seen": 1787528573.2796373,
-    "ast_hash": "d751713988987e9331980363e24189ce",
+    "mtime": 1787530041.6014853,
+    "seen": 1787567518.4210677,
+    "ast_hash": "3ff1700699f68ff4d3bc3ede9b448045",
+    "semantic_hash": ""
+  },
+  "memory/session_checkpoint.json": {
+    "mtime": 1787530575.8646376,
+    "seen": 1787567518.4237177,
+    "ast_hash": "1b36c07f8b4cb652b18eaa482039c001",
+    "semantic_hash": ""
+  },
+  "CLAUDIA.md": {
+    "mtime": 1787530192.955087,
+    "seen": 1787567518.4330297,
+    "ast_hash": "8a51a528264422fcdd96f3aabd4d7edf",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N020_session_continuity_checkpoint.md": {
+    "mtime": 1787530568.9408295,
+    "seen": 1787567518.4395263,
+    "ast_hash": "6b0513aa16f55ed9b0b81f98e3e7deee",
     "semantic_hash": ""
   }
 }
