@@ -186,73 +186,75 @@ def scan_gold_market():
     
     price = ind["price"]
     atr = ind["atr"]
+    rsi = ind["rsi"]
+    ema20 = ind["ema20"]
+    ema50 = ind["ema50"]
     now_ts = time.time()
+    
+    # 5 Conditions Scoring
+    trend_bull = ema20 > ema50
+    trend_bear = ema20 < ema50
+    price_above_ema = price > ema20
+    price_below_ema = price < ema20
+    rsi_bull_ok = 40 <= rsi <= 68
+    rsi_bear_ok = 32 <= rsi <= 60
+    fvg_bull = ind["bullish_fvg"]
+    fvg_bear = ind["bearish_fvg"]
+    
+    bull_score = sum([trend_bull, price_above_ema, rsi_bull_ok, fvg_bull, atr >= 1.5])
+    bear_score = sum([trend_bear, price_below_ema, rsi_bear_ok, fvg_bear, atr >= 1.5])
     
     # Check cooldown (30 mins per signal)
     last_t = last_alert_time.get(symbol, 0)
-    if (now_ts - last_t) < 1800:
-        return None
     
-    signal = None
-    # BULLISH A+ SETUP: Bullish FVG, Price > EMA20 > EMA50, RSI in healthy zone (40-68)
-    if ind["bullish_fvg"] and (price > ind["ema20"] >= ind["ema50"]) and (40 <= ind["rsi"] <= 68):
+    # 1. FULL EXECUTION (5/5 Conditions)
+    if bull_score == 5 and (now_ts - last_t) >= 1800:
+        last_alert_time[symbol] = now_ts
         sl = round(price - (1.5 * atr), 2)
         tp1 = round(price + (3.0 * atr), 2)
         tp2 = round(price + (4.5 * atr), 2)
         rrr = round((tp1 - price) / (price - sl), 1)
         
-        signal = {
-            "symbol": symbol,
-            "label": label,
-            "action": "BUY (LONG)",
-            "entry": price,
-            "sl": sl,
-            "tp1": tp1,
-            "tp2": tp2,
-            "rrr": f"1:{rrr}",
-            "rsi": round(ind["rsi"], 1),
-            "reason": "SMC Bullish FVG + Trend Continuation (EMA20 > EMA50)"
-        }
-    
-    # BEARISH A+ SETUP: Bearish FVG, Price < EMA20 <= EMA50, RSI in healthy zone (32-60)
-    elif ind["bearish_fvg"] and (price < ind["ema20"] <= ind["ema50"]) and (32 <= ind["rsi"] <= 60):
+        msg = (
+            f"🔥 <b>EKSEKUSI SEKARANG (5/5 KONDISI SIAP): {label}</b>\n"
+            f"━━━━━━━━━━━━━━━━━━━━━\n"
+            f"🟢 <b>Arah:</b> <code>BUY (LONG)</code>\n"
+            f"💵 <b>Entri:</b> <code>${price}</code>\n"
+            f"🛑 <b>Stop Loss (SL):</b> <code>${sl}</code>\n"
+            f"🎯 <b>Take Profit 1 (TP1):</b> <code>${tp1}</code> (RRR 1:{rrr})\n"
+            f"🎯 <b>Take Profit 2 (TP2):</b> <code>${tp2}</code>\n"
+            f"📈 <b>RSI 14:</b> <code>{round(rsi, 1)}</code> | <b>ATR:</b> <code>${round(atr, 2)}</code>\n"
+            f"💡 <b>Katalis:</b> SMC Bullish FVG + Trend Continuation\n"
+            f"━━━━━━━━━━━━━━━━━━━━━\n"
+            f"⏰ <i>Waktu: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} WIB</i>"
+        )
+        send_telegram_gold(msg)
+        log_event("GOLD_QUANT_SIGNAL", {"action": "BUY", "price": price, "sl": sl, "tp1": tp1})
+        return "SIGNAL_BUY"
+        
+    elif bear_score == 5 and (now_ts - last_t) >= 1800:
+        last_alert_time[symbol] = now_ts
         sl = round(price + (1.5 * atr), 2)
         tp1 = round(price - (3.0 * atr), 2)
         tp2 = round(price - (4.5 * atr), 2)
         rrr = round((price - tp1) / (sl - price), 1)
         
-        signal = {
-            "symbol": symbol,
-            "label": label,
-            "action": "SELL (SHORT)",
-            "entry": price,
-            "sl": sl,
-            "tp1": tp1,
-            "tp2": tp2,
-            "rrr": f"1:{rrr}",
-            "rsi": round(ind["rsi"], 1),
-            "reason": "SMC Bearish FVG + Trend Continuation (EMA20 < EMA50)"
-        }
-    
-    if signal:
-        last_alert_time[symbol] = now_ts
         msg = (
-            f"🟡 <b>CLAUDIA 5.0 GOLD QUANT ALERT: XAU/USD</b>\n"
+            f"🔥 <b>EKSEKUSI SEKARANG (5/5 KONDISI SIAP): {label}</b>\n"
             f"━━━━━━━━━━━━━━━━━━━━━\n"
-            f"📊 <b>Arah Posisi:</b> <code>{signal['action']}</code>\n"
-            f"💵 <b>Harga Entri:</b> <code>${signal['entry']}</code>\n"
-            f"🛑 <b>Stop Loss (SL):</b> <code>${signal['sl']}</code>\n"
-            f"🎯 <b>Take Profit 1 (TP1):</b> <code>${signal['tp1']}</code> (RRR {signal['rrr']})\n"
-            f"🎯 <b>Take Profit 2 (TP2):</b> <code>${signal['tp2']}</code>\n"
-            f"📈 <b>RSI 14:</b> <code>{signal['rsi']}</code>\n"
-            f"💡 <b>Katalis:</b> {signal['reason']}\n"
+            f"🔴 <b>Arah:</b> <code>SELL (SHORT)</code>\n"
+            f"💵 <b>Entri:</b> <code>${price}</code>\n"
+            f"🛑 <b>Stop Loss (SL):</b> <code>${sl}</code>\n"
+            f"🎯 <b>Take Profit 1 (TP1):</b> <code>${tp1}</code> (RRR 1:{rrr})\n"
+            f"🎯 <b>Take Profit 2 (TP2):</b> <code>${tp2}</code>\n"
+            f"📈 <b>RSI 14:</b> <code>{round(rsi, 1)}</code> | <b>ATR:</b> <code>${round(atr, 2)}</code>\n"
+            f"💡 <b>Katalis:</b> SMC Bearish FVG + Trend Continuation\n"
             f"━━━━━━━━━━━━━━━━━━━━━\n"
             f"⏰ <i>Waktu: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} WIB</i>"
         )
         send_telegram_gold(msg)
-        log_event("GOLD_QUANT_SIGNAL", signal)
-        print(f"[GOLD SIGNAL] Dispatched XAU/USD {signal['action']} @ ${price} to Gold Bot")
-        return signal
+        log_event("GOLD_QUANT_SIGNAL", {"action": "SELL", "price": price, "sl": sl, "tp1": tp1})
+        return "SIGNAL_SELL"
 
     return None
 
