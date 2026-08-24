@@ -1,4 +1,4 @@
-﻿# =============================================================================
+# =============================================================================
 # SECURITY & CREDENTIALS (STRICTLY IGNORED)
 # =============================================================================
 .env
@@ -61,3 +61,6 @@ prod_planner.md
 
 .claudia/
 
+# Runtime daemon live telemetry & logs
+learning/neural_live_logs.jsonl
+learning/watchdog_telemetry.json
