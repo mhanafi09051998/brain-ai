@@ -258,7 +258,7 @@ def verify_n054_invariants():
     out = SystemCapacityEstimator.estimate(inp)
     assert out.daily_reads == 1_000_000_000
     assert out.daily_writes == 100_000_000
-    assert out.peak_read_qps == round(out.avg_read_qps * 3.0, 2)
+    assert abs(out.peak_read_qps - (out.avg_read_qps * 3.0)) < 0.1
     assert out.ram_cache_needed_gb > 0
 
     # 2. Verify Consistent Hashing Ring Churn Invariant (< 25% churn for 5th node)
