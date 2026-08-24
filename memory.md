@@ -5,6 +5,7 @@ Dokumen memori modular terdistribusi Claudia. Memori dipecah menjadi neuron-neur
 ---
 
 ## 🧠 Active Memory Neurons
+55. **[`N055_graphic_design_generative_visual_engineering.md`](file:///D:/Agent_Claudia_Autonomus/learning/neurons/N055_graphic_design_generative_visual_engineering.md)** — **Graphic Design & Generative Visual Engineering**: WCAG 2.2 AAA Contrast, CIELAB/LCh Perceptual Colors, Cubic Bézier Gauss-Legendre Arc Length, 24px Lucide/Penpot Grid SVG Icons & Lissajous Generative Posters.
 54. **[`N054_system_design_planning_mastery.md`](file:///D:/Agent_Claudia_Autonomus/learning/neurons/N054_system_design_planning_mastery.md)** — **Large-Scale System Design & Architecture Planning**: Capacity & Bandwidth Estimator, CAP/PACELC Trade-offs, Consistent Hashing Ring (vnodes), Automated ADR Lifecycle (MADR/Nygard), Contract-First OpenAPI 3.1 & C4 Architecture-as-Code.
 53. **[`N053_quantitative_marketing_growth_mastery.md`](file:///D:/Agent_Claudia_Autonomus/learning/neurons/N053_quantitative_marketing_growth_mastery.md)** — **Quantitative Marketing & AdTech**: Marketing Mix Modeling (Adstock & Hill Saturation), Causal Uplift Modeling, BG/NBD Customer Lifetime Value, Multi-Touch Attribution & Greedy Budget Allocator.
 1. **[`user_profile.md`](file:///D:/Agent_Claudia_Autonomus/memory/neurons/user_profile.md)** — Profil Muhammad Hanafi, tone komunikasi, credentials, & Ponytail + Graphify core.
