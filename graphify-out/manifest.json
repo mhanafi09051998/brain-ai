@@ -6,9 +6,9 @@
     "semantic_hash": "dd15119fb2196a241d762fb6eacacf90"
   },
   "learning/NEURON_INDEX.json": {
-    "mtime": 1787583934.626593,
-    "seen": 1787583942.3812203,
-    "ast_hash": "6bd9385f5524d37079d9c00eaf69a6ce",
+    "mtime": 1787584030.559601,
+    "seen": 1787584049.0323217,
+    "ast_hash": "c472f4c399141447f0be6fa168d300e0",
     "semantic_hash": ""
   },
   "learning/scripts/grow_neurons.py": {
@@ -312,9 +312,9 @@
     "semantic_hash": ""
   },
   "memory.md": {
-    "mtime": 1787583859.617129,
-    "seen": 1787583876.447275,
-    "ast_hash": "c730e5e56a4a463b69ba3e40a1e913fb",
+    "mtime": 1787584030.5601532,
+    "seen": 1787584049.0329003,
+    "ast_hash": "ecf3f9bd602f97c156b5afb6e2b1f041",
     "semantic_hash": ""
   },
   "memory/neurons/ai_engine_9router.md": {
@@ -648,8 +648,8 @@
     "semantic_hash": ""
   },
   "scripts/learn_index.html": {
-    "mtime": 1787583933.558707,
-    "seen": 1787583942.3812203,
+    "mtime": 1787584037.005541,
+    "seen": 1787584049.0329003,
     "ast_hash": "2e4a52f33308e1e94019e8208c0c21c1",
     "semantic_hash": ""
   },
@@ -987,6 +987,24 @@
     "mtime": 1787583929.3946793,
     "seen": 1787583942.3812203,
     "ast_hash": "f98d8790838020d76e02a180d85323a1",
+    "semantic_hash": ""
+  },
+  "scripts/marketing_nucleus_engine.py": {
+    "mtime": 1787584008.3786745,
+    "seen": 1787584049.0329003,
+    "ast_hash": "d2546412b5e35a590be4ed41c43d4c1f",
+    "semantic_hash": ""
+  },
+  "scripts/register_n053.py": {
+    "mtime": 1787584028.4792485,
+    "seen": 1787584049.0329003,
+    "ast_hash": "7311790076743f9d2c0fbd329af3420d",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N053_quantitative_marketing_growth_mastery.md": {
+    "mtime": 1787584013.2329836,
+    "seen": 1787584049.0329003,
+    "ast_hash": "86a0fd74acd8cf20c7491d7df1939034",
     "semantic_hash": ""
   }
 }

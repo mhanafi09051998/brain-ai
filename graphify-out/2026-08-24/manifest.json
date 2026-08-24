@@ -6,9 +6,9 @@
     "semantic_hash": "dd15119fb2196a241d762fb6eacacf90"
   },
   "learning/NEURON_INDEX.json": {
-    "mtime": 1787583845.843027,
-    "seen": 1787583876.447275,
-    "ast_hash": "a673db9501b34515fb1381e4ce387f60",
+    "mtime": 1787583934.626593,
+    "seen": 1787583942.3812203,
+    "ast_hash": "6bd9385f5524d37079d9c00eaf69a6ce",
     "semantic_hash": ""
   },
   "learning/scripts/grow_neurons.py": {
@@ -648,8 +648,8 @@
     "semantic_hash": ""
   },
   "scripts/learn_index.html": {
-    "mtime": 1787572963.6596148,
-    "seen": 1787583876.447275,
+    "mtime": 1787583933.558707,
+    "seen": 1787583942.3812203,
     "ast_hash": "2e4a52f33308e1e94019e8208c0c21c1",
     "semantic_hash": ""
   },
@@ -981,6 +981,12 @@
     "mtime": 1787583817.5552735,
     "seen": 1787583876.447275,
     "ast_hash": "176df986e814ec970caa01bab9ec9f14",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N052_institutional_gold_checklist_watchdog.md": {
+    "mtime": 1787583929.3946793,
+    "seen": 1787583942.3812203,
+    "ast_hash": "f98d8790838020d76e02a180d85323a1",
     "semantic_hash": ""
   }
 }

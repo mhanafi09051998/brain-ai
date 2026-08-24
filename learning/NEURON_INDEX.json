@@ -1,8 +1,8 @@
 {
   "version": "1.2.0",
-  "updated_at": "2026-08-24T22:05:34.624991",
-  "total_neurons": 52,
-  "total_synapses": 180,
+  "updated_at": "2026-08-24T22:07:10.558023",
+  "total_neurons": 53,
+  "total_synapses": 191,
   "mesh_density": 0.0679,
   "neurons": [
     {
@@ -631,6 +631,26 @@
       ],
       "synapse_count": 10,
       "size_bytes": 10356
+    },
+    {
+      "id": "N053",
+      "label": "Neuron N053: Quantitative Marketing, Growth Science & Causal AdTech Mastery",
+      "file": "N053_quantitative_marketing_growth_mastery.md",
+      "connections": [
+        "N001",
+        "N004",
+        "N009",
+        "N011",
+        "N017",
+        "N021",
+        "N025",
+        "N033",
+        "N035",
+        "N044",
+        "N050"
+      ],
+      "synapse_count": 11,
+      "size_bytes": 16949
     }
   ]
 }

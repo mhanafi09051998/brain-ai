@@ -60,7 +60,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 <div class="container">
 
 <h1>Agent_Claudia_Autonomus — Complete Call Flow &amp; Architecture Documentation</h1>
-<p class="subtitle">Generated from graphify knowledge graph: 1050 nodes, 1080 edges, 115 communities. Commit: 332f71c</p>
+<p class="subtitle">Generated from graphify knowledge graph: 1094 nodes, 1132 edges, 118 communities. Commit: 1df2d4d</p>
 
 <div class="nav">
     <a href="#overview">Architecture Overview</a>
@@ -74,10 +74,10 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
     <a href="#security-global">Security &amp; Global Graph</a>
     <a href="#tests-fixtures">Tests &amp; Fixtures</a>
     <a href="#neuron-n044-statistical-arbitrage-pairs-trading">Neuron N044: Statistical Arbitrage, Pairs Trading &amp; Cointegration</a>
+    <a href="#section-12">==========================================</a>
     <a href="#ponytail-runtime-js">ponytail-runtime.js</a>
     <a href="#neuron-n051-modern-system-architecture-resilienc">Neuron N051: Modern System Architecture, Resilience Engineering &amp; Zero-Downtime DevOps Mastery</a>
     <a href="#neuron-n046-algorithmic-execution-engines-smart">Neuron N046: Algorithmic Execution Engines &amp; Smart Order Routing</a>
-    <a href="#neuron-n050-systematic-backtesting-engine-walk-f">Neuron N050: Systematic Backtesting Engine &amp; Walk-Forward Optimization (WFA / CPCV / DSR)</a>
     <a href="#other">Other</a>
 </div>
 
@@ -104,19 +104,19 @@ flowchart LR
     class SERVE_API_35EC8E86 module;
     SECURITY_GLOBAL_5B9C6A04("Security &amp; Global Graph<br/><small>31 nodes</small>")
     class SECURITY_GLOBAL_5B9C6A04 module;
-    TESTS_FIXTURES_B84B1DCC("Tests &amp; Fixtures<br/><small>46 nodes</small>")
+    TESTS_FIXTURES_B84B1DCC("Tests &amp; Fixtures<br/><small>69 nodes</small>")
     class TESTS_FIXTURES_B84B1DCC module;
     NEURON_N044_STATISTICAL_ARBITRAGE_PAIRS_TRADING_CC6EBDBF("Neuron N044: Statistical Arbitrage, Pairs Trading &amp; Cointegration<br/><small>22 nodes</small>")
     class NEURON_N044_STATISTICAL_ARBITRAGE_PAIRS_TRADING_CC6EBDBF module;
+    SECTION_12_1A2DEDF4("==========================================<br/><small>20 nodes</small>")
+    class SECTION_12_1A2DEDF4 module;
     PONYTAIL_RUNTIME_JS_104C1C7B("ponytail-runtime.js<br/><small>19 nodes</small>")
     class PONYTAIL_RUNTIME_JS_104C1C7B module;
     NEURON_N051_MODERN_SYSTEM_ARCHITECTURE_RESILIENC_36707AEE("Neuron N051: Modern System Architecture, Resilience Engineering &amp; Zero-Downtime DevOps Mastery<br/><small>19 nodes</small>")
     class NEURON_N051_MODERN_SYSTEM_ARCHITECTURE_RESILIENC_36707AEE module;
     NEURON_N046_ALGORITHMIC_EXECUTION_ENGINES_SMART_186F44EA("Neuron N046: Algorithmic Execution Engines &amp; Smart Order Routing<br/><small>19 nodes</small>")
     class NEURON_N046_ALGORITHMIC_EXECUTION_ENGINES_SMART_186F44EA module;
-    NEURON_N050_SYSTEMATIC_BACKTESTING_ENGINE_WALK_F_C25C3434("Neuron N050: Systematic Backtesting Engine &amp; Walk-Forward Optimization (WFA / CPCV / DSR)<br/><small>18 nodes</small>")
-    class NEURON_N050_SYSTEMATIC_BACKTESTING_ENGINE_WALK_F_C25C3434 module;
-    OTHER_D0941E68("Other<br/><small>296 nodes</small>")
+    OTHER_D0941E68("Other<br/><small>315 nodes</small>")
     class OTHER_D0941E68 module;
     PONYTAIL_RUNTIME_JS_104C1C7B -->|imports x7| CLI_SKILLS_9964CBB8
     TESTS_FIXTURES_B84B1DCC -->|calls x7| ANALYSIS_CLUSTERING_C79796DA
@@ -146,7 +146,7 @@ flowchart LR
     <h4>Architecture Layers</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>Layer</th><th>Nodes</th><th>Communities</th></tr>
-      <tr><td>Extraction Pipeline</td><td>124</td><td><code>5, 8, 18, 19, 23, 31, 35, 72, 83, 84</code></td></tr><tr><td>Graph Build</td><td>87</td><td><code>2, 21, 28, 50, 55, 108, 109</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>77</td><td><code>4, 10, 25, 36, 56</code></td></tr><tr><td>Outputs &amp; Docs</td><td>2</td><td><code>113</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>231</td><td><code>0, 1, 3, 15, 30, 37, 41, 42, 44, 57, 58, 59, 62, 63, 64, 65, 70, 74, 78, 100, 102, 103, 104, 105, 106, 107</code></td></tr><tr><td>Ingestion &amp; Updates</td><td>43</td><td><code>13, 111, 61, 75</code></td></tr><tr><td>Serving API</td><td>16</td><td><code>29, 82</code></td></tr><tr><td>Security &amp; Global Graph</td><td>31</td><td><code>6, 40</code></td></tr><tr><td>Tests &amp; Fixtures</td><td>46</td><td><code>16, 12, 46</code></td></tr><tr><td>Neuron N044: Statistical Arbitrage, Pairs Trading &amp; Cointegration</td><td>22</td><td><code>7</code></td></tr><tr><td>ponytail-runtime.js</td><td>19</td><td><code>11</code></td></tr><tr><td>Neuron N051: Modern System Architecture, Resilience Engineering &amp; Zero-Downtime DevOps Mastery</td><td>19</td><td><code>110</code></td></tr><tr><td>Neuron N046: Algorithmic Execution Engines &amp; Smart Order Routing</td><td>19</td><td><code>9</code></td></tr><tr><td>Neuron N050: Systematic Backtesting Engine &amp; Walk-Forward Optimization (WFA / CPCV / DSR)</td><td>18</td><td><code>14</code></td></tr><tr><td>Other</td><td>296</td><td><code>17, 22, 20, 24, 26, 27, 32, 33, 34, 38, 39, 43, 45, 47, 48, 49, 51, 52, 53, 54, 60, 66, 67, 68, 69, 71, 73, 76, 77, 114, 79, 80, 81, 85, 86, 87, 88, 89, 112, 90, 91, 92, 93, 94, 95, 96, 97, 98, 101, 99</code></td></tr>
+      <tr><td>Extraction Pipeline</td><td>124</td><td><code>5, 8, 18, 19, 23, 31, 35, 72, 83, 84</code></td></tr><tr><td>Graph Build</td><td>87</td><td><code>2, 21, 28, 50, 55, 108, 109</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>77</td><td><code>4, 10, 25, 36, 56</code></td></tr><tr><td>Outputs &amp; Docs</td><td>2</td><td><code>113</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>231</td><td><code>0, 1, 3, 15, 30, 37, 41, 42, 44, 57, 58, 59, 62, 63, 64, 65, 70, 74, 78, 100, 102, 103, 104, 105, 106, 107</code></td></tr><tr><td>Ingestion &amp; Updates</td><td>43</td><td><code>13, 111, 61, 75</code></td></tr><tr><td>Serving API</td><td>16</td><td><code>29, 82</code></td></tr><tr><td>Security &amp; Global Graph</td><td>31</td><td><code>6, 40</code></td></tr><tr><td>Tests &amp; Fixtures</td><td>69</td><td><code>115, 16, 12, 46</code></td></tr><tr><td>Neuron N044: Statistical Arbitrage, Pairs Trading &amp; Cointegration</td><td>22</td><td><code>7</code></td></tr><tr><td>==========================================</td><td>20</td><td><code>116</code></td></tr><tr><td>ponytail-runtime.js</td><td>19</td><td><code>11</code></td></tr><tr><td>Neuron N051: Modern System Architecture, Resilience Engineering &amp; Zero-Downtime DevOps Mastery</td><td>19</td><td><code>110</code></td></tr><tr><td>Neuron N046: Algorithmic Execution Engines &amp; Smart Order Routing</td><td>19</td><td><code>9</code></td></tr><tr><td>Other</td><td>315</td><td><code>14, 17, 22, 20, 24, 26, 27, 32, 33, 34, 38, 39, 43, 45, 47, 48, 49, 51, 52, 53, 54, 60, 66, 67, 68, 69, 71, 73, 76, 77, 114, 79, 80, 81, 85, 86, 87, 88, 89, 112, 90, 91, 92, 93, 94, 95, 96, 97, 98, 101, 117, 99</code></td></tr>
     </table>
   </div>
   <div class="card">
@@ -158,12 +158,12 @@ flowchart LR
   <div class="card">
     <h4>Graph Report Highlights</h4>
     <ul>
-      <li>1050 nodes · 1080 edges · 115 communities (93 shown, 22 thin omitted)</li>
+      <li>1094 nodes · 1132 edges · 118 communities (96 shown, 22 thin omitted)</li>
       <li>Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 26 edges (avg confidence: 0.85)</li>
       <li>Token cost: 0 input · 0 output</li>
       <li>1. `Install` - 15 edges</li>
-      <li>2. `getPonytailInstructions()` - 13 edges</li>
-      <li>3. `ponytailExtension()` - 13 edges</li>
+      <li>2. `==========================================` - 14 edges</li>
+      <li>3. `getPonytailInstructions()` - 13 edges</li>
     </ul>
   </div>
 </div>
@@ -2547,78 +2547,74 @@ flowchart LR
 
 <!-- ====== 10. Tests & Fixtures ====== -->
 <h2 id="tests-fixtures">10. Tests &amp; Fixtures</h2>
-<p>Tests &amp; Fixtures groups implementation around test, ponytail, product, n036, mostly in learning/neurons/N036_fullstack_product_synthesizer.md, ponytail/pi-extension/index.js, scripts/test_brain.py. This section covers 46 nodes and 60 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Tests &amp; Fixtures groups implementation around scripts, test, marketing, nucleus, mostly in scripts/marketing_nucleus_engine.py, learning/neurons/N036_fullstack_product_synthesizer.md, ponytail/pi-extension/index.js. This section covers 69 nodes and 92 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Tests &amp; Fixtures (46 nodes, 60 edges)
-    subgraph tests_fixtures_scripts_test_brain_py_3e905d7c["scripts/test_brain.py"]
-        scripts_test_brain_run_all_d04a7277("run_all()<br/><small>scripts/test_brain.py</small>")
-        scripts_test_brain_test_neuron_network_f6cb234e("test_neuron_network()<br/><small>scripts/test_brain.py</small>")
-        scripts_test_brain_test_memory_layer_8fb937f3("test_memory_layer()<br/><small>scripts/test_brain.py</small>")
-        scripts_test_brain_test_knowledge_graph_c60b9479("test_knowledge_graph()<br/><small>scripts/test_brain.py</small>")
-        scripts_test_brain_test_security_and_secrets_7e5b642f("test_security_and_secrets()<br/><small>scripts/test_brain.py</small>")
-        scripts_test_brain_test_ide_bridges_249a76df("test_ide_bridges()<br/><small>scripts/test_brain.py</small>")
-        scripts_test_brain_test_identity_tamper_lock_5b6a7b55("test_identity_tamper_lock()<br/><small>scripts/test_brain.py</small>")
-    end
-    subgraph tests_fixtures_ponytail_pi_extension_index_js_2ee43314["ponytail/pi-extension/index.js"]
-        ponytail_pi_extension_index_ponytailextension_a321ba46("ponytailExtension()<br/><small>ponytail/pi-extension/index.js</small>")
-        ponytail_pi_extension_index_9d2d2187("index.js")
-        ponytail_pi_extension_index_parseponytailcommand_4d211fdf("parsePonytailCommand()<br/><small>ponytail/pi-extension/index.js</small>")
-        ponytail_pi_extension_index_resolvesessionmode_cc594ff1("resolveSessionMode()<br/><small>ponytail/pi-extension/index.js</small>")
-        ponytail_pi_extension_index_readdefaultmode_0c7fe894("readDefaultMode<br/><small>ponytail/pi-extension/index.js</small>")
+    %% Section: Tests &amp; Fixtures (69 nodes, 92 edges)
+    subgraph tests_fixtures_scripts_marketing_nucleus_engine_031ec47b["scripts/marketing_nucleus_engine.py"]
+        scripts_marketing_nucleus_engine_run_verificatio_ef97097f("run_verification_tests()<br/><small>scripts/marketing_nucleus_engine.py</small>")
+        scripts_marketing_nucleus_engine_bg_nbdengine_2a9e36db("BG_NBDEngine<br/><small>scripts/marketing_nucleus_engine.py</small>")
+        scripts_marketing_nucleus_engine_marketingmixeng_5ed62719("MarketingMixEngine<br/><small>scripts/marketing_nucleus_engine.py</small>")
+        scripts_marketing_nucleus_engine_bg_nbdengine_pr_f5a1c982("probability_alive()<br/><small>scripts/marketing_nucleus_engine.py</small>")
+        scripts_marketing_nucleus_engine_bg_nbdengine_ex_74042c3a("expected_future_purchases()<br/><small>scripts/marketing_nucleus_engine.py</small>")
+        scripts_marketing_nucleus_engine_bg_nbdengine_ca_0b080fae("calculate_clv()<br/><small>scripts/marketing_nucleus_engine.py</small>")
+        scripts_marketing_nucleus_engine_causaluplifteng_fdac6a02("CausalUpliftEngine<br/><small>scripts/marketing_nucleus_engine.py</small>")
+        scripts_marketing_nucleus_engine_causaluplifteng_1fda682f("calculate_individual_uplift()<br/><small>scripts/marketing_nucleus_engine.py</small>")
+        scripts_marketing_nucleus_engine_causaluplifteng_4f461f71("classify_customer()<br/><small>scripts/marketing_nucleus_engine.py</small>")
+        scripts_marketing_nucleus_engine_marketingmixeng_b4307b94("geometric_adstock()<br/><small>scripts/marketing_nucleus_engine.py</small>")
+        scripts_marketing_nucleus_engine_marketingmixeng_8405dc25("hill_saturation()<br/><small>scripts/marketing_nucleus_engine.py</small>")
+        scripts_marketing_nucleus_engine_marketingmixeng_adce8145("optimize_channel_budget()<br/><small>scripts/marketing_nucleus_engine.py</small>")
     end
     subgraph tests_fixtures_ponytail_hooks_ponytail_config_js_298a56c8["ponytail/hooks/ponytail-config.js"]
         ponytail_hooks_ponytail_config_normalizepersiste_56f04243("normalizePersistedMode()<br/><small>ponytail/hooks/ponytail-config.js</small>")
         ponytail_hooks_ponytail_config_normalizeconfigmo_8053930d("normalizeConfigMode()<br/><small>ponytail/hooks/ponytail-config.js</small>")
-        ponytail_hooks_ponytail_config_runtime_modes_7788477f("RUNTIME_MODES<br/><small>ponytail/hooks/ponytail-config.js</small>")
     end
-    subgraph tests_fixtures_pi_extension_test_extension_test_90ac422e["pi-extension/test/extension.test.js"]
-        ponytail_pi_extension_test_extension_test_9b4fdc90("extension.test.js")
-        ponytail_pi_extension_test_extension_test_create_56a16fe4("createPiHarness()<br/><small>pi-extension/test/extension.test.js</small>")
-    end
+    ponytail_pi_extension_test_extension_test_9b4fdc90("extension.test.js")
     ponytail_pi_extension_test_helpers_test_2bad389e("helpers.test.js")
+    ponytail_pi_extension_index_parseponytailcommand_4d211fdf("parsePonytailCommand()<br/><small>ponytail/pi-extension/index.js</small>")
+    scripts_test_brain_run_all_d04a7277("run_all()<br/><small>scripts/test_brain.py</small>")
+    scripts_marketing_nucleus_engine_bg_nbdengine_2a9e36db -->|method| scripts_marketing_nucleus_engine_bg_nbdengine_pr_f5a1c982
+    scripts_marketing_nucleus_engine_bg_nbdengine_2a9e36db -->|method| scripts_marketing_nucleus_engine_bg_nbdengine_ex_74042c3a
+    scripts_marketing_nucleus_engine_bg_nbdengine_2a9e36db -->|method| scripts_marketing_nucleus_engine_bg_nbdengine_ca_0b080fae
+    scripts_marketing_nucleus_engine_causaluplifteng_fdac6a02 -->|method| scripts_marketing_nucleus_engine_causaluplifteng_1fda682f
+    scripts_marketing_nucleus_engine_causaluplifteng_fdac6a02 -->|method| scripts_marketing_nucleus_engine_causaluplifteng_4f461f71
+    scripts_marketing_nucleus_engine_marketingmixeng_5ed62719 -->|method| scripts_marketing_nucleus_engine_marketingmixeng_b4307b94
+    scripts_marketing_nucleus_engine_marketingmixeng_5ed62719 -->|method| scripts_marketing_nucleus_engine_marketingmixeng_8405dc25
+    scripts_marketing_nucleus_engine_marketingmixeng_5ed62719 -->|method| scripts_marketing_nucleus_engine_marketingmixeng_adce8145
+    scripts_marketing_nucleus_engine_bg_nbdengine_ex_74042c3a -->|calls| scripts_marketing_nucleus_engine_bg_nbdengine_pr_f5a1c982
+    scripts_marketing_nucleus_engine_causaluplifteng_4f461f71 -->|calls| scripts_marketing_nucleus_engine_causaluplifteng_1fda682f
+    scripts_marketing_nucleus_engine_marketingmixeng_adce8145 -->|calls| scripts_marketing_nucleus_engine_marketingmixeng_8405dc25
+    scripts_marketing_nucleus_engine_run_verificatio_ef97097f -->|calls| scripts_marketing_nucleus_engine_marketingmixeng_b4307b94
+    scripts_marketing_nucleus_engine_run_verificatio_ef97097f -->|calls| scripts_marketing_nucleus_engine_marketingmixeng_8405dc25
+    scripts_marketing_nucleus_engine_run_verificatio_ef97097f -->|calls| scripts_marketing_nucleus_engine_marketingmixeng_adce8145
+    scripts_marketing_nucleus_engine_run_verificatio_ef97097f -->|calls| scripts_marketing_nucleus_engine_causaluplifteng_4f461f71
+    scripts_marketing_nucleus_engine_run_verificatio_ef97097f -->|calls| scripts_marketing_nucleus_engine_bg_nbdengine_pr_f5a1c982
+    scripts_marketing_nucleus_engine_run_verificatio_ef97097f -->|calls| scripts_marketing_nucleus_engine_bg_nbdengine_ex_74042c3a
+    scripts_marketing_nucleus_engine_run_verificatio_ef97097f -->|calls| scripts_marketing_nucleus_engine_bg_nbdengine_ca_0b080fae
     ponytail_hooks_ponytail_config_normalizepersiste_56f04243 -->|calls| ponytail_hooks_ponytail_config_normalizeconfigmo_8053930d
     ponytail_pi_extension_index_parseponytailcommand_4d211fdf -->|calls| ponytail_hooks_ponytail_config_normalizepersiste_56f04243
-    ponytail_pi_extension_index_ponytailextension_a321ba46 -->|calls| ponytail_pi_extension_index_parseponytailcommand_4d211fdf
-    ponytail_pi_extension_index_ponytailextension_a321ba46 -->|calls| ponytail_pi_extension_index_resolvesessionmode_cc594ff1
-    ponytail_pi_extension_index_ponytailextension_a321ba46 -->|calls| ponytail_hooks_ponytail_config_normalizepersiste_56f04243
-    ponytail_pi_extension_index_resolvesessionmode_cc594ff1 -->|calls| ponytail_hooks_ponytail_config_normalizepersiste_56f04243
-    ponytail_pi_extension_test_extension_test_create_56a16fe4 -->|calls| ponytail_pi_extension_index_ponytailextension_a321ba46
-    scripts_test_brain_run_all_d04a7277 -->|calls| scripts_test_brain_test_neuron_network_f6cb234e
-    scripts_test_brain_run_all_d04a7277 -->|calls| scripts_test_brain_test_memory_layer_8fb937f3
-    scripts_test_brain_run_all_d04a7277 -->|calls| scripts_test_brain_test_knowledge_graph_c60b9479
-    scripts_test_brain_run_all_d04a7277 -->|calls| scripts_test_brain_test_security_and_secrets_7e5b642f
-    scripts_test_brain_run_all_d04a7277 -->|calls| scripts_test_brain_test_ide_bridges_249a76df
-    scripts_test_brain_run_all_d04a7277 -->|calls| scripts_test_brain_test_identity_tamper_lock_5b6a7b55
-    ponytail_pi_extension_index_9d2d2187 -->|imports| ponytail_hooks_ponytail_config_normalizepersiste_56f04243
-    ponytail_pi_extension_index_9d2d2187 -->|imports| ponytail_hooks_ponytail_config_runtime_modes_7788477f
-    ponytail_pi_extension_test_extension_test_9b4fdc90 -->|imports| ponytail_pi_extension_index_ponytailextension_a321ba46
-    ponytail_pi_extension_test_extension_test_9b4fdc90 -->|imports| ponytail_pi_extension_index_9d2d2187
     ponytail_pi_extension_test_helpers_test_2bad389e -->|imports| ponytail_pi_extension_index_parseponytailcommand_4d211fdf
-    ponytail_pi_extension_test_helpers_test_2bad389e -->|imports| ponytail_pi_extension_index_readdefaultmode_0c7fe894
-    ponytail_pi_extension_test_helpers_test_2bad389e -->|imports| ponytail_pi_extension_index_resolvesessionmode_cc594ff1
-    ponytail_pi_extension_test_helpers_test_2bad389e -->|imports| ponytail_pi_extension_index_9d2d2187
-    %% Omitted for readability: 28 nodes, 0 edges
-    class scripts_test_brain_run_all_d04a7277 test;
-    class scripts_test_brain_test_neuron_network_f6cb234e test;
-    class scripts_test_brain_test_memory_layer_8fb937f3 test;
-    class scripts_test_brain_test_knowledge_graph_c60b9479 test;
-    class scripts_test_brain_test_security_and_secrets_7e5b642f test;
-    class scripts_test_brain_test_ide_bridges_249a76df test;
-    class scripts_test_brain_test_identity_tamper_lock_5b6a7b55 test;
-    class ponytail_pi_extension_index_ponytailextension_a321ba46 function;
-    class ponytail_pi_extension_index_9d2d2187 module;
-    class ponytail_pi_extension_index_parseponytailcommand_4d211fdf entry;
-    class ponytail_pi_extension_index_resolvesessionmode_cc594ff1 function;
-    class ponytail_pi_extension_index_readdefaultmode_0c7fe894 function;
+    %% Omitted for readability: 51 nodes, 0 edges
+    class scripts_marketing_nucleus_engine_run_verificatio_ef97097f function;
+    class scripts_marketing_nucleus_engine_bg_nbdengine_2a9e36db klass;
+    class scripts_marketing_nucleus_engine_marketingmixeng_5ed62719 klass;
+    class scripts_marketing_nucleus_engine_bg_nbdengine_pr_f5a1c982 function;
+    class scripts_marketing_nucleus_engine_bg_nbdengine_ex_74042c3a function;
+    class scripts_marketing_nucleus_engine_bg_nbdengine_ca_0b080fae function;
+    class scripts_marketing_nucleus_engine_causaluplifteng_fdac6a02 klass;
+    class scripts_marketing_nucleus_engine_causaluplifteng_1fda682f function;
+    class scripts_marketing_nucleus_engine_causaluplifteng_4f461f71 function;
+    class scripts_marketing_nucleus_engine_marketingmixeng_b4307b94 function;
+    class scripts_marketing_nucleus_engine_marketingmixeng_8405dc25 function;
+    class scripts_marketing_nucleus_engine_marketingmixeng_adce8145 function;
     class ponytail_hooks_ponytail_config_normalizepersiste_56f04243 function;
     class ponytail_hooks_ponytail_config_normalizeconfigmo_8053930d function;
-    class ponytail_hooks_ponytail_config_runtime_modes_7788477f klass;
     class ponytail_pi_extension_test_extension_test_9b4fdc90 test;
-    class ponytail_pi_extension_test_extension_test_create_56a16fe4 test;
     class ponytail_pi_extension_test_helpers_test_2bad389e test;
+    class ponytail_pi_extension_index_parseponytailcommand_4d211fdf entry;
+    class scripts_test_brain_run_all_d04a7277 test;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -2642,6 +2638,190 @@ flowchart LR
 </tr>
 <tr>
   <td>1</td>
+  <td><code>BG_NBDEngine</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>calculate_clv()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>expected_future_purchases()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>probability_alive()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td>BG_NBDEngine node in scripts/marketing_nucleus_engine.py.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>CausalUpliftEngine</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>calculate_individual_uplift()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>classify_customer()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td>CausalUpliftEngine node in scripts/marketing_nucleus_engine.py.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>MarketingMixEngine</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>geometric_adstock()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>hill_saturation()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>optimize_channel_budget()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td>MarketingMixEngine node in scripts/marketing_nucleus_engine.py.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>.calculate_clv()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>BG_NBDEngine</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>run_verification_tests()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td>No direct outbound edge</td>
+  <td>.calculate_clv() node in scripts/marketing_nucleus_engine.py.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>.expected_future_purchases()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>BG_NBDEngine</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>run_verification_tests()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><code>probability_alive()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td>.expected_future_purchases() node in scripts/marketing_nucleus_engine.py.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>.probability_alive()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>BG_NBDEngine</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>expected_future_purchases()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>run_verification_tests()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td>No direct outbound edge</td>
+  <td>.probability_alive() node in scripts/marketing_nucleus_engine.py.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>.calculate_individual_uplift()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>CausalUpliftEngine</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>classify_customer()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td>No direct outbound edge</td>
+  <td>.calculate_individual_uplift() node in scripts/marketing_nucleus_engine.py.</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>.classify_customer()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>CausalUpliftEngine</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>run_verification_tests()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><code>calculate_individual_uplift()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td>.classify_customer() node in scripts/marketing_nucleus_engine.py.</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>.geometric_adstock()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>MarketingMixEngine</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>run_verification_tests()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td>No direct outbound edge</td>
+  <td>.geometric_adstock() node in scripts/marketing_nucleus_engine.py.</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>.hill_saturation()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>MarketingMixEngine</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>optimize_channel_budget()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>run_verification_tests()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td>No direct outbound edge</td>
+  <td>.hill_saturation() node in scripts/marketing_nucleus_engine.py.</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>.optimize_channel_budget()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>MarketingMixEngine</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>run_verification_tests()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><code>hill_saturation()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td>.optimize_channel_budget() node in scripts/marketing_nucleus_engine.py.</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>run_verification_tests()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>calculate_clv()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>classify_customer()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>expected_future_purchases()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br>+4 more</td>
+  <td>Verifies imports, entry points, or version behavior.</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>marketing_nucleus_engine.py</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-class">Module</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in scripts/marketing_nucleus_engine.py.</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>Any</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Any node in project.</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>Segments audience into 4 Causal Quadrants to eliminate ad budget waste: 1.…</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Segments audience into 4 Causal Quadrants to eliminate ad budget waste: 1.….</td>
+</tr>
+<tr>
+  <td>16</td>
+  <td><code>Treatment Effect: tau = P(Y=1|W=1) - P(Y=1|W=0)</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Treatment Effect: tau = P(Y=1|W=1) - P(Y=1|W=0).</td>
+</tr>
+<tr>
+  <td>17</td>
+  <td><code>Beta-Geometric / Negative Binomial Distribution model for non-contractual CLV.…</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Beta-Geometric / Negative Binomial Distribution model for non-contractual CLV.….</td>
+</tr>
+<tr>
+  <td>18</td>
+  <td><code>P(Alive | frequency x, recency tx, tenure T)</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for P(Alive | frequency x, recency tx, tenure T).</td>
+</tr>
+<tr>
+  <td>19</td>
+  <td><code>Expected transactions in future window of duration t_future.</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Expected transactions in future window of duration t_future..</td>
+</tr>
+<tr>
+  <td>20</td>
+  <td><code>Total Net Monetary Lifetime Value</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Total Net Monetary Lifetime Value.</td>
+</tr>
+<tr>
+  <td>21</td>
+  <td><code>Calculate Geometric Adstock carryover decay. decay_rate: float between 0.0 (no…</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Calculate Geometric Adstock carryover decay. decay_rate: float between 0.0 (no….</td>
+</tr>
+<tr>
+  <td>22</td>
+  <td><code>Calculate Diminishing Returns via Hill Function. half_sat_k: Spend needed to…</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Calculate Diminishing Returns via Hill Function. half_sat_k: Spend needed to….</td>
+</tr>
+<tr>
+  <td>23</td>
+  <td><code>Greedy Marginal ROI Budget Allocator across Ad Channels.</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Greedy Marginal ROI Budget Allocator across Ad Channels..</td>
+</tr>
+<tr>
+  <td>24</td>
   <td><code>normalizeConfigMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>normalizePersistedMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>ponytail-config.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
@@ -2649,7 +2829,7 @@ flowchart LR
   <td>Reads, resolves, or persists project configuration.</td>
 </tr>
 <tr>
-  <td>2</td>
+  <td>25</td>
   <td><code>normalizePersistedMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>getPonytailInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>parsePonytailCommand()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br>+6 more</td>
@@ -2657,7 +2837,7 @@ flowchart LR
   <td>normalizePersistedMode() node in ponytail/hooks/ponytail-config.js.</td>
 </tr>
 <tr>
-  <td>3</td>
+  <td>26</td>
   <td><code>parsePonytailCommand()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
   <td><span class="tag tag-cmd">Entry</span></td>
   <td><code>helpers.test.js</code><br><small style="color:var(--muted)">pi-extension/test/helpers.test.js</small><br><code>ponytailExtension()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
@@ -2665,7 +2845,7 @@ flowchart LR
   <td>parsePonytailCommand() node in ponytail/pi-extension/index.js.</td>
 </tr>
 <tr>
-  <td>4</td>
+  <td>27</td>
   <td><code>ponytailExtension()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>createPiHarness()</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small><br><code>extension.test.js</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small></td>
@@ -2673,7 +2853,7 @@ flowchart LR
   <td>ponytailExtension() node in ponytail/pi-extension/index.js.</td>
 </tr>
 <tr>
-  <td>5</td>
+  <td>28</td>
   <td><code>syncStatus()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -2681,7 +2861,7 @@ flowchart LR
   <td>syncStatus() node in ponytail/pi-extension/index.js.</td>
 </tr>
 <tr>
-  <td>6</td>
+  <td>29</td>
   <td><code>resolveSessionMode()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>helpers.test.js</code><br><small style="color:var(--muted)">pi-extension/test/helpers.test.js</small><br><code>ponytailExtension()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
@@ -2689,216 +2869,12 @@ flowchart LR
   <td>resolveSessionMode() node in ponytail/pi-extension/index.js.</td>
 </tr>
 <tr>
-  <td>7</td>
+  <td>30</td>
   <td><code>createCommandContext()</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small></td>
   <td><span class="tag tag-func">Test</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
   <td>createCommandContext() node in pi-extension/test/extension.test.js.</td>
-</tr>
-<tr>
-  <td>8</td>
-  <td><code>createPiHarness()</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small></td>
-  <td><span class="tag tag-func">Test</span></td>
-  <td>External entry / no inbound edge</td>
-  <td><code>ponytailExtension()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
-  <td>createPiHarness() node in pi-extension/test/extension.test.js.</td>
-</tr>
-<tr>
-  <td>9</td>
-  <td><code>notify()</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small></td>
-  <td><span class="tag tag-func">Test</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>notify() node in pi-extension/test/extension.test.js.</td>
-</tr>
-<tr>
-  <td>10</td>
-  <td><code>withTempConfig()</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small></td>
-  <td><span class="tag tag-func">Test</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Reads, resolves, or persists project configuration.</td>
-</tr>
-<tr>
-  <td>11</td>
-  <td><code>RUNTIME_MODES</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
-  <td>No direct outbound edge</td>
-  <td>RUNTIME_MODES node in ponytail/hooks/ponytail-config.js.</td>
-</tr>
-<tr>
-  <td>12</td>
-  <td><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
-  <td><span class="tag tag-class">Module</span></td>
-  <td><code>extension.test.js</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small><br><code>helpers.test.js</code><br><small style="color:var(--muted)">pi-extension/test/helpers.test.js</small></td>
-  <td><code>filterSkillBodyForMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br><code>getDefaultMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>getHideStatus()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br>+9 more</td>
-  <td>index.js node in ponytail/pi-extension/index.js.</td>
-</tr>
-<tr>
-  <td>13</td>
-  <td><code>{
-  DEFAULT_MODE,
-  RUNTIME_MODES,
-  getDefaultMode,
-  getQuietStartup,
-  getHideStatus,
-  normalizeMode,
-  normalizePersistedMode,
-  isDeactivationCommand,
-  writeDefaultMode,
-}</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
-  <td><span class="tag tag-cmd">Entry</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>{
-  DEFAULT_MODE,
-  RUNTIME_MODES,
-  getDefaultMode,
-  getQuietStartup,
-  getHideStatus,
-  normalizeMode,
-  normalizePersistedMode,
-  isDeactivationCommand,
-  writeDefaultMode,
-} node in ponytail/pi-extension/index.js.</td>
-</tr>
-<tr>
-  <td>14</td>
-  <td><code>{ getPonytailInstructions, filterSkillBodyForMode }</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>{ getPonytailInstructions, filterSkillBodyForMode } node in ponytail/pi-extension/index.js.</td>
-</tr>
-<tr>
-  <td>15</td>
-  <td><code>readDefaultMode</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>helpers.test.js</code><br><small style="color:var(--muted)">pi-extension/test/helpers.test.js</small></td>
-  <td>No direct outbound edge</td>
-  <td>readDefaultMode node in ponytail/pi-extension/index.js.</td>
-</tr>
-<tr>
-  <td>16</td>
-  <td><code>readQuietStartup</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>helpers.test.js</code><br><small style="color:var(--muted)">pi-extension/test/helpers.test.js</small></td>
-  <td>No direct outbound edge</td>
-  <td>readQuietStartup node in ponytail/pi-extension/index.js.</td>
-</tr>
-<tr>
-  <td>17</td>
-  <td><code>require</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>require node in ponytail/pi-extension/index.js.</td>
-</tr>
-<tr>
-  <td>18</td>
-  <td><code>RUNTIME_MODE_LIST</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>RUNTIME_MODE_LIST node in ponytail/pi-extension/index.js.</td>
-</tr>
-<tr>
-  <td>19</td>
-  <td><code>extension.test.js</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small></td>
-  <td><span class="tag tag-func">Test</span></td>
-  <td>External entry / no inbound edge</td>
-  <td><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>ponytailExtension()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
-  <td>Verifies imports, entry points, or version behavior.</td>
-</tr>
-<tr>
-  <td>20</td>
-  <td><code>helpers.test.js</code><br><small style="color:var(--muted)">pi-extension/test/helpers.test.js</small></td>
-  <td><span class="tag tag-func">Test</span></td>
-  <td>External entry / no inbound edge</td>
-  <td><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>parsePonytailCommand()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>readDefaultMode</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br>+2 more</td>
-  <td>Verifies imports, entry points, or version behavior.</td>
-</tr>
-<tr>
-  <td>21</td>
-  <td><code>N036_fullstack_product_synthesizer.md</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing N036_fullstack_product_synthesizer.md.</td>
-</tr>
-<tr>
-  <td>22</td>
-  <td><code>🏗️ 1. 0-to-1 Full-Stack Product Synthesis Architecture</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 🏗️ 1. 0-to-1 Full-Stack Product Synthesis Architecture.</td>
-</tr>
-<tr>
-  <td>23</td>
-  <td><code>🗄️ 2. Database Layer &amp; Dual-Dialect Drizzle Schema Synthesis</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 🗄️ 2. Database Layer &amp; Dual-Dialect Drizzle Schema Synthesis.</td>
-</tr>
-<tr>
-  <td>24</td>
-  <td><code>⚡ 3. API Gateway &amp; Sub-Millisecond Type-Safe RPC Layer (Hono v4)</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing ⚡ 3. API Gateway &amp; Sub-Millisecond Type-Safe RPC Layer (Hono v4).</td>
-</tr>
-<tr>
-  <td>25</td>
-  <td><code>🎨 4. Frontend UI Engine &amp; Next.js 15 App Router + Tailwind v4</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 🎨 4. Frontend UI Engine &amp; Next.js 15 App Router + Tailwind v4.</td>
-</tr>
-<tr>
-  <td>26</td>
-  <td><code>🎭 5. Playwright E2E Test Oracle &amp; Zero-Flakiness Testing Matrix</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 🎭 5. Playwright E2E Test Oracle &amp; Zero-Flakiness Testing Matrix.</td>
-</tr>
-<tr>
-  <td>27</td>
-  <td><code>📋 6. Autonomous 0-to-1 Synthesis Pipeline Checklist</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 📋 6. Autonomous 0-to-1 Synthesis Pipeline Checklist.</td>
-</tr>
-<tr>
-  <td>28</td>
-  <td><code>🧪 7. Runnable Pure Standard Library Test Invariants</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 🧪 7. Runnable Pure Standard Library Test Invariants.</td>
-</tr>
-<tr>
-  <td>29</td>
-  <td><code>A. Dual-Engine Dialect Compatibility (PostgreSQL 17 &amp; SQLite WAL)</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing A. Dual-Engine Dialect Compatibility (PostgreSQL 17 &amp; SQLite WAL).</td>
-</tr>
-<tr>
-  <td>30</td>
-  <td><code>A. Server Components First &amp; Optimistic Server Actions</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing A. Server Components First &amp; Optimistic Server Actions.</td>
 </tr>
 </table>
 
@@ -2907,7 +2883,8 @@ flowchart LR
     <h4>Key Files</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>learning/neurons/N036_fullstack_product_synthesizer.md</code></td><td>18 nodes</td></tr>
+      <tr><td><code>scripts/marketing_nucleus_engine.py</code></td><td>22 nodes</td></tr>
+<tr><td><code>learning/neurons/N036_fullstack_product_synthesizer.md</code></td><td>18 nodes</td></tr>
 <tr><td><code>ponytail/pi-extension/index.js</code></td><td>11 nodes</td></tr>
 <tr><td><code>scripts/test_brain.py</code></td><td>8 nodes</td></tr>
 <tr><td><code>pi-extension/test/extension.test.js</code></td><td>5 nodes</td></tr>
@@ -2917,7 +2894,7 @@ flowchart LR
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x38, calls x13, imports x7, imports x2. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x42, calls x23, explains x9, method x8. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -3198,8 +3175,269 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 12. ponytail-runtime.js ====== -->
-<h2 id="ponytail-runtime-js">12. ponytail-runtime.js</h2>
+<!-- ====== 12. ========================================== ====== -->
+<h2 id="section-12">12. ==========================================</h2>
+<p>========================================== groups implementation around marketing, n053, quantitative, growth, mostly in learning/neurons/N053_quantitative_marketing_growth_mastery.md. This section covers 20 nodes and 20 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: ========================================== (20 nodes, 20 edges)
+    learning_neurons_n053_quantitative_marketing_gro_0eb164e3("==========================================<br/><small>learning/neurons/N053_quantitative_marketing_growth_mastery.md</small>")
+    learning_neurons_n053_quantitative_marketing_gro_01776452("2. Inti Matematika &amp; Invarian Rekayasa...<br/><small>learning/neurons/N053_quantitative_marketing_growth_mastery.md</small>")
+    learning_neurons_n053_quantitative_marketing_gro_6873ac9c("Neuron N053: Quantitative Marketing, Gr...<br/><small>learning/neurons/N053_quantitative_marketing_growth_mastery.md</small>")
+    learning_neurons_n053_quantitative_marketing_gro_585b8b0c("==========================================<br/><small>learning/neurons/N053_quantitative_marketing_growth_mastery.md</small>")
+    learning_neurons_n053_quantitative_marketing_gro_9a8d6eec("==========================================<br/><small>learning/neurons/N053_quantitative_marketing_growth_mastery.md</small>")
+    learning_neurons_n053_quantitative_marketing_gro_628e8205("2. CAUSAL UPLIFT TARGETING NUCLEUS<br/><small>learning/neurons/N053_quantitative_marketing_growth_mastery.md</small>")
+    learning_neurons_n053_quantitative_marketing_gro_61ca9fc7("1. MARKETING MIX MODELING (MMM) NUCLEUS<br/><small>learning/neurons/N053_quantitative_marketing_growth_mastery.md</small>")
+    learning_neurons_n053_quantitative_marketing_gro_5201b30a("1. Peta Repositori, Library &amp; Benchmark...<br/><small>learning/neurons/N053_quantitative_marketing_growth_mastery.md</small>")
+    learning_neurons_n053_quantitative_marketing_gro_4789ec5e("3. BG/NBD CUSTOMER LIFETIME VALUE NUCLEUS<br/><small>learning/neurons/N053_quantitative_marketing_growth_mastery.md</small>")
+    learning_neurons_n053_quantitative_marketing_gro_bc71acf0("3. Kode Nukleus Produksi (Zero-Bloat Se...<br/><small>learning/neurons/N053_quantitative_marketing_growth_mastery.md</small>")
+    learning_neurons_n053_quantitative_marketing_gro_e213ec06("4. Invarian Disiplin Rekayasa AdTech<br/><small>learning/neurons/N053_quantitative_marketing_growth_mastery.md</small>")
+    learning_neurons_n053_quantitative_marketing_gro_35bf7058("4. SELF-CONTAINED DETERMINISTIC VERIFIC...<br/><small>learning/neurons/N053_quantitative_marketing_growth_mastery.md</small>")
+    learning_neurons_n053_quantitative_marketing_gro_d4915ae8("==========================================<br/><small>learning/neurons/N053_quantitative_marketing_growth_mastery.md</small>")
+    learning_neurons_n053_quantitative_marketing_gro_19b6fe26("==========================================<br/><small>learning/neurons/N053_quantitative_marketing_growth_mastery.md</small>")
+    learning_neurons_n053_quantitative_marketing_gro_3e84e797("==========================================<br/><small>learning/neurons/N053_quantitative_marketing_growth_mastery.md</small>")
+    learning_neurons_n053_quantitative_marketing_gro_8120f060("==========================================<br/><small>learning/neurons/N053_quantitative_marketing_growth_mastery.md</small>")
+    learning_neurons_n053_quantitative_marketing_gro_40b2d999("==========================================<br/><small>learning/neurons/N053_quantitative_marketing_growth_mastery.md</small>")
+    learning_neurons_n053_quantitative_marketing_gro_e92ae2cf("A. Marketing Mix Modeling: Adstock &amp; Di...<br/><small>learning/neurons/N053_quantitative_marketing_growth_mastery.md</small>")
+    learning_neurons_n053_quantitative_marketing_gro_0eb164e3 -->|contains| learning_neurons_n053_quantitative_marketing_gro_6873ac9c
+    learning_neurons_n053_quantitative_marketing_gro_0eb164e3 -->|contains| learning_neurons_n053_quantitative_marketing_gro_9a8d6eec
+    learning_neurons_n053_quantitative_marketing_gro_0eb164e3 -->|contains| learning_neurons_n053_quantitative_marketing_gro_628e8205
+    learning_neurons_n053_quantitative_marketing_gro_0eb164e3 -->|contains| learning_neurons_n053_quantitative_marketing_gro_d4915ae8
+    learning_neurons_n053_quantitative_marketing_gro_0eb164e3 -->|contains| learning_neurons_n053_quantitative_marketing_gro_19b6fe26
+    learning_neurons_n053_quantitative_marketing_gro_0eb164e3 -->|contains| learning_neurons_n053_quantitative_marketing_gro_4789ec5e
+    learning_neurons_n053_quantitative_marketing_gro_0eb164e3 -->|contains| learning_neurons_n053_quantitative_marketing_gro_3e84e797
+    learning_neurons_n053_quantitative_marketing_gro_0eb164e3 -->|contains| learning_neurons_n053_quantitative_marketing_gro_8120f060
+    learning_neurons_n053_quantitative_marketing_gro_0eb164e3 -->|contains| learning_neurons_n053_quantitative_marketing_gro_35bf7058
+    learning_neurons_n053_quantitative_marketing_gro_0eb164e3 -->|contains| learning_neurons_n053_quantitative_marketing_gro_585b8b0c
+    learning_neurons_n053_quantitative_marketing_gro_0eb164e3 -->|contains| learning_neurons_n053_quantitative_marketing_gro_0eb164e3
+    learning_neurons_n053_quantitative_marketing_gro_0eb164e3 -->|contains| learning_neurons_n053_quantitative_marketing_gro_61ca9fc7
+    learning_neurons_n053_quantitative_marketing_gro_0eb164e3 -->|contains| learning_neurons_n053_quantitative_marketing_gro_40b2d999
+    learning_neurons_n053_quantitative_marketing_gro_585b8b0c -->|contains| learning_neurons_n053_quantitative_marketing_gro_e213ec06
+    learning_neurons_n053_quantitative_marketing_gro_01776452 -->|contains| learning_neurons_n053_quantitative_marketing_gro_e92ae2cf
+    learning_neurons_n053_quantitative_marketing_gro_6873ac9c -->|contains| learning_neurons_n053_quantitative_marketing_gro_5201b30a
+    learning_neurons_n053_quantitative_marketing_gro_6873ac9c -->|contains| learning_neurons_n053_quantitative_marketing_gro_01776452
+    learning_neurons_n053_quantitative_marketing_gro_6873ac9c -->|contains| learning_neurons_n053_quantitative_marketing_gro_bc71acf0
+    %% Omitted for readability: 2 nodes, 0 edges
+    class learning_neurons_n053_quantitative_marketing_gro_0eb164e3 concept;
+    class learning_neurons_n053_quantitative_marketing_gro_01776452 concept;
+    class learning_neurons_n053_quantitative_marketing_gro_6873ac9c concept;
+    class learning_neurons_n053_quantitative_marketing_gro_585b8b0c concept;
+    class learning_neurons_n053_quantitative_marketing_gro_9a8d6eec concept;
+    class learning_neurons_n053_quantitative_marketing_gro_628e8205 concept;
+    class learning_neurons_n053_quantitative_marketing_gro_61ca9fc7 concept;
+    class learning_neurons_n053_quantitative_marketing_gro_5201b30a concept;
+    class learning_neurons_n053_quantitative_marketing_gro_4789ec5e concept;
+    class learning_neurons_n053_quantitative_marketing_gro_bc71acf0 concept;
+    class learning_neurons_n053_quantitative_marketing_gro_e213ec06 concept;
+    class learning_neurons_n053_quantitative_marketing_gro_35bf7058 concept;
+    class learning_neurons_n053_quantitative_marketing_gro_d4915ae8 concept;
+    class learning_neurons_n053_quantitative_marketing_gro_19b6fe26 concept;
+    class learning_neurons_n053_quantitative_marketing_gro_3e84e797 concept;
+    class learning_neurons_n053_quantitative_marketing_gro_8120f060 concept;
+    class learning_neurons_n053_quantitative_marketing_gro_40b2d999 concept;
+    class learning_neurons_n053_quantitative_marketing_gro_e92ae2cf concept;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>==========================================</code><br><small style="color:var(--muted)">learning/neurons/N053_quantitative_marketing_growth_mastery.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing ==========================================.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>==========================================</code><br><small style="color:var(--muted)">learning/neurons/N053_quantitative_marketing_growth_mastery.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing ==========================================.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>==========================================</code><br><small style="color:var(--muted)">learning/neurons/N053_quantitative_marketing_growth_mastery.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing ==========================================.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>==========================================</code><br><small style="color:var(--muted)">learning/neurons/N053_quantitative_marketing_growth_mastery.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing ==========================================.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>1. MARKETING MIX MODELING (MMM) NUCLEUS</code><br><small style="color:var(--muted)">learning/neurons/N053_quantitative_marketing_growth_mastery.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 1. MARKETING MIX MODELING (MMM) NUCLEUS.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>1. Peta Repositori, Library &amp; Benchmark Terbaik Dunia</code><br><small style="color:var(--muted)">learning/neurons/N053_quantitative_marketing_growth_mastery.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 1. Peta Repositori, Library &amp; Benchmark Terbaik Dunia.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>==========================================</code><br><small style="color:var(--muted)">learning/neurons/N053_quantitative_marketing_growth_mastery.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing ==========================================.</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>==========================================</code><br><small style="color:var(--muted)">learning/neurons/N053_quantitative_marketing_growth_mastery.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing ==========================================.</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>==========================================</code><br><small style="color:var(--muted)">learning/neurons/N053_quantitative_marketing_growth_mastery.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing ==========================================.</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>2. CAUSAL UPLIFT TARGETING NUCLEUS</code><br><small style="color:var(--muted)">learning/neurons/N053_quantitative_marketing_growth_mastery.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 2. CAUSAL UPLIFT TARGETING NUCLEUS.</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>2. Inti Matematika &amp; Invarian Rekayasa Marketing</code><br><small style="color:var(--muted)">learning/neurons/N053_quantitative_marketing_growth_mastery.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 2. Inti Matematika &amp; Invarian Rekayasa Marketing.</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>3. BG/NBD CUSTOMER LIFETIME VALUE NUCLEUS</code><br><small style="color:var(--muted)">learning/neurons/N053_quantitative_marketing_growth_mastery.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 3. BG/NBD CUSTOMER LIFETIME VALUE NUCLEUS.</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>3. Kode Nukleus Produksi (Zero-Bloat Self-Contained Engine)</code><br><small style="color:var(--muted)">learning/neurons/N053_quantitative_marketing_growth_mastery.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 3. Kode Nukleus Produksi (Zero-Bloat Self-Contained Engine).</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>4. Invarian Disiplin Rekayasa AdTech</code><br><small style="color:var(--muted)">learning/neurons/N053_quantitative_marketing_growth_mastery.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 4. Invarian Disiplin Rekayasa AdTech.</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>4. SELF-CONTAINED DETERMINISTIC VERIFICATION</code><br><small style="color:var(--muted)">learning/neurons/N053_quantitative_marketing_growth_mastery.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 4. SELF-CONTAINED DETERMINISTIC VERIFICATION.</td>
+</tr>
+<tr>
+  <td>16</td>
+  <td><code>==========================================</code><br><small style="color:var(--muted)">learning/neurons/N053_quantitative_marketing_growth_mastery.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing ==========================================.</td>
+</tr>
+<tr>
+  <td>17</td>
+  <td><code>A. Marketing Mix Modeling: Adstock &amp; Diminishing Returns (Hill Function)</code><br><small style="color:var(--muted)">learning/neurons/N053_quantitative_marketing_growth_mastery.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing A. Marketing Mix Modeling: Adstock &amp; Diminishing Returns (Hill Function).</td>
+</tr>
+<tr>
+  <td>18</td>
+  <td><code>B. Causal Uplift Matrix: 4 Kuadran Targeting Presisi</code><br><small style="color:var(--muted)">learning/neurons/N053_quantitative_marketing_growth_mastery.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing B. Causal Uplift Matrix: 4 Kuadran Targeting Presisi.</td>
+</tr>
+<tr>
+  <td>19</td>
+  <td><code>C. BG/NBD Customer Lifetime Value</code><br><small style="color:var(--muted)">learning/neurons/N053_quantitative_marketing_growth_mastery.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing C. BG/NBD Customer Lifetime Value.</td>
+</tr>
+<tr>
+  <td>20</td>
+  <td><code>Neuron N053: Quantitative Marketing, Growth Science &amp; Causal AdTech Mastery</code><br><small style="color:var(--muted)">learning/neurons/N053_quantitative_marketing_growth_mastery.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Neuron N053: Quantitative Marketing, Growth Science &amp; Causal AdTech Mastery.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>learning/neurons/N053_quantitative_marketing_growth_mastery.md</code></td><td>20 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x20. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 13. ponytail-runtime.js ====== -->
+<h2 id="ponytail-runtime-js">13. ponytail-runtime.js</h2>
 <p>ponytail-runtime.js groups implementation around ponytail, hooks, runtimejs, mode, mostly in ponytail/hooks/ponytail-runtime.js, ponytail/hooks/ponytail-mode-tracker.js, ponytail/hooks/ponytail-config.js. This section covers 19 nodes and 28 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -3454,8 +3692,8 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 13. Neuron N051: Modern System Architecture, Resilience Engineering & Zero-Downtime DevOps Mastery ====== -->
-<h2 id="neuron-n051-modern-system-architecture-resilienc">13. Neuron N051: Modern System Architecture, Resilience Engineering &amp; Zero-Downtime DevOps Mastery</h2>
+<!-- ====== 14. Neuron N051: Modern System Architecture, Resilience Engineering & Zero-Downtime DevOps Mastery ====== -->
+<h2 id="neuron-n051-modern-system-architecture-resilienc">14. Neuron N051: Modern System Architecture, Resilience Engineering &amp; Zero-Downtime DevOps Mastery</h2>
 <p>Neuron N051: Modern System Architecture, Resilience Engineering &amp; Zero-Downtime DevOps Mastery groups implementation around devops, n051, system, architecture, mostly in learning/neurons/N051_system_architecture_devops_mastery.md. This section covers 19 nodes and 18 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -3706,8 +3944,8 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 14. Neuron N046: Algorithmic Execution Engines & Smart Order Routing ====== -->
-<h2 id="neuron-n046-algorithmic-execution-engines-smart">14. Neuron N046: Algorithmic Execution Engines &amp; Smart Order Routing</h2>
+<!-- ====== 15. Neuron N046: Algorithmic Execution Engines & Smart Order Routing ====== -->
+<h2 id="neuron-n046-algorithmic-execution-engines-smart">15. Neuron N046: Algorithmic Execution Engines &amp; Smart Order Routing</h2>
 <p>Neuron N046: Algorithmic Execution Engines &amp; Smart Order Routing groups implementation around execution, n046, algorithmic, enginesmd, mostly in learning/neurons/N046_algorithmic_execution_engines.md. This section covers 19 nodes and 18 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -3958,67 +4196,72 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 15. Neuron N050: Systematic Backtesting Engine & Walk-Forward Optimization (WFA / CPCV / DSR) ====== -->
-<h2 id="neuron-n050-systematic-backtesting-engine-walk-f">15. Neuron N050: Systematic Backtesting Engine &amp; Walk-Forward Optimization (WFA / CPCV / DSR)</h2>
-<p>Neuron N050: Systematic Backtesting Engine &amp; Walk-Forward Optimization (WFA / CPCV / DSR) groups implementation around n050, systematic, backtesting, wfamd, mostly in learning/neurons/N050_systematic_backtesting_wfa.md. This section covers 18 nodes and 17 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<!-- ====== 16. Other ====== -->
+<h2 id="other">16. Other</h2>
+<p>Other groups implementation around learning, neurons, scripts, gold, mostly in learning/neurons/N050_systematic_backtesting_wfa.md, scripts/zolu_learn_server.js, learning/neurons/N045_volatility_options_greeks.md. This section covers 315 nodes and 274 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Neuron N050: Systematic Backtesting Engine &amp; Walk-Forward Optimization (WFA / CPCV / DSR) (18 nodes, 17 edges)
-    learning_neurons_n050_systematic_backtesting_wfa_4da53630("Neuron N050: Systematic Backtesting Eng...<br/><small>learning/neurons/N050_systematic_backtesting_wfa.md</small>")
-    learning_neurons_n050_systematic_backtesting_wfa_8aa30784("2. Walk-Forward Analysis (WFA) &amp; Rollin...<br/><small>learning/neurons/N050_systematic_backtesting_wfa.md</small>")
-    learning_neurons_n050_systematic_backtesting_wfa_716f1dc1("4. Probabilistic Sharpe Ratio (PSR) &amp; D...<br/><small>learning/neurons/N050_systematic_backtesting_wfa.md</small>")
-    learning_neurons_n050_systematic_backtesting_wfa_02b022a3("1. Arsitektur Event-Driven vs Ilusi Sim...<br/><small>learning/neurons/N050_systematic_backtesting_wfa.md</small>")
-    learning_neurons_n050_systematic_backtesting_wfa_8efd97e3("3. Combinatorial Purged Cross-Validatio...<br/><small>learning/neurons/N050_systematic_backtesting_wfa.md</small>")
-    learning_neurons_n050_systematic_backtesting_wfa_8324bdfb("systematic backtesting wfa.md<br/><small>learning/neurons/N050_systematic_backtesting_wfa.md</small>")
-    learning_neurons_n050_systematic_backtesting_wfa_d711a576("5. Implementasi Deterministik Python St...<br/><small>learning/neurons/N050_systematic_backtesting_wfa.md</small>")
-    learning_neurons_n050_systematic_backtesting_wfa_6aab0754("6. Invarian Operasional &amp; Quant Guardrails<br/><small>learning/neurons/N050_systematic_backtesting_wfa.md</small>")
-    learning_neurons_n050_systematic_backtesting_wfa_778b7365("A. 7 Jebakan Fatal Simulasi Vektorik (*...<br/><small>learning/neurons/N050_systematic_backtesting_wfa.md</small>")
-    learning_neurons_n050_systematic_backtesting_wfa_c64a07bd("A. Dua Pilar CPCV (Marcos López de Prado)<br/><small>learning/neurons/N050_systematic_backtesting_wfa.md</small>")
-    learning_neurons_n050_systematic_backtesting_wfa_b15aea9f("A. Metodologi Walk-Forward<br/><small>learning/neurons/N050_systematic_backtesting_wfa.md</small>")
-    learning_neurons_n050_systematic_backtesting_wfa_63630194("A. Momen Statistik &amp; Asymptotic Standar...<br/><small>learning/neurons/N050_systematic_backtesting_wfa.md</small>")
-    learning_neurons_n050_systematic_backtesting_wfa_d7dc098f("B. Kombinatorika dan Probability of Bac...<br/><small>learning/neurons/N050_systematic_backtesting_wfa.md</small>")
-    learning_neurons_n050_systematic_backtesting_wfa_ccd7752d("B. Pemodelan Friksi &amp; Slippage Non-Linear<br/><small>learning/neurons/N050_systematic_backtesting_wfa.md</small>")
-    learning_neurons_n050_systematic_backtesting_wfa_4503eee8("B. Probabilistic Sharpe Ratio (PSR)<br/><small>learning/neurons/N050_systematic_backtesting_wfa.md</small>")
-    learning_neurons_n050_systematic_backtesting_wfa_304d6635("B. Walk-Forward Efficiency (WFE) Invariant<br/><small>learning/neurons/N050_systematic_backtesting_wfa.md</small>")
-    learning_neurons_n050_systematic_backtesting_wfa_a9563a54("C. Deflated Sharpe Ratio (DSR) untuk Mu...<br/><small>learning/neurons/N050_systematic_backtesting_wfa.md</small>")
-    learning_neurons_n050_systematic_backtesting_wfa_582a051d("C. Parameter Plateau vs Needle Peak<br/><small>learning/neurons/N050_systematic_backtesting_wfa.md</small>")
-    learning_neurons_n050_systematic_backtesting_wfa_8324bdfb -->|contains| learning_neurons_n050_systematic_backtesting_wfa_4da53630
-    learning_neurons_n050_systematic_backtesting_wfa_02b022a3 -->|contains| learning_neurons_n050_systematic_backtesting_wfa_778b7365
-    learning_neurons_n050_systematic_backtesting_wfa_02b022a3 -->|contains| learning_neurons_n050_systematic_backtesting_wfa_ccd7752d
-    learning_neurons_n050_systematic_backtesting_wfa_8aa30784 -->|contains| learning_neurons_n050_systematic_backtesting_wfa_b15aea9f
-    learning_neurons_n050_systematic_backtesting_wfa_8aa30784 -->|contains| learning_neurons_n050_systematic_backtesting_wfa_304d6635
-    learning_neurons_n050_systematic_backtesting_wfa_8aa30784 -->|contains| learning_neurons_n050_systematic_backtesting_wfa_582a051d
-    learning_neurons_n050_systematic_backtesting_wfa_8efd97e3 -->|contains| learning_neurons_n050_systematic_backtesting_wfa_c64a07bd
-    learning_neurons_n050_systematic_backtesting_wfa_8efd97e3 -->|contains| learning_neurons_n050_systematic_backtesting_wfa_d7dc098f
-    learning_neurons_n050_systematic_backtesting_wfa_716f1dc1 -->|contains| learning_neurons_n050_systematic_backtesting_wfa_63630194
-    learning_neurons_n050_systematic_backtesting_wfa_716f1dc1 -->|contains| learning_neurons_n050_systematic_backtesting_wfa_4503eee8
-    learning_neurons_n050_systematic_backtesting_wfa_716f1dc1 -->|contains| learning_neurons_n050_systematic_backtesting_wfa_a9563a54
-    learning_neurons_n050_systematic_backtesting_wfa_4da53630 -->|contains| learning_neurons_n050_systematic_backtesting_wfa_8efd97e3
-    learning_neurons_n050_systematic_backtesting_wfa_4da53630 -->|contains| learning_neurons_n050_systematic_backtesting_wfa_02b022a3
-    learning_neurons_n050_systematic_backtesting_wfa_4da53630 -->|contains| learning_neurons_n050_systematic_backtesting_wfa_716f1dc1
-    learning_neurons_n050_systematic_backtesting_wfa_4da53630 -->|contains| learning_neurons_n050_systematic_backtesting_wfa_d711a576
-    learning_neurons_n050_systematic_backtesting_wfa_4da53630 -->|contains| learning_neurons_n050_systematic_backtesting_wfa_6aab0754
-    learning_neurons_n050_systematic_backtesting_wfa_4da53630 -->|contains| learning_neurons_n050_systematic_backtesting_wfa_8aa30784
-    class learning_neurons_n050_systematic_backtesting_wfa_4da53630 concept;
-    class learning_neurons_n050_systematic_backtesting_wfa_8aa30784 concept;
-    class learning_neurons_n050_systematic_backtesting_wfa_716f1dc1 concept;
-    class learning_neurons_n050_systematic_backtesting_wfa_02b022a3 concept;
-    class learning_neurons_n050_systematic_backtesting_wfa_8efd97e3 concept;
-    class learning_neurons_n050_systematic_backtesting_wfa_8324bdfb concept;
-    class learning_neurons_n050_systematic_backtesting_wfa_d711a576 concept;
-    class learning_neurons_n050_systematic_backtesting_wfa_6aab0754 concept;
-    class learning_neurons_n050_systematic_backtesting_wfa_778b7365 concept;
-    class learning_neurons_n050_systematic_backtesting_wfa_c64a07bd concept;
-    class learning_neurons_n050_systematic_backtesting_wfa_b15aea9f concept;
-    class learning_neurons_n050_systematic_backtesting_wfa_63630194 concept;
-    class learning_neurons_n050_systematic_backtesting_wfa_d7dc098f concept;
-    class learning_neurons_n050_systematic_backtesting_wfa_ccd7752d concept;
-    class learning_neurons_n050_systematic_backtesting_wfa_4503eee8 concept;
-    class learning_neurons_n050_systematic_backtesting_wfa_304d6635 concept;
-    class learning_neurons_n050_systematic_backtesting_wfa_a9563a54 concept;
-    class learning_neurons_n050_systematic_backtesting_wfa_582a051d concept;
+    %% Section: Other (315 nodes, 274 edges)
+    subgraph other_scripts_train_trading_engine_py_11e67fc6["scripts/train_trading_engine.py"]
+        scripts_train_trading_engine_train_and_synthesiz_daac8636("and synthesize neuron()<br/><small>scripts/train_trading_engine.py</small>")
+        scripts_train_trading_engine_fetch_binance_kline_d42e122f("fetch_binance_klines()<br/><small>scripts/train_trading_engine.py</small>")
+        scripts_train_trading_engine_calculate_ema_e9e4f150("calculate_ema()<br/><small>scripts/train_trading_engine.py</small>")
+        scripts_train_trading_engine_calculate_rsi_791aba17("calculate_rsi()<br/><small>scripts/train_trading_engine.py</small>")
+        scripts_train_trading_engine_calculate_atr_b5014e19("calculate_atr()<br/><small>scripts/train_trading_engine.py</small>")
+        scripts_train_trading_engine_detect_smc_fair_val_25a7d8da("detect_smc_fair_value_gaps()<br/><small>scripts/train_trading_engine.py</small>")
+    end
+    subgraph other_scripts_masterpiece_completer_py_c54b059e["scripts/masterpiece_completer.py"]
+        scripts_masterpiece_completer_main_7d166087("main()<br/><small>scripts/masterpiece_completer.py</small>")
+        scripts_masterpiece_completer_fetch_tmdb_poster_f35f627d("fetch_tmdb_poster()<br/><small>scripts/masterpiece_completer.py</small>")
+        scripts_masterpiece_completer_search_apibay_09c31864("search_apibay()<br/><small>scripts/masterpiece_completer.py</small>")
+    end
+    subgraph other_scripts_record_learning_py_aebcc6c8["scripts/record_learning.py"]
+        scripts_record_learning_main_6e954c2e("main()<br/><small>scripts/record_learning.py</small>")
+        scripts_record_learning_record_new_learning_a696848e("record_new_learning()<br/><small>scripts/record_learning.py</small>")
+        scripts_record_learning_slugify_f506ddc6("slugify()<br/><small>scripts/record_learning.py</small>")
+    end
+    subgraph other_scripts_auto_sync_github_py_b1a54535["scripts/auto_sync_github.py"]
+        scripts_auto_sync_github_auto_sync_3fc2238d("auto_sync()<br/><small>scripts/auto_sync_github.py</small>")
+        scripts_auto_sync_github_run_cmd_a02b4f49("run_cmd()<br/><small>scripts/auto_sync_github.py</small>")
+    end
+    subgraph other_scripts_zolu_learn_server_js_cae5a31a["scripts/zolu_learn_server.js"]
+        scripts_zolu_learn_server_runrealbenchmarkstep_ffeccedc("runRealBenchmarkStep()<br/><small>scripts/zolu_learn_server.js</small>")
+        scripts_zolu_learn_server_broadcaststate_876623e8("broadcastState()<br/><small>scripts/zolu_learn_server.js</small>")
+    end
+    ecosystem_config_803395df("ecosystem.config.cjs")
+    learning_scripts_grow_neurons_grow_neural_mesh_124978b0("grow_neural_mesh()<br/><small>learning/scripts/grow_neurons.py</small>")
+    scripts_zolu_learn_server_runrealbenchmarkstep_ffeccedc -->|calls| scripts_zolu_learn_server_broadcaststate_876623e8
+    scripts_train_trading_engine_train_and_synthesiz_daac8636 -->|calls| scripts_train_trading_engine_fetch_binance_kline_d42e122f
+    scripts_train_trading_engine_train_and_synthesiz_daac8636 -->|calls| scripts_train_trading_engine_calculate_ema_e9e4f150
+    scripts_train_trading_engine_train_and_synthesiz_daac8636 -->|calls| scripts_train_trading_engine_calculate_rsi_791aba17
+    scripts_train_trading_engine_train_and_synthesiz_daac8636 -->|calls| scripts_train_trading_engine_calculate_atr_b5014e19
+    scripts_train_trading_engine_train_and_synthesiz_daac8636 -->|calls| scripts_train_trading_engine_detect_smc_fair_val_25a7d8da
+    scripts_masterpiece_completer_main_7d166087 -->|calls| scripts_masterpiece_completer_fetch_tmdb_poster_f35f627d
+    scripts_masterpiece_completer_main_7d166087 -->|calls| scripts_masterpiece_completer_search_apibay_09c31864
+    scripts_record_learning_main_6e954c2e -->|calls| scripts_record_learning_record_new_learning_a696848e
+    scripts_record_learning_record_new_learning_a696848e -->|calls| scripts_record_learning_slugify_f506ddc6
+    scripts_auto_sync_github_auto_sync_3fc2238d -->|calls| scripts_auto_sync_github_run_cmd_a02b4f49
+    %% Omitted for readability: 297 nodes, 0 edges
+    class scripts_train_trading_engine_train_and_synthesiz_daac8636 function;
+    class scripts_train_trading_engine_fetch_binance_kline_d42e122f function;
+    class scripts_train_trading_engine_calculate_ema_e9e4f150 function;
+    class scripts_train_trading_engine_calculate_rsi_791aba17 function;
+    class scripts_train_trading_engine_calculate_atr_b5014e19 function;
+    class scripts_train_trading_engine_detect_smc_fair_val_25a7d8da function;
+    class scripts_masterpiece_completer_main_7d166087 function;
+    class scripts_masterpiece_completer_fetch_tmdb_poster_f35f627d function;
+    class scripts_masterpiece_completer_search_apibay_09c31864 api;
+    class scripts_record_learning_main_6e954c2e function;
+    class scripts_record_learning_record_new_learning_a696848e function;
+    class scripts_record_learning_slugify_f506ddc6 function;
+    class scripts_auto_sync_github_auto_sync_3fc2238d function;
+    class scripts_auto_sync_github_run_cmd_a02b4f49 function;
+    class scripts_zolu_learn_server_runrealbenchmarkstep_ffeccedc function;
+    class scripts_zolu_learn_server_broadcaststate_876623e8 function;
+    class ecosystem_config_803395df function;
+    class learning_scripts_grow_neurons_grow_neural_mesh_124978b0 function;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -4184,112 +4427,8 @@ flowchart LR
   <td>No direct outbound edge</td>
   <td>Documentation node describing Neuron N050: Systematic Backtesting Engine &amp; Walk-Forward Optimization (WFA / CPCV / DSR).</td>
 </tr>
-</table>
-
-<div class="grid">
-  <div class="card">
-    <h4>Key Files</h4>
-    <table style="width:100%;font-size:0.85rem;">
-      <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>learning/neurons/N050_systematic_backtesting_wfa.md</code></td><td>18 nodes</td></tr>
-    </table>
-  </div>
-  <div class="card">
-    <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x17. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
-  </div>
-</div>
-<hr>
-
-<!-- ====== 16. Other ====== -->
-<h2 id="other">16. Other</h2>
-<p>Other groups implementation around learning, neurons, scripts, gold, mostly in scripts/zolu_learn_server.js, learning/neurons/N045_volatility_options_greeks.md, learning/neurons/N041_macro_gold_intermarket.md. This section covers 296 nodes and 257 internal edges; the diagram shows only representative relationships to stay readable.</p>
-
-<div class="mermaid">
-%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
-flowchart LR
-    %% Section: Other (296 nodes, 257 edges)
-    subgraph other_scripts_train_trading_engine_py_11e67fc6["scripts/train_trading_engine.py"]
-        scripts_train_trading_engine_train_and_synthesiz_daac8636("and synthesize neuron()<br/><small>scripts/train_trading_engine.py</small>")
-        scripts_train_trading_engine_fetch_binance_kline_d42e122f("fetch_binance_klines()<br/><small>scripts/train_trading_engine.py</small>")
-        scripts_train_trading_engine_calculate_ema_e9e4f150("calculate_ema()<br/><small>scripts/train_trading_engine.py</small>")
-        scripts_train_trading_engine_calculate_rsi_791aba17("calculate_rsi()<br/><small>scripts/train_trading_engine.py</small>")
-        scripts_train_trading_engine_calculate_atr_b5014e19("calculate_atr()<br/><small>scripts/train_trading_engine.py</small>")
-        scripts_train_trading_engine_detect_smc_fair_val_25a7d8da("detect_smc_fair_value_gaps()<br/><small>scripts/train_trading_engine.py</small>")
-    end
-    subgraph other_scripts_masterpiece_completer_py_c54b059e["scripts/masterpiece_completer.py"]
-        scripts_masterpiece_completer_main_7d166087("main()<br/><small>scripts/masterpiece_completer.py</small>")
-        scripts_masterpiece_completer_fetch_tmdb_poster_f35f627d("fetch_tmdb_poster()<br/><small>scripts/masterpiece_completer.py</small>")
-        scripts_masterpiece_completer_search_apibay_09c31864("search_apibay()<br/><small>scripts/masterpiece_completer.py</small>")
-    end
-    subgraph other_scripts_record_learning_py_aebcc6c8["scripts/record_learning.py"]
-        scripts_record_learning_main_6e954c2e("main()<br/><small>scripts/record_learning.py</small>")
-        scripts_record_learning_record_new_learning_a696848e("record_new_learning()<br/><small>scripts/record_learning.py</small>")
-        scripts_record_learning_slugify_f506ddc6("slugify()<br/><small>scripts/record_learning.py</small>")
-    end
-    subgraph other_scripts_auto_sync_github_py_b1a54535["scripts/auto_sync_github.py"]
-        scripts_auto_sync_github_auto_sync_3fc2238d("auto_sync()<br/><small>scripts/auto_sync_github.py</small>")
-        scripts_auto_sync_github_run_cmd_a02b4f49("run_cmd()<br/><small>scripts/auto_sync_github.py</small>")
-    end
-    subgraph other_scripts_zolu_learn_server_js_cae5a31a["scripts/zolu_learn_server.js"]
-        scripts_zolu_learn_server_runrealbenchmarkstep_ffeccedc("runRealBenchmarkStep()<br/><small>scripts/zolu_learn_server.js</small>")
-        scripts_zolu_learn_server_broadcaststate_876623e8("broadcastState()<br/><small>scripts/zolu_learn_server.js</small>")
-    end
-    ecosystem_config_803395df("ecosystem.config.cjs")
-    learning_scripts_grow_neurons_grow_neural_mesh_124978b0("grow_neural_mesh()<br/><small>learning/scripts/grow_neurons.py</small>")
-    scripts_zolu_learn_server_runrealbenchmarkstep_ffeccedc -->|calls| scripts_zolu_learn_server_broadcaststate_876623e8
-    scripts_train_trading_engine_train_and_synthesiz_daac8636 -->|calls| scripts_train_trading_engine_fetch_binance_kline_d42e122f
-    scripts_train_trading_engine_train_and_synthesiz_daac8636 -->|calls| scripts_train_trading_engine_calculate_ema_e9e4f150
-    scripts_train_trading_engine_train_and_synthesiz_daac8636 -->|calls| scripts_train_trading_engine_calculate_rsi_791aba17
-    scripts_train_trading_engine_train_and_synthesiz_daac8636 -->|calls| scripts_train_trading_engine_calculate_atr_b5014e19
-    scripts_train_trading_engine_train_and_synthesiz_daac8636 -->|calls| scripts_train_trading_engine_detect_smc_fair_val_25a7d8da
-    scripts_masterpiece_completer_main_7d166087 -->|calls| scripts_masterpiece_completer_fetch_tmdb_poster_f35f627d
-    scripts_masterpiece_completer_main_7d166087 -->|calls| scripts_masterpiece_completer_search_apibay_09c31864
-    scripts_record_learning_main_6e954c2e -->|calls| scripts_record_learning_record_new_learning_a696848e
-    scripts_record_learning_record_new_learning_a696848e -->|calls| scripts_record_learning_slugify_f506ddc6
-    scripts_auto_sync_github_auto_sync_3fc2238d -->|calls| scripts_auto_sync_github_run_cmd_a02b4f49
-    %% Omitted for readability: 278 nodes, 0 edges
-    class scripts_train_trading_engine_train_and_synthesiz_daac8636 function;
-    class scripts_train_trading_engine_fetch_binance_kline_d42e122f function;
-    class scripts_train_trading_engine_calculate_ema_e9e4f150 function;
-    class scripts_train_trading_engine_calculate_rsi_791aba17 function;
-    class scripts_train_trading_engine_calculate_atr_b5014e19 function;
-    class scripts_train_trading_engine_detect_smc_fair_val_25a7d8da function;
-    class scripts_masterpiece_completer_main_7d166087 function;
-    class scripts_masterpiece_completer_fetch_tmdb_poster_f35f627d function;
-    class scripts_masterpiece_completer_search_apibay_09c31864 api;
-    class scripts_record_learning_main_6e954c2e function;
-    class scripts_record_learning_record_new_learning_a696848e function;
-    class scripts_record_learning_slugify_f506ddc6 function;
-    class scripts_auto_sync_github_auto_sync_3fc2238d function;
-    class scripts_auto_sync_github_run_cmd_a02b4f49 function;
-    class scripts_zolu_learn_server_runrealbenchmarkstep_ffeccedc function;
-    class scripts_zolu_learn_server_broadcaststate_876623e8 function;
-    class ecosystem_config_803395df function;
-    class learning_scripts_grow_neurons_grow_neural_mesh_124978b0 function;
-    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
-    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
-    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
-    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
-    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
-    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
-    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
-    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
-    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
-</div>
-
-<h3>Call Details</h3>
-<table class="call-table">
 <tr>
-  <th style="width:5%">#</th>
-  <th style="width:28%">Node</th>
-  <th style="width:10%">Type</th>
-  <th style="width:17%">Caller</th>
-  <th style="width:20%">Callees</th>
-  <th style="width:20%">Description</th>
-</tr>
-<tr>
-  <td>1</td>
+  <td>19</td>
   <td><code>broadcastState()</code><br><small style="color:var(--muted)">scripts/zolu_learn_server.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>runRealBenchmarkStep()</code><br><small style="color:var(--muted)">scripts/zolu_learn_server.js</small></td>
@@ -4297,7 +4436,7 @@ flowchart LR
   <td>broadcastState() node in scripts/zolu_learn_server.js.</td>
 </tr>
 <tr>
-  <td>2</td>
+  <td>20</td>
   <td><code>cleanupAndExit()</code><br><small style="color:var(--muted)">scripts/zolu_learn_server.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -4305,7 +4444,7 @@ flowchart LR
   <td>cleanupAndExit() node in scripts/zolu_learn_server.js.</td>
 </tr>
 <tr>
-  <td>3</td>
+  <td>21</td>
   <td><code>getState()</code><br><small style="color:var(--muted)">scripts/zolu_learn_server.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -4313,7 +4452,7 @@ flowchart LR
   <td>getState() node in scripts/zolu_learn_server.js.</td>
 </tr>
 <tr>
-  <td>4</td>
+  <td>22</td>
   <td><code>runRealBenchmarkStep()</code><br><small style="color:var(--muted)">scripts/zolu_learn_server.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>zolu_learn_server.js</code><br><small style="color:var(--muted)">scripts/zolu_learn_server.js</small></td>
@@ -4321,7 +4460,7 @@ flowchart LR
   <td>runRealBenchmarkStep() node in scripts/zolu_learn_server.js.</td>
 </tr>
 <tr>
-  <td>5</td>
+  <td>23</td>
   <td><code>updateQuantMarketData()</code><br><small style="color:var(--muted)">scripts/zolu_learn_server.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>zolu_learn_server.js</code><br><small style="color:var(--muted)">scripts/zolu_learn_server.js</small></td>
@@ -4329,7 +4468,7 @@ flowchart LR
   <td>updateQuantMarketData() node in scripts/zolu_learn_server.js.</td>
 </tr>
 <tr>
-  <td>6</td>
+  <td>24</td>
   <td><code>zolu_learn_server.js</code><br><small style="color:var(--muted)">scripts/zolu_learn_server.js</small></td>
   <td><span class="tag tag-class">Module</span></td>
   <td>External entry / no inbound edge</td>
@@ -4337,7 +4476,7 @@ flowchart LR
   <td>zolu_learn_server.js node in scripts/zolu_learn_server.js.</td>
 </tr>
 <tr>
-  <td>7</td>
+  <td>25</td>
   <td><code>app</code><br><small style="color:var(--muted)">scripts/zolu_learn_server.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -4345,7 +4484,7 @@ flowchart LR
   <td>app node in scripts/zolu_learn_server.js.</td>
 </tr>
 <tr>
-  <td>8</td>
+  <td>26</td>
   <td><code>clients</code><br><small style="color:var(--muted)">scripts/zolu_learn_server.js</small></td>
   <td><span class="tag tag-cmd">Entry</span></td>
   <td>External entry / no inbound edge</td>
@@ -4353,7 +4492,7 @@ flowchart LR
   <td>clients node in scripts/zolu_learn_server.js.</td>
 </tr>
 <tr>
-  <td>9</td>
+  <td>27</td>
   <td><code>cors</code><br><small style="color:var(--muted)">scripts/zolu_learn_server.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -4361,7 +4500,7 @@ flowchart LR
   <td>cors node in scripts/zolu_learn_server.js.</td>
 </tr>
 <tr>
-  <td>10</td>
+  <td>28</td>
   <td><code>{ exec }</code><br><small style="color:var(--muted)">scripts/zolu_learn_server.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -4369,7 +4508,7 @@ flowchart LR
   <td>{ exec } node in scripts/zolu_learn_server.js.</td>
 </tr>
 <tr>
-  <td>11</td>
+  <td>29</td>
   <td><code>express</code><br><small style="color:var(--muted)">scripts/zolu_learn_server.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -4377,156 +4516,12 @@ flowchart LR
   <td>express node in scripts/zolu_learn_server.js.</td>
 </tr>
 <tr>
-  <td>12</td>
+  <td>30</td>
   <td><code>fs</code><br><small style="color:var(--muted)">scripts/zolu_learn_server.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
   <td>fs node in scripts/zolu_learn_server.js.</td>
-</tr>
-<tr>
-  <td>13</td>
-  <td><code>https</code><br><small style="color:var(--muted)">scripts/zolu_learn_server.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>https node in scripts/zolu_learn_server.js.</td>
-</tr>
-<tr>
-  <td>14</td>
-  <td><code>intervalTimer</code><br><small style="color:var(--muted)">scripts/zolu_learn_server.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>intervalTimer node in scripts/zolu_learn_server.js.</td>
-</tr>
-<tr>
-  <td>15</td>
-  <td><code>path</code><br><small style="color:var(--muted)">scripts/zolu_learn_server.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>path node in scripts/zolu_learn_server.js.</td>
-</tr>
-<tr>
-  <td>16</td>
-  <td><code>quantData</code><br><small style="color:var(--muted)">scripts/zolu_learn_server.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>quantData node in scripts/zolu_learn_server.js.</td>
-</tr>
-<tr>
-  <td>17</td>
-  <td><code>server</code><br><small style="color:var(--muted)">scripts/zolu_learn_server.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>server node in scripts/zolu_learn_server.js.</td>
-</tr>
-<tr>
-  <td>18</td>
-  <td><code>STATE_FILE</code><br><small style="color:var(--muted)">scripts/zolu_learn_server.js</small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>STATE_FILE node in scripts/zolu_learn_server.js.</td>
-</tr>
-<tr>
-  <td>19</td>
-  <td><code>N045_volatility_options_greeks.md</code><br><small style="color:var(--muted)">learning/neurons/N045_volatility_options_greeks.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing N045_volatility_options_greeks.md.</td>
-</tr>
-<tr>
-  <td>20</td>
-  <td><code>1. GARCH(1,1) Volatility Forecasting &amp; Term Structure Engine</code><br><small style="color:var(--muted)">learning/neurons/N045_volatility_options_greeks.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 1. GARCH(1,1) Volatility Forecasting &amp; Term Structure Engine.</td>
-</tr>
-<tr>
-  <td>21</td>
-  <td><code>2. Black-Scholes-Merton (BSM) Analytical Pricing &amp; Put-Call Parity</code><br><small style="color:var(--muted)">learning/neurons/N045_volatility_options_greeks.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 2. Black-Scholes-Merton (BSM) Analytical Pricing &amp; Put-Call Parity.</td>
-</tr>
-<tr>
-  <td>22</td>
-  <td><code>3. Complete Analytical Greeks &amp; Risk Sensitivities</code><br><small style="color:var(--muted)">learning/neurons/N045_volatility_options_greeks.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 3. Complete Analytical Greeks &amp; Risk Sensitivities.</td>
-</tr>
-<tr>
-  <td>23</td>
-  <td><code>4. Implied Volatility Surface &amp; Robust Hybrid Inversion</code><br><small style="color:var(--muted)">learning/neurons/N045_volatility_options_greeks.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 4. Implied Volatility Surface &amp; Robust Hybrid Inversion.</td>
-</tr>
-<tr>
-  <td>24</td>
-  <td><code>5. 0-DTE Options Mechanics &amp; Net Gamma Exposure (GEX) Engine</code><br><small style="color:var(--muted)">learning/neurons/N045_volatility_options_greeks.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 5. 0-DTE Options Mechanics &amp; Net Gamma Exposure (GEX) Engine.</td>
-</tr>
-<tr>
-  <td>25</td>
-  <td><code>6. Pure Python 3.12+ Executable Implementation &amp; Self-Check</code><br><small style="color:var(--muted)">learning/neurons/N045_volatility_options_greeks.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 6. Pure Python 3.12+ Executable Implementation &amp; Self-Check.</td>
-</tr>
-<tr>
-  <td>26</td>
-  <td><code>7. Invariant Ringkas &amp; Disiplin Eksekusi</code><br><small style="color:var(--muted)">learning/neurons/N045_volatility_options_greeks.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 7. Invariant Ringkas &amp; Disiplin Eksekusi.</td>
-</tr>
-<tr>
-  <td>27</td>
-  <td><code>A. Algoritma Root-Finding Inversion (Hybrid NR-Bisection)</code><br><small style="color:var(--muted)">learning/neurons/N045_volatility_options_greeks.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing A. Algoritma Root-Finding Inversion (Hybrid NR-Bisection).</td>
-</tr>
-<tr>
-  <td>28</td>
-  <td><code>A. Continuous Risk-Neutral Valuation Framework</code><br><small style="color:var(--muted)">learning/neurons/N045_volatility_options_greeks.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing A. Continuous Risk-Neutral Valuation Framework.</td>
-</tr>
-<tr>
-  <td>29</td>
-  <td><code>A. Dynamic Heteroskedasticity &amp; Clustering Mechanics</code><br><small style="color:var(--muted)">learning/neurons/N045_volatility_options_greeks.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing A. Dynamic Heteroskedasticity &amp; Clustering Mechanics.</td>
-</tr>
-<tr>
-  <td>30</td>
-  <td><code>A. Karakteristik &amp; Dinamika Greeks</code><br><small style="color:var(--muted)">learning/neurons/N045_volatility_options_greeks.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing A. Karakteristik &amp; Dinamika Greeks.</td>
 </tr>
 </table>
 
@@ -4536,18 +4531,18 @@ flowchart LR
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
       <tr><td><code>learning/neurons/N045_volatility_options_greeks.md</code></td><td>18 nodes</td></tr>
+<tr><td><code>learning/neurons/N050_systematic_backtesting_wfa.md</code></td><td>18 nodes</td></tr>
 <tr><td><code>scripts/zolu_learn_server.js</code></td><td>18 nodes</td></tr>
 <tr><td><code>learning/neurons/N041_macro_gold_intermarket.md</code></td><td>17 nodes</td></tr>
 <tr><td><code>learning/neurons/N047_automated_risk_drawdown_guard.md</code></td><td>16 nodes</td></tr>
 <tr><td><code>learning/neurons/N043_derivatives_futures_microstructure.md</code></td><td>15 nodes</td></tr>
 <tr><td><code>learning/neurons/N048_defi_mev_protection.md</code></td><td>11 nodes</td></tr>
 <tr><td><code>learning/neurons/N025_hft_orderbook_microstructure.md</code></td><td>10 nodes</td></tr>
-<tr><td><code>ponytail/hooks/ponytail-activate.js</code></td><td>10 nodes</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x241, calls x11, indirect call x2, references x2. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x258, calls x11, indirect call x2, references x2. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -4558,17 +4553,17 @@ flowchart LR
   <div class="card">
     <h4>Graph</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>Nodes</td><td>1050</td></tr>
-      <tr><td>Edges</td><td>1080</td></tr>
+      <tr><td>Nodes</td><td>1094</td></tr>
+      <tr><td>Edges</td><td>1132</td></tr>
       <tr><td>Hyperedges</td><td>0</td></tr>
-      <tr><td>Communities</td><td>115</td></tr>
+      <tr><td>Communities</td><td>118</td></tr>
       <tr><td>Documented Sections</td><td>15</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Edge Confidence</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>EXTRACTED</td><td>1054</td></tr>
+      <tr><td>EXTRACTED</td><td>1106</td></tr>
       <tr><td>INFERRED</td><td>26</td></tr>
       <tr><td>AMBIGUOUS</td><td>0</td></tr>
     </table>
@@ -4577,7 +4572,7 @@ flowchart LR
 
 <div style="text-align:center; padding:40px 0; color: var(--muted); font-size:0.9rem;">
   <p>Agent_Claudia_Autonomus — Architecture Documentation</p>
-  <p>Generated: 2026-08-24 15:05 UTC · graphify callflow-html</p>
+  <p>Generated: 2026-08-24 15:07 UTC · graphify callflow-html</p>
 </div>
 
 </div><!-- .container -->

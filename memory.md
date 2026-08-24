@@ -5,6 +5,7 @@ Dokumen memori modular terdistribusi Claudia. Memori dipecah menjadi neuron-neur
 ---
 
 ## 🧠 Active Memory Neurons
+53. **[`N053_quantitative_marketing_growth_mastery.md`](file:///D:/Agent_Claudia_Autonomus/learning/neurons/N053_quantitative_marketing_growth_mastery.md)** — **Quantitative Marketing & AdTech**: Marketing Mix Modeling (Adstock & Hill Saturation), Causal Uplift Modeling, BG/NBD Customer Lifetime Value, Multi-Touch Attribution & Greedy Budget Allocator.
 1. **[`user_profile.md`](file:///D:/Agent_Claudia_Autonomus/memory/neurons/user_profile.md)** — Profil Muhammad Hanafi, tone komunikasi, credentials, & Ponytail + Graphify core.
 2. **[`ui_ux_design_rules.md`](file:///D:/Agent_Claudia_Autonomus/memory/neurons/ui_ux_design_rules.md)** — Standar default Light Mode, custom popover dropdown, eye password toggle, responsif mobile, dan **aturan ketat Max 300 baris kode per file**.
 3. **[`mojoloker_brand.md`](file:///D:/Agent_Claudia_Autonomus/memory/neurons/mojoloker_brand.md)** — Domain resmi `mojoloker.my.id`, logo Tugu tunggal putih, database 21 Kecamatan / 301 Desa, panduan UMK 2026, dan Glints safety gate.

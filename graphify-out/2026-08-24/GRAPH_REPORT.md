@@ -1,11 +1,11 @@
 # Graph Report - Agent_Claudia_Autonomus  (2026-08-24)
 
 ## Corpus Check
-- 151 files · ~169,176 words
+- 152 files · ~170,113 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1047 nodes · 1078 edges · 114 communities (93 shown, 21 thin omitted)
+- 1050 nodes · 1080 edges · 115 communities (93 shown, 22 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 26 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
@@ -116,6 +116,7 @@
 - ponytail-statusline.sh script
 - Neuron N051: Modern System Architecture, Resilience Engineering & Zero-Downtime DevOps Mastery
 - claudia_live_watchdog.py
+- Neuron N052: Institutional Gold Execution Checklist, Early-Warning Radar & 24/7 Autonomous Watchdog Daemon
 
 ## God Nodes (most connected - your core abstractions)
 1. `Install` - 15 edges
@@ -144,7 +145,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (114 total, 21 thin omitted)
+## Communities (115 total, 22 thin omitted)
 
 ### Community 0 - "Install"
 Cohesion: 0.04
@@ -483,17 +484,15 @@ Cohesion: 0.20
 Nodes (15): calculate_indicators(), fetch_klines(), inspect_and_heal_services(), log_event(), Compute EMA, RSI, ATR, and Fair Value Gaps (FVG)., Scan Gold (PAXGUSDT / XAU/USD) for A+ Institutional Setup with live checklist., Inspect all PM2 services and auto-heal anomalies., Send dedicated Gold (XAU/USD) position alert to Mas Hanafi. (+7 more)
 
 ## Knowledge Gaps
-- **611 isolated node(s):** `__dirname`, `require`, `{ getPonytailInstructions }`, `{ getDefaultMode, normalizePersistedMode }`, `{ parseCommandFile }` (+606 more)
+- **612 isolated node(s):** `__dirname`, `require`, `{ getPonytailInstructions }`, `{ getDefaultMode, normalizePersistedMode }`, `{ parseCommandFile }` (+607 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **21 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **22 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `getDefaultMode()` connect `ponytail.mjs` to `index.js`, `ponytail-activate.js`, `ponytail-runtime.js`, `ponytail-config.js`?**
-  _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **What connects `__dirname`, `require`, `{ getPonytailInstructions }` to the rest of the system?**
-  _611 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _612 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Install` be split into smaller, more focused modules?**
   _Cohesion score 0.044444444444444446 - nodes in this community are weakly interconnected._
 - **Should `N022_multi_agent_consensus.md` be split into smaller, more focused modules?**
@@ -504,3 +503,5 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.07407407407407407 - nodes in this community are weakly interconnected._
 - **Should `MultiHopEngine` be split into smaller, more focused modules?**
   _Cohesion score 0.10153846153846154 - nodes in this community are weakly interconnected._
+- **Should `Neuron N035: Ultra-Scale Event-Driven Streaming & CQRS Architecture` be split into smaller, more focused modules?**
+  _Cohesion score 0.09090909090909091 - nodes in this community are weakly interconnected._
