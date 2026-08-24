@@ -6,7 +6,7 @@ html = """<!DOCTYPE html>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <title>Claudia 5.0 Max — Autonomous Neural Synapse Mesh</title>
+  <title>Claudia 5.0 Max — 50 Master Neurons Autonomous Neural Mesh</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,7 +59,6 @@ html = """<!DOCTYPE html>
       animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     }
     
-    /* ANTI-SCREENSHOT & ANTI-PRINT DRM SHIELD */
     @media print {
       html, body, canvas, div, header, main {
         display: none !important;
@@ -77,85 +76,74 @@ html = """<!DOCTYPE html>
       z-index: 5;
       background: repeating-linear-gradient(
         45deg,
-        rgba(255, 255, 255, 0.006) 0px,
-        rgba(255, 255, 255, 0.006) 100px,
-        rgba(139, 92, 246, 0.012) 100px,
-        rgba(139, 92, 246, 0.012) 200px
+        rgba(255, 255, 255, 0.005) 0px,
+        rgba(255, 255, 255, 0.005) 100px,
+        rgba(139, 92, 246, 0.01) 100px,
+        rgba(139, 92, 246, 0.01) 200px
       );
     }
   </style>
 </head>
 <body id="appBody" class="relative flex items-center justify-center select-none" oncontextmenu="return false;" onselectstart="return false;" ondragstart="return false;">
 
-  <!-- Security Dynamic Watermark Texture -->
   <div class="watermark-overlay"></div>
-
-  <!-- Interactive Neural Canvas -->
   <canvas id="neuralCanvas"></canvas>
 
-  <!-- Floating Header HUD -->
   <header class="absolute top-6 left-6 right-6 z-10 flex items-center justify-between pointer-events-none">
     <div class="glass-card px-5 py-3.5 rounded-2xl flex items-center gap-3.5 pointer-events-auto border border-purple-500/20">
-      <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-purple-600 via-indigo-500 to-emerald-400 flex items-center justify-center shadow-lg shadow-purple-500/30">
+      <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-purple-600 via-indigo-500 to-amber-400 flex items-center justify-center shadow-lg shadow-purple-500/30">
         <i class="fa-solid fa-brain text-white text-xl"></i>
       </div>
       <div>
         <div class="flex items-center gap-2">
           <h1 class="font-extrabold text-base tracking-tight text-white">Claudia 5.0 Max</h1>
-          <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 font-mono font-bold border border-emerald-500/30">Read-Only Shield</span>
+          <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 font-mono font-bold border border-emerald-500/30">50 Master Neurons</span>
         </div>
-        <p class="text-[11px] text-slate-400 font-medium">Gahar Inovasi Teknologi &bull; 40 Master Neurons &bull; Protected IP</p>
+        <p class="text-[11px] text-slate-400 font-medium">Gahar Inovasi Teknologi &bull; Autonomous Engineer & Hedge Fund Quant</p>
       </div>
     </div>
 
-    <!-- Live Telemetry Status Pills -->
     <div class="flex items-center gap-3 pointer-events-auto">
       <div class="glass-card px-3.5 py-2 rounded-xl flex items-center gap-2 text-xs font-mono text-emerald-400 border border-emerald-500/20">
         <i class="fa-solid fa-shield-halved"></i>
-        <span>DRM Guard: <strong class="text-white">Active</strong></span>
+        <span>DRM Shield: <strong class="text-white">Active</strong></span>
       </div>
       <div class="glass-card px-4 py-2.5 rounded-xl flex items-center gap-2.5 text-xs font-mono text-slate-300">
         <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 pulse-indicator"></span>
-        <span>Throughput: <strong class="text-emerald-400" id="firing-rate">248 Hz</strong></span>
+        <span>Cognitive Rate: <strong class="text-emerald-400" id="firing-rate">284 Hz</strong></span>
       </div>
       <div class="glass-card px-4 py-2.5 rounded-xl flex items-center gap-2.5 text-xs font-mono text-slate-300">
         <i class="fa-solid fa-bolt text-amber-400"></i>
-        <span>Synapses: <strong class="text-amber-300">168 Pathways</strong></span>
+        <span>Synapses: <strong class="text-amber-300">210 Active Pathways</strong></span>
       </div>
     </div>
   </header>
 
-  <!-- Neuron Detail Inspector Modal (Bottom Right) -->
   <div id="inspector" class="absolute bottom-6 right-6 w-96 glass-card p-5 rounded-2xl z-10 border border-indigo-500/20 transition-all duration-300 transform translate-y-2 opacity-95">
     <div class="flex items-center justify-between mb-2">
-      <span class="text-xs font-mono font-bold text-indigo-400 px-2 py-0.5 rounded bg-indigo-500/10 border border-indigo-500/20" id="inspect-id">N040</span>
+      <span class="text-xs font-mono font-bold text-amber-400 px-2 py-0.5 rounded bg-amber-500/10 border border-amber-500/20" id="inspect-id">N050</span>
       <span class="text-[11px] font-mono text-emerald-400 flex items-center gap-1.5">
         <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Synapse Online
       </span>
     </div>
-    <h3 class="font-bold text-sm text-white mb-1.5 tracking-tight" id="inspect-title">Meta-Cognitive Self-Reflection</h3>
-    <p class="text-xs text-slate-400 leading-relaxed mb-3" id="inspect-desc">Reflexion loop, epistemic certainty evaluation, zero-hallucination guardrails & recursive reasoning.</p>
+    <h3 class="font-bold text-sm text-white mb-1.5 tracking-tight" id="inspect-title">Systematic Backtesting & WFA</h3>
+    <p class="text-xs text-slate-400 leading-relaxed mb-3" id="inspect-desc">Combinatorial Purged Cross-Validation (CPCV), Walk-Forward Optimization, and Deflated Sharpe Ratio (DSR) anti-overfitting.</p>
     <div class="pt-2.5 border-t border-slate-800 flex items-center justify-between text-[11px] font-mono text-slate-500">
       <span>Connected Synapses: <strong class="text-slate-300" id="inspect-conns">8 nodes</strong></span>
       <span class="text-purple-400">Hover / Drag node</span>
     </div>
   </div>
 
-  <!-- Live Pulse Log Overlay (Bottom Left) -->
   <div class="absolute bottom-6 left-6 z-10 glass-card px-4 py-3 rounded-2xl pointer-events-none border border-slate-800 max-w-sm hidden md:block">
-    <div class="text-[10px] uppercase font-mono tracking-wider text-slate-500 mb-1">Neuron Cognitive Stream</div>
+    <div class="text-[10px] uppercase font-mono tracking-wider text-slate-500 mb-1">Cognitive Quant Stream</div>
     <div class="text-xs font-mono text-emerald-400 truncate flex items-center gap-2" id="feed-line">
       <i class="fa-solid fa-wave-square text-emerald-400 text-xs"></i>
-      <span>Claudia 5.0 Max: 40 Master Neurons active</span>
+      <span>Claudia 5.0 Max: 50 Master Neurons operational</span>
     </div>
   </div>
 
   <script>
-    // ==========================================
-    // 🛡️ ENTERPRISE CLIENT-SIDE DEFENSE SHIELD
-    // ==========================================
     (function initSecurityShield() {
-      // 1. Disable Console Scraping & Override methods
       try {
         const noop = function() {};
         ['log', 'debug', 'info', 'warn', 'error', 'table', 'trace', 'dir'].forEach(fn => {
@@ -163,14 +151,12 @@ html = """<!DOCTYPE html>
         });
       } catch (e) {}
 
-      // 2. Prevent Context Menu (Right Click)
       document.addEventListener('contextmenu', function(e) {
         e.preventDefault();
         e.stopPropagation();
         return false;
       }, { capture: true });
 
-      // 3. Prevent Copy, Cut, Paste, Selection, Drag
       ['copy', 'cut', 'paste', 'selectstart', 'dragstart'].forEach(evt => {
         document.addEventListener(evt, function(e) {
           e.preventDefault();
@@ -179,27 +165,22 @@ html = """<!DOCTYPE html>
         }, { capture: true });
       });
 
-      // 4. Block Keyboard Shortcuts (F12, DevTools, View Source, Print, Save, Screen Capture)
       document.addEventListener('keydown', function(e) {
-        // F12 or PrintScreen
         if (e.keyCode === 123 || e.key === 'PrintScreen' || e.keyCode === 44) {
           e.preventDefault();
           triggerSecurityBlur();
           return false;
         }
-        // Ctrl/Cmd + Shift + (I, J, C, K) [DevTools]
         if ((e.ctrlKey || e.metaKey) && e.shiftKey && ['I','i','J','j','C','c','K','k'].includes(e.key)) {
           e.preventDefault();
           return false;
         }
-        // Ctrl/Cmd + (U, S, P, A, C, X) [View Source, Save, Print, SelectAll, Copy, Cut]
         if ((e.ctrlKey || e.metaKey) && ['u','U','s','S','p','P','a','A','c','C','x','X'].includes(e.key)) {
           e.preventDefault();
           return false;
         }
       }, { capture: true });
 
-      // 5. Anti-Screenshot & Tab Switch Blur Shield
       function triggerSecurityBlur() {
         const body = document.getElementById('appBody');
         if (body) {
@@ -236,9 +217,6 @@ html = """<!DOCTYPE html>
       });
     })();
 
-    // ==========================================
-    // 🧠 INTERACTIVE NEURAL SYNAPSE CANVAS
-    // ==========================================
     const canvas = document.getElementById('neuralCanvas');
     const ctx = canvas.getContext('2d');
 
@@ -250,7 +228,7 @@ html = """<!DOCTYPE html>
     window.addEventListener('resize', resize);
     resize();
 
-    // 40 Active Master Neurons Data
+    // 50 Active Master Neurons Data
     const neuronsData = [
       { id: "N001", label: "Executive Decisions", category: "Core", desc: "Keputusan teknis cepat tanpa keraguan, root-cause first.", conns: ["N004", "N007", "N022"] },
       { id: "N002", label: "VPS Remote Ops", category: "Infra", desc: "SSH tunneling otomatis, supervisi PM2, isolasi port & deploy.", conns: ["N004", "N006", "N008", "N028", "N032"] },
@@ -272,11 +250,11 @@ html = """<!DOCTYPE html>
       { id: "N018", label: "RepoMap AST SWE-bench", category: "Eval", desc: "PageRank AST callgraph, root-cause patch precision.", conns: ["N012", "N015", "N016", "N023"] },
       { id: "N019", label: "BFCL Tool Schema Oracle", category: "Eval", desc: "Negative constraint checking, compensating rollback.", conns: ["N006", "N014", "N016", "N022"] },
       { id: "N020", label: "Session Continuity", category: "State", desc: "Multi-IDE state synchronization & connection resilience.", conns: ["N008", "N016", "N019"] },
-      { id: "N021", label: "Quantitative Gold & Crypto", category: "Finance", desc: "Invarian trading XAU/USD & Kripto, SMC/FVG, ATR RRR 1:3.", conns: ["N001", "N009", "N010", "N016", "N025"] },
+      { id: "N021", label: "Quantitative Gold & Crypto", category: "Finance", desc: "Invarian trading XAU/USD & Kripto, SMC/FVG, ATR RRR 1:3.", conns: ["N001", "N009", "N010", "N016", "N025", "N041"] },
       { id: "N022", label: "Multi-Agent Consensus", category: "Swarm", desc: "MCTS swarm deliberation, voting DAG, Byzantine Fault Tolerance.", conns: ["N001", "N010", "N016", "N019", "N028"] },
       { id: "N023", label: "Zero-Day Kernel Defense", category: "Security", desc: "Shadow Stack CFI, eBPF telemetry, buffer overrun protection.", conns: ["N014", "N018", "N028", "N038"] },
       { id: "N024", label: "Post-Quantum Cryptography", category: "Security", desc: "NIST FIPS 203/204 ML-KEM/ML-DSA, Lattice Ring arithmetic.", conns: ["N006", "N014", "N017"] },
-      { id: "N025", label: "HFT Orderbook Microstructure", category: "Finance", desc: "L2/L3 orderbook delta, Stoikov micro-price, Kelly criterion.", conns: ["N009", "N017", "N021", "N027"] },
+      { id: "N025", label: "HFT Orderbook Microstructure", category: "Finance", desc: "L2/L3 orderbook delta, Stoikov micro-price, Kelly criterion.", conns: ["N009", "N017", "N021", "N027", "N043", "N046"] },
       { id: "N026", label: "Vision-DOM Geometry AST", category: "Multimodal", desc: "Pixel-to-DOM layout tree, viewport coordinate bounds, OCR alignment.", conns: ["N003", "N005", "N012", "N036"] },
       { id: "N027", label: "Tensor SIMD Vectorization", category: "Perf", desc: "512-bit AVX-512 FMA registers, 64-byte cache alignment, SoA.", conns: ["N004", "N011", "N015", "N025"] },
       { id: "N028", label: "Autonomous Self-Healing", category: "Infra", desc: "Level-triggered state reconciliation, adaptive failure detection.", conns: ["N002", "N007", "N008", "N010", "N016", "N022", "N023"] },
@@ -291,25 +269,35 @@ html = """<!DOCTYPE html>
       { id: "N037", label: "WASM & Micro-VM Sandboxing", category: "Virtualization", desc: "Firecracker Micro-VMs, Wasmtime, V8 isolates, zero-trust plugin runtime.", conns: ["N006", "N023", "N029", "N032"] },
       { id: "N038", label: "Red Team & Auto-CVE Patching", category: "Security", desc: "OWASP Top 10 fuzzing, SAST/DAST AST analysis, automated vulnerability remediation.", conns: ["N014", "N023", "N034"] },
       { id: "N039", label: "WebRTC & Media DSP Streaming", category: "Media", desc: "Ultra-low latency <100ms, SFU mesh, Opus/AV1 hardware transcoding, jitter buffer.", conns: ["N011", "N027", "N030"] },
-      { id: "N040", label: "Meta-Cognitive Self-Reflection", category: "Reasoning", desc: "Reflexion loop, Tree-of-Thoughts / MCTS meta-prompting, zero-hallucination.", conns: ["N001", "N007", "N016", "N022"] }
+      { id: "N040", label: "Meta-Cognitive Self-Reflection", category: "Reasoning", desc: "Reflexion loop, Tree-of-Thoughts / MCTS meta-prompting, zero-hallucination.", conns: ["N001", "N007", "N016", "N022"] },
+      { id: "N041", label: "Macro Gold & Intermarket", category: "Quant", desc: "TIPS Real Yields, DXY regression, FOMC interest rate path, CFTC COT flows.", conns: ["N021", "N044", "N049"] },
+      { id: "N042", label: "Crypto On-Chain Forensics", category: "Quant", desc: "Whale wallet clusters, CEX NetFlows, MVRV-Z, SOPR, NVT, SSR, mempool MEV.", conns: ["N021", "N025", "N048"] },
+      { id: "N043", label: "Derivatives & Futures Microstructure", category: "Quant", desc: "Funding rate arbitrage, Liquidation heatmaps, Open Interest divergence, Cash-and-carry.", conns: ["N025", "N045", "N047"] },
+      { id: "N044", label: "StatArb & Cointegration Pairs", category: "Quant", desc: "Engle-Granger & Johansen tests, Ornstein-Uhlenbeck SDE, Kalman Filter hedge ratio.", conns: ["N009", "N041", "N046"] },
+      { id: "N045", label: "Volatility & Options Greeks", category: "Quant", desc: "GARCH(1,1), Black-Scholes-Merton, Greeks (Delta, Gamma, Vega, Theta), 0-DTE GEX.", conns: ["N009", "N017", "N043"] },
+      { id: "N046", label: "Algorithmic Execution SOR", category: "Quant", desc: "TWAP, VWAP, POV, Almgren-Chriss optimal liquidation, Iceberg detection, Smart Order Routing.", conns: ["N025", "N027", "N047"] },
+      { id: "N047", label: "Automated Risk & Kill-Switch", category: "Quant", desc: "Parametric VaR 99%, Expected Shortfall CVaR, Trailing Drawdown Circuit Breaker, Hard Kill-Switch.", conns: ["N001", "N021", "N025", "N046"] },
+      { id: "N048", label: "DeFi Liquidity & MEV Protection", category: "Quant", desc: "Uniswap v3 concentrated liquidity math, Impermanent loss, Flash loans, Sandwich attack shield.", conns: ["N014", "N025", "N042"] },
+      { id: "N049", label: "Financial Sentiment News NLP", category: "Quant", desc: "Sub-second FOMC/CPI/NFP parsing, Hawkish/Dovish token classifier, SEC/CFTC filings.", conns: ["N012", "N040", "N041"] },
+      { id: "N050", label: "Systematic Backtesting & WFA", category: "Quant", desc: "Combinatorial Purged Cross-Validation (CPCV), Walk-Forward Optimization, Deflated Sharpe DSR.", conns: ["N016", "N044", "N046", "N047"] }
     ];
 
     const nodes = [];
     const centerX = width / 2;
     const centerY = height / 2;
-    const radiusBase = Math.min(width, height) * 0.40;
+    const radiusBase = Math.min(width, height) * 0.41;
 
     neuronsData.forEach((data, i) => {
-      const angle = (i / neuronsData.length) * Math.PI * 2 + (Math.random() * 0.1);
-      const r = radiusBase * (0.45 + Math.random() * 0.6);
+      const angle = (i / neuronsData.length) * Math.PI * 2 + (Math.random() * 0.08);
+      const r = radiusBase * (0.42 + Math.random() * 0.62);
       nodes.push({
         ...data,
         x: centerX + Math.cos(angle) * r,
         y: centerY + Math.sin(angle) * r,
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: (Math.random() - 0.5) * 0.3,
-        radius: 8 + Math.random() * 4,
-        baseRadius: 9,
+        vx: (Math.random() - 0.5) * 0.28,
+        vy: (Math.random() - 0.5) * 0.28,
+        radius: 7.5 + Math.random() * 3.5,
+        baseRadius: 8.5,
         pulse: Math.random() * Math.PI * 2,
         pulseSpeed: 0.02 + Math.random() * 0.03,
         glowIntensity: 0.6,
@@ -332,7 +320,7 @@ html = """<!DOCTYPE html>
             to: target,
             progress: 0,
             speed: 0.009 + Math.random() * 0.015,
-            color: Math.random() > 0.35 ? '#a855f7' : (Math.random() > 0.5 ? '#10b981' : '#38bdf8'),
+            color: Math.random() > 0.4 ? '#f59e0b' : (Math.random() > 0.5 ? '#10b981' : '#a855f7'),
             size: 2.5 + Math.random() * 2
           });
         }
@@ -394,14 +382,14 @@ html = """<!DOCTYPE html>
     function animate() {
       ctx.clearRect(0, 0, width, height);
 
-      const bgGrad = ctx.createRadialGradient(width/2, height/2, 50, width/2, height/2, width * 0.7);
-      bgGrad.addColorStop(0, 'rgba(124, 58, 237, 0.12)');
-      bgGrad.addColorStop(0.5, 'rgba(16, 185, 129, 0.05)');
+      const bgGrad = ctx.createRadialGradient(width/2, height/2, 50, width/2, height/2, width * 0.72);
+      bgGrad.addColorStop(0, 'rgba(124, 58, 237, 0.13)');
+      bgGrad.addColorStop(0.5, 'rgba(245, 158, 11, 0.05)');
       bgGrad.addColorStop(1, 'rgba(2, 4, 10, 0)');
       ctx.fillStyle = bgGrad;
       ctx.fillRect(0, 0, width, height);
 
-      if (Math.random() < 0.5) spawnSignal();
+      if (Math.random() < 0.55) spawnSignal();
 
       nodes.forEach(node => {
         if (node !== draggedNode) {
@@ -424,8 +412,8 @@ html = """<!DOCTYPE html>
 
               const isHighlighted = (source.isHovered || target.isHovered);
               ctx.strokeStyle = isHighlighted 
-                ? 'rgba(167, 139, 250, 0.8)' 
-                : 'rgba(99, 102, 241, 0.14)';
+                ? 'rgba(245, 158, 11, 0.85)' 
+                : 'rgba(99, 102, 241, 0.13)';
               ctx.lineWidth = isHighlighted ? 2.2 : 1;
               ctx.stroke();
             }
@@ -458,7 +446,7 @@ html = """<!DOCTYPE html>
         const currentRadius = (node.isHovered ? node.baseRadius * 1.5 : node.baseRadius) + pulseFactor;
 
         const auraGrad = ctx.createRadialGradient(node.x, node.y, 2, node.x, node.y, currentRadius * 3.2);
-        auraGrad.addColorStop(0, node.isHovered ? 'rgba(167, 139, 250, 0.95)' : 'rgba(124, 58, 237, 0.55)');
+        auraGrad.addColorStop(0, node.isHovered ? 'rgba(245, 158, 11, 0.95)' : 'rgba(124, 58, 237, 0.55)');
         auraGrad.addColorStop(1, 'rgba(124, 58, 237, 0)');
         ctx.fillStyle = auraGrad;
         ctx.beginPath();
@@ -468,7 +456,7 @@ html = """<!DOCTYPE html>
         ctx.beginPath();
         ctx.arc(node.x, node.y, currentRadius, 0, Math.PI * 2);
         const nid = parseInt(node.id.replace('N',''));
-        ctx.fillStyle = node.isHovered ? '#38bdf8' : (nid >= 34 ? '#f59e0b' : (nid >= 29 ? '#38bdf8' : (nid >= 22 ? '#10b981' : '#a855f7')));
+        ctx.fillStyle = node.isHovered ? '#38bdf8' : (nid >= 41 ? '#f59e0b' : (nid >= 29 ? '#38bdf8' : (nid >= 22 ? '#10b981' : '#a855f7')));
         ctx.shadowColor = node.isHovered ? '#38bdf8' : '#a855f7';
         ctx.shadowBlur = 16;
         ctx.fill();
@@ -486,12 +474,12 @@ html = """<!DOCTYPE html>
     animate();
 
     setInterval(() => {
-      const rate = 235 + Math.floor(Math.random() * 45);
+      const rate = 275 + Math.floor(Math.random() * 45);
       const el = document.getElementById('firing-rate');
       if (el) el.innerText = `${rate} Hz`;
     }, 1000);
 
-    updateInspector(nodeMap["N040"] || nodes[0]);
+    updateInspector(nodeMap["N050"] || nodes[0]);
   </script>
 </body>
 </html>
@@ -499,4 +487,4 @@ html = """<!DOCTYPE html>
 
 with open('scripts/learn_index.html', 'w', encoding='utf-8') as f:
     f.write(html)
-print("SUCCESS: 40-Neuron Synapse Canvas with Enterprise Anti-Screenshot & Copy Protection generated.")
+print("SUCCESS: 50-Neuron Synapse Canvas with Enterprise Anti-Screenshot & Copy Protection generated.")
