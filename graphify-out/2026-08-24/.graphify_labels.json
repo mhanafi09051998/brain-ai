@@ -113,5 +113,8 @@
   "111": "claudia_live_watchdog.py",
   "112": "check_live_gold.py",
   "113": "send_telegram_gold_report.py",
-  "114": "Neuron N052: Institutional Gold Execution Checklist, Early-Warning Radar & 24/7 Autonomous Watchdog Daemon"
+  "114": "Neuron N052: Institutional Gold Execution Checklist, Early-Warning Radar & 24/7 Autonomous Watchdog Daemon",
+  "115": "run_verification_tests",
+  "116": "==========================================",
+  "117": "register_n053.py"
 }
