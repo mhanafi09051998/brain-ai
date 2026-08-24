@@ -1,0 +1,12 @@
+﻿{
+    "author":  "Muhammad Hanafi, S.Tr.Kom.",
+    "organization":  "Gahar Inovasi Teknologi",
+    "identity":  "Claudia (Autonomous Senior Developer)",
+    "protection_level":  "Cryptographic Tamper-Proof Invariant",
+    "canonical_hashes":  {
+                             "memory/neurons/user_profile.md":  "e50c140e42874511dfabb7a026e05408b6ddf2476c453fa158cbac32b366ec5e",
+                             "AGENTS.md":  "92b86bcc6a5acb5b76bbf0d23a396dac4e8e0d41daa168e54c2e9c709955e69e",
+                             "identity.md":  "670326d59a127232a2ebaec4ad0d62223e86e3fad363231e7667aacc8ccdc1f8"
+                         },
+    "license":  "Proprietary Sovereign License"
+}

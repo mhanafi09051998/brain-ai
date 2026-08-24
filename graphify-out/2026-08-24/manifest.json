@@ -204,9 +204,9 @@
     "semantic_hash": ""
   },
   "AGENTS.md": {
-    "mtime": 1787500509.0769987,
-    "seen": 1787500557.0657544,
-    "ast_hash": "691e7def37e20272e45ad09de7aed57f",
+    "mtime": 1787568653.5788388,
+    "seen": 1787568664.3569508,
+    "ast_hash": "83433741f823601608749f2c2fd45509",
     "semantic_hash": ""
   },
   "identity.md": {
@@ -735,6 +735,12 @@
     "mtime": 1787568528.3602884,
     "seen": 1787568624.1775155,
     "ast_hash": "3395b443d949279c5c902baa479d7f0a",
+    "semantic_hash": ""
+  },
+  "scripts/record_learning.py": {
+    "mtime": 1787568645.4987898,
+    "seen": 1787568664.3569508,
+    "ast_hash": "bac8cb7db6c07367e0a49600acee26f7",
     "semantic_hash": ""
   }
 }

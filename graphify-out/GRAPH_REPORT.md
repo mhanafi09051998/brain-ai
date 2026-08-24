@@ -1,16 +1,16 @@
 # Graph Report - Agent_Claudia_Autonomus  (2026-08-24)
 
 ## Corpus Check
-- 111 files · ~76,841 words
+- 112 files · ~77,004 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 563 nodes · 607 edges · 81 communities (58 shown, 23 thin omitted)
+- 564 nodes · 609 edges · 81 communities (58 shown, 23 thin omitted)
 - Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 25 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ba498f47`
+- Built from commit: `34f2a450`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -148,8 +148,8 @@ Cohesion: 0.09
 Nodes (21): Antigravity CLI, Before / after, Claude Code, CodeWhale, Codex, Commands, Development, Devin CLI (+13 more)
 
 ### Community 6 - "test_brain.py"
-Cohesion: 0.52
-Nodes (6): run_all(), test_ide_bridges(), test_knowledge_graph(), test_memory_layer(), test_neuron_network(), test_security_and_secrets()
+Cohesion: 0.46
+Nodes (7): run_all(), test_ide_bridges(), test_identity_tamper_lock(), test_knowledge_graph(), test_memory_layer(), test_neuron_network(), test_security_and_secrets()
 
 ### Community 7 - "Ponytail"
 Cohesion: 0.22

@@ -84,6 +84,30 @@ def test_ide_bridges():
         assert os.path.exists(p), f"Missing IDE bridge file: {f}"
     print("  [✓] Universal IDE Bridges: Cursor, Windsurf, Copilot, and Claude rules verified.")
 
+def test_identity_tamper_lock():
+    sig_path = os.path.join(WORKSPACE, ".identity_signature.json")
+    assert os.path.exists(sig_path), "TAMPER ALERT: Missing .identity_signature.json!"
+    with open(sig_path, "r", encoding="utf-8-sig") as f:
+        sig_data = json.load(f)
+    
+    assert "Muhammad Hanafi" in sig_data.get("author", ""), "TAMPER ALERT: Invalid author attribution in signature!"
+    assert "Gahar Inovasi Teknologi" in sig_data.get("organization", ""), "TAMPER ALERT: Invalid organization in signature!"
+    
+    # Verify immutable attribution keywords in files
+    user_prof = os.path.join(WORKSPACE, "memory", "neurons", "user_profile.md")
+    assert os.path.exists(user_prof), "Missing memory/neurons/user_profile.md"
+    with open(user_prof, "r", encoding="utf-8-sig") as f:
+        up_text = f.read()
+    assert "Muhammad Hanafi" in up_text and "mhanafi09051998" in up_text, "TAMPER ALERT: Unauthorized modification in user_profile.md!"
+    
+    agents_md = os.path.join(WORKSPACE, "AGENTS.md")
+    assert os.path.exists(agents_md), "Missing AGENTS.md"
+    with open(agents_md, "r", encoding="utf-8-sig") as f:
+        ag_text = f.read()
+    assert "Gahar Inovasi Teknologi" in ag_text, "TAMPER ALERT: Unauthorized modification of proprietary license in AGENTS.md!"
+
+    print("  [✓] Cryptographic Identity Lock: Author & Proprietary Attribution tamper-free.")
+
 def run_all():
     print("🧠 [CLAUDIA PRE-FLIGHT BRAIN INTEGRITY CHECK]")
     try:
@@ -92,6 +116,7 @@ def run_all():
         test_knowledge_graph()
         test_security_and_secrets()
         test_ide_bridges()
+        test_identity_tamper_lock()
         print("\n✨ ALL SYSTEMS NOMINAL: Autonomous Brain is 100% healthy and ready.\n")
         return 0
     except AssertionError as e:
