@@ -173,7 +173,7 @@ def calculate_indicators(candles):
     }
 
 def scan_gold_market():
-    """Scan Gold (PAXGUSDT / XAU/USD) for A+ Institutional Setup."""
+    """Scan Gold (PAXGUSDT / XAU/USD) for A+ Institutional Setup with live checklist."""
     symbol = "PAXGUSDT"
     label = "Emas (XAU/USD)"
     candles = fetch_klines(symbol, interval="15m", limit=60)
@@ -190,8 +190,9 @@ def scan_gold_market():
     ema20 = ind["ema20"]
     ema50 = ind["ema50"]
     now_ts = time.time()
+    now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     
-    # 5 Conditions Scoring
+    # 5 Conditions Verification
     trend_bull = ema20 > ema50
     trend_bear = ema20 < ema50
     price_above_ema = price > ema20
@@ -200,62 +201,106 @@ def scan_gold_market():
     rsi_bear_ok = 32 <= rsi <= 60
     fvg_bull = ind["bullish_fvg"]
     fvg_bear = ind["bearish_fvg"]
+    atr_ok = atr >= 1.5
     
-    bull_score = sum([trend_bull, price_above_ema, rsi_bull_ok, fvg_bull, atr >= 1.5])
-    bear_score = sum([trend_bear, price_below_ema, rsi_bear_ok, fvg_bear, atr >= 1.5])
+    # Bullish Checklist
+    bull_items = [
+        ("✅ 1. Tren Struktur: BULLISH (EMA 20 > EMA 50)" if trend_bull else f"❌ 1. Tren Struktur: Belum Bullish (${ema20:.2f} <= ${ema50:.2f})", trend_bull),
+        (f"✅ 2. Posisi Harga: Di Atas EMA 20 (${price:.2f} > ${ema20:.2f})" if price_above_ema else f"❌ 2. Posisi Harga: Di Bawah EMA 20 (${price:.2f} <= ${ema20:.2f})", price_above_ema),
+        (f"✅ 3. Momentum RSI 14: {rsi:.1f} (Zona Ideal 40–68)" if rsi_bull_ok else (f"❌ 3. Momentum RSI 14: {rsi:.1f} (Overbought > 68, tunggu cooling down)" if rsi > 68 else f"❌ 3. Momentum RSI 14: {rsi:.1f} (Terlalu Rendah < 40)"), rsi_bull_ok),
+        ("✅ 4. SMC Imbalance: Bullish FVG Terbentuk" if fvg_bull else "❌ 4. SMC Imbalance: Menunggu Bullish FVG / Gap", fvg_bull),
+        (f"✅ 5. Volatilitas ATR 14: ${atr:.2f} (Memenuhi syarat >= $1.50)" if atr_ok else f"❌ 5. Volatilitas ATR 14: ${atr:.2f} (Terlalu Rendah < $1.50)", atr_ok)
+    ]
+    bull_score = sum(1 for _, ok in bull_items if ok)
     
-    # Check cooldown (30 mins per signal)
-    last_t = last_alert_time.get(symbol, 0)
+    # Bearish Checklist
+    bear_items = [
+        ("✅ 1. Tren Struktur: BEARISH (EMA 20 < EMA 50)" if trend_bear else f"❌ 1. Tren Struktur: Belum Bearish (${ema20:.2f} >= ${ema50:.2f})", trend_bear),
+        (f"✅ 2. Posisi Harga: Di Bawah EMA 20 (${price:.2f} < ${ema20:.2f})" if price_below_ema else f"❌ 2. Posisi Harga: Di Atas EMA 20 (${price:.2f} >= ${ema20:.2f})", price_below_ema),
+        (f"✅ 3. Momentum RSI 14: {rsi:.1f} (Zona Ideal 32–60)" if rsi_bear_ok else (f"❌ 3. Momentum RSI 14: {rsi:.1f} (Oversold < 32, tunggu rebound)" if rsi < 32 else f"❌ 3. Momentum RSI 14: {rsi:.1f} (Terlalu Tinggi > 60)"), rsi_bear_ok),
+        ("✅ 4. SMC Imbalance: Bearish FVG Terbentuk" if fvg_bear else "❌ 4. SMC Imbalance: Menunggu Bearish FVG / Gap", fvg_bear),
+        (f"✅ 5. Volatilitas ATR 14: ${atr:.2f} (Memenuhi syarat >= $1.50)" if atr_ok else f"❌ 5. Volatilitas ATR 14: ${atr:.2f} (Terlalu Rendah < $1.50)", atr_ok)
+    ]
+    bear_score = sum(1 for _, ok in bear_items if ok)
     
-    # 1. FULL EXECUTION (5/5 Conditions)
-    if bull_score == 5 and (now_ts - last_t) >= 1800:
-        last_alert_time[symbol] = now_ts
-        sl = round(price - (1.5 * atr), 2)
-        tp1 = round(price + (3.0 * atr), 2)
-        tp2 = round(price + (4.5 * atr), 2)
-        rrr = round((tp1 - price) / (price - sl), 1)
+    # Determine Dominant Direction
+    if bull_score >= bear_score:
+        direction = "BUY (LONG)"
+        score = bull_score
+        items = bull_items
+        is_bull = True
+    else:
+        direction = "SELL (SHORT)"
+        score = bear_score
+        items = bear_items
+        is_bull = False
         
+    missing = 5 - score
+    checklist_text = "\n".join([text for text, _ in items])
+    
+    last_signal_t = last_alert_time.get(f"{symbol}_signal", 0)
+    last_radar_t = last_alert_time.get(f"{symbol}_radar", 0)
+    last_radar_score = last_alert_time.get(f"{symbol}_radar_score", 0)
+    
+    # 1. FULL EXECUTION ALERT (5/5 Conditions Ready)
+    if score == 5 and (now_ts - last_signal_t) >= 1800:
+        last_alert_time[f"{symbol}_signal"] = now_ts
+        last_alert_time[f"{symbol}_radar_score"] = 5
+        if is_bull:
+            sl = round(price - (1.5 * atr), 2)
+            tp1 = round(price + (3.0 * atr), 2)
+            tp2 = round(price + (4.5 * atr), 2)
+            rrr = round((tp1 - price) / (price - sl), 1)
+        else:
+            sl = round(price + (1.5 * atr), 2)
+            tp1 = round(price - (3.0 * atr), 2)
+            tp2 = round(price - (4.5 * atr), 2)
+            rrr = round((price - tp1) / (sl - price), 1)
+            
+        icon = "🟢" if is_bull else "🔴"
         msg = (
-            f"🔥 <b>EKSEKUSI SEKARANG (5/5 KONDISI SIAP): {label}</b>\n"
+            f"🔥 <b>EKSEKUSI SEKARANG (5/5 KONDISI LENGKAP): {label}</b>\n"
             f"━━━━━━━━━━━━━━━━━━━━━\n"
-            f"🟢 <b>Arah:</b> <code>BUY (LONG)</code>\n"
+            f"{icon} <b>Arah:</b> <code>{direction}</code>\n"
             f"💵 <b>Entri:</b> <code>${price}</code>\n"
             f"🛑 <b>Stop Loss (SL):</b> <code>${sl}</code>\n"
             f"🎯 <b>Take Profit 1 (TP1):</b> <code>${tp1}</code> (RRR 1:{rrr})\n"
-            f"🎯 <b>Take Profit 2 (TP2):</b> <code>${tp2}</code>\n"
-            f"📈 <b>RSI 14:</b> <code>{round(rsi, 1)}</code> | <b>ATR:</b> <code>${round(atr, 2)}</code>\n"
-            f"💡 <b>Katalis:</b> SMC Bullish FVG + Trend Continuation\n"
+            f"🎯 <b>Take Profit 2 (TP2):</b> <code>${tp2}</code>\n\n"
+            f"📋 <b>CHECKLIST KONDISI:</b>\n"
+            f"{checklist_text}\n\n"
+            f"💡 <b>Katalis:</b> Struktur SMC & Trend Continuation Sempurna.\n"
             f"━━━━━━━━━━━━━━━━━━━━━\n"
-            f"⏰ <i>Waktu: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} WIB</i>"
+            f"⏰ <i>Waktu: {now_str} WIB</i>"
         )
         send_telegram_gold(msg)
-        log_event("GOLD_QUANT_SIGNAL", {"action": "BUY", "price": price, "sl": sl, "tp1": tp1})
-        return "SIGNAL_BUY"
+        log_event("GOLD_QUANT_SIGNAL", {"action": direction, "price": price, "score": 5, "sl": sl, "tp1": tp1})
+        return f"SIGNAL_{direction}"
         
-    elif bear_score == 5 and (now_ts - last_t) >= 1800:
-        last_alert_time[symbol] = now_ts
-        sl = round(price + (1.5 * atr), 2)
-        tp1 = round(price - (3.0 * atr), 2)
-        tp2 = round(price - (4.5 * atr), 2)
-        rrr = round((price - tp1) / (sl - price), 1)
-        
-        msg = (
-            f"🔥 <b>EKSEKUSI SEKARANG (5/5 KONDISI SIAP): {label}</b>\n"
-            f"━━━━━━━━━━━━━━━━━━━━━\n"
-            f"🔴 <b>Arah:</b> <code>SELL (SHORT)</code>\n"
-            f"💵 <b>Entri:</b> <code>${price}</code>\n"
-            f"🛑 <b>Stop Loss (SL):</b> <code>${sl}</code>\n"
-            f"🎯 <b>Take Profit 1 (TP1):</b> <code>${tp1}</code> (RRR 1:{rrr})\n"
-            f"🎯 <b>Take Profit 2 (TP2):</b> <code>${tp2}</code>\n"
-            f"📈 <b>RSI 14:</b> <code>{round(rsi, 1)}</code> | <b>ATR:</b> <code>${round(atr, 2)}</code>\n"
-            f"💡 <b>Katalis:</b> SMC Bearish FVG + Trend Continuation\n"
-            f"━━━━━━━━━━━━━━━━━━━━━\n"
-            f"⏰ <i>Waktu: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} WIB</i>"
-        )
-        send_telegram_gold(msg)
-        log_event("GOLD_QUANT_SIGNAL", {"action": "SELL", "price": price, "sl": sl, "tp1": tp1})
-        return "SIGNAL_SELL"
-
+    # 2. RADAR / EARLY WARNING ALERT (3/5 or 4/5 Conditions Ready)
+    elif score in (3, 4):
+        # Trigger if score increased or if 15 minutes elapsed since last radar alert
+        should_send = (score > last_radar_score) or ((now_ts - last_radar_t) >= 900)
+        if should_send:
+            last_alert_time[f"{symbol}_radar"] = now_ts
+            last_alert_time[f"{symbol}_radar_score"] = score
+            
+            icon = "🟢" if is_bull else "🔴"
+            msg = (
+                f"📡 <b>RADAR EMAS: SIAP-SIAP ({score}/5 KONDISI TERPENUHI)</b>\n"
+                f"━━━━━━━━━━━━━━━━━━━━━\n"
+                f"🎯 <b>Potensi Sinyal:</b> {icon} <code>{direction}</code>\n"
+                f"💵 <b>Harga Saat Ini:</b> <code>${price}</code>\n"
+                f"⚠️ <b>Status:</b> <b>Kurang {missing} kondisi lagi untuk eksekusi!</b>\n\n"
+                f"📋 <b>CHECKLIST KONDISI:</b>\n"
+                f"{checklist_text}\n\n"
+                f"💡 <i>Siapkan trading plan & lot. Eksekusi otomatis ditembak saat 5/5 terpenuhi.</i>\n"
+                f"━━━━━━━━━━━━━━━━━━━━━\n"
+                f"⏰ <i>Waktu: {now_str} WIB</i>"
+            )
+            send_telegram_gold(msg)
+            log_event("GOLD_RADAR_ALERT", {"direction": direction, "price": price, "score": score, "missing": missing})
+            return f"RADAR_{score}_OF_5"
+            
     return None
 
 # ==========================================

@@ -6,9 +6,9 @@
     "semantic_hash": "dd15119fb2196a241d762fb6eacacf90"
   },
   "learning/NEURON_INDEX.json": {
-    "mtime": 1787572041.8641918,
-    "seen": 1787572093.9756832,
-    "ast_hash": "ce25fd7fd537f0cc1c927244264ee6e0",
+    "mtime": 1787583934.626593,
+    "seen": 1787583942.3812203,
+    "ast_hash": "6bd9385f5524d37079d9c00eaf69a6ce",
     "semantic_hash": ""
   },
   "learning/scripts/grow_neurons.py": {
@@ -312,9 +312,9 @@
     "semantic_hash": ""
   },
   "memory.md": {
-    "mtime": 1787572056.6663737,
-    "seen": 1787572093.9756832,
-    "ast_hash": "231e9842475dee7509f0365c40fbe729",
+    "mtime": 1787583859.617129,
+    "seen": 1787583876.447275,
+    "ast_hash": "c730e5e56a4a463b69ba3e40a1e913fb",
     "semantic_hash": ""
   },
   "memory/neurons/ai_engine_9router.md": {
@@ -522,16 +522,16 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1787531280.720428,
-    "seen": 1787567518.4330297,
-    "ast_hash": "e1d2800917a4a1d51546ea24b4e0edf8",
+    "mtime": 1787572739.2743273,
+    "seen": 1787572755.4927416,
+    "ast_hash": "56284dbf85eaf7ea4a660d0ab8d68bb7",
     "semantic_hash": ""
   },
   "scripts/auto_sync_github.py": {
     "mtime": 1787572190.0530024,
-    "seen": 1787572206.0906918,
+    "seen": 1787572758.3053064,
     "ast_hash": "438d5312bb2d7dc388d29222d0c8e548",
-    "semantic_hash": ""
+    "semantic_hash": "438d5312bb2d7dc388d29222d0c8e548"
   },
   "learning/neurons/N009_peak_algorithms_codex.md": {
     "mtime": 1787491296.310493,
@@ -648,9 +648,9 @@
     "semantic_hash": ""
   },
   "scripts/learn_index.html": {
-    "mtime": 1787571963.9399168,
-    "seen": 1787572093.9756832,
-    "ast_hash": "be8eb9945e0e6d2826f592a890e379dd",
+    "mtime": 1787583933.558707,
+    "seen": 1787583942.3812203,
+    "ast_hash": "2e4a52f33308e1e94019e8208c0c21c1",
     "semantic_hash": ""
   },
   "scripts/parallel_runner.py": {
@@ -768,10 +768,10 @@
     "semantic_hash": "2c4ea5f3ae82e76915288bda6b031944"
   },
   "scripts/build_neural_mesh_ui.py": {
-    "mtime": 1787571950.1205003,
-    "seen": 1787572016.15806,
-    "ast_hash": "3182618133381e0357a646a687b5994b",
-    "semantic_hash": "3182618133381e0357a646a687b5994b"
+    "mtime": 1787572963.626759,
+    "seen": 1787583876.447275,
+    "ast_hash": "fdb4e91790fb2a2eeeed485186454a98",
+    "semantic_hash": ""
   },
   "scripts/masterpiece_completer.py": {
     "mtime": 1787570513.5775359,
@@ -897,6 +897,96 @@
     "mtime": 1787571976.628183,
     "seen": 1787572093.9756832,
     "ast_hash": "47299f01b733b29a161b23ca50f263d8",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N041_macro_gold_intermarket.md": {
+    "mtime": 1787572714.0731654,
+    "seen": 1787572755.4927416,
+    "ast_hash": "dfb209bd3edbd8a4257a3655426d784d",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N042_crypto_onchain_forensics.md": {
+    "mtime": 1787572830.8266678,
+    "seen": 1787583876.447275,
+    "ast_hash": "17018619fb2b41e369a889187ce514a5",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N043_derivatives_futures_microstructure.md": {
+    "mtime": 1787572726.6343913,
+    "seen": 1787572755.4927416,
+    "ast_hash": "45a3a5d3873e679ef71dcdf8790d70b2",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N044_statistical_arbitrage_pairs.md": {
+    "mtime": 1787572813.358742,
+    "seen": 1787583876.447275,
+    "ast_hash": "0dbb4b99c2a652d8bf525acb0971ac72",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N045_volatility_options_greeks.md": {
+    "mtime": 1787572835.177179,
+    "seen": 1787583876.447275,
+    "ast_hash": "fb951332950ebec7770026fd19630748",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N046_algorithmic_execution_engines.md": {
+    "mtime": 1787572787.5060933,
+    "seen": 1787572789.0753937,
+    "ast_hash": "e2e1825f3a83b1d524679129e3bca273",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N047_automated_risk_drawdown_guard.md": {
+    "mtime": 1787572739.073967,
+    "seen": 1787572755.4927416,
+    "ast_hash": "6c41426da493e9bc58bdc5a24ac310ed",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N048_defi_mev_protection.md": {
+    "mtime": 1787572710.9991362,
+    "seen": 1787572755.4927416,
+    "ast_hash": "fbdcee7ada3df432d9046c1dbd28cc9a",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N049_financial_sentiment_news_nlp.md": {
+    "mtime": 1787572751.8003323,
+    "seen": 1787572755.4927416,
+    "ast_hash": "25ba173d0657636b3a58f986b590114f",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N050_systematic_backtesting_wfa.md": {
+    "mtime": 1787572739.5208278,
+    "seen": 1787572755.4927416,
+    "ast_hash": "5c9558a7459de50f4859cbf654ab42a6",
+    "semantic_hash": ""
+  },
+  "scripts/check_live_gold.py": {
+    "mtime": 1787574415.9442208,
+    "seen": 1787583876.447275,
+    "ast_hash": "ab2fa9fc2466e74e8a664f4d9c5a6bd5",
+    "semantic_hash": ""
+  },
+  "scripts/claudia_live_watchdog.py": {
+    "mtime": 1787579573.7778544,
+    "seen": 1787583876.447275,
+    "ast_hash": "f72a989b167b688b084dc5eacaced62f",
+    "semantic_hash": ""
+  },
+  "scripts/send_telegram_gold_report.py": {
+    "mtime": 1787579590.4140317,
+    "seen": 1787583876.447275,
+    "ast_hash": "01a591a791583d42e10ce62ccca3d3d3",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N051_system_architecture_devops_mastery.md": {
+    "mtime": 1787583817.5552735,
+    "seen": 1787583876.447275,
+    "ast_hash": "176df986e814ec970caa01bab9ec9f14",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N052_institutional_gold_checklist_watchdog.md": {
+    "mtime": 1787583929.3946793,
+    "seen": 1787583942.3812203,
+    "ast_hash": "f98d8790838020d76e02a180d85323a1",
     "semantic_hash": ""
   }
 }
