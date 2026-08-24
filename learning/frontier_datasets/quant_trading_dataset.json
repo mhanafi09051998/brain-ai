@@ -1,0 +1,13 @@
+{
+  "updated_at": "2026-08-24 18:28:54",
+  "asset_classes": [
+    "Gold (XAU/USD)",
+    "Cryptocurrency (BTC/ETH/SOL)"
+  ],
+  "market_snapshot": {},
+  "invariants": {
+    "risk_management": "Max 1-2% capital risk per trade. Minimum Risk-to-Reward 1:2.5.",
+    "gold_macro_drivers": "Gold correlates inversely with US Dollar Index (DXY) and Real 10Y Yields. Breakouts confirmed by ATR expansion.",
+    "smc_liquidity": "Trade direction confirmed by FVG retest + Order Block validation on 4H/1H timeframes."
+  }
+}

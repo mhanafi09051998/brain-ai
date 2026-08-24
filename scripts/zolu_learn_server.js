@@ -1,17 +1,22 @@
-const express = require('express');
+﻿const express = require('express');
 const cors = require('cors');
 const { exec } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const http = require('http');
+const https = require('https');
 
 const app = express();
 const PORT = 3005;
 const STATE_FILE = path.join(__dirname, 'data/state.json');
 const RUNNER_SCRIPT = '/home/ubuntu/benchmarks/official_runner.py';
-const ROUTER_API_KEY = process.env.ANTHROPIC_AUTH_TOKEN || process.env.ROUTER_API_KEY || '';
+const QUANT_SCRIPT = '/home/ubuntu/Agent_Claudia_Autonomus/scripts/train_trading_engine.py';
 
 let clients = [];
+let quantData = {
+  updated_at: new Date().toISOString(),
+  market_snapshot: {},
+  invariants: {}
+};
 
 app.use(cors());
 app.use(express.json({ limit: '64kb' }));
@@ -23,9 +28,11 @@ app.get('/chat', (req, res) => {
 
 function getState() {
   try {
-    return JSON.parse(fs.readFileSync(STATE_FILE, 'utf8'));
+    const raw = JSON.parse(fs.readFileSync(STATE_FILE, 'utf8'));
+    raw.quant_trading = quantData;
+    return raw;
   } catch (e) {
-    return { status: "INIT", metrics: {}, logs: [] };
+    return { status: "INIT", metrics: {}, logs: [], quant_trading: quantData };
   }
 }
 
@@ -52,11 +59,15 @@ app.get('/api/state', (req, res) => {
   res.json(getState());
 });
 
+app.get('/api/quant-trading', (req, res) => {
+  res.json(quantData);
+});
+
 let isRunningStep = false;
 function runRealBenchmarkStep() {
   if (isRunningStep) return;
   isRunningStep = true;
-  exec(`python3 ${RUNNER_SCRIPT}`, { timeout: 25000 }, (err, stdout, stderr) => {
+  exec(`python3 ${RUNNER_SCRIPT}`, { timeout: 25000 }, (err, stdout) => {
     isRunningStep = false;
     if (err) return;
     try {
@@ -77,7 +88,8 @@ function runRealBenchmarkStep() {
           ifeval: { current: m.ifeval, target: 98.0, status: "Empirical Real" },
           inference_speed: { current: m.inference_speed, target: 120.0, unit: "tok/s", status: "Empirical Real" }
         },
-        logs: data.recent_logs
+        logs: data.recent_logs,
+        quant_trading: quantData
       };
       fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2));
       broadcastState(state);
@@ -85,11 +97,23 @@ function runRealBenchmarkStep() {
   });
 }
 
+function updateQuantMarketData() {
+  const quantDatasetPath = '/home/ubuntu/Agent_Claudia_Autonomus/learning/frontier_datasets/quant_trading_dataset.json';
+  if (fs.existsSync(quantDatasetPath)) {
+    try {
+      quantData = JSON.parse(fs.readFileSync(quantDatasetPath, 'utf8'));
+    } catch (e) {}
+  }
+}
+
+// Run initial loops
+updateQuantMarketData();
+setInterval(updateQuantMarketData, 10000);
 const intervalTimer = setInterval(runRealBenchmarkStep, 3500);
 runRealBenchmarkStep();
 
 const server = app.listen(PORT, '0.0.0.0', () => {
-  console.log(`🚀 Claudia Max 4.0 Evaluator running on port ${PORT}`);
+  console.log(`🚀 Claudia Max 4.0 Learning & Trading Hub running on port ${PORT}`);
 });
 
 server.on('error', (e) => {

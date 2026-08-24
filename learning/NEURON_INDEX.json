@@ -1,29 +1,286 @@
 {
-  "version": "2.1.0",
-  "updated_at": "2026-08-24T02:05:00",
-  "total_neurons": 20,
-  "total_synapses": 61,
-  "mesh_density": 0.45,
+  "version": "1.1.0",
+  "updated_at": "2026-08-24T18:32:00.000000",
+  "total_neurons": 28,
+  "total_synapses": 41,
+  "mesh_density": 0.0542,
   "neurons": [
-    {"id": "N001", "label": "Neuron N001: Executive Decision Making", "file": "N001_executive_decisions.md", "connections": ["N004", "N007"]},
-    {"id": "N002", "label": "Neuron N002: VPS Remote Operations & Pipeline", "file": "N002_vps_remote_ops.md", "connections": ["N004", "N006", "N008"]},
-    {"id": "N003", "label": "Neuron N003: Mobile-First UI & Compact Data Viz", "file": "N003_mobile_first_ui.md", "connections": ["N001", "N004"]},
-    {"id": "N004", "label": "Neuron N004: Ponytail Minimality Ladder", "file": "N004_ponytail_minimality.md", "connections": ["N001", "N005", "N011"]},
-    {"id": "N005", "label": "Neuron N005: Graphify Knowledge Network", "file": "N005_graphify_knowledge.md", "connections": ["N007", "N009", "N012"]},
-    {"id": "N006", "label": "Neuron N006: 9Router Gateway Engine", "file": "N006_9router_gateway.md", "connections": ["N002", "N010", "N014"]},
-    {"id": "N007", "label": "Neuron N007: Autonomous Self-Improving Loop", "file": "N007_self_improving_loop.md", "connections": ["N001", "N004", "N008", "N015"]},
-    {"id": "N008", "label": "Neuron N008: Persistent Live Session Checkpoint", "file": "N008_live_session_checkpoint.md", "connections": ["N002", "N006", "N010"]},
-    {"id": "N009", "label": "Neuron N009: Peak Algorithmic Codex & Data Structures", "file": "N009_peak_algorithms_codex.md", "connections": ["N004", "N005", "N011", "N013", "N017"]},
-    {"id": "N010", "label": "Neuron N010: High-Scale Distributed Systems Architecture", "file": "N010_distributed_systems_design.md", "connections": ["N006", "N008", "N009", "N013"]},
-    {"id": "N011", "label": "Neuron N011: Mechanical Sympathy & Zero-Copy Performance", "file": "N011_mechanical_sympathy_perf.md", "connections": ["N004", "N009", "N010", "N015"]},
-    {"id": "N012", "label": "Neuron N012: Deep Search, Multi-Hop Reasoning & Hybrid Retrieval", "file": "N012_deep_search_and_graph_rag.md", "connections": ["N005", "N009", "N015", "N018"]},
-    {"id": "N013", "label": "Neuron N013: Deep Storage Internals, LSM-Trees & Distributed DB", "file": "N013_deep_storage_and_distributed_db.md", "connections": ["N009", "N010", "N011"]},
-    {"id": "N014", "label": "Neuron N014: Zero-Trust Security, Cryptography & Threat Modeling", "file": "N014_zero_trust_security_and_cryptography.md", "connections": ["N006", "N008", "N010", "N018"]},
-    {"id": "N015", "label": "Neuron N015: Compiler Engineering, AST Synthesis & System Profiling", "file": "N015_compiler_ast_and_system_profiling.md", "connections": ["N005", "N007", "N011", "N012", "N018"]},
-    {"id": "N016", "label": "Neuron N016: Frontier Benchmark Evaluator & Continuous Evolution", "file": "N016_frontier_benchmark_evaluator.md", "connections": ["N007", "N017", "N018", "N019"]},
-    {"id": "N017", "label": "Neuron N017: Program-Aided Mathematical Reasoning & AIME Invariants", "file": "N017_program_aided_math.md", "connections": ["N009", "N016"]},
-    {"id": "N018", "label": "Neuron N018: RepoMap AST Compression & SWE-bench Precision", "file": "N018_repomap_swebench.md", "connections": ["N012", "N015", "N016"]},
-    {"id": "N019", "label": "Neuron N019: BFCL Tool Schema & IFEval Strict Format Oracle", "file": "N019_bfcl_ifeval_oracle.md", "connections": ["N006", "N014", "N016"]},
-    {"id": "N020", "label": "Neuron N020: Session Continuity & Resilient Multi-IDE Checkpoint", "file": "N020_session_continuity_checkpoint.md", "connections": ["N008", "N016", "N019"]}
+    {
+      "id": "N001",
+      "label": "Neuron N001: Executive Decision Making",
+      "file": "N001_executive_decisions.md",
+      "connections": [
+        "N004",
+        "N007"
+      ],
+      "synapse_count": 2,
+      "size_bytes": 851
+    },
+    {
+      "id": "N002",
+      "label": "Neuron N002: VPS Remote Operations & Pipeline",
+      "file": "N002_vps_remote_ops.md",
+      "connections": [
+        "N004",
+        "N006"
+      ],
+      "synapse_count": 2,
+      "size_bytes": 1181
+    },
+    {
+      "id": "N003",
+      "label": "Neuron N003: Mobile-First UI & Compact Data Viz",
+      "file": "N003_mobile_first_ui.md",
+      "connections": [
+        "N001",
+        "N004"
+      ],
+      "synapse_count": 2,
+      "size_bytes": 1330
+    },
+    {
+      "id": "N004",
+      "label": "Neuron N004: Ponytail Minimality Ladder",
+      "file": "N004_ponytail_minimality.md",
+      "connections": [
+        "N001",
+        "N005"
+      ],
+      "synapse_count": 2,
+      "size_bytes": 671
+    },
+    {
+      "id": "N005",
+      "label": "Neuron N005: Graphify Knowledge Network",
+      "file": "N005_graphify_knowledge.md",
+      "connections": [
+        "N007"
+      ],
+      "synapse_count": 1,
+      "size_bytes": 565
+    },
+    {
+      "id": "N006",
+      "label": "Neuron N006: 9Router Gateway Engine",
+      "file": "N006_9router_gateway.md",
+      "connections": [
+        "N002"
+      ],
+      "synapse_count": 1,
+      "size_bytes": 478
+    },
+    {
+      "id": "N007",
+      "label": "Neuron N007: Autonomous Self-Improving Loop",
+      "file": "N007_self_improving_loop.md",
+      "connections": [
+        "N001",
+        "N004"
+      ],
+      "synapse_count": 2,
+      "size_bytes": 696
+    },
+    {
+      "id": "N008",
+      "label": "Neuron N008: Persistent Live Session Checkpoint & Infrastructure State",
+      "file": "N008_live_session_checkpoint.md",
+      "connections": [],
+      "synapse_count": 0,
+      "size_bytes": 2986
+    },
+    {
+      "id": "N009",
+      "label": "N009_peak_algorithms_codex.md",
+      "file": "N009_peak_algorithms_codex.md",
+      "connections": [],
+      "synapse_count": 0,
+      "size_bytes": 1689
+    },
+    {
+      "id": "N010",
+      "label": "N010_distributed_systems_design.md",
+      "file": "N010_distributed_systems_design.md",
+      "connections": [],
+      "synapse_count": 0,
+      "size_bytes": 1061
+    },
+    {
+      "id": "N011",
+      "label": "N011_mechanical_sympathy_perf.md",
+      "file": "N011_mechanical_sympathy_perf.md",
+      "connections": [],
+      "synapse_count": 0,
+      "size_bytes": 1018
+    },
+    {
+      "id": "N012",
+      "label": "N012_deep_search_and_graph_rag.md",
+      "file": "N012_deep_search_and_graph_rag.md",
+      "connections": [],
+      "synapse_count": 0,
+      "size_bytes": 1054
+    },
+    {
+      "id": "N013",
+      "label": "N013_deep_storage_and_distributed_db.md",
+      "file": "N013_deep_storage_and_distributed_db.md",
+      "connections": [],
+      "synapse_count": 0,
+      "size_bytes": 1118
+    },
+    {
+      "id": "N014",
+      "label": "N014_zero_trust_security_and_cryptography.md",
+      "file": "N014_zero_trust_security_and_cryptography.md",
+      "connections": [],
+      "synapse_count": 0,
+      "size_bytes": 861
+    },
+    {
+      "id": "N015",
+      "label": "N015_compiler_ast_and_system_profiling.md",
+      "file": "N015_compiler_ast_and_system_profiling.md",
+      "connections": [],
+      "synapse_count": 0,
+      "size_bytes": 791
+    },
+    {
+      "id": "N016",
+      "label": "N016_frontier_benchmark_evaluator.md",
+      "file": "N016_frontier_benchmark_evaluator.md",
+      "connections": [],
+      "synapse_count": 0,
+      "size_bytes": 1469
+    },
+    {
+      "id": "N017",
+      "label": "Neuron N017: Program-Aided Mathematical Reasoning & AIME Invariants",
+      "file": "N017_program_aided_math.md",
+      "connections": [],
+      "synapse_count": 0,
+      "size_bytes": 1305
+    },
+    {
+      "id": "N018",
+      "label": "Neuron N018: RepoMap AST Compression & SWE-bench Precision",
+      "file": "N018_repomap_swebench.md",
+      "connections": [],
+      "synapse_count": 0,
+      "size_bytes": 1121
+    },
+    {
+      "id": "N019",
+      "label": "Neuron N019: BFCL Tool Schema & IFEval Strict Format Oracle",
+      "file": "N019_bfcl_ifeval_oracle.md",
+      "connections": [],
+      "synapse_count": 0,
+      "size_bytes": 1086
+    },
+    {
+      "id": "N020",
+      "label": "Neuron N020: Autonomous Cross-Session Memory & Resilient Checkpoint Continuity",
+      "file": "N020_session_continuity_checkpoint.md",
+      "connections": [],
+      "synapse_count": 0,
+      "size_bytes": 2669
+    },
+    {
+      "id": "N021",
+      "label": "N021: Quantitative Gold (XAU/USD) & Crypto Trading Systems",
+      "file": "N021_quantitative_gold_crypto_trading.md",
+      "connections": [],
+      "synapse_count": 0,
+      "size_bytes": 2133
+    },
+    {
+      "id": "N022",
+      "label": "Neuron N022: Multi-Agent Consensus & Hierarchical Swarm Deliberation",
+      "file": "N022_multi_agent_consensus.md",
+      "connections": [
+        "N001",
+        "N004",
+        "N007",
+        "N010",
+        "N014",
+        "N016",
+        "N019",
+        "N020"
+      ],
+      "synapse_count": 8,
+      "size_bytes": 9842
+    },
+    {
+      "id": "N023",
+      "label": "Neuron N023: Autonomous Zero-Day Exploit Defense & Kernel Memory Safety",
+      "file": "N023_zero_day_kernel_defense.md",
+      "connections": [
+        "N004",
+        "N006",
+        "N010",
+        "N011",
+        "N014",
+        "N015"
+      ],
+      "synapse_count": 6,
+      "size_bytes": 10500
+    },
+    {
+      "id": "N024",
+      "label": "Neuron N024: Post-Quantum Cryptography & ML-KEM/ML-DSA (FIPS 203/204)",
+      "file": "N024_post_quantum_cryptography.md",
+      "connections": [
+        "N004",
+        "N006",
+        "N010",
+        "N014",
+        "N023"
+      ],
+      "synapse_count": 5,
+      "size_bytes": 12592
+    },
+    {
+      "id": "N025",
+      "label": "Neuron N025: High-Frequency Orderbook Microstructure & HFT Quant Engine",
+      "file": "N025_hft_orderbook_microstructure.md",
+      "connections": [],
+      "synapse_count": 0,
+      "size_bytes": 10911
+    },
+    {
+      "id": "N026",
+      "label": "Neuron N026: Multimodal Vision-Language Spatial Reasoning & DOM Geometry AST",
+      "file": "N026_vision_dom_spatial_reasoning.md",
+      "connections": [
+        "N003",
+        "N004",
+        "N009",
+        "N011",
+        "N015",
+        "N019"
+      ],
+      "synapse_count": 6,
+      "size_bytes": 14702
+    },
+    {
+      "id": "N027",
+      "label": "N027_tensor_simd_vectorization.md",
+      "file": "N027_tensor_simd_vectorization.md",
+      "connections": [
+        "N004",
+        "N009",
+        "N011",
+        "N015"
+      ],
+      "synapse_count": 4,
+      "size_bytes": 5654
+    },
+    {
+      "id": "N028",
+      "label": "Neuron N028: Autonomous System Self-Healing & Distributed Chaos Invariants",
+      "file": "N028_autonomous_self_healing_chaos.md",
+      "connections": [],
+      "synapse_count": 0,
+      "size_bytes": 8902
+    }
   ]
 }

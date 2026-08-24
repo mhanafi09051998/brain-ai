@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+﻿import os
+
+html = """<!DOCTYPE html>
 <html lang="id" class="dark">
 <head>
   <meta charset="UTF-8">
@@ -349,3 +351,8 @@
   </script>
 </body>
 </html>
+"""
+
+with open('scripts/learn_index.html', 'w', encoding='utf-8') as f:
+    f.write(html)
+print("SUCCESS: 28-Neuron Synapse Canvas generated in scripts/learn_index.html")
