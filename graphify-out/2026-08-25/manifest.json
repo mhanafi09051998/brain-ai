@@ -1302,9 +1302,9 @@
     "semantic_hash": ""
   },
   "goblix/public/app.js": {
-    "mtime": 1787649088.269673,
-    "seen": 1787649119.8067548,
-    "ast_hash": "a5cc2403778fe3c14124af628a6d41d9",
+    "mtime": 1787649181.4861789,
+    "seen": 1787649208.9970665,
+    "ast_hash": "516b30723bc121d82cbdf1d34a993d8b",
     "semantic_hash": ""
   },
   "goblix/server.js": {
