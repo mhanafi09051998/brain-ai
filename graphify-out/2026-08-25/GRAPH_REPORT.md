@@ -1,16 +1,16 @@
 # Graph Report - Agent_Claudia_Autonomus  (2026-08-25)
 
 ## Corpus Check
-- 190 files · ~195,585 words
+- 192 files · ~195,647 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1423 nodes · 1566 edges · 160 communities (135 shown, 25 thin omitted)
+- 1425 nodes · 1567 edges · 160 communities (136 shown, 24 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 28 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ece9a43a`
+- Built from commit: `14603b83`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -128,13 +128,12 @@
 - user_profile.md
 - vps_infrastructure.md
 - ponytail-statusline.sh script
-- .process_tiled_convolution
 - fix_jellyfin_db.py
 - ImageMatrix
 - ConvolutionKernelEngine
-- ColorSpaceMath
 - run_tests
-- Any
+- image_vision_nucleus_engine.py
+- .letterbox_aspect_preserver
 - RasterToVectorTracer
 - GenerativeGraphExecutor
 - Vec2D
@@ -166,7 +165,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (160 total, 25 thin omitted)
+## Communities (160 total, 24 thin omitted)
 
 ### Community 0 - "run_deterministic_tests"
 Cohesion: 0.06
@@ -377,7 +376,7 @@ Cohesion: 0.09
 Nodes (22): 1. Peta Repositori & Standar Visual Computing Terbaik Dunia, 1. RGB ke Grayscale (Luminosity Weighting), 2. Matematika Pemrosesan Citra Klasik (Classical Image Processing), 2. RGB ke HSV (Hue, Saturation, Value), 3. Arsitektur AI Generatif Visual & Latent Diffusion, 3. RGB ke YCbCr (Luma-Chroma Video Subsampling), 4. Segmentasi Alpha Matting & Tracing Vektor (Raster-to-Vector), 5. Streaming Citra Memori Rendah (`libvips`) & Super-Resolution (`Real-ESRGAN`) (+14 more)
 
 ### Community 48 - "claudia_live_watchdog.py"
-Cohesion: 0.36
+Cohesion: 0.31
 Nodes (7): calc_indicators(), check_memory_and_restart(), fetch_klines_twelve(), run_watchdog(), scan_asset(), send_telegram_msg(), send_telegram_server()
 
 ### Community 49 - "Ponytail"
@@ -548,25 +547,25 @@ Nodes (3): fetch_tmdb_poster(), main(), search_apibay()
 Cohesion: 0.83
 Nodes (3): main(), record_new_learning(), slugify()
 
-### Community 113 - ".process_tiled_convolution"
-Cohesion: 0.50
-Nodes (3): Demand-driven tile chunking pipeline for low-memory image processing. Executes…, Convolves an image in bounded memory tiles of tile_size x tile_size. Uses…, StreamingTileProcessor
-
 ### Community 128 - "ImageMatrix"
-Cohesion: 0.15
-Nodes (7): GeometricRescaler, ImageMatrix, Lightweight, high-performance 2D/3D pure Python pixel matrix. Layout:…, Sub-pixel Geometric Rescaling and Aspect Ratio Preserver., High-precision bilinear interpolation rescaling. Maps target pixel centers…, Scales image while strictly preserving native aspect ratio, padding the…, Safe pixel retrieval with deterministic boundary clamping. Supported border…
+Cohesion: 0.20
+Nodes (4): ImageMatrix, Lightweight, high-performance 2D/3D pure Python pixel matrix. Layout:…, Convolves an image in bounded memory tiles of tile_size x tile_size. Uses…, Safe pixel retrieval with deterministic boundary clamping. Supported border…
 
 ### Community 129 - "ConvolutionKernelEngine"
 Cohesion: 0.16
 Nodes (8): ConvolutionKernelEngine, Pure Python Spatial Convolution Engine with standard and custom kernels., Generates normalized (2k+1)x(2k+1) 2D Gaussian Kernel: G(u,v) =…, Returns standard 3x3 Sobel kernels for horizontal (Gx) and vertical (Gy)…, Returns 3x3 Sharpen kernel: center = 1 + 4*strength, orthogonal edges =…, Returns standard 3x3 discrete Laplacian second-derivative kernel., Applies 2D spatial convolution across all channels of the image matrix., Calculates Sobel Edge Gradient Magnitude M = sqrt(Gx^2 + Gy^2) and Direction…
 
-### Community 130 - "ColorSpaceMath"
-Cohesion: 0.17
-Nodes (7): ColorSpaceMath, Standard-compliant color space transformation algorithms., Weighted luminosity grayscale conversion. - BT.601 (SDTV/OpenCV default): Y =…, Converts RGB [0..255] to HSV (Hue in [0..360), Saturation in [0..1], Value in…, Converts HSV (Hue [0..360), Saturation [0..1], Value [0..1]) back to RGB…, Converts RGB [0..255] to ITU-R BT.601 YCbCr digital video standard., Converts ITU-R BT.601 YCbCr back to RGB [0..255].
+### Community 130 - "run_tests"
+Cohesion: 0.21
+Nodes (8): ColorSpaceMath, Standard-compliant color space transformation algorithms., Weighted luminosity grayscale conversion. - BT.601 (SDTV/OpenCV default): Y =…, Converts RGB [0..255] to HSV (Hue in [0..360), Saturation in [0..1], Value in…, Converts HSV (Hue [0..360), Saturation [0..1], Value [0..1]) back to RGB…, Converts RGB [0..255] to ITU-R BT.601 YCbCr digital video standard., Converts ITU-R BT.601 YCbCr back to RGB [0..255]., run_tests()
 
-### Community 131 - "run_tests"
-Cohesion: 0.50
-Nodes (8): CheckpointLoaderNode, CLIPTextEncodeNode, ComfyNode, ControlNetApplyNode, KSamplerNode, Base executable node in a generative AI visual DAG., run_tests(), VAEDecodeNode
+### Community 131 - "image_vision_nucleus_engine.py"
+Cohesion: 0.18
+Nodes (10): CheckpointLoaderNode, CLIPTextEncodeNode, ComfyNode, ControlNetApplyNode, KSamplerNode, Any, Demand-driven tile chunking pipeline for low-memory image processing. Executes…, Base executable node in a generative AI visual DAG. (+2 more)
+
+### Community 132 - ".letterbox_aspect_preserver"
+Cohesion: 0.29
+Nodes (5): GeometricRescaler, Sub-pixel Geometric Rescaling and Aspect Ratio Preserver., High-precision bilinear interpolation rescaling. Maps target pixel centers…, Scales image while strictly preserving native aspect ratio, padding the…, Maps a bounding box (x, y, w, h) from letterboxed space back to native source…
 
 ### Community 133 - "RasterToVectorTracer"
 Cohesion: 0.31
@@ -579,12 +578,14 @@ Nodes (4): Immutable 2D vector for visual geometry and coordinate transformation
 ## Knowledge Gaps
 - **669 isolated node(s):** `__dirname`, `require`, `{ getPonytailInstructions }`, `{ getDefaultMode, normalizePersistedMode }`, `{ parseCommandFile }` (+664 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **25 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **24 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `run_tests()` connect `run_tests` to `ImageMatrix`, `ConvolutionKernelEngine`, `ColorSpaceMath`, `Any`, `RasterToVectorTracer`, `GenerativeGraphExecutor`, `.process_tiled_convolution`?**
+- **Why does `run_tests()` connect `run_tests` to `ImageMatrix`, `ConvolutionKernelEngine`, `image_vision_nucleus_engine.py`, `.letterbox_aspect_preserver`, `RasterToVectorTracer`, `GenerativeGraphExecutor`?**
+  _High betweenness centrality (0.002) - this node is a cross-community bridge._
+- **Why does `Color` connect `Color` to `run_self_tests`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **What connects `__dirname`, `require`, `{ getPonytailInstructions }` to the rest of the system?**
   _669 weakly-connected nodes found - possible documentation gaps or missing edges._
@@ -596,5 +597,3 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.045454545454545456 - nodes in this community are weakly interconnected._
 - **Should `CubicBezier` be split into smaller, more focused modules?**
   _Cohesion score 0.11067193675889328 - nodes in this community are weakly interconnected._
-- **Should `ponytail/package.json` be split into smaller, more focused modules?**
-  _Cohesion score 0.05365853658536585 - nodes in this community are weakly interconnected._
