@@ -412,7 +412,7 @@ function renderWatchPage(slug) {
       <!-- Main Video Stream Area (Responsive Aspect Ratio) -->
       <div class="relative w-full max-w-6xl mx-auto flex-1 flex flex-col items-center justify-center p-2 sm:p-4 md:p-6">
         <div class="w-full aspect-video bg-black rounded-lg sm:rounded-xl overflow-hidden shadow-2xl border border-gray-800 relative group">
-          <video id="cinemaPlayer" class="w-full h-full" controls playsinline crossorigin="anonymous" poster="${movie.backdrop}">
+          <video id="cinemaPlayer" class="w-full h-full" controls playsinline preload="auto" poster="${movie.backdrop}">
             <source id="videoSource" src="${movie.streamUrl}" type="video/mp4">
             <track id="subTrack" label="Bahasa Indonesia" kind="subtitles" srclang="id" src="/sub_indo.vtt" default>
             Browser Anda tidak mendukung streaming video HTML5.
@@ -461,9 +461,12 @@ function renderWatchPage(slug) {
     const vid = document.getElementById('cinemaPlayer');
     if (!vid) return;
 
-    if (progressInfo && progressInfo.currentTime > 5 && progressInfo.currentTime < (progressInfo.duration - 30)) {
-      vid.currentTime = progressInfo.currentTime;
-    }
+    vid.addEventListener('loadedmetadata', () => {
+      if (progressInfo && progressInfo.currentTime > 5 && progressInfo.currentTime < ((vid.duration || 100) - 30)) {
+        vid.currentTime = progressInfo.currentTime;
+      }
+      vid.play().catch(() => {});
+    });
 
     vid.play().catch(() => {});
 
@@ -481,7 +484,7 @@ function renderWatchPage(slug) {
     vid.addEventListener('ended', () => {
       saveServerWatchProgress(movie.id, 0, vid.duration || 0);
     });
-  }, 200);
+  }, 100);
 }
 
 function changeSpeed(val) {

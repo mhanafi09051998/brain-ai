@@ -1,22 +1,22 @@
 [
   {
-    "id": "tears-of-steel",
-    "slug": "tears-of-steel",
-    "title": "Tears of Steel: Cybernetic Rebellion",
-    "year": 2024,
-    "duration": "1 Jam 45 Menit",
-    "ageRating": "16+",
-    "matchScore": "98%",
+    "id": "x-men-first-class",
+    "slug": "x-men-first-class",
+    "title": "X-Men: First Class (2011)",
+    "year": 2011,
+    "duration": "2 Jam 12 Menit",
+    "ageRating": "13+",
+    "matchScore": "99%",
     "quality": "1080p BluRay",
     "audio": "Dolby AAC 5.1",
     "subtitle": "Bahasa Indonesia (Resmi)",
-    "genres": ["Sci-Fi", "Action", "Cyberpunk", "Dystopia"],
+    "genres": ["Action", "Sci-Fi", "Adventure", "Superhero"],
     "poster": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=800&auto=format&fit=crop&q=80",
     "backdrop": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=1600&auto=format&fit=crop&q=80",
-    "synopsis": "Di masa depan distopia pasca-apokaliptik, sekelompok pejuang gerilya dan ilmuwan siber bersatu di menara Oude Kerk Amsterdam untuk menyelamatkan bumi dari invasi robot berteknologi destruktif yang menghapus ras manusia.",
-    "director": "Ian Hubert",
-    "cast": ["Derek de Lint", "Sergio Hasselbaink", "Rogier Schippers", "Vanja Rukavina"],
-    "streamUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
-    "subtitleUrl": "/api/subtitles/tears-of-steel"
+    "synopsis": "Di era Perang Dingin tahun 1962, Charles Xavier dan Erik Lehnsherr (Magneto) bekerja sama dengan CIA untuk mengumpulkan mutan muda demi mencegah krisis nuklir global yang dirancang oleh Sebastian Shaw.",
+    "director": "Matthew Vaughn",
+    "cast": ["James McAvoy", "Michael Fassbender", "Jennifer Lawrence", "Kevin Bacon"],
+    "streamUrl": "/stream/x-men-first-class.mp4",
+    "subtitleUrl": "/api/subtitles/x-men-first-class"
   }
 ]

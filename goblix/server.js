@@ -11,13 +11,17 @@ const DATA_DIR = path.join(__dirname, 'data');
 const MOVIES_FILE = path.join(DATA_DIR, 'movies.json');
 const USERS_FILE = path.join(DATA_DIR, 'users.json');
 
-// Ensure data directory exists
+// Ensure directories exist
 if (!fs.existsSync(DATA_DIR)) {
   fs.mkdirSync(DATA_DIR, { recursive: true });
 }
+const STREAM_DIR = path.join(PUBLIC_DIR, 'stream');
+if (!fs.existsSync(STREAM_DIR)) {
+  fs.mkdirSync(STREAM_DIR, { recursive: true });
+}
 
 // -------------------------------------------------------------
-// CRYPTO & JWT HELPERS (Zero-Dependency Production Grade)
+// CRYPTO & JWT HELPERS
 // -------------------------------------------------------------
 function hashPassword(password, salt = crypto.randomBytes(16).toString('hex')) {
   const hash = crypto.pbkdf2Sync(password, salt, 100000, 64, 'sha512').toString('hex');
@@ -118,6 +122,7 @@ const MIME_TYPES = {
   '.vtt': 'text/vtt; charset=utf-8',
   '.srt': 'text/plain; charset=utf-8',
   '.mp4': 'video/mp4',
+  '.mkv': 'video/mp4',
   '.png': 'image/png',
   '.jpg': 'image/jpeg',
   '.svg': 'image/svg+xml',
@@ -336,7 +341,7 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
-  // 7. STATIC FILES WITH NO-CACHE FOR INSTANT UPDATES
+  // 7. VIDEO STREAMING RANGE HANDLER (HTTP 206 PARTIAL CONTENT)
   let reqPath = pathname === '/' ? '/index.html' : pathname;
   const filePath = path.join(PUBLIC_DIR, reqPath);
 
@@ -344,6 +349,40 @@ const server = http.createServer(async (req, res) => {
     if (!err && stats.isFile()) {
       const ext = path.extname(filePath).toLowerCase();
       const contentType = MIME_TYPES[ext] || 'application/octet-stream';
+
+      // Robust Range header support for video streaming (.mp4 / .mkv)
+      if (ext === '.mp4' || ext === '.mkv') {
+        const range = req.headers.range;
+        const total = stats.size;
+
+        if (range) {
+          const parts = range.replace(/bytes=/, "").split("-");
+          const start = parseInt(parts[0], 10);
+          const end = parts[1] ? parseInt(parts[1], 10) : total - 1;
+          const chunksize = (end - start) + 1;
+          const file = fs.createReadStream(filePath, { start, end });
+
+          res.writeHead(206, {
+            'Content-Range': `bytes ${start}-${end}/${total}`,
+            'Accept-Ranges': 'bytes',
+            'Content-Length': chunksize,
+            'Content-Type': contentType,
+            'Cache-Control': 'no-cache'
+          });
+          file.pipe(res);
+        } else {
+          res.writeHead(200, {
+            'Content-Length': total,
+            'Accept-Ranges': 'bytes',
+            'Content-Type': contentType,
+            'Cache-Control': 'no-cache'
+          });
+          fs.createReadStream(filePath).pipe(res);
+        }
+        return;
+      }
+
+      // Static non-video files
       res.writeHead(200, {
         'Content-Type': contentType,
         'Content-Length': stats.size,
