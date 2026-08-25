@@ -1296,21 +1296,21 @@
     "semantic_hash": ""
   },
   "goblix/data/movies.json": {
-    "mtime": 1787638517.3397284,
-    "seen": 1787638566.2525465,
-    "ast_hash": "117563a500134c6430ed4edd162d1eef",
+    "mtime": 1787638898.431388,
+    "seen": 1787638966.2791307,
+    "ast_hash": "e772694cf1e9057c3207cf2539264ac1",
     "semantic_hash": ""
   },
   "goblix/public/app.js": {
-    "mtime": 1787638677.4072256,
-    "seen": 1787638735.8261714,
-    "ast_hash": "ff9d886ac4f4f72652b111d3de282bf2",
+    "mtime": 1787638927.9668381,
+    "seen": 1787638966.2791307,
+    "ast_hash": "cf3233e6fa47e6eb42671c7b34702ffb",
     "semantic_hash": ""
   },
   "goblix/server.js": {
-    "mtime": 1787638643.8487084,
-    "seen": 1787638735.8261714,
-    "ast_hash": "f039bb7ab6efd0d61870f61683ace1bf",
+    "mtime": 1787638886.424585,
+    "seen": 1787638966.2791307,
+    "ast_hash": "baeae66691696acc56bde455cb75f48a",
     "semantic_hash": ""
   },
   "scripts/swot_engine.py": {
