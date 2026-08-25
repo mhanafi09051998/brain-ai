@@ -303,19 +303,6 @@
       "source_location": "L351"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator",
-      "label": "PaletteGenerator",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 158,
-      "community_name": "PaletteGenerator",
-      "file_type": "code",
-      "norm_label": "palettegenerator",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L271"
-    },
-    {
       "id": "scripts_graphic_design_visual_engine_cubicbezier",
       "label": "CubicBezier",
       "_callable": true,
@@ -353,6 +340,19 @@
       "norm_label": "generativeposter",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L625"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator",
+      "label": "PaletteGenerator",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": "palettegenerator",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L271"
     },
     {
       "id": "scripts_graphic_design_visual_engine_iconbuilder24",
@@ -1429,78 +1429,6 @@
       "source_location": "L371"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_color_from_hsl",
-      "label": ".from_hsl()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 158,
-      "community_name": "PaletteGenerator",
-      "file_type": "code",
-      "norm_label": ".from_hsl()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L67"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_analogous",
-      "label": ".analogous()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 158,
-      "community_name": "PaletteGenerator",
-      "file_type": "code",
-      "norm_label": ".analogous()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L284"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_complementary",
-      "label": ".complementary()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 158,
-      "community_name": "PaletteGenerator",
-      "file_type": "code",
-      "norm_label": ".complementary()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L295"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_monochromatic",
-      "label": ".monochromatic()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 158,
-      "community_name": "PaletteGenerator",
-      "file_type": "code",
-      "norm_label": ".monochromatic()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L277"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_split_complementary",
-      "label": ".split_complementary()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 158,
-      "community_name": "PaletteGenerator",
-      "file_type": "code",
-      "norm_label": ".split_complementary()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L311"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_tetradic",
-      "label": ".tetradic()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 158,
-      "community_name": "PaletteGenerator",
-      "file_type": "code",
-      "norm_label": ".tetradic()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L321"
-    },
-    {
       "id": "ponytail_hooks_ponytail_config_isdeactivationcommand",
       "label": "isDeactivationCommand()",
       "_callable": true,
@@ -1645,16 +1573,16 @@
       "source_location": "L105"
     },
     {
-      "id": "ponytail_hooks_ponytail_config_normalizeconfigmode",
-      "label": "normalizeConfigMode()",
+      "id": "ponytail_hooks_ponytail_config_isshellsafe",
+      "label": "isShellSafe()",
       "_callable": true,
       "_origin": "ast",
       "community": 22,
       "community_name": "ponytail-config.js",
       "file_type": "code",
-      "norm_label": "normalizeconfigmode()",
+      "norm_label": "isshellsafe()",
       "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L26"
+      "source_location": "L50"
     },
     {
       "id": "ponytail_scripts_uninstall_removeifexists",
@@ -1667,6 +1595,18 @@
       "norm_label": "removeifexists()",
       "source_file": "ponytail/scripts/uninstall.js",
       "source_location": "L14"
+    },
+    {
+      "id": "ponytail_hooks_ponytail_config_normalizeconfigmode",
+      "label": "normalizeConfigMode()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "index.js",
+      "file_type": "code",
+      "norm_label": "normalizeconfigmode()",
+      "source_file": "ponytail/hooks/ponytail-config.js",
+      "source_location": "L26"
     },
     {
       "id": "ponytail_hooks_ponytail_config_normalizepersistedmode",
@@ -2269,6 +2209,18 @@
       "source_location": "L44"
     },
     {
+      "id": "scripts_graphic_design_visual_engine_color_from_hsl",
+      "label": ".from_hsl()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": ".from_hsl()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L67"
+    },
+    {
       "id": "scripts_graphic_design_visual_engine_generativeposter_build_svg",
       "label": ".build_svg()",
       "_callable": true,
@@ -2293,6 +2245,42 @@
       "source_location": "L632"
     },
     {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_analogous",
+      "label": ".analogous()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": ".analogous()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L284"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_complementary",
+      "label": ".complementary()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": ".complementary()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L295"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_monochromatic",
+      "label": ".monochromatic()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": ".monochromatic()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L277"
+    },
+    {
       "id": "scripts_graphic_design_visual_engine_palettegenerator_scale",
       "label": ".scale()",
       "_callable": true,
@@ -2303,6 +2291,30 @@
       "norm_label": ".scale()",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L332"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_split_complementary",
+      "label": ".split_complementary()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": ".split_complementary()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L311"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_tetradic",
+      "label": ".tetradic()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": ".tetradic()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L321"
     },
     {
       "id": "scripts_graphic_design_visual_engine_palettegenerator_triadic",
@@ -2473,18 +2485,6 @@
       "source_location": "L415"
     },
     {
-      "id": "ponytail_hooks_ponytail_config_isshellsafe",
-      "label": "isShellSafe()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 42,
-      "community_name": "ponytail-activate.js",
-      "file_type": "code",
-      "norm_label": "isshellsafe()",
-      "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L50"
-    },
-    {
       "id": "scripts_graphic_design_visual_engine_iconbuilder24_cpu_neural",
       "label": ".cpu_neural()",
       "_callable": true,
@@ -2554,7 +2554,7 @@
       "file_type": "code",
       "norm_label": "calc_indicators()",
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L104"
+      "source_location": "L77"
     },
     {
       "id": "scripts_claudia_live_watchdog_check_memory_and_restart",
@@ -2566,31 +2566,19 @@
       "file_type": "code",
       "norm_label": "check_memory_and_restart()",
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L268"
+      "source_location": "L241"
     },
     {
-      "id": "scripts_claudia_live_watchdog_fetch_klines_tiingo",
-      "label": "fetch_klines_tiingo()",
+      "id": "scripts_claudia_live_watchdog_fetch_klines_twelve",
+      "label": "fetch_klines_twelve()",
       "_callable": true,
       "_origin": "ast",
       "community": 48,
       "community_name": "claudia_live_watchdog.py",
       "file_type": "code",
-      "norm_label": "fetch_klines_tiingo()",
+      "norm_label": "fetch_klines_twelve()",
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L54"
-    },
-    {
-      "id": "scripts_claudia_live_watchdog_fetch_klines_yahoo",
-      "label": "fetch_klines_yahoo()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 48,
-      "community_name": "claudia_live_watchdog.py",
-      "file_type": "code",
-      "norm_label": "fetch_klines_yahoo()",
-      "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L76"
+      "source_location": "L53"
     },
     {
       "id": "scripts_claudia_live_watchdog_run_watchdog",
@@ -2602,7 +2590,7 @@
       "file_type": "code",
       "norm_label": "run_watchdog()",
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L284"
+      "source_location": "L257"
     },
     {
       "id": "scripts_claudia_live_watchdog_scan_asset",
@@ -2614,7 +2602,7 @@
       "file_type": "code",
       "norm_label": "scan_asset()",
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L168"
+      "source_location": "L141"
     },
     {
       "id": "scripts_claudia_live_watchdog_send_telegram_msg",
@@ -2638,7 +2626,7 @@
       "file_type": "code",
       "norm_label": "send_telegram_server()",
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L34"
+      "source_location": "L33"
     },
     {
       "id": "scripts_test_brain_run_all",
@@ -6509,83 +6497,6 @@
       "source_location": "L1"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_rationale_272",
-      "label": "Harmonious color palette generator supporting classical color wheel (HSL) and\u2026",
-      "_origin": "ast",
-      "community": 158,
-      "community_name": "PaletteGenerator",
-      "file_type": "rationale",
-      "norm_label": "harmonious color palette generator supporting classical color wheel (hsl) and...",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L272"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_278",
-      "label": "Generate a monochromatic ramp varying in Lightness.",
-      "_origin": "ast",
-      "community": 158,
-      "community_name": "PaletteGenerator",
-      "file_type": "rationale",
-      "norm_label": "generate a monochromatic ramp varying in lightness.",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L278"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_285",
-      "label": "Generate analogous colors clustered around base hue.",
-      "_origin": "ast",
-      "community": 158,
-      "community_name": "PaletteGenerator",
-      "file_type": "rationale",
-      "norm_label": "generate analogous colors clustered around base hue.",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L285"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_296",
-      "label": "Generate complementary color pair (180\u00b0 offset).",
-      "_origin": "ast",
-      "community": 158,
-      "community_name": "PaletteGenerator",
-      "file_type": "rationale",
-      "norm_label": "generate complementary color pair (180\u00b0 offset).",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L296"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_312",
-      "label": "Generate split-complementary harmony (base + 2 colors flanking complement).",
-      "_origin": "ast",
-      "community": 158,
-      "community_name": "PaletteGenerator",
-      "file_type": "rationale",
-      "norm_label": "generate split-complementary harmony (base + 2 colors flanking complement).",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L312"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_322",
-      "label": "Generate tetradic rectangular 4-color harmony.",
-      "_origin": "ast",
-      "community": 158,
-      "community_name": "PaletteGenerator",
-      "file_type": "rationale",
-      "norm_label": "generate tetradic rectangular 4-color harmony.",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L322"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_68",
-      "label": "Construct Color from HSL (H in [0, 360), S in [0, 1], L in [0, 1]).",
-      "_origin": "ast",
-      "community": 158,
-      "community_name": "PaletteGenerator",
-      "file_type": "rationale",
-      "norm_label": "construct color from hsl (h in [0, 360), s in [0, 1], l in [0, 1]).",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L68"
-    },
-    {
       "id": "patch_fvg_zone",
       "label": "patch_fvg_zone.py",
       "_origin": "ast",
@@ -8404,17 +8315,6 @@
       "source_location": "L13"
     },
     {
-      "id": "ponytail_hooks_ponytail_config_runtime_modes",
-      "label": "RUNTIME_MODES",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "ponytail-config.js",
-      "file_type": "code",
-      "norm_label": "runtime_modes",
-      "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L18"
-    },
-    {
       "id": "ponytail_hooks_ponytail_config_valid_modes",
       "label": "VALID_MODES",
       "_origin": "ast",
@@ -8479,6 +8379,17 @@
       "norm_label": "settingspath",
       "source_file": "ponytail/scripts/uninstall.js",
       "source_location": "L26"
+    },
+    {
+      "id": "ponytail_hooks_ponytail_config_runtime_modes",
+      "label": "RUNTIME_MODES",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "index.js",
+      "file_type": "code",
+      "norm_label": "runtime_modes",
+      "source_file": "ponytail/hooks/ponytail-config.js",
+      "source_location": "L18"
     },
     {
       "id": "ponytail_pi_extension_index",
@@ -10835,6 +10746,50 @@
       "source_location": "L1"
     },
     {
+      "id": "scripts_graphic_design_visual_engine_rationale_272",
+      "label": "Harmonious color palette generator supporting classical color wheel (HSL) and\u2026",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "harmonious color palette generator supporting classical color wheel (hsl) and...",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L272"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_278",
+      "label": "Generate a monochromatic ramp varying in Lightness.",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "generate a monochromatic ramp varying in lightness.",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L278"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_285",
+      "label": "Generate analogous colors clustered around base hue.",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "generate analogous colors clustered around base hue.",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L285"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_296",
+      "label": "Generate complementary color pair (180\u00b0 offset).",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "generate complementary color pair (180\u00b0 offset).",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L296"
+    },
+    {
       "id": "scripts_graphic_design_visual_engine_rationale_302",
       "label": "Generate triadic 3-color harmony (120\u00b0 offsets).",
       "_origin": "ast",
@@ -10844,6 +10799,28 @@
       "norm_label": "generate triadic 3-color harmony (120\u00b0 offsets).",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L302"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_312",
+      "label": "Generate split-complementary harmony (base + 2 colors flanking complement).",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "generate split-complementary harmony (base + 2 colors flanking complement).",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L312"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_322",
+      "label": "Generate tetradic rectangular 4-color harmony.",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "generate tetradic rectangular 4-color harmony.",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L322"
     },
     {
       "id": "scripts_graphic_design_visual_engine_rationale_333",
@@ -10888,6 +10865,17 @@
       "norm_label": "generate full svg graphic poster with mathematical curves and layered depth.",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L638"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_68",
+      "label": "Construct Color from HSL (H in [0, 360), S in [0, 1], L in [0, 1]).",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "construct color from hsl (h in [0, 360), s in [0, 1], l in [0, 1]).",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L68"
     },
     {
       "id": "scripts_graphic_design_visual_engine_rationale_745",
@@ -12594,28 +12582,6 @@
       "norm_label": "test_scan.py",
       "source_file": "test_scan.py",
       "source_location": "L1"
-    },
-    {
-      "id": "scripts_claudia_live_watchdog_rationale_55",
-      "label": "Fetch 15m candles from Tiingo FX",
-      "_origin": "ast",
-      "community": 48,
-      "community_name": "claudia_live_watchdog.py",
-      "file_type": "rationale",
-      "norm_label": "fetch 15m candles from tiingo fx",
-      "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L55"
-    },
-    {
-      "id": "scripts_claudia_live_watchdog_rationale_77",
-      "label": "Fetch 15m candles from Yahoo Finance",
-      "_origin": "ast",
-      "community": 48,
-      "community_name": "claudia_live_watchdog.py",
-      "file_type": "rationale",
-      "norm_label": "fetch 15m candles from yahoo finance",
-      "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L77"
     },
     {
       "id": "agents_skills_ponytail_skill",
@@ -17446,7 +17412,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L280",
+      "source_location": "L253",
       "weight": 1.0
     },
     {
@@ -17458,7 +17424,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L294",
+      "source_location": "L267",
       "weight": 1.0
     },
     {
@@ -17470,7 +17436,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L298",
+      "source_location": "L271",
       "weight": 1.0
     },
     {
@@ -17482,31 +17448,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L299",
+      "source_location": "L272",
       "weight": 1.0
     },
     {
       "source": "scripts_claudia_live_watchdog_scan_asset",
-      "target": "scripts_claudia_live_watchdog_fetch_klines_tiingo",
+      "target": "scripts_claudia_live_watchdog_fetch_klines_twelve",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L170",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_claudia_live_watchdog_scan_asset",
-      "target": "scripts_claudia_live_watchdog_fetch_klines_yahoo",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L172",
+      "source_location": "L143",
       "weight": 1.0
     },
     {
@@ -17518,7 +17472,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L175",
+      "source_location": "L148",
       "weight": 1.0
     },
     {
@@ -17530,7 +17484,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L256",
+      "source_location": "L229",
       "weight": 1.0
     },
     {
@@ -30108,24 +30062,13 @@
     },
     {
       "source": "scripts_claudia_live_watchdog",
-      "target": "scripts_claudia_live_watchdog_calc_indicators",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L104",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_claudia_live_watchdog",
       "target": "scripts_claudia_live_watchdog_scan_asset",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L168",
+      "source_location": "L141",
       "weight": 1.0
     },
     {
@@ -30147,7 +30090,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L268",
+      "source_location": "L241",
       "weight": 1.0
     },
     {
@@ -30158,7 +30101,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L284",
+      "source_location": "L257",
       "weight": 1.0
     },
     {
@@ -30169,29 +30112,29 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L34",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
       "source": "scripts_claudia_live_watchdog",
-      "target": "scripts_claudia_live_watchdog_fetch_klines_tiingo",
+      "target": "scripts_claudia_live_watchdog_fetch_klines_twelve",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L54",
+      "source_location": "L53",
       "weight": 1.0
     },
     {
       "source": "scripts_claudia_live_watchdog",
-      "target": "scripts_claudia_live_watchdog_fetch_klines_yahoo",
+      "target": "scripts_claudia_live_watchdog_calc_indicators",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L76",
+      "source_location": "L77",
       "weight": 1.0
     },
     {
@@ -32791,28 +32734,6 @@
       "weight": 1.0
     },
     {
-      "source": "scripts_claudia_live_watchdog_rationale_55",
-      "target": "scripts_claudia_live_watchdog_fetch_klines_tiingo",
-      "relation": "rationale_for",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L55",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_claudia_live_watchdog_rationale_77",
-      "target": "scripts_claudia_live_watchdog_fetch_klines_yahoo",
-      "relation": "rationale_for",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L77",
-      "weight": 1.0
-    },
-    {
       "source": "scripts_fix_jellyfin_db_rationale_18",
       "target": "scripts_fix_jellyfin_db_find_real_video",
       "relation": "rationale_for",
@@ -34558,5 +34479,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "0d394c481155e20d91ed03ed2146542adbb065db"
+  "built_at_commit": "ece9a43aa5f11d5d8d0d1f4af468b9644ad546a4"
 }

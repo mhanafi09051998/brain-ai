@@ -60,7 +60,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 <div class="container">
 
 <h1>Agent_Claudia_Autonomus — Complete Call Flow &amp; Architecture Documentation</h1>
-<p class="subtitle">Generated from graphify knowledge graph: 1423 nodes, 1566 edges, 160 communities. Commit: ece9a43</p>
+<p class="subtitle">Generated from graphify knowledge graph: 1425 nodes, 1567 edges, 160 communities. Commit: 14603b8</p>
 
 <div class="nav">
     <a href="#overview">Architecture Overview</a>
@@ -102,9 +102,9 @@ flowchart LR
     class INGEST_CACHE_UPDATE_FF457338 module;
     SERVE_API_35EC8E86("Serving API<br/><small>16 nodes</small>")
     class SERVE_API_35EC8E86 module;
-    SECURITY_GLOBAL_5B9C6A04("Security &amp; Global Graph<br/><small>46 nodes</small>")
+    SECURITY_GLOBAL_5B9C6A04("Security &amp; Global Graph<br/><small>41 nodes</small>")
     class SECURITY_GLOBAL_5B9C6A04 module;
-    TESTS_FIXTURES_B84B1DCC("Tests &amp; Fixtures<br/><small>118 nodes</small>")
+    TESTS_FIXTURES_B84B1DCC("Tests &amp; Fixtures<br/><small>123 nodes</small>")
     class TESTS_FIXTURES_B84B1DCC module;
     COLOR_6DD0FE80("Color<br/><small>25 nodes</small>")
     class COLOR_6DD0FE80 module;
@@ -116,20 +116,20 @@ flowchart LR
     class SECTION_14_59FB35FD module;
     NEURON_N046_ALGORITHMIC_EXECUTION_ENGINES_SMART_186F44EA("Neuron N046: Algorithmic Execution Engines &amp; Smart Order Routing<br/><small>19 nodes</small>")
     class NEURON_N046_ALGORITHMIC_EXECUTION_ENGINES_SMART_186F44EA module;
-    OTHER_D0941E68("Other<br/><small>459 nodes</small>")
+    OTHER_D0941E68("Other<br/><small>461 nodes</small>")
     class OTHER_D0941E68 module;
-    TESTS_FIXTURES_B84B1DCC -->|calls x24| OTHER_D0941E68
+    TESTS_FIXTURES_B84B1DCC -->|calls x16| OTHER_D0941E68
     OTHER_D0941E68 -->|imports x11| CLI_SKILLS_9964CBB8
     TESTS_FIXTURES_B84B1DCC -->|references x10| COLOR_6DD0FE80
-    TESTS_FIXTURES_B84B1DCC -->|calls x8| OUTPUTS_DOCS_ED82387C
-    TESTS_FIXTURES_B84B1DCC -->|calls x7| SECURITY_GLOBAL_5B9C6A04
+    TESTS_FIXTURES_B84B1DCC -->|calls x7| OUTPUTS_DOCS_ED82387C
     TESTS_FIXTURES_B84B1DCC -->|calls x7| ANALYSIS_CLUSTERING_C79796DA
     TESTS_FIXTURES_B84B1DCC -->|calls x7| CLI_SKILLS_9964CBB8
     OTHER_D0941E68 -->|calls x6| ANALYSIS_CLUSTERING_C79796DA
     OUTPUTS_DOCS_ED82387C -->|references x6| OTHER_D0941E68
+    OTHER_D0941E68 -->|calls x5| SECURITY_GLOBAL_5B9C6A04
     CLI_SKILLS_9964CBB8 -->|indirect call x5| TESTS_FIXTURES_B84B1DCC
-    TESTS_FIXTURES_B84B1DCC -->|calls x4| BUILD_GRAPH_321CBB04
     ANALYSIS_CLUSTERING_C79796DA -->|imports x4| OTHER_D0941E68
+    TESTS_FIXTURES_B84B1DCC -->|calls x3| BUILD_GRAPH_321CBB04
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -146,19 +146,19 @@ flowchart LR
     <h4>Architecture Layers</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>Layer</th><th>Nodes</th><th>Communities</th></tr>
-      <tr><td>Extraction Pipeline</td><td>124</td><td><code>8, 11, 25, 26, 29, 40, 45, 84, 96, 97</code></td></tr><tr><td>Graph Build</td><td>153</td><td><code>0, 4, 28, 129, 36, 62, 67, 124, 125</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>77</td><td><code>6, 14, 31, 46, 68</code></td></tr><tr><td>Outputs &amp; Docs</td><td>51</td><td><code>3, 43, 133, 32</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>231</td><td><code>1, 2, 5, 22, 39, 49, 53, 54, 56, 69, 70, 71, 74, 75, 76, 77, 82, 86, 91, 116, 118, 119, 120, 121, 122, 123</code></td></tr><tr><td>Ingestion &amp; Updates</td><td>39</td><td><code>19, 73, 114, 88, 135, 136, 138</code></td></tr><tr><td>Serving API</td><td>16</td><td><code>38, 95</code></td></tr><tr><td>Security &amp; Global Graph</td><td>46</td><td><code>9, 128, 52</code></td></tr><tr><td>Tests &amp; Fixtures</td><td>118</td><td><code>37, 7, 23, 18, 48, 131, 58, 139</code></td></tr><tr><td>Color</td><td>25</td><td><code>34</code></td></tr><tr><td>Neuron N056: Image Processing, Computer Vision &amp; AI Visual Generation Mastery</td><td>23</td><td><code>47</code></td></tr><tr><td>Neuron N044: Statistical Arbitrage, Pairs Trading &amp; Cointegration</td><td>22</td><td><code>10</code></td></tr><tr><td>==========================================</td><td>20</td><td><code>12</code></td></tr><tr><td>Neuron N046: Algorithmic Execution Engines &amp; Smart Order Routing</td><td>19</td><td><code>13</code></td></tr><tr><td>Other</td><td>459</td><td><code>146, 15, 16, 17, 20, 21, 24, 27, 87, 30, 33, 35, 130, 41, 42, 44, 132, 50, 51, 55, 57, 59, 60, 61, 63, 64, 65, 66, 134, 72, 113, 78, 79, 80, 81, 83, 85, 89, 90, 100, 101, 102, 103, 137, 92, 93, 94, 98, 99, 104, 105, 106, 107, 108, 109, 110, 111, 112, 115, 117, 126, 127, 140, 141, 142, 143, 144, 145, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 159, 160</code></td></tr>
+      <tr><td>Extraction Pipeline</td><td>124</td><td><code>8, 11, 25, 26, 29, 40, 45, 84, 96, 97</code></td></tr><tr><td>Graph Build</td><td>153</td><td><code>0, 4, 28, 129, 36, 62, 67, 124, 125</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>77</td><td><code>6, 14, 31, 46, 68</code></td></tr><tr><td>Outputs &amp; Docs</td><td>51</td><td><code>3, 43, 133, 32</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>231</td><td><code>1, 2, 5, 22, 39, 49, 53, 54, 56, 69, 70, 71, 74, 75, 76, 77, 82, 86, 91, 116, 118, 119, 120, 121, 122, 123</code></td></tr><tr><td>Ingestion &amp; Updates</td><td>39</td><td><code>19, 73, 114, 88, 135, 136, 138</code></td></tr><tr><td>Serving API</td><td>16</td><td><code>38, 95</code></td></tr><tr><td>Security &amp; Global Graph</td><td>41</td><td><code>9, 128, 52</code></td></tr><tr><td>Tests &amp; Fixtures</td><td>123</td><td><code>37, 7, 23, 18, 130, 48, 58, 139</code></td></tr><tr><td>Color</td><td>25</td><td><code>34</code></td></tr><tr><td>Neuron N056: Image Processing, Computer Vision &amp; AI Visual Generation Mastery</td><td>23</td><td><code>47</code></td></tr><tr><td>Neuron N044: Statistical Arbitrage, Pairs Trading &amp; Cointegration</td><td>22</td><td><code>10</code></td></tr><tr><td>==========================================</td><td>20</td><td><code>12</code></td></tr><tr><td>Neuron N046: Algorithmic Execution Engines &amp; Smart Order Routing</td><td>19</td><td><code>13</code></td></tr><tr><td>Other</td><td>461</td><td><code>146, 15, 16, 17, 131, 20, 21, 24, 27, 87, 30, 33, 35, 41, 42, 44, 50, 51, 132, 55, 57, 59, 60, 61, 63, 64, 65, 66, 134, 72, 78, 79, 80, 81, 83, 85, 89, 90, 100, 101, 102, 103, 137, 92, 93, 94, 98, 99, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 115, 117, 126, 127, 140, 141, 142, 143, 144, 145, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 159, 160</code></td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Core Flow</h4>
-    <div class="arrow-chain">Extraction Pipeline -&gt; Graph Build -&gt; Security &amp; Global Graph -&gt; Other -&gt; CLI &amp; Skill Installers -&gt; Tests &amp; Fixtures -&gt; Color</div>
+    <div class="arrow-chain">Extraction Pipeline -&gt; Graph Build -&gt; Security &amp; Global Graph -&gt; Analysis &amp; Clustering -&gt; Other -&gt; CLI &amp; Skill Installers -&gt; Tests &amp; Fixtures</div>
   </div>
 </div>
 <div class="grid">
   <div class="card">
     <h4>Graph Report Highlights</h4>
     <ul>
-      <li>1423 nodes · 1566 edges · 160 communities (135 shown, 25 thin omitted)</li>
+      <li>1425 nodes · 1567 edges · 160 communities (136 shown, 24 thin omitted)</li>
       <li>Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 28 edges (avg confidence: 0.85)</li>
       <li>Token cost: 0 input · 0 output</li>
       <li>1. `Vec2D` - 25 edges</li>
@@ -2494,24 +2494,12 @@ flowchart LR
 
 <!-- ====== 9. Security & Global Graph ====== -->
 <h2 id="security-global">9. Security &amp; Global Graph</h2>
-<p>Security &amp; Global Graph groups implementation around learning, neurons, wasi, wasm, mostly in learning/neurons/N037_wasm_wasi_microvm_sandboxing.md, scripts/image_vision_nucleus_engine.py, learning/neurons/N038_red_team_pentest_cve_patching.md. This section covers 46 nodes and 45 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Security &amp; Global Graph groups implementation around learning, neurons, wasi, wasm, mostly in learning/neurons/N037_wasm_wasi_microvm_sandboxing.md, scripts/image_vision_nucleus_engine.py, learning/neurons/N038_red_team_pentest_cve_patching.md. This section covers 41 nodes and 38 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Security &amp; Global Graph (46 nodes, 45 edges)
-    subgraph security_global_scripts_image_vision_nucleus_eng_3b9fb383["scripts/image_vision_nucleus_engine.py"]
-        scripts_image_vision_nucleus_engine_geometricres_298a726b("GeometricRescaler<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_geometricres_6fd47290("letterbox_aspect_preserver()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_imagematrix_7f251986("clone()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_vaedecodenod_0e6de4a1("execute()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7("ImageMatrix<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_geometricres_e2e40808("bilinear_rescale()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_imagematrix_6fdcd274("set_pixel()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_imagematrix_2560d8f8("__init__()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_imagematrix_e3cc11b8("from_nested_list()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_imagematrix_c813a7e3("get_pixel()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-    end
+    %% Section: Security &amp; Global Graph (41 nodes, 38 edges)
     subgraph security_global_learning_neurons_N037_wasm_wasi_16924d4f["learning/neurons/N037_wasm_wasi_microvm_sandboxing.md"]
         learning_neurons_n037_wasm_wasi_microvm_sandboxi_90247e40("1.1. Linear Memory Model &amp; Page Granula...<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
         learning_neurons_n037_wasm_wasi_microvm_sandboxi_237d218e("1.2. Hardware Guard Pages &amp; Zero-Cost S...<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
@@ -2521,29 +2509,26 @@ flowchart LR
         learning_neurons_n037_wasm_wasi_microvm_sandboxi_62cdee95("3.1. Wasmtime &amp; Cranelift JIT Invariants<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
         learning_neurons_n037_wasm_wasi_microvm_sandboxi_8ab7433d("3.2. Extism Universal Plugin Framework<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
         learning_neurons_n037_wasm_wasi_microvm_sandboxi_aad29d59("4.1. Hardware Virtualization (KVM: /de...<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
+        learning_neurons_n037_wasm_wasi_microvm_sandboxi_bbb2ae2f("4.2. Arsitektur Firecracker Micro-VM<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
+        learning_neurons_n037_wasm_wasi_microvm_sandboxi_3d3644da("4.3. Confinement &amp; The Firecracker Jailer<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
+        learning_neurons_n037_wasm_wasi_microvm_sandboxi_3b999852("5.1. Arsitektur V8 Isolate (Cloudflare...<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
     end
-    scripts_image_vision_nucleus_engine_geometricres_298a726b -->|method| scripts_image_vision_nucleus_engine_geometricres_e2e40808
-    scripts_image_vision_nucleus_engine_geometricres_298a726b -->|method| scripts_image_vision_nucleus_engine_geometricres_6fd47290
+    subgraph security_global_scripts_image_vision_nucleus_eng_3b9fb383["scripts/image_vision_nucleus_engine.py"]
+        scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7("ImageMatrix<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_imagematrix_7f251986("clone()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_streamingtil_edab8255("process_tiled_convolution()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_imagematrix_6fdcd274("set_pixel()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_imagematrix_2560d8f8("__init__()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_imagematrix_e3cc11b8("from_nested_list()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_imagematrix_c813a7e3("get_pixel()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+    end
     scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7 -->|method| scripts_image_vision_nucleus_engine_imagematrix_6fdcd274
     scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7 -->|method| scripts_image_vision_nucleus_engine_imagematrix_2560d8f8
     scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7 -->|method| scripts_image_vision_nucleus_engine_imagematrix_e3cc11b8
     scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7 -->|method| scripts_image_vision_nucleus_engine_imagematrix_c813a7e3
-    scripts_image_vision_nucleus_engine_geometricres_e2e40808 -->|calls| scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7
-    scripts_image_vision_nucleus_engine_geometricres_6fd47290 -->|calls| scripts_image_vision_nucleus_engine_geometricres_e2e40808
-    scripts_image_vision_nucleus_engine_geometricres_6fd47290 -->|calls| scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7
     scripts_image_vision_nucleus_engine_imagematrix_7f251986 -->|calls| scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7
-    scripts_image_vision_nucleus_engine_vaedecodenod_0e6de4a1 -->|calls| scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7
-    %% Omitted for readability: 28 nodes, 0 edges
-    class scripts_image_vision_nucleus_engine_geometricres_298a726b klass;
-    class scripts_image_vision_nucleus_engine_geometricres_6fd47290 function;
-    class scripts_image_vision_nucleus_engine_imagematrix_7f251986 function;
-    class scripts_image_vision_nucleus_engine_vaedecodenod_0e6de4a1 function;
-    class scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7 klass;
-    class scripts_image_vision_nucleus_engine_geometricres_e2e40808 function;
-    class scripts_image_vision_nucleus_engine_imagematrix_6fdcd274 function;
-    class scripts_image_vision_nucleus_engine_imagematrix_2560d8f8 function;
-    class scripts_image_vision_nucleus_engine_imagematrix_e3cc11b8 function;
-    class scripts_image_vision_nucleus_engine_imagematrix_c813a7e3 function;
+    scripts_image_vision_nucleus_engine_streamingtil_edab8255 -->|calls| scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7
+    %% Omitted for readability: 23 nodes, 0 edges
     class learning_neurons_n037_wasm_wasi_microvm_sandboxi_90247e40 concept;
     class learning_neurons_n037_wasm_wasi_microvm_sandboxi_237d218e concept;
     class learning_neurons_n037_wasm_wasi_microvm_sandboxi_77914e3c concept;
@@ -2552,6 +2537,16 @@ flowchart LR
     class learning_neurons_n037_wasm_wasi_microvm_sandboxi_62cdee95 concept;
     class learning_neurons_n037_wasm_wasi_microvm_sandboxi_8ab7433d concept;
     class learning_neurons_n037_wasm_wasi_microvm_sandboxi_aad29d59 concept;
+    class learning_neurons_n037_wasm_wasi_microvm_sandboxi_bbb2ae2f concept;
+    class learning_neurons_n037_wasm_wasi_microvm_sandboxi_3d3644da concept;
+    class learning_neurons_n037_wasm_wasi_microvm_sandboxi_3b999852 concept;
+    class scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7 klass;
+    class scripts_image_vision_nucleus_engine_imagematrix_7f251986 function;
+    class scripts_image_vision_nucleus_engine_streamingtil_edab8255 function;
+    class scripts_image_vision_nucleus_engine_imagematrix_6fdcd274 function;
+    class scripts_image_vision_nucleus_engine_imagematrix_2560d8f8 function;
+    class scripts_image_vision_nucleus_engine_imagematrix_e3cc11b8 function;
+    class scripts_image_vision_nucleus_engine_imagematrix_c813a7e3 function;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -2751,14 +2746,6 @@ flowchart LR
 </tr>
 <tr>
   <td>23</td>
-  <td><code>GeometricRescaler</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td>External entry / no inbound edge</td>
-  <td><code>bilinear_rescale()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br><code>letterbox_aspect_preserver()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br><code>unletterbox_box()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
-  <td>GeometricRescaler node in scripts/image_vision_nucleus_engine.py.</td>
-</tr>
-<tr>
-  <td>24</td>
   <td><code>ImageMatrix</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
   <td><span class="tag tag-class">Class</span></td>
   <td><code>bilinear_rescale()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br><code>clone()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br><code>convolve_2d()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br>+5 more</td>
@@ -2766,23 +2753,7 @@ flowchart LR
   <td>ImageMatrix node in scripts/image_vision_nucleus_engine.py.</td>
 </tr>
 <tr>
-  <td>25</td>
-  <td><code>.bilinear_rescale()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>GeometricRescaler</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br><code>letterbox_aspect_preserver()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br><code>run_tests()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
-  <td><code>ImageMatrix</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
-  <td>.bilinear_rescale() node in scripts/image_vision_nucleus_engine.py.</td>
-</tr>
-<tr>
-  <td>26</td>
-  <td><code>.letterbox_aspect_preserver()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>GeometricRescaler</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br><code>run_tests()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
-  <td><code>bilinear_rescale()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br><code>ImageMatrix</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
-  <td>.letterbox_aspect_preserver() node in scripts/image_vision_nucleus_engine.py.</td>
-</tr>
-<tr>
-  <td>27</td>
+  <td>24</td>
   <td><code>.clone()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -2790,7 +2761,7 @@ flowchart LR
   <td>Turns a local path or remote repository into analysis context.</td>
 </tr>
 <tr>
-  <td>28</td>
+  <td>25</td>
   <td><code>.from_nested_list()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>ImageMatrix</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br><code>run_tests()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
@@ -2798,7 +2769,7 @@ flowchart LR
   <td>.from_nested_list() node in scripts/image_vision_nucleus_engine.py.</td>
 </tr>
 <tr>
-  <td>29</td>
+  <td>26</td>
   <td><code>.get_pixel()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>ImageMatrix</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
@@ -2806,12 +2777,36 @@ flowchart LR
   <td>.get_pixel() node in scripts/image_vision_nucleus_engine.py.</td>
 </tr>
 <tr>
-  <td>30</td>
+  <td>27</td>
   <td><code>.__init__()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>ImageMatrix</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
   <td>No direct outbound edge</td>
   <td>.__init__() node in scripts/image_vision_nucleus_engine.py.</td>
+</tr>
+<tr>
+  <td>28</td>
+  <td><code>.set_pixel()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>ImageMatrix</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
+  <td>No direct outbound edge</td>
+  <td>.set_pixel() node in scripts/image_vision_nucleus_engine.py.</td>
+</tr>
+<tr>
+  <td>29</td>
+  <td><code>.process_tiled_convolution()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>run_tests()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br><code>StreamingTileProcessor</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
+  <td><code>ImageMatrix</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
+  <td>.process_tiled_convolution() node in scripts/image_vision_nucleus_engine.py.</td>
+</tr>
+<tr>
+  <td>30</td>
+  <td><code>Lightweight, high-performance 2D/3D pure Python pixel matrix. Layout:…</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Lightweight, high-performance 2D/3D pure Python pixel matrix. Layout:….</td>
 </tr>
 </table>
 
@@ -2821,25 +2816,25 @@ flowchart LR
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
       <tr><td><code>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</code></td><td>22 nodes</td></tr>
-<tr><td><code>scripts/image_vision_nucleus_engine.py</code></td><td>15 nodes</td></tr>
+<tr><td><code>scripts/image_vision_nucleus_engine.py</code></td><td>10 nodes</td></tr>
 <tr><td><code>learning/neurons/N038_red_team_pentest_cve_patching.md</code></td><td>9 nodes</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x29, method x6, calls x5, explains x5. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x29, method x4, explains x3, calls x2. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
 
 <!-- ====== 10. Tests & Fixtures ====== -->
 <h2 id="tests-fixtures">10. Tests &amp; Fixtures</h2>
-<p>Tests &amp; Fixtures groups implementation around scripts, enginepy, nucleus, test, mostly in scripts/graphic_design_visual_engine.py, scripts/marketing_nucleus_engine.py, learning/neurons/N036_fullstack_product_synthesizer.md. This section covers 118 nodes and 166 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Tests &amp; Fixtures groups implementation around scripts, enginepy, nucleus, test, mostly in scripts/graphic_design_visual_engine.py, scripts/marketing_nucleus_engine.py, learning/neurons/N036_fullstack_product_synthesizer.md. This section covers 123 nodes and 165 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Tests &amp; Fixtures (118 nodes, 166 edges)
+    %% Section: Tests &amp; Fixtures (123 nodes, 165 edges)
     subgraph tests_fixtures_scripts_graphic_design_visual_eng_05a6bfa8["scripts/graphic_design_visual_engine.py"]
         scripts_graphic_design_visual_engine_palettegene_2f7b1ecf("PaletteGenerator<br/><small>scripts/graphic_design_visual_engine.py</small>")
         scripts_graphic_design_visual_engine_run_self_te_0b5fe8fc("run_self_tests()<br/><small>scripts/graphic_design_visual_engine.py</small>")
@@ -2850,37 +2845,36 @@ flowchart LR
         scripts_graphic_design_visual_engine_palettegene_c3b4a4ab("analogous()<br/><small>scripts/graphic_design_visual_engine.py</small>")
         scripts_graphic_design_visual_engine_palettegene_ab4b502f("complementary()<br/><small>scripts/graphic_design_visual_engine.py</small>")
         scripts_graphic_design_visual_engine_palettegene_d8698390("triadic()<br/><small>scripts/graphic_design_visual_engine.py</small>")
-        scripts_graphic_design_visual_engine_palettegene_cad51f90("split_complementary()<br/><small>scripts/graphic_design_visual_engine.py</small>")
-        scripts_graphic_design_visual_engine_palettegene_c91eddad("tetradic()<br/><small>scripts/graphic_design_visual_engine.py</small>")
-        scripts_graphic_design_visual_engine_palettegene_d5b78e4c("scale()<br/><small>scripts/graphic_design_visual_engine.py</small>")
     end
-    subgraph tests_fixtures_scripts_marketing_nucleus_engine_031ec47b["scripts/marketing_nucleus_engine.py"]
-        scripts_marketing_nucleus_engine_run_verificatio_ef97097f("run_verification_tests()<br/><small>scripts/marketing_nucleus_engine.py</small>")
-        scripts_marketing_nucleus_engine_bg_nbdengine_2a9e36db("BG_NBDEngine<br/><small>scripts/marketing_nucleus_engine.py</small>")
-        scripts_marketing_nucleus_engine_bg_nbdengine_pr_f5a1c982("probability_alive()<br/><small>scripts/marketing_nucleus_engine.py</small>")
+    subgraph tests_fixtures_scripts_image_vision_nucleus_engi_c8d0a62e["scripts/image_vision_nucleus_engine.py"]
+        scripts_image_vision_nucleus_engine_colorspacema_f993f2f8("ColorSpaceMath<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_colorspacema_2830666e("rgb_to_grayscale()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_colorspacema_3515cadd("rgb_to_hsv()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_colorspacema_0ed59fc1("hsv_to_rgb()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_colorspacema_bf01af6a("rgb_to_ycbcr()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_colorspacema_39a5b669("ycbcr_to_rgb()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
     end
     ponytail_pi_extension_test_helpers_test_2bad389e("helpers.test.js")
-    scripts_image_vision_nucleus_engine_run_tests_fa28542f("run_tests()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+    scripts_marketing_nucleus_engine_run_verificatio_ef97097f("run_verification_tests()<br/><small>scripts/marketing_nucleus_engine.py</small>")
     scripts_test_brain_run_all_d04a7277("run_all()<br/><small>scripts/test_brain.py</small>")
+    scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 -->|method| scripts_image_vision_nucleus_engine_colorspacema_2830666e
+    scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 -->|method| scripts_image_vision_nucleus_engine_colorspacema_3515cadd
+    scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 -->|method| scripts_image_vision_nucleus_engine_colorspacema_0ed59fc1
+    scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 -->|method| scripts_image_vision_nucleus_engine_colorspacema_bf01af6a
+    scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 -->|method| scripts_image_vision_nucleus_engine_colorspacema_39a5b669
     scripts_graphic_design_visual_engine_generativep_020abc00 -->|method| scripts_graphic_design_visual_engine_generativep_1821e72a
     scripts_graphic_design_visual_engine_generativep_020abc00 -->|method| scripts_graphic_design_visual_engine_generativep_a7d509c0
     scripts_graphic_design_visual_engine_palettegene_2f7b1ecf -->|method| scripts_graphic_design_visual_engine_palettegene_834d90d9
     scripts_graphic_design_visual_engine_palettegene_2f7b1ecf -->|method| scripts_graphic_design_visual_engine_palettegene_c3b4a4ab
     scripts_graphic_design_visual_engine_palettegene_2f7b1ecf -->|method| scripts_graphic_design_visual_engine_palettegene_ab4b502f
     scripts_graphic_design_visual_engine_palettegene_2f7b1ecf -->|method| scripts_graphic_design_visual_engine_palettegene_d8698390
-    scripts_graphic_design_visual_engine_palettegene_2f7b1ecf -->|method| scripts_graphic_design_visual_engine_palettegene_cad51f90
-    scripts_graphic_design_visual_engine_palettegene_2f7b1ecf -->|method| scripts_graphic_design_visual_engine_palettegene_c91eddad
-    scripts_graphic_design_visual_engine_palettegene_2f7b1ecf -->|method| scripts_graphic_design_visual_engine_palettegene_d5b78e4c
-    scripts_marketing_nucleus_engine_bg_nbdengine_2a9e36db -->|method| scripts_marketing_nucleus_engine_bg_nbdengine_pr_f5a1c982
     scripts_graphic_design_visual_engine_generativep_a7d509c0 -->|calls| scripts_graphic_design_visual_engine_palettegene_ab4b502f
     scripts_graphic_design_visual_engine_generativep_a7d509c0 -->|calls| scripts_graphic_design_visual_engine_palettegene_d8698390
     scripts_graphic_design_visual_engine_run_self_te_0b5fe8fc -->|calls| scripts_graphic_design_visual_engine_palettegene_834d90d9
     scripts_graphic_design_visual_engine_run_self_te_0b5fe8fc -->|calls| scripts_graphic_design_visual_engine_palettegene_ab4b502f
     scripts_graphic_design_visual_engine_run_self_te_0b5fe8fc -->|calls| scripts_graphic_design_visual_engine_palettegene_d8698390
-    scripts_graphic_design_visual_engine_run_self_te_0b5fe8fc -->|calls| scripts_graphic_design_visual_engine_palettegene_d5b78e4c
     scripts_graphic_design_visual_engine_run_self_te_0b5fe8fc -->|calls| scripts_graphic_design_visual_engine_generativep_020abc00
-    scripts_marketing_nucleus_engine_run_verificatio_ef97097f -->|calls| scripts_marketing_nucleus_engine_bg_nbdengine_pr_f5a1c982
-    %% Omitted for readability: 100 nodes, 0 edges
+    %% Omitted for readability: 105 nodes, 0 edges
     class scripts_graphic_design_visual_engine_palettegene_2f7b1ecf klass;
     class scripts_graphic_design_visual_engine_run_self_te_0b5fe8fc function;
     class scripts_graphic_design_visual_engine_generativep_020abc00 klass;
@@ -2890,14 +2884,14 @@ flowchart LR
     class scripts_graphic_design_visual_engine_palettegene_c3b4a4ab function;
     class scripts_graphic_design_visual_engine_palettegene_ab4b502f function;
     class scripts_graphic_design_visual_engine_palettegene_d8698390 function;
-    class scripts_graphic_design_visual_engine_palettegene_cad51f90 function;
-    class scripts_graphic_design_visual_engine_palettegene_c91eddad function;
-    class scripts_graphic_design_visual_engine_palettegene_d5b78e4c function;
-    class scripts_marketing_nucleus_engine_run_verificatio_ef97097f function;
-    class scripts_marketing_nucleus_engine_bg_nbdengine_2a9e36db klass;
-    class scripts_marketing_nucleus_engine_bg_nbdengine_pr_f5a1c982 function;
+    class scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 klass;
+    class scripts_image_vision_nucleus_engine_colorspacema_2830666e function;
+    class scripts_image_vision_nucleus_engine_colorspacema_3515cadd function;
+    class scripts_image_vision_nucleus_engine_colorspacema_0ed59fc1 function;
+    class scripts_image_vision_nucleus_engine_colorspacema_bf01af6a function;
+    class scripts_image_vision_nucleus_engine_colorspacema_39a5b669 function;
     class ponytail_pi_extension_test_helpers_test_2bad389e test;
-    class scripts_image_vision_nucleus_engine_run_tests_fa28542f function;
+    class scripts_marketing_nucleus_engine_run_verificatio_ef97097f function;
     class scripts_test_brain_run_all_d04a7277 test;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
@@ -3170,8 +3164,8 @@ flowchart LR
       <tr><td><code>scripts/graphic_design_visual_engine.py</code></td><td>28 nodes</td></tr>
 <tr><td><code>scripts/marketing_nucleus_engine.py</code></td><td>22 nodes</td></tr>
 <tr><td><code>learning/neurons/N036_fullstack_product_synthesizer.md</code></td><td>18 nodes</td></tr>
+<tr><td><code>scripts/image_vision_nucleus_engine.py</code></td><td>13 nodes</td></tr>
 <tr><td><code>ponytail/pi-extension/index.js</code></td><td>11 nodes</td></tr>
-<tr><td><code>scripts/image_vision_nucleus_engine.py</code></td><td>9 nodes</td></tr>
 <tr><td><code>scripts/claudia_live_watchdog.py</code></td><td>8 nodes</td></tr>
 <tr><td><code>scripts/test_brain.py</code></td><td>8 nodes</td></tr>
 <tr><td><code>pi-extension/test/extension.test.js</code></td><td>5 nodes</td></tr>
@@ -3179,7 +3173,7 @@ flowchart LR
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x60, calls x49, explains x23, method x17. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x53, calls x49, explains x28, method x22. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -4562,63 +4556,57 @@ flowchart LR
 
 <!-- ====== 16. Other ====== -->
 <h2 id="other">16. Other</h2>
-<p>Other groups implementation around learning, neurons, scripts, ponytail, mostly in scripts/image_vision_nucleus_engine.py, scripts/graphic_design_visual_engine.py, learning/neurons/N051_system_architecture_devops_mastery.md. This section covers 459 nodes and 406 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Other groups implementation around learning, neurons, scripts, ponytail, mostly in scripts/image_vision_nucleus_engine.py, scripts/graphic_design_visual_engine.py, learning/neurons/N051_system_architecture_devops_mastery.md. This section covers 461 nodes and 425 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Other (459 nodes, 406 edges)
+    %% Section: Other (461 nodes, 425 edges)
     subgraph other_scripts_image_vision_nucleus_engine_py_c18108d9["scripts/image_vision_nucleus_engine.py"]
-        scripts_image_vision_nucleus_engine_colorspacema_f993f2f8("ColorSpaceMath<br/><small>scripts/image_vision_nucleus_engine.py</small>")
         scripts_image_vision_nucleus_engine_generativegr_7abd7f76("GenerativeGraphExecutor<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_streamingtil_c7e254f7("StreamingTileProcessor<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_streamingtil_edab8255("process_tiled_convolution()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_colorspacema_2830666e("rgb_to_grayscale()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_colorspacema_3515cadd("rgb_to_hsv()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_colorspacema_0ed59fc1("hsv_to_rgb()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_colorspacema_bf01af6a("rgb_to_ycbcr()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_colorspacema_39a5b669("ycbcr_to_rgb()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_generativegr_f697021a("__init__()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_generativegr_340e9d0c("add_node()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_generativegr_739f3566("run_dag()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_geometricres_298a726b("GeometricRescaler<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_checkpointlo_eabfb942("CheckpointLoaderNode<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_checkpointlo_0808e002("execute()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_cliptextenco_e02dcc9b("CLIPTextEncodeNode<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_cliptextenco_6c37bac8("execute()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_comfynode_58ca4b80("ComfyNode<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_comfynode_in_59eee64f("__init__()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_comfynode_ex_88a74f68("execute()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_controlnetap_bc580037("ControlNetApplyNode<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_controlnetap_1556d5e7("execute()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_ksamplernode_8d3ba7b8("KSamplerNode<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_ksamplernode_012f57f9("execute()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_vaedecodenod_f5e532da("VAEDecodeNode<br/><small>scripts/image_vision_nucleus_engine.py</small>")
     end
     subgraph other_ponytail_hooks_ponytail_mode_tracker_js_00c57f5d["ponytail/hooks/ponytail-mode-tracker.js"]
         ponytail_hooks_ponytail_mode_tracker_febd017e("ponytail-mode-tracker.js")
         ponytail_hooks_ponytail_mode_tracker_finish_01f4ad14("finish()<br/><small>ponytail/hooks/ponytail-mode-tracker.js</small>")
     end
-    subgraph other_scripts_graphic_design_visual_engine_py_658ba4a3["scripts/graphic_design_visual_engine.py"]
-        scripts_graphic_design_visual_engine_vec2d_1d549919("Vec2D<br/><small>scripts/graphic_design_visual_engine.py</small>")
-        scripts_graphic_design_visual_engine_vec2d_init_e1765d3d("__init__()<br/><small>scripts/graphic_design_visual_engine.py</small>")
-    end
     ponytail_hooks_ponytail_activate_5d3f34a7("ponytail-activate.js")
     scripts_train_trading_engine_train_and_synthesiz_daac8636("and synthesize neuron()<br/><small>scripts/train_trading_engine.py</small>")
-    scripts_image_vision_nucleus_engine_streamingtil_c7e254f7 -->|method| scripts_image_vision_nucleus_engine_streamingtil_edab8255
-    scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 -->|method| scripts_image_vision_nucleus_engine_colorspacema_2830666e
-    scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 -->|method| scripts_image_vision_nucleus_engine_colorspacema_3515cadd
-    scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 -->|method| scripts_image_vision_nucleus_engine_colorspacema_0ed59fc1
-    scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 -->|method| scripts_image_vision_nucleus_engine_colorspacema_bf01af6a
-    scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 -->|method| scripts_image_vision_nucleus_engine_colorspacema_39a5b669
-    scripts_image_vision_nucleus_engine_generativegr_7abd7f76 -->|method| scripts_image_vision_nucleus_engine_generativegr_f697021a
-    scripts_image_vision_nucleus_engine_generativegr_7abd7f76 -->|method| scripts_image_vision_nucleus_engine_generativegr_340e9d0c
-    scripts_image_vision_nucleus_engine_generativegr_7abd7f76 -->|method| scripts_image_vision_nucleus_engine_generativegr_739f3566
-    scripts_graphic_design_visual_engine_vec2d_1d549919 -->|method| scripts_graphic_design_visual_engine_vec2d_init_e1765d3d
-    %% Omitted for readability: 441 nodes, 0 edges
-    class scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 klass;
+    scripts_image_vision_nucleus_engine_checkpointlo_eabfb942 -->|method| scripts_image_vision_nucleus_engine_checkpointlo_0808e002
+    scripts_image_vision_nucleus_engine_cliptextenco_e02dcc9b -->|method| scripts_image_vision_nucleus_engine_cliptextenco_6c37bac8
+    scripts_image_vision_nucleus_engine_comfynode_58ca4b80 -->|method| scripts_image_vision_nucleus_engine_comfynode_in_59eee64f
+    scripts_image_vision_nucleus_engine_comfynode_58ca4b80 -->|method| scripts_image_vision_nucleus_engine_comfynode_ex_88a74f68
+    scripts_image_vision_nucleus_engine_controlnetap_bc580037 -->|method| scripts_image_vision_nucleus_engine_controlnetap_1556d5e7
+    scripts_image_vision_nucleus_engine_ksamplernode_8d3ba7b8 -->|method| scripts_image_vision_nucleus_engine_ksamplernode_012f57f9
+    %% Omitted for readability: 443 nodes, 0 edges
     class scripts_image_vision_nucleus_engine_generativegr_7abd7f76 klass;
-    class scripts_image_vision_nucleus_engine_streamingtil_c7e254f7 async;
-    class scripts_image_vision_nucleus_engine_streamingtil_edab8255 function;
-    class scripts_image_vision_nucleus_engine_colorspacema_2830666e function;
-    class scripts_image_vision_nucleus_engine_colorspacema_3515cadd function;
-    class scripts_image_vision_nucleus_engine_colorspacema_0ed59fc1 function;
-    class scripts_image_vision_nucleus_engine_colorspacema_bf01af6a function;
-    class scripts_image_vision_nucleus_engine_colorspacema_39a5b669 function;
-    class scripts_image_vision_nucleus_engine_generativegr_f697021a function;
-    class scripts_image_vision_nucleus_engine_generativegr_340e9d0c function;
-    class scripts_image_vision_nucleus_engine_generativegr_739f3566 function;
+    class scripts_image_vision_nucleus_engine_geometricres_298a726b klass;
+    class scripts_image_vision_nucleus_engine_checkpointlo_eabfb942 klass;
+    class scripts_image_vision_nucleus_engine_checkpointlo_0808e002 function;
+    class scripts_image_vision_nucleus_engine_cliptextenco_e02dcc9b entry;
+    class scripts_image_vision_nucleus_engine_cliptextenco_6c37bac8 function;
+    class scripts_image_vision_nucleus_engine_comfynode_58ca4b80 klass;
+    class scripts_image_vision_nucleus_engine_comfynode_in_59eee64f function;
+    class scripts_image_vision_nucleus_engine_comfynode_ex_88a74f68 function;
+    class scripts_image_vision_nucleus_engine_controlnetap_bc580037 klass;
+    class scripts_image_vision_nucleus_engine_controlnetap_1556d5e7 function;
+    class scripts_image_vision_nucleus_engine_ksamplernode_8d3ba7b8 klass;
+    class scripts_image_vision_nucleus_engine_ksamplernode_012f57f9 function;
+    class scripts_image_vision_nucleus_engine_vaedecodenod_f5e532da klass;
     class ponytail_hooks_ponytail_mode_tracker_febd017e module;
     class ponytail_hooks_ponytail_mode_tracker_finish_01f4ad14 function;
-    class scripts_graphic_design_visual_engine_vec2d_1d549919 klass;
-    class scripts_graphic_design_visual_engine_vec2d_init_e1765d3d function;
     class ponytail_hooks_ponytail_activate_5d3f34a7 module;
     class scripts_train_trading_engine_train_and_synthesiz_daac8636 function;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
@@ -4889,7 +4877,7 @@ flowchart LR
     <h4>Key Files</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>scripts/image_vision_nucleus_engine.py</code></td><td>29 nodes</td></tr>
+      <tr><td><code>scripts/image_vision_nucleus_engine.py</code></td><td>30 nodes</td></tr>
 <tr><td><code>learning/neurons/N051_system_architecture_devops_mastery.md</code></td><td>19 nodes</td></tr>
 <tr><td><code>learning/neurons/N054_system_design_planning_mastery.md</code></td><td>19 nodes</td></tr>
 <tr><td><code>scripts/graphic_design_visual_engine.py</code></td><td>19 nodes</td></tr>
@@ -4901,7 +4889,7 @@ flowchart LR
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x321, calls x26, method x16, explains x14. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x330, calls x27, method x20, references x13. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -4912,8 +4900,8 @@ flowchart LR
   <div class="card">
     <h4>Graph</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>Nodes</td><td>1423</td></tr>
-      <tr><td>Edges</td><td>1566</td></tr>
+      <tr><td>Nodes</td><td>1425</td></tr>
+      <tr><td>Edges</td><td>1567</td></tr>
       <tr><td>Hyperedges</td><td>0</td></tr>
       <tr><td>Communities</td><td>160</td></tr>
       <tr><td>Documented Sections</td><td>15</td></tr>
@@ -4922,7 +4910,7 @@ flowchart LR
   <div class="card">
     <h4>Edge Confidence</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>EXTRACTED</td><td>1538</td></tr>
+      <tr><td>EXTRACTED</td><td>1539</td></tr>
       <tr><td>INFERRED</td><td>28</td></tr>
       <tr><td>AMBIGUOUS</td><td>0</td></tr>
     </table>
@@ -4931,7 +4919,7 @@ flowchart LR
 
 <div style="text-align:center; padding:40px 0; color: var(--muted); font-size:0.9rem;">
   <p>Agent_Claudia_Autonomus — Architecture Documentation</p>
-  <p>Generated: 2026-08-25 03:26 UTC · graphify callflow-html</p>
+  <p>Generated: 2026-08-25 03:32 UTC · graphify callflow-html</p>
 </div>
 
 </div><!-- .container -->
