@@ -1,16 +1,16 @@
 # Graph Report - Agent_Claudia_Autonomus  (2026-08-25)
 
 ## Corpus Check
-- 218 files · ~208,426 words
+- 219 files · ~226,888 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1540 nodes · 1707 edges · 180 communities (154 shown, 26 thin omitted)
+- 1541 nodes · 1707 edges · 181 communities (155 shown, 26 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 28 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `b2f03a31`
+- Built from commit: `3427c83a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -176,7 +176,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (180 total, 26 thin omitted)
+## Communities (181 total, 26 thin omitted)
 
 ### Community 0 - "run_deterministic_tests"
 Cohesion: 0.06
@@ -267,12 +267,12 @@ Cohesion: 0.11
 Nodes (17): 1. Arsitektur Event-Driven vs Ilusi Simulasi Vektorik, 2. Walk-Forward Analysis (WFA) & Rolling Horizon Optimization, 3. Combinatorial Purged Cross-Validation (CPCV), 4. Probabilistic Sharpe Ratio (PSR) & Deflated Sharpe Ratio (DSR), 5. Implementasi Deterministik Python Standard Library, 6. Invarian Operasional & Quant Guardrails, A. 7 Jebakan Fatal Simulasi Vektorik (*Vectorized Backtest Pitfalls*), A. Dua Pilar CPCV (Marcos López de Prado) (+9 more)
 
 ### Community 22 - "ponytail-config.js"
-Cohesion: 0.15
-Nodes (14): fs, getClaudeDir(), getConfigDir(), getConfigPath(), getHideStatus(), getQuietStartup(), isShellSafe(), os (+6 more)
+Cohesion: 0.14
+Nodes (15): fs, getClaudeDir(), getConfigDir(), getConfigPath(), getHideStatus(), getQuietStartup(), normalizeConfigMode(), os (+7 more)
 
 ### Community 23 - "index.js"
-Cohesion: 0.16
-Nodes (13): normalizeConfigMode(), normalizePersistedMode(), RUNTIME_MODES, {
+Cohesion: 0.18
+Nodes (11): normalizePersistedMode(), {
   DEFAULT_MODE,
   RUNTIME_MODES,
   getDefaultMode,
@@ -282,7 +282,7 @@ Nodes (13): normalizeConfigMode(), normalizePersistedMode(), RUNTIME_MODES, {
   normalizePersistedMode,
   isDeactivationCommand,
   writeDefaultMode,
-}, { getPonytailInstructions, filterSkillBodyForMode }, parsePonytailCommand(), ponytailExtension(), readDefaultMode (+5 more)
+}, { getPonytailInstructions, filterSkillBodyForMode }, parsePonytailCommand(), ponytailExtension(), readDefaultMode, readQuietStartup, require (+3 more)
 
 ### Community 24 - "zolu_learn_server.js"
 Cohesion: 0.12
@@ -357,14 +357,14 @@ Cohesion: 0.18
 Nodes (10): 1. Uniswap v3 Concentrated Liquidity Math & Tick Geometry, 2. Impermanent Loss (IL) & Capital Efficiency Calculus, 3. Flash Loan Atomic Arbitrage Architecture, 4. Toxic MEV Dynamics: Sandwich Attacks & JIT Liquidity, 🏛️ 5 Pilar DeFi Liquidity Engineering & MEV Defense, 5. Searcher-Builder Infrastructure: Flashbots & Jito Relays, 🧠 Domain & Arsitektur, 🛡️ Invariant Ringkas (Operational Rules) (+2 more)
 
 ### Community 42 - "ponytail-activate.js"
-Cohesion: 0.20
-Nodes (9): claudeDir, {
+Cohesion: 0.18
+Nodes (10): claudeDir, {
   clearMode,
   isCodex,
   isCopilot,
   setMode,
   writeHookOutput,
-}, fs, { getDefaultMode, getClaudeDir, isShellSafe }, { getPonytailInstructions }, mode, output, path (+1 more)
+}, fs, { getDefaultMode, getClaudeDir, isShellSafe }, { getPonytailInstructions }, mode, output, path (+2 more)
 
 ### Community 43 - "IconBuilder24"
 Cohesion: 0.25
@@ -630,12 +630,12 @@ Nodes (3): Demand-driven tile chunking pipeline for low-memory image processing.
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
+- **Why does `Color` connect `Color` to `run_self_tests`?**
+  _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **Why does `Vec2D` connect `Vec2D` to `CubicBezier`, `run_self_tests`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **Why does `run_tests()` connect `run_tests` to `ImageMatrix`, `ConvolutionKernelEngine`, `ColorSpaceMath`, `Any`, `RasterToVectorTracer`, `GenerativeGraphExecutor`, `.process_tiled_convolution`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **Why does `Color` connect `Color` to `run_self_tests`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **What connects `MOVIES_DATA`, `WATCH_PROGRESS`, `name` to the rest of the system?**
   _696 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `run_deterministic_tests` be split into smaller, more focused modules?**

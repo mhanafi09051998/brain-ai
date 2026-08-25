@@ -1296,21 +1296,21 @@
     "semantic_hash": ""
   },
   "goblix/data/movies.json": {
-    "mtime": 1787648115.3105273,
-    "seen": 1787648145.847183,
-    "ast_hash": "c4bbb41c5a401f44084fba004fdb0181",
+    "mtime": 1787648475.4871356,
+    "seen": 1787648512.1968448,
+    "ast_hash": "f1d07fd8899d7738b6b3c99df351eac4",
     "semantic_hash": ""
   },
   "goblix/public/app.js": {
-    "mtime": 1787648339.152448,
-    "seen": 1787648366.2522488,
-    "ast_hash": "cf3233e6fa47e6eb42671c7b34702ffb",
+    "mtime": 1787648484.7574215,
+    "seen": 1787648512.1968448,
+    "ast_hash": "06caa1f1003c53580dd3df8c6be885e6",
     "semantic_hash": ""
   },
   "goblix/server.js": {
-    "mtime": 1787638886.424585,
-    "seen": 1787638966.2791307,
-    "ast_hash": "baeae66691696acc56bde455cb75f48a",
+    "mtime": 1787648687.3000484,
+    "seen": 1787648717.7698174,
+    "ast_hash": "5fdd60828f0f78a93e726ba2d8f984ce",
     "semantic_hash": ""
   },
   "scripts/swot_engine.py": {
@@ -1395,6 +1395,60 @@
     "mtime": 1787648110.6233182,
     "seen": 1787648145.847183,
     "ast_hash": "b8f886587f94c310a8b85e9e4664c79a",
+    "semantic_hash": ""
+  },
+  "scripts/get_backdrops.py": {
+    "mtime": 1787648412.064538,
+    "seen": 1787648512.1968448,
+    "ast_hash": "64ac6d43429305baf9a0ecbf6a79c8c7",
+    "semantic_hash": ""
+  },
+  "scratch_0.jpg": {
+    "mtime": 1787648440.874434,
+    "seen": 1787648512.1968448,
+    "ast_hash": "c04f8cf64fd59c5eed73b26ebe17f146",
+    "semantic_hash": ""
+  },
+  "scratch_1.jpg": {
+    "mtime": 1787648441.062552,
+    "seen": 1787648512.1968448,
+    "ast_hash": "ebe544f2d5224a3edf017e85b19dd2b0",
+    "semantic_hash": ""
+  },
+  "scratch_2.jpg": {
+    "mtime": 1787648441.2186825,
+    "seen": 1787648512.1968448,
+    "ast_hash": "510eae8175ed058b6309b1aa063a4d37",
+    "semantic_hash": ""
+  },
+  "valid_0.jpg": {
+    "mtime": 1787648459.9896483,
+    "seen": 1787648512.1968448,
+    "ast_hash": "510eae8175ed058b6309b1aa063a4d37",
+    "semantic_hash": ""
+  },
+  "valid_1.jpg": {
+    "mtime": 1787648460.1522875,
+    "seen": 1787648512.1968448,
+    "ast_hash": "311157176391c93840ee0fbe4c642f9d",
+    "semantic_hash": ""
+  },
+  "valid_2.jpg": {
+    "mtime": 1787648460.3328855,
+    "seen": 1787648512.1968448,
+    "ast_hash": "6a85adfbddabc38135f6b113fb957da2",
+    "semantic_hash": ""
+  },
+  "valid_3.jpg": {
+    "mtime": 1787648460.5344446,
+    "seen": 1787648512.1968448,
+    "ast_hash": "4db2f66a7873b8185d2ba2f4d859d5bc",
+    "semantic_hash": ""
+  },
+  "valid_4.jpg": {
+    "mtime": 1787648460.7012708,
+    "seen": 1787648512.1968448,
+    "ast_hash": "47cc2d4c21b8bdd568d102b78034debc",
     "semantic_hash": ""
   }
 }

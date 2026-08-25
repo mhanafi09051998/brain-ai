@@ -173,6 +173,17 @@ async function handleRoute() {
   window.scrollTo({ top: 0, behavior: 'instant' });
   const path = window.location.pathname;
 
+  const navEl = document.getElementById('navbar');
+  const footerEl = document.querySelector('footer');
+
+  if (path.startsWith('/watch/')) {
+    if (navEl) navEl.classList.add('hidden');
+    if (footerEl) footerEl.classList.add('hidden');
+  } else {
+    if (navEl) navEl.classList.remove('hidden');
+    if (footerEl) footerEl.classList.remove('hidden');
+  }
+
   if (MOVIES_DATA.length === 0) {
     await fetchMovies();
   }
@@ -378,80 +389,75 @@ function renderMovieDetailPage(slug) {
   `;
 }
 
-// --- 4C. CINEMA STREAMING PLAYER VIEW (PRO CINEMA SUITE) ---
+// --- 4C. CINEMA STREAMING PLAYER VIEW (PRO CINEMA SUITE - ZERO SCROLL DESKTOP FIT) ---
 function renderWatchPage(slug) {
   const movie = MOVIES_DATA.find(m => m.slug === slug || m.id === slug) || MOVIES_DATA[0];
   const main = document.getElementById('app-root');
   const progressInfo = WATCH_PROGRESS[movie.id] || WATCH_PROGRESS[movie.slug];
 
   main.innerHTML = `
-    <div class="min-h-screen bg-black flex flex-col justify-between pt-14">
+    <div class="fixed inset-0 z-50 bg-black flex flex-col justify-between overflow-hidden h-screen w-screen select-none">
       
-      <!-- Top Cinema Navbar Overlay -->
-      <div class="bg-gray-950/90 backdrop-blur px-4 sm:px-8 py-3 border-b border-gray-800 flex items-center justify-between z-30">
-        <div class="flex items-center space-x-3 sm:space-x-4">
-          <button onclick="navigateTo('/movie/${movie.slug}')" class="text-gray-400 hover:text-white flex items-center space-x-1.5 font-semibold text-xs sm:text-sm transition flex-shrink-0">
-            <i class="fa-solid fa-arrow-left text-sm sm:text-base"></i>
+      <!-- Top Cinema Header (Compact & Responsive) -->
+      <header class="h-12 sm:h-14 bg-gray-950/95 backdrop-blur px-3 sm:px-6 border-b border-gray-800/80 flex items-center justify-between z-30 flex-shrink-0">
+        <div class="flex items-center space-x-3 sm:space-x-4 min-w-0">
+          <button onclick="navigateTo('/movie/${movie.slug}')" class="text-gray-300 hover:text-white flex items-center space-x-1.5 font-semibold text-xs sm:text-sm transition flex-shrink-0 bg-gray-800/80 hover:bg-gray-700 px-3 py-1.5 rounded-md">
+            <i class="fa-solid fa-arrow-left text-xs sm:text-sm"></i>
             <span class="hidden sm:inline">Kembali</span>
           </button>
           <span class="text-gray-700 hidden sm:inline">|</span>
-          <h2 class="text-white font-bold text-xs sm:text-sm md:text-base truncate max-w-[180px] sm:max-w-md">${movie.title}</h2>
+          <h2 class="text-white font-bold text-xs sm:text-sm md:text-base truncate max-w-[200px] sm:max-w-md">${movie.title}</h2>
+          <span class="bg-red-600/90 text-white text-[9px] sm:text-[10px] px-2 py-0.5 rounded font-black tracking-wider uppercase hidden md:inline">1080p BluRay</span>
         </div>
 
-        <div class="flex items-center space-x-2 text-[10px] sm:text-xs">
+        <div class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0 text-xs">
           <!-- Quality Selector -->
-          <select id="qualitySelect" onchange="changeQuality(this.value)" class="bg-gray-900 text-white text-xs border border-gray-700 rounded px-2 py-1 focus:outline-none focus:border-red-600">
+          <select id="qualitySelect" onchange="changeQuality(this.value)" class="bg-gray-900 text-white text-xs border border-gray-700 rounded px-2 py-1 focus:outline-none focus:border-red-600 cursor-pointer">
             <option value="1080p">1080p BluRay</option>
             <option value="720p">720p HD</option>
             <option value="480p">480p SD</option>
           </select>
-          <span class="bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded font-semibold border border-yellow-500/30 hidden sm:inline">Sub Indo</span>
+          <span class="bg-yellow-500/20 text-yellow-400 px-2 py-0.5 rounded font-semibold border border-yellow-500/30 text-[10px] sm:text-xs hidden sm:inline">Sub Indo</span>
         </div>
-      </div>
+      </header>
 
-      <!-- Main Video Stream Area (Responsive Aspect Ratio) -->
-      <div class="relative w-full max-w-6xl mx-auto flex-1 flex flex-col items-center justify-center p-2 sm:p-4 md:p-6">
-        <div class="w-full aspect-video bg-black rounded-lg sm:rounded-xl overflow-hidden shadow-2xl border border-gray-800 relative group">
-          <video id="cinemaPlayer" class="w-full h-full" controls playsinline preload="auto" poster="${movie.backdrop}">
-            <source id="videoSource" src="${movie.streamUrl}" type="video/mp4">
-            <track id="subTrack" label="Bahasa Indonesia" kind="subtitles" srclang="id" src="/sub_indo.vtt" default>
-            Browser Anda tidak mendukung streaming video HTML5.
-          </video>
-        </div>
-
-        <!-- Player Auxiliary Controls -->
-        <div class="w-full flex flex-wrap items-center justify-between gap-3 pt-3 px-2 text-xs text-gray-400">
-          <div class="flex items-center space-x-3">
-            <label class="flex items-center space-x-1 cursor-pointer">
-              <span>Kecepatan:</span>
-              <select onchange="changeSpeed(this.value)" class="bg-gray-900 text-white text-xs border border-gray-700 rounded px-2 py-0.5">
-                <option value="0.75">0.75x</option>
-                <option value="1" selected>1.0x (Normal)</option>
-                <option value="1.25">1.25x</option>
-                <option value="1.5">1.5x</option>
-                <option value="2">2.0x</option>
-              </select>
-            </label>
-          </div>
-
-          <div class="flex items-center space-x-3">
-            <button onclick="togglePiP()" class="hover:text-white transition flex items-center space-x-1">
-              <i class="fa-solid fa-clone"></i>
-              <span class="hidden sm:inline">Picture-in-Picture</span>
-            </button>
+      <!-- Main Video Stream Area (Zero-Scroll Auto-Fitted to Viewport) -->
+      <main class="relative flex-1 w-full flex items-center justify-center p-2 sm:p-4 min-h-0 overflow-hidden bg-black">
+        <div class="relative w-full h-full max-w-[1400px] flex items-center justify-center">
+          <div class="relative max-h-full max-w-full aspect-video flex items-center justify-center bg-black rounded-lg sm:rounded-xl overflow-hidden shadow-2xl border border-gray-800/80 group" style="max-height: calc(100vh - 110px); width: auto;">
+            <video id="cinemaPlayer" class="w-full h-full max-h-full object-contain" controls playsinline preload="auto" poster="${movie.backdrop}">
+              <source id="videoSource" src="${movie.streamUrl}" type="video/mp4">
+              <track id="subTrack" label="Bahasa Indonesia" kind="subtitles" srclang="id" src="/sub_indo.vtt" default>
+              Browser Anda tidak mendukung streaming video HTML5.
+            </video>
           </div>
         </div>
-      </div>
+      </main>
 
-      <!-- Cinema Info Footer -->
-      <div class="bg-gray-950 px-4 sm:px-8 md:px-12 py-3 sm:py-4 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4 text-[11px] sm:text-xs text-gray-400 text-center sm:text-left">
-        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-3 sm:gap-6">
-          <span><i class="fa-solid fa-closed-captioning text-yellow-400 text-xs sm:text-sm mr-1"></i> Subtitle: <b>Bahasa Indonesia (Resmi)</b></span>
-          <span><i class="fa-solid fa-bolt text-green-400 text-xs sm:text-sm mr-1"></i> P2P Mesh Caching: <b>Aktif</b></span>
-          <span class="hidden md:inline"><i class="fa-solid fa-volume-high text-cyan-400 text-xs sm:text-sm mr-1"></i> Audio: <b>${movie.audio}</b></span>
+      <!-- Cinema Info Footer (Compact Pro Bar) -->
+      <footer class="h-10 sm:h-11 bg-gray-950/95 backdrop-blur px-3 sm:px-6 border-t border-gray-800/80 flex items-center justify-between text-[11px] sm:text-xs text-gray-400 flex-shrink-0 z-30">
+        <div class="flex items-center space-x-3 sm:space-x-6 truncate">
+          <span><i class="fa-solid fa-closed-captioning text-yellow-400 text-xs mr-1"></i> Subtitle: <b class="text-gray-300">Bahasa Indonesia (Resmi)</b></span>
+          <span class="hidden md:inline"><i class="fa-solid fa-bolt text-green-400 text-xs mr-1"></i> P2P Mesh Caching: <b class="text-gray-300">Aktif</b></span>
+          <span class="hidden lg:inline"><i class="fa-solid fa-volume-high text-cyan-400 text-xs mr-1"></i> Audio: <b class="text-gray-300">${movie.audio}</b></span>
         </div>
-        <span class="text-gray-500 text-[10px] sm:text-xs">Goblix Autonomous Cinema Engine v5.0</span>
-      </div>
+        <div class="flex items-center space-x-3 flex-shrink-0">
+          <label class="flex items-center space-x-1 cursor-pointer">
+            <span class="hidden sm:inline text-gray-400">Kecepatan:</span>
+            <select onchange="changeSpeed(this.value)" class="bg-gray-900 text-white text-[11px] border border-gray-700 rounded px-1.5 py-0.5">
+              <option value="0.75">0.75x</option>
+              <option value="1" selected>1.0x</option>
+              <option value="1.25">1.25x</option>
+              <option value="1.5">1.5x</option>
+              <option value="2">2.0x</option>
+            </select>
+          </label>
+          <button onclick="togglePiP()" class="hover:text-white transition flex items-center space-x-1 text-gray-400 hover:text-white" title="Picture-in-Picture">
+            <i class="fa-solid fa-clone text-xs"></i>
+            <span class="hidden sm:inline">PiP</span>
+          </button>
+        </div>
+      </footer>
 
     </div>
   `;
