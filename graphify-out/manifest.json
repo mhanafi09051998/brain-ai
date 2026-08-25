@@ -1338,9 +1338,9 @@
     "semantic_hash": ""
   },
   "goblix/public/index.html": {
-    "mtime": 1787651042.6715226,
-    "seen": 1787651072.231063,
-    "ast_hash": "34450e99daecb0e70761208d5889127a",
+    "mtime": 1787651188.168606,
+    "seen": 1787651218.1162481,
+    "ast_hash": "1148a1069febbdac39c8175fd104bba5",
     "semantic_hash": ""
   },
   "learning/neurons/N056_strategic_swot_and_tows_matrix_a.md": {
@@ -1458,15 +1458,15 @@
     "semantic_hash": ""
   },
   "goblix/public/js/app.js": {
-    "mtime": 1787650730.3795497,
-    "seen": 1787650769.7185352,
-    "ast_hash": "16860f03c5dc6d7a85fcda69111901b6",
+    "mtime": 1787651179.5092757,
+    "seen": 1787651218.1162481,
+    "ast_hash": "78d9cf8af2c30118ce41496645b84a47",
     "semantic_hash": ""
   },
   "goblix/public/js/auth_views.js": {
-    "mtime": 1787649273.767397,
-    "seen": 1787649358.1128745,
-    "ast_hash": "d5e429908c89b6865a1c945fa47856a3",
+    "mtime": 1787651133.2144046,
+    "seen": 1787651218.1162481,
+    "ast_hash": "de7ec7c9d47c45321e45f0ab6d277799",
     "semantic_hash": ""
   },
   "goblix/public/js/player.js": {
