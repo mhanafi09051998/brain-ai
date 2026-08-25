@@ -97,7 +97,7 @@ export function renderHomePage() {
             <i class="fa-solid fa-play text-base sm:text-lg"></i>
             <span>${hasResume ? 'Lanjutkan Menonton (' + formatTime(progressInfo.currentTime) + ')' : 'Putar Film'}</span>
           </button>
-          <button onclick="navigateTo('/movie/${featured.slug}')" class="flex items-center justify-center space-x-2 bg-gray-800/80 sm:bg-gray-700/80 backdrop-blur text-white px-5 sm:px-7 py-3 sm:py-3.5 rounded-md font-semibold hover:bg-gray-600 transition active:scale-95 text-sm sm:text-base">
+          <button onclick="showMovieModal('${featured.slug}')" class="flex items-center justify-center space-x-2 bg-gray-800/80 sm:bg-gray-700/80 backdrop-blur text-white px-5 sm:px-7 py-3 sm:py-3.5 rounded-md font-semibold hover:bg-gray-600 transition active:scale-95 text-sm sm:text-base">
             <i class="fa-solid fa-circle-info text-base sm:text-lg"></i>
             <span>Selengkapnya</span>
           </button>
@@ -157,10 +157,10 @@ export function renderHomePage() {
               const p = state.watchProgress[movie.id] || state.watchProgress[movie.slug];
               const isInList = state.myList.includes(movie.id) || state.myList.includes(movie.slug);
               return `
-              <div onclick="navigateTo('/movie/${movie.slug}')" class="group relative rounded-lg overflow-hidden bg-gray-900 cursor-pointer transition-all duration-300 hover:scale-105 hover:z-30 hover:shadow-2xl hover:shadow-red-600/20 border border-gray-800 hover:border-red-600 flex flex-col">
+              <div onclick="showMovieModal('${movie.slug}')" class="group relative rounded-lg overflow-hidden bg-gray-900 cursor-pointer transition-all duration-300 hover:scale-105 hover:z-30 hover:shadow-2xl hover:shadow-red-600/20 border border-gray-800 hover:border-red-600 flex flex-col">
                 <div class="aspect-[2/3] w-full bg-cover bg-center relative" style="background-image: url('${movie.poster}');">
                   <div class="absolute top-1.5 left-1.5 sm:top-2 sm:left-2 flex flex-col gap-1">
-                    <span class="bg-red-600 text-[9px] sm:text-[10px] font-black px-1.5 py-0.5 rounded uppercase text-white">${movie.quality}</span>
+                    <span class="bg-red-600 text-[9px] sm:text-[10px] font-black px-1.5 py-0.5 rounded uppercase text-white">${movie.quality || '1080p'}</span>
                     <span class="bg-yellow-500 text-black text-[9px] sm:text-[10px] font-extrabold px-1.5 py-0.5 rounded">SUB INDO</span>
                   </div>
                   <button onclick="event.stopPropagation(); toggleMyList('${movie.id}')" class="absolute top-1.5 right-1.5 sm:top-2 sm:right-2 w-7 h-7 rounded-full bg-black/70 hover:bg-red-600 text-white flex items-center justify-center transition border border-gray-700 hover:border-red-600" title="Daftar Saya">
@@ -177,8 +177,8 @@ export function renderHomePage() {
                 <div class="p-2.5 sm:p-3.5 bg-gradient-to-t from-black via-black/90 to-transparent flex-1 flex flex-col justify-between">
                   <h3 class="font-bold text-xs sm:text-sm text-white truncate group-hover:text-red-500 transition">${movie.title}</h3>
                   <div class="flex items-center justify-between text-[10px] sm:text-[11px] text-gray-400 mt-1">
-                    <span class="text-green-400 font-semibold">${movie.matchScore}</span>
-                    <span>${movie.year}</span>
+                    <span class="text-green-400 font-semibold">${movie.matchScore || '98%'}</span>
+                    <span>${movie.year || '2023'}</span>
                   </div>
                 </div>
               </div>
@@ -187,6 +187,83 @@ export function renderHomePage() {
         `}
       </div>
     </section>
+  `;
+}
+
+// --- NETFLIX QUICK PREVIEW MODAL (ZERO PAGE RELOAD POPUP) ---
+export function showMovieModal(slug) {
+  const modalId = 'movieDetailModal';
+  let modal = document.getElementById(modalId);
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = modalId;
+    document.body.appendChild(modal);
+  }
+
+  const movie = state.moviesData.find(m => m.slug === slug || m.id === slug) || state.moviesData[0];
+  if (!movie) return;
+
+  const progressInfo = state.watchProgress[movie.id] || state.watchProgress[movie.slug];
+  const isInList = state.myList.includes(movie.id) || state.myList.includes(movie.slug);
+  const genres = Array.isArray(movie.genres) ? movie.genres : [];
+  const cast = Array.isArray(movie.cast) ? movie.cast : [];
+  const director = movie.director || 'Sutradara';
+  const synopsis = movie.synopsis || 'Sinopsis belum tersedia.';
+
+  modal.innerHTML = `
+    <div class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 overflow-y-auto" onclick="if(event.target === this) document.getElementById('${modalId}').remove()">
+      <div class="bg-gray-950 border border-gray-800 rounded-2xl max-w-3xl w-full overflow-hidden shadow-2xl relative my-auto animate-fade-in text-white">
+        
+        <!-- Modal Backdrop Header (16:9 Banner with Close Button) -->
+        <div class="relative h-60 sm:h-80 md:h-96 w-full bg-cover bg-[center_top]" style="background-image: url('${movie.backdrop || movie.poster}');">
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
+          
+          <!-- Close Button -->
+          <button onclick="document.getElementById('${modalId}').remove()" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/70 hover:bg-red-600 text-white flex items-center justify-center transition border border-gray-700 shadow-lg text-sm z-20">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+
+          <!-- Banner Floating Actions -->
+          <div class="absolute bottom-4 left-4 sm:left-8 right-4 sm:right-8 flex flex-col space-y-2 z-10">
+            <h2 class="text-xl sm:text-3xl md:text-4xl font-extrabold text-white leading-tight drop-shadow-lg">${movie.title}</h2>
+            
+            <div class="flex flex-wrap items-center gap-3 pt-1">
+              <button onclick="document.getElementById('${modalId}').remove(); navigateTo('/watch/${movie.slug}')" class="flex items-center space-x-2 bg-white text-black px-6 sm:px-8 py-2.5 sm:py-3 rounded-md font-bold hover:bg-gray-200 transition active:scale-95 shadow-xl text-xs sm:text-sm">
+                <i class="fa-solid fa-play text-sm"></i>
+                <span>${progressInfo && progressInfo.currentTime > 10 ? 'Lanjutkan (' + formatTime(progressInfo.currentTime) + ')' : 'Putar Film'}</span>
+              </button>
+
+              <button onclick="toggleMyList('${movie.id}')" class="flex items-center space-x-2 bg-gray-900/80 border border-gray-700 text-white px-4 py-2.5 sm:py-3 rounded-md font-semibold hover:border-red-600 transition active:scale-95 text-xs sm:text-sm">
+                <i class="fa-solid ${isInList ? 'fa-check text-red-500' : 'fa-plus'}"></i>
+                <span>${isInList ? 'Tersimpan' : 'Daftar Saya'}</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Body Info & Metadata -->
+        <div class="p-4 sm:p-8 space-y-5">
+          <div class="flex flex-wrap items-center gap-2 sm:gap-3 text-xs sm:text-sm text-gray-300">
+            <span class="text-green-400 font-bold">${movie.matchScore || '98%'} Match</span>
+            <span class="bg-gray-800 text-white text-[10px] px-2 py-0.5 rounded font-bold">${movie.year || '2023'}</span>
+            <span class="border border-gray-700 text-gray-300 text-[10px] px-1.5 py-0.2 rounded font-semibold">${movie.ageRating || '13+'}</span>
+            <span>${movie.duration || '2 Jam'}</span>
+            <span class="bg-red-600 text-white text-[10px] px-2 py-0.5 rounded font-black uppercase tracking-wider">${movie.quality || '1080p BluRay'}</span>
+            <span class="bg-yellow-500 text-black text-[10px] px-2 py-0.5 rounded font-extrabold">SUB INDO</span>
+          </div>
+
+          <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">${synopsis}</p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-gray-400 pt-3 border-t border-gray-800/80">
+            <div><span class="text-gray-500">Sutradara:</span> <span class="text-gray-200 font-semibold">${director}</span></div>
+            <div><span class="text-gray-500">Pemeran:</span> <span class="text-gray-200 font-semibold">${cast.join(', ')}</span></div>
+            <div><span class="text-gray-500">Genre:</span> <span class="text-gray-200 font-semibold">${genres.join(' • ')}</span></div>
+            <div><span class="text-gray-500">Audio:</span> <span class="text-cyan-400 font-semibold">${movie.audio || 'Dolby AAC 5.1'}</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   `;
 }
 

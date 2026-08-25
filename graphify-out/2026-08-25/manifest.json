@@ -1308,9 +1308,9 @@
     "semantic_hash": ""
   },
   "goblix/server.js": {
-    "mtime": 1787649666.239562,
-    "seen": 1787649731.1382558,
-    "ast_hash": "7db08338cf7780e91749769b7d96e326",
+    "mtime": 1787650554.750682,
+    "seen": 1787650588.0776396,
+    "ast_hash": "43e54c5a12b9da0dfaa85a62326c3042",
     "semantic_hash": ""
   },
   "scripts/swot_engine.py": {
@@ -1569,6 +1569,12 @@
     "mtime": 1787650291.6329615,
     "seen": 1787650336.6473446,
     "ast_hash": "6be36191df257b0412d6043cdb450e20",
+    "semantic_hash": ""
+  },
+  "goblix/package.json": {
+    "mtime": 1787650476.4518833,
+    "seen": 1787650506.5660834,
+    "ast_hash": "836fc25d5ce70ba7ba56f059f1561b7e",
     "semantic_hash": ""
   }
 }

@@ -1458,9 +1458,9 @@
     "semantic_hash": ""
   },
   "goblix/public/js/app.js": {
-    "mtime": 1787649285.1519866,
-    "seen": 1787649358.1128745,
-    "ast_hash": "5be7f0eb79c87c2a6d4f57d418b33d65",
+    "mtime": 1787650730.3795497,
+    "seen": 1787650769.7185352,
+    "ast_hash": "16860f03c5dc6d7a85fcda69111901b6",
     "semantic_hash": ""
   },
   "goblix/public/js/auth_views.js": {
@@ -1488,9 +1488,9 @@
     "semantic_hash": ""
   },
   "goblix/public/js/views.js": {
-    "mtime": 1787650436.9812446,
-    "seen": 1787650461.205436,
-    "ast_hash": "f564198ba0efe7626cedd724f420fa25",
+    "mtime": 1787650722.947759,
+    "seen": 1787650769.7185352,
+    "ast_hash": "f0235088970753a9fca09d932599ca1c",
     "semantic_hash": ""
   },
   "goblix/src/auth.js": {
