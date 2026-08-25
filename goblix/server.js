@@ -326,17 +326,35 @@ const server = http.createServer(async (req, res) => {
 
   if (pathname.startsWith('/api/subtitles/')) {
     const subFile = path.join(PUBLIC_DIR, 'sub_indo.vtt');
-    fs.readFile(subFile, (err, data) => {
+    fs.readFile(subFile, 'utf8', (err, rawData) => {
       if (err) {
         res.writeHead(404, { 'Content-Type': 'text/plain' });
         res.end('Subtitle tidak ditemukan');
         return;
       }
+
+      // Strict Anti-Promo & Anti-Judi Online Sanitizer Filter
+      const FORBIDDEN_WORDS = [/slot/gi, /judi/gi, /gacor/gi, /poker/gi, /deposit/gi, /bonus/gi, /1xbet/gi, /sbobet/gi, /maxwin/gi, /pragmatic/gi, /zeus/gi, /link alternatif/gi, /promo/gi, /agen/gi];
+      const lines = rawData.split('\n');
+      const sanitizedLines = lines.map(line => {
+        let isForbidden = false;
+        for (const pattern of FORBIDDEN_WORDS) {
+          if (pattern.test(line)) {
+            isForbidden = true;
+            break;
+          }
+        }
+        return isForbidden ? '' : line;
+      });
+
+      const sanitizedVTT = sanitizedLines.join('\n');
+
       res.writeHead(200, {
         'Content-Type': 'text/vtt; charset=utf-8',
+        'Cache-Control': 'no-cache, no-store, must-revalidate',
         'Content-Disposition': 'inline; filename="subtitle_indonesia.vtt"'
       });
-      res.end(data);
+      res.end(sanitizedVTT);
     });
     return;
   }
