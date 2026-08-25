@@ -124,7 +124,7 @@ html = f"""<!DOCTYPE html>
         </button>
 
         <div class="pt-4 px-3 py-1.5 text-[11px] font-semibold tracking-wider text-slate-400 uppercase">Akses Ekosistem Zolu</div>
-        <a href="https://movie.zolu.my.id" target="_blank" class="w-full flex items-center gap-3 px-3.5 py-2 rounded-xl text-xs text-slate-400 hover:text-white hover:bg-surface-card transition">
+        <a href="https://goblix.my.id" target="_blank" class="w-full flex items-center gap-3 px-3.5 py-2 rounded-xl text-xs text-slate-400 hover:text-white hover:bg-surface-card transition">
           <i class="fa-solid fa-film text-purple-400 w-5"></i> Goblix Cinema
         </a>
         <a href="https://monitor.zolu.my.id" target="_blank" class="w-full flex items-center gap-3 px-3.5 py-2 rounded-xl text-xs text-slate-400 hover:text-white hover:bg-surface-card transition">
