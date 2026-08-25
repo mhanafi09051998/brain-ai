@@ -2,7 +2,6 @@ import os
 import sys
 import time
 import json
-import math
 import urllib.request
 import subprocess
 from datetime import datetime, timezone, timedelta
@@ -12,6 +11,7 @@ TELEGRAM_SERVER_BOT_TOKEN = os.environ.get("TELEGRAM_SERVER_BOT_TOKEN", "***TELE
 TELEGRAM_GOLD_BOT_TOKEN = os.environ.get("TELEGRAM_GOLD_BOT_TOKEN", "***TELEGRAM_TOKEN_REMOVED***")
 TARGET_CHAT_ID = int(os.environ.get("TELEGRAM_CHAT_ID", "***CHAT_ID_REMOVED***"))
 POLL_INTERVAL_SEC = 60
+MEMORY_LIMIT_MB = 450.0
 
 last_alert_time = {}
 
@@ -27,8 +27,7 @@ def send_telegram_msg(text: str) -> bool:
         req = urllib.request.Request(url, data=payload, headers={"Content-Type": "application/json"})
         with urllib.request.urlopen(req, timeout=10) as resp:
             return resp.status == 200
-    except Exception as e:
-        print(f"[ERROR] Failed to send Telegram: {e}")
+    except:
         return False
 
 def send_telegram_server(text: str) -> bool:
@@ -49,53 +48,27 @@ def send_telegram_server(text: str) -> bool:
 # ==========================================
 # FETCHERS
 # ==========================================
-TIINGO_TOKEN = "a1f5ac2a8a2a5917da307ec4035815397fa97fc4"
+TWELVE_API_KEY = "958225eca53b4155b28c09f3159e44a5"
 
-def fetch_klines_tiingo(ticker: str):
-    """Fetch 15m candles from Tiingo FX"""
-    url = f"https://api.tiingo.com/tiingo/fx/prices?tickers={ticker}&resampleFreq=15min&token={TIINGO_TOKEN}"
+def fetch_klines_twelve(ticker: str):
+    url = f"https://api.twelvedata.com/time_series?symbol={ticker}&interval=15min&outputsize=60&apikey={TWELVE_API_KEY}&timezone=Asia/Jakarta"
     try:
         req = urllib.request.Request(url, headers={"User-Agent": "Claudia/5.0"})
         with urllib.request.urlopen(req, timeout=10) as resp:
             data = json.loads(resp.read().decode())
-        if not data: return []
+        if "values" not in data: return []
         candles = []
-        for c in data:
+        for c in reversed(data["values"]):
             candles.append({
-                "time": c["date"],
+                "time": c["datetime"],
                 "open": float(c["open"]),
                 "high": float(c["high"]),
                 "low": float(c["low"]),
                 "close": float(c["close"])
             })
-        return candles # Ascending order (oldest first)
+        return candles
     except Exception as e:
-        print(f"[ERROR] fetch_tiingo {ticker}: {e}")
-        return []
-
-def fetch_klines_yahoo(ticker: str):
-    """Fetch 15m candles from Yahoo Finance"""
-    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker}?interval=15m&range=5d"
-    try:
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            data = json.loads(resp.read().decode())
-        result = data['chart']['result'][0]
-        quote = result['indicators']['quote'][0]
-        times = result['timestamp']
-        candles = []
-        for i in range(len(times)):
-            if quote['close'][i] is None: continue
-            candles.append({
-                "time": times[i],
-                "open": float(quote['open'][i]),
-                "high": float(quote['high'][i]),
-                "low": float(quote['low'][i]),
-                "close": float(quote['close'][i])
-            })
-        return candles # Ascending order
-    except Exception as e:
-        print(f"[ERROR] fetch_yahoo {ticker}: {e}")
+        print(f"[ERROR] fetch_twelve {ticker}: {e}")
         return []
 
 # ==========================================
@@ -136,11 +109,16 @@ def calc_indicators(candles):
     
     curr = closes[-1]
     bull_fvg = bear_fvg = False
+    fvg_zone = ""
     for i in range(len(candles)-10, len(candles)-1):
         if candles[i]["low"] > candles[i-2]["high"] and (candles[i]["low"] - candles[i-2]["high"] > 0.2 * atr):
-            if curr <= candles[i]["low"] + (0.2 * atr): bull_fvg = True
+            if curr <= candles[i]["low"] + (0.2 * atr):
+                bull_fvg = True
+                fvg_zone = f"${candles[i-2]['high']:.2f} - ${candles[i]['low']:.2f}"
         if candles[i]["high"] < candles[i-2]["low"] and (candles[i-2]["low"] - candles[i]["high"] > 0.2 * atr):
-            if curr >= candles[i]["high"] - (0.2 * atr): bear_fvg = True
+            if curr >= candles[i]["high"] - (0.2 * atr):
+                bear_fvg = True
+                fvg_zone = f"${candles[i]['high']:.2f} - ${candles[i-2]['low']:.2f}"
             
     return {
         "price": curr,
@@ -149,23 +127,22 @@ def calc_indicators(candles):
         "rsi": rsi,
         "atr": atr,
         "bullish_fvg": bull_fvg,
-        "bearish_fvg": bear_fvg
+        "bearish_fvg": bear_fvg,
+        "fvg_zone": fvg_zone
     }
 
 # ==========================================
 # SCAN LOGIC
 # ==========================================
 ASSETS = [
-    {"id": "GOLD", "pair": "XAUUSD", "source": "tiingo", "ticker": "xauusd"},
-    {"id": "SILVER", "pair": "XAGUSD", "source": "tiingo", "ticker": "xagusd"},
-    {"id": "OIL", "pair": "WTI (Crude)", "source": "yahoo", "ticker": "CL=F"}
+    {"id": "GOLD", "pair": "XAUUSD", "source": "twelve", "ticker": "XAU/USD"}
 ]
 
 def scan_asset(asset):
-    if asset["source"] == "tiingo":
-        candles = fetch_klines_tiingo(asset["ticker"])
+    if asset["source"] == "twelve":
+        candles = fetch_klines_twelve(asset["ticker"])
     else:
-        candles = fetch_klines_yahoo(asset["ticker"])
+        return
         
     if not candles: return
     ind = calc_indicators(candles)
@@ -187,7 +164,7 @@ def scan_asset(asset):
     rsi_bear_ok = 32 <= rsi <= 60
     fvg_bull = ind["bullish_fvg"]
     fvg_bear = ind["bearish_fvg"]
-    atr_ok = atr >= 1.5 if asset["id"] == "GOLD" else True # Allow lower ATR for Silver/Oil
+    atr_ok = atr >= 1.5
 
     bull_score = sum([trend_bull, price_above_ema, rsi_bull_ok, fvg_bull, atr_ok])
     bear_score = sum([trend_bear, price_below_ema, rsi_bear_ok, fvg_bear, atr_ok])
@@ -206,11 +183,13 @@ def scan_asset(asset):
     
     status_header = f"🔥 <b>EKSEKUSI ({score}/5)</b>" if score == 5 else f"⚠️ <b>SIAGA ({score}/5)</b>"
     
+    fvg_str = f"({ind['fvg_zone']})" if ind.get("fvg_zone") else ""
+    
     if is_bull:
         check_txt = f"""{"✅" if trend_bull else "❌"} Trend Bullish
 {"✅" if price_above_ema else "❌"} Price vs EMA20
 {"✅" if rsi_bull_ok else "❌"} RSI: {rsi:.1f}
-{"✅" if fvg_bull else "❌"} FVG Retest
+{"✅" if fvg_bull else "❌"} FVG Retest {fvg_str}
 {"✅" if atr_ok else "❌"} Volatilitas"""
         sl = round(price - (1.5 * atr), 2)
         tp1 = round(price + (3.0 * atr), 2)
@@ -219,7 +198,7 @@ def scan_asset(asset):
         check_txt = f"""{"✅" if trend_bear else "❌"} Trend Bearish
 {"✅" if price_below_ema else "❌"} Price vs EMA20
 {"✅" if rsi_bear_ok else "❌"} RSI: {rsi:.1f}
-{"✅" if fvg_bear else "❌"} FVG Retest
+{"✅" if fvg_bear else "❌"} FVG Retest {fvg_str}
 {"✅" if atr_ok else "❌"} Volatilitas"""
         sl = round(price + (1.5 * atr), 2)
         tp1 = round(price - (3.0 * atr), 2)
@@ -277,13 +256,13 @@ def check_memory_and_restart():
 
 def run_watchdog():
     msg = (
-        f"🟡 <b>CLAUDIA 5.0 MULTI-ASSET QUANT AKTIF</b>\n"
+        f"🟡 <b>CLAUDIA 5.0 DEDICATED GOLD QUANT AKTIF</b>\n"
         f"━━━━━━━━━━━━━━━━━━━━━\n"
-        f"⚡ <b>Fokus:</b> Emas (XAU), Perak (XAG), Minyak (WTI)\n"
+        f"⚡ <b>Fokus:</b> Emas Spot (XAU/USD)\n"
         f"📊 <b>Strategi:</b> SMC FVG + EMA 20/50 + ATR\n"
-        f"🛡️ <b>Engine:</b> Tiingo FX + Yahoo Finance\n"
+        f"🛡️ <b>Engine:</b> TwelveData FX (Real-time)\n"
         f"━━━━━━━━━━━━━━━━━━━━━\n"
-        f"✨ <i>Multi-Asset Watchdog is Live.</i>"
+        f"✨ <i>Gold Watchdog is Live.</i>"
     )
     send_telegram_msg(msg)
     
