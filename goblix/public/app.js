@@ -323,11 +323,11 @@ function renderMovieDetailPage(slug) {
 
       <!-- Main Detail Banner Card -->
       <div class="relative rounded-xl sm:rounded-2xl overflow-hidden bg-gray-900 border border-gray-800 shadow-2xl">
-        <div class="relative h-48 sm:h-72 md:h-96 w-full bg-cover bg-center" style="background-image: url('${movie.backdrop}');">
-          <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent"></div>
+        <div class="relative h-64 sm:h-80 md:h-[420px] w-full bg-cover bg-[center_top]" style="background-image: url('${movie.backdrop}');">
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent"></div>
         </div>
 
-        <div class="p-4 sm:p-6 md:p-10 -mt-20 sm:-mt-32 relative z-10 grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 items-start">
+        <div class="p-4 sm:p-6 md:p-10 -mt-16 sm:-mt-24 relative z-10 grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 items-start">
           
           <!-- Poster -->
           <div class="w-36 sm:w-48 md:w-full aspect-[2/3] rounded-lg sm:rounded-xl overflow-hidden shadow-2xl border border-gray-700 bg-black mx-auto md:mx-0">
