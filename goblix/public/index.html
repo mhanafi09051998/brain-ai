@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <meta name="theme-color" content="#141414">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate, max-age=0">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <title>Goblix - Nonton Film 1080p BluRay Subtitle Indonesia</title>
   
   <link rel="manifest" href="/manifest.json">
@@ -170,13 +172,26 @@
     </div>
   </footer>
 
-  <script type="module" src="/js/app.js?v=20260825_modular"></script>
+  <!-- UNREGISTER STALE SERVICE WORKERS & KILL CACHES FOR REALTIME LIVE UPDATES -->
   <script>
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      navigator.serviceWorker.getRegistrations().then(registrations => {
+        for (const reg of registrations) reg.unregister();
       });
     }
+    if ('caches' in window) {
+      caches.keys().then(keys => {
+        for (const key of keys) caches.delete(key);
+      });
+    }
+  </script>
+
+  <!-- DYNAMIC LIVE MODULE LOADER (CACHE-BUSTED TIMESTAMP) -->
+  <script type="module">
+    const script = document.createElement('script');
+    script.type = 'module';
+    script.src = '/js/app.js?t=' + Date.now();
+    document.body.appendChild(script);
   </script>
 </body>
 </html>

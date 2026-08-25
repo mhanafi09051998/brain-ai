@@ -1308,9 +1308,9 @@
     "semantic_hash": ""
   },
   "goblix/server.js": {
-    "mtime": 1787650944.2354765,
-    "seen": 1787650983.6581173,
-    "ast_hash": "1dac0e6fc3487f43fbf39eeebca99dc7",
+    "mtime": 1787651027.0368536,
+    "seen": 1787651072.231063,
+    "ast_hash": "969c1056f9925e25d4ea54b40c8f94f2",
     "semantic_hash": ""
   },
   "scripts/swot_engine.py": {
@@ -1338,9 +1338,9 @@
     "semantic_hash": ""
   },
   "goblix/public/index.html": {
-    "mtime": 1787650839.014717,
-    "seen": 1787650867.948989,
-    "ast_hash": "c2fea56f35cda5a1d639b9ec250c89cd",
+    "mtime": 1787651042.6715226,
+    "seen": 1787651072.231063,
+    "ast_hash": "34450e99daecb0e70761208d5889127a",
     "semantic_hash": ""
   },
   "learning/neurons/N056_strategic_swot_and_tows_matrix_a.md": {

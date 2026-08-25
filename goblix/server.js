@@ -242,7 +242,7 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
-  // 6. STATIC FILE SERVING & SPA FALLBACK
+  // 6. STATIC FILE SERVING & SPA FALLBACK (ZERO-CACHE REALTIME LIVE)
   let safeSuffix = path.normalize(pathname).replace(/^(\.\.[\/\\])+/, '');
   let filePath = path.join(PUBLIC_DIR, safeSuffix);
 
@@ -250,10 +250,21 @@ const server = http.createServer(async (req, res) => {
     if (!err && stats.isFile()) {
       const ext = path.extname(filePath).toLowerCase();
       const contentType = MIME_TYPES[ext] || 'application/octet-stream';
-      res.writeHead(200, { 'Content-Type': contentType });
+      const isDynamic = ext === '.html' || ext === '.js' || ext === '.json' || ext === '.css' || ext === '.vtt';
+      const cacheHeader = isDynamic 
+        ? 'no-cache, no-store, must-revalidate, max-age=0, post-check=0, pre-check=0' 
+        : 'public, max-age=86400';
+
+      res.writeHead(200, { 
+        'Content-Type': contentType,
+        'Cache-Control': cacheHeader,
+        'Pragma': 'no-cache',
+        'Expires': '0',
+        'Surrogate-Control': 'no-store'
+      });
       fs.createReadStream(filePath).pipe(res);
     } else {
-      // SPA Fallback to index.html
+      // SPA Fallback to index.html (Strict Zero-Cache)
       const indexPath = path.join(PUBLIC_DIR, 'index.html');
       fs.readFile(indexPath, (indexErr, data) => {
         if (indexErr) {
@@ -261,7 +272,12 @@ const server = http.createServer(async (req, res) => {
           res.end('404 Not Found');
           return;
         }
-        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+        res.writeHead(200, { 
+          'Content-Type': 'text/html; charset=utf-8',
+          'Cache-Control': 'no-cache, no-store, must-revalidate, max-age=0',
+          'Pragma': 'no-cache',
+          'Expires': '0'
+        });
         res.end(data);
       });
     }
