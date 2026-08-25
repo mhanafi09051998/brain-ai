@@ -344,6 +344,13 @@ function renderWatchPage(slug) {
 
     </div>
   `;
+
+  setTimeout(() => {
+    const vid = document.getElementById('cinemaPlayer');
+    if (vid) {
+      vid.play().catch(() => {});
+    }
+  }, 150);
 }
 
 // ==========================================

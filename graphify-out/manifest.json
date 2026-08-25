@@ -1296,15 +1296,15 @@
     "semantic_hash": ""
   },
   "goblix/data/movies.json": {
-    "mtime": 1787637354.418628,
-    "seen": 1787638164.990918,
-    "ast_hash": "6c7edd2e9b077cc447d4569f9ece0e62",
+    "mtime": 1787638517.3397284,
+    "seen": 1787638566.2525465,
+    "ast_hash": "117563a500134c6430ed4edd162d1eef",
     "semantic_hash": ""
   },
   "goblix/public/app.js": {
-    "mtime": 1787637632.3941529,
-    "seen": 1787638164.990918,
-    "ast_hash": "f959b66fcb9d3a4a6bc24fb8f55e2db5",
+    "mtime": 1787638527.0503576,
+    "seen": 1787638566.2525465,
+    "ast_hash": "943d67ddadbc0fe21c0c410a470d8261",
     "semantic_hash": ""
   },
   "goblix/server.js": {
