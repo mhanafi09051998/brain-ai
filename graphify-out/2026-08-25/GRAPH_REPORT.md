@@ -1,16 +1,16 @@
 # Graph Report - Agent_Claudia_Autonomus  (2026-08-25)
 
 ## Corpus Check
-- 215 files · ~206,406 words
+- 215 files · ~206,851 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1512 nodes · 1667 edges · 178 communities (153 shown, 25 thin omitted)
+- 1512 nodes · 1667 edges · 179 communities (153 shown, 26 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 30 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e9792590`
+- Built from commit: `b683884a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -131,9 +131,9 @@
 - fix_jellyfin_db.py
 - ImageMatrix
 - ConvolutionKernelEngine
+- ColorSpaceMath
 - run_tests
-- image_vision_nucleus_engine.py
-- .letterbox_aspect_preserver
+- Any
 - RasterToVectorTracer
 - GenerativeGraphExecutor
 - server.js
@@ -146,6 +146,7 @@
 - N056: Strategic SWOT, TOWS Matrix, PESTLE & Porter's 5 Forces Architecture Mastery
 - .build_svg
 - process_case
+- .process_tiled_convolution
 
 ## God Nodes (most connected - your core abstractions)
 1. `Vec2D` - 25 edges
@@ -174,7 +175,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (178 total, 25 thin omitted)
+## Communities (179 total, 26 thin omitted)
 
 ### Community 0 - "run_deterministic_tests"
 Cohesion: 0.06
@@ -265,12 +266,12 @@ Cohesion: 0.11
 Nodes (17): 1. Arsitektur Event-Driven vs Ilusi Simulasi Vektorik, 2. Walk-Forward Analysis (WFA) & Rolling Horizon Optimization, 3. Combinatorial Purged Cross-Validation (CPCV), 4. Probabilistic Sharpe Ratio (PSR) & Deflated Sharpe Ratio (DSR), 5. Implementasi Deterministik Python Standard Library, 6. Invarian Operasional & Quant Guardrails, A. 7 Jebakan Fatal Simulasi Vektorik (*Vectorized Backtest Pitfalls*), A. Dua Pilar CPCV (Marcos López de Prado) (+9 more)
 
 ### Community 22 - "ponytail-config.js"
-Cohesion: 0.14
-Nodes (15): fs, getClaudeDir(), getConfigDir(), getConfigPath(), getHideStatus(), getQuietStartup(), normalizeConfigMode(), os (+7 more)
+Cohesion: 0.15
+Nodes (14): fs, getClaudeDir(), getConfigDir(), getConfigPath(), getHideStatus(), getQuietStartup(), isShellSafe(), os (+6 more)
 
 ### Community 23 - "index.js"
-Cohesion: 0.18
-Nodes (11): normalizePersistedMode(), {
+Cohesion: 0.16
+Nodes (13): normalizeConfigMode(), normalizePersistedMode(), RUNTIME_MODES, {
   DEFAULT_MODE,
   RUNTIME_MODES,
   getDefaultMode,
@@ -280,7 +281,7 @@ Nodes (11): normalizePersistedMode(), {
   normalizePersistedMode,
   isDeactivationCommand,
   writeDefaultMode,
-}, { getPonytailInstructions, filterSkillBodyForMode }, parsePonytailCommand(), ponytailExtension(), readDefaultMode, readQuietStartup, require (+3 more)
+}, { getPonytailInstructions, filterSkillBodyForMode }, parsePonytailCommand(), ponytailExtension(), readDefaultMode (+5 more)
 
 ### Community 24 - "zolu_learn_server.js"
 Cohesion: 0.12
@@ -355,14 +356,14 @@ Cohesion: 0.18
 Nodes (10): 1. Uniswap v3 Concentrated Liquidity Math & Tick Geometry, 2. Impermanent Loss (IL) & Capital Efficiency Calculus, 3. Flash Loan Atomic Arbitrage Architecture, 4. Toxic MEV Dynamics: Sandwich Attacks & JIT Liquidity, 🏛️ 5 Pilar DeFi Liquidity Engineering & MEV Defense, 5. Searcher-Builder Infrastructure: Flashbots & Jito Relays, 🧠 Domain & Arsitektur, 🛡️ Invariant Ringkas (Operational Rules) (+2 more)
 
 ### Community 42 - "ponytail-activate.js"
-Cohesion: 0.18
-Nodes (10): claudeDir, {
+Cohesion: 0.20
+Nodes (9): claudeDir, {
   clearMode,
   isCodex,
   isCopilot,
   setMode,
   writeHookOutput,
-}, fs, { getDefaultMode, getClaudeDir, isShellSafe }, { getPonytailInstructions }, mode, output, path (+2 more)
+}, fs, { getDefaultMode, getClaudeDir, isShellSafe }, { getPonytailInstructions }, mode, output, path (+1 more)
 
 ### Community 43 - "IconBuilder24"
 Cohesion: 0.25
@@ -557,24 +558,20 @@ Cohesion: 0.83
 Nodes (3): main(), record_new_learning(), slugify()
 
 ### Community 128 - "ImageMatrix"
-Cohesion: 0.20
-Nodes (4): ImageMatrix, Lightweight, high-performance 2D/3D pure Python pixel matrix. Layout:…, Convolves an image in bounded memory tiles of tile_size x tile_size. Uses…, Safe pixel retrieval with deterministic boundary clamping. Supported border…
+Cohesion: 0.15
+Nodes (7): GeometricRescaler, ImageMatrix, Lightweight, high-performance 2D/3D pure Python pixel matrix. Layout:…, Sub-pixel Geometric Rescaling and Aspect Ratio Preserver., High-precision bilinear interpolation rescaling. Maps target pixel centers…, Scales image while strictly preserving native aspect ratio, padding the…, Safe pixel retrieval with deterministic boundary clamping. Supported border…
 
 ### Community 129 - "ConvolutionKernelEngine"
 Cohesion: 0.16
 Nodes (8): ConvolutionKernelEngine, Pure Python Spatial Convolution Engine with standard and custom kernels., Generates normalized (2k+1)x(2k+1) 2D Gaussian Kernel: G(u,v) =…, Returns standard 3x3 Sobel kernels for horizontal (Gx) and vertical (Gy)…, Returns 3x3 Sharpen kernel: center = 1 + 4*strength, orthogonal edges =…, Returns standard 3x3 discrete Laplacian second-derivative kernel., Applies 2D spatial convolution across all channels of the image matrix., Calculates Sobel Edge Gradient Magnitude M = sqrt(Gx^2 + Gy^2) and Direction…
 
-### Community 130 - "run_tests"
-Cohesion: 0.21
-Nodes (8): ColorSpaceMath, Standard-compliant color space transformation algorithms., Weighted luminosity grayscale conversion. - BT.601 (SDTV/OpenCV default): Y =…, Converts RGB [0..255] to HSV (Hue in [0..360), Saturation in [0..1], Value in…, Converts HSV (Hue [0..360), Saturation [0..1], Value [0..1]) back to RGB…, Converts RGB [0..255] to ITU-R BT.601 YCbCr digital video standard., Converts ITU-R BT.601 YCbCr back to RGB [0..255]., run_tests()
+### Community 130 - "ColorSpaceMath"
+Cohesion: 0.17
+Nodes (7): ColorSpaceMath, Standard-compliant color space transformation algorithms., Weighted luminosity grayscale conversion. - BT.601 (SDTV/OpenCV default): Y =…, Converts RGB [0..255] to HSV (Hue in [0..360), Saturation in [0..1], Value in…, Converts HSV (Hue [0..360), Saturation [0..1], Value [0..1]) back to RGB…, Converts RGB [0..255] to ITU-R BT.601 YCbCr digital video standard., Converts ITU-R BT.601 YCbCr back to RGB [0..255].
 
-### Community 131 - "image_vision_nucleus_engine.py"
-Cohesion: 0.18
-Nodes (10): CheckpointLoaderNode, CLIPTextEncodeNode, ComfyNode, ControlNetApplyNode, KSamplerNode, Any, Demand-driven tile chunking pipeline for low-memory image processing. Executes…, Base executable node in a generative AI visual DAG. (+2 more)
-
-### Community 132 - ".letterbox_aspect_preserver"
-Cohesion: 0.29
-Nodes (5): GeometricRescaler, Sub-pixel Geometric Rescaling and Aspect Ratio Preserver., High-precision bilinear interpolation rescaling. Maps target pixel centers…, Scales image while strictly preserving native aspect ratio, padding the…, Maps a bounding box (x, y, w, h) from letterboxed space back to native source…
+### Community 131 - "run_tests"
+Cohesion: 0.50
+Nodes (8): CheckpointLoaderNode, CLIPTextEncodeNode, ComfyNode, ControlNetApplyNode, KSamplerNode, Base executable node in a generative AI visual DAG., run_tests(), VAEDecodeNode
 
 ### Community 133 - "RasterToVectorTracer"
 Cohesion: 0.31
@@ -616,10 +613,14 @@ Nodes (4): 1. Fondasi Invarian Strategis, 2. Integrasi Porter's Five Forces & PE
 Cohesion: 0.67
 Nodes (3): process_case(), Any, train_and_evaluate()
 
+### Community 178 - ".process_tiled_convolution"
+Cohesion: 0.50
+Nodes (3): Demand-driven tile chunking pipeline for low-memory image processing. Executes…, Convolves an image in bounded memory tiles of tile_size x tile_size. Uses…, StreamingTileProcessor
+
 ## Knowledge Gaps
 - **685 isolated node(s):** `MOVIES_DATA`, `http`, `fs`, `path`, `url` (+680 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **25 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **26 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_

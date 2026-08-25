@@ -70,6 +70,7 @@ function getUsersDB() {
     email: "admin@goblix.com",
     role: "admin",
     createdAt: new Date().toISOString(),
+    watchProgress: {},
     ...hashPassword("admin12345")
   };
   fs.writeFileSync(USERS_FILE, JSON.stringify([defaultAdmin], null, 2));
@@ -120,7 +121,8 @@ const MIME_TYPES = {
   '.png': 'image/png',
   '.jpg': 'image/jpeg',
   '.svg': 'image/svg+xml',
-  '.ico': 'image/x-icon'
+  '.ico': 'image/x-icon',
+  '.webmanifest': 'application/manifest+json'
 };
 
 // -------------------------------------------------------------
@@ -176,6 +178,7 @@ const server = http.createServer(async (req, res) => {
         email: email.toLowerCase().trim(),
         role: "member",
         createdAt: new Date().toISOString(),
+        watchProgress: {},
         hash,
         salt
       };
@@ -247,7 +250,54 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
-  // 4. MOVIES API
+  // 4. WATCH PROGRESS: POST /api/user/progress
+  if (pathname === '/api/user/progress' && req.method === 'POST') {
+    if (!user) {
+      res.writeHead(401, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ success: false, error: 'Unauthorized' }));
+      return;
+    }
+    try {
+      const { movieId, currentTime, duration } = await parseBody(req);
+      const users = getUsersDB();
+      const userIdx = users.findIndex(u => u.id === user.id);
+      if (userIdx !== -1) {
+        if (!users[userIdx].watchProgress) users[userIdx].watchProgress = {};
+        users[userIdx].watchProgress[movieId] = {
+          movieId,
+          currentTime: Number(currentTime) || 0,
+          duration: Number(duration) || 0,
+          percent: Math.min(100, Math.round(((Number(currentTime) || 0) / (Number(duration) || 1)) * 100)),
+          updatedAt: new Date().toISOString()
+        };
+        saveUsersDB(users);
+      }
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ success: true }));
+      return;
+    } catch (e) {
+      res.writeHead(500, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ success: false, error: 'Gagal menyimpan progress' }));
+      return;
+    }
+  }
+
+  // 5. GET WATCH PROGRESS: GET /api/user/progress
+  if (pathname === '/api/user/progress' && req.method === 'GET') {
+    if (!user) {
+      res.writeHead(401, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ success: false, error: 'Unauthorized' }));
+      return;
+    }
+    const users = getUsersDB();
+    const userFound = users.find(u => u.id === user.id);
+    const progress = userFound && userFound.watchProgress ? userFound.watchProgress : {};
+    res.writeHead(200, { 'Content-Type': 'application/json', 'Cache-Control': 'no-cache' });
+    res.end(JSON.stringify({ success: true, progress }));
+    return;
+  }
+
+  // 6. MOVIES API
   if (pathname === '/api/movies' && req.method === 'GET') {
     const movies = getMoviesDB();
     res.writeHead(200, { 'Content-Type': 'application/json', 'Cache-Control': 'no-cache' });
@@ -286,8 +336,10 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
-  // 5. STATIC FILES WITH NO-CACHE FOR INSTANT UPDATES
-  const filePath = path.join(PUBLIC_DIR, pathname);
+  // 7. STATIC FILES WITH NO-CACHE FOR INSTANT UPDATES
+  let reqPath = pathname === '/' ? '/index.html' : pathname;
+  const filePath = path.join(PUBLIC_DIR, reqPath);
+
   fs.stat(filePath, (err, stats) => {
     if (!err && stats.isFile()) {
       const ext = path.extname(filePath).toLowerCase();

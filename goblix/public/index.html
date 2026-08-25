@@ -2,10 +2,17 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="theme-color" content="#141414">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>Goblix - Nonton Film 1080p BluRay Subtitle Indonesia</title>
+  
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/jpeg" href="https://images.unsplash.com/photo-1578632767115-351597cf2477?w=192&auto=format&fit=crop&q=80">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap');
     
@@ -27,7 +34,7 @@
       background-color: rgba(0, 0, 0, 0.75);
       color: #FFE600;
       font-weight: bold;
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       text-shadow: 2px 2px 4px #000;
     }
   </style>
@@ -58,15 +65,17 @@
   <!-- FOOTER -->
   <footer class="border-t border-gray-800 py-10 px-6 md:px-12 text-gray-500 text-xs text-center space-y-3 bg-black">
     <p class="goblix-logo text-2xl font-bold tracking-widest">GOBLIX</p>
-    <p>© 2026 Goblix Cinema. Platform Nonton Streaming Film 1080p BluRay Subtitle Indonesia.</p>
-    <div class="flex justify-center space-x-6 text-gray-400">
-      <a href="#" class="hover:underline">Kebijakan Privasi</a>
-      <a href="#" class="hover:underline">Pusat Bantuan</a>
-      <a href="#" class="hover:underline">Syarat & Ketentuan</a>
-    </div>
+    <p>Platform Streaming Film 1080p BluRay Subtitle Indonesia • Tanpa Iklan Pop-up • Fullstack Production</p>
+    <p class="text-gray-600 font-mono text-[10px]">© 2026 Goblix & Gahar Inovasi Teknologi. Hak Cipta Dilindungi.</p>
   </footer>
 
-  <!-- SCRIPT ROUTER & CONTROLLER WITH CACHE BUSTING -->
-  <script src="/app.js?v=20260825_streamonly"></script>
+  <script src="/app.js?v=20260825_innovations"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      });
+    }
+  </script>
 </body>
 </html>
