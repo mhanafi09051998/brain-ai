@@ -1,16 +1,16 @@
 # Graph Report - Agent_Claudia_Autonomus  (2026-08-25)
 
 ## Corpus Check
-- 231 files · ~233,686 words
+- 235 files · ~234,407 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1622 nodes · 1886 edges · 185 communities (158 shown, 27 thin omitted)
+- 1633 nodes · 1893 edges · 189 communities (162 shown, 27 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 36 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `9720fb76`
+- Built from commit: `9663c9d5`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -151,6 +151,7 @@
 - .build_svg
 - js/app.js
 - .process_tiled_convolution
+- test_subtitle_parser.js
 
 ## God Nodes (most connected - your core abstractions)
 1. `Vec2D` - 25 edges
@@ -179,7 +180,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (185 total, 27 thin omitted)
+## Communities (189 total, 27 thin omitted)
 
 ### Community 0 - "run_deterministic_tests"
 Cohesion: 0.06
@@ -633,8 +634,12 @@ Nodes (35): checkAuthSession(), fetchMovies(), fetchServerWatchProgress(), saveS
 Cohesion: 0.50
 Nodes (3): Demand-driven tile chunking pipeline for low-memory image processing. Executes…, Convolves an image in bounded memory tiles of tile_size x tile_size. Uses…, StreamingTileProcessor
 
+### Community 185 - "test_subtitle_parser.js"
+Cohesion: 0.29
+Nodes (5): cues1, cues2, fs, vtt1, vtt2
+
 ## Knowledge Gaps
-- **706 isolated node(s):** `MOVIES_DATA`, `WATCH_PROGRESS`, `MY_LIST`, `SUBTITLE_CUES`, `name` (+701 more)
+- **711 isolated node(s):** `MOVIES_DATA`, `WATCH_PROGRESS`, `MY_LIST`, `SUBTITLE_CUES`, `name` (+706 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **27 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -642,13 +647,13 @@ Nodes (3): Demand-driven tile chunking pipeline for low-memory image processing.
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Vec2D` connect `Vec2D` to `run_self_tests`, `.build_svg`?**
-  _High betweenness centrality (0.003) - this node is a cross-community bridge._
+  _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **Why does `CubicBezier` connect `Vec2D` to `run_self_tests`, `.build_svg`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **Why does `Color` connect `Color` to `run_self_tests`, `.from_lab`, `PaletteGenerator`, `.build_svg`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **What connects `MOVIES_DATA`, `WATCH_PROGRESS`, `MY_LIST` to the rest of the system?**
-  _706 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _711 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `run_deterministic_tests` be split into smaller, more focused modules?**
   _Cohesion score 0.06259426847662142 - nodes in this community are weakly interconnected._
 - **Should `Install` be split into smaller, more focused modules?**
