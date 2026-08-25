@@ -207,12 +207,12 @@ function renderHomePage() {
 
   main.innerHTML = `
     <!-- HERO BANNER (RESPONSIVE) -->
-    <header class="relative w-full min-h-[70vh] sm:min-h-[85vh] flex items-end pb-12 sm:pb-20 px-4 sm:px-8 md:px-12 bg-cover bg-center overflow-hidden" 
+    <header class="relative w-full min-h-[75vh] sm:min-h-[90vh] flex items-end pb-14 sm:pb-24 px-4 sm:px-8 md:px-12 bg-cover bg-[center_top] overflow-hidden" 
             style="background-image: url('${featured.backdrop || featured.poster}');">
-      <div class="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/70 to-black/30"></div>
-      <div class="absolute inset-0 bg-gradient-to-r from-[#141414] via-[#141414]/80 to-transparent w-full md:w-3/4"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/75 to-black/30"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-[#141414] via-[#141414]/85 to-transparent w-full md:w-3/4"></div>
 
-      <div class="relative z-10 max-w-2xl space-y-3 sm:space-y-4 pt-20">
+      <div class="relative z-10 max-w-2xl space-y-3 sm:space-y-4 pt-36 sm:pt-48 md:pt-60">
         
         <div class="flex items-center space-x-2">
           <span class="bg-red-600 text-white text-[10px] sm:text-xs px-2.5 py-0.5 rounded font-black tracking-widest uppercase">GOBLIX ORIGINAL</span>
@@ -313,7 +313,7 @@ function renderMovieDetailPage(slug) {
   const progressInfo = WATCH_PROGRESS[movie.id] || WATCH_PROGRESS[movie.slug];
 
   main.innerHTML = `
-    <div class="min-h-screen pt-16 sm:pt-20 px-4 sm:px-8 md:px-12 pb-16 max-w-6xl mx-auto space-y-6 sm:space-y-8">
+    <div class="min-h-screen pt-20 sm:pt-24 px-4 sm:px-8 md:px-12 pb-16 max-w-6xl mx-auto space-y-6 sm:space-y-8">
       
       <!-- Back Navigation -->
       <button onclick="navigateTo('/')" class="text-gray-400 hover:text-white flex items-center space-x-2 text-xs sm:text-sm transition">
