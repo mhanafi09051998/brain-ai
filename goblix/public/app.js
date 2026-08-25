@@ -421,17 +421,13 @@ function renderWatchPage(slug) {
         </div>
       </header>
 
-      <!-- Main Video Stream Area (Zero-Scroll Auto-Fitted to Viewport) -->
-      <main class="relative flex-1 w-full flex items-center justify-center p-2 sm:p-4 min-h-0 overflow-hidden bg-black">
-        <div class="relative w-full h-full max-w-[1400px] flex items-center justify-center">
-          <div class="relative max-h-full max-w-full aspect-video flex items-center justify-center bg-black rounded-lg sm:rounded-xl overflow-hidden shadow-2xl border border-gray-800/80 group" style="max-height: calc(100vh - 110px); width: auto;">
-            <video id="cinemaPlayer" class="w-full h-full max-h-full object-contain" controls playsinline preload="auto" poster="${movie.backdrop}">
-              <source id="videoSource" src="${movie.streamUrl}" type="video/mp4">
-              <track id="subTrack" label="Bahasa Indonesia" kind="subtitles" srclang="id" src="/sub_indo.vtt" default>
-              Browser Anda tidak mendukung streaming video HTML5.
-            </video>
-          </div>
-        </div>
+      <!-- Main Video Stream Area (Full Theater Edge-to-Edge) -->
+      <main class="relative flex-1 w-full h-full flex items-center justify-center p-0 m-0 min-h-0 overflow-hidden bg-black">
+        <video id="cinemaPlayer" class="w-full h-full max-w-full max-h-full object-contain bg-black" controls playsinline preload="auto" poster="${movie.backdrop}">
+          <source id="videoSource" src="${movie.streamUrl}" type="video/mp4">
+          <track id="subTrack" label="Bahasa Indonesia" kind="subtitles" srclang="id" src="/sub_indo.vtt" default>
+          Browser Anda tidak mendukung streaming video HTML5.
+        </video>
       </main>
 
       <!-- Cinema Info Footer (Compact Pro Bar) -->
