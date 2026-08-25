@@ -966,9 +966,9 @@
     "semantic_hash": "ab2fa9fc2466e74e8a664f4d9c5a6bd5"
   },
   "scripts/claudia_live_watchdog.py": {
-    "mtime": 1787627704.9806876,
-    "seen": 1787627997.382072,
-    "ast_hash": "95f87de43fa4c54471141239373b68ac",
+    "mtime": 1787628270.7994897,
+    "seen": 1787628280.2858458,
+    "ast_hash": "c4739c5e8d3170aa97b88249a0eeebdb",
     "semantic_hash": ""
   },
   "scripts/send_telegram_gold_report.py": {
@@ -1203,6 +1203,18 @@
     "mtime": 1787627988.4198391,
     "seen": 1787627997.382072,
     "ast_hash": "f11d09f2b68fc8e061b912055d51bc1c",
+    "semantic_hash": ""
+  },
+  "patch_fvg_zone.py": {
+    "mtime": 1787628265.6218584,
+    "seen": 1787628280.2853334,
+    "ast_hash": "4562cb7b89e3943559979e7a0016e14b",
+    "semantic_hash": ""
+  },
+  "patch_twelve_again.py": {
+    "mtime": 1787628178.4143589,
+    "seen": 1787628280.2853334,
+    "ast_hash": "d01e2d8fa30d471c5e8b6d1984b2c1a7",
     "semantic_hash": ""
   }
 }
