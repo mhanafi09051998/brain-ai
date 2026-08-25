@@ -5,6 +5,7 @@ Dokumen memori modular terdistribusi Claudia. Memori dipecah menjadi neuron-neur
 ---
 
 ## 🧠 Active Memory Neurons
+57. **[`N057_goblix_metadata_invariant_defens.md`](file:///D:/Agent_Claudia_Autonomus/learning/neurons/N057_goblix_metadata_invariant_defens.md)** — **Goblix Metadata Invariant & Defensive Rendering**: Metadata film wajib dinormalisasi di server layer (normalizeMovie) dan dirender ...
 56. **[`N056_strategic_swot_and_tows_matrix_mastery.md`](file:///D:/Agent_Claudia_Autonomus/learning/neurons/N056_strategic_swot_and_tows_matrix_mastery.md)** — **Strategic Intelligence & SWOT/TOWS Matrix Mastery**: Quantitative Internal-External Posture Vectors, Mathematical TOWS Cross-Synthesizer, Porter's 5 Forces Risk Scorer & PESTLE Macro-Environment Architecture.
 56. **[`N056_strategic_swot_and_tows_matrix_a.md`](file:///D:/Agent_Claudia_Autonomus/learning/neurons/N056_strategic_swot_and_tows_matrix_a.md)** — **Strategic SWOT and TOWS Matrix Analysis**: Analisis SWOT harus selalu dikombinasikan dengan TOWS Matrix (SO, WO, ST, WT) un...
 55. **[`N055_graphic_design_generative_visual_engineering.md`](file:///D:/Agent_Claudia_Autonomus/learning/neurons/N055_graphic_design_generative_visual_engineering.md)** — **Graphic Design & Generative Visual Engineering**: WCAG 2.2 AAA Contrast, CIELAB/LCh Perceptual Colors, Cubic Bézier Gauss-Legendre Arc Length, 24px Lucide/Penpot Grid SVG Icons & Lissajous Generative Posters.

@@ -32,10 +32,36 @@ const MIME_TYPES = {
   '.mkv': 'video/x-matroska'
 };
 
+function normalizeMovie(m) {
+  if (!m || typeof m !== 'object') return null;
+  return {
+    id: String(m.id || m.slug || 'movie-' + Math.random().toString(36).substring(7)),
+    slug: String(m.slug || m.id || 'movie'),
+    imdbId: String(m.imdbId || ''),
+    title: String(m.title || 'Judul Film'),
+    year: Number(m.year) || new Date().getFullYear(),
+    duration: String(m.duration || '2 Jam'),
+    ageRating: String(m.ageRating || '13+'),
+    matchScore: String(m.matchScore || '98%'),
+    quality: String(m.quality || '1080p BluRay'),
+    audio: String(m.audio || 'Dolby AAC 5.1'),
+    subtitle: String(m.subtitle || 'Bahasa Indonesia (Resmi)'),
+    genres: Array.isArray(m.genres) ? m.genres : (typeof m.genres === 'string' ? m.genres.split(',').map(s => s.trim()) : ['Action']),
+    poster: String(m.poster || '/favicon.ico'),
+    backdrop: String(m.backdrop || m.poster || ''),
+    synopsis: String(m.synopsis || 'Sinopsis film belum tersedia.'),
+    director: String(m.director || 'Sutradara'),
+    cast: Array.isArray(m.cast) ? m.cast : (typeof m.cast === 'string' ? m.cast.split(',').map(s => s.trim()) : ['Aktor']),
+    streamUrl: String(m.streamUrl || `/stream/${m.slug || m.id}.mp4`),
+    subtitleUrl: String(m.subtitleUrl || `/api/subtitles/${m.slug || m.id}`)
+  };
+}
+
 function getMoviesDB() {
   try {
     if (!fs.existsSync(MOVIES_FILE)) return [];
-    return JSON.parse(fs.readFileSync(MOVIES_FILE, 'utf8') || '[]');
+    const raw = JSON.parse(fs.readFileSync(MOVIES_FILE, 'utf8') || '[]');
+    return (Array.isArray(raw) ? raw : []).map(normalizeMovie).filter(Boolean);
   } catch (e) {
     return [];
   }

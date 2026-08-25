@@ -329,6 +329,19 @@
       "source_location": "L351"
     },
     {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator",
+      "label": "PaletteGenerator",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "PaletteGenerator",
+      "file_type": "code",
+      "norm_label": "palettegenerator",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L271"
+    },
+    {
       "id": "scripts_graphic_design_visual_engine_cubicbezier",
       "label": "CubicBezier",
       "_callable": true,
@@ -366,19 +379,6 @@
       "norm_label": "generativeposter",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L625"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator",
-      "label": "PaletteGenerator",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": "palettegenerator",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L271"
     },
     {
       "id": "scripts_graphic_design_visual_engine_iconbuilder24",
@@ -1272,6 +1272,18 @@
       "file_type": "code",
       "norm_label": "getmoviesdb()",
       "source_file": "goblix/server.js",
+      "source_location": "L60"
+    },
+    {
+      "id": "goblix_server_normalizemovie",
+      "label": "normalizeMovie()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 146,
+      "community_name": "server.js",
+      "file_type": "code",
+      "norm_label": "normalizemovie()",
+      "source_file": "goblix/server.js",
       "source_location": "L35"
     },
     {
@@ -1284,7 +1296,7 @@
       "file_type": "code",
       "norm_label": "parsejsonbody()",
       "source_file": "goblix/server.js",
-      "source_location": "L44"
+      "source_location": "L70"
     },
     {
       "id": "goblix_src_auth_generatetoken",
@@ -2760,7 +2772,7 @@
       "file_type": "code",
       "norm_label": "rendermoviedetailpage()",
       "source_file": "goblix/public/js/views.js",
-      "source_location": "L270"
+      "source_location": "L272"
     },
     {
       "id": "goblix_public_js_views_renderwatchpage",
@@ -2772,7 +2784,7 @@
       "file_type": "code",
       "norm_label": "renderwatchpage()",
       "source_file": "goblix/public/js/views.js",
-      "source_location": "L339"
+      "source_location": "L341"
     },
     {
       "id": "goblix_public_js_views_showmoviemodal",
@@ -2784,7 +2796,79 @@
       "file_type": "code",
       "norm_label": "showmoviemodal()",
       "source_file": "goblix/public/js/views.js",
-      "source_location": "L194"
+      "source_location": "L196"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_color_from_hsl",
+      "label": ".from_hsl()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "PaletteGenerator",
+      "file_type": "code",
+      "norm_label": ".from_hsl()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L67"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_analogous",
+      "label": ".analogous()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "PaletteGenerator",
+      "file_type": "code",
+      "norm_label": ".analogous()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L284"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_complementary",
+      "label": ".complementary()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "PaletteGenerator",
+      "file_type": "code",
+      "norm_label": ".complementary()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L295"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_monochromatic",
+      "label": ".monochromatic()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "PaletteGenerator",
+      "file_type": "code",
+      "norm_label": ".monochromatic()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L277"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_split_complementary",
+      "label": ".split_complementary()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "PaletteGenerator",
+      "file_type": "code",
+      "norm_label": ".split_complementary()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L311"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_tetradic",
+      "label": ".tetradic()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "PaletteGenerator",
+      "file_type": "code",
+      "norm_label": ".tetradic()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L321"
     },
     {
       "id": "scripts_test_subtitle_parser_parsewebvtt",
@@ -3543,18 +3627,6 @@
       "source_location": "L44"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_color_from_hsl",
-      "label": ".from_hsl()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": ".from_hsl()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L67"
-    },
-    {
       "id": "scripts_graphic_design_visual_engine_generativeposter_build_svg",
       "label": ".build_svg()",
       "_callable": true,
@@ -3579,42 +3651,6 @@
       "source_location": "L632"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_analogous",
-      "label": ".analogous()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": ".analogous()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L284"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_complementary",
-      "label": ".complementary()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": ".complementary()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L295"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_monochromatic",
-      "label": ".monochromatic()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": ".monochromatic()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L277"
-    },
-    {
       "id": "scripts_graphic_design_visual_engine_palettegenerator_scale",
       "label": ".scale()",
       "_callable": true,
@@ -3625,30 +3661,6 @@
       "norm_label": ".scale()",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L332"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_split_complementary",
-      "label": ".split_complementary()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": ".split_complementary()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L311"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_tetradic",
-      "label": ".tetradic()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": ".tetradic()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L321"
     },
     {
       "id": "scripts_graphic_design_visual_engine_palettegenerator_triadic",
@@ -7522,7 +7534,7 @@
       "file_type": "code",
       "norm_label": "server",
       "source_file": "goblix/server.js",
-      "source_location": "L55"
+      "source_location": "L81"
     },
     {
       "id": "goblix_server_servesanitizedsubtitle",
@@ -9592,6 +9604,83 @@
       "source_location": "L1"
     },
     {
+      "id": "scripts_graphic_design_visual_engine_rationale_272",
+      "label": "Harmonious color palette generator supporting classical color wheel (HSL) and\u2026",
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "PaletteGenerator",
+      "file_type": "rationale",
+      "norm_label": "harmonious color palette generator supporting classical color wheel (hsl) and...",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L272"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_278",
+      "label": "Generate a monochromatic ramp varying in Lightness.",
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "PaletteGenerator",
+      "file_type": "rationale",
+      "norm_label": "generate a monochromatic ramp varying in lightness.",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L278"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_285",
+      "label": "Generate analogous colors clustered around base hue.",
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "PaletteGenerator",
+      "file_type": "rationale",
+      "norm_label": "generate analogous colors clustered around base hue.",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L285"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_296",
+      "label": "Generate complementary color pair (180\u00b0 offset).",
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "PaletteGenerator",
+      "file_type": "rationale",
+      "norm_label": "generate complementary color pair (180\u00b0 offset).",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L296"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_312",
+      "label": "Generate split-complementary harmony (base + 2 colors flanking complement).",
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "PaletteGenerator",
+      "file_type": "rationale",
+      "norm_label": "generate split-complementary harmony (base + 2 colors flanking complement).",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L312"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_322",
+      "label": "Generate tetradic rectangular 4-color harmony.",
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "PaletteGenerator",
+      "file_type": "rationale",
+      "norm_label": "generate tetradic rectangular 4-color harmony.",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L322"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_68",
+      "label": "Construct Color from HSL (H in [0, 360), S in [0, 1], L in [0, 1]).",
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "PaletteGenerator",
+      "file_type": "rationale",
+      "norm_label": "construct color from hsl (h in [0, 360), s in [0, 1], l in [0, 1]).",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L68"
+    },
+    {
       "id": "scripts_get_topgun_backdrops",
       "label": "get_topgun_backdrops.py",
       "_origin": "ast",
@@ -9959,6 +10048,54 @@
       "file_type": "code",
       "norm_label": "print_sub_links.py",
       "source_file": "scripts/print_sub_links.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "learning_neurons_n057_goblix_metadata_invariant_defens",
+      "label": "N057_goblix_metadata_invariant_defens.md",
+      "_origin": "ast",
+      "community": 193,
+      "community_name": "N057: Goblix Metadata Invariant & Defensive Rendering",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "n057_goblix_metadata_invariant_defens.md",
+      "source_file": "learning/neurons/N057_goblix_metadata_invariant_defens.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "learning_neurons_n057_goblix_metadata_invariant_defens_disiplin_eksekusi",
+      "label": "\ud83d\udd12 Disiplin Eksekusi",
+      "_origin": "ast",
+      "community": 193,
+      "community_name": "N057: Goblix Metadata Invariant & Defensive Rendering",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udd12 disiplin eksekusi",
+      "source_file": "learning/neurons/N057_goblix_metadata_invariant_defens.md",
+      "source_location": "L12"
+    },
+    {
+      "id": "learning_neurons_n057_goblix_metadata_invariant_defens_inti_pembelajaran_engineering_invariant",
+      "label": "\ud83c\udfaf Inti Pembelajaran (Engineering Invariant)",
+      "_origin": "ast",
+      "community": 193,
+      "community_name": "N057: Goblix Metadata Invariant & Defensive Rendering",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83c\udfaf inti pembelajaran (engineering invariant)",
+      "source_file": "learning/neurons/N057_goblix_metadata_invariant_defens.md",
+      "source_location": "L9"
+    },
+    {
+      "id": "learning_neurons_n057_goblix_metadata_invariant_defens_n057_goblix_metadata_invariant_defensive_rendering",
+      "label": "N057: Goblix Metadata Invariant & Defensive Rendering",
+      "_origin": "ast",
+      "community": 193,
+      "community_name": "N057: Goblix Metadata Invariant & Defensive Rendering",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "n057: goblix metadata invariant & defensive rendering",
+      "source_file": "learning/neurons/N057_goblix_metadata_invariant_defens.md",
       "source_location": "L1"
     },
     {
@@ -13191,7 +13328,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\udccb active tasks & history",
       "source_file": "memory.md",
-      "source_location": "L57"
+      "source_location": "L58"
     },
     {
       "id": "memory_claudia_neuron_memory_network",
@@ -13215,7 +13352,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\udccb prosedur pembaruan memori",
       "source_file": "memory.md",
-      "source_location": "L51"
+      "source_location": "L52"
     },
     {
       "id": "learning_neurons_n032_cloud_native_edge_infra",
@@ -13397,50 +13534,6 @@
       "source_location": "L1"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_rationale_272",
-      "label": "Harmonious color palette generator supporting classical color wheel (HSL) and\u2026",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "harmonious color palette generator supporting classical color wheel (hsl) and...",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L272"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_278",
-      "label": "Generate a monochromatic ramp varying in Lightness.",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "generate a monochromatic ramp varying in lightness.",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L278"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_285",
-      "label": "Generate analogous colors clustered around base hue.",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "generate analogous colors clustered around base hue.",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L285"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_296",
-      "label": "Generate complementary color pair (180\u00b0 offset).",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "generate complementary color pair (180\u00b0 offset).",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L296"
-    },
-    {
       "id": "scripts_graphic_design_visual_engine_rationale_302",
       "label": "Generate triadic 3-color harmony (120\u00b0 offsets).",
       "_origin": "ast",
@@ -13450,28 +13543,6 @@
       "norm_label": "generate triadic 3-color harmony (120\u00b0 offsets).",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L302"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_312",
-      "label": "Generate split-complementary harmony (base + 2 colors flanking complement).",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "generate split-complementary harmony (base + 2 colors flanking complement).",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L312"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_322",
-      "label": "Generate tetradic rectangular 4-color harmony.",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "generate tetradic rectangular 4-color harmony.",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L322"
     },
     {
       "id": "scripts_graphic_design_visual_engine_rationale_333",
@@ -13516,17 +13587,6 @@
       "norm_label": "generate full svg graphic poster with mathematical curves and layered depth.",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L638"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_68",
-      "label": "Construct Color from HSL (H in [0, 360), S in [0, 1], L in [0, 1]).",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "construct color from hsl (h in [0, 360), s in [0, 1], l in [0, 1]).",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L68"
     },
     {
       "id": "scripts_graphic_design_visual_engine_rationale_745",
@@ -20489,7 +20549,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/js/views.js",
-      "source_location": "L98",
+      "source_location": "L100",
       "weight": 1.0
     },
     {
@@ -20501,7 +20561,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/js/views.js",
-      "source_location": "L312",
+      "source_location": "L314",
       "weight": 1.0
     },
     {
@@ -20513,7 +20573,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/js/views.js",
-      "source_location": "L409",
+      "source_location": "L411",
       "weight": 1.0
     },
     {
@@ -20525,7 +20585,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/js/views.js",
-      "source_location": "L437",
+      "source_location": "L439",
       "weight": 1.0
     },
     {
@@ -20537,91 +20597,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/js/views.js",
-      "source_location": "L233",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_server_server",
-      "target": "goblix_server_getmoviesdb",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "goblix/server.js",
-      "source_location": "L103",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_server_server",
-      "target": "goblix_src_auth_getauthuser",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "goblix/server.js",
-      "source_location": "L122",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_server_server",
-      "target": "goblix_src_auth_getusersdb",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "goblix/server.js",
-      "source_location": "L129",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_server_server",
-      "target": "goblix_server_parsejsonbody",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "goblix/server.js",
-      "source_location": "L144",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_server_server",
-      "target": "goblix_src_auth_saveusersdb",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "goblix/server.js",
-      "source_location": "L154",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_server_server",
-      "target": "goblix_src_auth_hashpassword",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "goblix/server.js",
-      "source_location": "L179",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_server_server",
-      "target": "goblix_src_auth_generatetoken",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "goblix/server.js",
-      "source_location": "L186",
+      "source_location": "L235",
       "weight": 1.0
     },
     {
@@ -20633,7 +20609,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/server.js",
-      "source_location": "L76",
+      "source_location": "L102",
       "weight": 1.0
     },
     {
@@ -20645,7 +20621,91 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/server.js",
-      "source_location": "L96",
+      "source_location": "L122",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_server_server",
+      "target": "goblix_server_getmoviesdb",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/server.js",
+      "source_location": "L129",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_server_server",
+      "target": "goblix_src_auth_getauthuser",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/server.js",
+      "source_location": "L148",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_server_server",
+      "target": "goblix_src_auth_getusersdb",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/server.js",
+      "source_location": "L155",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_server_server",
+      "target": "goblix_server_parsejsonbody",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/server.js",
+      "source_location": "L170",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_server_server",
+      "target": "goblix_src_auth_saveusersdb",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/server.js",
+      "source_location": "L180",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_server_server",
+      "target": "goblix_src_auth_hashpassword",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/server.js",
+      "source_location": "L205",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_server_server",
+      "target": "goblix_src_auth_generatetoken",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/server.js",
+      "source_location": "L212",
       "weight": 1.0
     },
     {
@@ -26970,7 +27030,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/js/views.js",
-      "source_location": "L194",
+      "source_location": "L196",
       "weight": 1.0
     },
     {
@@ -26981,7 +27041,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/js/views.js",
-      "source_location": "L270",
+      "source_location": "L272",
       "weight": 1.0
     },
     {
@@ -26992,7 +27052,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/js/views.js",
-      "source_location": "L339",
+      "source_location": "L341",
       "weight": 1.0
     },
     {
@@ -27173,7 +27233,7 @@
     },
     {
       "source": "goblix_server",
-      "target": "goblix_server_getmoviesdb",
+      "target": "goblix_server_normalizemovie",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -27184,24 +27244,13 @@
     },
     {
       "source": "goblix_server",
-      "target": "goblix_server_parsejsonbody",
+      "target": "goblix_server_getmoviesdb",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/server.js",
-      "source_location": "L44",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_server",
-      "target": "goblix_server_server",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "goblix/server.js",
-      "source_location": "L55",
+      "source_location": "L60",
       "weight": 1.0
     },
     {
@@ -27217,6 +27266,17 @@
     },
     {
       "source": "goblix_server",
+      "target": "goblix_server_parsejsonbody",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/server.js",
+      "source_location": "L70",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_server",
       "target": "goblix_server_fs",
       "relation": "contains",
       "_origin": "ast",
@@ -27224,6 +27284,17 @@
       "confidence_score": 1.0,
       "source_file": "goblix/server.js",
       "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_server",
+      "target": "goblix_server_server",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/server.js",
+      "source_location": "L81",
       "weight": 1.0
     },
     {
@@ -33772,6 +33843,39 @@
       "weight": 1.0
     },
     {
+      "source": "learning_neurons_n057_goblix_metadata_invariant_defens",
+      "target": "learning_neurons_n057_goblix_metadata_invariant_defens_n057_goblix_metadata_invariant_defensive_rendering",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N057_goblix_metadata_invariant_defens.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n057_goblix_metadata_invariant_defens_n057_goblix_metadata_invariant_defensive_rendering",
+      "target": "learning_neurons_n057_goblix_metadata_invariant_defens_disiplin_eksekusi",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N057_goblix_metadata_invariant_defens.md",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n057_goblix_metadata_invariant_defens_n057_goblix_metadata_invariant_defensive_rendering",
+      "target": "learning_neurons_n057_goblix_metadata_invariant_defens_inti_pembelajaran_engineering_invariant",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N057_goblix_metadata_invariant_defens.md",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
       "source": "learning_playbooks_graphify_workflow",
       "target": "learning_playbooks_graphify_workflow_playbook_graphify_workflow",
       "relation": "contains",
@@ -33911,7 +34015,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "memory.md",
-      "source_location": "L51",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -33922,7 +34026,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "memory.md",
-      "source_location": "L57",
+      "source_location": "L58",
       "weight": 1.0
     },
     {
@@ -40790,6 +40894,18 @@
       "weight": 1.0
     },
     {
+      "source": "goblix_server_getmoviesdb",
+      "target": "goblix_server_normalizemovie",
+      "relation": "indirect_call",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "argument",
+      "source_file": "goblix/server.js",
+      "source_location": "L64",
+      "weight": 1.0
+    },
+    {
       "source": "ponytail_hooks_ponytail_mode_tracker",
       "target": "ponytail_hooks_ponytail_mode_tracker_finish",
       "relation": "indirect_call",
@@ -41223,5 +41339,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "96d2ce85dbd3265256102a4aad27e1ba8e8f0bb4"
+  "built_at_commit": "4e6c22d62a1c38bb137d270b3e2aa78c40dda51d"
 }
