@@ -11,7 +11,6 @@ TELEGRAM_SERVER_BOT_TOKEN = os.environ.get("TELEGRAM_SERVER_BOT_TOKEN", "***TELE
 TELEGRAM_GOLD_BOT_TOKEN = os.environ.get("TELEGRAM_GOLD_BOT_TOKEN", "***TELEGRAM_TOKEN_REMOVED***")
 TARGET_CHAT_ID = int(os.environ.get("TELEGRAM_CHAT_ID", "***CHAT_ID_REMOVED***"))
 POLL_INTERVAL_SEC = 60
-MEMORY_LIMIT_MB = 450.0
 
 last_alert_time = {}
 
@@ -257,21 +256,7 @@ def scan_asset(asset):
         if send_telegram_msg(msg_template):
             last_alert_time[f"{asset['id']}_radar_score"] = score
 
-def check_memory_and_restart():
-    try:
-        with open('/proc/meminfo', 'r') as f:
-            lines = f.readlines()
-        total = free = buffers = cached = 0
-        for line in lines:
-            if line.startswith('MemTotal:'): total = int(line.split()[1])
-            elif line.startswith('MemFree:'): free = int(line.split()[1])
-            elif line.startswith('Buffers:'): buffers = int(line.split()[1])
-            elif line.startswith('Cached:'): cached = int(line.split()[1])
-        used_mb = (total - free - buffers - cached) / 1024.0
-        if used_mb > MEMORY_LIMIT_MB:
-            send_telegram_server(f"🔥 <b>AUTO-HEALING TRIGGERED</b>\nRAM Usage: {used_mb:.1f}MB\nRestarting PM2...")
-            subprocess.run(["pm2", "reload", "all"], stdout=subprocess.DEVNULL)
-    except: pass
+
 
 def run_watchdog():
     msg = (
@@ -288,8 +273,7 @@ def run_watchdog():
     while True:
         for asset in ASSETS:
             scan_asset(asset)
-        check_memory_and_restart()
-        time.sleep(POLL_INTERVAL_SEC)
+                time.sleep(POLL_INTERVAL_SEC)
 
 if __name__ == "__main__":
     run_watchdog()
