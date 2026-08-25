@@ -2554,19 +2554,7 @@
       "file_type": "code",
       "norm_label": "calc_indicators()",
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L77"
-    },
-    {
-      "id": "scripts_claudia_live_watchdog_check_memory_and_restart",
-      "label": "check_memory_and_restart()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 48,
-      "community_name": "claudia_live_watchdog.py",
-      "file_type": "code",
-      "norm_label": "check_memory_and_restart()",
-      "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L260"
+      "source_location": "L76"
     },
     {
       "id": "scripts_claudia_live_watchdog_fetch_klines_twelve",
@@ -2578,7 +2566,7 @@
       "file_type": "code",
       "norm_label": "fetch_klines_twelve()",
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L53"
+      "source_location": "L52"
     },
     {
       "id": "scripts_claudia_live_watchdog_run_watchdog",
@@ -2590,7 +2578,7 @@
       "file_type": "code",
       "norm_label": "run_watchdog()",
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L276"
+      "source_location": "L261"
     },
     {
       "id": "scripts_claudia_live_watchdog_scan_asset",
@@ -2602,7 +2590,7 @@
       "file_type": "code",
       "norm_label": "scan_asset()",
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L148"
+      "source_location": "L147"
     },
     {
       "id": "scripts_claudia_live_watchdog_send_telegram_msg",
@@ -2614,7 +2602,7 @@
       "file_type": "code",
       "norm_label": "send_telegram_msg()",
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L18"
+      "source_location": "L17"
     },
     {
       "id": "scripts_claudia_live_watchdog_send_telegram_server",
@@ -2626,7 +2614,7 @@
       "file_type": "code",
       "norm_label": "send_telegram_server()",
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L33"
+      "source_location": "L32"
     },
     {
       "id": "scripts_test_brain_run_all",
@@ -6898,6 +6886,17 @@
       "file_type": "code",
       "norm_label": "patch_limit_order.py",
       "source_file": "patch_limit_order.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "patch_remove_memory",
+      "label": "patch_remove_memory.py",
+      "_origin": "ast",
+      "community": 167,
+      "community_name": "patch_remove_memory.py",
+      "file_type": "code",
+      "norm_label": "patch_remove_memory.py",
+      "source_file": "patch_remove_memory.py",
       "source_location": "L1"
     },
     {
@@ -12606,6 +12605,17 @@
       "source_location": "L1"
     },
     {
+      "id": "force_push",
+      "label": "force_push.py",
+      "_origin": "ast",
+      "community": 48,
+      "community_name": "claudia_live_watchdog.py",
+      "file_type": "code",
+      "norm_label": "force_push.py",
+      "source_file": "force_push.py",
+      "source_location": "L1"
+    },
+    {
       "id": "scripts_claudia_live_watchdog",
       "label": "claudia_live_watchdog.py",
       "_origin": "ast",
@@ -17492,18 +17502,6 @@
       "weight": 1.0
     },
     {
-      "source": "scripts_claudia_live_watchdog_check_memory_and_restart",
-      "target": "scripts_claudia_live_watchdog_send_telegram_server",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L272",
-      "weight": 1.0
-    },
-    {
       "source": "scripts_claudia_live_watchdog_run_watchdog",
       "target": "scripts_claudia_live_watchdog_send_telegram_msg",
       "relation": "calls",
@@ -17512,7 +17510,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L286",
+      "source_location": "L271",
       "weight": 1.0
     },
     {
@@ -17524,19 +17522,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L290",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_claudia_live_watchdog_run_watchdog",
-      "target": "scripts_claudia_live_watchdog_check_memory_and_restart",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L291",
+      "source_location": "L275",
       "weight": 1.0
     },
     {
@@ -17548,7 +17534,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L150",
+      "source_location": "L149",
       "weight": 1.0
     },
     {
@@ -17560,7 +17546,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L155",
+      "source_location": "L154",
       "weight": 1.0
     },
     {
@@ -17572,7 +17558,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L248",
+      "source_location": "L247",
       "weight": 1.0
     },
     {
@@ -19913,6 +19899,18 @@
       "context": "import",
       "source_file": "ponytail/package.json",
       "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "force_push",
+      "target": "scripts_claudia_live_watchdog",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "force_push.py",
+      "source_location": "L3",
       "weight": 1.0
     },
     {
@@ -30192,7 +30190,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L148",
+      "source_location": "L147",
       "weight": 1.0
     },
     {
@@ -30203,18 +30201,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L18",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_claudia_live_watchdog",
-      "target": "scripts_claudia_live_watchdog_check_memory_and_restart",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L260",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -30225,7 +30212,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L276",
+      "source_location": "L261",
       "weight": 1.0
     },
     {
@@ -30236,7 +30223,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L33",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -30247,7 +30234,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L53",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -30258,7 +30245,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/claudia_live_watchdog.py",
-      "source_location": "L77",
+      "source_location": "L76",
       "weight": 1.0
     },
     {
@@ -34603,5 +34590,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "af7f49df0b9faa151a1df83374f315896cffcf84"
+  "built_at_commit": "b43553b88ba5e39e2da5e23404de1703d1392949"
 }

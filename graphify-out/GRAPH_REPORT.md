@@ -1,16 +1,16 @@
 # Graph Report - Agent_Claudia_Autonomus  (2026-08-25)
 
 ## Corpus Check
-- 198 files · ~197,253 words
+- 200 files · ~197,610 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1431 nodes · 1569 edges · 167 communities (141 shown, 26 thin omitted)
+- 1432 nodes · 1567 edges · 168 communities (142 shown, 26 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 28 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `af7f49df`
+- Built from commit: `b43553b8`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -168,7 +168,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (167 total, 26 thin omitted)
+## Communities (168 total, 26 thin omitted)
 
 ### Community 0 - "run_deterministic_tests"
 Cohesion: 0.06
@@ -379,8 +379,8 @@ Cohesion: 0.09
 Nodes (22): 1. Peta Repositori & Standar Visual Computing Terbaik Dunia, 1. RGB ke Grayscale (Luminosity Weighting), 2. Matematika Pemrosesan Citra Klasik (Classical Image Processing), 2. RGB ke HSV (Hue, Saturation, Value), 3. Arsitektur AI Generatif Visual & Latent Diffusion, 3. RGB ke YCbCr (Luma-Chroma Video Subsampling), 4. Segmentasi Alpha Matting & Tracing Vektor (Raster-to-Vector), 5. Streaming Citra Memori Rendah (`libvips`) & Super-Resolution (`Real-ESRGAN`) (+14 more)
 
 ### Community 48 - "claudia_live_watchdog.py"
-Cohesion: 0.24
-Nodes (7): calc_indicators(), check_memory_and_restart(), fetch_klines_twelve(), run_watchdog(), scan_asset(), send_telegram_msg(), send_telegram_server()
+Cohesion: 0.22
+Nodes (5): calc_indicators(), fetch_klines_twelve(), run_watchdog(), scan_asset(), send_telegram_msg()
 
 ### Community 49 - "Ponytail"
 Cohesion: 0.22
@@ -594,8 +594,6 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **Why does `run_tests()` connect `run_tests` to `ImageMatrix`, `ConvolutionKernelEngine`, `ColorSpaceMath`, `.process_tiled_convolution`, `Any`, `RasterToVectorTracer`, `GenerativeGraphExecutor`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
-- **Why does `run_self_tests()` connect `run_self_tests` to `.build_svg`, `Vec2D`, `PaletteGenerator`, `IconBuilder24`, `.from_lab`?**
-  _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **What connects `__dirname`, `require`, `{ getPonytailInstructions }` to the rest of the system?**
   _669 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `run_deterministic_tests` be split into smaller, more focused modules?**
@@ -604,3 +602,5 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.044444444444444446 - nodes in this community are weakly interconnected._
 - **Should `N022_multi_agent_consensus.md` be split into smaller, more focused modules?**
   _Cohesion score 0.045454545454545456 - nodes in this community are weakly interconnected._
+- **Should `Vec2D` be split into smaller, more focused modules?**
+  _Cohesion score 0.06155632984901278 - nodes in this community are weakly interconnected._
