@@ -206,5 +206,16 @@
   "204": "next",
   "205": "tailwindcss",
   "206": "run_self_tests",
-  "207": "N058: Migrasi Arsitektur Goblix Cinema ke Next.js App Router"
+  "207": "N058: Migrasi Arsitektur Goblix Cinema ke Next.js App Router",
+  "208": "download_full_synced_subtitles.py",
+  "209": "sanitize_and_sync_all_subs.py",
+  "210": "download_subtitlecat_subtitles.py",
+  "211": "fetch_all_bluray_subtitles.py",
+  "212": "fetch_official_subtitles.py",
+  "213": "generate_goblix_intro.sh",
+  "214": "precision_fetch_subtitles.py",
+  "215": "search_github_subs.py",
+  "216": "test_det.py",
+  "217": "test_sub_dl.py",
+  "218": "test_subcat.py"
 }

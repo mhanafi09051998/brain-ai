@@ -10,6 +10,10 @@ export default function VideoPlayer({ movie }) {
   const videoRef = useRef(null);
   const containerRef = useRef(null);
 
+  // Cinematic Intro State
+  const [isIntroPlaying, setIsIntroPlaying] = useState(true);
+
+  // Movie Player States
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -23,28 +27,31 @@ export default function VideoPlayer({ movie }) {
   const [showQualityMenu, setShowQualityMenu] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
-  // Resume progress on mount
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video || !movie) return;
+  // Start movie after intro finishes
+  const finishIntro = () => {
+    setIsIntroPlaying(false);
+    setIsLoading(true);
+    setTimeout(() => {
+      const video = videoRef.current;
+      if (video && movie) {
+        video.src = `/api/stream/${movie.slug}`;
+        const prog = watchProgress[movie.id] || watchProgress[movie.slug];
+        if (prog && prog.currentTime > 5 && prog.currentTime < prog.duration - 15) {
+          video.currentTime = prog.currentTime;
+        }
+        video.play().catch(() => {});
+      }
+    }, 100);
+  };
 
-    const prog = watchProgress[movie.id] || watchProgress[movie.slug];
-    if (prog && prog.currentTime > 5 && prog.currentTime < prog.duration - 15) {
-      video.currentTime = prog.currentTime;
-    }
-
-    // Auto play
-    video.play().catch(() => {});
-  }, [movie]);
-
-  // Hide controls after timeout
+  // Hide controls after timeout when watching film
   useEffect(() => {
     let timer;
     const handleMouseMove = () => {
       setShowControls(true);
       clearTimeout(timer);
       timer = setTimeout(() => {
-        if (isPlaying) setShowControls(false);
+        if (isPlaying && !isIntroPlaying) setShowControls(false);
       }, PLAYER_CONFIG.controlsTimeoutMs);
     };
 
@@ -53,10 +60,11 @@ export default function VideoPlayer({ movie }) {
       window.removeEventListener('mousemove', handleMouseMove);
       clearTimeout(timer);
     };
-  }, [isPlaying]);
+  }, [isPlaying, isIntroPlaying]);
 
   // Periodic watch progress tracker
   useEffect(() => {
+    if (isIntroPlaying) return;
     const interval = setInterval(() => {
       const video = videoRef.current;
       if (video && !video.paused && video.duration) {
@@ -65,7 +73,7 @@ export default function VideoPlayer({ movie }) {
     }, PLAYER_CONFIG.progressIntervalMs);
 
     return () => clearInterval(interval);
-  }, [movie, updateProgress]);
+  }, [movie, updateProgress, isIntroPlaying]);
 
   const togglePlay = () => {
     const video = videoRef.current;
@@ -80,6 +88,7 @@ export default function VideoPlayer({ movie }) {
   };
 
   const handleSeek = (e) => {
+    if (isIntroPlaying) return;
     const video = videoRef.current;
     if (!video || !duration) return;
     const rect = e.currentTarget.getBoundingClientRect();
@@ -155,178 +164,206 @@ export default function VideoPlayer({ movie }) {
   return (
     <div ref={containerRef} className="relative w-screen h-screen bg-black overflow-hidden select-none font-sans">
       
-      {/* Video Element */}
-      <video
-        ref={videoRef}
-        src={`/api/stream/${movie.slug}`}
-        crossOrigin="anonymous"
-        playsInline
-        className="w-full h-full object-contain cursor-pointer"
-        onClick={togglePlay}
-        onTimeUpdate={() => {
-          if (videoRef.current) {
-            setCurrentTime(videoRef.current.currentTime);
-            setDuration(videoRef.current.duration || 0);
-          }
-        }}
-        onPlay={() => setIsPlaying(true)}
-        onPause={() => setIsPlaying(false)}
-        onWaiting={() => setIsLoading(true)}
-        onPlaying={() => setIsLoading(false)}
-      >
-        <track
-          label={PLAYER_CONFIG.defaultSubtitleLang}
-          kind="subtitles"
-          srcLang="id"
-          src={`/api/subtitles/${movie.slug}`}
-          default
-        />
-      </video>
-
-      {/* Loading Spinner */}
-      {isLoading && (
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
-          <div className="w-14 h-14 border-4 border-red-600 border-t-transparent rounded-full animate-spin"></div>
-        </div>
-      )}
-
-      {/* Top Bar Header */}
-      <div className={`absolute top-0 inset-x-0 p-4 sm:p-6 bg-gradient-to-b from-black/90 via-black/40 to-transparent flex items-center justify-between transition-opacity duration-300 z-30 ${
-        showControls ? 'opacity-100' : 'opacity-0 pointer-events-none'
-      }`}>
-        <div className="flex items-center space-x-4">
-          <Link href="/" className="w-10 h-10 rounded-full bg-black/60 hover:bg-white hover:text-black text-white flex items-center justify-center transition border border-white/20">
-            <i className="fa-solid fa-arrow-left text-sm"></i>
-          </Link>
-          <div>
-            <h1 className="text-white text-base sm:text-lg font-bold drop-shadow">{movie.title}</h1>
-            <p className="text-gray-400 text-xs">{movie.quality} • {movie.subtitle}</p>
-          </div>
-        </div>
-        <div className="flex items-center space-x-2">
-          <span className="bg-red-600 text-white text-[10px] font-black px-2 py-0.5 rounded">{APP_CONFIG.liveBadge}</span>
-        </div>
-      </div>
-
-      {/* Bottom Controls Bar */}
-      <div className={`absolute bottom-0 inset-x-0 p-4 sm:p-6 bg-gradient-to-t from-black/95 via-black/60 to-transparent transition-opacity duration-300 z-30 space-y-3 ${
-        showControls ? 'opacity-100' : 'opacity-0 pointer-events-none'
-      }`}>
-        
-        {/* Progress Bar */}
-        <div onClick={handleSeek} className="relative w-full h-2 bg-gray-800/80 hover:h-3 rounded-full cursor-pointer transition-all group">
-          <div className="h-full bg-red-600 rounded-full relative" style={{ width: `${duration ? (currentTime / duration) * 100 : 0}%` }}>
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-3.5 h-3.5 bg-red-600 rounded-full scale-0 group-hover:scale-100 transition shadow"></div>
-          </div>
-        </div>
-
-        {/* Buttons Row */}
-        <div className="flex items-center justify-between text-white text-sm sm:text-base">
+      {/* 1. CINEMATIC INTRO MODE (NETFLIX STYLE) */}
+      {isIntroPlaying ? (
+        <div className="relative w-full h-full bg-black flex items-center justify-center">
+          <video
+            ref={videoRef}
+            src="/video/goblix_intro.mp4"
+            autoPlay
+            playsInline
+            onEnded={finishIntro}
+            className="w-full h-full object-contain"
+          />
           
-          {/* Left Controls */}
-          <div className="flex items-center space-x-3 sm:space-x-5">
-            <button onClick={togglePlay} className="hover:text-red-500 transition text-lg sm:text-xl">
-              <i className={`fa-solid ${isPlaying ? 'fa-pause' : 'fa-play'}`}></i>
-            </button>
-
-            <button onClick={() => { if (videoRef.current) videoRef.current.currentTime -= PLAYER_CONFIG.seekStepSeconds; }} className="hover:text-gray-300 transition text-xs sm:text-sm" title="Mundur 10s">
-              <i className="fa-solid fa-rotate-left mr-1"></i>10s
-            </button>
-
-            <button onClick={() => { if (videoRef.current) videoRef.current.currentTime += PLAYER_CONFIG.seekStepSeconds; }} className="hover:text-gray-300 transition text-xs sm:text-sm" title="Maju 10s">
-              <i className="fa-solid fa-rotate-right mr-1"></i>10s
-            </button>
-
-            {/* Volume */}
-            <div className="flex items-center space-x-2">
-              <button onClick={toggleMute} className="hover:text-gray-300 transition text-sm">
-                <i className={`fa-solid ${isMuted || volume === 0 ? 'fa-volume-xmark text-red-500' : 'fa-volume-high'}`}></i>
-              </button>
-              <input
-                type="range"
-                min="0"
-                max="1"
-                step="0.05"
-                value={isMuted ? 0 : volume}
-                onChange={handleVolumeChange}
-                className="w-16 sm:w-20 accent-red-600 h-1 bg-gray-700 rounded cursor-pointer"
-              />
-            </div>
-
-            {/* Time Stamp */}
-            <div className="text-[11px] sm:text-xs text-gray-400 font-mono">
-              <span>{formatTime(currentTime)}</span> / <span>{formatTime(duration)}</span>
-            </div>
-          </div>
-
-          {/* Right Controls */}
-          <div className="flex items-center space-x-3 sm:space-x-4">
-            
-            {/* Speed Controller */}
-            <div className="relative">
-              <button onClick={() => setShowSpeedMenu(!showSpeedMenu)} className="hover:text-red-500 text-xs font-bold px-2 py-1 bg-gray-900 border border-gray-800 rounded transition">
-                {playbackRate}x
-              </button>
-              {showSpeedMenu && (
-                <div className="absolute bottom-full right-0 mb-2 w-24 bg-gray-950 border border-gray-800 rounded-md shadow-2xl py-1 z-50 text-xs">
-                  {PLAYER_CONFIG.playbackRates.map(rate => (
-                    <button
-                      key={rate}
-                      onClick={() => changeSpeed(rate)}
-                      className={`w-full text-left px-3 py-1 hover:bg-red-600 hover:text-white ${playbackRate === rate ? 'text-red-500 font-bold' : 'text-gray-300'}`}
-                    >
-                      {rate}x
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Quality Selector */}
-            <div className="relative">
-              <button onClick={() => setShowQualityMenu(!showQualityMenu)} className="hover:text-red-500 text-xs font-bold px-2 py-1 bg-gray-900 border border-gray-800 rounded transition hidden sm:inline">
-                {quality}
-              </button>
-              {showQualityMenu && (
-                <div className="absolute bottom-full right-0 mb-2 w-32 bg-gray-950 border border-gray-800 rounded-md shadow-2xl py-1 z-50 text-xs">
-                  {PLAYER_CONFIG.qualities.map(q => (
-                    <button
-                      key={q}
-                      onClick={() => { setQuality(q); setShowQualityMenu(false); }}
-                      className={`w-full text-left px-3 py-1 hover:bg-red-600 hover:text-white ${quality === q ? 'text-red-500 font-bold' : 'text-gray-300'}`}
-                    >
-                      {q}
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Subtitle Toggle */}
+          {/* Skip Intro Button */}
+          <div className="absolute bottom-10 right-8 z-40">
             <button
-              onClick={toggleSubtitles}
-              className={`text-xs font-bold px-2 py-1 rounded transition border ${
-                subtitlesEnabled ? 'bg-red-600 border-red-600 text-white' : 'bg-gray-900 border-gray-800 text-gray-500'
-              }`}
-              title="Aktifkan / Nonaktifkan Subtitle Indonesia"
+              onClick={finishIntro}
+              className="bg-black/60 hover:bg-red-600 border border-gray-600 hover:border-red-600 text-white text-xs sm:text-sm font-bold px-4 sm:px-6 py-2 sm:py-2.5 rounded-md backdrop-blur transition-all flex items-center space-x-2 shadow-2xl"
             >
-              SUB
-            </button>
-
-            {/* PiP */}
-            <button onClick={togglePiP} className="hover:text-gray-300 transition text-sm" title="Picture in Picture">
-              <i className="fa-solid fa-clone"></i>
-            </button>
-
-            {/* Fullscreen */}
-            <button onClick={toggleFullscreen} className="hover:text-gray-300 transition text-sm" title="Layar Penuh">
-              <i className="fa-solid fa-expand"></i>
+              <span>Lewati Intro</span>
+              <i className="fa-solid fa-forward-step text-xs"></i>
             </button>
           </div>
-
         </div>
+      ) : (
+        /* 2. MAIN FILM STREAMING PLAYER */
+        <>
+          <video
+            ref={videoRef}
+            src={`/api/stream/${movie.slug}`}
+            crossOrigin="anonymous"
+            autoPlay
+            playsInline
+            className="w-full h-full object-contain cursor-pointer"
+            onClick={togglePlay}
+            onTimeUpdate={() => {
+              if (videoRef.current) {
+                setCurrentTime(videoRef.current.currentTime);
+                setDuration(videoRef.current.duration || 0);
+              }
+            }}
+            onPlay={() => setIsPlaying(true)}
+            onPause={() => setIsPlaying(false)}
+            onWaiting={() => setIsLoading(true)}
+            onPlaying={() => setIsLoading(false)}
+          >
+            <track
+              label={PLAYER_CONFIG.defaultSubtitleLang}
+              kind="subtitles"
+              srcLang="id"
+              src={`/api/subtitles/${movie.slug}`}
+              default
+            />
+          </video>
 
-      </div>
+          {/* Loading Spinner */}
+          {isLoading && (
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
+              <div className="w-14 h-14 border-4 border-red-600 border-t-transparent rounded-full animate-spin"></div>
+            </div>
+          )}
+
+          {/* Top Bar Header */}
+          <div className={`absolute top-0 inset-x-0 p-4 sm:p-6 bg-gradient-to-b from-black/90 via-black/40 to-transparent flex items-center justify-between transition-opacity duration-300 z-30 ${
+            showControls ? 'opacity-100' : 'opacity-0 pointer-events-none'
+          }`}>
+            <div className="flex items-center space-x-4">
+              <Link href="/" className="w-10 h-10 rounded-full bg-black/60 hover:bg-white hover:text-black text-white flex items-center justify-center transition border border-white/20">
+                <i className="fa-solid fa-arrow-left text-sm"></i>
+              </Link>
+              <div>
+                <h1 className="text-white text-base sm:text-lg font-bold drop-shadow">{movie.title}</h1>
+                <p className="text-gray-400 text-xs">{movie.quality} • {movie.subtitle}</p>
+              </div>
+            </div>
+            <div className="flex items-center space-x-2">
+              <span className="bg-red-600 text-white text-[10px] font-black px-2 py-0.5 rounded">{APP_CONFIG.liveBadge}</span>
+            </div>
+          </div>
+
+          {/* Bottom Controls Bar */}
+          <div className={`absolute bottom-0 inset-x-0 p-4 sm:p-6 bg-gradient-to-t from-black/95 via-black/60 to-transparent transition-opacity duration-300 z-30 space-y-3 ${
+            showControls ? 'opacity-100' : 'opacity-0 pointer-events-none'
+          }`}>
+            
+            {/* Progress Bar */}
+            <div onClick={handleSeek} className="relative w-full h-2 bg-gray-800/80 hover:h-3 rounded-full cursor-pointer transition-all group">
+              <div className="h-full bg-red-600 rounded-full relative" style={{ width: `${duration ? (currentTime / duration) * 100 : 0}%` }}>
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-3.5 h-3.5 bg-red-600 rounded-full scale-0 group-hover:scale-100 transition shadow"></div>
+              </div>
+            </div>
+
+            {/* Buttons Row */}
+            <div className="flex items-center justify-between text-white text-sm sm:text-base">
+              
+              {/* Left Controls */}
+              <div className="flex items-center space-x-3 sm:space-x-5">
+                <button onClick={togglePlay} className="hover:text-red-500 transition text-lg sm:text-xl">
+                  <i className={`fa-solid ${isPlaying ? 'fa-pause' : 'fa-play'}`}></i>
+                </button>
+
+                <button onClick={() => { if (videoRef.current) videoRef.current.currentTime -= PLAYER_CONFIG.seekStepSeconds; }} className="hover:text-gray-300 transition text-xs sm:text-sm" title="Mundur 10s">
+                  <i className="fa-solid fa-rotate-left mr-1"></i>10s
+                </button>
+
+                <button onClick={() => { if (videoRef.current) videoRef.current.currentTime += PLAYER_CONFIG.seekStepSeconds; }} className="hover:text-gray-300 transition text-xs sm:text-sm" title="Maju 10s">
+                  <i className="fa-solid fa-rotate-right mr-1"></i>10s
+                </button>
+
+                {/* Volume */}
+                <div className="flex items-center space-x-2">
+                  <button onClick={toggleMute} className="hover:text-gray-300 transition text-sm">
+                    <i className={`fa-solid ${isMuted || volume === 0 ? 'fa-volume-xmark text-red-500' : 'fa-volume-high'}`}></i>
+                  </button>
+                  <input
+                    type="range"
+                    min="0"
+                    max="1"
+                    step="0.05"
+                    value={isMuted ? 0 : volume}
+                    onChange={handleVolumeChange}
+                    className="w-16 sm:w-20 accent-red-600 h-1 bg-gray-700 rounded cursor-pointer"
+                  />
+                </div>
+
+                {/* Time Stamp */}
+                <div className="text-[11px] sm:text-xs text-gray-400 font-mono">
+                  <span>{formatTime(currentTime)}</span> / <span>{formatTime(duration)}</span>
+                </div>
+              </div>
+
+              {/* Right Controls */}
+              <div className="flex items-center space-x-3 sm:space-x-4">
+                
+                {/* Speed Controller */}
+                <div className="relative">
+                  <button onClick={() => setShowSpeedMenu(!showSpeedMenu)} className="hover:text-red-500 text-xs font-bold px-2 py-1 bg-gray-900 border border-gray-800 rounded transition">
+                    {playbackRate}x
+                  </button>
+                  {showSpeedMenu && (
+                    <div className="absolute bottom-full right-0 mb-2 w-24 bg-gray-950 border border-gray-800 rounded-md shadow-2xl py-1 z-50 text-xs">
+                      {PLAYER_CONFIG.playbackRates.map(rate => (
+                        <button
+                          key={rate}
+                          onClick={() => changeSpeed(rate)}
+                          className={`w-full text-left px-3 py-1 hover:bg-red-600 hover:text-white ${playbackRate === rate ? 'text-red-500 font-bold' : 'text-gray-300'}`}
+                        >
+                          {rate}x
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* Quality Selector */}
+                <div className="relative">
+                  <button onClick={() => setShowQualityMenu(!showQualityMenu)} className="hover:text-red-500 text-xs font-bold px-2 py-1 bg-gray-900 border border-gray-800 rounded transition hidden sm:inline">
+                    {quality}
+                  </button>
+                  {showQualityMenu && (
+                    <div className="absolute bottom-full right-0 mb-2 w-32 bg-gray-950 border border-gray-800 rounded-md shadow-2xl py-1 z-50 text-xs">
+                      {PLAYER_CONFIG.qualities.map(q => (
+                        <button
+                          key={q}
+                          onClick={() => { setQuality(q); setShowQualityMenu(false); }}
+                          className={`w-full text-left px-3 py-1 hover:bg-red-600 hover:text-white ${quality === q ? 'text-red-500 font-bold' : 'text-gray-300'}`}
+                        >
+                          {q}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* Subtitle Toggle */}
+                <button
+                  onClick={toggleSubtitles}
+                  className={`text-xs font-bold px-2 py-1 rounded transition border ${
+                    subtitlesEnabled ? 'bg-red-600 border-red-600 text-white' : 'bg-gray-900 border-gray-800 text-gray-500'
+                  }`}
+                  title="Aktifkan / Nonaktifkan Subtitle Indonesia"
+                >
+                  SUB
+                </button>
+
+                {/* PiP */}
+                <button onClick={togglePiP} className="hover:text-gray-300 transition text-sm" title="Picture in Picture">
+                  <i className="fa-solid fa-clone"></i>
+                </button>
+
+                {/* Fullscreen */}
+                <button onClick={toggleFullscreen} className="hover:text-gray-300 transition text-sm" title="Layar Penuh">
+                  <i className="fa-solid fa-expand"></i>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+        </>
+      )}
 
     </div>
   );

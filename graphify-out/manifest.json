@@ -1770,9 +1770,9 @@
     "semantic_hash": ""
   },
   "goblix/components/VideoPlayer.js": {
-    "mtime": 1787652291.5169,
-    "seen": 1787652348.3361845,
-    "ast_hash": "4b4b6f53186f21d6c6132f014c02070e",
+    "mtime": 1787652687.3139548,
+    "seen": 1787652718.3490477,
+    "ast_hash": "5af76327c083a3bfba00e68869b30f4c",
     "semantic_hash": ""
   },
   "goblix/jsconfig.json": {
@@ -1833,6 +1833,78 @@
     "mtime": 1787652261.8206933,
     "seen": 1787652348.3361845,
     "ast_hash": "25f3439a5ef0ff36dabd793c91201e17",
+    "semantic_hash": ""
+  },
+  "scripts/download_full_synced_subtitles.py": {
+    "mtime": 1787652472.2147036,
+    "seen": 1787652718.3490477,
+    "ast_hash": "fb589b2cbee2fc54fc121fcf5754b013",
+    "semantic_hash": ""
+  },
+  "scripts/download_subtitlecat_subtitles.py": {
+    "mtime": 1787652532.408159,
+    "seen": 1787652718.3490477,
+    "ast_hash": "bb62078e87604efd23e7e6a6eeb24934",
+    "semantic_hash": ""
+  },
+  "scripts/fetch_all_bluray_subtitles.py": {
+    "mtime": 1787652604.2463872,
+    "seen": 1787652718.3490477,
+    "ast_hash": "cd73935d4c8ef62d4c9fda8f235fc54f",
+    "semantic_hash": ""
+  },
+  "scripts/fetch_official_subtitles.py": {
+    "mtime": 1787652484.8732836,
+    "seen": 1787652718.3490477,
+    "ast_hash": "ae037faade8d301ae714fc70f0e1920f",
+    "semantic_hash": ""
+  },
+  "scripts/generate_goblix_intro.sh": {
+    "mtime": 1787652418.0092444,
+    "seen": 1787652718.3490477,
+    "ast_hash": "e588afbbd31e109b1efd7f8a2ca4278d",
+    "semantic_hash": ""
+  },
+  "scripts/precision_fetch_subtitles.py": {
+    "mtime": 1787652643.4141088,
+    "seen": 1787652718.3490477,
+    "ast_hash": "c84d1fb25bfebf4bab9736166749d2e6",
+    "semantic_hash": ""
+  },
+  "scripts/sanitize_and_sync_all_subs.py": {
+    "mtime": 1787652455.1706219,
+    "seen": 1787652718.3490477,
+    "ast_hash": "3fade6e7155bf9e3a0eed15df713c62c",
+    "semantic_hash": ""
+  },
+  "scripts/search_github_subs.py": {
+    "mtime": 1787652502.322356,
+    "seen": 1787652718.3490477,
+    "ast_hash": "903a8bf1b97e43151eeaeeb1c9c9c4bb",
+    "semantic_hash": ""
+  },
+  "scripts/test_det.py": {
+    "mtime": 1787652623.7706218,
+    "seen": 1787652718.3490477,
+    "ast_hash": "b1fb4ae6ed55a0ff940e9708d38f3697",
+    "semantic_hash": ""
+  },
+  "scripts/test_sub_dl.py": {
+    "mtime": 1787652583.9101362,
+    "seen": 1787652718.3490477,
+    "ast_hash": "911778a14687d1ec40cfe23cb4fdd655",
+    "semantic_hash": ""
+  },
+  "scripts/test_subcat.py": {
+    "mtime": 1787652568.1021972,
+    "seen": 1787652718.3490477,
+    "ast_hash": "ab349f5938eca033560410038a103ddd",
+    "semantic_hash": ""
+  },
+  "goblix/public/video/goblix_intro.mp4": {
+    "mtime": 1787652445.6772778,
+    "seen": 1787652718.349565,
+    "ast_hash": "8f0819b11fdc61e043658402c7067575",
     "semantic_hash": ""
   }
 }
