@@ -8,11 +8,12 @@ import { fetchMovies, checkAuthSession } from './api.js';
 import { toggleSubtitle as subToggle } from './subtitle.js';
 import { changeSpeed as plChangeSpeed, changeQuality as plChangeQuality, togglePiP as plTogglePiP } from './player.js';
 import { renderHomePage, renderMovieDetailPage, renderWatchPage, showMovieModal } from './views.js';
-import { renderLoginPage, renderRegisterPage, showMyListModal as authShowMyList } from './auth_views.js';
+import { renderLoginPage, renderRegisterPage, showMyListModal as authShowMyList, showAuthModal } from './auth_views.js';
 
 // --- Global Window Bindings for Inline HTML Event Handlers ---
 window.navigateTo = navigateTo;
 window.showMovieModal = showMovieModal;
+window.showAuthModal = showAuthModal;
 window.setCategoryFilter = setCategoryFilter;
 window.toggleSearchInput = toggleSearchInput;
 window.handleSearchQuery = handleSearchQuery;
@@ -65,8 +66,8 @@ export function updateNavbarAuth() {
     `;
   } else {
     container.innerHTML = `
-      <a href="/login" onclick="event.preventDefault(); navigateTo('/login')" class="text-xs font-bold text-gray-300 hover:text-white px-2 sm:px-3 py-1.5 transition">Masuk</a>
-      <a href="/register" onclick="event.preventDefault(); navigateTo('/register')" class="bg-red-600 hover:bg-red-700 text-white text-xs font-bold px-3 sm:px-4 py-1.5 sm:py-2 rounded transition shadow-md shadow-red-600/30">Daftar</a>
+      <button onclick="showAuthModal('login')" class="text-xs font-bold text-gray-300 hover:text-white px-2 sm:px-3 py-1.5 transition">Masuk</button>
+      <button onclick="showAuthModal('register')" class="bg-red-600 hover:bg-red-700 text-white text-xs font-bold px-3 sm:px-4 py-1.5 sm:py-2 rounded transition shadow-md shadow-red-600/30">Daftar</button>
     `;
   }
 }
@@ -151,7 +152,11 @@ async function submitLogin(e) {
       setToken(data.token);
       state.currentUser = data.user;
       updateNavbarAuth();
-      navigateTo('/');
+      document.getElementById('authModal')?.remove();
+      if (window.location.pathname === '/login' || window.location.pathname === '/register') {
+        window.history.pushState({}, '', '/');
+      }
+      renderHomePage();
     } else {
       alertEl.innerText = data.error || 'Login gagal.';
       alertEl.classList.remove('hidden');
@@ -188,7 +193,11 @@ async function submitRegister(e) {
       setToken(data.token);
       state.currentUser = data.user;
       updateNavbarAuth();
-      navigateTo('/');
+      document.getElementById('authModal')?.remove();
+      if (window.location.pathname === '/login' || window.location.pathname === '/register') {
+        window.history.pushState({}, '', '/');
+      }
+      renderHomePage();
     } else {
       alertEl.innerText = data.error || 'Pendaftaran gagal.';
       alertEl.classList.remove('hidden');
@@ -240,8 +249,8 @@ export async function handleRoute() {
   if (path === '/' || path === '') renderHomePage();
   else if (path.startsWith('/movie/')) renderMovieDetailPage(path.replace('/movie/', ''));
   else if (path.startsWith('/watch/')) renderWatchPage(path.replace('/watch/', ''));
-  else if (path === '/login') renderLoginPage();
-  else if (path === '/register') renderRegisterPage();
+  else if (path === '/login') { renderHomePage(); showAuthModal('login'); }
+  else if (path === '/register') { renderHomePage(); showAuthModal('register'); }
   else renderHomePage();
 }
 
