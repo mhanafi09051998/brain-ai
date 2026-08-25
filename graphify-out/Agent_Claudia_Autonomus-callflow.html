@@ -60,7 +60,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 <div class="container">
 
 <h1>Agent_Claudia_Autonomus — Complete Call Flow &amp; Architecture Documentation</h1>
-<p class="subtitle">Generated from graphify knowledge graph: 1541 nodes, 1707 edges, 180 communities. Commit: 25fa5c9</p>
+<p class="subtitle">Generated from graphify knowledge graph: 1550 nodes, 1726 edges, 180 communities. Commit: 2f01d5f</p>
 
 <div class="nav">
     <a href="#overview">Architecture Overview</a>
@@ -96,7 +96,7 @@ flowchart LR
     class ANALYSIS_CLUSTERING_C79796DA module;
     OUTPUTS_DOCS_ED82387C("Outputs &amp; Docs<br/><small>51 nodes</small>")
     class OUTPUTS_DOCS_ED82387C module;
-    CLI_SKILLS_9964CBB8("CLI &amp; Skill Installers<br/><small>232 nodes</small>")
+    CLI_SKILLS_9964CBB8("CLI &amp; Skill Installers<br/><small>231 nodes</small>")
     class CLI_SKILLS_9964CBB8 module;
     INGEST_CACHE_UPDATE_FF457338("Ingestion &amp; Updates<br/><small>58 nodes</small>")
     class INGEST_CACHE_UPDATE_FF457338 module;
@@ -104,9 +104,9 @@ flowchart LR
     class SERVE_API_35EC8E86 module;
     SECURITY_GLOBAL_5B9C6A04("Security &amp; Global Graph<br/><small>41 nodes</small>")
     class SECURITY_GLOBAL_5B9C6A04 module;
-    TESTS_FIXTURES_B84B1DCC("Tests &amp; Fixtures<br/><small>126 nodes</small>")
+    TESTS_FIXTURES_B84B1DCC("Tests &amp; Fixtures<br/><small>128 nodes</small>")
     class TESTS_FIXTURES_B84B1DCC module;
-    APP_JS_CC08AAF7("app.js<br/><small>26 nodes</small>")
+    APP_JS_CC08AAF7("app.js<br/><small>35 nodes</small>")
     class APP_JS_CC08AAF7 module;
     COLOR_6DD0FE80("Color<br/><small>25 nodes</small>")
     class COLOR_6DD0FE80 module;
@@ -116,20 +116,20 @@ flowchart LR
     class NEURON_N044_STATISTICAL_ARBITRAGE_PAIRS_TRADING_CC6EBDBF module;
     SERVER_JS_B7773C1D("server.js<br/><small>21 nodes</small>")
     class SERVER_JS_B7773C1D module;
-    OTHER_D0941E68("Other<br/><small>545 nodes</small>")
+    OTHER_D0941E68("Other<br/><small>544 nodes</small>")
     class OTHER_D0941E68 module;
     TESTS_FIXTURES_B84B1DCC -->|calls x16| OTHER_D0941E68
-    OTHER_D0941E68 -->|imports x10| CLI_SKILLS_9964CBB8
+    OTHER_D0941E68 -->|imports x11| CLI_SKILLS_9964CBB8
     TESTS_FIXTURES_B84B1DCC -->|references x10| COLOR_6DD0FE80
-    TESTS_FIXTURES_B84B1DCC -->|calls x9| CLI_SKILLS_9964CBB8
     TESTS_FIXTURES_B84B1DCC -->|calls x7| OUTPUTS_DOCS_ED82387C
     TESTS_FIXTURES_B84B1DCC -->|calls x7| ANALYSIS_CLUSTERING_C79796DA
+    TESTS_FIXTURES_B84B1DCC -->|calls x7| CLI_SKILLS_9964CBB8
     OTHER_D0941E68 -->|calls x6| ANALYSIS_CLUSTERING_C79796DA
     OUTPUTS_DOCS_ED82387C -->|references x6| OTHER_D0941E68
     OTHER_D0941E68 -->|calls x5| SECURITY_GLOBAL_5B9C6A04
+    CLI_SKILLS_9964CBB8 -->|indirect call x5| TESTS_FIXTURES_B84B1DCC
     ANALYSIS_CLUSTERING_C79796DA -->|imports x4| OTHER_D0941E68
     TESTS_FIXTURES_B84B1DCC -->|calls x3| BUILD_GRAPH_321CBB04
-    TESTS_FIXTURES_B84B1DCC -->|calls x3| SECURITY_GLOBAL_5B9C6A04
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -146,7 +146,7 @@ flowchart LR
     <h4>Architecture Layers</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>Layer</th><th>Nodes</th><th>Communities</th></tr>
-      <tr><td>Extraction Pipeline</td><td>124</td><td><code>8, 11, 25, 26, 29, 40, 45, 84, 96, 97</code></td></tr><tr><td>Graph Build</td><td>153</td><td><code>0, 4, 28, 129, 36, 62, 67, 124, 125</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>77</td><td><code>6, 14, 31, 46, 68</code></td></tr><tr><td>Outputs &amp; Docs</td><td>51</td><td><code>3, 43, 133, 32</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>232</td><td><code>1, 2, 5, 22, 39, 49, 53, 54, 56, 69, 70, 71, 74, 75, 76, 77, 82, 86, 91, 116, 118, 119, 120, 121, 122, 123</code></td></tr><tr><td>Ingestion &amp; Updates</td><td>58</td><td><code>19, 168, 178, 73, 114, 177, 88, 135, 136, 138</code></td></tr><tr><td>Serving API</td><td>17</td><td><code>38, 95, 173</code></td></tr><tr><td>Security &amp; Global Graph</td><td>41</td><td><code>9, 128, 52</code></td></tr><tr><td>Tests &amp; Fixtures</td><td>126</td><td><code>37, 7, 18, 23, 48, 130, 58, 139, 174</code></td></tr><tr><td>app.js</td><td>26</td><td><code>161</code></td></tr><tr><td>Color</td><td>25</td><td><code>34</code></td></tr><tr><td>Neuron N056: Image Processing, Computer Vision &amp; AI Visual Generation Mastery</td><td>23</td><td><code>47</code></td></tr><tr><td>Neuron N044: Statistical Arbitrage, Pairs Trading &amp; Cointegration</td><td>22</td><td><code>10</code></td></tr><tr><td>server.js</td><td>21</td><td><code>146</code></td></tr><tr><td>Other</td><td>545</td><td><code>12, 13, 15, 16, 162, 17, 131, 20, 21, 24, 27, 87, 169, 30, 33, 35, 41, 42, 44, 170, 50, 51, 132, 55, 57, 59, 60, 61, 63, 64, 65, 66, 134, 172, 72, 171, 78, 79, 80, 81, 83, 85, 89, 90, 100, 101, 102, 103, 137, 92, 93, 94, 98, 99, 104, 105, 106, 107, 108, 109, 110, 111, 112, 176, 113, 115, 117, 126, 127, 140, 141, 142, 143, 144, 145, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 163, 164, 165, 166, 167, 175, 180</code></td></tr>
+      <tr><td>Extraction Pipeline</td><td>124</td><td><code>8, 11, 25, 26, 29, 40, 45, 84, 96, 97</code></td></tr><tr><td>Graph Build</td><td>153</td><td><code>0, 4, 28, 129, 36, 62, 67, 124, 125</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>77</td><td><code>6, 14, 31, 46, 68</code></td></tr><tr><td>Outputs &amp; Docs</td><td>51</td><td><code>3, 43, 133, 32</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>231</td><td><code>1, 2, 5, 22, 39, 49, 53, 54, 56, 69, 70, 71, 74, 75, 76, 77, 82, 86, 91, 116, 118, 119, 120, 121, 122, 123</code></td></tr><tr><td>Ingestion &amp; Updates</td><td>58</td><td><code>19, 168, 178, 73, 114, 177, 88, 135, 136, 138</code></td></tr><tr><td>Serving API</td><td>17</td><td><code>38, 95, 173</code></td></tr><tr><td>Security &amp; Global Graph</td><td>41</td><td><code>9, 128, 52</code></td></tr><tr><td>Tests &amp; Fixtures</td><td>128</td><td><code>37, 7, 23, 18, 48, 130, 58, 139, 174</code></td></tr><tr><td>app.js</td><td>35</td><td><code>161</code></td></tr><tr><td>Color</td><td>25</td><td><code>34</code></td></tr><tr><td>Neuron N056: Image Processing, Computer Vision &amp; AI Visual Generation Mastery</td><td>23</td><td><code>47</code></td></tr><tr><td>Neuron N044: Statistical Arbitrage, Pairs Trading &amp; Cointegration</td><td>22</td><td><code>10</code></td></tr><tr><td>server.js</td><td>21</td><td><code>146</code></td></tr><tr><td>Other</td><td>544</td><td><code>12, 13, 15, 16, 162, 17, 131, 20, 21, 24, 27, 87, 169, 30, 33, 35, 41, 42, 44, 170, 50, 51, 132, 55, 57, 59, 60, 61, 63, 64, 65, 66, 134, 172, 72, 171, 78, 79, 80, 81, 83, 85, 89, 90, 100, 101, 102, 103, 137, 92, 93, 94, 98, 99, 104, 105, 106, 107, 108, 109, 110, 111, 112, 176, 113, 115, 117, 126, 127, 140, 141, 142, 143, 144, 145, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 163, 164, 165, 166, 167, 175, 180</code></td></tr>
     </table>
   </div>
   <div class="card">
@@ -158,7 +158,7 @@ flowchart LR
   <div class="card">
     <h4>Graph Report Highlights</h4>
     <ul>
-      <li>1541 nodes · 1707 edges · 180 communities (155 shown, 25 thin omitted)</li>
+      <li>1550 nodes · 1726 edges · 180 communities (155 shown, 25 thin omitted)</li>
       <li>Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 28 edges (avg confidence: 0.85)</li>
       <li>Token cost: 0 input · 0 output</li>
       <li>1. `Vec2D` - 25 edges</li>
@@ -1579,12 +1579,12 @@ flowchart LR
 
 <!-- ====== 6. CLI & Skill Installers ====== -->
 <h2 id="cli-skills">6. CLI &amp; Skill Installers</h2>
-<p>CLI &amp; Skill Installers groups implementation around ponytail, skills, skillmd, learning, mostly in ponytail/README.md, ponytail/README.ko.md, ponytail/README.es.md. This section covers 232 nodes and 217 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>CLI &amp; Skill Installers groups implementation around ponytail, skills, skillmd, learning, mostly in ponytail/README.md, ponytail/README.ko.md, ponytail/README.es.md. This section covers 231 nodes and 216 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: CLI &amp; Skill Installers (232 nodes, 217 edges)
+    %% Section: CLI &amp; Skill Installers (231 nodes, 216 edges)
     subgraph cli_skills_opencode_plugins_ponytail_mjs_a268305e[".opencode/plugins/ponytail.mjs"]
         ponytail_opencode_plugins_ponytail_b70099ee("ponytail.mjs")
         ponytail_opencode_plugins_ponytail_readmode_6df6db11("readMode()<br/><small>.opencode/plugins/ponytail.mjs</small>")
@@ -1621,7 +1621,7 @@ flowchart LR
     ponytail_opencode_plugins_ponytail_b70099ee -->|imports| ponytail_opencode_plugins_ponytail_frontmatter_p_5d2c27cd
     ponytail_opencode_plugins_ponytail_b70099ee -->|imports| ponytail_hooks_ponytail_config_1f171eac
     ponytail_opencode_plugins_ponytail_b70099ee -->|imports| ponytail_opencode_plugins_ponytail_frontmatter_e526c9f5
-    %% Omitted for readability: 214 nodes, 0 edges
+    %% Omitted for readability: 213 nodes, 0 edges
     class ponytail_opencode_plugins_ponytail_b70099ee function;
     class ponytail_opencode_plugins_ponytail_readmode_6df6db11 function;
     class ponytail_opencode_plugins_ponytail_dirname_a4d86cba function;
@@ -1911,7 +1911,7 @@ flowchart LR
       <tr><td><code>ponytail/README.md</code></td><td>25 nodes</td></tr>
 <tr><td><code>ponytail/README.ko.md</code></td><td>22 nodes</td></tr>
 <tr><td><code>ponytail/README.es.md</code></td><td>21 nodes</td></tr>
-<tr><td><code>ponytail/hooks/ponytail-config.js</code></td><td>13 nodes</td></tr>
+<tr><td><code>ponytail/hooks/ponytail-config.js</code></td><td>12 nodes</td></tr>
 <tr><td><code>skills/ponytail/SKILL.md</code></td><td>9 nodes</td></tr>
 <tr><td><code>learning/neurons/N022_multi_agent_consensus.md</code></td><td>9 nodes</td></tr>
 <tr><td><code>.opencode/plugins/ponytail.mjs</code></td><td>9 nodes</td></tr>
@@ -1920,7 +1920,7 @@ flowchart LR
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x185, references x12, indirect call x8, calls x5. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x184, references x12, indirect call x8, calls x5. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -2841,12 +2841,12 @@ flowchart LR
 
 <!-- ====== 10. Tests & Fixtures ====== -->
 <h2 id="tests-fixtures">10. Tests &amp; Fixtures</h2>
-<p>Tests &amp; Fixtures groups implementation around scripts, enginepy, test, nucleus, mostly in scripts/graphic_design_visual_engine.py, scripts/marketing_nucleus_engine.py, learning/neurons/N036_fullstack_product_synthesizer.md. This section covers 126 nodes and 165 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Tests &amp; Fixtures groups implementation around scripts, enginepy, test, nucleus, mostly in scripts/graphic_design_visual_engine.py, scripts/marketing_nucleus_engine.py, learning/neurons/N036_fullstack_product_synthesizer.md. This section covers 128 nodes and 167 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Tests &amp; Fixtures (126 nodes, 165 edges)
+    %% Section: Tests &amp; Fixtures (128 nodes, 167 edges)
     subgraph tests_fixtures_scripts_graphic_design_visual_eng_05a6bfa8["scripts/graphic_design_visual_engine.py"]
         scripts_graphic_design_visual_engine_palettegene_2f7b1ecf("PaletteGenerator<br/><small>scripts/graphic_design_visual_engine.py</small>")
         scripts_graphic_design_visual_engine_run_self_te_0b5fe8fc("run_self_tests()<br/><small>scripts/graphic_design_visual_engine.py</small>")
@@ -2886,7 +2886,7 @@ flowchart LR
     scripts_graphic_design_visual_engine_run_self_te_0b5fe8fc -->|calls| scripts_graphic_design_visual_engine_palettegene_ab4b502f
     scripts_graphic_design_visual_engine_run_self_te_0b5fe8fc -->|calls| scripts_graphic_design_visual_engine_palettegene_d8698390
     scripts_graphic_design_visual_engine_run_self_te_0b5fe8fc -->|calls| scripts_graphic_design_visual_engine_generativep_020abc00
-    %% Omitted for readability: 108 nodes, 0 edges
+    %% Omitted for readability: 110 nodes, 0 edges
     class scripts_graphic_design_visual_engine_palettegene_2f7b1ecf klass;
     class scripts_graphic_design_visual_engine_run_self_te_0b5fe8fc function;
     class scripts_graphic_design_visual_engine_generativep_020abc00 klass;
@@ -3185,42 +3185,45 @@ flowchart LR
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x52, calls x46, explains x28, method x22. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x52, calls x47, explains x28, method x22. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
 
 <!-- ====== 11. app.js ====== -->
 <h2 id="app-js">11. app.js</h2>
-<p>app.js groups implementation around appjs, goblix, public, changequality, mostly in goblix/public/app.js. This section covers 26 nodes and 54 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>app.js groups implementation around appjs, goblix, public, changequality, mostly in goblix/public/app.js. This section covers 35 nodes and 73 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: app.js (26 nodes, 54 edges)
-    goblix_public_app_handleroute_2815364f("handleRoute()<br/><small>goblix/public/app.js</small>")
+    %% Section: app.js (35 nodes, 73 edges)
     goblix_public_app_checkauthsession_623935f6("checkAuthSession()<br/><small>goblix/public/app.js</small>")
+    goblix_public_app_handleroute_2815364f("handleRoute()<br/><small>goblix/public/app.js</small>")
     goblix_public_app_submitlogin_131f3d68("submitLogin()<br/><small>goblix/public/app.js</small>")
     goblix_public_app_handlelogout_6c550f0d("handleLogout()<br/><small>goblix/public/app.js</small>")
     goblix_public_app_submitregister_648757bf("submitRegister()<br/><small>goblix/public/app.js</small>")
-    goblix_public_app_saveserverwatchprogress_1995046f("saveServerWatchProgress()<br/><small>goblix/public/app.js</small>")
-    goblix_public_app_gettoken_69446a58("getToken()<br/><small>goblix/public/app.js</small>")
-    goblix_public_app_getlocalprogress_10c9d3aa("getLocalProgress()<br/><small>goblix/public/app.js</small>")
-    goblix_public_app_updatenavbarauth_4a887460("updateNavbarAuth()<br/><small>goblix/public/app.js</small>")
+    goblix_public_app_clearsearch_7ba7cb12("clearSearch()<br/><small>goblix/public/app.js</small>")
     goblix_public_app_fetchserverwatchprogress_935cd780("fetchServerWatchProgress()<br/><small>goblix/public/app.js</small>")
     goblix_public_app_settoken_81f03d64("setToken()<br/><small>goblix/public/app.js</small>")
+    goblix_public_app_gettoken_69446a58("getToken()<br/><small>goblix/public/app.js</small>")
+    goblix_public_app_getlocalprogress_10c9d3aa("getLocalProgress()<br/><small>goblix/public/app.js</small>")
+    goblix_public_app_loadmylist_2ad7416c("loadMyList()<br/><small>goblix/public/app.js</small>")
+    goblix_public_app_updatenavbarauth_4a887460("updateNavbarAuth()<br/><small>goblix/public/app.js</small>")
+    goblix_public_app_togglesearchinput_ecf3f3d5("toggleSearchInput()<br/><small>goblix/public/app.js</small>")
+    goblix_public_app_renderhomepage_a277e406("renderHomePage()<br/><small>goblix/public/app.js</small>")
     goblix_public_app_navigateto_1de39316("navigateTo()<br/><small>goblix/public/app.js</small>")
     goblix_public_app_fetchmovies_aec581ad("fetchMovies()<br/><small>goblix/public/app.js</small>")
-    goblix_public_app_renderhomepage_a277e406("renderHomePage()<br/><small>goblix/public/app.js</small>")
     goblix_public_app_rendermoviedetailpage_c2c7536f("renderMovieDetailPage()<br/><small>goblix/public/app.js</small>")
     goblix_public_app_renderwatchpage_41814f45("renderWatchPage()<br/><small>goblix/public/app.js</small>")
-    goblix_public_app_renderloginpage_0fcc050f("renderLoginPage()<br/><small>goblix/public/app.js</small>")
-    goblix_public_app_renderregisterpage_0f5f36ac("renderRegisterPage()<br/><small>goblix/public/app.js</small>")
-    goblix_public_app_checkauthsession_623935f6 -->|calls| goblix_public_app_gettoken_69446a58
-    goblix_public_app_checkauthsession_623935f6 -->|calls| goblix_public_app_getlocalprogress_10c9d3aa
-    goblix_public_app_checkauthsession_623935f6 -->|calls| goblix_public_app_updatenavbarauth_4a887460
     goblix_public_app_checkauthsession_623935f6 -->|calls| goblix_public_app_fetchserverwatchprogress_935cd780
     goblix_public_app_checkauthsession_623935f6 -->|calls| goblix_public_app_settoken_81f03d64
+    goblix_public_app_checkauthsession_623935f6 -->|calls| goblix_public_app_gettoken_69446a58
+    goblix_public_app_checkauthsession_623935f6 -->|calls| goblix_public_app_getlocalprogress_10c9d3aa
+    goblix_public_app_checkauthsession_623935f6 -->|calls| goblix_public_app_loadmylist_2ad7416c
+    goblix_public_app_checkauthsession_623935f6 -->|calls| goblix_public_app_updatenavbarauth_4a887460
+    goblix_public_app_clearsearch_7ba7cb12 -->|calls| goblix_public_app_togglesearchinput_ecf3f3d5
+    goblix_public_app_clearsearch_7ba7cb12 -->|calls| goblix_public_app_renderhomepage_a277e406
     goblix_public_app_fetchserverwatchprogress_935cd780 -->|calls| goblix_public_app_gettoken_69446a58
     goblix_public_app_handlelogout_6c550f0d -->|calls| goblix_public_app_settoken_81f03d64
     goblix_public_app_handlelogout_6c550f0d -->|calls| goblix_public_app_updatenavbarauth_4a887460
@@ -3229,36 +3232,33 @@ flowchart LR
     goblix_public_app_handleroute_2815364f -->|calls| goblix_public_app_renderhomepage_a277e406
     goblix_public_app_handleroute_2815364f -->|calls| goblix_public_app_rendermoviedetailpage_c2c7536f
     goblix_public_app_handleroute_2815364f -->|calls| goblix_public_app_renderwatchpage_41814f45
-    goblix_public_app_handleroute_2815364f -->|calls| goblix_public_app_renderloginpage_0fcc050f
-    goblix_public_app_handleroute_2815364f -->|calls| goblix_public_app_renderregisterpage_0f5f36ac
     goblix_public_app_navigateto_1de39316 -->|calls| goblix_public_app_handleroute_2815364f
-    goblix_public_app_renderwatchpage_41814f45 -->|calls| goblix_public_app_saveserverwatchprogress_1995046f
-    goblix_public_app_saveserverwatchprogress_1995046f -->|calls| goblix_public_app_gettoken_69446a58
     goblix_public_app_submitlogin_131f3d68 -->|calls| goblix_public_app_settoken_81f03d64
     goblix_public_app_submitlogin_131f3d68 -->|calls| goblix_public_app_updatenavbarauth_4a887460
     goblix_public_app_submitlogin_131f3d68 -->|calls| goblix_public_app_fetchserverwatchprogress_935cd780
     goblix_public_app_submitlogin_131f3d68 -->|calls| goblix_public_app_navigateto_1de39316
     goblix_public_app_submitregister_648757bf -->|calls| goblix_public_app_settoken_81f03d64
     goblix_public_app_submitregister_648757bf -->|calls| goblix_public_app_updatenavbarauth_4a887460
-    %% Omitted for readability: 8 nodes, 1 edges
-    class goblix_public_app_handleroute_2815364f api;
+    goblix_public_app_submitregister_648757bf -->|calls| goblix_public_app_navigateto_1de39316
+    %% Omitted for readability: 17 nodes, 0 edges
     class goblix_public_app_checkauthsession_623935f6 function;
+    class goblix_public_app_handleroute_2815364f api;
     class goblix_public_app_submitlogin_131f3d68 function;
     class goblix_public_app_handlelogout_6c550f0d function;
     class goblix_public_app_submitregister_648757bf function;
-    class goblix_public_app_saveserverwatchprogress_1995046f function;
-    class goblix_public_app_gettoken_69446a58 function;
-    class goblix_public_app_getlocalprogress_10c9d3aa function;
-    class goblix_public_app_updatenavbarauth_4a887460 function;
+    class goblix_public_app_clearsearch_7ba7cb12 function;
     class goblix_public_app_fetchserverwatchprogress_935cd780 function;
     class goblix_public_app_settoken_81f03d64 function;
+    class goblix_public_app_gettoken_69446a58 function;
+    class goblix_public_app_getlocalprogress_10c9d3aa function;
+    class goblix_public_app_loadmylist_2ad7416c function;
+    class goblix_public_app_updatenavbarauth_4a887460 function;
+    class goblix_public_app_togglesearchinput_ecf3f3d5 function;
+    class goblix_public_app_renderhomepage_a277e406 function;
     class goblix_public_app_navigateto_1de39316 function;
     class goblix_public_app_fetchmovies_aec581ad function;
-    class goblix_public_app_renderhomepage_a277e406 function;
     class goblix_public_app_rendermoviedetailpage_c2c7536f function;
     class goblix_public_app_renderwatchpage_41814f45 function;
-    class goblix_public_app_renderloginpage_0fcc050f function;
-    class goblix_public_app_renderregisterpage_0f5f36ac function;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -3301,11 +3301,19 @@ flowchart LR
   <td><code>checkAuthSession()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
-  <td><code>fetchServerWatchProgress()</code><br><small style="color:var(--muted)">goblix/public/app.js</small><br><code>getLocalProgress()</code><br><small style="color:var(--muted)">goblix/public/app.js</small><br><code>getToken()</code><br><small style="color:var(--muted)">goblix/public/app.js</small><br>+2 more</td>
+  <td><code>fetchServerWatchProgress()</code><br><small style="color:var(--muted)">goblix/public/app.js</small><br><code>getLocalProgress()</code><br><small style="color:var(--muted)">goblix/public/app.js</small><br><code>getToken()</code><br><small style="color:var(--muted)">goblix/public/app.js</small><br>+3 more</td>
   <td>checkAuthSession() node in goblix/public/app.js.</td>
 </tr>
 <tr>
   <td>4</td>
+  <td><code>clearSearch()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>renderHomePage()</code><br><small style="color:var(--muted)">goblix/public/app.js</small><br><code>toggleSearchInput()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
+  <td>clearSearch() node in goblix/public/app.js.</td>
+</tr>
+<tr>
+  <td>5</td>
   <td><code>fetchMovies()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>handleRoute()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
@@ -3313,7 +3321,7 @@ flowchart LR
   <td>fetchMovies() node in goblix/public/app.js.</td>
 </tr>
 <tr>
-  <td>5</td>
+  <td>6</td>
   <td><code>fetchServerWatchProgress()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>checkAuthSession()</code><br><small style="color:var(--muted)">goblix/public/app.js</small><br><code>submitLogin()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
@@ -3321,7 +3329,7 @@ flowchart LR
   <td>fetchServerWatchProgress() node in goblix/public/app.js.</td>
 </tr>
 <tr>
-  <td>6</td>
+  <td>7</td>
   <td><code>formatTime()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>renderHomePage()</code><br><small style="color:var(--muted)">goblix/public/app.js</small><br><code>renderMovieDetailPage()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
@@ -3329,7 +3337,7 @@ flowchart LR
   <td>formatTime() node in goblix/public/app.js.</td>
 </tr>
 <tr>
-  <td>7</td>
+  <td>8</td>
   <td><code>getLocalProgress()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>checkAuthSession()</code><br><small style="color:var(--muted)">goblix/public/app.js</small><br><code>saveLocalProgress()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
@@ -3337,7 +3345,7 @@ flowchart LR
   <td>getLocalProgress() node in goblix/public/app.js.</td>
 </tr>
 <tr>
-  <td>8</td>
+  <td>9</td>
   <td><code>getToken()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>checkAuthSession()</code><br><small style="color:var(--muted)">goblix/public/app.js</small><br><code>fetchServerWatchProgress()</code><br><small style="color:var(--muted)">goblix/public/app.js</small><br><code>saveServerWatchProgress()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
@@ -3345,7 +3353,7 @@ flowchart LR
   <td>getToken() node in goblix/public/app.js.</td>
 </tr>
 <tr>
-  <td>9</td>
+  <td>10</td>
   <td><code>handleLogout()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -3353,7 +3361,7 @@ flowchart LR
   <td>handleLogout() node in goblix/public/app.js.</td>
 </tr>
 <tr>
-  <td>10</td>
+  <td>11</td>
   <td><code>handleRoute()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
   <td><span class="tag tag-endpoint">API</span></td>
   <td><code>navigateTo()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
@@ -3361,23 +3369,39 @@ flowchart LR
   <td>handleRoute() node in goblix/public/app.js.</td>
 </tr>
 <tr>
-  <td>11</td>
+  <td>12</td>
+  <td><code>handleSearchQuery()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>navigateTo()</code><br><small style="color:var(--muted)">goblix/public/app.js</small><br><code>renderHomePage()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
+  <td>handleSearchQuery() node in goblix/public/app.js.</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>loadMyList()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>checkAuthSession()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
+  <td><code>updateMyListBadge()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
+  <td>loadMyList() node in goblix/public/app.js.</td>
+</tr>
+<tr>
+  <td>14</td>
   <td><code>navigateTo()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
-  <td><code>handleLogout()</code><br><small style="color:var(--muted)">goblix/public/app.js</small><br><code>submitLogin()</code><br><small style="color:var(--muted)">goblix/public/app.js</small><br><code>submitRegister()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
+  <td><code>handleLogout()</code><br><small style="color:var(--muted)">goblix/public/app.js</small><br><code>handleSearchQuery()</code><br><small style="color:var(--muted)">goblix/public/app.js</small><br><code>setCategoryFilter()</code><br><small style="color:var(--muted)">goblix/public/app.js</small><br>+2 more</td>
   <td><code>handleRoute()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
   <td>navigateTo() node in goblix/public/app.js.</td>
 </tr>
 <tr>
-  <td>12</td>
+  <td>15</td>
   <td><code>renderHomePage()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
-  <td><code>handleRoute()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
+  <td><code>clearSearch()</code><br><small style="color:var(--muted)">goblix/public/app.js</small><br><code>handleRoute()</code><br><small style="color:var(--muted)">goblix/public/app.js</small><br><code>handleSearchQuery()</code><br><small style="color:var(--muted)">goblix/public/app.js</small><br>+2 more</td>
   <td><code>formatTime()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
   <td>Organizes documentation pages, navigation, or content lookup.</td>
 </tr>
 <tr>
-  <td>13</td>
+  <td>16</td>
   <td><code>renderLoginPage()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>handleRoute()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
@@ -3385,7 +3409,7 @@ flowchart LR
   <td>Organizes documentation pages, navigation, or content lookup.</td>
 </tr>
 <tr>
-  <td>14</td>
+  <td>17</td>
   <td><code>renderMovieDetailPage()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>handleRoute()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
@@ -3393,7 +3417,7 @@ flowchart LR
   <td>Organizes documentation pages, navigation, or content lookup.</td>
 </tr>
 <tr>
-  <td>15</td>
+  <td>18</td>
   <td><code>renderRegisterPage()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>handleRoute()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
@@ -3401,7 +3425,7 @@ flowchart LR
   <td>Organizes documentation pages, navigation, or content lookup.</td>
 </tr>
 <tr>
-  <td>16</td>
+  <td>19</td>
   <td><code>renderWatchPage()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>handleRoute()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
@@ -3409,7 +3433,7 @@ flowchart LR
   <td>Organizes documentation pages, navigation, or content lookup.</td>
 </tr>
 <tr>
-  <td>17</td>
+  <td>20</td>
   <td><code>saveLocalProgress()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>saveServerWatchProgress()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
@@ -3417,7 +3441,7 @@ flowchart LR
   <td>saveLocalProgress() node in goblix/public/app.js.</td>
 </tr>
 <tr>
-  <td>18</td>
+  <td>21</td>
   <td><code>saveServerWatchProgress()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>renderWatchPage()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
@@ -3425,7 +3449,15 @@ flowchart LR
   <td>saveServerWatchProgress() node in goblix/public/app.js.</td>
 </tr>
 <tr>
-  <td>19</td>
+  <td>22</td>
+  <td><code>setCategoryFilter()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>navigateTo()</code><br><small style="color:var(--muted)">goblix/public/app.js</small><br><code>renderHomePage()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
+  <td>setCategoryFilter() node in goblix/public/app.js.</td>
+</tr>
+<tr>
+  <td>23</td>
   <td><code>setToken()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>checkAuthSession()</code><br><small style="color:var(--muted)">goblix/public/app.js</small><br><code>handleLogout()</code><br><small style="color:var(--muted)">goblix/public/app.js</small><br><code>submitLogin()</code><br><small style="color:var(--muted)">goblix/public/app.js</small><br>+1 more</td>
@@ -3433,7 +3465,15 @@ flowchart LR
   <td>setToken() node in goblix/public/app.js.</td>
 </tr>
 <tr>
-  <td>20</td>
+  <td>24</td>
+  <td><code>showMyListModal()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>showMyListModal() node in goblix/public/app.js.</td>
+</tr>
+<tr>
+  <td>25</td>
   <td><code>submitLogin()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -3441,7 +3481,7 @@ flowchart LR
   <td>submitLogin() node in goblix/public/app.js.</td>
 </tr>
 <tr>
-  <td>21</td>
+  <td>26</td>
   <td><code>submitRegister()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -3449,7 +3489,15 @@ flowchart LR
   <td>submitRegister() node in goblix/public/app.js.</td>
 </tr>
 <tr>
-  <td>22</td>
+  <td>27</td>
+  <td><code>toggleMyList()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>renderHomePage()</code><br><small style="color:var(--muted)">goblix/public/app.js</small><br><code>updateMyListBadge()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
+  <td>toggleMyList() node in goblix/public/app.js.</td>
+</tr>
+<tr>
+  <td>28</td>
   <td><code>togglePiP()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -3457,36 +3505,20 @@ flowchart LR
   <td>togglePiP() node in goblix/public/app.js.</td>
 </tr>
 <tr>
-  <td>23</td>
-  <td><code>updateNavbarAuth()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
+  <td>29</td>
+  <td><code>toggleSearchInput()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
-  <td><code>checkAuthSession()</code><br><small style="color:var(--muted)">goblix/public/app.js</small><br><code>handleLogout()</code><br><small style="color:var(--muted)">goblix/public/app.js</small><br><code>submitLogin()</code><br><small style="color:var(--muted)">goblix/public/app.js</small><br>+1 more</td>
+  <td><code>clearSearch()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
   <td>No direct outbound edge</td>
-  <td>updateNavbarAuth() node in goblix/public/app.js.</td>
+  <td>toggleSearchInput() node in goblix/public/app.js.</td>
 </tr>
 <tr>
-  <td>24</td>
-  <td><code>app.js</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
-  <td><span class="tag tag-class">Module</span></td>
-  <td>External entry / no inbound edge</td>
+  <td>30</td>
+  <td><code>updateMyListBadge()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>loadMyList()</code><br><small style="color:var(--muted)">goblix/public/app.js</small><br><code>toggleMyList()</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
   <td>No direct outbound edge</td>
-  <td>app.js node in goblix/public/app.js.</td>
-</tr>
-<tr>
-  <td>25</td>
-  <td><code>MOVIES_DATA</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>MOVIES_DATA node in goblix/public/app.js.</td>
-</tr>
-<tr>
-  <td>26</td>
-  <td><code>WATCH_PROGRESS</code><br><small style="color:var(--muted)">goblix/public/app.js</small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>WATCH_PROGRESS node in goblix/public/app.js.</td>
+  <td>updateMyListBadge() node in goblix/public/app.js.</td>
 </tr>
 </table>
 
@@ -3495,12 +3527,12 @@ flowchart LR
     <h4>Key Files</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>goblix/public/app.js</code></td><td>26 nodes</td></tr>
+      <tr><td><code>goblix/public/app.js</code></td><td>35 nodes</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: calls x29, contains x25. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: calls x39, contains x34. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -4630,12 +4662,12 @@ flowchart LR
 
 <!-- ====== 16. Other ====== -->
 <h2 id="other">16. Other</h2>
-<p>Other groups implementation around learning, neurons, scripts, enginepy, mostly in scripts/image_vision_nucleus_engine.py, learning/neurons/N053_quantitative_marketing_growth_mastery.md, learning/neurons/N046_algorithmic_execution_engines.md. This section covers 545 nodes and 499 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Other groups implementation around learning, neurons, scripts, enginepy, mostly in scripts/image_vision_nucleus_engine.py, learning/neurons/N053_quantitative_marketing_growth_mastery.md, learning/neurons/N046_algorithmic_execution_engines.md. This section covers 544 nodes and 498 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Other (545 nodes, 499 edges)
+    %% Section: Other (544 nodes, 498 edges)
     subgraph other_scripts_image_vision_nucleus_engine_py_c18108d9["scripts/image_vision_nucleus_engine.py"]
         scripts_image_vision_nucleus_engine_checkpointlo_eabfb942("CheckpointLoaderNode<br/><small>scripts/image_vision_nucleus_engine.py</small>")
         scripts_image_vision_nucleus_engine_checkpointlo_0808e002("execute()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
@@ -4664,7 +4696,7 @@ flowchart LR
     scripts_image_vision_nucleus_engine_comfynode_58ca4b80 -->|method| scripts_image_vision_nucleus_engine_comfynode_ex_88a74f68
     scripts_image_vision_nucleus_engine_controlnetap_bc580037 -->|method| scripts_image_vision_nucleus_engine_controlnetap_1556d5e7
     scripts_image_vision_nucleus_engine_ksamplernode_8d3ba7b8 -->|method| scripts_image_vision_nucleus_engine_ksamplernode_012f57f9
-    %% Omitted for readability: 527 nodes, 0 edges
+    %% Omitted for readability: 526 nodes, 0 edges
     class scripts_image_vision_nucleus_engine_checkpointlo_eabfb942 klass;
     class scripts_image_vision_nucleus_engine_checkpointlo_0808e002 function;
     class scripts_image_vision_nucleus_engine_cliptextenco_e02dcc9b entry;
@@ -4974,8 +5006,8 @@ flowchart LR
   <div class="card">
     <h4>Graph</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>Nodes</td><td>1541</td></tr>
-      <tr><td>Edges</td><td>1707</td></tr>
+      <tr><td>Nodes</td><td>1550</td></tr>
+      <tr><td>Edges</td><td>1726</td></tr>
       <tr><td>Hyperedges</td><td>0</td></tr>
       <tr><td>Communities</td><td>180</td></tr>
       <tr><td>Documented Sections</td><td>15</td></tr>
@@ -4984,7 +5016,7 @@ flowchart LR
   <div class="card">
     <h4>Edge Confidence</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>EXTRACTED</td><td>1679</td></tr>
+      <tr><td>EXTRACTED</td><td>1698</td></tr>
       <tr><td>INFERRED</td><td>28</td></tr>
       <tr><td>AMBIGUOUS</td><td>0</td></tr>
     </table>
@@ -4993,7 +5025,7 @@ flowchart LR
 
 <div style="text-align:center; padding:40px 0; color: var(--muted); font-size:0.9rem;">
   <p>Agent_Claudia_Autonomus — Architecture Documentation</p>
-  <p>Generated: 2026-08-25 09:10 UTC · graphify callflow-html</p>
+  <p>Generated: 2026-08-25 09:12 UTC · graphify callflow-html</p>
 </div>
 
 </div><!-- .container -->
