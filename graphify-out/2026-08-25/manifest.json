@@ -6,9 +6,9 @@
     "semantic_hash": "dd15119fb2196a241d762fb6eacacf90"
   },
   "learning/NEURON_INDEX.json": {
-    "mtime": 1787650974.0085816,
-    "seen": 1787650983.6581173,
-    "ast_hash": "5a5427320a30cc4cbbe64289f06e92a7",
+    "mtime": 1787651930.6255322,
+    "seen": 1787651943.0934663,
+    "ast_hash": "2ad4f16242bc07f32c2aaae33cfc8e90",
     "semantic_hash": ""
   },
   "learning/scripts/grow_neurons.py": {
@@ -312,9 +312,9 @@
     "semantic_hash": ""
   },
   "memory.md": {
-    "mtime": 1787650974.009679,
-    "seen": 1787650983.6581173,
-    "ast_hash": "d93a9bc0523f74ac78b3416b67cec6cc",
+    "mtime": 1787651930.6255322,
+    "seen": 1787651943.0934663,
+    "ast_hash": "1247dfdeb0b55888770ec74ccacb6b78",
     "semantic_hash": ""
   },
   "memory/neurons/ai_engine_9router.md": {
@@ -1821,6 +1821,12 @@
     "mtime": 1787651499.1191716,
     "seen": 1787651930.1366177,
     "ast_hash": "9d2b2dbe3a6768320cba91bc61ecfece",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N058_migrasi_arsitektur_goblix_cinema.md": {
+    "mtime": 1787651930.6222658,
+    "seen": 1787651943.0934663,
+    "ast_hash": "ddd5d30470c16badfb3c74af34340271",
     "semantic_hash": ""
   }
 }
