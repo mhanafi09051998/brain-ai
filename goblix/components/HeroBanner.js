@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useGoblix } from '@/lib/store';
+import { APP_CONFIG } from '@/config/global.config';
 
 export default function HeroBanner({ movie }) {
   const { setSelectedMovie, myList, toggleMyList, watchProgress } = useGoblix();
@@ -23,7 +24,7 @@ export default function HeroBanner({ movie }) {
       <div className="relative z-10 max-w-2xl space-y-3 sm:space-y-4 pt-20">
         <div className="flex items-center space-x-2">
           <span className="bg-red-600 text-white text-[10px] sm:text-xs px-2.5 py-0.5 rounded font-black tracking-widest uppercase">
-            GOBLIX ORIGINAL
+            {APP_CONFIG.badge}
           </span>
           <span className="border border-white/40 text-gray-200 text-[10px] sm:text-xs px-2 py-0.5 rounded font-semibold">
             {movie.quality || '1080p BluRay'}

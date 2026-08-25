@@ -1722,21 +1722,21 @@
     "semantic_hash": ""
   },
   "goblix/components/CategoryFilter.js": {
-    "mtime": 1787651601.3658276,
-    "seen": 1787651930.1366177,
-    "ast_hash": "a8134728e3b987f97a1576cdb3f9446b",
+    "mtime": 1787652274.408157,
+    "seen": 1787652348.3361845,
+    "ast_hash": "d8ff7f4387ca70113eaa7a07182cc0be",
     "semantic_hash": ""
   },
   "goblix/components/Footer.js": {
-    "mtime": 1787651884.1194763,
-    "seen": 1787651930.1366177,
-    "ast_hash": "54fa7072d7f296be61d0304f824a1212",
+    "mtime": 1787652277.6195254,
+    "seen": 1787652348.3361845,
+    "ast_hash": "46c1ef6595bbcd7706518fc6bec565ac",
     "semantic_hash": ""
   },
   "goblix/components/HeroBanner.js": {
-    "mtime": 1787651596.6858027,
-    "seen": 1787651930.1366177,
-    "ast_hash": "528d77825ba876def31afc04b22bcede",
+    "mtime": 1787652284.1096783,
+    "seen": 1787652348.3361845,
+    "ast_hash": "9be4438aaaa564bf67040db5dfa68cbf",
     "semantic_hash": ""
   },
   "goblix/components/MovieCard.js": {
@@ -1764,15 +1764,15 @@
     "semantic_hash": ""
   },
   "goblix/components/Navbar.js": {
-    "mtime": 1787651587.7364407,
-    "seen": 1787651930.1366177,
-    "ast_hash": "be01f27338816dde872434b462959c2c",
+    "mtime": 1787652270.0665808,
+    "seen": 1787652348.3361845,
+    "ast_hash": "c27d402382adedf06a253b9772491804",
     "semantic_hash": ""
   },
   "goblix/components/VideoPlayer.js": {
-    "mtime": 1787651634.144844,
-    "seen": 1787651930.1366177,
-    "ast_hash": "7182a4eb9079650005223182244a415c",
+    "mtime": 1787652291.5169,
+    "seen": 1787652348.3361845,
+    "ast_hash": "4b4b6f53186f21d6c6132f014c02070e",
     "semantic_hash": ""
   },
   "goblix/jsconfig.json": {
@@ -1800,9 +1800,9 @@
     "semantic_hash": ""
   },
   "goblix/lib/subtitles.js": {
-    "mtime": 1787651522.6420686,
-    "seen": 1787651930.1366177,
-    "ast_hash": "2451e0159ab8aaaf3f41fd4e9deee1e6",
+    "mtime": 1787652321.0029438,
+    "seen": 1787652348.3361845,
+    "ast_hash": "90222bb3eec20e83c54fedc03e9f4b88",
     "semantic_hash": ""
   },
   "goblix/next.config.mjs": {
@@ -1827,6 +1827,12 @@
     "mtime": 1787651930.6222658,
     "seen": 1787651943.0934663,
     "ast_hash": "ddd5d30470c16badfb3c74af34340271",
+    "semantic_hash": ""
+  },
+  "goblix/config/global.config.js": {
+    "mtime": 1787652261.8206933,
+    "seen": 1787652348.3361845,
+    "ast_hash": "25f3439a5ef0ff36dabd793c91201e17",
     "semantic_hash": ""
   }
 }

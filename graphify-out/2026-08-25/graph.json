@@ -121,19 +121,6 @@
       "source_location": "L87"
     },
     {
-      "id": "scripts_image_vision_nucleus_engine_geometricrescaler",
-      "label": "GeometricRescaler",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 128,
-      "community_name": "ImageMatrix",
-      "file_type": "code",
-      "norm_label": "geometricrescaler",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L364"
-    },
-    {
       "id": "scripts_image_vision_nucleus_engine_imagematrix",
       "label": "ImageMatrix",
       "_callable": true,
@@ -166,7 +153,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "code",
       "norm_label": "colorspacemath",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -179,7 +166,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 131,
-      "community_name": "run_tests",
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": "checkpointloadernode",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -192,7 +179,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 131,
-      "community_name": "run_tests",
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": "cliptextencodenode",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -205,7 +192,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 131,
-      "community_name": "run_tests",
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": "comfynode",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -218,7 +205,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 131,
-      "community_name": "run_tests",
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": "controlnetapplynode",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -231,11 +218,24 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 131,
-      "community_name": "run_tests",
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": "ksamplernode",
       "source_file": "scripts/image_vision_nucleus_engine.py",
       "source_location": "L710"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_streamingtileprocessor",
+      "label": "StreamingTileProcessor",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
+      "file_type": "code",
+      "norm_label": "streamingtileprocessor",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L614"
     },
     {
       "id": "scripts_image_vision_nucleus_engine_vaedecodenode",
@@ -244,11 +244,24 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 131,
-      "community_name": "run_tests",
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": "vaedecodenode",
       "source_file": "scripts/image_vision_nucleus_engine.py",
       "source_location": "L731"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_geometricrescaler",
+      "label": "GeometricRescaler",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 132,
+      "community_name": ".letterbox_aspect_preserver",
+      "file_type": "code",
+      "norm_label": "geometricrescaler",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L364"
     },
     {
       "id": "scripts_image_vision_nucleus_engine_rastertovectortracer",
@@ -327,19 +340,6 @@
       "norm_label": "generativeposter",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L625"
-    },
-    {
-      "id": "scripts_image_vision_nucleus_engine_streamingtileprocessor",
-      "label": "StreamingTileProcessor",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 208,
-      "community_name": ".process_tiled_convolution",
-      "file_type": "code",
-      "norm_label": "streamingtileprocessor",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L614"
     },
     {
       "id": "scripts_graphic_design_visual_engine_cubicbezier",
@@ -759,30 +759,6 @@
       "source_location": "L14"
     },
     {
-      "id": "scripts_image_vision_nucleus_engine_geometricrescaler_bilinear_rescale",
-      "label": ".bilinear_rescale()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 128,
-      "community_name": "ImageMatrix",
-      "file_type": "code",
-      "norm_label": ".bilinear_rescale()",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L370"
-    },
-    {
-      "id": "scripts_image_vision_nucleus_engine_geometricrescaler_letterbox_aspect_preserver",
-      "label": ".letterbox_aspect_preserver()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 128,
-      "community_name": "ImageMatrix",
-      "file_type": "code",
-      "norm_label": ".letterbox_aspect_preserver()",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L408"
-    },
-    {
       "id": "scripts_image_vision_nucleus_engine_imagematrix_clone",
       "label": ".clone()",
       "_callable": true,
@@ -843,16 +819,16 @@
       "source_location": "L100"
     },
     {
-      "id": "scripts_image_vision_nucleus_engine_vaedecodenode_execute",
-      "label": ".execute()",
+      "id": "scripts_image_vision_nucleus_engine_streamingtileprocessor_process_tiled_convolution",
+      "label": ".process_tiled_convolution()",
       "_callable": true,
       "_origin": "ast",
       "community": 128,
       "community_name": "ImageMatrix",
       "file_type": "code",
-      "norm_label": ".execute()",
+      "norm_label": ".process_tiled_convolution()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L732"
+      "source_location": "L621"
     },
     {
       "id": "scripts_image_vision_nucleus_engine_convolutionkernelengine_convolve_2d",
@@ -932,7 +908,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "code",
       "norm_label": ".hsv_to_rgb()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -944,7 +920,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "code",
       "norm_label": ".rgb_to_grayscale()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -956,7 +932,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "code",
       "norm_label": ".rgb_to_hsv()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -968,7 +944,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "code",
       "norm_label": ".rgb_to_ycbcr()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -980,7 +956,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "code",
       "norm_label": ".ycbcr_to_rgb()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -991,7 +967,7 @@
       "label": "run_tests()",
       "_callable": true,
       "_origin": "ast",
-      "community": 131,
+      "community": 130,
       "community_name": "run_tests",
       "file_type": "code",
       "norm_label": "run_tests()",
@@ -1003,8 +979,8 @@
       "label": ".execute()",
       "_callable": true,
       "_origin": "ast",
-      "community": 132,
-      "community_name": "Any",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": ".execute()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -1015,8 +991,8 @@
       "label": ".execute()",
       "_callable": true,
       "_origin": "ast",
-      "community": 132,
-      "community_name": "Any",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": ".execute()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -1027,8 +1003,8 @@
       "label": ".execute()",
       "_callable": true,
       "_origin": "ast",
-      "community": 132,
-      "community_name": "Any",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": ".execute()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -1039,8 +1015,8 @@
       "label": ".__init__()",
       "_callable": true,
       "_origin": "ast",
-      "community": 132,
-      "community_name": "Any",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": ".__init__()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -1051,12 +1027,60 @@
       "label": ".execute()",
       "_callable": true,
       "_origin": "ast",
-      "community": 132,
-      "community_name": "Any",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": ".execute()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
       "source_location": "L696"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_ksamplernode_execute",
+      "label": ".execute()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
+      "file_type": "code",
+      "norm_label": ".execute()",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L711"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_vaedecodenode_execute",
+      "label": ".execute()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
+      "file_type": "code",
+      "norm_label": ".execute()",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L732"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_geometricrescaler_bilinear_rescale",
+      "label": ".bilinear_rescale()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 132,
+      "community_name": ".letterbox_aspect_preserver",
+      "file_type": "code",
+      "norm_label": ".bilinear_rescale()",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L370"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_geometricrescaler_letterbox_aspect_preserver",
+      "label": ".letterbox_aspect_preserver()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 132,
+      "community_name": ".letterbox_aspect_preserver",
+      "file_type": "code",
+      "norm_label": ".letterbox_aspect_preserver()",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L408"
     },
     {
       "id": "scripts_image_vision_nucleus_engine_geometricrescaler_unletterbox_box",
@@ -1064,23 +1088,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 132,
-      "community_name": "Any",
+      "community_name": ".letterbox_aspect_preserver",
       "file_type": "code",
       "norm_label": ".unletterbox_box()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
       "source_location": "L455"
-    },
-    {
-      "id": "scripts_image_vision_nucleus_engine_ksamplernode_execute",
-      "label": ".execute()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 132,
-      "community_name": "Any",
-      "file_type": "code",
-      "norm_label": ".execute()",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L711"
     },
     {
       "id": "scripts_image_vision_nucleus_engine_rastertovectortracer_generate_svg_from_mask",
@@ -2904,7 +2916,7 @@
       "file_type": "code",
       "norm_label": "homepage()",
       "source_file": "goblix/app/page.js",
-      "source_location": "L10"
+      "source_location": "L9"
     },
     {
       "id": "goblix_app_watch_slug_page_generatemetadata",
@@ -3000,7 +3012,7 @@
       "file_type": "code",
       "norm_label": "moviegrid()",
       "source_file": "goblix/components/MovieGrid.js",
-      "source_location": "L7"
+      "source_location": "L8"
     },
     {
       "id": "goblix_components_moviepreviewmodal_moviepreviewmodal",
@@ -3315,6 +3327,18 @@
       "source_location": "L632"
     },
     {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_complementary",
+      "label": ".complementary()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": ".complementary()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L295"
+    },
+    {
       "id": "scripts_graphic_design_visual_engine_palettegenerator_triadic",
       "label": ".triadic()",
       "_callable": true,
@@ -3337,18 +3361,6 @@
       "norm_label": "run_self_tests()",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L744"
-    },
-    {
-      "id": "scripts_image_vision_nucleus_engine_streamingtileprocessor_process_tiled_convolution",
-      "label": ".process_tiled_convolution()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 208,
-      "community_name": ".process_tiled_convolution",
-      "file_type": "code",
-      "norm_label": ".process_tiled_convolution()",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L621"
     },
     {
       "id": "ponytail_hooks_ponytail_config_getclaudedir",
@@ -4057,18 +4069,6 @@
       "norm_label": ".analogous()",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L284"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_complementary",
-      "label": ".complementary()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "PaletteGenerator",
-      "file_type": "code",
-      "norm_label": ".complementary()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L295"
     },
     {
       "id": "scripts_graphic_design_visual_engine_palettegenerator_monochromatic",
@@ -7007,37 +7007,15 @@
       "source_location": "L28"
     },
     {
-      "id": "scripts_image_vision_nucleus_engine_rationale_365",
-      "label": "Sub-pixel Geometric Rescaling and Aspect Ratio Preserver.",
+      "id": "scripts_image_vision_nucleus_engine_rationale_626",
+      "label": "Convolves an image in bounded memory tiles of tile_size x tile_size. Uses\u2026",
       "_origin": "ast",
       "community": 128,
       "community_name": "ImageMatrix",
       "file_type": "rationale",
-      "norm_label": "sub-pixel geometric rescaling and aspect ratio preserver.",
+      "norm_label": "convolves an image in bounded memory tiles of tile_size x tile_size. uses...",
       "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L365"
-    },
-    {
-      "id": "scripts_image_vision_nucleus_engine_rationale_371",
-      "label": "High-precision bilinear interpolation rescaling. Maps target pixel centers\u2026",
-      "_origin": "ast",
-      "community": 128,
-      "community_name": "ImageMatrix",
-      "file_type": "rationale",
-      "norm_label": "high-precision bilinear interpolation rescaling. maps target pixel centers...",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L371"
-    },
-    {
-      "id": "scripts_image_vision_nucleus_engine_rationale_415",
-      "label": "Scales image while strictly preserving native aspect ratio, padding the\u2026",
-      "_origin": "ast",
-      "community": 128,
-      "community_name": "ImageMatrix",
-      "file_type": "rationale",
-      "norm_label": "scales image while strictly preserving native aspect ratio, padding the...",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L415"
+      "source_location": "L626"
     },
     {
       "id": "scripts_image_vision_nucleus_engine_rationale_71",
@@ -7360,7 +7338,7 @@
       "label": "Standard-compliant color space transformation algorithms.",
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "rationale",
       "norm_label": "standard-compliant color space transformation algorithms.",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -7371,7 +7349,7 @@
       "label": "Weighted luminosity grayscale conversion. - BT.601 (SDTV/OpenCV default): Y =\u2026",
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "rationale",
       "norm_label": "weighted luminosity grayscale conversion. - bt.601 (sdtv/opencv default): y =...",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -7382,7 +7360,7 @@
       "label": "Converts RGB [0..255] to HSV (Hue in [0..360), Saturation in [0..1], Value in\u2026",
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "rationale",
       "norm_label": "converts rgb [0..255] to hsv (hue in [0..360), saturation in [0..1], value in...",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -7393,7 +7371,7 @@
       "label": "Converts HSV (Hue [0..360), Saturation [0..1], Value [0..1]) back to RGB\u2026",
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "rationale",
       "norm_label": "converts hsv (hue [0..360), saturation [0..1], value [0..1]) back to rgb...",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -7404,7 +7382,7 @@
       "label": "Converts RGB [0..255] to ITU-R BT.601 YCbCr digital video standard.",
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "rationale",
       "norm_label": "converts rgb [0..255] to itu-r bt.601 ycbcr digital video standard.",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -7415,7 +7393,7 @@
       "label": "Converts ITU-R BT.601 YCbCr back to RGB [0..255].",
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "rationale",
       "norm_label": "converts itu-r bt.601 ycbcr back to rgb [0..255].",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -7426,40 +7404,84 @@
       "label": "image_vision_nucleus_engine.py",
       "_origin": "ast",
       "community": 131,
-      "community_name": "run_tests",
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": "image_vision_nucleus_engine.py",
       "source_file": "scripts/image_vision_nucleus_engine.py",
       "source_location": "L1"
     },
     {
-      "id": "scripts_image_vision_nucleus_engine_rationale_662",
-      "label": "Base executable node in a generative AI visual DAG.",
-      "_origin": "ast",
-      "community": 131,
-      "community_name": "run_tests",
-      "file_type": "rationale",
-      "norm_label": "base executable node in a generative ai visual dag.",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L662"
-    },
-    {
       "id": "scripts_image_vision_nucleus_engine_py_any",
       "label": "Any",
       "_origin": "ast",
-      "community": 132,
-      "community_name": "Any",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": "any",
       "source_file": "",
       "source_location": ""
     },
     {
+      "id": "scripts_image_vision_nucleus_engine_rationale_615",
+      "label": "Demand-driven tile chunking pipeline for low-memory image processing. Executes\u2026",
+      "_origin": "ast",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
+      "file_type": "rationale",
+      "norm_label": "demand-driven tile chunking pipeline for low-memory image processing. executes...",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L615"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_rationale_662",
+      "label": "Base executable node in a generative AI visual DAG.",
+      "_origin": "ast",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
+      "file_type": "rationale",
+      "norm_label": "base executable node in a generative ai visual dag.",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L662"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_rationale_365",
+      "label": "Sub-pixel Geometric Rescaling and Aspect Ratio Preserver.",
+      "_origin": "ast",
+      "community": 132,
+      "community_name": ".letterbox_aspect_preserver",
+      "file_type": "rationale",
+      "norm_label": "sub-pixel geometric rescaling and aspect ratio preserver.",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L365"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_rationale_371",
+      "label": "High-precision bilinear interpolation rescaling. Maps target pixel centers\u2026",
+      "_origin": "ast",
+      "community": 132,
+      "community_name": ".letterbox_aspect_preserver",
+      "file_type": "rationale",
+      "norm_label": "high-precision bilinear interpolation rescaling. maps target pixel centers...",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L371"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_rationale_415",
+      "label": "Scales image while strictly preserving native aspect ratio, padding the\u2026",
+      "_origin": "ast",
+      "community": 132,
+      "community_name": ".letterbox_aspect_preserver",
+      "file_type": "rationale",
+      "norm_label": "scales image while strictly preserving native aspect ratio, padding the...",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L415"
+    },
+    {
       "id": "scripts_image_vision_nucleus_engine_rationale_459",
       "label": "Maps a bounding box (x, y, w, h) from letterboxed space back to native source\u2026",
       "_origin": "ast",
       "community": 132,
-      "community_name": "Any",
+      "community_name": ".letterbox_aspect_preserver",
       "file_type": "rationale",
       "norm_label": "maps a bounding box (x, y, w, h) from letterboxed space back to native source...",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -10627,7 +10649,7 @@
       "file_type": "code",
       "norm_label": "dynamic",
       "source_file": "goblix/app/page.js",
-      "source_location": "L8"
+      "source_location": "L7"
     },
     {
       "id": "goblix_app_watch_slug_page",
@@ -11946,6 +11968,17 @@
       "source_location": "L1"
     },
     {
+      "id": "scripts_graphic_design_visual_engine_rationale_296",
+      "label": "Generate complementary color pair (180\u00b0 offset).",
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "generate complementary color pair (180\u00b0 offset).",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L296"
+    },
+    {
       "id": "scripts_graphic_design_visual_engine_rationale_302",
       "label": "Generate triadic 3-color harmony (120\u00b0 offsets).",
       "_origin": "ast",
@@ -12047,28 +12080,6 @@
       "norm_label": "n058: migrasi arsitektur goblix cinema ke next.js app router",
       "source_file": "learning/neurons/N058_migrasi_arsitektur_goblix_cinema.md",
       "source_location": "L1"
-    },
-    {
-      "id": "scripts_image_vision_nucleus_engine_rationale_615",
-      "label": "Demand-driven tile chunking pipeline for low-memory image processing. Executes\u2026",
-      "_origin": "ast",
-      "community": 208,
-      "community_name": ".process_tiled_convolution",
-      "file_type": "rationale",
-      "norm_label": "demand-driven tile chunking pipeline for low-memory image processing. executes...",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L615"
-    },
-    {
-      "id": "scripts_image_vision_nucleus_engine_rationale_626",
-      "label": "Convolves an image in bounded memory tiles of tile_size x tile_size. Uses\u2026",
-      "_origin": "ast",
-      "community": 208,
-      "community_name": ".process_tiled_convolution",
-      "file_type": "rationale",
-      "norm_label": "convolves an image in bounded memory tiles of tile_size x tile_size. uses...",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L626"
     },
     {
       "id": "learning_neurons_n050_systematic_backtesting_wfa",
@@ -14782,17 +14793,6 @@
       "norm_label": "generate analogous colors clustered around base hue.",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L285"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_296",
-      "label": "Generate complementary color pair (180\u00b0 offset).",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "PaletteGenerator",
-      "file_type": "rationale",
-      "norm_label": "generate complementary color pair (180\u00b0 offset).",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L296"
     },
     {
       "id": "scripts_graphic_design_visual_engine_rationale_312",
@@ -21080,7 +21080,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/app/page.js",
-      "source_location": "L11",
+      "source_location": "L10",
       "weight": 1.0
     },
     {
@@ -21164,7 +21164,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/components/MovieGrid.js",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0
     },
     {
@@ -25729,7 +25729,7 @@
     },
     {
       "source": "goblix_app_page",
-      "target": "goblix_components_categoryfilter_categoryfilter",
+      "target": "goblix_components_moviegrid_moviegrid",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -25741,18 +25741,6 @@
     },
     {
       "source": "goblix_app_page",
-      "target": "goblix_components_moviegrid_moviegrid",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "goblix/app/page.js",
-      "source_location": "L5",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_app_page",
       "target": "goblix_components_footer_footer",
       "relation": "imports",
       "_origin": "ast",
@@ -25760,7 +25748,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "goblix/app/page.js",
-      "source_location": "L6",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -25857,6 +25845,18 @@
       "context": "import",
       "source_file": "goblix/components/MovieGrid.js",
       "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_components_moviegrid",
+      "target": "goblix_components_categoryfilter_categoryfilter",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "goblix/components/MovieGrid.js",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -27277,7 +27277,7 @@
     },
     {
       "source": "goblix_app_page",
-      "target": "goblix_components_categoryfilter",
+      "target": "goblix_components_moviegrid",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -27289,18 +27289,6 @@
     },
     {
       "source": "goblix_app_page",
-      "target": "goblix_components_moviegrid",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "goblix/app/page.js",
-      "source_location": "L5",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_app_page",
       "target": "goblix_components_footer",
       "relation": "imports_from",
       "_origin": "ast",
@@ -27308,7 +27296,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "goblix/app/page.js",
-      "source_location": "L6",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -27405,6 +27393,18 @@
       "context": "import",
       "source_file": "goblix/components/MovieGrid.js",
       "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_components_moviegrid",
+      "target": "goblix_components_categoryfilter",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "goblix/components/MovieGrid.js",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -28738,24 +28738,24 @@
     },
     {
       "source": "goblix_app_page",
-      "target": "goblix_app_page_homepage",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "goblix/app/page.js",
-      "source_location": "L10",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_app_page",
       "target": "goblix_app_page_dynamic",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/app/page.js",
-      "source_location": "L8",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_app_page",
+      "target": "goblix_app_page_homepage",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/app/page.js",
+      "source_location": "L9",
       "weight": 1.0
     },
     {
@@ -28865,7 +28865,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/components/MovieGrid.js",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -44528,5 +44528,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "e7d86e9c51e61f7f93d40c04c1567480b1f6840b"
+  "built_at_commit": "7a934d321ee634a016199777a95c77ee28796cfb"
 }

@@ -2,31 +2,22 @@
 
 import React from 'react';
 import { useGoblix } from '@/lib/store';
-
-const CATEGORIES = [
-  { id: 'all', label: 'Semua Genre' },
-  { id: 'Action', label: 'Action' },
-  { id: 'Adventure', label: 'Adventure' },
-  { id: 'Comedy', label: 'Comedy' },
-  { id: 'Crime', label: 'Crime' },
-  { id: 'Drama', label: 'Drama' },
-  { id: 'Mystery', label: 'Mystery' },
-  { id: 'Sci-Fi', label: 'Sci-Fi' },
-  { id: 'Thriller', label: 'Thriller' },
-  { id: 'Animation', label: 'Animation' },
-  { id: 'Horror', label: 'Horror' },
-  { id: 'Romance', label: 'Romance' }
-];
+import { IMDB_GENRES } from '@/config/global.config';
 
 export default function CategoryFilter() {
   const { activeCategory, setActiveCategory, setSearchQuery } = useGoblix();
 
+  const categories = [
+    { id: 'all', label: 'Semua Genre' },
+    ...IMDB_GENRES.map(g => ({ id: g, label: g }))
+  ];
+
   return (
-    <div className="flex items-center space-x-2 overflow-x-auto pb-2 scrollbar-none">
+    <div className="flex items-center space-x-2 overflow-x-auto pb-1 scrollbar-none">
       <span className="text-xs font-bold text-gray-500 uppercase tracking-wider mr-2 flex-shrink-0">
         Genre:
       </span>
-      {CATEGORIES.map(cat => {
+      {categories.map(cat => {
         const isActive = activeCategory === cat.id;
         return (
           <button

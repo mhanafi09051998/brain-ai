@@ -3,6 +3,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useGoblix } from '@/lib/store';
+import { APP_CONFIG, PLAYER_CONFIG } from '@/config/global.config';
 
 export default function VideoPlayer({ movie }) {
   const { updateProgress, watchProgress } = useGoblix();
@@ -18,7 +19,7 @@ export default function VideoPlayer({ movie }) {
   const [showControls, setShowControls] = useState(true);
   const [subtitlesEnabled, setSubtitlesEnabled] = useState(true);
   const [showSpeedMenu, setShowSpeedMenu] = useState(false);
-  const [quality, setQuality] = useState('1080p BluRay');
+  const [quality, setQuality] = useState(PLAYER_CONFIG.defaultQuality);
   const [showQualityMenu, setShowQualityMenu] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -36,7 +37,7 @@ export default function VideoPlayer({ movie }) {
     video.play().catch(() => {});
   }, [movie]);
 
-  // Hide controls after 3.5s of mouse idle
+  // Hide controls after timeout
   useEffect(() => {
     let timer;
     const handleMouseMove = () => {
@@ -44,7 +45,7 @@ export default function VideoPlayer({ movie }) {
       clearTimeout(timer);
       timer = setTimeout(() => {
         if (isPlaying) setShowControls(false);
-      }, 3500);
+      }, PLAYER_CONFIG.controlsTimeoutMs);
     };
 
     window.addEventListener('mousemove', handleMouseMove);
@@ -61,7 +62,7 @@ export default function VideoPlayer({ movie }) {
       if (video && !video.paused && video.duration) {
         updateProgress(movie.id, video.currentTime, video.duration);
       }
-    }, 5000);
+    }, PLAYER_CONFIG.progressIntervalMs);
 
     return () => clearInterval(interval);
   }, [movie, updateProgress]);
@@ -174,7 +175,7 @@ export default function VideoPlayer({ movie }) {
         onPlaying={() => setIsLoading(false)}
       >
         <track
-          label="Bahasa Indonesia (Resmi)"
+          label={PLAYER_CONFIG.defaultSubtitleLang}
           kind="subtitles"
           srcLang="id"
           src={`/api/subtitles/${movie.slug}`}
@@ -203,7 +204,7 @@ export default function VideoPlayer({ movie }) {
           </div>
         </div>
         <div className="flex items-center space-x-2">
-          <span className="bg-red-600 text-white text-[10px] font-black px-2 py-0.5 rounded">GOBLIX LIVE</span>
+          <span className="bg-red-600 text-white text-[10px] font-black px-2 py-0.5 rounded">{APP_CONFIG.liveBadge}</span>
         </div>
       </div>
 
@@ -228,11 +229,11 @@ export default function VideoPlayer({ movie }) {
               <i className={`fa-solid ${isPlaying ? 'fa-pause' : 'fa-play'}`}></i>
             </button>
 
-            <button onClick={() => { if (videoRef.current) videoRef.current.currentTime -= 10; }} className="hover:text-gray-300 transition text-xs sm:text-sm" title="Mundur 10s">
+            <button onClick={() => { if (videoRef.current) videoRef.current.currentTime -= PLAYER_CONFIG.seekStepSeconds; }} className="hover:text-gray-300 transition text-xs sm:text-sm" title="Mundur 10s">
               <i className="fa-solid fa-rotate-left mr-1"></i>10s
             </button>
 
-            <button onClick={() => { if (videoRef.current) videoRef.current.currentTime += 10; }} className="hover:text-gray-300 transition text-xs sm:text-sm" title="Maju 10s">
+            <button onClick={() => { if (videoRef.current) videoRef.current.currentTime += PLAYER_CONFIG.seekStepSeconds; }} className="hover:text-gray-300 transition text-xs sm:text-sm" title="Maju 10s">
               <i className="fa-solid fa-rotate-right mr-1"></i>10s
             </button>
 
@@ -268,7 +269,7 @@ export default function VideoPlayer({ movie }) {
               </button>
               {showSpeedMenu && (
                 <div className="absolute bottom-full right-0 mb-2 w-24 bg-gray-950 border border-gray-800 rounded-md shadow-2xl py-1 z-50 text-xs">
-                  {[0.5, 0.75, 1, 1.25, 1.5, 2].map(rate => (
+                  {PLAYER_CONFIG.playbackRates.map(rate => (
                     <button
                       key={rate}
                       onClick={() => changeSpeed(rate)}
@@ -288,7 +289,7 @@ export default function VideoPlayer({ movie }) {
               </button>
               {showQualityMenu && (
                 <div className="absolute bottom-full right-0 mb-2 w-32 bg-gray-950 border border-gray-800 rounded-md shadow-2xl py-1 z-50 text-xs">
-                  {['1080p BluRay', '720p HD', 'Auto'].map(q => (
+                  {PLAYER_CONFIG.qualities.map(q => (
                     <button
                       key={q}
                       onClick={() => { setQuality(q); setShowQualityMenu(false); }}

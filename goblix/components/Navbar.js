@@ -3,11 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useGoblix } from '@/lib/store';
-
-const IMDB_GENRES = [
-  'Action', 'Adventure', 'Comedy', 'Crime', 'Drama', 'Mystery',
-  'Sci-Fi', 'Thriller', 'Animation', 'Horror', 'Romance'
-];
+import { APP_CONFIG, IMDB_GENRES } from '@/config/global.config';
 
 export default function Navbar() {
   const {
@@ -41,7 +37,7 @@ export default function Navbar() {
       {/* Left: Brand & Navigation */}
       <div className="flex items-center space-x-4 md:space-x-8">
         <Link href="/" onClick={() => setActiveCategory('all')} className="text-2xl sm:text-3xl md:text-4xl font-black tracking-wider text-red-600 font-bebas transition hover:scale-105">
-          GOBLIX
+          {APP_CONFIG.name}
         </Link>
 
         <ul className="hidden lg:flex items-center space-x-5 text-xs sm:text-sm font-medium text-gray-300">
@@ -133,7 +129,7 @@ export default function Navbar() {
                 Daftar Saya ({myList.length})
               </button>
               <button onClick={() => setToken(null)} className="w-full text-left px-4 py-2 text-red-400 hover:bg-red-600 hover:text-white transition border-t border-gray-800 font-semibold">
-                Keluar dari Goblix
+                Keluar dari {APP_CONFIG.name}
               </button>
             </div>
           </div>
