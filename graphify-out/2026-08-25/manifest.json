@@ -1296,9 +1296,9 @@
     "semantic_hash": ""
   },
   "goblix/data/movies.json": {
-    "mtime": 1787650363.5597794,
-    "seen": 1787650410.5378406,
-    "ast_hash": "856768a4350e1659f161b4f74e81174f",
+    "mtime": 1787651345.5137868,
+    "seen": 1787651393.362115,
+    "ast_hash": "e79181ac6a683fd0de6e441bb67727fa",
     "semantic_hash": ""
   },
   "goblix/public/app.js": {
@@ -1338,9 +1338,9 @@
     "semantic_hash": ""
   },
   "goblix/public/index.html": {
-    "mtime": 1787651188.168606,
-    "seen": 1787651218.1162481,
-    "ast_hash": "1148a1069febbdac39c8175fd104bba5",
+    "mtime": 1787651366.562723,
+    "seen": 1787651393.3626313,
+    "ast_hash": "f9ca449d02823f22590c6d8aea4b092b",
     "semantic_hash": ""
   },
   "learning/neurons/N056_strategic_swot_and_tows_matrix_a.md": {
@@ -1488,9 +1488,9 @@
     "semantic_hash": ""
   },
   "goblix/public/js/views.js": {
-    "mtime": 1787650956.6596317,
-    "seen": 1787650983.6581173,
-    "ast_hash": "3a0c91e98fbdfc0fdb278938c9b51e89",
+    "mtime": 1787651356.658108,
+    "seen": 1787651393.362115,
+    "ast_hash": "ec8cbb678de4337a9d1375ca43ccb340",
     "semantic_hash": ""
   },
   "goblix/src/auth.js": {
@@ -1581,6 +1581,78 @@
     "mtime": 1787650974.0074563,
     "seen": 1787650983.6581173,
     "ast_hash": "2e77fb6857266956010b800bbcf7c962",
+    "semantic_hash": ""
+  },
+  "scripts/download_remaining_assets.py": {
+    "mtime": 1787651315.1265147,
+    "seen": 1787651393.362115,
+    "ast_hash": "8ea9f2fdc6a886698283666780bc8f8d",
+    "semantic_hash": ""
+  },
+  "scripts/download_tmdb_assets.py": {
+    "mtime": 1787651296.9640863,
+    "seen": 1787651393.362115,
+    "ast_hash": "f8f49fedf5f25ad33fa7dad989c5e592",
+    "semantic_hash": ""
+  },
+  "scripts/fetch_imdb_images.py": {
+    "mtime": 1787651275.3940003,
+    "seen": 1787651393.3626313,
+    "ast_hash": "7f8a7f9ed8d16e4ff226561745601769",
+    "semantic_hash": ""
+  },
+  "scripts/fetch_local_assets.py": {
+    "mtime": 1787651245.2039447,
+    "seen": 1787651393.3626313,
+    "ast_hash": "9d2c8431e2575963ce8a01965f1d5176",
+    "semantic_hash": ""
+  },
+  "goblix/public/images/backdrops/glass-onion-a-knives-out-mystery.jpg": {
+    "mtime": 1787651338.544161,
+    "seen": 1787651393.3626313,
+    "ast_hash": "35d24afc7a2a8b386c8189a1551c467e",
+    "semantic_hash": ""
+  },
+  "goblix/public/images/backdrops/john-wick-chapter-4.jpg": {
+    "mtime": 1787651343.3864825,
+    "seen": 1787651393.3626313,
+    "ast_hash": "e4fef0f34abda9a20c0397d55e16121f",
+    "semantic_hash": ""
+  },
+  "goblix/public/images/backdrops/top-gun-maverick.jpg": {
+    "mtime": 1787651340.304739,
+    "seen": 1787651393.3626313,
+    "ast_hash": "af68254a21cc2794ce37e34baabfea8a",
+    "semantic_hash": ""
+  },
+  "goblix/public/images/backdrops/x-men-first-class.jpg": {
+    "mtime": 1787651341.7001271,
+    "seen": 1787651393.3626313,
+    "ast_hash": "bc4ff7bddd791c3b5523f4d26ac18c31",
+    "semantic_hash": ""
+  },
+  "goblix/public/images/posters/glass-onion-a-knives-out-mystery.jpg": {
+    "mtime": 1787651345.563545,
+    "seen": 1787651393.3626313,
+    "ast_hash": "5ca9f02a2a4def3e5b005e4cdfdfa808",
+    "semantic_hash": ""
+  },
+  "goblix/public/images/posters/john-wick-chapter-4.jpg": {
+    "mtime": 1787651349.1617396,
+    "seen": 1787651393.3626313,
+    "ast_hash": "8304757872a513af1d2a433526e5a9d1",
+    "semantic_hash": ""
+  },
+  "goblix/public/images/posters/top-gun-maverick.jpg": {
+    "mtime": 1787651346.713357,
+    "seen": 1787651393.3626313,
+    "ast_hash": "62318f4018323e3bb955bd938dcfbeee",
+    "semantic_hash": ""
+  },
+  "goblix/public/images/posters/x-men-first-class.jpg": {
+    "mtime": 1787651347.9550323,
+    "seen": 1787651393.3626313,
+    "ast_hash": "d5a796fcc898809a9e993bdc5b345a8c",
     "semantic_hash": ""
   }
 }

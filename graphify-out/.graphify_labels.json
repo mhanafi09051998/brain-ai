@@ -194,5 +194,15 @@
   "192": "print_sub_links.py",
   "193": "N057: Goblix Metadata Invariant & Defensive Rendering",
   "194": "fetch_imdb_images.py",
-  "195": "fetch_local_assets.py"
+  "195": "fetch_local_assets.py",
+  "196": "useGoblix",
+  "197": "lib/auth.js",
+  "198": "include",
+  "199": "subtitles/[slug]/route.js",
+  "200": "stream/[slug]/route.js",
+  "201": "next.config.mjs",
+  "202": "postcss.config.js",
+  "203": "tailwind.config.js",
+  "204": "next",
+  "205": "tailwindcss"
 }
