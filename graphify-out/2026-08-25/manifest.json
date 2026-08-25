@@ -966,9 +966,9 @@
     "semantic_hash": "ab2fa9fc2466e74e8a664f4d9c5a6bd5"
   },
   "scripts/claudia_live_watchdog.py": {
-    "mtime": 1787628270.7994897,
-    "seen": 1787628280.2858458,
-    "ast_hash": "c4739c5e8d3170aa97b88249a0eeebdb",
+    "mtime": 1787628397.0688715,
+    "seen": 1787628408.5545444,
+    "ast_hash": "ccba1a488787e5a5a78da682eeafc34e",
     "semantic_hash": ""
   },
   "scripts/send_telegram_gold_report.py": {
