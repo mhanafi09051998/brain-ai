@@ -2787,16 +2787,16 @@
       "source_location": "L105"
     },
     {
-      "id": "ponytail_hooks_ponytail_config_normalizeconfigmode",
-      "label": "normalizeConfigMode()",
+      "id": "ponytail_hooks_ponytail_config_isshellsafe",
+      "label": "isShellSafe()",
       "_callable": true,
       "_origin": "ast",
       "community": 22,
       "community_name": "ponytail-config.js",
       "file_type": "code",
-      "norm_label": "normalizeconfigmode()",
+      "norm_label": "isshellsafe()",
       "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L26"
+      "source_location": "L50"
     },
     {
       "id": "ponytail_scripts_uninstall_removeifexists",
@@ -2809,6 +2809,18 @@
       "norm_label": "removeifexists()",
       "source_file": "ponytail/scripts/uninstall.js",
       "source_location": "L14"
+    },
+    {
+      "id": "ponytail_hooks_ponytail_config_normalizeconfigmode",
+      "label": "normalizeConfigMode()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "index.js",
+      "file_type": "code",
+      "norm_label": "normalizeconfigmode()",
+      "source_file": "ponytail/hooks/ponytail-config.js",
+      "source_location": "L26"
     },
     {
       "id": "ponytail_hooks_ponytail_config_normalizepersistedmode",
@@ -3733,18 +3745,6 @@
       "norm_label": "verify_math_gpqa()",
       "source_file": "scripts/official_runner_real.py",
       "source_location": "L415"
-    },
-    {
-      "id": "ponytail_hooks_ponytail_config_isshellsafe",
-      "label": "isShellSafe()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 42,
-      "community_name": "ponytail-activate.js",
-      "file_type": "code",
-      "norm_label": "isshellsafe()",
-      "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L50"
     },
     {
       "id": "scripts_graphic_design_visual_engine_iconbuilder24_cpu_neural",
@@ -9421,6 +9421,17 @@
       "source_location": "L626"
     },
     {
+      "id": "scripts_get_topgun_backdrops",
+      "label": "get_topgun_backdrops.py",
+      "_origin": "ast",
+      "community": 184,
+      "community_name": "get_topgun_backdrops.py",
+      "file_type": "code",
+      "norm_label": "get_topgun_backdrops.py",
+      "source_file": "scripts/get_topgun_backdrops.py",
+      "source_location": "L1"
+    },
+    {
       "id": "learning_neurons_n039_webrtc_av_dsp_streaming",
       "label": "N039_webrtc_av_dsp_streaming.md",
       "_origin": "ast",
@@ -10641,17 +10652,6 @@
       "source_location": "L13"
     },
     {
-      "id": "ponytail_hooks_ponytail_config_runtime_modes",
-      "label": "RUNTIME_MODES",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "ponytail-config.js",
-      "file_type": "code",
-      "norm_label": "runtime_modes",
-      "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L18"
-    },
-    {
       "id": "ponytail_hooks_ponytail_config_valid_modes",
       "label": "VALID_MODES",
       "_origin": "ast",
@@ -10716,6 +10716,17 @@
       "norm_label": "settingspath",
       "source_file": "ponytail/scripts/uninstall.js",
       "source_location": "L26"
+    },
+    {
+      "id": "ponytail_hooks_ponytail_config_runtime_modes",
+      "label": "RUNTIME_MODES",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "index.js",
+      "file_type": "code",
+      "norm_label": "runtime_modes",
+      "source_file": "ponytail/hooks/ponytail-config.js",
+      "source_location": "L18"
     },
     {
       "id": "ponytail_pi_extension_index",
@@ -20106,6 +20117,18 @@
     },
     {
       "source": "goblix_server_server",
+      "target": "goblix_server_getmoviesdb",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/server.js",
+      "source_location": "L103",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_server_server",
       "target": "goblix_src_auth_getauthuser",
       "relation": "calls",
       "_origin": "ast",
@@ -20113,7 +20136,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/server.js",
-      "source_location": "L109",
+      "source_location": "L122",
       "weight": 1.0
     },
     {
@@ -20125,7 +20148,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/server.js",
-      "source_location": "L116",
+      "source_location": "L129",
       "weight": 1.0
     },
     {
@@ -20137,7 +20160,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/server.js",
-      "source_location": "L131",
+      "source_location": "L144",
       "weight": 1.0
     },
     {
@@ -20149,7 +20172,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/server.js",
-      "source_location": "L141",
+      "source_location": "L154",
       "weight": 1.0
     },
     {
@@ -20161,7 +20184,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/server.js",
-      "source_location": "L166",
+      "source_location": "L179",
       "weight": 1.0
     },
     {
@@ -20173,7 +20196,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/server.js",
-      "source_location": "L173",
+      "source_location": "L186",
       "weight": 1.0
     },
     {
@@ -20197,19 +20220,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/server.js",
-      "source_location": "L83",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_server_server",
-      "target": "goblix_server_getmoviesdb",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "goblix/server.js",
-      "source_location": "L90",
+      "source_location": "L96",
       "weight": 1.0
     },
     {
@@ -40462,5 +40473,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "62b13cb9f10a10c51e2239a59f4b53a89594f328"
+  "built_at_commit": "9720fb76fa0bd42ee73a0f24f15efe7919cb14a1"
 }

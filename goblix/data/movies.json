@@ -1,13 +1,43 @@
 [
   {
+    "id": "top-gun-maverick",
+    "slug": "top-gun-maverick",
+    "imdbId": "tt1745960",
+    "title": "Top Gun: Maverick (2022)",
+    "year": 2022,
+    "duration": "2 Jam 10 Menit",
+    "ageRating": "13+",
+    "matchScore": "99%",
+    "quality": "1080p BluRay",
+    "audio": "Dolby AAC 5.1",
+    "subtitle": "Bahasa Indonesia (Resmi)",
+    "genres": [
+      "Action",
+      "Drama",
+      "Adventure"
+    ],
+    "poster": "https://m.media-amazon.com/images/M/MV5BMDBkZDNjMWEtOTdmMi00NmExLTg5MmMtNTFlYTJlNWY5YTdmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/original/7mWHXEmksbrkMhtkFeClzNKu7mk.jpg",
+    "synopsis": "Setelah lebih dari tiga puluh tahun mengabdi sebagai penerbang angkatan laut terbaik, Pete 'Maverick' Mitchell harus melatih detasemen lulusan muda TOPGUN untuk misi khusus berbahaya tingkat tinggi.",
+    "director": "Joseph Kosinski",
+    "cast": [
+      "Tom Cruise",
+      "Miles Teller",
+      "Jennifer Connelly",
+      "Jon Hamm"
+    ],
+    "streamUrl": "/stream/top-gun-maverick.mp4",
+    "subtitleUrl": "/api/subtitles/top-gun-maverick"
+  },
+  {
     "id": "x-men-first-class",
     "slug": "x-men-first-class",
     "imdbId": "tt1270798",
-    "title": "X-Men: First Class",
+    "title": "X-Men: First Class (2011)",
     "year": 2011,
     "duration": "2 Jam 12 Menit",
     "ageRating": "13+",
-    "matchScore": "99%",
+    "matchScore": "98%",
     "quality": "1080p BluRay",
     "audio": "Dolby AAC 5.1",
     "subtitle": "Bahasa Indonesia (Resmi)",
@@ -19,11 +49,12 @@
     ],
     "poster": "https://m.media-amazon.com/images/M/MV5BMTg5OTMxNzk4Nl5BMl5BanBnXkFtZTcwOTk1MjAwNQ@@._V1_FMjpg_UX1000_.jpg",
     "backdrop": "https://image.tmdb.org/t/p/original/gCctDK5RCPRMjgYAoV6yxNE7f93.jpg",
-    "synopsis": "Di era Perang Dingin tahun 1962, Charles Xavier (Professor X) dan Erik Lehnsherr (Magneto) bekerja sama dengan CIA untuk mengumpulkan mutan muda pertama demi mencegah ancaman perang nuklir global dari Hellfire Club yang dipimpin oleh Sebastian Shaw.",
+    "synopsis": "Di era Perang Dingin tahun 1962, Charles Xavier (Professor X) dan Erik Lehnsherr (Magneto) bekerja sama dengan CIA untuk mengumpulkan mutan muda pertama demi mencegah ancaman perang nuklir global dari Hellfire Club.",
     "director": "Matthew Vaughn",
     "cast": [
       "James McAvoy",
-      "Michael Fassbender"
+      "Michael Fassbender",
+      "Jennifer Lawrence"
     ],
     "streamUrl": "/stream/x-men-first-class.mp4",
     "subtitleUrl": "/api/subtitles/x-men-first-class"
