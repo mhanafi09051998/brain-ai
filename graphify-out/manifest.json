@@ -1308,9 +1308,9 @@
     "semantic_hash": ""
   },
   "goblix/server.js": {
-    "mtime": 1787638886.424585,
-    "seen": 1787638966.2791307,
-    "ast_hash": "baeae66691696acc56bde455cb75f48a",
+    "mtime": 1787648687.3000484,
+    "seen": 1787648717.7698174,
+    "ast_hash": "5fdd60828f0f78a93e726ba2d8f984ce",
     "semantic_hash": ""
   },
   "scripts/swot_engine.py": {
