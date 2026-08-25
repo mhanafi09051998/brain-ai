@@ -1308,9 +1308,9 @@
     "semantic_hash": ""
   },
   "goblix/server.js": {
-    "mtime": 1787648687.3000484,
-    "seen": 1787648717.7698174,
-    "ast_hash": "5fdd60828f0f78a93e726ba2d8f984ce",
+    "mtime": 1787649318.3525105,
+    "seen": 1787649358.1128745,
+    "ast_hash": "1d04bcdda26caa79b1013c2b4f14dc8e",
     "semantic_hash": ""
   },
   "scripts/swot_engine.py": {
@@ -1338,9 +1338,9 @@
     "semantic_hash": ""
   },
   "goblix/public/index.html": {
-    "mtime": 1787649040.4396524,
-    "seen": 1787649119.8067548,
-    "ast_hash": "100ef85ec46aef5296535a846adf3568",
+    "mtime": 1787649293.4441733,
+    "seen": 1787649358.1128745,
+    "ast_hash": "d700d815eb578af340b3f5974c2a1be6",
     "semantic_hash": ""
   },
   "learning/neurons/N056_strategic_swot_and_tows_matrix_a.md": {
@@ -1449,6 +1449,66 @@
     "mtime": 1787648460.7012708,
     "seen": 1787648512.1968448,
     "ast_hash": "47cc2d4c21b8bdd568d102b78034debc",
+    "semantic_hash": ""
+  },
+  "goblix/public/js/api.js": {
+    "mtime": 1787649241.371741,
+    "seen": 1787649358.1128745,
+    "ast_hash": "fe8c8157821ce8a3819e4273ef7c8a9a",
+    "semantic_hash": ""
+  },
+  "goblix/public/js/app.js": {
+    "mtime": 1787649285.1519866,
+    "seen": 1787649358.1128745,
+    "ast_hash": "5be7f0eb79c87c2a6d4f57d418b33d65",
+    "semantic_hash": ""
+  },
+  "goblix/public/js/auth_views.js": {
+    "mtime": 1787649273.767397,
+    "seen": 1787649358.1128745,
+    "ast_hash": "d5e429908c89b6865a1c945fa47856a3",
+    "semantic_hash": ""
+  },
+  "goblix/public/js/player.js": {
+    "mtime": 1787649251.9075494,
+    "seen": 1787649358.1128745,
+    "ast_hash": "84ab83c6533525f99c168090eda3a40f",
+    "semantic_hash": ""
+  },
+  "goblix/public/js/state.js": {
+    "mtime": 1787649236.791325,
+    "seen": 1787649358.1128745,
+    "ast_hash": "88f841e7d499edd9445031f39ad58b1e",
+    "semantic_hash": ""
+  },
+  "goblix/public/js/subtitle.js": {
+    "mtime": 1787649246.5178087,
+    "seen": 1787649358.1128745,
+    "ast_hash": "ca45cdb6d9227ff228c1bc5eb1b22070",
+    "semantic_hash": ""
+  },
+  "goblix/public/js/views.js": {
+    "mtime": 1787649265.112538,
+    "seen": 1787649358.1128745,
+    "ast_hash": "d6e1ce8f951e7fe3096a4b4edcd1e1f9",
+    "semantic_hash": ""
+  },
+  "goblix/src/auth.js": {
+    "mtime": 1787649303.9409337,
+    "seen": 1787649358.1128745,
+    "ast_hash": "e9eb9bff9486a188941af900f3665c7f",
+    "semantic_hash": ""
+  },
+  "goblix/src/streamer.js": {
+    "mtime": 1787649298.6040094,
+    "seen": 1787649358.1128745,
+    "ast_hash": "6752f384285ee4b680627bd1e3b80e33",
+    "semantic_hash": ""
+  },
+  "goblix/src/subtitles.js": {
+    "mtime": 1787649308.011616,
+    "seen": 1787649358.1128745,
+    "ast_hash": "5244d0a9ea1016b1019317db4dab5354",
     "semantic_hash": ""
   }
 }
