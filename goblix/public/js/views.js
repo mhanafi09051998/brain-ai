@@ -33,13 +33,36 @@ export function renderHomePage() {
   }
 
   const categories = [
-    { id: 'all', label: 'Semua Film' },
-    { id: 'Action', label: 'Action' },
-    { id: 'Sci-Fi', label: 'Sci-Fi & Mutan' },
-    { id: 'Superhero', label: 'Superhero' },
-    { id: 'Adventure', label: 'Petualangan' },
-    { id: 'Drama', label: 'Drama' }
+    { id: 'all', label: 'Semua Koleksi' },
+    { id: 'Action', label: 'Koleksi Aksi (Top Gun, John Wick)' },
+    { id: 'Sci-Fi', label: 'Koleksi Mutan & Sci-Fi' },
+    { id: 'Mystery', label: 'Koleksi Misteri & Detektif' },
+    { id: 'Adventure', label: 'Koleksi Petualangan' },
+    { id: 'Drama', label: 'Koleksi Drama' }
   ];
+
+  let collectionTitle = 'Koleksi Film Box Office & Blockbuster Terpopuler';
+  let collectionBadge = 'Trending di Indonesia';
+
+  if (state.searchQuery) {
+    collectionTitle = `Hasil Pencarian: "${state.searchQuery}"`;
+    collectionBadge = 'Pencarian Instan';
+  } else if (state.activeCategory === 'Action') {
+    collectionTitle = 'Koleksi Aksi & Pilot Tempur (Top Gun, John Wick)';
+    collectionBadge = 'Populer di Indonesia';
+  } else if (state.activeCategory === 'Sci-Fi' || state.activeCategory === 'Superhero') {
+    collectionTitle = 'Koleksi Mutan & Marvel Universe (X-Men)';
+    collectionBadge = 'Pilihan Editor';
+  } else if (state.activeCategory === 'Mystery' || state.activeCategory === 'Crime') {
+    collectionTitle = 'Koleksi Misteri & Detektif (Glass Onion, Knives Out)';
+    collectionBadge = 'Rekomendasi Teratas';
+  } else if (state.activeCategory === 'Adventure') {
+    collectionTitle = 'Koleksi Petualangan & Misi Berbahaya';
+    collectionBadge = 'Paling Banyak Ditonton';
+  } else if (state.activeCategory === 'Drama') {
+    collectionTitle = 'Koleksi Drama & Kisah Epik';
+    collectionBadge = 'Rating Tertinggi';
+  }
 
   main.innerHTML = `
     <!-- HERO BANNER (NETFLIX HERO) -->
@@ -97,10 +120,10 @@ export function renderHomePage() {
       </div>
     </header>
 
-    <!-- NETFLIX CATEGORY FILTER PILLS & CATALOG -->
+    <!-- NETFLIX THEMATIC FRANCHISE & COLLECTION SHELVES -->
     <section class="px-4 sm:px-8 md:px-12 py-6 md:py-8 relative z-20 space-y-6">
       <div class="flex items-center space-x-2 overflow-x-auto pb-2 scrollbar-none">
-        <span class="text-xs text-gray-400 font-semibold uppercase tracking-wider mr-2 hidden sm:inline">Filter:</span>
+        <span class="text-xs text-gray-400 font-semibold uppercase tracking-wider mr-2 hidden sm:inline">Koleksi:</span>
         ${categories.map(cat => `
           <button onclick="setCategoryFilter('${cat.id}')" 
                   class="px-4 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200 border ${state.activeCategory === cat.id ? 'bg-red-600 text-white border-red-600 shadow-md shadow-red-600/30 font-bold' : 'bg-gray-900/90 text-gray-300 border-gray-800 hover:border-gray-600 hover:text-white'}">
@@ -112,10 +135,13 @@ export function renderHomePage() {
       <div>
         <div class="flex items-center justify-between mb-4 sm:mb-6">
           <h2 class="text-base sm:text-xl md:text-2xl font-bold tracking-wide text-white flex items-center space-x-2">
-            <span>${state.searchQuery ? `Hasil Pencarian: "${state.searchQuery}"` : (state.activeCategory === 'all' ? 'Koleksi Film 1080p BluRay Subtitle Indonesia' : `Koleksi Genre ${state.activeCategory}`)}</span>
+            <span>${collectionTitle}</span>
             <span class="text-xs font-normal text-gray-500 font-mono">(${filteredMovies.length})</span>
           </h2>
-          <span class="text-[11px] sm:text-xs text-red-500 font-semibold uppercase tracking-wider">Streaming HD</span>
+          <span class="text-[11px] sm:text-xs text-red-400 font-bold uppercase tracking-wider flex items-center space-x-1.5 bg-red-950/40 border border-red-800/60 px-2.5 py-1 rounded-md shadow-sm">
+            <i class="fa-solid fa-fire text-red-500 text-xs"></i>
+            <span>${collectionBadge}</span>
+          </span>
         </div>
 
         ${filteredMovies.length === 0 ? `
