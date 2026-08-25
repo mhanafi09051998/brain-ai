@@ -1,16 +1,16 @@
 # Graph Report - Agent_Claudia_Autonomus  (2026-08-25)
 
 ## Corpus Check
-- 219 files · ~226,991 words
+- 219 files · ~228,373 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1541 nodes · 1707 edges · 180 communities (155 shown, 25 thin omitted)
+- 1550 nodes · 1726 edges · 180 communities (155 shown, 25 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 28 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `25fa5c9c`
+- Built from commit: `2f01d5f4`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -266,12 +266,12 @@ Cohesion: 0.11
 Nodes (17): 1. Arsitektur Event-Driven vs Ilusi Simulasi Vektorik, 2. Walk-Forward Analysis (WFA) & Rolling Horizon Optimization, 3. Combinatorial Purged Cross-Validation (CPCV), 4. Probabilistic Sharpe Ratio (PSR) & Deflated Sharpe Ratio (DSR), 5. Implementasi Deterministik Python Standard Library, 6. Invarian Operasional & Quant Guardrails, A. 7 Jebakan Fatal Simulasi Vektorik (*Vectorized Backtest Pitfalls*), A. Dua Pilar CPCV (Marcos López de Prado) (+9 more)
 
 ### Community 22 - "ponytail-config.js"
-Cohesion: 0.14
-Nodes (15): fs, getClaudeDir(), getConfigDir(), getConfigPath(), getHideStatus(), getQuietStartup(), normalizeConfigMode(), os (+7 more)
+Cohesion: 0.15
+Nodes (14): fs, getClaudeDir(), getConfigDir(), getConfigPath(), getHideStatus(), getQuietStartup(), isShellSafe(), os (+6 more)
 
 ### Community 23 - "index.js"
-Cohesion: 0.18
-Nodes (11): normalizePersistedMode(), {
+Cohesion: 0.16
+Nodes (13): normalizeConfigMode(), normalizePersistedMode(), RUNTIME_MODES, {
   DEFAULT_MODE,
   RUNTIME_MODES,
   getDefaultMode,
@@ -281,7 +281,7 @@ Nodes (11): normalizePersistedMode(), {
   normalizePersistedMode,
   isDeactivationCommand,
   writeDefaultMode,
-}, { getPonytailInstructions, filterSkillBodyForMode }, parsePonytailCommand(), ponytailExtension(), readDefaultMode, readQuietStartup, require (+3 more)
+}, { getPonytailInstructions, filterSkillBodyForMode }, parsePonytailCommand(), ponytailExtension(), readDefaultMode (+5 more)
 
 ### Community 24 - "zolu_learn_server.js"
 Cohesion: 0.12
@@ -356,14 +356,14 @@ Cohesion: 0.18
 Nodes (10): 1. Uniswap v3 Concentrated Liquidity Math & Tick Geometry, 2. Impermanent Loss (IL) & Capital Efficiency Calculus, 3. Flash Loan Atomic Arbitrage Architecture, 4. Toxic MEV Dynamics: Sandwich Attacks & JIT Liquidity, 🏛️ 5 Pilar DeFi Liquidity Engineering & MEV Defense, 5. Searcher-Builder Infrastructure: Flashbots & Jito Relays, 🧠 Domain & Arsitektur, 🛡️ Invariant Ringkas (Operational Rules) (+2 more)
 
 ### Community 42 - "ponytail-activate.js"
-Cohesion: 0.18
-Nodes (10): claudeDir, {
+Cohesion: 0.20
+Nodes (9): claudeDir, {
   clearMode,
   isCodex,
   isCopilot,
   setMode,
   writeHookOutput,
-}, fs, { getDefaultMode, getClaudeDir, isShellSafe }, { getPonytailInstructions }, mode, output, path (+2 more)
+}, fs, { getDefaultMode, getClaudeDir, isShellSafe }, { getPonytailInstructions }, mode, output, path (+1 more)
 
 ### Community 43 - "IconBuilder24"
 Cohesion: 0.25
@@ -586,8 +586,8 @@ Cohesion: 0.14
 Nodes (20): crypto, DATA_DIR, fs, generateToken(), getMoviesDB(), getUsersDB(), hashPassword(), http (+12 more)
 
 ### Community 161 - "app.js"
-Cohesion: 0.17
-Nodes (22): checkAuthSession(), fetchMovies(), fetchServerWatchProgress(), formatTime(), getLocalProgress(), getToken(), handleLogout(), handleRoute() (+14 more)
+Cohesion: 0.12
+Nodes (30): checkAuthSession(), clearSearch(), fetchMovies(), fetchServerWatchProgress(), formatTime(), getLocalProgress(), getToken(), handleLogout() (+22 more)
 
 ### Community 162 - "Vec2D"
 Cohesion: 0.11
@@ -622,24 +622,24 @@ Cohesion: 0.53
 Nodes (5): enrich_movie_metadata(), fetch_tmdb_backdrop(), Scrapes TMDB for official 1920x1080 cinematic backdrop, search_imdb(), update_movies_database()
 
 ## Knowledge Gaps
-- **696 isolated node(s):** `MOVIES_DATA`, `WATCH_PROGRESS`, `name`, `short_name`, `description` (+691 more)
+- **697 isolated node(s):** `MOVIES_DATA`, `WATCH_PROGRESS`, `MY_LIST`, `name`, `short_name` (+692 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **25 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Color` connect `Color` to `run_self_tests`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **Why does `Vec2D` connect `Vec2D` to `CubicBezier`, `run_self_tests`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **Why does `run_tests()` connect `run_tests` to `ImageMatrix`, `ConvolutionKernelEngine`, `image_vision_nucleus_engine.py`, `.letterbox_aspect_preserver`, `RasterToVectorTracer`, `GenerativeGraphExecutor`?**
-  _High betweenness centrality (0.001) - this node is a cross-community bridge._
-- **What connects `MOVIES_DATA`, `WATCH_PROGRESS`, `name` to the rest of the system?**
-  _696 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _High betweenness centrality (0.002) - this node is a cross-community bridge._
+- **What connects `MOVIES_DATA`, `WATCH_PROGRESS`, `MY_LIST` to the rest of the system?**
+  _697 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `run_deterministic_tests` be split into smaller, more focused modules?**
   _Cohesion score 0.06259426847662142 - nodes in this community are weakly interconnected._
 - **Should `Install` be split into smaller, more focused modules?**
   _Cohesion score 0.044444444444444446 - nodes in this community are weakly interconnected._
 - **Should `N022_multi_agent_consensus.md` be split into smaller, more focused modules?**
   _Cohesion score 0.045454545454545456 - nodes in this community are weakly interconnected._
+- **Should `CubicBezier` be split into smaller, more focused modules?**
+  _Cohesion score 0.11067193675889328 - nodes in this community are weakly interconnected._

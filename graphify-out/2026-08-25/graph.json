@@ -1380,7 +1380,7 @@
       "file_type": "code",
       "norm_label": "changequality()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L497"
+      "source_location": "L730"
     },
     {
       "id": "goblix_public_app_changespeed",
@@ -1392,7 +1392,7 @@
       "file_type": "code",
       "norm_label": "changespeed()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L492"
+      "source_location": "L725"
     },
     {
       "id": "goblix_public_app_checkauthsession",
@@ -1404,7 +1404,19 @@
       "file_type": "code",
       "norm_label": "checkauthsession()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L47"
+      "source_location": "L82"
+    },
+    {
+      "id": "goblix_public_app_clearsearch",
+      "label": "clearSearch()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 161,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "clearsearch()",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L233"
     },
     {
       "id": "goblix_public_app_fetchmovies",
@@ -1416,7 +1428,7 @@
       "file_type": "code",
       "norm_label": "fetchmovies()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L140"
+      "source_location": "L183"
     },
     {
       "id": "goblix_public_app_fetchserverwatchprogress",
@@ -1428,7 +1440,7 @@
       "file_type": "code",
       "norm_label": "fetchserverwatchprogress()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L75"
+      "source_location": "L111"
     },
     {
       "id": "goblix_public_app_formattime",
@@ -1440,7 +1452,7 @@
       "file_type": "code",
       "norm_label": "formattime()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L518"
+      "source_location": "L750"
     },
     {
       "id": "goblix_public_app_getlocalprogress",
@@ -1452,7 +1464,7 @@
       "file_type": "code",
       "norm_label": "getlocalprogress()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L26"
+      "source_location": "L31"
     },
     {
       "id": "goblix_public_app_gettoken",
@@ -1464,7 +1476,7 @@
       "file_type": "code",
       "norm_label": "gettoken()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L14"
+      "source_location": "L19"
     },
     {
       "id": "goblix_public_app_handlelogout",
@@ -1476,7 +1488,7 @@
       "file_type": "code",
       "norm_label": "handlelogout()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L130"
+      "source_location": "L173"
     },
     {
       "id": "goblix_public_app_handleroute",
@@ -1488,7 +1500,31 @@
       "file_type": "code",
       "norm_label": "handleroute()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L172"
+      "source_location": "L336"
+    },
+    {
+      "id": "goblix_public_app_handlesearchquery",
+      "label": "handleSearchQuery()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 161,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "handlesearchquery()",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L218"
+    },
+    {
+      "id": "goblix_public_app_loadmylist",
+      "label": "loadMyList()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 161,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "loadmylist()",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L52"
     },
     {
       "id": "goblix_public_app_navigateto",
@@ -1500,7 +1536,7 @@
       "file_type": "code",
       "norm_label": "navigateto()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L155"
+      "source_location": "L306"
     },
     {
       "id": "goblix_public_app_renderhomepage",
@@ -1512,7 +1548,7 @@
       "file_type": "code",
       "norm_label": "renderhomepage()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L213"
+      "source_location": "L377"
     },
     {
       "id": "goblix_public_app_renderloginpage",
@@ -1524,7 +1560,7 @@
       "file_type": "code",
       "norm_label": "renderloginpage()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L526"
+      "source_location": "L758"
     },
     {
       "id": "goblix_public_app_rendermoviedetailpage",
@@ -1536,7 +1572,7 @@
       "file_type": "code",
       "norm_label": "rendermoviedetailpage()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L321"
+      "source_location": "L548"
     },
     {
       "id": "goblix_public_app_renderregisterpage",
@@ -1548,7 +1584,7 @@
       "file_type": "code",
       "norm_label": "renderregisterpage()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L565"
+      "source_location": "L797"
     },
     {
       "id": "goblix_public_app_renderwatchpage",
@@ -1560,7 +1596,7 @@
       "file_type": "code",
       "norm_label": "renderwatchpage()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L393"
+      "source_location": "L626"
     },
     {
       "id": "goblix_public_app_savelocalprogress",
@@ -1572,7 +1608,7 @@
       "file_type": "code",
       "norm_label": "savelocalprogress()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L34"
+      "source_location": "L39"
     },
     {
       "id": "goblix_public_app_saveserverwatchprogress",
@@ -1584,7 +1620,19 @@
       "file_type": "code",
       "norm_label": "saveserverwatchprogress()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L89"
+      "source_location": "L125"
+    },
+    {
+      "id": "goblix_public_app_setcategoryfilter",
+      "label": "setCategoryFilter()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 161,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "setcategoryfilter()",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L241"
     },
     {
       "id": "goblix_public_app_settoken",
@@ -1596,7 +1644,19 @@
       "file_type": "code",
       "norm_label": "settoken()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L18"
+      "source_location": "L23"
+    },
+    {
+      "id": "goblix_public_app_showmylistmodal",
+      "label": "showMyListModal()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 161,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "showmylistmodal()",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L253"
     },
     {
       "id": "goblix_public_app_submitlogin",
@@ -1608,7 +1668,7 @@
       "file_type": "code",
       "norm_label": "submitlogin()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L611"
+      "source_location": "L843"
     },
     {
       "id": "goblix_public_app_submitregister",
@@ -1620,7 +1680,19 @@
       "file_type": "code",
       "norm_label": "submitregister()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L649"
+      "source_location": "L881"
+    },
+    {
+      "id": "goblix_public_app_togglemylist",
+      "label": "toggleMyList()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 161,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "togglemylist()",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L68"
     },
     {
       "id": "goblix_public_app_togglepip",
@@ -1632,7 +1704,31 @@
       "file_type": "code",
       "norm_label": "togglepip()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L508"
+      "source_location": "L740"
+    },
+    {
+      "id": "goblix_public_app_togglesearchinput",
+      "label": "toggleSearchInput()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 161,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "togglesearchinput()",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L195"
+    },
+    {
+      "id": "goblix_public_app_updatemylistbadge",
+      "label": "updateMyListBadge()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 161,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "updatemylistbadge()",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L61"
     },
     {
       "id": "goblix_public_app_updatenavbarauth",
@@ -1644,7 +1740,7 @@
       "file_type": "code",
       "norm_label": "updatenavbarauth()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L105"
+      "source_location": "L141"
     },
     {
       "id": "scripts_graphic_design_visual_engine_vec2d_add",
@@ -2199,16 +2295,16 @@
       "source_location": "L105"
     },
     {
-      "id": "ponytail_hooks_ponytail_config_normalizeconfigmode",
-      "label": "normalizeConfigMode()",
+      "id": "ponytail_hooks_ponytail_config_isshellsafe",
+      "label": "isShellSafe()",
       "_callable": true,
       "_origin": "ast",
       "community": 22,
       "community_name": "ponytail-config.js",
       "file_type": "code",
-      "norm_label": "normalizeconfigmode()",
+      "norm_label": "isshellsafe()",
       "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L26"
+      "source_location": "L50"
     },
     {
       "id": "ponytail_scripts_uninstall_removeifexists",
@@ -2221,6 +2317,18 @@
       "norm_label": "removeifexists()",
       "source_file": "ponytail/scripts/uninstall.js",
       "source_location": "L14"
+    },
+    {
+      "id": "ponytail_hooks_ponytail_config_normalizeconfigmode",
+      "label": "normalizeConfigMode()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "index.js",
+      "file_type": "code",
+      "norm_label": "normalizeconfigmode()",
+      "source_file": "ponytail/hooks/ponytail-config.js",
+      "source_location": "L26"
     },
     {
       "id": "ponytail_hooks_ponytail_config_normalizepersistedmode",
@@ -3097,18 +3205,6 @@
       "norm_label": "verify_math_gpqa()",
       "source_file": "scripts/official_runner_real.py",
       "source_location": "L415"
-    },
-    {
-      "id": "ponytail_hooks_ponytail_config_isshellsafe",
-      "label": "isShellSafe()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 42,
-      "community_name": "ponytail-activate.js",
-      "file_type": "code",
-      "norm_label": "isshellsafe()",
-      "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L50"
     },
     {
       "id": "scripts_graphic_design_visual_engine_iconbuilder24_cpu_neural",
@@ -7515,6 +7611,17 @@
       "source_location": "L7"
     },
     {
+      "id": "goblix_public_app_my_list",
+      "label": "MY_LIST",
+      "_origin": "ast",
+      "community": 161,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "my_list",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L14"
+    },
+    {
       "id": "goblix_public_app_watch_progress",
       "label": "WATCH_PROGRESS",
       "_origin": "ast",
@@ -9609,17 +9716,6 @@
       "source_location": "L13"
     },
     {
-      "id": "ponytail_hooks_ponytail_config_runtime_modes",
-      "label": "RUNTIME_MODES",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "ponytail-config.js",
-      "file_type": "code",
-      "norm_label": "runtime_modes",
-      "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L18"
-    },
-    {
       "id": "ponytail_hooks_ponytail_config_valid_modes",
       "label": "VALID_MODES",
       "_origin": "ast",
@@ -9684,6 +9780,17 @@
       "norm_label": "settingspath",
       "source_file": "ponytail/scripts/uninstall.js",
       "source_location": "L26"
+    },
+    {
+      "id": "ponytail_hooks_ponytail_config_runtime_modes",
+      "label": "RUNTIME_MODES",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "index.js",
+      "file_type": "code",
+      "norm_label": "runtime_modes",
+      "source_file": "ponytail/hooks/ponytail-config.js",
+      "source_location": "L18"
     },
     {
       "id": "ponytail_pi_extension_index",
@@ -18261,42 +18368,6 @@
   "links": [
     {
       "source": "goblix_public_app_checkauthsession",
-      "target": "goblix_public_app_gettoken",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "goblix/public/app.js",
-      "source_location": "L48",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_public_app_checkauthsession",
-      "target": "goblix_public_app_getlocalprogress",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "goblix/public/app.js",
-      "source_location": "L49",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_public_app_checkauthsession",
-      "target": "goblix_public_app_updatenavbarauth",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "goblix/public/app.js",
-      "source_location": "L53",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_public_app_checkauthsession",
       "target": "goblix_public_app_fetchserverwatchprogress",
       "relation": "calls",
       "_origin": "ast",
@@ -18304,7 +18375,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L64",
+      "source_location": "L100",
       "weight": 1.0
     },
     {
@@ -18316,7 +18387,79 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L66",
+      "source_location": "L102",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app_checkauthsession",
+      "target": "goblix_public_app_gettoken",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L83",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app_checkauthsession",
+      "target": "goblix_public_app_getlocalprogress",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L84",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app_checkauthsession",
+      "target": "goblix_public_app_loadmylist",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L85",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app_checkauthsession",
+      "target": "goblix_public_app_updatenavbarauth",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L89",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app_clearsearch",
+      "target": "goblix_public_app_togglesearchinput",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L237",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app_clearsearch",
+      "target": "goblix_public_app_renderhomepage",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L238",
       "weight": 1.0
     },
     {
@@ -18328,7 +18471,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L76",
+      "source_location": "L112",
       "weight": 1.0
     },
     {
@@ -18340,7 +18483,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L131",
+      "source_location": "L174",
       "weight": 1.0
     },
     {
@@ -18352,7 +18495,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L133",
+      "source_location": "L176",
       "weight": 1.0
     },
     {
@@ -18364,7 +18507,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L134",
+      "source_location": "L177",
       "weight": 1.0
     },
     {
@@ -18376,7 +18519,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L188",
+      "source_location": "L352",
       "weight": 1.0
     },
     {
@@ -18388,7 +18531,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L192",
+      "source_location": "L356",
       "weight": 1.0
     },
     {
@@ -18400,7 +18543,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L195",
+      "source_location": "L359",
       "weight": 1.0
     },
     {
@@ -18412,7 +18555,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L198",
+      "source_location": "L362",
       "weight": 1.0
     },
     {
@@ -18424,7 +18567,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L200",
+      "source_location": "L364",
       "weight": 1.0
     },
     {
@@ -18436,7 +18579,43 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L202",
+      "source_location": "L366",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app_handlesearchquery",
+      "target": "goblix_public_app_navigateto",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L227",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app_handlesearchquery",
+      "target": "goblix_public_app_renderhomepage",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L229",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app_loadmylist",
+      "target": "goblix_public_app_updatemylistbadge",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L58",
       "weight": 1.0
     },
     {
@@ -18448,7 +18627,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L161",
+      "source_location": "L312",
       "weight": 1.0
     },
     {
@@ -18460,7 +18639,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L254",
+      "source_location": "L447",
       "weight": 1.0
     },
     {
@@ -18472,7 +18651,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L369",
+      "source_location": "L597",
       "weight": 1.0
     },
     {
@@ -18484,7 +18663,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L478",
+      "source_location": "L711",
       "weight": 1.0
     },
     {
@@ -18496,7 +18675,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L35",
+      "source_location": "L40",
       "weight": 1.0
     },
     {
@@ -18508,7 +18687,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L90",
+      "source_location": "L126",
       "weight": 1.0
     },
     {
@@ -18520,7 +18699,31 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L91",
+      "source_location": "L127",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app_setcategoryfilter",
+      "target": "goblix_public_app_navigateto",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L247",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app_setcategoryfilter",
+      "target": "goblix_public_app_renderhomepage",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L249",
       "weight": 1.0
     },
     {
@@ -18532,7 +18735,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L631",
+      "source_location": "L863",
       "weight": 1.0
     },
     {
@@ -18544,7 +18747,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L633",
+      "source_location": "L865",
       "weight": 1.0
     },
     {
@@ -18556,7 +18759,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L634",
+      "source_location": "L866",
       "weight": 1.0
     },
     {
@@ -18568,7 +18771,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L635",
+      "source_location": "L867",
       "weight": 1.0
     },
     {
@@ -18580,7 +18783,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L670",
+      "source_location": "L902",
       "weight": 1.0
     },
     {
@@ -18592,7 +18795,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L672",
+      "source_location": "L904",
       "weight": 1.0
     },
     {
@@ -18604,7 +18807,31 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L673",
+      "source_location": "L905",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app_togglemylist",
+      "target": "goblix_public_app_updatemylistbadge",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app_togglemylist",
+      "target": "goblix_public_app_renderhomepage",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L78",
       "weight": 1.0
     },
     {
@@ -23290,29 +23517,29 @@
     },
     {
       "source": "goblix_public_app",
-      "target": "goblix_public_app_updatenavbarauth",
+      "target": "goblix_public_app_fetchserverwatchprogress",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/app.js",
-      "source_location": "L105",
+      "source_location": "L111",
       "weight": 1.0
     },
     {
       "source": "goblix_public_app",
-      "target": "goblix_public_app_handlelogout",
+      "target": "goblix_public_app_saveserverwatchprogress",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/app.js",
-      "source_location": "L130",
+      "source_location": "L125",
       "weight": 1.0
     },
     {
       "source": "goblix_public_app",
-      "target": "goblix_public_app_gettoken",
+      "target": "goblix_public_app_my_list",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -23323,35 +23550,68 @@
     },
     {
       "source": "goblix_public_app",
+      "target": "goblix_public_app_updatenavbarauth",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L141",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_handlelogout",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L173",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
       "target": "goblix_public_app_fetchmovies",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/app.js",
-      "source_location": "L140",
+      "source_location": "L183",
       "weight": 1.0
     },
     {
       "source": "goblix_public_app",
-      "target": "goblix_public_app_navigateto",
+      "target": "goblix_public_app_gettoken",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/app.js",
-      "source_location": "L155",
+      "source_location": "L19",
       "weight": 1.0
     },
     {
       "source": "goblix_public_app",
-      "target": "goblix_public_app_handleroute",
+      "target": "goblix_public_app_togglesearchinput",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/app.js",
-      "source_location": "L172",
+      "source_location": "L195",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_handlesearchquery",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L218",
       "weight": 1.0
     },
     {
@@ -23362,18 +23622,51 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/app.js",
-      "source_location": "L18",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
       "source": "goblix_public_app",
-      "target": "goblix_public_app_renderhomepage",
+      "target": "goblix_public_app_clearsearch",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/app.js",
-      "source_location": "L213",
+      "source_location": "L233",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_setcategoryfilter",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L241",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_showmylistmodal",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L253",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_navigateto",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L306",
       "weight": 1.0
     },
     {
@@ -23384,18 +23677,29 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/app.js",
-      "source_location": "L26",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
       "source": "goblix_public_app",
-      "target": "goblix_public_app_rendermoviedetailpage",
+      "target": "goblix_public_app_handleroute",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/app.js",
-      "source_location": "L321",
+      "source_location": "L336",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_renderhomepage",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L377",
       "weight": 1.0
     },
     {
@@ -23406,7 +23710,40 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/app.js",
-      "source_location": "L34",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_loadmylist",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_rendermoviedetailpage",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L548",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_updatemylistbadge",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L61",
       "weight": 1.0
     },
     {
@@ -23417,106 +23754,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/app.js",
-      "source_location": "L393",
+      "source_location": "L626",
       "weight": 1.0
     },
     {
       "source": "goblix_public_app",
-      "target": "goblix_public_app_checkauthsession",
+      "target": "goblix_public_app_togglemylist",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/app.js",
-      "source_location": "L47",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_public_app",
-      "target": "goblix_public_app_changespeed",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "goblix/public/app.js",
-      "source_location": "L492",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_public_app",
-      "target": "goblix_public_app_changequality",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "goblix/public/app.js",
-      "source_location": "L497",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_public_app",
-      "target": "goblix_public_app_togglepip",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "goblix/public/app.js",
-      "source_location": "L508",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_public_app",
-      "target": "goblix_public_app_formattime",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "goblix/public/app.js",
-      "source_location": "L518",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_public_app",
-      "target": "goblix_public_app_renderloginpage",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "goblix/public/app.js",
-      "source_location": "L526",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_public_app",
-      "target": "goblix_public_app_renderregisterpage",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "goblix/public/app.js",
-      "source_location": "L565",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_public_app",
-      "target": "goblix_public_app_submitlogin",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "goblix/public/app.js",
-      "source_location": "L611",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_public_app",
-      "target": "goblix_public_app_submitregister",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "goblix/public/app.js",
-      "source_location": "L649",
+      "source_location": "L68",
       "weight": 1.0
     },
     {
@@ -23532,13 +23781,68 @@
     },
     {
       "source": "goblix_public_app",
-      "target": "goblix_public_app_fetchserverwatchprogress",
+      "target": "goblix_public_app_changespeed",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/app.js",
-      "source_location": "L75",
+      "source_location": "L725",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_changequality",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L730",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_togglepip",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L740",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_formattime",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L750",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_renderloginpage",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L758",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_renderregisterpage",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L797",
       "weight": 1.0
     },
     {
@@ -23554,13 +23858,35 @@
     },
     {
       "source": "goblix_public_app",
-      "target": "goblix_public_app_saveserverwatchprogress",
+      "target": "goblix_public_app_checkauthsession",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/app.js",
-      "source_location": "L89",
+      "source_location": "L82",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_submitlogin",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L843",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_submitregister",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L881",
       "weight": 1.0
     },
     {
@@ -37442,5 +37768,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "25fa5c9caa5f5ff0d0c1a583151a07c2f08e3b05"
+  "built_at_commit": "2f01d5f4bd4bbc6231217c6d5cfd86e72f042aa0"
 }
