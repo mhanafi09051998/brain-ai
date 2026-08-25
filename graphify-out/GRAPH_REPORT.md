@@ -1,16 +1,16 @@
 # Graph Report - Agent_Claudia_Autonomus  (2026-08-25)
 
 ## Corpus Check
-- 245 files · ~383,328 words
+- 273 files · ~389,484 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1669 nodes · 1924 edges · 196 communities (171 shown, 25 thin omitted)
-- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 37 edges (avg confidence: 0.85)
+- 1769 nodes · 2086 edges · 206 communities (179 shown, 27 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 38 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `8afd24cc`
+- Built from commit: `e1c22124`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -151,35 +151,41 @@
 - js/app.js
 - test_subtitle_parser.js
 - N057: Goblix Metadata Invariant & Defensive Rendering
+- useGoblix
+- lib/auth.js
+- include
+- subtitles/[slug]/route.js
+- stream/[slug]/route.js
+- next.config.mjs
 
 ## God Nodes (most connected - your core abstractions)
 1. `Vec2D` - 25 edges
 2. `run_tests()` - 22 edges
-3. `ImageMatrix` - 16 edges
-4. `CubicBezier` - 15 edges
-5. `Install` - 15 edges
-6. `==========================================` - 14 edges
-7. `getPonytailInstructions()` - 13 edges
-8. `ponytailExtension()` - 13 edges
-9. `run_self_tests()` - 13 edges
-10. `run_deterministic_tests()` - 12 edges
+3. `useGoblix()` - 19 edges
+4. `ImageMatrix` - 16 edges
+5. `CubicBezier` - 15 edges
+6. `Install` - 15 edges
+7. `==========================================` - 14 edges
+8. `getPonytailInstructions()` - 13 edges
+9. `ponytailExtension()` - 13 edges
+10. `run_self_tests()` - 13 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `readMode()` --calls--> `normalizePersistedMode()`  [EXTRACTED]
-  ponytail/.opencode/plugins/ponytail.mjs → ponytail/hooks/ponytail-config.js
-- `parsePonytailCommand()` --calls--> `normalizeMode()`  [EXTRACTED]
-  ponytail/pi-extension/index.js → ponytail/hooks/ponytail-config.js
-- `getPonytailInstructions()` --calls--> `normalizePersistedMode()`  [EXTRACTED]
-  ponytail/hooks/ponytail-instructions.js → ponytail/hooks/ponytail-config.js
-- `ponytailExtension()` --calls--> `isDeactivationCommand()`  [EXTRACTED]
-  ponytail/pi-extension/index.js → ponytail/hooks/ponytail-config.js
-- `finish()` --calls--> `getDefaultMode()`  [EXTRACTED]
-  ponytail/hooks/ponytail-mode-tracker.js → ponytail/hooks/ponytail-config.js
+- `GET()` --calls--> `getMovieBySlug()`  [EXTRACTED]
+  goblix/app/api/movies/[slug]/route.js → goblix/lib/movies.js
+- `GET()` --calls--> `getAllMovies()`  [EXTRACTED]
+  goblix/app/api/movies/route.js → goblix/lib/movies.js
+- `RootLayout()` --calls--> `getAllMovies()`  [EXTRACTED]
+  goblix/app/layout.js → goblix/lib/movies.js
+- `HomePage()` --calls--> `getAllMovies()`  [EXTRACTED]
+  goblix/app/page.js → goblix/lib/movies.js
+- `generateMetadata()` --calls--> `getMovieBySlug()`  [EXTRACTED]
+  goblix/app/watch/[slug]/page.js → goblix/lib/movies.js
 
 ## Import Cycles
 - None detected.
 
-## Communities (196 total, 25 thin omitted)
+## Communities (206 total, 27 thin omitted)
 
 ### Community 0 - "run_deterministic_tests"
 Cohesion: 0.06
@@ -626,8 +632,8 @@ Cohesion: 0.11
 Nodes (4): Immutable 2D vector for visual geometry and coordinate transformations., 2D scalar cross product (z-component)., Return 90-degree counter-clockwise normal vector., Vec2D
 
 ### Community 181 - "goblix/package.json"
-Cohesion: 0.11
-Nodes (17): author, description, keywords, license, main, name, scripts, build (+9 more)
+Cohesion: 0.08
+Nodes (23): autoprefixer, dependencies, next, react, react-dom, description, devDependencies, autoprefixer (+15 more)
 
 ### Community 182 - "js/app.js"
 Cohesion: 0.13
@@ -641,22 +647,38 @@ Nodes (5): cues1, cues2, fs, vtt1, vtt2
 Cohesion: 0.50
 Nodes (3): 🔒 Disiplin Eksekusi, 🎯 Inti Pembelajaran (Engineering Invariant), N057: Goblix Metadata Invariant & Defensive Rendering
 
+### Community 196 - "useGoblix"
+Cohesion: 0.09
+Nodes (30): dynamic, GET(), dynamic, GET(), metadata, RootLayout(), dynamic, HomePage() (+22 more)
+
+### Community 197 - "lib/auth.js"
+Cohesion: 0.24
+Nodes (13): dynamic, POST(), dynamic, GET(), dynamic, POST(), generateToken(), getAuthUserFromHeader() (+5 more)
+
+### Community 198 - "include"
+Cohesion: 0.15
+Nodes (12): compilerOptions, baseUrl, paths, exclude, include, **/*.js, **/*.jsx, next-env.d.ts (+4 more)
+
+### Community 199 - "subtitles/[slug]/route.js"
+Cohesion: 0.39
+Nodes (5): dynamic, GET(), FORBIDDEN_WORDS, getSubtitlePath(), sanitizeWebVTT()
+
 ## Knowledge Gaps
-- **728 isolated node(s):** `name`, `version`, `description`, `main`, `start` (+723 more)
+- **753 isolated node(s):** `dynamic`, `dynamic`, `dynamic`, `dynamic`, `dynamic` (+748 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **25 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **27 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Color` connect `Color` to `run_self_tests`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **Why does `Vec2D` connect `Vec2D` to `CubicBezier`, `run_self_tests`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **Why does `CubicBezier` connect `CubicBezier` to `run_self_tests`?**
+  _High betweenness centrality (0.002) - this node is a cross-community bridge._
+- **Why does `run_self_tests()` connect `run_self_tests` to `IconBuilder24`, `Color`, `CubicBezier`, `Vec2D`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
-- **What connects `name`, `version`, `description` to the rest of the system?**
-  _728 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `dynamic`, `dynamic`, `dynamic` to the rest of the system?**
+  _753 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `run_deterministic_tests` be split into smaller, more focused modules?**
   _Cohesion score 0.06259426847662142 - nodes in this community are weakly interconnected._
 - **Should `Install` be split into smaller, more focused modules?**
