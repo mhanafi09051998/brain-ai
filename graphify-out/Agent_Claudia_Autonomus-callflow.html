@@ -60,7 +60,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 <div class="container">
 
 <h1>Agent_Claudia_Autonomus — Complete Call Flow &amp; Architecture Documentation</h1>
-<p class="subtitle">Generated from graphify knowledge graph: 1622 nodes, 1886 edges, 185 communities. Commit: 9720fb7</p>
+<p class="subtitle">Generated from graphify knowledge graph: 1633 nodes, 1893 edges, 189 communities. Commit: 9663c9d</p>
 
 <div class="nav">
     <a href="#overview">Architecture Overview</a>
@@ -88,7 +88,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    EXTRACT_PIPELINE_5F350230("Extraction Pipeline<br/><small>124 nodes</small>")
+    EXTRACT_PIPELINE_5F350230("Extraction Pipeline<br/><small>131 nodes</small>")
     class EXTRACT_PIPELINE_5F350230 module;
     BUILD_GRAPH_321CBB04("Graph Build<br/><small>153 nodes</small>")
     class BUILD_GRAPH_321CBB04 module;
@@ -98,7 +98,7 @@ flowchart LR
     class OUTPUTS_DOCS_ED82387C module;
     CLI_SKILLS_9964CBB8("CLI &amp; Skill Installers<br/><small>231 nodes</small>")
     class CLI_SKILLS_9964CBB8 module;
-    INGEST_CACHE_UPDATE_FF457338("Ingestion &amp; Updates<br/><small>70 nodes</small>")
+    INGEST_CACHE_UPDATE_FF457338("Ingestion &amp; Updates<br/><small>73 nodes</small>")
     class INGEST_CACHE_UPDATE_FF457338 module;
     SERVE_API_35EC8E86("Serving API<br/><small>59 nodes</small>")
     class SERVE_API_35EC8E86 module;
@@ -116,7 +116,7 @@ flowchart LR
     class SECTION_14_59FB35FD module;
     NEURON_N046_ALGORITHMIC_EXECUTION_ENGINES_SMART_186F44EA("Neuron N046: Algorithmic Execution Engines &amp; Smart Order Routing<br/><small>19 nodes</small>")
     class NEURON_N046_ALGORITHMIC_EXECUTION_ENGINES_SMART_186F44EA module;
-    OTHER_D0941E68("Other<br/><small>525 nodes</small>")
+    OTHER_D0941E68("Other<br/><small>526 nodes</small>")
     class OTHER_D0941E68 module;
     TESTS_FIXTURES_B84B1DCC -->|calls x27| OTHER_D0941E68
     TESTS_FIXTURES_B84B1DCC -->|calls x11| OUTPUTS_DOCS_ED82387C
@@ -146,7 +146,7 @@ flowchart LR
     <h4>Architecture Layers</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>Layer</th><th>Nodes</th><th>Communities</th></tr>
-      <tr><td>Extraction Pipeline</td><td>124</td><td><code>8, 11, 25, 26, 29, 40, 45, 84, 96, 97</code></td></tr><tr><td>Graph Build</td><td>153</td><td><code>0, 4, 28, 129, 36, 62, 67, 124, 125</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>111</td><td><code>146, 6, 14, 31, 46, 68</code></td></tr><tr><td>Outputs &amp; Docs</td><td>74</td><td><code>3, 43, 133, 32, 181</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>231</td><td><code>1, 2, 5, 22, 39, 49, 53, 54, 56, 69, 70, 71, 74, 75, 76, 77, 82, 86, 91, 116, 118, 119, 120, 121, 122, 123</code></td></tr><tr><td>Ingestion &amp; Updates</td><td>70</td><td><code>178, 19, 168, 73, 114, 177, 88, 135, 136, 138</code></td></tr><tr><td>Serving API</td><td>59</td><td><code>182, 38, 95, 173</code></td></tr><tr><td>Security &amp; Global Graph</td><td>46</td><td><code>9, 128, 52</code></td></tr><tr><td>Tests &amp; Fixtures</td><td>106</td><td><code>7, 23, 18, 48, 162, 131, 58, 139, 174</code></td></tr><tr><td>app.js</td><td>39</td><td><code>161</code></td></tr><tr><td>Neuron N056: Image Processing, Computer Vision &amp; AI Visual Generation Mastery</td><td>23</td><td><code>47</code></td></tr><tr><td>Neuron N044: Statistical Arbitrage, Pairs Trading &amp; Cointegration</td><td>22</td><td><code>10</code></td></tr><tr><td>==========================================</td><td>20</td><td><code>12</code></td></tr><tr><td>Neuron N046: Algorithmic Execution Engines &amp; Smart Order Routing</td><td>19</td><td><code>13</code></td></tr><tr><td>Other</td><td>525</td><td><code>15, 16, 17, 20, 21, 24, 27, 87, 169, 30, 33, 34, 35, 37, 130, 41, 179, 42, 44, 132, 170, 50, 51, 55, 57, 59, 60, 61, 63, 64, 65, 66, 134, 172, 72, 171, 183, 78, 79, 80, 81, 83, 85, 89, 90, 100, 101, 102, 103, 137, 92, 93, 94, 98, 99, 104, 105, 106, 107, 108, 109, 110, 111, 112, 176, 113, 115, 117, 126, 127, 140, 141, 142, 143, 144, 145, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 163, 164, 165, 166, 167, 175, 180, 184</code></td></tr>
+      <tr><td>Extraction Pipeline</td><td>131</td><td><code>8, 11, 25, 26, 29, 40, 45, 185, 84, 96, 97</code></td></tr><tr><td>Graph Build</td><td>153</td><td><code>0, 4, 28, 129, 36, 62, 67, 124, 125</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>111</td><td><code>146, 6, 14, 31, 46, 68</code></td></tr><tr><td>Outputs &amp; Docs</td><td>74</td><td><code>3, 43, 133, 32, 181</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>231</td><td><code>1, 2, 5, 22, 39, 49, 53, 54, 56, 69, 70, 71, 74, 75, 76, 77, 82, 86, 91, 116, 118, 119, 120, 121, 122, 123</code></td></tr><tr><td>Ingestion &amp; Updates</td><td>73</td><td><code>178, 19, 168, 73, 114, 177, 88, 135, 136, 138, 186, 188</code></td></tr><tr><td>Serving API</td><td>59</td><td><code>182, 38, 95, 173</code></td></tr><tr><td>Security &amp; Global Graph</td><td>46</td><td><code>9, 128, 52</code></td></tr><tr><td>Tests &amp; Fixtures</td><td>106</td><td><code>7, 23, 18, 48, 162, 131, 58, 139, 174</code></td></tr><tr><td>app.js</td><td>39</td><td><code>161</code></td></tr><tr><td>Neuron N056: Image Processing, Computer Vision &amp; AI Visual Generation Mastery</td><td>23</td><td><code>47</code></td></tr><tr><td>Neuron N044: Statistical Arbitrage, Pairs Trading &amp; Cointegration</td><td>22</td><td><code>10</code></td></tr><tr><td>==========================================</td><td>20</td><td><code>12</code></td></tr><tr><td>Neuron N046: Algorithmic Execution Engines &amp; Smart Order Routing</td><td>19</td><td><code>13</code></td></tr><tr><td>Other</td><td>526</td><td><code>15, 16, 17, 20, 21, 24, 27, 87, 169, 30, 33, 34, 35, 37, 130, 41, 179, 42, 44, 132, 170, 50, 51, 55, 57, 59, 60, 61, 63, 64, 65, 66, 134, 172, 72, 171, 183, 78, 79, 80, 81, 83, 85, 89, 90, 100, 101, 102, 103, 137, 92, 93, 94, 98, 99, 104, 105, 106, 107, 108, 109, 110, 111, 112, 176, 113, 115, 117, 126, 127, 140, 141, 142, 143, 144, 145, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 163, 164, 165, 166, 167, 175, 180, 184, 187</code></td></tr>
     </table>
   </div>
   <div class="card">
@@ -158,7 +158,7 @@ flowchart LR
   <div class="card">
     <h4>Graph Report Highlights</h4>
     <ul>
-      <li>1622 nodes · 1886 edges · 185 communities (158 shown, 27 thin omitted)</li>
+      <li>1633 nodes · 1893 edges · 189 communities (162 shown, 27 thin omitted)</li>
       <li>Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 36 edges (avg confidence: 0.85)</li>
       <li>Token cost: 0 input · 0 output</li>
       <li>1. `Vec2D` - 25 edges</li>
@@ -170,12 +170,12 @@ flowchart LR
 <hr>
 <!-- ====== 2. Extraction Pipeline ====== -->
 <h2 id="extract-pipeline">2. Extraction Pipeline</h2>
-<p>Extraction Pipeline groups implementation around learning, neurons, python, memory, mostly in learning/neurons/N035_event_driven_streaming_cqrs.md, learning/neurons/N034_runtime_profiler_memory_oracle.md, learning/neurons/N029_modern_systems_rust_go.md. This section covers 124 nodes and 121 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Extraction Pipeline groups implementation around learning, neurons, python, memory, mostly in learning/neurons/N035_event_driven_streaming_cqrs.md, learning/neurons/N034_runtime_profiler_memory_oracle.md, learning/neurons/N029_modern_systems_rust_go.md. This section covers 131 nodes and 127 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Extraction Pipeline (124 nodes, 121 edges)
+    %% Section: Extraction Pipeline (131 nodes, 127 edges)
     subgraph extract_pipeline_scripts_official_runner_real_py_07127ff5["scripts/official_runner_real.py"]
         scripts_official_runner_real_eval_single_task_f1c884df("eval_single_task()<br/><small>scripts/official_runner_real.py</small>")
         scripts_official_runner_real_query_llm_4b97cef4("query_llm()<br/><small>scripts/official_runner_real.py</small>")
@@ -187,20 +187,18 @@ flowchart LR
         scripts_official_runner_real_run_safe_python_47e4350d("run_safe_python()<br/><small>scripts/official_runner_real.py</small>")
         scripts_official_runner_real_10db563f("official_runner_real.py")
     end
+    subgraph extract_pipeline_scripts_test_subtitle_parser_js_3027be3b["scripts/test_subtitle_parser.js"]
+        scripts_test_subtitle_parser_cues1_5c8e3ef0("cues1<br/><small>scripts/test_subtitle_parser.js</small>")
+        scripts_test_subtitle_parser_cues2_2296e9dd("cues2<br/><small>scripts/test_subtitle_parser.js</small>")
+        scripts_test_subtitle_parser_fs_f654f5e3("fs<br/><small>scripts/test_subtitle_parser.js</small>")
+        scripts_test_subtitle_parser_parsewebvtt_804a0006("parseWebVTT()<br/><small>scripts/test_subtitle_parser.js</small>")
+        scripts_test_subtitle_parser_8825fd71("test_subtitle_parser.js")
+        scripts_test_subtitle_parser_vtt1_9d9e9293("vtt1<br/><small>scripts/test_subtitle_parser.js</small>")
+        scripts_test_subtitle_parser_vtt2_aed70fde("vtt2<br/><small>scripts/test_subtitle_parser.js</small>")
+    end
     subgraph extract_pipeline_learning_neurons_N013_deep_stor_e6025173["learning/neurons/N013_deep_storage_and_distributed_db.md"]
         learning_neurons_n013_deep_storage_and_distribut_a823924d("1. Storage Engine Internals: LSM-Tree v...<br/><small>learning/neurons/N013_deep_storage_and_distributed_db.md</small>")
         learning_neurons_n013_deep_storage_and_distribut_3bb8d7cd("2. Distributed Transactions &amp; Vector In...<br/><small>learning/neurons/N013_deep_storage_and_distributed_db.md</small>")
-        learning_neurons_n013_deep_storage_and_distribut_b5a349aa("and distributed db.md<br/><small>learning/neurons/N013_deep_storage_and_distributed_db.md</small>")
-    end
-    subgraph extract_pipeline_learning_neurons_N015_compiler_ca449845["learning/neurons/N015_compiler_ast_and_system_profiling.md"]
-        learning_neurons_n015_compiler_ast_and_system_pr_aaceda44("1. Abstract Syntax Tree (AST) &amp; Code Tr...<br/><small>learning/neurons/N015_compiler_ast_and_system_profiling.md</small>")
-        learning_neurons_n015_compiler_ast_and_system_pr_b3c39120("2. Production Profiling &amp; Post-Mortem D...<br/><small>learning/neurons/N015_compiler_ast_and_system_profiling.md</small>")
-        learning_neurons_n015_compiler_ast_and_system_pr_da5e0410("and system profiling.md<br/><small>learning/neurons/N015_compiler_ast_and_system_profiling.md</small>")
-    end
-    subgraph extract_pipeline_learning_neurons_N018_repomap_s_15401409["learning/neurons/N018_repomap_swebench.md"]
-        learning_neurons_n018_repomap_swebench_682c15b4("N018_repomap_swebench.md")
-        learning_neurons_n018_repomap_swebench_neuron_n0_f8367a16("Neuron N018: RepoMap AST Compression &amp;...<br/><small>learning/neurons/N018_repomap_swebench.md</small>")
-        learning_neurons_n018_repomap_swebench_domain_ka_68b7fd2c("📌 Domain &amp; Karakteristik<br/><small>learning/neurons/N018_repomap_swebench.md</small>")
     end
     scripts_official_runner_real_eval_single_task_f1c884df -->|calls| scripts_official_runner_real_query_llm_4b97cef4
     scripts_official_runner_real_eval_single_task_f1c884df -->|calls| scripts_official_runner_real_verify_math_gpqa_6ab5771b
@@ -208,7 +206,7 @@ flowchart LR
     scripts_official_runner_real_query_llm_4b97cef4 -->|calls| scripts_official_runner_real_get_cache_key_d004d64a
     scripts_official_runner_real_run_parallel_subage_2f19b7d6 -->|calls| scripts_official_runner_real_init_db_7ae4b421
     scripts_official_runner_real_verify_math_gpqa_6ab5771b -->|calls| scripts_official_runner_real_run_safe_python_47e4350d
-    %% Omitted for readability: 106 nodes, 0 edges
+    %% Omitted for readability: 113 nodes, 0 edges
     class scripts_official_runner_real_eval_single_task_f1c884df function;
     class scripts_official_runner_real_query_llm_4b97cef4 function;
     class scripts_official_runner_real_run_parallel_subage_2f19b7d6 function;
@@ -218,15 +216,15 @@ flowchart LR
     class scripts_official_runner_real_init_db_7ae4b421 function;
     class scripts_official_runner_real_run_safe_python_47e4350d function;
     class scripts_official_runner_real_10db563f module;
+    class scripts_test_subtitle_parser_cues1_5c8e3ef0 test;
+    class scripts_test_subtitle_parser_cues2_2296e9dd test;
+    class scripts_test_subtitle_parser_fs_f654f5e3 test;
+    class scripts_test_subtitle_parser_parsewebvtt_804a0006 test;
+    class scripts_test_subtitle_parser_8825fd71 test;
+    class scripts_test_subtitle_parser_vtt1_9d9e9293 test;
+    class scripts_test_subtitle_parser_vtt2_aed70fde test;
     class learning_neurons_n013_deep_storage_and_distribut_a823924d concept;
     class learning_neurons_n013_deep_storage_and_distribut_3bb8d7cd concept;
-    class learning_neurons_n013_deep_storage_and_distribut_b5a349aa concept;
-    class learning_neurons_n015_compiler_ast_and_system_pr_aaceda44 concept;
-    class learning_neurons_n015_compiler_ast_and_system_pr_b3c39120 concept;
-    class learning_neurons_n015_compiler_ast_and_system_pr_da5e0410 concept;
-    class learning_neurons_n018_repomap_swebench_682c15b4 concept;
-    class learning_neurons_n018_repomap_swebench_neuron_n0_f8367a16 concept;
-    class learning_neurons_n018_repomap_swebench_domain_ka_68b7fd2c concept;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -502,12 +500,12 @@ flowchart LR
 <tr><td><code>learning/neurons/N040_meta_cognitive_self_reflection.md</code></td><td>16 nodes</td></tr>
 <tr><td><code>scripts/official_runner_real.py</code></td><td>12 nodes</td></tr>
 <tr><td><code>learning/neurons/N026_vision_dom_spatial_reasoning.md</code></td><td>10 nodes</td></tr>
-<tr><td><code>learning/neurons/N018_repomap_swebench.md</code></td><td>4 nodes</td></tr>
+<tr><td><code>scripts/test_subtitle_parser.js</code></td><td>7 nodes</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x111, calls x6, explains x3, indirect call x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x117, calls x6, explains x3, indirect call x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -1921,12 +1919,12 @@ flowchart LR
 
 <!-- ====== 7. Ingestion & Updates ====== -->
 <h2 id="ingest-cache-update">7. Ingestion &amp; Updates</h2>
-<p>Ingestion &amp; Updates groups implementation around scripts, download, learning, neurons, mostly in learning/neurons/N039_webrtc_av_dsp_streaming.md, scripts/download_movie_and_subtitle.py, goblix/public/manifest.json. This section covers 70 nodes and 71 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Ingestion &amp; Updates groups implementation around scripts, download, learning, neurons, mostly in learning/neurons/N039_webrtc_av_dsp_streaming.md, scripts/download_movie_and_subtitle.py, goblix/public/manifest.json. This section covers 73 nodes and 72 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Ingestion &amp; Updates (70 nodes, 71 edges)
+    %% Section: Ingestion &amp; Updates (73 nodes, 72 edges)
     subgraph ingest_cache_update_scripts_download_movie_and_s_0a99f8eb["scripts/download_movie_and_subtitle.py"]
         scripts_download_movie_and_subtitle_main_7ca68d94("main()<br/><small>scripts/download_movie_and_subtitle.py</small>")
         scripts_download_movie_and_subtitle_download_and_64dfcde4("and process subtitle()<br/><small>scripts/download_movie_and_subtitle.py</small>")
@@ -1967,7 +1965,7 @@ flowchart LR
     scripts_fetch_imdb_metadata_update_movies_databa_41ee8484 -->|calls| scripts_fetch_imdb_metadata_enrich_movie_metadat_90174307
     scripts_ingest_frontier_knowledge_build_all_fron_ff8b9479 -->|calls| scripts_ingest_frontier_knowledge_ensure_dirs_f31a27a1
     scripts_download_movie_and_subtitle_b6c76bb6 -->|imports| scripts_fetch_imdb_metadata_enrich_movie_metadat_90174307
-    %% Omitted for readability: 52 nodes, 0 edges
+    %% Omitted for readability: 55 nodes, 0 edges
     class scripts_download_movie_and_subtitle_main_7ca68d94 function;
     class scripts_download_movie_and_subtitle_download_and_64dfcde4 function;
     class scripts_download_movie_and_subtitle_b6c76bb6 module;
@@ -2266,7 +2264,7 @@ flowchart LR
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x50, calls x11, explains x8, references x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x51, calls x11, explains x8, references x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -4749,12 +4747,12 @@ flowchart LR
 
 <!-- ====== 16. Other ====== -->
 <h2 id="other">16. Other</h2>
-<p>Other groups implementation around learning, neurons, scripts, enginepy, mostly in scripts/graphic_design_visual_engine.py, scripts/image_vision_nucleus_engine.py, learning/neurons/N051_system_architecture_devops_mastery.md. This section covers 525 nodes and 476 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Other groups implementation around learning, neurons, scripts, enginepy, mostly in scripts/graphic_design_visual_engine.py, scripts/image_vision_nucleus_engine.py, learning/neurons/N051_system_architecture_devops_mastery.md. This section covers 526 nodes and 476 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Other (525 nodes, 476 edges)
+    %% Section: Other (526 nodes, 476 edges)
     subgraph other_scripts_image_vision_nucleus_engine_py_c18108d9["scripts/image_vision_nucleus_engine.py"]
         scripts_image_vision_nucleus_engine_colorspacema_f993f2f8("ColorSpaceMath<br/><small>scripts/image_vision_nucleus_engine.py</small>")
         scripts_image_vision_nucleus_engine_colorspacema_2830666e("rgb_to_grayscale()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
@@ -4791,7 +4789,7 @@ flowchart LR
     scripts_image_vision_nucleus_engine_generativegr_7abd7f76 -->|method| scripts_image_vision_nucleus_engine_generativegr_739f3566
     scripts_strategic_swot_nucleus_engine_strategics_91c3d769 -->|method| scripts_strategic_swot_nucleus_engine_strategics_a6771422
     scripts_strategic_swot_nucleus_engine_strategics_91c3d769 -->|method| scripts_strategic_swot_nucleus_engine_strategics_2819dd00
-    %% Omitted for readability: 507 nodes, 0 edges
+    %% Omitted for readability: 508 nodes, 0 edges
     class scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 klass;
     class scripts_image_vision_nucleus_engine_colorspacema_2830666e function;
     class scripts_image_vision_nucleus_engine_colorspacema_3515cadd function;
@@ -5101,17 +5099,17 @@ flowchart LR
   <div class="card">
     <h4>Graph</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>Nodes</td><td>1622</td></tr>
-      <tr><td>Edges</td><td>1886</td></tr>
+      <tr><td>Nodes</td><td>1633</td></tr>
+      <tr><td>Edges</td><td>1893</td></tr>
       <tr><td>Hyperedges</td><td>0</td></tr>
-      <tr><td>Communities</td><td>185</td></tr>
+      <tr><td>Communities</td><td>189</td></tr>
       <tr><td>Documented Sections</td><td>15</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Edge Confidence</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>EXTRACTED</td><td>1850</td></tr>
+      <tr><td>EXTRACTED</td><td>1857</td></tr>
       <tr><td>INFERRED</td><td>36</td></tr>
       <tr><td>AMBIGUOUS</td><td>0</td></tr>
     </table>
@@ -5120,7 +5118,7 @@ flowchart LR
 
 <div style="text-align:center; padding:40px 0; color: var(--muted); font-size:0.9rem;">
   <p>Agent_Claudia_Autonomus — Architecture Documentation</p>
-  <p>Generated: 2026-08-25 09:22 UTC · graphify callflow-html</p>
+  <p>Generated: 2026-08-25 09:28 UTC · graphify callflow-html</p>
 </div>
 
 </div><!-- .container -->
