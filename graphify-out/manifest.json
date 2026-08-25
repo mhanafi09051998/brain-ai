@@ -966,9 +966,9 @@
     "semantic_hash": "ab2fa9fc2466e74e8a664f4d9c5a6bd5"
   },
   "scripts/claudia_live_watchdog.py": {
-    "mtime": 1787628397.0688715,
-    "seen": 1787628408.5545444,
-    "ast_hash": "ccba1a488787e5a5a78da682eeafc34e",
+    "mtime": 1787631168.2712371,
+    "seen": 1787631179.4378123,
+    "ast_hash": "340550d476c199e79dec485f36700ba5",
     "semantic_hash": ""
   },
   "scripts/send_telegram_gold_report.py": {
@@ -1227,6 +1227,42 @@
     "mtime": 1787628514.7667148,
     "seen": 1787628742.4045672,
     "ast_hash": "cc1ece7c0fb9691dc1693edf23bc02dc",
+    "semantic_hash": ""
+  },
+  "patch_fvg_local.py": {
+    "mtime": 1787628782.674218,
+    "seen": 1787631179.4378123,
+    "ast_hash": "bda62a11c6f8d18d17b3b6fb6a1e6d95",
+    "semantic_hash": ""
+  },
+  "patch_fvg_unconditional.py": {
+    "mtime": 1787628767.0690594,
+    "seen": 1787631179.4378123,
+    "ast_hash": "98bd848f92f3104cd8bd4de6ae523d36",
+    "semantic_hash": ""
+  },
+  "patch_limit_local.py": {
+    "mtime": 1787631168.212093,
+    "seen": 1787631179.4378123,
+    "ast_hash": "8eee67a523f16d4672125dd88e1121f3",
+    "semantic_hash": ""
+  },
+  "patch_limit_order.py": {
+    "mtime": 1787631153.5490558,
+    "seen": 1787631179.4378123,
+    "ast_hash": "936af732b248c525118dcd5f22c399bc",
+    "semantic_hash": ""
+  },
+  "temp.py": {
+    "mtime": 1787628942.4485574,
+    "seen": 1787631179.4378123,
+    "ast_hash": "48adc89a83d3723cab207138fd667a40",
+    "semantic_hash": ""
+  },
+  "test_send.py": {
+    "mtime": 1787628856.4692523,
+    "seen": 1787631179.4378123,
+    "ast_hash": "174ff7bf4e18f92d22f2860bac902d67",
     "semantic_hash": ""
   }
 }
