@@ -1,8 +1,8 @@
 {
   "version": "1.2.0",
-  "updated_at": "2026-08-25 13:11:01",
-  "total_neurons": 56,
-  "total_synapses": 221,
+  "updated_at": "2026-08-25 16:42:54",
+  "total_neurons": 57,
+  "total_synapses": 224,
   "mesh_density": 0.0679,
   "neurons": [
     {
@@ -707,6 +707,16 @@
         "N054"
       ],
       "synapse_count": 12
+    },
+    {
+      "id": "N057",
+      "label": "Neuron N057: Goblix Metadata Invariant & Defensive Rendering",
+      "file": "N057_goblix_metadata_invariant_defens.md",
+      "connections": [
+        "N001",
+        "N004",
+        "N007"
+      ]
     }
   ]
 }

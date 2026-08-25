@@ -182,6 +182,7 @@
   "180": "get_backdrops.py",
   "181": "goblix/package.json",
   "182": "js/app.js",
+  "183": "PaletteGenerator",
   "184": "get_topgun_backdrops.py",
   "185": "test_subtitle_parser.js",
   "186": "download_yts_sub.py",
@@ -190,5 +191,6 @@
   "189": "debug_subs.py",
   "190": "download_all_full_subs.py",
   "191": "download_all_subs.py",
-  "192": "print_sub_links.py"
+  "192": "print_sub_links.py",
+  "193": "N057: Goblix Metadata Invariant & Defensive Rendering"
 }

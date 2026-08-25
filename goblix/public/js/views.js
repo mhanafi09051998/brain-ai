@@ -16,19 +16,21 @@ export function renderHomePage() {
   const hasResume = progressInfo && progressInfo.currentTime > 10;
   const isFeaturedInList = state.myList.includes(featured.id) || state.myList.includes(featured.slug);
 
-  let filteredMovies = state.moviesData;
+  let filteredMovies = Array.isArray(state.moviesData) ? state.moviesData : [];
   if (state.activeCategory !== 'all') {
     filteredMovies = filteredMovies.filter(m => 
-      m.genres && m.genres.some(g => g.toLowerCase().includes(state.activeCategory.toLowerCase()))
+      Array.isArray(m.genres) && m.genres.some(g => (g || '').toLowerCase().includes(state.activeCategory.toLowerCase()))
     );
   }
   if (state.searchQuery) {
+    const q = (state.searchQuery || '').toLowerCase();
     filteredMovies = filteredMovies.filter(m => {
-      const q = state.searchQuery;
-      return m.title.toLowerCase().includes(q) ||
-        (m.genres && m.genres.some(g => g.toLowerCase().includes(q))) ||
-        (m.cast && m.cast.some(c => c.toLowerCase().includes(q))) ||
-        (m.director && m.director.toLowerCase().includes(q));
+      const titleMatch = (m.title || '').toLowerCase().includes(q);
+      const genreMatch = Array.isArray(m.genres) && m.genres.some(g => (g || '').toLowerCase().includes(q));
+      const castMatch = Array.isArray(m.cast) && m.cast.some(c => (c || '').toLowerCase().includes(q));
+      const directorMatch = (m.director || '').toLowerCase().includes(q);
+      const synopsisMatch = (m.synopsis || '').toLowerCase().includes(q);
+      return titleMatch || genreMatch || castMatch || directorMatch || synopsisMatch;
     });
   }
 
