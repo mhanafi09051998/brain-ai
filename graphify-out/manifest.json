@@ -1570,5 +1570,11 @@
     "seen": 1787650336.6473446,
     "ast_hash": "6be36191df257b0412d6043cdb450e20",
     "semantic_hash": ""
+  },
+  "goblix/package.json": {
+    "mtime": 1787650476.4518833,
+    "seen": 1787650506.5660834,
+    "ast_hash": "836fc25d5ce70ba7ba56f059f1561b7e",
+    "semantic_hash": ""
   }
 }

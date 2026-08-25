@@ -1,16 +1,16 @@
 # Graph Report - Agent_Claudia_Autonomus  (2026-08-25)
 
 ## Corpus Check
-- 239 files · ~235,737 words
+- 240 files · ~235,801 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1640 nodes · 1896 edges · 192 communities (166 shown, 26 thin omitted)
+- 1658 nodes · 1913 edges · 192 communities (167 shown, 25 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 36 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `4dbace91`
+- Built from commit: `9b876423`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -18,7 +18,7 @@
 - run_deterministic_tests
 - Install
 - N022_multi_agent_consensus.md
-- Vec2D
+- CubicBezier
 - ponytail/package.json
 - Install
 - MultiHopEngine
@@ -147,8 +147,8 @@
 - sw.js
 - process_case
 - download_movie_and_subtitle.py
-- .from_lab
-- .build_svg
+- Vec2D
+- goblix/package.json
 - js/app.js
 - test_subtitle_parser.js
 
@@ -179,7 +179,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (192 total, 26 thin omitted)
+## Communities (192 total, 25 thin omitted)
 
 ### Community 0 - "run_deterministic_tests"
 Cohesion: 0.06
@@ -193,9 +193,9 @@ Nodes (42): Ponytail, lazy senior dev mode, Antes / después, Antigravity CLI, C
 Cohesion: 0.05
 Nodes (35): Core Concept, Neuron N001: Executive Decision Making, Synaptic Links, Triggers & Heuristics, Core Concept, Neuron N004: Ponytail Minimality Ladder, Synaptic Links, Core Concept (+27 more)
 
-### Community 3 - "Vec2D"
-Cohesion: 0.06
-Nodes (16): CubicBezier, Immutable 2D vector for visual geometry and coordinate transformations., 2D scalar cross product (z-component)., Return 90-degree counter-clockwise normal vector., Parametric Cubic Bézier Curve: B(t) = (1-t)^3 P0 + 3(1-t)^2 t P1 + 3(1-t) t^2…, Evaluate point at parameter t in [0, 1]., Evaluate first derivative B'(t) at parameter t., Evaluate second derivative B''(t) at parameter t. (+8 more)
+### Community 3 - "CubicBezier"
+Cohesion: 0.11
+Nodes (12): CubicBezier, Parametric Cubic Bézier Curve: B(t) = (1-t)^3 P0 + 3(1-t)^2 t P1 + 3(1-t) t^2…, Evaluate point at parameter t in [0, 1]., Evaluate first derivative B'(t) at parameter t., Evaluate second derivative B''(t) at parameter t., Unit tangent vector at parameter t., Unit normal vector perpendicular to tangent at parameter t., Calculate signed curvature kappa(t) = (x' y'' - y' x'') / (x'^2 + y'^2)^(3/2). (+4 more)
 
 ### Community 4 - "ponytail/package.json"
 Cohesion: 0.05
@@ -328,8 +328,8 @@ Cohesion: 0.13
 Nodes (14): 🏗️ 1. Perpetual Swap Mechanics & Funding Rate Arbitrage, 🌊 2. Liquidation Heatmap Clusters & Cascade Dynamics, 📊 3. Open Interest (OI) vs. Price Action Divergence Matrix, ⚖️ 4. Long/Short Ratio & Positioning Sentiment Skew, ⏳ 5. Cash-and-Carry Basis Trading (Term Structure & Calendar Futures), A. Formula Deterministik Harga Likuidasi ($P_{\text{liq}}$), A. Formula Valuasi Basis & Imbal Hasil Tahunan, A. Metrik & Rasio Positioning (+6 more)
 
 ### Community 34 - "Color"
-Cohesion: 0.16
-Nodes (7): Color, Return uppercase hex string., Convert sRGB to HSL (H in [0, 360), S in [0, 1], L in [0, 1])., Calculate relative luminance according to WCAG 2.1/2.2 standard. Y = 0.2126 *…, Calculate WCAG contrast ratio between this color and another color. Formula:…, Evaluate WCAG 2.2 accessibility compliance against a background color. - AA…, Precision color representation with sRGB, CIE XYZ, CIELAB, CIELCh, and HSL…
+Cohesion: 0.10
+Nodes (12): Color, Construct Color from CIELCh (Cylindrical CIELAB)., Return uppercase hex string., Convert sRGB to HSL (H in [0, 360), S in [0, 1], L in [0, 1])., Convert sRGB to CIELAB (L*, a*, b*)., Convert sRGB to CIELCh (L*, C*, h_deg)., Calculate relative luminance according to WCAG 2.1/2.2 standard. Y = 0.2126 *…, Calculate WCAG contrast ratio between this color and another color. Formula:… (+4 more)
 
 ### Community 35 - "Ponytail, lazy senior dev mode"
 Cohesion: 0.14
@@ -340,8 +340,8 @@ Cohesion: 0.14
 Nodes (13): 1. Edge Ingress Caddyfile Blueprint (Caddy 2.8+ HTTP/3 + Security Headers + Passive Healthcheck), 1. Modern Edge Ingress & Transport Layer (Caddy 2.8+ HTTP/3 QUIC & TLS 1.3 0-RTT), 2. Multi-Stage Distroless Dockerfile Blueprint, 2. Multi-Stage Distroless Hardening & Minimal Attack Surface, 3. PM2 Zero-Downtime Cluster Blueprint (`ecosystem.config.js`), 3. Zero-Downtime Cluster Supervision & Process Lifecycle (PM2 Orchestration), 4. Linux Kernel Namespaces & cgroups v2 Sandboxing, 5. Autonomous Edge SRE & High-Availability Playbook (+5 more)
 
 ### Community 37 - "PaletteGenerator"
-Cohesion: 0.19
-Nodes (8): PaletteGenerator, Harmonious color palette generator supporting classical color wheel (HSL) and…, Generate a monochromatic ramp varying in Lightness., Generate analogous colors clustered around base hue., Generate triadic 3-color harmony (120° offsets)., Generate split-complementary harmony (base + 2 colors flanking complement)., Generate tetradic rectangular 4-color harmony., Construct Color from HSL (H in [0, 360), S in [0, 1], L in [0, 1]).
+Cohesion: 0.16
+Nodes (9): PaletteGenerator, Harmonious color palette generator supporting classical color wheel (HSL) and…, Generate a monochromatic ramp varying in Lightness., Generate analogous colors clustered around base hue., Generate complementary color pair (180° offset)., Generate split-complementary harmony (base + 2 colors flanking complement)., Generate tetradic rectangular 4-color harmony., Generate multi-stop gradient scale interpolated in CIELAB space. (+1 more)
 
 ### Community 38 - "Neuron N031: Modern Data Architecture & Hybrid Search (PostgreSQL 17, pgvector HNSW, Drizzle ORM, SQLite WAL)"
 Cohesion: 0.15
@@ -594,8 +594,8 @@ Cohesion: 0.11
 Nodes (33): checkAuthSession(), clearSearch(), fetchMovies(), fetchServerWatchProgress(), formatTime(), getLocalProgress(), getToken(), handleLogout() (+25 more)
 
 ### Community 162 - "run_self_tests"
-Cohesion: 0.22
-Nodes (6): GenerativePoster, Generate multi-stop gradient scale interpolated in CIELAB space., Parse hex color (#RGB, #RGBA, #RRGGBB, #RRGGBBAA)., Algorithmic generative poster generator synthesizing: - Parametric Lissajous &…, Execute 100% deterministic test suite covering color math, WCAG contrast,…, run_self_tests()
+Cohesion: 0.20
+Nodes (7): GenerativePoster, Generate triadic 3-color harmony (120° offsets)., Parse hex color (#RGB, #RGBA, #RRGGBB, #RRGGBBAA)., Algorithmic generative poster generator synthesizing: - Parametric Lissajous &…, Generate full SVG graphic poster with mathematical curves and layered depth., Execute 100% deterministic test suite covering color math, WCAG contrast,…, run_self_tests()
 
 ### Community 168 - "manifest.json"
 Cohesion: 0.22
@@ -625,9 +625,13 @@ Nodes (3): process_case(), Any, train_and_evaluate()
 Cohesion: 0.17
 Nodes (16): download_and_process_subtitle(), download_file(), main(), Downloads or saves subtitle, sanitizes it, and converts to WebVTT., Integrates movie into Goblix catalog database., Downloads large media file in chunks with a live progress bar., Converts SubRip (.srt) subtitle format into WebVTT format., Sanitizes subtitle text, purging any gambling or promo spam. (+8 more)
 
-### Community 179 - ".from_lab"
-Cohesion: 0.20
-Nodes (5): Construct Color from CIELCh (Cylindrical CIELAB)., Convert sRGB to CIELAB (L*, a*, b*)., Convert sRGB to CIELCh (L*, C*, h_deg)., Perceptually smooth linear interpolation in CIELAB space., Construct Color from CIELAB (L* in [0, 100], a*, b* in [-128, 128]).
+### Community 179 - "Vec2D"
+Cohesion: 0.11
+Nodes (4): Immutable 2D vector for visual geometry and coordinate transformations., 2D scalar cross product (z-component)., Return 90-degree counter-clockwise normal vector., Vec2D
+
+### Community 181 - "goblix/package.json"
+Cohesion: 0.11
+Nodes (17): author, description, keywords, license, main, name, scripts, build (+9 more)
 
 ### Community 182 - "js/app.js"
 Cohesion: 0.13
@@ -638,21 +642,21 @@ Cohesion: 0.29
 Nodes (5): cues1, cues2, fs, vtt1, vtt2
 
 ## Knowledge Gaps
-- **711 isolated node(s):** `MOVIES_DATA`, `WATCH_PROGRESS`, `MY_LIST`, `SUBTITLE_CUES`, `name` (+706 more)
+- **726 isolated node(s):** `name`, `version`, `description`, `main`, `start` (+721 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **26 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **25 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Color` connect `Color` to `run_self_tests`, `.from_lab`, `PaletteGenerator`, `.build_svg`?**
+- **Why does `Color` connect `Color` to `run_self_tests`, `PaletteGenerator`?**
+  _High betweenness centrality (0.003) - this node is a cross-community bridge._
+- **Why does `CubicBezier` connect `CubicBezier` to `run_self_tests`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **Why does `CubicBezier` connect `Vec2D` to `run_self_tests`, `.build_svg`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **Why does `Vec2D` connect `Vec2D` to `run_self_tests`, `.build_svg`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **What connects `MOVIES_DATA`, `WATCH_PROGRESS`, `MY_LIST` to the rest of the system?**
-  _711 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Why does `Vec2D` connect `Vec2D` to `run_self_tests`, `CubicBezier`?**
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
+- **What connects `name`, `version`, `description` to the rest of the system?**
+  _726 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `run_deterministic_tests` be split into smaller, more focused modules?**
   _Cohesion score 0.06259426847662142 - nodes in this community are weakly interconnected._
 - **Should `Install` be split into smaller, more focused modules?**

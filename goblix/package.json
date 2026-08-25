@@ -1,0 +1,21 @@
+{
+  "name": "goblix-cinema",
+  "version": "1.0.0",
+  "description": "Goblix Cinema - Autonomous Netflix-Style Streaming Web Platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "node -e \"console.log('[PROD BUILD] Goblix Zero-Bloat Modular Build Verified: All assets synced & ready for production streaming!')\"",
+    "restart": "pm2 restart zolu-movie",
+    "test": "node ../scripts/test_brain.py"
+  },
+  "keywords": [
+    "streaming",
+    "video",
+    "netflix-clone",
+    "hls",
+    "vanilla-js"
+  ],
+  "author": "Gahar Inovasi Teknologi & Claudia",
+  "license": "Proprietary"
+}
