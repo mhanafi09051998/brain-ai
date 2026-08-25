@@ -65,11 +65,12 @@ export function renderHomePage() {
   }
 
   main.innerHTML = `
-    <!-- HERO BANNER (NETFLIX HERO) -->
-    <header class="relative w-full min-h-[70vh] sm:min-h-[85vh] flex items-end pb-12 sm:pb-20 px-4 sm:px-8 md:px-12 bg-cover bg-center overflow-hidden" 
+    <!-- HERO BANNER (NETFLIX HERO 100vh FULL VIEWPORT) -->
+    <header class="relative w-full h-screen min-h-screen flex items-end pb-16 sm:pb-24 px-4 sm:px-8 md:px-12 bg-cover bg-[center_top] sm:bg-center overflow-hidden" 
             style="background-image: url('${featured.backdrop || featured.poster}');">
-      <div class="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/70 to-black/30"></div>
-      <div class="absolute inset-0 bg-gradient-to-r from-[#141414] via-[#141414]/80 to-transparent w-full md:w-3/4"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/60 to-black/30"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-[#141414] via-[#141414]/75 to-transparent w-full md:w-3/4"></div>
+      <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#141414] to-transparent"></div>
 
       <div class="relative z-10 max-w-2xl space-y-3 sm:space-y-4 pt-20">
         <div class="flex items-center space-x-2">

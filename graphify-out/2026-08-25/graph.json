@@ -2700,7 +2700,7 @@
       "file_type": "code",
       "norm_label": "rendermoviedetailpage()",
       "source_file": "goblix/public/js/views.js",
-      "source_location": "L166"
+      "source_location": "L192"
     },
     {
       "id": "goblix_public_js_views_renderwatchpage",
@@ -2712,7 +2712,7 @@
       "file_type": "code",
       "norm_label": "renderwatchpage()",
       "source_file": "goblix/public/js/views.js",
-      "source_location": "L235"
+      "source_location": "L261"
     },
     {
       "id": "scripts_image_vision_nucleus_engine_streamingtileprocessor_process_tiled_convolution",
@@ -20279,7 +20279,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/js/views.js",
-      "source_location": "L74",
+      "source_location": "L97",
       "weight": 1.0
     },
     {
@@ -20291,7 +20291,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/js/views.js",
-      "source_location": "L208",
+      "source_location": "L234",
       "weight": 1.0
     },
     {
@@ -20303,7 +20303,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/js/views.js",
-      "source_location": "L305",
+      "source_location": "L331",
       "weight": 1.0
     },
     {
@@ -20315,7 +20315,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/js/views.js",
-      "source_location": "L333",
+      "source_location": "L359",
       "weight": 1.0
     },
     {
@@ -26544,7 +26544,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/js/views.js",
-      "source_location": "L166",
+      "source_location": "L192",
       "weight": 1.0
     },
     {
@@ -26555,7 +26555,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/js/views.js",
-      "source_location": "L235",
+      "source_location": "L261",
       "weight": 1.0
     },
     {
@@ -40786,5 +40786,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "0e063e6c0cfa287c92c4fd0029c911a5090aed31"
+  "built_at_commit": "6644f8c05add4fc05509f2f66bc5eff988cb1011"
 }
