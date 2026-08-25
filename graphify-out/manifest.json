@@ -966,9 +966,9 @@
     "semantic_hash": "ab2fa9fc2466e74e8a664f4d9c5a6bd5"
   },
   "scripts/claudia_live_watchdog.py": {
-    "mtime": 1787625969.3198037,
-    "seen": 1787625979.8188224,
-    "ast_hash": "3b962d2999a737453b1895eb0266fdf0",
+    "mtime": 1787627675.1105137,
+    "seen": 1787627680.0853457,
+    "ast_hash": "bb24952d8dfb64114437b5c18aaf9bec",
     "semantic_hash": ""
   },
   "scripts/send_telegram_gold_report.py": {
@@ -1167,6 +1167,30 @@
     "mtime": 1787622261.2288177,
     "seen": 1787625979.8193324,
     "ast_hash": "cae28b3528766aae745c05134e3e627c",
+    "semantic_hash": ""
+  },
+  "patch_local.py": {
+    "mtime": 1787627670.951504,
+    "seen": 1787627680.0853457,
+    "ast_hash": "04d630f6170661c6342de963d60c9710",
+    "semantic_hash": ""
+  },
+  "patch_tiingo.py": {
+    "mtime": 1787626158.9581864,
+    "seen": 1787627680.0853457,
+    "ast_hash": "6cc527528a164054ad458b53f8eaa0c4",
+    "semantic_hash": ""
+  },
+  "test2.py": {
+    "mtime": 1787626136.7677617,
+    "seen": 1787627680.0853457,
+    "ast_hash": "2896549e0ae5de6a1421ba42aacd9e0a",
+    "semantic_hash": ""
+  },
+  "test3.py": {
+    "mtime": 1787626184.2751431,
+    "seen": 1787627680.0853457,
+    "ast_hash": "6df69ea5b224a0aaebdad8386e44c265",
     "semantic_hash": ""
   }
 }

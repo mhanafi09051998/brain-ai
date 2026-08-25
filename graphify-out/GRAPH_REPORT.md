@@ -1,16 +1,16 @@
 # Graph Report - Agent_Claudia_Autonomus  (2026-08-25)
 
 ## Corpus Check
-- 182 files · ~194,364 words
+- 186 files · ~194,854 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1418 nodes · 1569 edges · 154 communities (129 shown, 25 thin omitted)
+- 1422 nodes · 1570 edges · 156 communities (132 shown, 24 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 28 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5e4b4970`
+- Built from commit: `8bad577a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -18,7 +18,7 @@
 - run_deterministic_tests
 - Install
 - N022_multi_agent_consensus.md
-- Vec2D
+- CubicBezier
 - ponytail/package.json
 - Install
 - MultiHopEngine
@@ -132,13 +132,12 @@
 - fix_jellyfin_db.py
 - ImageMatrix
 - ConvolutionKernelEngine
-- ColorSpaceMath
 - run_tests
-- Any
+- image_vision_nucleus_engine.py
+- .letterbox_aspect_preserver
 - RasterToVectorTracer
 - GenerativeGraphExecutor
-- .from_lab
-- .process_tiled_convolution
+- Vec2D
 
 ## God Nodes (most connected - your core abstractions)
 1. `Vec2D` - 25 edges
@@ -167,7 +166,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (154 total, 25 thin omitted)
+## Communities (156 total, 24 thin omitted)
 
 ### Community 0 - "run_deterministic_tests"
 Cohesion: 0.06
@@ -181,9 +180,9 @@ Nodes (42): Ponytail, lazy senior dev mode, Antes / después, Antigravity CLI, C
 Cohesion: 0.05
 Nodes (35): Core Concept, Neuron N001: Executive Decision Making, Synaptic Links, Triggers & Heuristics, Core Concept, Neuron N004: Ponytail Minimality Ladder, Synaptic Links, Core Concept (+27 more)
 
-### Community 3 - "Vec2D"
-Cohesion: 0.06
-Nodes (16): CubicBezier, Immutable 2D vector for visual geometry and coordinate transformations., 2D scalar cross product (z-component)., Return 90-degree counter-clockwise normal vector., Parametric Cubic Bézier Curve: B(t) = (1-t)^3 P0 + 3(1-t)^2 t P1 + 3(1-t) t^2…, Evaluate point at parameter t in [0, 1]., Evaluate first derivative B'(t) at parameter t., Evaluate second derivative B''(t) at parameter t. (+8 more)
+### Community 3 - "CubicBezier"
+Cohesion: 0.11
+Nodes (12): CubicBezier, Parametric Cubic Bézier Curve: B(t) = (1-t)^3 P0 + 3(1-t)^2 t P1 + 3(1-t) t^2…, Evaluate point at parameter t in [0, 1]., Evaluate first derivative B'(t) at parameter t., Evaluate second derivative B''(t) at parameter t., Unit tangent vector at parameter t., Unit normal vector perpendicular to tangent at parameter t., Calculate signed curvature kappa(t) = (x' y'' - y' x'') / (x'^2 + y'^2)^(3/2). (+4 more)
 
 ### Community 4 - "ponytail/package.json"
 Cohesion: 0.05
@@ -316,8 +315,8 @@ Cohesion: 0.13
 Nodes (14): 🏗️ 1. Perpetual Swap Mechanics & Funding Rate Arbitrage, 🌊 2. Liquidation Heatmap Clusters & Cascade Dynamics, 📊 3. Open Interest (OI) vs. Price Action Divergence Matrix, ⚖️ 4. Long/Short Ratio & Positioning Sentiment Skew, ⏳ 5. Cash-and-Carry Basis Trading (Term Structure & Calendar Futures), A. Formula Deterministik Harga Likuidasi ($P_{\text{liq}}$), A. Formula Valuasi Basis & Imbal Hasil Tahunan, A. Metrik & Rasio Positioning (+6 more)
 
 ### Community 34 - "Color"
-Cohesion: 0.14
-Nodes (8): Color, Return uppercase hex string., Convert sRGB to HSL (H in [0, 360), S in [0, 1], L in [0, 1])., Calculate relative luminance according to WCAG 2.1/2.2 standard. Y = 0.2126 *…, Calculate WCAG contrast ratio between this color and another color. Formula:…, Evaluate WCAG 2.2 accessibility compliance against a background color. - AA…, Precision color representation with sRGB, CIE XYZ, CIELAB, CIELCh, and HSL…, Parse hex color (#RGB, #RGBA, #RRGGBB, #RRGGBBAA).
+Cohesion: 0.10
+Nodes (12): Color, Construct Color from CIELCh (Cylindrical CIELAB)., Return uppercase hex string., Convert sRGB to HSL (H in [0, 360), S in [0, 1], L in [0, 1])., Convert sRGB to CIELAB (L*, a*, b*)., Convert sRGB to CIELCh (L*, C*, h_deg)., Calculate relative luminance according to WCAG 2.1/2.2 standard. Y = 0.2126 *…, Calculate WCAG contrast ratio between this color and another color. Formula:… (+4 more)
 
 ### Community 35 - "Ponytail, lazy senior dev mode"
 Cohesion: 0.14
@@ -329,7 +328,7 @@ Nodes (13): 1. Edge Ingress Caddyfile Blueprint (Caddy 2.8+ HTTP/3 + Security He
 
 ### Community 37 - "PaletteGenerator"
 Cohesion: 0.19
-Nodes (8): PaletteGenerator, Harmonious color palette generator supporting classical color wheel (HSL) and…, Generate a monochromatic ramp varying in Lightness., Generate analogous colors clustered around base hue., Generate triadic 3-color harmony (120° offsets)., Generate split-complementary harmony (base + 2 colors flanking complement)., Generate tetradic rectangular 4-color harmony., Construct Color from HSL (H in [0, 360), S in [0, 1], L in [0, 1]).
+Nodes (8): PaletteGenerator, Harmonious color palette generator supporting classical color wheel (HSL) and…, Generate a monochromatic ramp varying in Lightness., Generate analogous colors clustered around base hue., Generate complementary color pair (180° offset)., Generate split-complementary harmony (base + 2 colors flanking complement)., Generate tetradic rectangular 4-color harmony., Construct Color from HSL (H in [0, 360), S in [0, 1], L in [0, 1]).
 
 ### Community 38 - "Neuron N031: Modern Data Architecture & Hybrid Search (PostgreSQL 17, pgvector HNSW, Drizzle ORM, SQLite WAL)"
 Cohesion: 0.15
@@ -378,7 +377,7 @@ Cohesion: 0.09
 Nodes (22): 1. Peta Repositori & Standar Visual Computing Terbaik Dunia, 1. RGB ke Grayscale (Luminosity Weighting), 2. Matematika Pemrosesan Citra Klasik (Classical Image Processing), 2. RGB ke HSV (Hue, Saturation, Value), 3. Arsitektur AI Generatif Visual & Latent Diffusion, 3. RGB ke YCbCr (Luma-Chroma Video Subsampling), 4. Segmentasi Alpha Matting & Tracing Vektor (Raster-to-Vector), 5. Streaming Citra Memori Rendah (`libvips`) & Super-Resolution (`Real-ESRGAN`) (+14 more)
 
 ### Community 48 - "claudia_live_watchdog.py"
-Cohesion: 0.29
+Cohesion: 0.26
 Nodes (10): calc_indicators(), check_memory_and_restart(), fetch_klines_tiingo(), fetch_klines_yahoo(), Fetch 15m candles from Tiingo FX, Fetch 15m candles from Yahoo Finance, run_watchdog(), scan_asset() (+2 more)
 
 ### Community 49 - "Ponytail"
@@ -550,49 +549,47 @@ Cohesion: 0.83
 Nodes (3): main(), record_new_learning(), slugify()
 
 ### Community 113 - "run_self_tests"
-Cohesion: 0.20
-Nodes (7): GenerativePoster, Generate complementary color pair (180° offset)., Generate multi-stop gradient scale interpolated in CIELAB space., Algorithmic generative poster generator synthesizing: - Parametric Lissajous &…, Generate full SVG graphic poster with mathematical curves and layered depth., Execute 100% deterministic test suite covering color math, WCAG contrast,…, run_self_tests()
+Cohesion: 0.16
+Nodes (8): GenerativePoster, Generate triadic 3-color harmony (120° offsets)., Generate multi-stop gradient scale interpolated in CIELAB space., Parse hex color (#RGB, #RGBA, #RRGGBB, #RRGGBBAA)., Algorithmic generative poster generator synthesizing: - Parametric Lissajous &…, Generate full SVG graphic poster with mathematical curves and layered depth., Execute 100% deterministic test suite covering color math, WCAG contrast,…, run_self_tests()
 
 ### Community 128 - "ImageMatrix"
-Cohesion: 0.15
-Nodes (7): GeometricRescaler, ImageMatrix, Lightweight, high-performance 2D/3D pure Python pixel matrix. Layout:…, Sub-pixel Geometric Rescaling and Aspect Ratio Preserver., High-precision bilinear interpolation rescaling. Maps target pixel centers…, Scales image while strictly preserving native aspect ratio, padding the…, Safe pixel retrieval with deterministic boundary clamping. Supported border…
+Cohesion: 0.20
+Nodes (4): ImageMatrix, Lightweight, high-performance 2D/3D pure Python pixel matrix. Layout:…, Convolves an image in bounded memory tiles of tile_size x tile_size. Uses…, Safe pixel retrieval with deterministic boundary clamping. Supported border…
 
 ### Community 129 - "ConvolutionKernelEngine"
 Cohesion: 0.16
 Nodes (8): ConvolutionKernelEngine, Pure Python Spatial Convolution Engine with standard and custom kernels., Generates normalized (2k+1)x(2k+1) 2D Gaussian Kernel: G(u,v) =…, Returns standard 3x3 Sobel kernels for horizontal (Gx) and vertical (Gy)…, Returns 3x3 Sharpen kernel: center = 1 + 4*strength, orthogonal edges =…, Returns standard 3x3 discrete Laplacian second-derivative kernel., Applies 2D spatial convolution across all channels of the image matrix., Calculates Sobel Edge Gradient Magnitude M = sqrt(Gx^2 + Gy^2) and Direction…
 
-### Community 130 - "ColorSpaceMath"
-Cohesion: 0.17
-Nodes (7): ColorSpaceMath, Standard-compliant color space transformation algorithms., Weighted luminosity grayscale conversion. - BT.601 (SDTV/OpenCV default): Y =…, Converts RGB [0..255] to HSV (Hue in [0..360), Saturation in [0..1], Value in…, Converts HSV (Hue [0..360), Saturation [0..1], Value [0..1]) back to RGB…, Converts RGB [0..255] to ITU-R BT.601 YCbCr digital video standard., Converts ITU-R BT.601 YCbCr back to RGB [0..255].
+### Community 130 - "run_tests"
+Cohesion: 0.21
+Nodes (8): ColorSpaceMath, Standard-compliant color space transformation algorithms., Weighted luminosity grayscale conversion. - BT.601 (SDTV/OpenCV default): Y =…, Converts RGB [0..255] to HSV (Hue in [0..360), Saturation in [0..1], Value in…, Converts HSV (Hue [0..360), Saturation [0..1], Value [0..1]) back to RGB…, Converts RGB [0..255] to ITU-R BT.601 YCbCr digital video standard., Converts ITU-R BT.601 YCbCr back to RGB [0..255]., run_tests()
 
-### Community 131 - "run_tests"
-Cohesion: 0.50
-Nodes (8): CheckpointLoaderNode, CLIPTextEncodeNode, ComfyNode, ControlNetApplyNode, KSamplerNode, Base executable node in a generative AI visual DAG., run_tests(), VAEDecodeNode
+### Community 131 - "image_vision_nucleus_engine.py"
+Cohesion: 0.18
+Nodes (10): CheckpointLoaderNode, CLIPTextEncodeNode, ComfyNode, ControlNetApplyNode, KSamplerNode, Any, Demand-driven tile chunking pipeline for low-memory image processing. Executes…, Base executable node in a generative AI visual DAG. (+2 more)
+
+### Community 132 - ".letterbox_aspect_preserver"
+Cohesion: 0.29
+Nodes (5): GeometricRescaler, Sub-pixel Geometric Rescaling and Aspect Ratio Preserver., High-precision bilinear interpolation rescaling. Maps target pixel centers…, Scales image while strictly preserving native aspect ratio, padding the…, Maps a bounding box (x, y, w, h) from letterboxed space back to native source…
 
 ### Community 133 - "RasterToVectorTracer"
 Cohesion: 0.31
 Nodes (5): RasterToVectorTracer, Converts raster mask contours to simplified vector polygons & SVG paths. Uses…, Ramer-Douglas-Peucker (RDP) algorithm for polyline vertex decimation., Simple boundary walking detector that extracts perimeter polygons from binary…, Generates standard SVG vector XML code from a raster mask.
 
-### Community 146 - ".from_lab"
-Cohesion: 0.20
-Nodes (5): Construct Color from CIELCh (Cylindrical CIELAB)., Convert sRGB to CIELAB (L*, a*, b*)., Convert sRGB to CIELCh (L*, C*, h_deg)., Perceptually smooth linear interpolation in CIELAB space., Construct Color from CIELAB (L* in [0, 100], a*, b* in [-128, 128]).
-
-### Community 147 - ".process_tiled_convolution"
-Cohesion: 0.50
-Nodes (3): Demand-driven tile chunking pipeline for low-memory image processing. Executes…, Convolves an image in bounded memory tiles of tile_size x tile_size. Uses…, StreamingTileProcessor
+### Community 146 - "Vec2D"
+Cohesion: 0.11
+Nodes (4): Immutable 2D vector for visual geometry and coordinate transformations., 2D scalar cross product (z-component)., Return 90-degree counter-clockwise normal vector., Vec2D
 
 ## Knowledge Gaps
 - **669 isolated node(s):** `__dirname`, `require`, `{ getPonytailInstructions }`, `{ getDefaultMode, normalizePersistedMode }`, `{ parseCommandFile }` (+664 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **25 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **24 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Color` connect `Color` to `run_self_tests`, `.from_lab`, `PaletteGenerator`?**
-  _High betweenness centrality (0.001) - this node is a cross-community bridge._
-- **Why does `CubicBezier` connect `Vec2D` to `run_self_tests`?**
-  _High betweenness centrality (0.001) - this node is a cross-community bridge._
+- **Why does `Color` connect `Color` to `run_self_tests`, `PaletteGenerator`?**
+  _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **What connects `__dirname`, `require`, `{ getPonytailInstructions }` to the rest of the system?**
   _669 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `run_deterministic_tests` be split into smaller, more focused modules?**
@@ -601,5 +598,7 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.044444444444444446 - nodes in this community are weakly interconnected._
 - **Should `N022_multi_agent_consensus.md` be split into smaller, more focused modules?**
   _Cohesion score 0.045454545454545456 - nodes in this community are weakly interconnected._
-- **Should `Vec2D` be split into smaller, more focused modules?**
-  _Cohesion score 0.06155632984901278 - nodes in this community are weakly interconnected._
+- **Should `CubicBezier` be split into smaller, more focused modules?**
+  _Cohesion score 0.11067193675889328 - nodes in this community are weakly interconnected._
+- **Should `ponytail/package.json` be split into smaller, more focused modules?**
+  _Cohesion score 0.05365853658536585 - nodes in this community are weakly interconnected._
