@@ -6,10 +6,10 @@
     "semantic_hash": "dd15119fb2196a241d762fb6eacacf90"
   },
   "learning/NEURON_INDEX.json": {
-    "mtime": 1787584475.8377326,
-    "seen": 1787584485.8613288,
-    "ast_hash": "5c1e943acec79833d52f86e68937e629",
-    "semantic_hash": "5c1e943acec79833d52f86e68937e629"
+    "mtime": 1787638157.251522,
+    "seen": 1787638164.990918,
+    "ast_hash": "49e2fc81d351a18effedb0815eff0c36",
+    "semantic_hash": ""
   },
   "learning/scripts/grow_neurons.py": {
     "mtime": 1787405645.569641,
@@ -312,9 +312,9 @@
     "semantic_hash": ""
   },
   "memory.md": {
-    "mtime": 1787584475.8393104,
-    "seen": 1787584531.5103316,
-    "ast_hash": "01d61579a1a37cde83f8ee221e07c7d4",
+    "mtime": 1787638157.251522,
+    "seen": 1787638164.990918,
+    "ast_hash": "10bbe97f909699b36dfeb2b3e499044b",
     "semantic_hash": ""
   },
   "memory/neurons/ai_engine_9router.md": {
@@ -1287,6 +1287,66 @@
     "mtime": 1787632489.4653308,
     "seen": 1787632522.6683273,
     "ast_hash": "48adc89a83d3723cab207138fd667a40",
+    "semantic_hash": ""
+  },
+  "check_router.py": {
+    "mtime": 1787636846.92012,
+    "seen": 1787638164.990918,
+    "ast_hash": "1da1f32f8c90a588266f00941c770110",
+    "semantic_hash": ""
+  },
+  "goblix/data/movies.json": {
+    "mtime": 1787637354.418628,
+    "seen": 1787638164.990918,
+    "ast_hash": "6c7edd2e9b077cc447d4569f9ece0e62",
+    "semantic_hash": ""
+  },
+  "goblix/public/app.js": {
+    "mtime": 1787637632.3941529,
+    "seen": 1787638164.990918,
+    "ast_hash": "f959b66fcb9d3a4a6bc24fb8f55e2db5",
+    "semantic_hash": ""
+  },
+  "goblix/server.js": {
+    "mtime": 1787637532.9403183,
+    "seen": 1787638164.990918,
+    "ast_hash": "7f1532af776e878baac7e964e529915e",
+    "semantic_hash": ""
+  },
+  "scripts/swot_engine.py": {
+    "mtime": 1787638150.4262643,
+    "seen": 1787638164.990918,
+    "ast_hash": "311579100c46b9068b893ff7018f5335",
+    "semantic_hash": ""
+  },
+  "temp3.py": {
+    "mtime": 1787632530.7624824,
+    "seen": 1787638164.990918,
+    "ast_hash": "e35addf6615392e235b8b47b69bfb6b7",
+    "semantic_hash": ""
+  },
+  "test_auth.py": {
+    "mtime": 1787637454.7953696,
+    "seen": 1787638164.990918,
+    "ast_hash": "a607ecc3126617aa6707970ff6c6ab49",
+    "semantic_hash": ""
+  },
+  "goblix/index.html": {
+    "mtime": 1787636127.4360352,
+    "seen": 1787638164.990918,
+    "ast_hash": "3d4fcbbbe15933258aee9003dde67d34",
+    "semantic_hash": ""
+  },
+  "goblix/public/index.html": {
+    "mtime": 1787637598.1205995,
+    "seen": 1787638164.990918,
+    "ast_hash": "c4a1d231cf21b7c87787c06ee607662d",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N056_strategic_swot_and_tows_matrix_a.md": {
+    "mtime": 1787638157.2497814,
+    "seen": 1787638164.990918,
+    "ast_hash": "398a9b40f99a837b22ae50260621d27c",
     "semantic_hash": ""
   }
 }
