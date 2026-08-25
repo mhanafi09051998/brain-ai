@@ -273,7 +273,7 @@ def run_watchdog():
     while True:
         for asset in ASSETS:
             scan_asset(asset)
-                time.sleep(POLL_INTERVAL_SEC)
+        time.sleep(POLL_INTERVAL_SEC)
 
 if __name__ == "__main__":
     run_watchdog()
