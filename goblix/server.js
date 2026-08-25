@@ -78,8 +78,21 @@ const server = http.createServer(async (req, res) => {
   }
 
   // 2. SUBTITLES ENDPOINT (Sanitized Anti-Judi/Anti-Promo)
-  if (pathname.startsWith('/api/subtitles/') || pathname === '/sub_indo.vtt') {
-    const subFile = path.join(PUBLIC_DIR, 'sub_indo.vtt');
+  if (pathname.startsWith('/api/subtitles/') || pathname.startsWith('/subtitles/') || pathname === '/sub_indo.vtt') {
+    let subFileName = 'sub_indo.vtt';
+    if (pathname.startsWith('/api/subtitles/')) {
+      const slug = pathname.replace('/api/subtitles/', '');
+      subFileName = `${slug}.vtt`;
+    } else if (pathname.startsWith('/subtitles/')) {
+      subFileName = pathname.replace('/subtitles/', '');
+    }
+    let subFile = path.join(PUBLIC_DIR, 'subtitles', subFileName);
+    if (!fs.existsSync(subFile)) {
+      subFile = path.join(PUBLIC_DIR, subFileName);
+    }
+    if (!fs.existsSync(subFile)) {
+      subFile = path.join(PUBLIC_DIR, 'sub_indo.vtt');
+    }
     serveSanitizedSubtitle(req, res, subFile);
     return;
   }

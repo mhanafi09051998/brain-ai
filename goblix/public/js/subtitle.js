@@ -6,9 +6,9 @@
 
 import { state } from './state.js';
 
-export async function loadSubtitles() {
+export async function loadSubtitles(subUrl = '/sub_indo.vtt') {
   try {
-    const res = await fetch('/sub_indo.vtt');
+    const res = await fetch(subUrl);
     const text = await res.text();
     state.subtitleCues = parseWebVTT(text);
   } catch (e) {

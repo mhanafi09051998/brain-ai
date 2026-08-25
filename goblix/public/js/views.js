@@ -263,7 +263,7 @@ export function renderWatchPage(slug) {
       <main class="relative flex-1 w-full h-full flex items-center justify-center p-0 m-0 min-h-0 overflow-hidden bg-black">
         <video id="cinemaPlayer" class="w-full h-full max-w-full max-h-full object-contain bg-black" controls playsinline preload="auto" poster="${movie.backdrop}">
           <source id="videoSource" src="${movie.streamUrl}" type="video/mp4">
-          <track id="subTrack" label="Bahasa Indonesia" kind="subtitles" srclang="id" src="/sub_indo.vtt" default>
+          <track id="subTrack" label="Bahasa Indonesia" kind="subtitles" srclang="id" src="${movie.subtitleUrl || '/sub_indo.vtt'}" default>
           Browser Anda tidak mendukung streaming video HTML5.
         </video>
         <div id="subOverlay" class="pointer-events-none absolute bottom-14 sm:bottom-16 md:bottom-20 inset-x-0 flex flex-col items-center justify-center px-4 text-center z-20 transition-all duration-100 select-none"></div>
@@ -302,7 +302,7 @@ export function renderWatchPage(slug) {
     const vid = document.getElementById('cinemaPlayer');
     if (!vid) return;
 
-    await loadSubtitles();
+    await loadSubtitles(movie.subtitleUrl || `/subtitles/${movie.slug}.vtt` || '/sub_indo.vtt');
 
     if (vid.textTracks && vid.textTracks[0]) vid.textTracks[0].mode = "showing";
 

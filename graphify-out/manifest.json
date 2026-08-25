@@ -1296,9 +1296,9 @@
     "semantic_hash": ""
   },
   "goblix/data/movies.json": {
-    "mtime": 1787648475.4871356,
-    "seen": 1787648512.1968448,
-    "ast_hash": "f1d07fd8899d7738b6b3c99df351eac4",
+    "mtime": 1787649644.3559217,
+    "seen": 1787649731.1382558,
+    "ast_hash": "7ea42b77f28e19f76a85e8f10e5dd8ec",
     "semantic_hash": ""
   },
   "goblix/public/app.js": {
@@ -1308,9 +1308,9 @@
     "semantic_hash": ""
   },
   "goblix/server.js": {
-    "mtime": 1787649318.3525105,
-    "seen": 1787649358.1128745,
-    "ast_hash": "1d04bcdda26caa79b1013c2b4f14dc8e",
+    "mtime": 1787649666.239562,
+    "seen": 1787649731.1382558,
+    "ast_hash": "7db08338cf7780e91749769b7d96e326",
     "semantic_hash": ""
   },
   "scripts/swot_engine.py": {
@@ -1482,15 +1482,15 @@
     "semantic_hash": ""
   },
   "goblix/public/js/subtitle.js": {
-    "mtime": 1787649246.5178087,
-    "seen": 1787649358.1128745,
-    "ast_hash": "ca45cdb6d9227ff228c1bc5eb1b22070",
+    "mtime": 1787649669.4025652,
+    "seen": 1787649731.1382558,
+    "ast_hash": "dca771571e85c72edb1e7343a57f4527",
     "semantic_hash": ""
   },
   "goblix/public/js/views.js": {
-    "mtime": 1787649265.112538,
-    "seen": 1787649358.1128745,
-    "ast_hash": "d6e1ce8f951e7fe3096a4b4edcd1e1f9",
+    "mtime": 1787649674.1680472,
+    "seen": 1787649731.1382558,
+    "ast_hash": "5c4be6210e6342ce684f1189196c0b23",
     "semantic_hash": ""
   },
   "goblix/src/auth.js": {
@@ -1515,6 +1515,12 @@
     "mtime": 1787649496.774584,
     "seen": 1787649513.6181195,
     "ast_hash": "59794602bcd43fbb3c68f41e6e6789b6",
+    "semantic_hash": ""
+  },
+  "scripts/get_topgun_backdrops.py": {
+    "mtime": 1787649611.4420195,
+    "seen": 1787649731.1382558,
+    "ast_hash": "b247fd031fb2bdaa3145dbf1c8df2efc",
     "semantic_hash": ""
   }
 }
