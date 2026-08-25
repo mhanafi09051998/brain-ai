@@ -130,10 +130,13 @@ def send_live_report():
     BOT_TOKEN = "***TELEGRAM_TOKEN_REMOVED***"
     CHAT_ID = ***CHAT_ID_REMOVED***
 
+    print(msg)
+
     payload = json.dumps({
         "chat_id": CHAT_ID,
         "text": msg,
-        "parse_mode": "HTML"
+        "parse_mode": "HTML",
+        "disable_web_page_preview": True
     }).encode("utf-8")
 
     req = urllib.request.Request(f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage", data=payload, headers={"Content-Type": "application/json"})

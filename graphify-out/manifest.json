@@ -966,15 +966,15 @@
     "semantic_hash": "ab2fa9fc2466e74e8a664f4d9c5a6bd5"
   },
   "scripts/claudia_live_watchdog.py": {
-    "mtime": 1787618808.403078,
-    "seen": 1787619841.227411,
-    "ast_hash": "ee25ed920e0654c0e1dc8be800725355",
+    "mtime": 1787625969.3198037,
+    "seen": 1787625979.8188224,
+    "ast_hash": "3b962d2999a737453b1895eb0266fdf0",
     "semantic_hash": ""
   },
   "scripts/send_telegram_gold_report.py": {
-    "mtime": 1787618631.3233998,
-    "seen": 1787619841.227411,
-    "ast_hash": "129d5dae445c407628fe6c58163edd26",
+    "mtime": 1787621755.3195157,
+    "seen": 1787625979.8188224,
+    "ast_hash": "a69116f6cd2345fd4e02fdd50d99a3be",
     "semantic_hash": ""
   },
   "learning/neurons/N051_system_architecture_devops_mastery.md": {
@@ -1125,6 +1125,48 @@
     "mtime": 1787618631.3797832,
     "seen": 1787619841.227411,
     "ast_hash": "e1c655eec464f5937c84e1eb9066a2f4",
+    "semantic_hash": ""
+  },
+  "fix.py": {
+    "mtime": 1787622430.733524,
+    "seen": 1787625979.8188224,
+    "ast_hash": "c7c93875c757402a949155266dc034f1",
+    "semantic_hash": ""
+  },
+  "fix2.py": {
+    "mtime": 1787622458.1340396,
+    "seen": 1787625979.8188224,
+    "ast_hash": "13862f0e7a62a17326e2ec3425d24e68",
+    "semantic_hash": ""
+  },
+  "patch_tz.py": {
+    "mtime": 1787622987.2964256,
+    "seen": 1787625979.8188224,
+    "ast_hash": "725f4a417602454db62f5b82415a354d",
+    "semantic_hash": ""
+  },
+  "patch_watchdog.py": {
+    "mtime": 1787622299.802338,
+    "seen": 1787625979.8188224,
+    "ast_hash": "6c783b52be6057fc0956361645574248",
+    "semantic_hash": ""
+  },
+  "patch_watchdog2.py": {
+    "mtime": 1787622328.5146544,
+    "seen": 1787625979.8188224,
+    "ast_hash": "478045052706fbc58abef0306f6d8943",
+    "semantic_hash": ""
+  },
+  "patch_watchdog_twelve.py": {
+    "mtime": 1787622827.1369529,
+    "seen": 1787625979.8188224,
+    "ast_hash": "9b4190be444b2e8e9513dfd2490f4a21",
+    "semantic_hash": ""
+  },
+  "test_scan.py": {
+    "mtime": 1787622261.2288177,
+    "seen": 1787625979.8193324,
+    "ast_hash": "cae28b3528766aae745c05134e3e627c",
     "semantic_hash": ""
   }
 }
