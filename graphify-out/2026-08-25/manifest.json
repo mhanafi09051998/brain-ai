@@ -966,16 +966,16 @@
     "semantic_hash": "ab2fa9fc2466e74e8a664f4d9c5a6bd5"
   },
   "scripts/claudia_live_watchdog.py": {
-    "mtime": 1787618808.403078,
-    "seen": 1787619841.227411,
-    "ast_hash": "ee25ed920e0654c0e1dc8be800725355",
-    "semantic_hash": ""
+    "mtime": 1787579573.7778544,
+    "seen": 1787584485.8721373,
+    "ast_hash": "f72a989b167b688b084dc5eacaced62f",
+    "semantic_hash": "f72a989b167b688b084dc5eacaced62f"
   },
   "scripts/send_telegram_gold_report.py": {
-    "mtime": 1787618631.3233998,
-    "seen": 1787619841.227411,
-    "ast_hash": "129d5dae445c407628fe6c58163edd26",
-    "semantic_hash": ""
+    "mtime": 1787579590.4140317,
+    "seen": 1787584485.8743348,
+    "ast_hash": "01a591a791583d42e10ce62ccca3d3d3",
+    "semantic_hash": "01a591a791583d42e10ce62ccca3d3d3"
   },
   "learning/neurons/N051_system_architecture_devops_mastery.md": {
     "mtime": 1787583817.5552735,
@@ -1047,84 +1047,6 @@
     "mtime": 1787584455.7437449,
     "seen": 1787584531.5103316,
     "ast_hash": "e1b1e9a6be90e5e294680cf78738ae8f",
-    "semantic_hash": ""
-  },
-  "patch_kas.py": {
-    "mtime": 1787619778.472216,
-    "seen": 1787619841.227411,
-    "ast_hash": "249ddc1583dd2a5c9fc33d1b2711e684",
-    "semantic_hash": ""
-  },
-  "scripts/audit_subs.py": {
-    "mtime": 1787586398.1460557,
-    "seen": 1787619841.227411,
-    "ast_hash": "943244317389f3e25191c633ad7d1df2",
-    "semantic_hash": ""
-  },
-  "scripts/auto_symlink_movies.py": {
-    "mtime": 1787584959.5604303,
-    "seen": 1787619841.227411,
-    "ast_hash": "bb791647216d736334f5d0ae5860263c",
-    "semantic_hash": ""
-  },
-  "scripts/clean_dir_symlinks.py": {
-    "mtime": 1787586687.992473,
-    "seen": 1787619841.227411,
-    "ast_hash": "4bf9958ed10569c9d45551f0ca51d4e6",
-    "semantic_hash": ""
-  },
-  "scripts/create_dir_symlinks.py": {
-    "mtime": 1787585467.526655,
-    "seen": 1787619841.227411,
-    "ast_hash": "6614724475a02ab86700a1c48f5ea1fd",
-    "semantic_hash": ""
-  },
-  "scripts/download_avengers.py": {
-    "mtime": 1787586618.4358084,
-    "seen": 1787619841.227411,
-    "ast_hash": "6fde6258bba0b29e1d0746fadc8a8173",
-    "semantic_hash": ""
-  },
-  "scripts/download_deadpool.py": {
-    "mtime": 1787587158.6196914,
-    "seen": 1787619841.227411,
-    "ast_hash": "1995967f850beda2ff1e3088cb96075d",
-    "semantic_hash": ""
-  },
-  "scripts/fetch_missing_subs.py": {
-    "mtime": 1787586494.5034337,
-    "seen": 1787619841.227411,
-    "ast_hash": "f071154bed33f336db7a5edf63835863",
-    "semantic_hash": ""
-  },
-  "scripts/fix_jellyfin_db.py": {
-    "mtime": 1787586086.8552322,
-    "seen": 1787619841.227411,
-    "ast_hash": "e36ec6034d575e4e9bef840b44beba83",
-    "semantic_hash": ""
-  },
-  "scripts/fix_jellyfin_db2.py": {
-    "mtime": 1787586150.2382536,
-    "seen": 1787619841.227411,
-    "ast_hash": "e76389c8c0e741f53ef6316c2b088c33",
-    "semantic_hash": ""
-  },
-  "scripts/quick_trade.py": {
-    "mtime": 1787589836.6485298,
-    "seen": 1787619841.227411,
-    "ast_hash": "fdbb8994985404694351f67f8fdc5ef9",
-    "semantic_hash": ""
-  },
-  "scripts/test_playback.py": {
-    "mtime": 1787585220.8116193,
-    "seen": 1787619841.227411,
-    "ast_hash": "0410c8c932eb9f04f98337d14aa39b39",
-    "semantic_hash": ""
-  },
-  "scripts/vps_gold_bot.py": {
-    "mtime": 1787618631.3797832,
-    "seen": 1787619841.227411,
-    "ast_hash": "e1c655eec464f5937c84e1eb9066a2f4",
     "semantic_hash": ""
   }
 }
