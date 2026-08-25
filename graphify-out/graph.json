@@ -121,19 +121,6 @@
       "source_location": "L87"
     },
     {
-      "id": "scripts_image_vision_nucleus_engine_geometricrescaler",
-      "label": "GeometricRescaler",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 128,
-      "community_name": "ImageMatrix",
-      "file_type": "code",
-      "norm_label": "geometricrescaler",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L364"
-    },
-    {
       "id": "scripts_image_vision_nucleus_engine_imagematrix",
       "label": "ImageMatrix",
       "_callable": true,
@@ -166,7 +153,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "code",
       "norm_label": "colorspacemath",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -179,7 +166,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 131,
-      "community_name": "run_tests",
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": "checkpointloadernode",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -192,7 +179,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 131,
-      "community_name": "run_tests",
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": "cliptextencodenode",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -205,7 +192,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 131,
-      "community_name": "run_tests",
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": "comfynode",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -218,7 +205,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 131,
-      "community_name": "run_tests",
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": "controlnetapplynode",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -231,11 +218,24 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 131,
-      "community_name": "run_tests",
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": "ksamplernode",
       "source_file": "scripts/image_vision_nucleus_engine.py",
       "source_location": "L710"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_streamingtileprocessor",
+      "label": "StreamingTileProcessor",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
+      "file_type": "code",
+      "norm_label": "streamingtileprocessor",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L614"
     },
     {
       "id": "scripts_image_vision_nucleus_engine_vaedecodenode",
@@ -244,11 +244,24 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 131,
-      "community_name": "run_tests",
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": "vaedecodenode",
       "source_file": "scripts/image_vision_nucleus_engine.py",
       "source_location": "L731"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_geometricrescaler",
+      "label": "GeometricRescaler",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 132,
+      "community_name": ".letterbox_aspect_preserver",
+      "file_type": "code",
+      "norm_label": "geometricrescaler",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L364"
     },
     {
       "id": "scripts_image_vision_nucleus_engine_rastertovectortracer",
@@ -314,19 +327,6 @@
       "norm_label": "swotengine",
       "source_file": "scripts/swot_engine.py",
       "source_location": "L17"
-    },
-    {
-      "id": "scripts_image_vision_nucleus_engine_streamingtileprocessor",
-      "label": "StreamingTileProcessor",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 179,
-      "community_name": ".process_tiled_convolution",
-      "file_type": "code",
-      "norm_label": "streamingtileprocessor",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L614"
     },
     {
       "id": "scripts_graphic_design_visual_engine_cubicbezier",
@@ -759,30 +759,6 @@
       "source_location": "L14"
     },
     {
-      "id": "scripts_image_vision_nucleus_engine_geometricrescaler_bilinear_rescale",
-      "label": ".bilinear_rescale()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 128,
-      "community_name": "ImageMatrix",
-      "file_type": "code",
-      "norm_label": ".bilinear_rescale()",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L370"
-    },
-    {
-      "id": "scripts_image_vision_nucleus_engine_geometricrescaler_letterbox_aspect_preserver",
-      "label": ".letterbox_aspect_preserver()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 128,
-      "community_name": "ImageMatrix",
-      "file_type": "code",
-      "norm_label": ".letterbox_aspect_preserver()",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L408"
-    },
-    {
       "id": "scripts_image_vision_nucleus_engine_imagematrix_clone",
       "label": ".clone()",
       "_callable": true,
@@ -843,16 +819,16 @@
       "source_location": "L100"
     },
     {
-      "id": "scripts_image_vision_nucleus_engine_vaedecodenode_execute",
-      "label": ".execute()",
+      "id": "scripts_image_vision_nucleus_engine_streamingtileprocessor_process_tiled_convolution",
+      "label": ".process_tiled_convolution()",
       "_callable": true,
       "_origin": "ast",
       "community": 128,
       "community_name": "ImageMatrix",
       "file_type": "code",
-      "norm_label": ".execute()",
+      "norm_label": ".process_tiled_convolution()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L732"
+      "source_location": "L621"
     },
     {
       "id": "scripts_image_vision_nucleus_engine_convolutionkernelengine_convolve_2d",
@@ -932,7 +908,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "code",
       "norm_label": ".hsv_to_rgb()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -944,7 +920,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "code",
       "norm_label": ".rgb_to_grayscale()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -956,7 +932,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "code",
       "norm_label": ".rgb_to_hsv()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -968,7 +944,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "code",
       "norm_label": ".rgb_to_ycbcr()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -980,7 +956,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "code",
       "norm_label": ".ycbcr_to_rgb()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -991,7 +967,7 @@
       "label": "run_tests()",
       "_callable": true,
       "_origin": "ast",
-      "community": 131,
+      "community": 130,
       "community_name": "run_tests",
       "file_type": "code",
       "norm_label": "run_tests()",
@@ -1003,8 +979,8 @@
       "label": ".execute()",
       "_callable": true,
       "_origin": "ast",
-      "community": 132,
-      "community_name": "Any",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": ".execute()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -1015,8 +991,8 @@
       "label": ".execute()",
       "_callable": true,
       "_origin": "ast",
-      "community": 132,
-      "community_name": "Any",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": ".execute()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -1027,8 +1003,8 @@
       "label": ".execute()",
       "_callable": true,
       "_origin": "ast",
-      "community": 132,
-      "community_name": "Any",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": ".execute()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -1039,8 +1015,8 @@
       "label": ".__init__()",
       "_callable": true,
       "_origin": "ast",
-      "community": 132,
-      "community_name": "Any",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": ".__init__()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -1051,12 +1027,60 @@
       "label": ".execute()",
       "_callable": true,
       "_origin": "ast",
-      "community": 132,
-      "community_name": "Any",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": ".execute()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
       "source_location": "L696"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_ksamplernode_execute",
+      "label": ".execute()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
+      "file_type": "code",
+      "norm_label": ".execute()",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L711"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_vaedecodenode_execute",
+      "label": ".execute()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
+      "file_type": "code",
+      "norm_label": ".execute()",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L732"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_geometricrescaler_bilinear_rescale",
+      "label": ".bilinear_rescale()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 132,
+      "community_name": ".letterbox_aspect_preserver",
+      "file_type": "code",
+      "norm_label": ".bilinear_rescale()",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L370"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_geometricrescaler_letterbox_aspect_preserver",
+      "label": ".letterbox_aspect_preserver()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 132,
+      "community_name": ".letterbox_aspect_preserver",
+      "file_type": "code",
+      "norm_label": ".letterbox_aspect_preserver()",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L408"
     },
     {
       "id": "scripts_image_vision_nucleus_engine_geometricrescaler_unletterbox_box",
@@ -1064,23 +1088,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 132,
-      "community_name": "Any",
+      "community_name": ".letterbox_aspect_preserver",
       "file_type": "code",
       "norm_label": ".unletterbox_box()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
       "source_location": "L455"
-    },
-    {
-      "id": "scripts_image_vision_nucleus_engine_ksamplernode_execute",
-      "label": ".execute()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 132,
-      "community_name": "Any",
-      "file_type": "code",
-      "norm_label": ".execute()",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L711"
     },
     {
       "id": "scripts_image_vision_nucleus_engine_rastertovectortracer_generate_svg_from_mask",
@@ -1368,7 +1380,7 @@
       "file_type": "code",
       "norm_label": "changequality()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L501"
+      "source_location": "L730"
     },
     {
       "id": "goblix_public_app_changespeed",
@@ -1380,7 +1392,7 @@
       "file_type": "code",
       "norm_label": "changespeed()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L496"
+      "source_location": "L725"
     },
     {
       "id": "goblix_public_app_checkauthsession",
@@ -1392,7 +1404,19 @@
       "file_type": "code",
       "norm_label": "checkauthsession()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L47"
+      "source_location": "L82"
+    },
+    {
+      "id": "goblix_public_app_clearsearch",
+      "label": "clearSearch()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 161,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "clearsearch()",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L233"
     },
     {
       "id": "goblix_public_app_fetchmovies",
@@ -1404,7 +1428,7 @@
       "file_type": "code",
       "norm_label": "fetchmovies()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L140"
+      "source_location": "L183"
     },
     {
       "id": "goblix_public_app_fetchserverwatchprogress",
@@ -1416,7 +1440,7 @@
       "file_type": "code",
       "norm_label": "fetchserverwatchprogress()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L75"
+      "source_location": "L111"
     },
     {
       "id": "goblix_public_app_formattime",
@@ -1428,7 +1452,7 @@
       "file_type": "code",
       "norm_label": "formattime()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L522"
+      "source_location": "L750"
     },
     {
       "id": "goblix_public_app_getlocalprogress",
@@ -1440,7 +1464,7 @@
       "file_type": "code",
       "norm_label": "getlocalprogress()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L26"
+      "source_location": "L31"
     },
     {
       "id": "goblix_public_app_gettoken",
@@ -1452,7 +1476,7 @@
       "file_type": "code",
       "norm_label": "gettoken()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L14"
+      "source_location": "L19"
     },
     {
       "id": "goblix_public_app_handlelogout",
@@ -1464,7 +1488,7 @@
       "file_type": "code",
       "norm_label": "handlelogout()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L130"
+      "source_location": "L173"
     },
     {
       "id": "goblix_public_app_handleroute",
@@ -1476,7 +1500,31 @@
       "file_type": "code",
       "norm_label": "handleroute()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L172"
+      "source_location": "L336"
+    },
+    {
+      "id": "goblix_public_app_handlesearchquery",
+      "label": "handleSearchQuery()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 161,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "handlesearchquery()",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L218"
+    },
+    {
+      "id": "goblix_public_app_loadmylist",
+      "label": "loadMyList()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 161,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "loadmylist()",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L52"
     },
     {
       "id": "goblix_public_app_navigateto",
@@ -1488,7 +1536,7 @@
       "file_type": "code",
       "norm_label": "navigateto()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L155"
+      "source_location": "L306"
     },
     {
       "id": "goblix_public_app_renderhomepage",
@@ -1500,7 +1548,7 @@
       "file_type": "code",
       "norm_label": "renderhomepage()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L213"
+      "source_location": "L377"
     },
     {
       "id": "goblix_public_app_renderloginpage",
@@ -1512,7 +1560,7 @@
       "file_type": "code",
       "norm_label": "renderloginpage()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L530"
+      "source_location": "L758"
     },
     {
       "id": "goblix_public_app_rendermoviedetailpage",
@@ -1524,7 +1572,7 @@
       "file_type": "code",
       "norm_label": "rendermoviedetailpage()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L321"
+      "source_location": "L548"
     },
     {
       "id": "goblix_public_app_renderregisterpage",
@@ -1536,7 +1584,7 @@
       "file_type": "code",
       "norm_label": "renderregisterpage()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L569"
+      "source_location": "L797"
     },
     {
       "id": "goblix_public_app_renderwatchpage",
@@ -1548,7 +1596,7 @@
       "file_type": "code",
       "norm_label": "renderwatchpage()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L393"
+      "source_location": "L626"
     },
     {
       "id": "goblix_public_app_savelocalprogress",
@@ -1560,7 +1608,7 @@
       "file_type": "code",
       "norm_label": "savelocalprogress()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L34"
+      "source_location": "L39"
     },
     {
       "id": "goblix_public_app_saveserverwatchprogress",
@@ -1572,7 +1620,19 @@
       "file_type": "code",
       "norm_label": "saveserverwatchprogress()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L89"
+      "source_location": "L125"
+    },
+    {
+      "id": "goblix_public_app_setcategoryfilter",
+      "label": "setCategoryFilter()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 161,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "setcategoryfilter()",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L241"
     },
     {
       "id": "goblix_public_app_settoken",
@@ -1584,7 +1644,19 @@
       "file_type": "code",
       "norm_label": "settoken()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L18"
+      "source_location": "L23"
+    },
+    {
+      "id": "goblix_public_app_showmylistmodal",
+      "label": "showMyListModal()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 161,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "showmylistmodal()",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L253"
     },
     {
       "id": "goblix_public_app_submitlogin",
@@ -1596,7 +1668,7 @@
       "file_type": "code",
       "norm_label": "submitlogin()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L615"
+      "source_location": "L843"
     },
     {
       "id": "goblix_public_app_submitregister",
@@ -1608,7 +1680,19 @@
       "file_type": "code",
       "norm_label": "submitregister()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L653"
+      "source_location": "L881"
+    },
+    {
+      "id": "goblix_public_app_togglemylist",
+      "label": "toggleMyList()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 161,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "togglemylist()",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L68"
     },
     {
       "id": "goblix_public_app_togglepip",
@@ -1620,7 +1704,31 @@
       "file_type": "code",
       "norm_label": "togglepip()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L512"
+      "source_location": "L740"
+    },
+    {
+      "id": "goblix_public_app_togglesearchinput",
+      "label": "toggleSearchInput()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 161,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "togglesearchinput()",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L195"
+    },
+    {
+      "id": "goblix_public_app_updatemylistbadge",
+      "label": "updateMyListBadge()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 161,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "updatemylistbadge()",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L61"
     },
     {
       "id": "goblix_public_app_updatenavbarauth",
@@ -1632,7 +1740,7 @@
       "file_type": "code",
       "norm_label": "updatenavbarauth()",
       "source_file": "goblix/public/app.js",
-      "source_location": "L105"
+      "source_location": "L141"
     },
     {
       "id": "scripts_graphic_design_visual_engine_vec2d_add",
@@ -2125,18 +2233,6 @@
       "norm_label": "update_movies_database()",
       "source_file": "scripts/fetch_imdb_metadata.py",
       "source_location": "L122"
-    },
-    {
-      "id": "scripts_image_vision_nucleus_engine_streamingtileprocessor_process_tiled_convolution",
-      "label": ".process_tiled_convolution()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 179,
-      "community_name": ".process_tiled_convolution",
-      "file_type": "code",
-      "norm_label": ".process_tiled_convolution()",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L621"
     },
     {
       "id": "ponytail_hooks_ponytail_config_getclaudedir",
@@ -5855,37 +5951,15 @@
       "source_location": "L28"
     },
     {
-      "id": "scripts_image_vision_nucleus_engine_rationale_365",
-      "label": "Sub-pixel Geometric Rescaling and Aspect Ratio Preserver.",
+      "id": "scripts_image_vision_nucleus_engine_rationale_626",
+      "label": "Convolves an image in bounded memory tiles of tile_size x tile_size. Uses\u2026",
       "_origin": "ast",
       "community": 128,
       "community_name": "ImageMatrix",
       "file_type": "rationale",
-      "norm_label": "sub-pixel geometric rescaling and aspect ratio preserver.",
+      "norm_label": "convolves an image in bounded memory tiles of tile_size x tile_size. uses...",
       "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L365"
-    },
-    {
-      "id": "scripts_image_vision_nucleus_engine_rationale_371",
-      "label": "High-precision bilinear interpolation rescaling. Maps target pixel centers\u2026",
-      "_origin": "ast",
-      "community": 128,
-      "community_name": "ImageMatrix",
-      "file_type": "rationale",
-      "norm_label": "high-precision bilinear interpolation rescaling. maps target pixel centers...",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L371"
-    },
-    {
-      "id": "scripts_image_vision_nucleus_engine_rationale_415",
-      "label": "Scales image while strictly preserving native aspect ratio, padding the\u2026",
-      "_origin": "ast",
-      "community": 128,
-      "community_name": "ImageMatrix",
-      "file_type": "rationale",
-      "norm_label": "scales image while strictly preserving native aspect ratio, padding the...",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L415"
+      "source_location": "L626"
     },
     {
       "id": "scripts_image_vision_nucleus_engine_rationale_71",
@@ -6208,7 +6282,7 @@
       "label": "Standard-compliant color space transformation algorithms.",
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "rationale",
       "norm_label": "standard-compliant color space transformation algorithms.",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -6219,7 +6293,7 @@
       "label": "Weighted luminosity grayscale conversion. - BT.601 (SDTV/OpenCV default): Y =\u2026",
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "rationale",
       "norm_label": "weighted luminosity grayscale conversion. - bt.601 (sdtv/opencv default): y =...",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -6230,7 +6304,7 @@
       "label": "Converts RGB [0..255] to HSV (Hue in [0..360), Saturation in [0..1], Value in\u2026",
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "rationale",
       "norm_label": "converts rgb [0..255] to hsv (hue in [0..360), saturation in [0..1], value in...",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -6241,7 +6315,7 @@
       "label": "Converts HSV (Hue [0..360), Saturation [0..1], Value [0..1]) back to RGB\u2026",
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "rationale",
       "norm_label": "converts hsv (hue [0..360), saturation [0..1], value [0..1]) back to rgb...",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -6252,7 +6326,7 @@
       "label": "Converts RGB [0..255] to ITU-R BT.601 YCbCr digital video standard.",
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "rationale",
       "norm_label": "converts rgb [0..255] to itu-r bt.601 ycbcr digital video standard.",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -6263,7 +6337,7 @@
       "label": "Converts ITU-R BT.601 YCbCr back to RGB [0..255].",
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "rationale",
       "norm_label": "converts itu-r bt.601 ycbcr back to rgb [0..255].",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -6274,40 +6348,84 @@
       "label": "image_vision_nucleus_engine.py",
       "_origin": "ast",
       "community": 131,
-      "community_name": "run_tests",
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": "image_vision_nucleus_engine.py",
       "source_file": "scripts/image_vision_nucleus_engine.py",
       "source_location": "L1"
     },
     {
-      "id": "scripts_image_vision_nucleus_engine_rationale_662",
-      "label": "Base executable node in a generative AI visual DAG.",
-      "_origin": "ast",
-      "community": 131,
-      "community_name": "run_tests",
-      "file_type": "rationale",
-      "norm_label": "base executable node in a generative ai visual dag.",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L662"
-    },
-    {
       "id": "scripts_image_vision_nucleus_engine_py_any",
       "label": "Any",
       "_origin": "ast",
-      "community": 132,
-      "community_name": "Any",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": "any",
       "source_file": "",
       "source_location": ""
     },
     {
+      "id": "scripts_image_vision_nucleus_engine_rationale_615",
+      "label": "Demand-driven tile chunking pipeline for low-memory image processing. Executes\u2026",
+      "_origin": "ast",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
+      "file_type": "rationale",
+      "norm_label": "demand-driven tile chunking pipeline for low-memory image processing. executes...",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L615"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_rationale_662",
+      "label": "Base executable node in a generative AI visual DAG.",
+      "_origin": "ast",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
+      "file_type": "rationale",
+      "norm_label": "base executable node in a generative ai visual dag.",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L662"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_rationale_365",
+      "label": "Sub-pixel Geometric Rescaling and Aspect Ratio Preserver.",
+      "_origin": "ast",
+      "community": 132,
+      "community_name": ".letterbox_aspect_preserver",
+      "file_type": "rationale",
+      "norm_label": "sub-pixel geometric rescaling and aspect ratio preserver.",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L365"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_rationale_371",
+      "label": "High-precision bilinear interpolation rescaling. Maps target pixel centers\u2026",
+      "_origin": "ast",
+      "community": 132,
+      "community_name": ".letterbox_aspect_preserver",
+      "file_type": "rationale",
+      "norm_label": "high-precision bilinear interpolation rescaling. maps target pixel centers...",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L371"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_rationale_415",
+      "label": "Scales image while strictly preserving native aspect ratio, padding the\u2026",
+      "_origin": "ast",
+      "community": 132,
+      "community_name": ".letterbox_aspect_preserver",
+      "file_type": "rationale",
+      "norm_label": "scales image while strictly preserving native aspect ratio, padding the...",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L415"
+    },
+    {
       "id": "scripts_image_vision_nucleus_engine_rationale_459",
       "label": "Maps a bounding box (x, y, w, h) from letterboxed space back to native source\u2026",
       "_origin": "ast",
       "community": 132,
-      "community_name": "Any",
+      "community_name": ".letterbox_aspect_preserver",
       "file_type": "rationale",
       "norm_label": "maps a bounding box (x, y, w, h) from letterboxed space back to native source...",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -7493,6 +7611,17 @@
       "source_location": "L7"
     },
     {
+      "id": "goblix_public_app_my_list",
+      "label": "MY_LIST",
+      "_origin": "ast",
+      "community": 161,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "my_list",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L14"
+    },
+    {
       "id": "goblix_public_app_watch_progress",
       "label": "WATCH_PROGRESS",
       "_origin": "ast",
@@ -8138,28 +8267,6 @@
       "norm_label": "scrapes tmdb for official 1920x1080 cinematic backdrop",
       "source_file": "scripts/fetch_imdb_metadata.py",
       "source_location": "L40"
-    },
-    {
-      "id": "scripts_image_vision_nucleus_engine_rationale_615",
-      "label": "Demand-driven tile chunking pipeline for low-memory image processing. Executes\u2026",
-      "_origin": "ast",
-      "community": 179,
-      "community_name": ".process_tiled_convolution",
-      "file_type": "rationale",
-      "norm_label": "demand-driven tile chunking pipeline for low-memory image processing. executes...",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L615"
-    },
-    {
-      "id": "scripts_image_vision_nucleus_engine_rationale_626",
-      "label": "Convolves an image in bounded memory tiles of tile_size x tile_size. Uses\u2026",
-      "_origin": "ast",
-      "community": 179,
-      "community_name": ".process_tiled_convolution",
-      "file_type": "rationale",
-      "norm_label": "convolves an image in bounded memory tiles of tile_size x tile_size. uses...",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L626"
     },
     {
       "id": "learning_neurons_n036_fullstack_product_synthesizer",
@@ -18261,42 +18368,6 @@
   "links": [
     {
       "source": "goblix_public_app_checkauthsession",
-      "target": "goblix_public_app_gettoken",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "goblix/public/app.js",
-      "source_location": "L48",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_public_app_checkauthsession",
-      "target": "goblix_public_app_getlocalprogress",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "goblix/public/app.js",
-      "source_location": "L49",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_public_app_checkauthsession",
-      "target": "goblix_public_app_updatenavbarauth",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "goblix/public/app.js",
-      "source_location": "L53",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_public_app_checkauthsession",
       "target": "goblix_public_app_fetchserverwatchprogress",
       "relation": "calls",
       "_origin": "ast",
@@ -18304,7 +18375,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L64",
+      "source_location": "L100",
       "weight": 1.0
     },
     {
@@ -18316,7 +18387,79 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L66",
+      "source_location": "L102",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app_checkauthsession",
+      "target": "goblix_public_app_gettoken",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L83",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app_checkauthsession",
+      "target": "goblix_public_app_getlocalprogress",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L84",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app_checkauthsession",
+      "target": "goblix_public_app_loadmylist",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L85",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app_checkauthsession",
+      "target": "goblix_public_app_updatenavbarauth",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L89",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app_clearsearch",
+      "target": "goblix_public_app_togglesearchinput",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L237",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app_clearsearch",
+      "target": "goblix_public_app_renderhomepage",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L238",
       "weight": 1.0
     },
     {
@@ -18328,7 +18471,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L76",
+      "source_location": "L112",
       "weight": 1.0
     },
     {
@@ -18340,7 +18483,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L131",
+      "source_location": "L174",
       "weight": 1.0
     },
     {
@@ -18352,7 +18495,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L133",
+      "source_location": "L176",
       "weight": 1.0
     },
     {
@@ -18364,7 +18507,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L134",
+      "source_location": "L177",
       "weight": 1.0
     },
     {
@@ -18376,7 +18519,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L188",
+      "source_location": "L352",
       "weight": 1.0
     },
     {
@@ -18388,7 +18531,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L192",
+      "source_location": "L356",
       "weight": 1.0
     },
     {
@@ -18400,7 +18543,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L195",
+      "source_location": "L359",
       "weight": 1.0
     },
     {
@@ -18412,7 +18555,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L198",
+      "source_location": "L362",
       "weight": 1.0
     },
     {
@@ -18424,7 +18567,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L200",
+      "source_location": "L364",
       "weight": 1.0
     },
     {
@@ -18436,7 +18579,43 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L202",
+      "source_location": "L366",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app_handlesearchquery",
+      "target": "goblix_public_app_navigateto",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L227",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app_handlesearchquery",
+      "target": "goblix_public_app_renderhomepage",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L229",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app_loadmylist",
+      "target": "goblix_public_app_updatemylistbadge",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L58",
       "weight": 1.0
     },
     {
@@ -18448,7 +18627,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L161",
+      "source_location": "L312",
       "weight": 1.0
     },
     {
@@ -18460,7 +18639,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L254",
+      "source_location": "L447",
       "weight": 1.0
     },
     {
@@ -18472,7 +18651,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L369",
+      "source_location": "L597",
       "weight": 1.0
     },
     {
@@ -18484,7 +18663,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L482",
+      "source_location": "L711",
       "weight": 1.0
     },
     {
@@ -18496,7 +18675,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L35",
+      "source_location": "L40",
       "weight": 1.0
     },
     {
@@ -18508,7 +18687,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L90",
+      "source_location": "L126",
       "weight": 1.0
     },
     {
@@ -18520,7 +18699,31 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L91",
+      "source_location": "L127",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app_setcategoryfilter",
+      "target": "goblix_public_app_navigateto",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L247",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app_setcategoryfilter",
+      "target": "goblix_public_app_renderhomepage",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L249",
       "weight": 1.0
     },
     {
@@ -18532,7 +18735,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L635",
+      "source_location": "L863",
       "weight": 1.0
     },
     {
@@ -18544,7 +18747,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L637",
+      "source_location": "L865",
       "weight": 1.0
     },
     {
@@ -18556,7 +18759,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L638",
+      "source_location": "L866",
       "weight": 1.0
     },
     {
@@ -18568,7 +18771,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L639",
+      "source_location": "L867",
       "weight": 1.0
     },
     {
@@ -18580,7 +18783,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L674",
+      "source_location": "L902",
       "weight": 1.0
     },
     {
@@ -18592,7 +18795,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L676",
+      "source_location": "L904",
       "weight": 1.0
     },
     {
@@ -18604,7 +18807,31 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "goblix/public/app.js",
-      "source_location": "L677",
+      "source_location": "L905",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app_togglemylist",
+      "target": "goblix_public_app_updatemylistbadge",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app_togglemylist",
+      "target": "goblix_public_app_renderhomepage",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "goblix/public/app.js",
+      "source_location": "L78",
       "weight": 1.0
     },
     {
@@ -23290,29 +23517,29 @@
     },
     {
       "source": "goblix_public_app",
-      "target": "goblix_public_app_updatenavbarauth",
+      "target": "goblix_public_app_fetchserverwatchprogress",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/app.js",
-      "source_location": "L105",
+      "source_location": "L111",
       "weight": 1.0
     },
     {
       "source": "goblix_public_app",
-      "target": "goblix_public_app_handlelogout",
+      "target": "goblix_public_app_saveserverwatchprogress",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/app.js",
-      "source_location": "L130",
+      "source_location": "L125",
       "weight": 1.0
     },
     {
       "source": "goblix_public_app",
-      "target": "goblix_public_app_gettoken",
+      "target": "goblix_public_app_my_list",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -23323,35 +23550,68 @@
     },
     {
       "source": "goblix_public_app",
+      "target": "goblix_public_app_updatenavbarauth",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L141",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_handlelogout",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L173",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
       "target": "goblix_public_app_fetchmovies",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/app.js",
-      "source_location": "L140",
+      "source_location": "L183",
       "weight": 1.0
     },
     {
       "source": "goblix_public_app",
-      "target": "goblix_public_app_navigateto",
+      "target": "goblix_public_app_gettoken",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/app.js",
-      "source_location": "L155",
+      "source_location": "L19",
       "weight": 1.0
     },
     {
       "source": "goblix_public_app",
-      "target": "goblix_public_app_handleroute",
+      "target": "goblix_public_app_togglesearchinput",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/app.js",
-      "source_location": "L172",
+      "source_location": "L195",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_handlesearchquery",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L218",
       "weight": 1.0
     },
     {
@@ -23362,18 +23622,51 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/app.js",
-      "source_location": "L18",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
       "source": "goblix_public_app",
-      "target": "goblix_public_app_renderhomepage",
+      "target": "goblix_public_app_clearsearch",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/app.js",
-      "source_location": "L213",
+      "source_location": "L233",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_setcategoryfilter",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L241",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_showmylistmodal",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L253",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_navigateto",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L306",
       "weight": 1.0
     },
     {
@@ -23384,18 +23677,29 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/app.js",
-      "source_location": "L26",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
       "source": "goblix_public_app",
-      "target": "goblix_public_app_rendermoviedetailpage",
+      "target": "goblix_public_app_handleroute",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/app.js",
-      "source_location": "L321",
+      "source_location": "L336",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_renderhomepage",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L377",
       "weight": 1.0
     },
     {
@@ -23406,7 +23710,40 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/app.js",
-      "source_location": "L34",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_loadmylist",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_rendermoviedetailpage",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L548",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_updatemylistbadge",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L61",
       "weight": 1.0
     },
     {
@@ -23417,106 +23754,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/app.js",
-      "source_location": "L393",
+      "source_location": "L626",
       "weight": 1.0
     },
     {
       "source": "goblix_public_app",
-      "target": "goblix_public_app_checkauthsession",
+      "target": "goblix_public_app_togglemylist",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/app.js",
-      "source_location": "L47",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_public_app",
-      "target": "goblix_public_app_changespeed",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "goblix/public/app.js",
-      "source_location": "L496",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_public_app",
-      "target": "goblix_public_app_changequality",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "goblix/public/app.js",
-      "source_location": "L501",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_public_app",
-      "target": "goblix_public_app_togglepip",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "goblix/public/app.js",
-      "source_location": "L512",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_public_app",
-      "target": "goblix_public_app_formattime",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "goblix/public/app.js",
-      "source_location": "L522",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_public_app",
-      "target": "goblix_public_app_renderloginpage",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "goblix/public/app.js",
-      "source_location": "L530",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_public_app",
-      "target": "goblix_public_app_renderregisterpage",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "goblix/public/app.js",
-      "source_location": "L569",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_public_app",
-      "target": "goblix_public_app_submitlogin",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "goblix/public/app.js",
-      "source_location": "L615",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_public_app",
-      "target": "goblix_public_app_submitregister",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "goblix/public/app.js",
-      "source_location": "L653",
+      "source_location": "L68",
       "weight": 1.0
     },
     {
@@ -23532,13 +23781,68 @@
     },
     {
       "source": "goblix_public_app",
-      "target": "goblix_public_app_fetchserverwatchprogress",
+      "target": "goblix_public_app_changespeed",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/app.js",
-      "source_location": "L75",
+      "source_location": "L725",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_changequality",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L730",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_togglepip",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L740",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_formattime",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L750",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_renderloginpage",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L758",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_renderregisterpage",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L797",
       "weight": 1.0
     },
     {
@@ -23554,13 +23858,35 @@
     },
     {
       "source": "goblix_public_app",
-      "target": "goblix_public_app_saveserverwatchprogress",
+      "target": "goblix_public_app_checkauthsession",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/public/app.js",
-      "source_location": "L89",
+      "source_location": "L82",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_submitlogin",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L843",
+      "weight": 1.0
+    },
+    {
+      "source": "goblix_public_app",
+      "target": "goblix_public_app_submitregister",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "goblix/public/app.js",
+      "source_location": "L881",
       "weight": 1.0
     },
     {
@@ -37442,5 +37768,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "96cfae06e8fccef88df91c492e840fef56836784"
+  "built_at_commit": "2f01d5f4bd4bbc6231217c6d5cfd86e72f042aa0"
 }
