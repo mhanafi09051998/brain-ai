@@ -7,11 +7,12 @@ import { state, setToken, loadLocalProgress, loadMyList, toggleMyList as stateTo
 import { fetchMovies, checkAuthSession } from './api.js';
 import { toggleSubtitle as subToggle } from './subtitle.js';
 import { changeSpeed as plChangeSpeed, changeQuality as plChangeQuality, togglePiP as plTogglePiP } from './player.js';
-import { renderHomePage, renderMovieDetailPage, renderWatchPage } from './views.js';
+import { renderHomePage, renderMovieDetailPage, renderWatchPage, showMovieModal } from './views.js';
 import { renderLoginPage, renderRegisterPage, showMyListModal as authShowMyList } from './auth_views.js';
 
 // --- Global Window Bindings for Inline HTML Event Handlers ---
 window.navigateTo = navigateTo;
+window.showMovieModal = showMovieModal;
 window.setCategoryFilter = setCategoryFilter;
 window.toggleSearchInput = toggleSearchInput;
 window.handleSearchQuery = handleSearchQuery;
