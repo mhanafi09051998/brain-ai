@@ -1366,5 +1366,17 @@
     "seen": 1787638269.817777,
     "ast_hash": "c487f0eedfaf499664348211fe78285b",
     "semantic_hash": ""
+  },
+  "data/swot_case_studies.json": {
+    "mtime": 1787638350.8607678,
+    "seen": 1787638368.3408637,
+    "ast_hash": "0efaa982b6b77095baf01d1dbd37d68c",
+    "semantic_hash": ""
+  },
+  "scripts/ingest_swot_knowledge.py": {
+    "mtime": 1787638356.2268715,
+    "seen": 1787638368.3408637,
+    "ast_hash": "980e50fee4f07779d628471d2da94751",
+    "semantic_hash": ""
   }
 }
