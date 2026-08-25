@@ -110,15 +110,20 @@ def calc_indicators(candles):
     curr = closes[-1]
     bull_fvg = bear_fvg = False
     fvg_zone = ""
+    fvg_top = fvg_bottom = None
     for i in range(len(candles)-10, len(candles)-1):
         if candles[i]["low"] > candles[i-2]["high"] and (candles[i]["low"] - candles[i-2]["high"] > 0.2 * atr):
-            if curr <= candles[i]["low"] + (0.2 * atr):
+            fvg_top = candles[i]["low"]
+            fvg_bottom = candles[i-2]["high"]
+            fvg_zone = f"${fvg_bottom:.2f} - ${fvg_top:.2f}"
+            if curr <= fvg_top + (0.2 * atr):
                 bull_fvg = True
-                fvg_zone = f"${candles[i-2]['high']:.2f} - ${candles[i]['low']:.2f}"
         if candles[i]["high"] < candles[i-2]["low"] and (candles[i-2]["low"] - candles[i]["high"] > 0.2 * atr):
-            if curr >= candles[i]["high"] - (0.2 * atr):
+            fvg_top = candles[i-2]["low"]
+            fvg_bottom = candles[i]["high"]
+            fvg_zone = f"${fvg_bottom:.2f} - ${fvg_top:.2f}"
+            if curr >= fvg_bottom - (0.2 * atr):
                 bear_fvg = True
-                fvg_zone = f"${candles[i]['high']:.2f} - ${candles[i-2]['low']:.2f}"
             
     return {
         "price": curr,
@@ -128,7 +133,9 @@ def calc_indicators(candles):
         "atr": atr,
         "bullish_fvg": bull_fvg,
         "bearish_fvg": bear_fvg,
-        "fvg_zone": fvg_zone
+        "fvg_zone": fvg_zone,
+        "fvg_top": fvg_top,
+        "fvg_bottom": fvg_bottom
     }
 
 # ==========================================
@@ -204,6 +211,19 @@ def scan_asset(asset):
         tp1 = round(price - (3.0 * atr), 2)
         tp2 = round(price - (4.5 * atr), 2)
 
+    limit_plan = ""
+    if ind.get("fvg_top") and ind.get("fvg_bottom"):
+        if is_bull:
+            l_entry = ind["fvg_top"]
+            l_sl = ind["fvg_bottom"] - (0.5 * atr)
+            l_tp = l_entry + (3.0 * atr)
+            limit_plan = f"\n\n<b>[ Limit Order Plan ]</b>\n🛒 <b>Buy Limit:</b> <code>{l_entry:.2f}</code>\n🛑 <b>SL (Luar Zona):</b> <code>{l_sl:.2f}</code>\n🏆 <b>TP (1:3):</b> <code>{l_tp:.2f}</code>"
+        else:
+            l_entry = ind["fvg_bottom"]
+            l_sl = ind["fvg_top"] + (0.5 * atr)
+            l_tp = l_entry - (3.0 * atr)
+            limit_plan = f"\n\n<b>[ Limit Order Plan ]</b>\n🛒 <b>Sell Limit:</b> <code>{l_entry:.2f}</code>\n🛑 <b>SL (Luar Zona):</b> <code>{l_sl:.2f}</code>\n🏆 <b>TP (1:3):</b> <code>{l_tp:.2f}</code>"
+
     msg_template = f"""🌟 <b>Market Radar {asset['id']} (M15)</b>
 ━━━━━━━━━━━━━━━━━━━━
 🪙 <b>Pair:</b> <code>{asset['pair']}</code>
@@ -216,11 +236,10 @@ def scan_asset(asset):
 <b>[ Parameter Checklist ]</b>
 {check_txt}
 
-<b>[ Action Plan ]</b>
-🎯 <b>Entry:</b> <code>{price:.2f}</code>
+<b>[ Market Execution Plan ]</b>
+🎯 <b>Entry Sekarang:</b> <code>{price:.2f}</code>
 🛑 <b>SL:</b> <code>{sl:.2f}</code>
-🏆 <b>TP1 (1:3):</b> <code>{tp1:.2f}</code>
-🚀 <b>TP2 (1:4.5):</b> <code>{tp2:.2f}</code>
+🏆 <b>TP1:</b> <code>{tp1:.2f}</code>{limit_plan}
 ━━━━━━━━━━━━━━━━━━━━"""
 
     if score < 4:
