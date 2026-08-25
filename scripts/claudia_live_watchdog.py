@@ -53,9 +53,7 @@ TIINGO_TOKEN = "a1f5ac2a8a2a5917da307ec4035815397fa97fc4"
 
 def fetch_klines_tiingo(ticker: str):
     """Fetch 15m candles from Tiingo FX"""
-    import datetime
-    start = (datetime.datetime.now() - datetime.timedelta(days=4)).strftime('%Y-%m-%d')
-    url = f"https://api.tiingo.com/tiingo/fx/prices?tickers={ticker}&resampleFreq=15min&startDate={start}&token={TIINGO_TOKEN}"
+    url = f"https://api.tiingo.com/tiingo/fx/prices?tickers={ticker}&resampleFreq=15min&token={TIINGO_TOKEN}"
     try:
         req = urllib.request.Request(url, headers={"User-Agent": "Claudia/5.0"})
         with urllib.request.urlopen(req, timeout=10) as resp:
@@ -158,9 +156,7 @@ def calc_indicators(candles):
 # SCAN LOGIC
 # ==========================================
 ASSETS = [
-    {"id": "GOLD", "pair": "XAUUSD", "source": "tiingo", "ticker": "xauusd"},
-    {"id": "SILVER", "pair": "XAGUSD", "source": "tiingo", "ticker": "xagusd"},
-    {"id": "OIL", "pair": "WTI (Crude)", "source": "yahoo", "ticker": "CL=F"}
+    {"id": "GOLD", "pair": "XAUUSD", "source": "tiingo", "ticker": "xauusd"}
 ]
 
 def scan_asset(asset):
