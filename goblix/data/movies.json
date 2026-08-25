@@ -30,6 +30,36 @@
     "subtitleUrl": "/api/subtitles/top-gun-maverick"
   },
   {
+    "id": "john-wick-chapter-4",
+    "slug": "john-wick-chapter-4",
+    "imdbId": "tt10366206",
+    "title": "John Wick: Chapter 4 (2023)",
+    "year": 2023,
+    "duration": "2 Jam 49 Menit",
+    "ageRating": "17+",
+    "matchScore": "98%",
+    "quality": "1080p BluRay",
+    "audio": "Dolby AAC 5.1",
+    "subtitle": "Bahasa Indonesia (Resmi)",
+    "genres": [
+      "Action",
+      "Thriller",
+      "Crime"
+    ],
+    "poster": "https://m.media-amazon.com/images/M/MV5BN2RjZDJhYzUtOTQ5Yy00OWM3LWE5OTctM2Y0NDVmNzAzODMyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/original/h8gHn0OzBoaefW7AtBqWj0ALTq4.jpg",
+    "synopsis": "John Wick mengungkap jalan untuk mengalahkan High Table. Namun sebelum dia bisa mendapatkan kebebasannya, Wick harus berhadapan dengan musuh baru dengan aliansi kuat di seluruh dunia.",
+    "director": "Chad Stahelski",
+    "cast": [
+      "Keanu Reeves",
+      "Donnie Yen",
+      "Bill Skarsgård",
+      "Laurence Fishburne"
+    ],
+    "streamUrl": "/stream/john-wick-chapter-4.mp4",
+    "subtitleUrl": "/api/subtitles/john-wick-chapter-4"
+  },
+  {
     "id": "x-men-first-class",
     "slug": "x-men-first-class",
     "imdbId": "tt1270798",
@@ -58,5 +88,35 @@
     ],
     "streamUrl": "/stream/x-men-first-class.mp4",
     "subtitleUrl": "/api/subtitles/x-men-first-class"
+  },
+  {
+    "id": "glass-onion-a-knives-out-mystery",
+    "slug": "glass-onion-a-knives-out-mystery",
+    "imdbId": "tt11564570",
+    "title": "Glass Onion: A Knives Out Mystery (2022)",
+    "year": 2022,
+    "duration": "2 Jam 19 Menit",
+    "ageRating": "13+",
+    "matchScore": "96%",
+    "quality": "1080p BluRay",
+    "audio": "Dolby AAC 5.1",
+    "subtitle": "Bahasa Indonesia (Resmi)",
+    "genres": [
+      "Mystery",
+      "Comedy",
+      "Drama"
+    ],
+    "poster": "https://m.media-amazon.com/images/M/MV5BYmZkOTU4NzItOTY1MS00YjBhLWE1YzMtNGJUY2VhNjE3NjhhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/original/bKxiLRP0Qm2JwBh0PbpTRJKhZy5.jpg",
+    "synopsis": "Detektif ulung Benoit Blanc melakukan perjalanan ke Yunani untuk mengungkap misteri berlapis seputar miliarder teknologi Miles Bron dan kelompok temannya yang penuh rahasia.",
+    "director": "Rian Johnson",
+    "cast": [
+      "Daniel Craig",
+      "Edward Norton",
+      "Janelle Monáe",
+      "Kate Hudson"
+    ],
+    "streamUrl": "/stream/glass-onion-a-knives-out-mystery.mp4",
+    "subtitleUrl": "/api/subtitles/glass-onion-a-knives-out-mystery"
   }
 ]
