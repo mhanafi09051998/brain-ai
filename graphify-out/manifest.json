@@ -648,9 +648,9 @@
     "semantic_hash": ""
   },
   "scripts/learn_index.html": {
-    "mtime": 1787638420.6108162,
-    "seen": 1787638442.6573446,
-    "ast_hash": "5e43338d2e0600ed823e2cfa033d26e3",
+    "mtime": 1787650909.346355,
+    "seen": 1787650929.0683792,
+    "ast_hash": "3fa4e01471dc0cc71bdf6450d4caded8",
     "semantic_hash": ""
   },
   "scripts/parallel_runner.py": {
@@ -762,9 +762,9 @@
     "semantic_hash": "cb21fd401e963732d8084db1bbcaf219"
   },
   "scripts/build_learn_ui.py": {
-    "mtime": 1787638417.7506022,
-    "seen": 1787638442.6568089,
-    "ast_hash": "2c0294b3474f0dcc536cbd1d86d55c85",
+    "mtime": 1787650906.3971217,
+    "seen": 1787650929.0678458,
+    "ast_hash": "7713056347e3eb67c3f7fc4882f30625",
     "semantic_hash": ""
   },
   "scripts/build_neural_mesh_ui.py": {
@@ -1572,9 +1572,9 @@
     "semantic_hash": ""
   },
   "goblix/package.json": {
-    "mtime": 1787650476.4518833,
-    "seen": 1787650506.5660834,
-    "ast_hash": "836fc25d5ce70ba7ba56f059f1561b7e",
+    "mtime": 1787650888.9757218,
+    "seen": 1787650929.0678458,
+    "ast_hash": "ad3e4377964b27a61c8299656706320c",
     "semantic_hash": ""
   }
 }

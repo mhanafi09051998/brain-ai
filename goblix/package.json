@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "build": "node -e \"console.log('[PROD BUILD] Goblix Zero-Bloat Modular Build Verified: All assets synced & ready for production streaming!')\"",
-    "restart": "pm2 restart zolu-movie",
+    "restart": "pm2 restart goblix",
     "test": "node ../scripts/test_brain.py"
   },
   "keywords": [
