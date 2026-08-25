@@ -13,7 +13,7 @@ const { streamVideoFile } = require('./src/streamer');
 const { getUsersDB, saveUsersDB, hashPassword, generateToken, getAuthUser } = require('./src/auth');
 const { serveSanitizedSubtitle } = require('./src/subtitles');
 
-const PORT = process.env.PORT || 3016;
+const PORT = process.env.PORT || 3070;
 const PUBLIC_DIR = path.join(__dirname, 'public');
 const MOVIES_FILE = path.join(__dirname, 'data', 'movies.json');
 
