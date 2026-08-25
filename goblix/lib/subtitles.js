@@ -1,17 +1,8 @@
 import fs from 'fs';
 import path from 'path';
+import { SUBTITLE_CONFIG } from '@/config/global.config';
 
-const FORBIDDEN_WORDS = [
-  rString('\\bslot\\b'), rString('\\bjudi\\b'), rString('\\bgacor\\b'), rString('\\bpoker\\b'),
-  rString('\\bdeposit\\b'), rString('\\bbonus\\b'), rString('\\b1xbet\\b'), rString('\\bsbobet\\b'),
-  rString('\\bmaxwin\\b'), rString('\\bpragmatic\\b'), rString('\\bzeus\\b'), rString('link alternatif'),
-  rString('\\bpromo\\b'), rString('\\bagen\\b'), rString('official website'), rString('t\\.me/'),
-  rString('bit\\.ly/')
-];
-
-function rString(pattern) {
-  return new RegExp(pattern, 'i');
-}
+const regexPatterns = SUBTITLE_CONFIG.forbiddenPatterns.map(p => new RegExp(p, 'i'));
 
 export function sanitizeWebVTT(rawText) {
   const lines = rawText.split(/\r?\n/);
@@ -27,16 +18,25 @@ export function sanitizeWebVTT(rawText) {
       isHeader = false;
     }
 
-    const isSpam = FORBIDDEN_WORDS.some(pattern => pattern.test(line));
-    if (isSpam) {
+    // Filter duplicate static banners or spam words
+    const isSpam = regexPatterns.some(pattern => pattern.test(line));
+    const isDuplicateBanner = line.includes('GOBLIX NONTON FILM') || line.includes('00:00:02.000 --> 00:00:07.000');
+
+    if (isSpam || isDuplicateBanner) {
       cleanLines.push('');
     } else {
       cleanLines.push(line);
     }
   }
 
-  const openingBanner = `WEBVTT - Goblix Cinema Subtitle Track\n\n1\n00:00:02.000 --> 00:00:07.000\nGOBLIX NONTON FILM LUAR NEGERI GRATIS\n\n`;
-  return openingBanner + cleanLines.join('\n');
+  const { headerText, openingBanner } = SUBTITLE_CONFIG;
+  let bannerBlock = `${headerText}\n\n`;
+
+  if (openingBanner && openingBanner.enabled) {
+    bannerBlock += `${openingBanner.cueNumber || 1}\n${openingBanner.startTime} --> ${openingBanner.endTime}\n${openingBanner.text}\n\n`;
+  }
+
+  return bannerBlock + cleanLines.join('\n').replace(/^\n+/, '');
 }
 
 export function getSubtitlePath(slug) {
