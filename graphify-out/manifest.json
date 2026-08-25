@@ -1704,9 +1704,9 @@
     "semantic_hash": ""
   },
   "goblix/app/page.js": {
-    "mtime": 1787651643.505938,
-    "seen": 1787651930.1366177,
-    "ast_hash": "6bb2a646c16e5d6599bbb95dbdf187fd",
+    "mtime": 1787652102.8539019,
+    "seen": 1787652132.4667673,
+    "ast_hash": "18a25401e28ce41444f2c804615dc99d",
     "semantic_hash": ""
   },
   "goblix/app/watch/[slug]/page.js": {
@@ -1746,9 +1746,9 @@
     "semantic_hash": ""
   },
   "goblix/components/MovieGrid.js": {
-    "mtime": 1787651609.5587447,
-    "seen": 1787651930.1366177,
-    "ast_hash": "eec73ce21c4bc1a978fc390f9a079ea8",
+    "mtime": 1787652100.2780993,
+    "seen": 1787652132.4667673,
+    "ast_hash": "b18b1c00ef8d54385f5722b1674a2559",
     "semantic_hash": ""
   },
   "goblix/components/MoviePreviewModal.js": {
