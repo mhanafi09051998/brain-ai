@@ -35,35 +35,29 @@ export function renderHomePage() {
   }
 
   const categories = [
-    { id: 'all', label: 'Semua Koleksi' },
-    { id: 'Action', label: 'Koleksi Aksi (Top Gun, John Wick)' },
-    { id: 'Sci-Fi', label: 'Koleksi Mutan & Sci-Fi' },
-    { id: 'Mystery', label: 'Koleksi Misteri & Detektif' },
-    { id: 'Adventure', label: 'Koleksi Petualangan' },
-    { id: 'Drama', label: 'Koleksi Drama' }
+    { id: 'all', label: 'Semua Genre' },
+    { id: 'Action', label: 'Action' },
+    { id: 'Adventure', label: 'Adventure' },
+    { id: 'Comedy', label: 'Comedy' },
+    { id: 'Crime', label: 'Crime' },
+    { id: 'Drama', label: 'Drama' },
+    { id: 'Mystery', label: 'Mystery' },
+    { id: 'Sci-Fi', label: 'Sci-Fi' },
+    { id: 'Thriller', label: 'Thriller' },
+    { id: 'Animation', label: 'Animation' },
+    { id: 'Horror', label: 'Horror' },
+    { id: 'Romance', label: 'Romance' }
   ];
 
-  let collectionTitle = 'Koleksi Film Box Office & Blockbuster Terpopuler';
+  let collectionTitle = 'Koleksi Film Pilihan';
   let collectionBadge = 'Trending di Indonesia';
 
   if (state.searchQuery) {
     collectionTitle = `Hasil Pencarian: "${state.searchQuery}"`;
     collectionBadge = 'Pencarian Instan';
-  } else if (state.activeCategory === 'Action') {
-    collectionTitle = 'Koleksi Aksi & Pilot Tempur (Top Gun, John Wick)';
-    collectionBadge = 'Populer di Indonesia';
-  } else if (state.activeCategory === 'Sci-Fi' || state.activeCategory === 'Superhero') {
-    collectionTitle = 'Koleksi Mutan & Marvel Universe (X-Men)';
-    collectionBadge = 'Pilihan Editor';
-  } else if (state.activeCategory === 'Mystery' || state.activeCategory === 'Crime') {
-    collectionTitle = 'Koleksi Misteri & Detektif (Glass Onion, Knives Out)';
-    collectionBadge = 'Rekomendasi Teratas';
-  } else if (state.activeCategory === 'Adventure') {
-    collectionTitle = 'Koleksi Petualangan & Misi Berbahaya';
-    collectionBadge = 'Paling Banyak Ditonton';
-  } else if (state.activeCategory === 'Drama') {
-    collectionTitle = 'Koleksi Drama & Kisah Epik';
-    collectionBadge = 'Rating Tertinggi';
+  } else if (state.activeCategory !== 'all') {
+    collectionTitle = `Kategori: ${state.activeCategory}`;
+    collectionBadge = 'Kategori IMDb';
   }
 
   main.innerHTML = `

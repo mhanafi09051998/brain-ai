@@ -13,11 +13,10 @@
     "subtitle": "Bahasa Indonesia (Resmi)",
     "genres": [
       "Action",
-      "Drama",
-      "Adventure"
+      "Drama"
     ],
-    "poster": "https://m.media-amazon.com/images/M/MV5BMDBkZDNjMWEtOTdmMi00NmExLTg5MmMtNTFlYTJlNWY5YTdmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/original/7mWHXEmksbrkMhtkFeClzNKu7mk.jpg",
+    "poster": "/images/posters/top-gun-maverick.jpg",
+    "backdrop": "/images/backdrops/top-gun-maverick.jpg",
     "synopsis": "Setelah lebih dari tiga puluh tahun mengabdi sebagai penerbang angkatan laut terbaik, Pete 'Maverick' Mitchell harus melatih detasemen lulusan muda TOPGUN untuk misi khusus berbahaya tingkat tinggi.",
     "director": "Joseph Kosinski",
     "cast": [
@@ -43,11 +42,11 @@
     "subtitle": "Bahasa Indonesia (Resmi)",
     "genres": [
       "Action",
-      "Thriller",
-      "Crime"
+      "Crime",
+      "Thriller"
     ],
-    "poster": "https://m.media-amazon.com/images/M/MV5BN2RjZDJhYzUtOTQ5Yy00OWM3LWE5OTctM2Y0NDVmNzAzODMyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/original/h8gHn0OzBoaefW7AtBqWj0ALTq4.jpg",
+    "poster": "/images/posters/john-wick-chapter-4.jpg",
+    "backdrop": "/images/backdrops/john-wick-chapter-4.jpg",
     "synopsis": "John Wick mengungkap jalan untuk mengalahkan High Table. Namun sebelum dia bisa mendapatkan kebebasannya, Wick harus berhadapan dengan musuh baru dengan aliansi kuat di seluruh dunia.",
     "director": "Chad Stahelski",
     "cast": [
@@ -74,11 +73,10 @@
     "genres": [
       "Action",
       "Sci-Fi",
-      "Adventure",
-      "Superhero"
+      "Adventure"
     ],
-    "poster": "https://m.media-amazon.com/images/M/MV5BMTg5OTMxNzk4Nl5BMl5BanBnXkFtZTcwOTk1MjAwNQ@@._V1_FMjpg_UX1000_.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/original/gCctDK5RCPRMjgYAoV6yxNE7f93.jpg",
+    "poster": "/images/posters/x-men-first-class.jpg",
+    "backdrop": "/images/backdrops/x-men-first-class.jpg",
     "synopsis": "Di era Perang Dingin tahun 1962, Charles Xavier (Professor X) dan Erik Lehnsherr (Magneto) bekerja sama dengan CIA untuk mengumpulkan mutan muda pertama demi mencegah ancaman perang nuklir global dari Hellfire Club.",
     "director": "Matthew Vaughn",
     "cast": [
@@ -102,12 +100,14 @@
     "audio": "Dolby AAC 5.1",
     "subtitle": "Bahasa Indonesia (Resmi)",
     "genres": [
-      "Mystery",
       "Comedy",
-      "Drama"
+      "Crime",
+      "Drama",
+      "Mystery",
+      "Thriller"
     ],
-    "poster": "https://m.media-amazon.com/images/M/MV5BYmZkOTU4NzItOTY1MS00YjBhLWE1YzMtNGJUY2VhNjE3NjhhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/original/bKxiLRP0Qm2JwBh0PbpTRJKhZy5.jpg",
+    "poster": "/images/posters/glass-onion-a-knives-out-mystery.jpg",
+    "backdrop": "/images/backdrops/glass-onion-a-knives-out-mystery.jpg",
     "synopsis": "Detektif ulung Benoit Blanc melakukan perjalanan ke Yunani untuk mengungkap misteri berlapis seputar miliarder teknologi Miles Bron dan kelompok temannya yang penuh rahasia.",
     "director": "Rian Johnson",
     "cast": [
