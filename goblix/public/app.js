@@ -654,20 +654,26 @@ function renderWatchPage(slug) {
         </div>
       </header>
 
-      <!-- Main Video Stream Area (Full Theater Edge-to-Edge) -->
+      <!-- Main Video Stream Area (Full Theater Edge-to-Edge with Subtitle Overlay) -->
       <main class="relative flex-1 w-full h-full flex items-center justify-center p-0 m-0 min-h-0 overflow-hidden bg-black">
         <video id="cinemaPlayer" class="w-full h-full max-w-full max-h-full object-contain bg-black" controls playsinline preload="auto" poster="${movie.backdrop}">
           <source id="videoSource" src="${movie.streamUrl}" type="video/mp4">
           <track id="subTrack" label="Bahasa Indonesia" kind="subtitles" srclang="id" src="/sub_indo.vtt" default>
           Browser Anda tidak mendukung streaming video HTML5.
         </video>
+
+        <!-- Dynamic High-Visibility Subtitle Overlay -->
+        <div id="subOverlay" class="pointer-events-none absolute bottom-14 sm:bottom-16 md:bottom-20 inset-x-0 flex flex-col items-center justify-center px-4 text-center z-20 transition-all duration-100 select-none"></div>
       </main>
 
       <!-- Cinema Info Footer (Compact Pro Bar) -->
       <footer class="h-10 sm:h-11 bg-gray-950/95 backdrop-blur px-3 sm:px-6 border-t border-gray-800/80 flex items-center justify-between text-[11px] sm:text-xs text-gray-400 flex-shrink-0 z-30">
-        <div class="flex items-center space-x-3 sm:space-x-6 truncate">
-          <span><i class="fa-solid fa-closed-captioning text-yellow-400 text-xs mr-1"></i> Subtitle: <b class="text-gray-300">Bahasa Indonesia (Resmi)</b></span>
-          <span class="hidden md:inline"><i class="fa-solid fa-bolt text-green-400 text-xs mr-1"></i> P2P Mesh Caching: <b class="text-gray-300">Aktif</b></span>
+        <div class="flex items-center space-x-2 sm:space-x-5 truncate">
+          <button id="subToggleBtn" onclick="toggleSubtitle()" class="bg-yellow-500 text-black px-2 py-0.5 rounded font-bold border border-yellow-400 text-[10px] sm:text-xs transition cursor-pointer flex items-center space-x-1">
+            <i class="fa-solid fa-closed-captioning"></i>
+            <span>Sub Indo: ON</span>
+          </button>
+          <span class="hidden md:inline"><i class="fa-solid fa-bolt text-green-400 text-xs mr-1"></i> P2P Mesh: <b class="text-gray-300">Aktif</b></span>
           <span class="hidden lg:inline"><i class="fa-solid fa-volume-high text-cyan-400 text-xs mr-1"></i> Audio: <b class="text-gray-300">${movie.audio}</b></span>
         </div>
         <div class="flex items-center space-x-3 flex-shrink-0">
@@ -691,10 +697,29 @@ function renderWatchPage(slug) {
     </div>
   `;
 
-  // Auto-resume and playback listener
-  setTimeout(() => {
+  // Auto-resume, Subtitle Engine & playback listener
+  setTimeout(async () => {
     const vid = document.getElementById('cinemaPlayer');
     if (!vid) return;
+
+    await loadSubtitles();
+
+    if (vid.textTracks && vid.textTracks[0]) {
+      vid.textTracks[0].mode = "showing";
+    }
+
+    vid.addEventListener('timeupdate', () => {
+      if (!SUBTITLE_ENABLED) return;
+      const overlay = document.getElementById('subOverlay');
+      if (!overlay) return;
+      const ct = vid.currentTime;
+      const activeCue = SUBTITLE_CUES.find(c => ct >= c.start && ct <= c.end);
+      if (activeCue) {
+        overlay.innerHTML = `<div class="inline-block bg-black/85 backdrop-blur-sm px-3.5 sm:px-5 py-1 sm:py-1.5 rounded-md text-yellow-300 font-extrabold text-sm sm:text-base md:text-xl lg:text-2xl tracking-wide shadow-2xl border border-black/60 max-w-3xl leading-snug">${activeCue.text}</div>`;
+      } else {
+        overlay.innerHTML = '';
+      }
+    });
 
     vid.addEventListener('loadedmetadata', () => {
       if (progressInfo && progressInfo.currentTime > 5 && progressInfo.currentTime < ((vid.duration || 100) - 30)) {
@@ -720,6 +745,80 @@ function renderWatchPage(slug) {
       saveServerWatchProgress(movie.id, 0, vid.duration || 0);
     });
   }, 100);
+}
+
+let SUBTITLE_CUES = [];
+let SUBTITLE_ENABLED = true;
+
+async function loadSubtitles() {
+  try {
+    const res = await fetch('/sub_indo.vtt');
+    const text = await res.text();
+    SUBTITLE_CUES = parseWebVTT(text);
+  } catch (e) {
+    console.error('[SUBTITLE ERROR]', e);
+  }
+}
+
+function parseWebVTT(vttText) {
+  const cues = [];
+  const lines = vttText.split(/\r?\n/);
+  let currentStart = null;
+  let currentEnd = null;
+  let currentText = [];
+
+  const timeToSeconds = (tStr) => {
+    if (!tStr) return 0;
+    const parts = tStr.trim().split(':');
+    if (parts.length === 3) {
+      const [h, m, s] = parts;
+      return parseFloat(h) * 3600 + parseFloat(m) * 60 + parseFloat(s);
+    } else if (parts.length === 2) {
+      const [m, s] = parts;
+      return parseFloat(m) * 60 + parseFloat(s);
+    }
+    return 0;
+  };
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i].trim();
+    if (line.includes('-->')) {
+      const [startStr, endStr] = line.split('-->');
+      currentStart = timeToSeconds(startStr);
+      currentEnd = timeToSeconds(endStr);
+      currentText = [];
+    } else if (line === '' && currentStart !== null) {
+      if (currentText.length > 0) {
+        cues.push({
+          start: currentStart,
+          end: currentEnd,
+          text: currentText.join('<br>')
+        });
+      }
+      currentStart = null;
+      currentEnd = null;
+      currentText = [];
+    } else if (currentStart !== null && !/^\d+$/.test(line)) {
+      currentText.push(line);
+    }
+  }
+  if (currentStart !== null && currentText.length > 0) {
+    cues.push({ start: currentStart, end: currentEnd, text: currentText.join('<br>') });
+  }
+  return cues;
+}
+
+function toggleSubtitle() {
+  SUBTITLE_ENABLED = !SUBTITLE_ENABLED;
+  const overlay = document.getElementById('subOverlay');
+  if (!SUBTITLE_ENABLED && overlay) overlay.innerHTML = '';
+  const btn = document.getElementById('subToggleBtn');
+  if (btn) {
+    btn.className = SUBTITLE_ENABLED 
+      ? 'bg-yellow-500 text-black px-2 py-0.5 rounded font-bold border border-yellow-400 text-[10px] sm:text-xs transition cursor-pointer flex items-center space-x-1'
+      : 'bg-gray-800 text-gray-400 px-2 py-0.5 rounded font-semibold border border-gray-700 text-[10px] sm:text-xs transition cursor-pointer flex items-center space-x-1';
+    btn.innerHTML = `<i class="fa-solid fa-closed-captioning"></i> <span>Sub Indo: ${SUBTITLE_ENABLED ? 'ON' : 'OFF'}</span>`;
+  }
 }
 
 function changeSpeed(val) {
