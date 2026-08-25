@@ -3051,18 +3051,6 @@
       "source_location": "L8"
     },
     {
-      "id": "goblix_components_videoplayer_videoplayer",
-      "label": "VideoPlayer()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 196,
-      "community_name": "useGoblix",
-      "file_type": "code",
-      "norm_label": "videoplayer()",
-      "source_file": "goblix/components/VideoPlayer.js",
-      "source_location": "L8"
-    },
-    {
       "id": "goblix_lib_movies_getallmovies",
       "label": "getAllMovies()",
       "_callable": true,
@@ -3339,6 +3327,114 @@
       "source_location": "L744"
     },
     {
+      "id": "scripts_download_full_synced_subtitles_fetch_and_save",
+      "label": "fetch_and_save()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 208,
+      "community_name": "download_full_synced_subtitles.py",
+      "file_type": "code",
+      "norm_label": "fetch_and_save()",
+      "source_file": "scripts/download_full_synced_subtitles.py",
+      "source_location": "L98"
+    },
+    {
+      "id": "scripts_download_full_synced_subtitles_generate_full_synced_track",
+      "label": "generate_full_synced_track()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 208,
+      "community_name": "download_full_synced_subtitles.py",
+      "file_type": "code",
+      "norm_label": "generate_full_synced_track()",
+      "source_file": "scripts/download_full_synced_subtitles.py",
+      "source_location": "L94"
+    },
+    {
+      "id": "scripts_download_full_synced_subtitles_srt_to_clean_vtt",
+      "label": "srt_to_clean_vtt()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 208,
+      "community_name": "download_full_synced_subtitles.py",
+      "file_type": "code",
+      "norm_label": "srt_to_clean_vtt()",
+      "source_file": "scripts/download_full_synced_subtitles.py",
+      "source_location": "L43"
+    },
+    {
+      "id": "scripts_sanitize_and_sync_all_subs_run",
+      "label": "run()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 209,
+      "community_name": "sanitize_and_sync_all_subs.py",
+      "file_type": "code",
+      "norm_label": "run()",
+      "source_file": "scripts/sanitize_and_sync_all_subs.py",
+      "source_location": "L92"
+    },
+    {
+      "id": "scripts_sanitize_and_sync_all_subs_sanitize_and_resync_vtt",
+      "label": "sanitize_and_resync_vtt()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 209,
+      "community_name": "sanitize_and_sync_all_subs.py",
+      "file_type": "code",
+      "norm_label": "sanitize_and_resync_vtt()",
+      "source_file": "scripts/sanitize_and_sync_all_subs.py",
+      "source_location": "L21"
+    },
+    {
+      "id": "scripts_download_subtitlecat_subtitles_sanitize_srt_to_vtt",
+      "label": "sanitize_srt_to_vtt()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 210,
+      "community_name": "download_subtitlecat_subtitles.py",
+      "file_type": "code",
+      "norm_label": "sanitize_srt_to_vtt()",
+      "source_file": "scripts/download_subtitlecat_subtitles.py",
+      "source_location": "L30"
+    },
+    {
+      "id": "scripts_fetch_all_bluray_subtitles_sanitize_srt_to_vtt",
+      "label": "sanitize_srt_to_vtt()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 211,
+      "community_name": "fetch_all_bluray_subtitles.py",
+      "file_type": "code",
+      "norm_label": "sanitize_srt_to_vtt()",
+      "source_file": "scripts/fetch_all_bluray_subtitles.py",
+      "source_location": "L28"
+    },
+    {
+      "id": "scripts_fetch_official_subtitles_sanitize_srt_to_vtt",
+      "label": "sanitize_srt_to_vtt()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 212,
+      "community_name": "fetch_official_subtitles.py",
+      "file_type": "code",
+      "norm_label": "sanitize_srt_to_vtt()",
+      "source_file": "scripts/fetch_official_subtitles.py",
+      "source_location": "L28"
+    },
+    {
+      "id": "scripts_precision_fetch_subtitles_sanitize_srt_to_vtt",
+      "label": "sanitize_srt_to_vtt()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 214,
+      "community_name": "precision_fetch_subtitles.py",
+      "file_type": "code",
+      "norm_label": "sanitize_srt_to_vtt()",
+      "source_file": "scripts/precision_fetch_subtitles.py",
+      "source_location": "L29"
+    },
+    {
       "id": "ponytail_hooks_ponytail_config_getclaudedir",
       "label": "getClaudeDir()",
       "_callable": true,
@@ -3399,16 +3495,16 @@
       "source_location": "L105"
     },
     {
-      "id": "ponytail_hooks_ponytail_config_isshellsafe",
-      "label": "isShellSafe()",
+      "id": "ponytail_hooks_ponytail_config_normalizeconfigmode",
+      "label": "normalizeConfigMode()",
       "_callable": true,
       "_origin": "ast",
       "community": 22,
       "community_name": "ponytail-config.js",
       "file_type": "code",
-      "norm_label": "isshellsafe()",
+      "norm_label": "normalizeconfigmode()",
       "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L50"
+      "source_location": "L26"
     },
     {
       "id": "ponytail_scripts_uninstall_removeifexists",
@@ -3421,18 +3517,6 @@
       "norm_label": "removeifexists()",
       "source_file": "ponytail/scripts/uninstall.js",
       "source_location": "L14"
-    },
-    {
-      "id": "ponytail_hooks_ponytail_config_normalizeconfigmode",
-      "label": "normalizeConfigMode()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "index.js",
-      "file_type": "code",
-      "norm_label": "normalizeconfigmode()",
-      "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L26"
     },
     {
       "id": "ponytail_hooks_ponytail_config_normalizepersistedmode",
@@ -4249,6 +4333,18 @@
       "norm_label": "verify_math_gpqa()",
       "source_file": "scripts/official_runner_real.py",
       "source_location": "L415"
+    },
+    {
+      "id": "ponytail_hooks_ponytail_config_isshellsafe",
+      "label": "isShellSafe()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "ponytail-activate.js",
+      "file_type": "code",
+      "norm_label": "isshellsafe()",
+      "source_file": "ponytail/hooks/ponytail-config.js",
+      "source_location": "L50"
     },
     {
       "id": "scripts_graphic_design_visual_engine_iconbuilder24_cpu_neural",
@@ -12103,6 +12199,28 @@
       "source_location": "L1"
     },
     {
+      "id": "scripts_download_full_synced_subtitles",
+      "label": "download_full_synced_subtitles.py",
+      "_origin": "ast",
+      "community": 208,
+      "community_name": "download_full_synced_subtitles.py",
+      "file_type": "code",
+      "norm_label": "download_full_synced_subtitles.py",
+      "source_file": "scripts/download_full_synced_subtitles.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_sanitize_and_sync_all_subs",
+      "label": "sanitize_and_sync_all_subs.py",
+      "_origin": "ast",
+      "community": 209,
+      "community_name": "sanitize_and_sync_all_subs.py",
+      "file_type": "code",
+      "norm_label": "sanitize_and_sync_all_subs.py",
+      "source_file": "scripts/sanitize_and_sync_all_subs.py",
+      "source_location": "L1"
+    },
+    {
       "id": "learning_neurons_n050_systematic_backtesting_wfa",
       "label": "N050_systematic_backtesting_wfa.md",
       "_origin": "ast",
@@ -12319,6 +12437,124 @@
       "source_location": "L1"
     },
     {
+      "id": "scripts_download_subtitlecat_subtitles",
+      "label": "download_subtitlecat_subtitles.py",
+      "_origin": "ast",
+      "community": 210,
+      "community_name": "download_subtitlecat_subtitles.py",
+      "file_type": "code",
+      "norm_label": "download_subtitlecat_subtitles.py",
+      "source_file": "scripts/download_subtitlecat_subtitles.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_fetch_all_bluray_subtitles",
+      "label": "fetch_all_bluray_subtitles.py",
+      "_origin": "ast",
+      "community": 211,
+      "community_name": "fetch_all_bluray_subtitles.py",
+      "file_type": "code",
+      "norm_label": "fetch_all_bluray_subtitles.py",
+      "source_file": "scripts/fetch_all_bluray_subtitles.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_fetch_official_subtitles",
+      "label": "fetch_official_subtitles.py",
+      "_origin": "ast",
+      "community": 212,
+      "community_name": "fetch_official_subtitles.py",
+      "file_type": "code",
+      "norm_label": "fetch_official_subtitles.py",
+      "source_file": "scripts/fetch_official_subtitles.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_generate_goblix_intro",
+      "label": "generate_goblix_intro.sh",
+      "_origin": "ast",
+      "community": 213,
+      "community_name": "generate_goblix_intro.sh",
+      "file_type": "code",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "norm_label": "generate_goblix_intro.sh",
+      "source_file": "scripts/generate_goblix_intro.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_generate_goblix_intro_sh__entry",
+      "label": "generate_goblix_intro.sh script",
+      "_origin": "ast",
+      "community": 213,
+      "community_name": "generate_goblix_intro.sh",
+      "file_type": "code",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "norm_label": "generate_goblix_intro.sh script",
+      "source_file": "scripts/generate_goblix_intro.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_precision_fetch_subtitles",
+      "label": "precision_fetch_subtitles.py",
+      "_origin": "ast",
+      "community": 214,
+      "community_name": "precision_fetch_subtitles.py",
+      "file_type": "code",
+      "norm_label": "precision_fetch_subtitles.py",
+      "source_file": "scripts/precision_fetch_subtitles.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_search_github_subs",
+      "label": "search_github_subs.py",
+      "_origin": "ast",
+      "community": 215,
+      "community_name": "search_github_subs.py",
+      "file_type": "code",
+      "norm_label": "search_github_subs.py",
+      "source_file": "scripts/search_github_subs.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_test_det",
+      "label": "test_det.py",
+      "_origin": "ast",
+      "community": 216,
+      "community_name": "test_det.py",
+      "file_type": "code",
+      "norm_label": "test_det.py",
+      "source_file": "scripts/test_det.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_test_sub_dl",
+      "label": "test_sub_dl.py",
+      "_origin": "ast",
+      "community": 217,
+      "community_name": "test_sub_dl.py",
+      "file_type": "code",
+      "norm_label": "test_sub_dl.py",
+      "source_file": "scripts/test_sub_dl.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_test_subcat",
+      "label": "test_subcat.py",
+      "_origin": "ast",
+      "community": 218,
+      "community_name": "test_subcat.py",
+      "file_type": "code",
+      "norm_label": "test_subcat.py",
+      "source_file": "scripts/test_subcat.py",
+      "source_location": "L1"
+    },
+    {
       "id": "ponytail_hooks_ponytail_config",
       "label": "ponytail-config.js",
       "_origin": "ast",
@@ -12361,6 +12597,17 @@
       "norm_label": "path",
       "source_file": "ponytail/hooks/ponytail-config.js",
       "source_location": "L13"
+    },
+    {
+      "id": "ponytail_hooks_ponytail_config_runtime_modes",
+      "label": "RUNTIME_MODES",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "ponytail-config.js",
+      "file_type": "code",
+      "norm_label": "runtime_modes",
+      "source_file": "ponytail/hooks/ponytail-config.js",
+      "source_location": "L18"
     },
     {
       "id": "ponytail_hooks_ponytail_config_valid_modes",
@@ -12427,17 +12674,6 @@
       "norm_label": "settingspath",
       "source_file": "ponytail/scripts/uninstall.js",
       "source_location": "L26"
-    },
-    {
-      "id": "ponytail_hooks_ponytail_config_runtime_modes",
-      "label": "RUNTIME_MODES",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "index.js",
-      "file_type": "code",
-      "norm_label": "runtime_modes",
-      "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L18"
     },
     {
       "id": "ponytail_pi_extension_index",
@@ -21236,18 +21472,6 @@
       "weight": 1.0
     },
     {
-      "source": "goblix_components_videoplayer_videoplayer",
-      "target": "goblix_lib_store_usegoblix",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "goblix/components/VideoPlayer.js",
-      "source_location": "L9",
-      "weight": 1.0
-    },
-    {
       "source": "goblix_lib_auth_getauthuserfromheader",
       "target": "goblix_lib_auth_verifytoken",
       "relation": "calls",
@@ -22892,6 +23116,18 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_download_full_synced_subtitles_fetch_and_save",
+      "target": "scripts_download_full_synced_subtitles_srt_to_clean_vtt",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/download_full_synced_subtitles.py",
+      "source_location": "L108",
+      "weight": 1.0
+    },
+    {
       "source": "scripts_download_movie_and_subtitle_download_and_process_subtitle",
       "target": "scripts_download_movie_and_subtitle_srt_to_vtt",
       "relation": "calls",
@@ -24317,6 +24553,18 @@
       "context": "call",
       "source_file": "scripts/record_learning.py",
       "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sanitize_and_sync_all_subs_run",
+      "target": "scripts_sanitize_and_sync_all_subs_sanitize_and_resync_vtt",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/sanitize_and_sync_all_subs.py",
+      "source_location": "L95",
       "weight": 1.0
     },
     {
@@ -25793,18 +26041,6 @@
       "context": "import",
       "source_file": "goblix/app/watch/[slug]/page.js",
       "source_location": "L1",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_app_watch_slug_page",
-      "target": "goblix_components_videoplayer_videoplayer",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "goblix/app/watch/[slug]/page.js",
-      "source_location": "L2",
       "weight": 1.0
     },
     {
@@ -29099,17 +29335,6 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "goblix/components/Navbar.js",
-      "source_location": "L8",
-      "weight": 1.0
-    },
-    {
-      "source": "goblix_components_videoplayer",
-      "target": "goblix_components_videoplayer_videoplayer",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "goblix/components/VideoPlayer.js",
       "source_location": "L8",
       "weight": 1.0
     },
@@ -39927,6 +40152,39 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_download_full_synced_subtitles",
+      "target": "scripts_download_full_synced_subtitles_srt_to_clean_vtt",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/download_full_synced_subtitles.py",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_download_full_synced_subtitles",
+      "target": "scripts_download_full_synced_subtitles_generate_full_synced_track",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/download_full_synced_subtitles.py",
+      "source_location": "L94",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_download_full_synced_subtitles",
+      "target": "scripts_download_full_synced_subtitles_fetch_and_save",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/download_full_synced_subtitles.py",
+      "source_location": "L98",
+      "weight": 1.0
+    },
+    {
       "source": "scripts_download_movie_and_subtitle",
       "target": "scripts_download_movie_and_subtitle_download_and_process_subtitle",
       "relation": "contains",
@@ -39993,6 +40251,17 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_download_subtitlecat_subtitles",
+      "target": "scripts_download_subtitlecat_subtitles_sanitize_srt_to_vtt",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/download_subtitlecat_subtitles.py",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
       "source": "scripts_download_yts_sub",
       "target": "scripts_download_yts_sub_get_yts_subtitles",
       "relation": "contains",
@@ -40001,6 +40270,17 @@
       "confidence_score": 1.0,
       "source_file": "scripts/download_yts_sub.py",
       "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_fetch_all_bluray_subtitles",
+      "target": "scripts_fetch_all_bluray_subtitles_sanitize_srt_to_vtt",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/fetch_all_bluray_subtitles.py",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -40059,6 +40339,17 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_fetch_official_subtitles",
+      "target": "scripts_fetch_official_subtitles_sanitize_srt_to_vtt",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/fetch_official_subtitles.py",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
       "source": "scripts_fix_jellyfin_db",
       "target": "scripts_fix_jellyfin_db_host_path",
       "relation": "contains",
@@ -40100,6 +40391,17 @@
       "confidence_score": 1.0,
       "source_file": "scripts/fix_jellyfin_db2.py",
       "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_generate_goblix_intro",
+      "target": "scripts_generate_goblix_intro_sh__entry",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/generate_goblix_intro.sh",
+      "source_location": "L1",
       "weight": 1.0
     },
     {
@@ -40609,6 +40911,17 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_precision_fetch_subtitles",
+      "target": "scripts_precision_fetch_subtitles_sanitize_srt_to_vtt",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/precision_fetch_subtitles.py",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
       "source": "scripts_record_learning",
       "target": "scripts_record_learning_main",
       "relation": "contains",
@@ -40639,6 +40952,28 @@
       "confidence_score": 1.0,
       "source_file": "scripts/record_learning.py",
       "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sanitize_and_sync_all_subs",
+      "target": "scripts_sanitize_and_sync_all_subs_sanitize_and_resync_vtt",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sanitize_and_sync_all_subs.py",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sanitize_and_sync_all_subs",
+      "target": "scripts_sanitize_and_sync_all_subs_run",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sanitize_and_sync_all_subs.py",
+      "source_location": "L92",
       "weight": 1.0
     },
     {
@@ -44762,5 +45097,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "e3bedb7d979a414a26a5a3598f41322d0bbcd2d1"
+  "built_at_commit": "a382f763bf01b5eeb3555989af3640cd49607465"
 }

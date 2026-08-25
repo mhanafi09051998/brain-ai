@@ -60,7 +60,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 <div class="container">
 
 <h1>Agent_Claudia_Autonomus — Complete Call Flow &amp; Architecture Documentation</h1>
-<p class="subtitle">Generated from graphify knowledge graph: 1776 nodes, 2106 edges, 208 communities. Commit: e3bedb7</p>
+<p class="subtitle">Generated from graphify knowledge graph: 1796 nodes, 2115 edges, 219 communities. Commit: a382f76</p>
 
 <div class="nav">
     <a href="#overview">Architecture Overview</a>
@@ -96,15 +96,15 @@ flowchart LR
     class ANALYSIS_CLUSTERING_C79796DA module;
     OUTPUTS_DOCS_ED82387C("Outputs &amp; Docs<br/><small>51 nodes</small>")
     class OUTPUTS_DOCS_ED82387C module;
-    CLI_SKILLS_9964CBB8("CLI &amp; Skill Installers<br/><small>231 nodes</small>")
+    CLI_SKILLS_9964CBB8("CLI &amp; Skill Installers<br/><small>232 nodes</small>")
     class CLI_SKILLS_9964CBB8 module;
-    INGEST_CACHE_UPDATE_FF457338("Ingestion &amp; Updates<br/><small>81 nodes</small>")
+    INGEST_CACHE_UPDATE_FF457338("Ingestion &amp; Updates<br/><small>93 nodes</small>")
     class INGEST_CACHE_UPDATE_FF457338 module;
     SERVE_API_35EC8E86("Serving API<br/><small>143 nodes</small>")
     class SERVE_API_35EC8E86 module;
     SECURITY_GLOBAL_5B9C6A04("Security &amp; Global Graph<br/><small>46 nodes</small>")
     class SECURITY_GLOBAL_5B9C6A04 module;
-    TESTS_FIXTURES_B84B1DCC("Tests &amp; Fixtures<br/><small>108 nodes</small>")
+    TESTS_FIXTURES_B84B1DCC("Tests &amp; Fixtures<br/><small>109 nodes</small>")
     class TESTS_FIXTURES_B84B1DCC module;
     APP_JS_CC08AAF7("app.js<br/><small>39 nodes</small>")
     class APP_JS_CC08AAF7 module;
@@ -116,20 +116,20 @@ flowchart LR
     class NEURON_N044_STATISTICAL_ARBITRAGE_PAIRS_TRADING_CC6EBDBF module;
     SECTION_15_F840E13C("==========================================<br/><small>20 nodes</small>")
     class SECTION_15_F840E13C module;
-    OTHER_D0941E68("Other<br/><small>554 nodes</small>")
+    OTHER_D0941E68("Other<br/><small>560 nodes</small>")
     class OTHER_D0941E68 module;
     TESTS_FIXTURES_B84B1DCC -->|calls x30| OTHER_D0941E68
-    OTHER_D0941E68 -->|imports x11| CLI_SKILLS_9964CBB8
+    OTHER_D0941E68 -->|imports x10| CLI_SKILLS_9964CBB8
+    TESTS_FIXTURES_B84B1DCC -->|calls x9| CLI_SKILLS_9964CBB8
     TESTS_FIXTURES_B84B1DCC -->|calls x8| OUTPUTS_DOCS_ED82387C
     TESTS_FIXTURES_B84B1DCC -->|calls x7| SECURITY_GLOBAL_5B9C6A04
     TESTS_FIXTURES_B84B1DCC -->|calls x7| ANALYSIS_CLUSTERING_C79796DA
-    TESTS_FIXTURES_B84B1DCC -->|calls x7| CLI_SKILLS_9964CBB8
     OTHER_D0941E68 -->|calls x6| ANALYSIS_CLUSTERING_C79796DA
     OUTPUTS_DOCS_ED82387C -->|references x6| OTHER_D0941E68
     OTHER_D0941E68 -->|references x6| COLOR_6DD0FE80
-    CLI_SKILLS_9964CBB8 -->|indirect call x5| TESTS_FIXTURES_B84B1DCC
     TESTS_FIXTURES_B84B1DCC -->|calls x4| BUILD_GRAPH_321CBB04
     TESTS_FIXTURES_B84B1DCC -->|references x4| COLOR_6DD0FE80
+    ANALYSIS_CLUSTERING_C79796DA -->|imports x4| OTHER_D0941E68
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -146,7 +146,7 @@ flowchart LR
     <h4>Architecture Layers</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>Layer</th><th>Nodes</th><th>Communities</th></tr>
-      <tr><td>Extraction Pipeline</td><td>131</td><td><code>8, 11, 25, 26, 29, 40, 45, 185, 84, 96, 97</code></td></tr><tr><td>Graph Build</td><td>190</td><td><code>0, 4, 181, 28, 129, 36, 198, 62, 67, 124, 125</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>112</td><td><code>146, 6, 14, 31, 46, 68</code></td></tr><tr><td>Outputs &amp; Docs</td><td>51</td><td><code>3, 43, 133, 32</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>231</td><td><code>1, 2, 5, 22, 39, 49, 53, 54, 56, 69, 70, 71, 74, 75, 76, 77, 82, 86, 91, 116, 118, 119, 120, 121, 122, 123</code></td></tr><tr><td>Ingestion &amp; Updates</td><td>81</td><td><code>178, 19, 168, 73, 114, 177, 88, 135, 136, 138, 186, 190, 191, 162, 183, 188, 194, 195</code></td></tr><tr><td>Serving API</td><td>143</td><td><code>196, 182, 197, 38, 207, 200, 95, 173</code></td></tr><tr><td>Security &amp; Global Graph</td><td>46</td><td><code>9, 128, 52</code></td></tr><tr><td>Tests &amp; Fixtures</td><td>108</td><td><code>7, 23, 18, 48, 206, 131, 58, 139, 174</code></td></tr><tr><td>app.js</td><td>39</td><td><code>161</code></td></tr><tr><td>Color</td><td>25</td><td><code>34</code></td></tr><tr><td>Neuron N056: Image Processing, Computer Vision &amp; AI Visual Generation Mastery</td><td>23</td><td><code>47</code></td></tr><tr><td>Neuron N044: Statistical Arbitrage, Pairs Trading &amp; Cointegration</td><td>22</td><td><code>10</code></td></tr><tr><td>==========================================</td><td>20</td><td><code>12</code></td></tr><tr><td>Other</td><td>554</td><td><code>13, 15, 16, 17, 179, 20, 21, 24, 27, 87, 169, 30, 37, 33, 35, 130, 41, 42, 44, 132, 170, 50, 51, 55, 57, 59, 60, 61, 63, 64, 65, 66, 134, 172, 72, 171, 193, 199, 78, 79, 80, 81, 83, 85, 89, 90, 100, 101, 102, 103, 137, 92, 93, 94, 98, 99, 104, 105, 106, 107, 108, 109, 110, 111, 112, 176, 189, 201, 113, 115, 117, 126, 127, 140, 141, 142, 143, 144, 145, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 163, 164, 165, 166, 167, 175, 180, 184, 187, 192, 202, 203, 204, 205</code></td></tr>
+      <tr><td>Extraction Pipeline</td><td>131</td><td><code>8, 11, 25, 26, 29, 40, 45, 185, 84, 96, 97</code></td></tr><tr><td>Graph Build</td><td>190</td><td><code>0, 4, 181, 28, 129, 36, 198, 62, 67, 124, 125</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>112</td><td><code>146, 6, 14, 31, 46, 68</code></td></tr><tr><td>Outputs &amp; Docs</td><td>51</td><td><code>3, 43, 133, 32</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>232</td><td><code>1, 2, 5, 22, 39, 49, 53, 54, 56, 69, 70, 71, 74, 75, 76, 77, 82, 86, 91, 116, 118, 119, 120, 121, 122, 123</code></td></tr><tr><td>Ingestion &amp; Updates</td><td>93</td><td><code>178, 19, 168, 73, 114, 177, 208, 88, 135, 136, 138, 186, 190, 191, 210, 211, 212, 214, 162, 183, 188, 194, 195</code></td></tr><tr><td>Serving API</td><td>143</td><td><code>196, 182, 197, 38, 207, 200, 95, 173, 215</code></td></tr><tr><td>Security &amp; Global Graph</td><td>46</td><td><code>9, 128, 52</code></td></tr><tr><td>Tests &amp; Fixtures</td><td>109</td><td><code>7, 18, 23, 48, 206, 131, 58, 139, 174, 216, 217, 218</code></td></tr><tr><td>app.js</td><td>39</td><td><code>161</code></td></tr><tr><td>Color</td><td>25</td><td><code>34</code></td></tr><tr><td>Neuron N056: Image Processing, Computer Vision &amp; AI Visual Generation Mastery</td><td>23</td><td><code>47</code></td></tr><tr><td>Neuron N044: Statistical Arbitrage, Pairs Trading &amp; Cointegration</td><td>22</td><td><code>10</code></td></tr><tr><td>==========================================</td><td>20</td><td><code>12</code></td></tr><tr><td>Other</td><td>560</td><td><code>13, 15, 16, 17, 179, 20, 21, 24, 27, 87, 169, 30, 37, 33, 35, 130, 41, 42, 44, 132, 170, 50, 51, 55, 57, 59, 60, 61, 63, 64, 65, 66, 134, 172, 72, 171, 193, 199, 78, 79, 80, 81, 83, 85, 89, 90, 100, 101, 102, 103, 137, 209, 92, 93, 94, 98, 99, 104, 105, 106, 107, 108, 109, 110, 111, 112, 176, 189, 201, 213, 113, 115, 117, 126, 127, 140, 141, 142, 143, 144, 145, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 163, 164, 165, 166, 167, 175, 180, 184, 187, 192, 202, 203, 204, 205</code></td></tr>
     </table>
   </div>
   <div class="card">
@@ -158,12 +158,12 @@ flowchart LR
   <div class="card">
     <h4>Graph Report Highlights</h4>
     <ul>
-      <li>1776 nodes · 2106 edges · 208 communities (180 shown, 28 thin omitted)</li>
+      <li>1796 nodes · 2115 edges · 219 communities (188 shown, 31 thin omitted)</li>
       <li>Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 38 edges (avg confidence: 0.85)</li>
       <li>Token cost: 0 input · 0 output</li>
       <li>1. `Vec2D` - 25 edges</li>
       <li>2. `run_tests()` - 22 edges</li>
-      <li>3. `useGoblix()` - 19 edges</li>
+      <li>3. `useGoblix()` - 18 edges</li>
     </ul>
   </div>
 </div>
@@ -1573,12 +1573,12 @@ flowchart LR
 
 <!-- ====== 6. CLI & Skill Installers ====== -->
 <h2 id="cli-skills">6. CLI &amp; Skill Installers</h2>
-<p>CLI &amp; Skill Installers groups implementation around ponytail, skills, skillmd, learning, mostly in ponytail/README.md, ponytail/README.ko.md, ponytail/README.es.md. This section covers 231 nodes and 216 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>CLI &amp; Skill Installers groups implementation around ponytail, skills, skillmd, learning, mostly in ponytail/README.md, ponytail/README.ko.md, ponytail/README.es.md. This section covers 232 nodes and 217 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: CLI &amp; Skill Installers (231 nodes, 216 edges)
+    %% Section: CLI &amp; Skill Installers (232 nodes, 217 edges)
     subgraph cli_skills_opencode_plugins_ponytail_mjs_a268305e[".opencode/plugins/ponytail.mjs"]
         ponytail_opencode_plugins_ponytail_b70099ee("ponytail.mjs")
         ponytail_opencode_plugins_ponytail_readmode_6df6db11("readMode()<br/><small>.opencode/plugins/ponytail.mjs</small>")
@@ -1615,7 +1615,7 @@ flowchart LR
     ponytail_opencode_plugins_ponytail_b70099ee -->|imports| ponytail_opencode_plugins_ponytail_frontmatter_p_5d2c27cd
     ponytail_opencode_plugins_ponytail_b70099ee -->|imports| ponytail_hooks_ponytail_config_1f171eac
     ponytail_opencode_plugins_ponytail_b70099ee -->|imports| ponytail_opencode_plugins_ponytail_frontmatter_e526c9f5
-    %% Omitted for readability: 213 nodes, 0 edges
+    %% Omitted for readability: 214 nodes, 0 edges
     class ponytail_opencode_plugins_ponytail_b70099ee function;
     class ponytail_opencode_plugins_ponytail_readmode_6df6db11 function;
     class ponytail_opencode_plugins_ponytail_dirname_a4d86cba function;
@@ -1905,7 +1905,7 @@ flowchart LR
       <tr><td><code>ponytail/README.md</code></td><td>25 nodes</td></tr>
 <tr><td><code>ponytail/README.ko.md</code></td><td>22 nodes</td></tr>
 <tr><td><code>ponytail/README.es.md</code></td><td>21 nodes</td></tr>
-<tr><td><code>ponytail/hooks/ponytail-config.js</code></td><td>12 nodes</td></tr>
+<tr><td><code>ponytail/hooks/ponytail-config.js</code></td><td>13 nodes</td></tr>
 <tr><td><code>skills/ponytail/SKILL.md</code></td><td>9 nodes</td></tr>
 <tr><td><code>learning/neurons/N022_multi_agent_consensus.md</code></td><td>9 nodes</td></tr>
 <tr><td><code>.opencode/plugins/ponytail.mjs</code></td><td>9 nodes</td></tr>
@@ -1914,19 +1914,19 @@ flowchart LR
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x184, references x12, indirect call x8, calls x5. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x185, references x12, indirect call x8, calls x5. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
 
 <!-- ====== 7. Ingestion & Updates ====== -->
 <h2 id="ingest-cache-update">7. Ingestion &amp; Updates</h2>
-<p>Ingestion &amp; Updates groups implementation around scripts, download, learning, neurons, mostly in learning/neurons/N039_webrtc_av_dsp_streaming.md, scripts/download_movie_and_subtitle.py, goblix/public/manifest.json. This section covers 81 nodes and 74 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Ingestion &amp; Updates groups implementation around scripts, download, fetch, learning, mostly in learning/neurons/N039_webrtc_av_dsp_streaming.md, scripts/download_movie_and_subtitle.py, goblix/public/manifest.json. This section covers 93 nodes and 82 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Ingestion &amp; Updates (81 nodes, 74 edges)
+    %% Section: Ingestion &amp; Updates (93 nodes, 82 edges)
     subgraph ingest_cache_update_scripts_download_movie_and_s_0a99f8eb["scripts/download_movie_and_subtitle.py"]
         scripts_download_movie_and_subtitle_main_7ca68d94("main()<br/><small>scripts/download_movie_and_subtitle.py</small>")
         scripts_download_movie_and_subtitle_download_and_64dfcde4("and process subtitle()<br/><small>scripts/download_movie_and_subtitle.py</small>")
@@ -1942,9 +1942,9 @@ flowchart LR
         scripts_fetch_imdb_metadata_search_imdb_64267231("search_imdb()<br/><small>scripts/fetch_imdb_metadata.py</small>")
         scripts_fetch_imdb_metadata_fetch_tmdb_backdrop_787c71db("fetch_tmdb_backdrop()<br/><small>scripts/fetch_imdb_metadata.py</small>")
     end
-    subgraph ingest_cache_update_goblix_public_manifest_json_32850c0c["goblix/public/manifest.json"]
-        goblix_public_manifest_background_color_b1242cdd("background_color<br/><small>goblix/public/manifest.json</small>")
-        goblix_public_manifest_description_09530496("description<br/><small>goblix/public/manifest.json</small>")
+    subgraph ingest_cache_update_scripts_download_full_synced_5d6a9ccf["scripts/download_full_synced_subtitles.py"]
+        scripts_download_full_synced_subtitles_fetch_and_04977c88("fetch_and_save()<br/><small>scripts/download_full_synced_subtitles.py</small>")
+        scripts_download_full_synced_subtitles_srt_to_cl_b939fec8("srt_to_clean_vtt()<br/><small>scripts/download_full_synced_subtitles.py</small>")
     end
     subgraph ingest_cache_update_scripts_ingest_frontier_know_5784d46d["scripts/ingest_frontier_knowledge.py"]
         scripts_ingest_frontier_knowledge_build_all_fron_ff8b9479("all frontier datasets()<br/><small>scripts/ingest_frontier_knowledge.py</small>")
@@ -1965,9 +1965,10 @@ flowchart LR
     scripts_fetch_imdb_metadata_enrich_movie_metadat_90174307 -->|calls| scripts_fetch_imdb_metadata_search_imdb_64267231
     scripts_fetch_imdb_metadata_enrich_movie_metadat_90174307 -->|calls| scripts_fetch_imdb_metadata_fetch_tmdb_backdrop_787c71db
     scripts_fetch_imdb_metadata_update_movies_databa_41ee8484 -->|calls| scripts_fetch_imdb_metadata_enrich_movie_metadat_90174307
+    scripts_download_full_synced_subtitles_fetch_and_04977c88 -->|calls| scripts_download_full_synced_subtitles_srt_to_cl_b939fec8
     scripts_ingest_frontier_knowledge_build_all_fron_ff8b9479 -->|calls| scripts_ingest_frontier_knowledge_ensure_dirs_f31a27a1
     scripts_download_movie_and_subtitle_b6c76bb6 -->|imports| scripts_fetch_imdb_metadata_enrich_movie_metadat_90174307
-    %% Omitted for readability: 63 nodes, 0 edges
+    %% Omitted for readability: 75 nodes, 0 edges
     class scripts_download_movie_and_subtitle_main_7ca68d94 function;
     class scripts_download_movie_and_subtitle_download_and_64dfcde4 function;
     class scripts_download_movie_and_subtitle_b6c76bb6 module;
@@ -1979,8 +1980,8 @@ flowchart LR
     class scripts_fetch_imdb_metadata_enrich_movie_metadat_90174307 function;
     class scripts_fetch_imdb_metadata_search_imdb_64267231 function;
     class scripts_fetch_imdb_metadata_fetch_tmdb_backdrop_787c71db function;
-    class goblix_public_manifest_background_color_b1242cdd function;
-    class goblix_public_manifest_description_09530496 function;
+    class scripts_download_full_synced_subtitles_fetch_and_04977c88 function;
+    class scripts_download_full_synced_subtitles_srt_to_cl_b939fec8 function;
     class scripts_ingest_frontier_knowledge_build_all_fron_ff8b9479 function;
     class scripts_ingest_frontier_knowledge_ensure_dirs_f31a27a1 function;
     class scripts_ingest_swot_knowledge_train_and_evaluate_b1d92e19 function;
@@ -2259,26 +2260,26 @@ flowchart LR
 <tr><td><code>goblix/public/manifest.json</code></td><td>9 nodes</td></tr>
 <tr><td><code>scripts/fetch_imdb_metadata.py</code></td><td>6 nodes</td></tr>
 <tr><td><code>learning/neurons/N027_tensor_simd_vectorization.md</code></td><td>5 nodes</td></tr>
+<tr><td><code>scripts/download_full_synced_subtitles.py</code></td><td>4 nodes</td></tr>
 <tr><td><code>scripts/fix_jellyfin_db.py</code></td><td>4 nodes</td></tr>
 <tr><td><code>scripts/ingest_frontier_knowledge.py</code></td><td>4 nodes</td></tr>
-<tr><td><code>scripts/download_avengers.py</code></td><td>3 nodes</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x53, calls x11, explains x8, references x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x60, calls x12, explains x8, references x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
 
 <!-- ====== 8. Serving API ====== -->
 <h2 id="serve-api">8. Serving API</h2>
-<p>Serving API groups implementation around goblix, public, app, routejs, mostly in learning/neurons/N031_modern_data_storage_pgvector.md, public/js/app.js, public/js/state.js. This section covers 143 nodes and 298 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Serving API groups implementation around goblix, public, app, routejs, mostly in learning/neurons/N031_modern_data_storage_pgvector.md, public/js/app.js, public/js/state.js. This section covers 143 nodes and 295 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Serving API (143 nodes, 298 edges)
+    %% Section: Serving API (143 nodes, 295 edges)
     subgraph serve_api_public_js_app_js_645e237c["public/js/app.js"]
         goblix_public_js_app_fa556617("app.js")
         goblix_public_js_app_clearsearch_beb0be8e("clearSearch()<br/><small>public/js/app.js</small>")
@@ -2495,14 +2496,6 @@ flowchart LR
 </tr>
 <tr>
   <td>17</td>
-  <td><code>VideoPlayer()</code><br><small style="color:var(--muted)">goblix/components/VideoPlayer.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>page.js</code><br><small style="color:var(--muted)">watch/[slug]/page.js</small></td>
-  <td><code>useGoblix()</code><br><small style="color:var(--muted)">goblix/lib/store.js</small></td>
-  <td>VideoPlayer() node in goblix/components/VideoPlayer.js.</td>
-</tr>
-<tr>
-  <td>18</td>
   <td><code>getAllMovies()</code><br><small style="color:var(--muted)">goblix/lib/movies.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>GET()</code><br><small style="color:var(--muted)">api/movies/route.js</small><br><code>getMovieBySlug()</code><br><small style="color:var(--muted)">goblix/lib/movies.js</small><br><code>HomePage()</code><br><small style="color:var(--muted)">goblix/app/page.js</small><br>+4 more</td>
@@ -2510,7 +2503,7 @@ flowchart LR
   <td>getAllMovies() node in goblix/lib/movies.js.</td>
 </tr>
 <tr>
-  <td>19</td>
+  <td>18</td>
   <td><code>getMovieBySlug()</code><br><small style="color:var(--muted)">goblix/lib/movies.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>generateMetadata()</code><br><small style="color:var(--muted)">watch/[slug]/page.js</small><br><code>GET()</code><br><small style="color:var(--muted)">movies/[slug]/route.js</small><br><code>page.js</code><br><small style="color:var(--muted)">watch/[slug]/page.js</small><br>+2 more</td>
@@ -2518,7 +2511,7 @@ flowchart LR
   <td>getMovieBySlug() node in goblix/lib/movies.js.</td>
 </tr>
 <tr>
-  <td>20</td>
+  <td>19</td>
   <td><code>normalizeMovie()</code><br><small style="color:var(--muted)">goblix/lib/movies.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>getAllMovies()</code><br><small style="color:var(--muted)">goblix/lib/movies.js</small></td>
@@ -2526,7 +2519,7 @@ flowchart LR
   <td>normalizeMovie() node in goblix/lib/movies.js.</td>
 </tr>
 <tr>
-  <td>21</td>
+  <td>20</td>
   <td><code>GoblixProvider()</code><br><small style="color:var(--muted)">goblix/lib/store.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>layout.js</code><br><small style="color:var(--muted)">goblix/app/layout.js</small></td>
@@ -2534,15 +2527,15 @@ flowchart LR
   <td>GoblixProvider() node in goblix/lib/store.js.</td>
 </tr>
 <tr>
-  <td>22</td>
+  <td>21</td>
   <td><code>useGoblix()</code><br><small style="color:var(--muted)">goblix/lib/store.js</small></td>
   <td><span class="tag tag-hook">UI</span></td>
-  <td><code>AuthModal()</code><br><small style="color:var(--muted)">goblix/components/AuthModal.js</small><br><code>AuthModal.js</code><br><small style="color:var(--muted)">goblix/components/AuthModal.js</small><br><code>CategoryFilter()</code><br><small style="color:var(--muted)">goblix/components/CategoryFilter.js</small><br>+15 more</td>
+  <td><code>AuthModal()</code><br><small style="color:var(--muted)">goblix/components/AuthModal.js</small><br><code>AuthModal.js</code><br><small style="color:var(--muted)">goblix/components/AuthModal.js</small><br><code>CategoryFilter()</code><br><small style="color:var(--muted)">goblix/components/CategoryFilter.js</small><br>+14 more</td>
   <td>No direct outbound edge</td>
   <td>useGoblix() node in goblix/lib/store.js.</td>
 </tr>
 <tr>
-  <td>23</td>
+  <td>22</td>
   <td><code>getSubtitlePath()</code><br><small style="color:var(--muted)">goblix/lib/subtitles.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>GET()</code><br><small style="color:var(--muted)">subtitles/[slug]/route.js</small><br><code>route.js</code><br><small style="color:var(--muted)">subtitles/[slug]/route.js</small></td>
@@ -2550,7 +2543,7 @@ flowchart LR
   <td>getSubtitlePath() node in goblix/lib/subtitles.js.</td>
 </tr>
 <tr>
-  <td>24</td>
+  <td>23</td>
   <td><code>sanitizeWebVTT()</code><br><small style="color:var(--muted)">goblix/lib/subtitles.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>GET()</code><br><small style="color:var(--muted)">subtitles/[slug]/route.js</small><br><code>route.js</code><br><small style="color:var(--muted)">subtitles/[slug]/route.js</small></td>
@@ -2558,7 +2551,7 @@ flowchart LR
   <td>sanitizeWebVTT() node in goblix/lib/subtitles.js.</td>
 </tr>
 <tr>
-  <td>25</td>
+  <td>24</td>
   <td><code>movies/route.js</code><br><small style="color:var(--muted)">api/movies/route.js</small></td>
   <td><span class="tag tag-endpoint">API</span></td>
   <td>External entry / no inbound edge</td>
@@ -2566,7 +2559,7 @@ flowchart LR
   <td>movies/route.js node in api/movies/route.js.</td>
 </tr>
 <tr>
-  <td>26</td>
+  <td>25</td>
   <td><code>dynamic</code><br><small style="color:var(--muted)">api/movies/route.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -2574,7 +2567,7 @@ flowchart LR
   <td>dynamic node in api/movies/route.js.</td>
 </tr>
 <tr>
-  <td>27</td>
+  <td>26</td>
   <td><code>movies/[slug]/route.js</code><br><small style="color:var(--muted)">movies/[slug]/route.js</small></td>
   <td><span class="tag tag-endpoint">API</span></td>
   <td>External entry / no inbound edge</td>
@@ -2582,7 +2575,7 @@ flowchart LR
   <td>movies/[slug]/route.js node in movies/[slug]/route.js.</td>
 </tr>
 <tr>
-  <td>28</td>
+  <td>27</td>
   <td><code>dynamic</code><br><small style="color:var(--muted)">movies/[slug]/route.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -2590,7 +2583,7 @@ flowchart LR
   <td>dynamic node in movies/[slug]/route.js.</td>
 </tr>
 <tr>
-  <td>29</td>
+  <td>28</td>
   <td><code>subtitles/[slug]/route.js</code><br><small style="color:var(--muted)">subtitles/[slug]/route.js</small></td>
   <td><span class="tag tag-endpoint">API</span></td>
   <td>External entry / no inbound edge</td>
@@ -2598,12 +2591,20 @@ flowchart LR
   <td>subtitles/[slug]/route.js node in subtitles/[slug]/route.js.</td>
 </tr>
 <tr>
-  <td>30</td>
+  <td>29</td>
   <td><code>dynamic</code><br><small style="color:var(--muted)">subtitles/[slug]/route.js</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
   <td>dynamic node in subtitles/[slug]/route.js.</td>
+</tr>
+<tr>
+  <td>30</td>
+  <td><code>layout.js</code><br><small style="color:var(--muted)">goblix/app/layout.js</small></td>
+  <td><span class="tag tag-class">Module</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>AuthModal()</code><br><small style="color:var(--muted)">goblix/components/AuthModal.js</small><br><code>AuthModal.js</code><br><small style="color:var(--muted)">goblix/components/AuthModal.js</small><br><code>getAllMovies()</code><br><small style="color:var(--muted)">goblix/lib/movies.js</small><br>+7 more</td>
+  <td>layout.js node in goblix/app/layout.js.</td>
 </tr>
 </table>
 
@@ -2624,7 +2625,7 @@ flowchart LR
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x107, imports x77, calls x64, imports x49. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x106, imports x76, calls x63, imports x49. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -2971,12 +2972,12 @@ flowchart LR
 
 <!-- ====== 10. Tests & Fixtures ====== -->
 <h2 id="tests-fixtures">10. Tests &amp; Fixtures</h2>
-<p>Tests &amp; Fixtures groups implementation around scripts, enginepy, test, nucleus, mostly in scripts/marketing_nucleus_engine.py, learning/neurons/N036_fullstack_product_synthesizer.md, scripts/graphic_design_visual_engine.py. This section covers 108 nodes and 143 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Tests &amp; Fixtures groups implementation around scripts, enginepy, test, nucleus, mostly in scripts/marketing_nucleus_engine.py, learning/neurons/N036_fullstack_product_synthesizer.md, scripts/graphic_design_visual_engine.py. This section covers 109 nodes and 141 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Tests &amp; Fixtures (108 nodes, 143 edges)
+    %% Section: Tests &amp; Fixtures (109 nodes, 141 edges)
     subgraph tests_fixtures_scripts_marketing_nucleus_engine_031ec47b["scripts/marketing_nucleus_engine.py"]
         scripts_marketing_nucleus_engine_run_verificatio_ef97097f("run_verification_tests()<br/><small>scripts/marketing_nucleus_engine.py</small>")
         scripts_marketing_nucleus_engine_bg_nbdengine_2a9e36db("BG_NBDEngine<br/><small>scripts/marketing_nucleus_engine.py</small>")
@@ -3017,7 +3018,7 @@ flowchart LR
     scripts_marketing_nucleus_engine_run_verificatio_ef97097f -->|calls| scripts_marketing_nucleus_engine_bg_nbdengine_pr_f5a1c982
     scripts_marketing_nucleus_engine_run_verificatio_ef97097f -->|calls| scripts_marketing_nucleus_engine_bg_nbdengine_ex_74042c3a
     scripts_marketing_nucleus_engine_run_verificatio_ef97097f -->|calls| scripts_marketing_nucleus_engine_bg_nbdengine_ca_0b080fae
-    %% Omitted for readability: 90 nodes, 0 edges
+    %% Omitted for readability: 91 nodes, 0 edges
     class scripts_marketing_nucleus_engine_run_verificatio_ef97097f function;
     class scripts_marketing_nucleus_engine_bg_nbdengine_2a9e36db klass;
     class scripts_marketing_nucleus_engine_bg_nbdengine_pr_f5a1c982 function;
@@ -3243,59 +3244,59 @@ flowchart LR
 </tr>
 <tr>
   <td>24</td>
-  <td><code>normalizeConfigMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>normalizePersistedMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>ponytail-config.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td><code>N036_fullstack_product_synthesizer.md</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Reads, resolves, or persists project configuration.</td>
+  <td>Documentation node describing N036_fullstack_product_synthesizer.md.</td>
 </tr>
 <tr>
   <td>25</td>
-  <td><code>normalizePersistedMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>getPonytailInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>parsePonytailCommand()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br>+6 more</td>
-  <td><code>normalizeConfigMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>normalizeMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
-  <td>normalizePersistedMode() node in ponytail/hooks/ponytail-config.js.</td>
+  <td><code>🏗️ 1. 0-to-1 Full-Stack Product Synthesis Architecture</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🏗️ 1. 0-to-1 Full-Stack Product Synthesis Architecture.</td>
 </tr>
 <tr>
   <td>26</td>
-  <td><code>parsePonytailCommand()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
-  <td><span class="tag tag-cmd">Entry</span></td>
-  <td><code>helpers.test.js</code><br><small style="color:var(--muted)">pi-extension/test/helpers.test.js</small><br><code>ponytailExtension()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
-  <td><code>normalizeMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>normalizePersistedMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
-  <td>parsePonytailCommand() node in ponytail/pi-extension/index.js.</td>
+  <td><code>🗄️ 2. Database Layer &amp; Dual-Dialect Drizzle Schema Synthesis</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🗄️ 2. Database Layer &amp; Dual-Dialect Drizzle Schema Synthesis.</td>
 </tr>
 <tr>
   <td>27</td>
-  <td><code>ponytailExtension()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>createPiHarness()</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small><br><code>extension.test.js</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small></td>
-  <td><code>getDefaultMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>getHideStatus()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>getPonytailInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br>+6 more</td>
-  <td>ponytailExtension() node in ponytail/pi-extension/index.js.</td>
+  <td><code>⚡ 3. API Gateway &amp; Sub-Millisecond Type-Safe RPC Layer (Hono v4)</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing ⚡ 3. API Gateway &amp; Sub-Millisecond Type-Safe RPC Layer (Hono v4).</td>
 </tr>
 <tr>
   <td>28</td>
-  <td><code>syncStatus()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
+  <td><code>🎨 4. Frontend UI Engine &amp; Next.js 15 App Router + Tailwind v4</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>syncStatus() node in ponytail/pi-extension/index.js.</td>
+  <td>Documentation node describing 🎨 4. Frontend UI Engine &amp; Next.js 15 App Router + Tailwind v4.</td>
 </tr>
 <tr>
   <td>29</td>
-  <td><code>resolveSessionMode()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>helpers.test.js</code><br><small style="color:var(--muted)">pi-extension/test/helpers.test.js</small><br><code>ponytailExtension()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
-  <td><code>normalizePersistedMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
-  <td>resolveSessionMode() node in ponytail/pi-extension/index.js.</td>
+  <td><code>🎭 5. Playwright E2E Test Oracle &amp; Zero-Flakiness Testing Matrix</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🎭 5. Playwright E2E Test Oracle &amp; Zero-Flakiness Testing Matrix.</td>
 </tr>
 <tr>
   <td>30</td>
-  <td><code>createCommandContext()</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small></td>
-  <td><span class="tag tag-func">Test</span></td>
+  <td><code>📋 6. Autonomous 0-to-1 Synthesis Pipeline Checklist</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>createCommandContext() node in pi-extension/test/extension.test.js.</td>
+  <td>Documentation node describing 📋 6. Autonomous 0-to-1 Synthesis Pipeline Checklist.</td>
 </tr>
 </table>
 
@@ -3316,7 +3317,7 @@ flowchart LR
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x58, calls x37, explains x15, imports x15. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x58, calls x36, explains x15, imports x14. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -4794,12 +4795,12 @@ flowchart LR
 
 <!-- ====== 16. Other ====== -->
 <h2 id="other">16. Other</h2>
-<p>Other groups implementation around learning, neurons, scripts, enginepy, mostly in scripts/graphic_design_visual_engine.py, scripts/image_vision_nucleus_engine.py, learning/neurons/N046_algorithmic_execution_engines.md. This section covers 554 nodes and 483 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Other groups implementation around learning, neurons, scripts, enginepy, mostly in scripts/graphic_design_visual_engine.py, scripts/image_vision_nucleus_engine.py, learning/neurons/N046_algorithmic_execution_engines.md. This section covers 560 nodes and 488 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Other (554 nodes, 483 edges)
+    %% Section: Other (560 nodes, 488 edges)
     subgraph other_scripts_image_vision_nucleus_engine_py_c18108d9["scripts/image_vision_nucleus_engine.py"]
         scripts_image_vision_nucleus_engine_colorspacema_f993f2f8("ColorSpaceMath<br/><small>scripts/image_vision_nucleus_engine.py</small>")
         scripts_image_vision_nucleus_engine_colorspacema_2830666e("rgb_to_grayscale()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
@@ -4835,7 +4836,7 @@ flowchart LR
     scripts_strategic_swot_nucleus_engine_strategics_91c3d769 -->|method| scripts_strategic_swot_nucleus_engine_strategics_a6771422
     scripts_strategic_swot_nucleus_engine_strategics_91c3d769 -->|method| scripts_strategic_swot_nucleus_engine_strategics_2819dd00
     scripts_strategic_swot_nucleus_engine_strategics_91c3d769 -->|method| scripts_strategic_swot_nucleus_engine_strategics_a0ea0d99
-    %% Omitted for readability: 536 nodes, 0 edges
+    %% Omitted for readability: 542 nodes, 0 edges
     class scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 klass;
     class scripts_image_vision_nucleus_engine_colorspacema_2830666e function;
     class scripts_image_vision_nucleus_engine_colorspacema_3515cadd function;
@@ -5134,7 +5135,7 @@ flowchart LR
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x356, calls x35, method x33, explains x29. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x359, calls x36, method x33, explains x29. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -5145,17 +5146,17 @@ flowchart LR
   <div class="card">
     <h4>Graph</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>Nodes</td><td>1776</td></tr>
-      <tr><td>Edges</td><td>2106</td></tr>
+      <tr><td>Nodes</td><td>1796</td></tr>
+      <tr><td>Edges</td><td>2115</td></tr>
       <tr><td>Hyperedges</td><td>0</td></tr>
-      <tr><td>Communities</td><td>208</td></tr>
+      <tr><td>Communities</td><td>219</td></tr>
       <tr><td>Documented Sections</td><td>15</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Edge Confidence</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>EXTRACTED</td><td>2068</td></tr>
+      <tr><td>EXTRACTED</td><td>2077</td></tr>
       <tr><td>INFERRED</td><td>38</td></tr>
       <tr><td>AMBIGUOUS</td><td>0</td></tr>
     </table>
@@ -5164,7 +5165,7 @@ flowchart LR
 
 <div style="text-align:center; padding:40px 0; color: var(--muted); font-size:0.9rem;">
   <p>Agent_Claudia_Autonomus — Architecture Documentation</p>
-  <p>Generated: 2026-08-25 10:05 UTC · graphify callflow-html</p>
+  <p>Generated: 2026-08-25 10:11 UTC · graphify callflow-html</p>
 </div>
 
 </div><!-- .container -->

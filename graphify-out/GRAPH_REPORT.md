@@ -1,16 +1,16 @@
 # Graph Report - Agent_Claudia_Autonomus  (2026-08-25)
 
 ## Corpus Check
-- 275 files · ~389,867 words
+- 286 files · ~392,810 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1776 nodes · 2106 edges · 208 communities (180 shown, 28 thin omitted)
+- 1796 nodes · 2115 edges · 219 communities (188 shown, 31 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 38 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e3bedb7d`
+- Built from commit: `a382f763`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -159,11 +159,14 @@
 - next.config.mjs
 - run_self_tests
 - N058: Migrasi Arsitektur Goblix Cinema ke Next.js App Router
+- download_full_synced_subtitles.py
+- sanitize_and_sync_all_subs.py
+- generate_goblix_intro.sh
 
 ## God Nodes (most connected - your core abstractions)
 1. `Vec2D` - 25 edges
 2. `run_tests()` - 22 edges
-3. `useGoblix()` - 19 edges
+3. `useGoblix()` - 18 edges
 4. `ImageMatrix` - 16 edges
 5. `CubicBezier` - 15 edges
 6. `Install` - 15 edges
@@ -187,7 +190,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (208 total, 28 thin omitted)
+## Communities (219 total, 31 thin omitted)
 
 ### Community 0 - "run_deterministic_tests"
 Cohesion: 0.06
@@ -278,12 +281,12 @@ Cohesion: 0.11
 Nodes (17): 1. Arsitektur Event-Driven vs Ilusi Simulasi Vektorik, 2. Walk-Forward Analysis (WFA) & Rolling Horizon Optimization, 3. Combinatorial Purged Cross-Validation (CPCV), 4. Probabilistic Sharpe Ratio (PSR) & Deflated Sharpe Ratio (DSR), 5. Implementasi Deterministik Python Standard Library, 6. Invarian Operasional & Quant Guardrails, A. 7 Jebakan Fatal Simulasi Vektorik (*Vectorized Backtest Pitfalls*), A. Dua Pilar CPCV (Marcos López de Prado) (+9 more)
 
 ### Community 22 - "ponytail-config.js"
-Cohesion: 0.15
-Nodes (14): fs, getClaudeDir(), getConfigDir(), getConfigPath(), getHideStatus(), getQuietStartup(), isShellSafe(), os (+6 more)
+Cohesion: 0.14
+Nodes (15): fs, getClaudeDir(), getConfigDir(), getConfigPath(), getHideStatus(), getQuietStartup(), normalizeConfigMode(), os (+7 more)
 
 ### Community 23 - "index.js"
-Cohesion: 0.16
-Nodes (13): normalizeConfigMode(), normalizePersistedMode(), RUNTIME_MODES, {
+Cohesion: 0.18
+Nodes (11): normalizePersistedMode(), {
   DEFAULT_MODE,
   RUNTIME_MODES,
   getDefaultMode,
@@ -293,7 +296,7 @@ Nodes (13): normalizeConfigMode(), normalizePersistedMode(), RUNTIME_MODES, {
   normalizePersistedMode,
   isDeactivationCommand,
   writeDefaultMode,
-}, { getPonytailInstructions, filterSkillBodyForMode }, parsePonytailCommand(), ponytailExtension(), readDefaultMode (+5 more)
+}, { getPonytailInstructions, filterSkillBodyForMode }, parsePonytailCommand(), ponytailExtension(), readDefaultMode, readQuietStartup, require (+3 more)
 
 ### Community 24 - "zolu_learn_server.js"
 Cohesion: 0.12
@@ -368,14 +371,14 @@ Cohesion: 0.18
 Nodes (10): 1. Uniswap v3 Concentrated Liquidity Math & Tick Geometry, 2. Impermanent Loss (IL) & Capital Efficiency Calculus, 3. Flash Loan Atomic Arbitrage Architecture, 4. Toxic MEV Dynamics: Sandwich Attacks & JIT Liquidity, 🏛️ 5 Pilar DeFi Liquidity Engineering & MEV Defense, 5. Searcher-Builder Infrastructure: Flashbots & Jito Relays, 🧠 Domain & Arsitektur, 🛡️ Invariant Ringkas (Operational Rules) (+2 more)
 
 ### Community 42 - "ponytail-activate.js"
-Cohesion: 0.20
-Nodes (9): claudeDir, {
+Cohesion: 0.18
+Nodes (10): claudeDir, {
   clearMode,
   isCodex,
   isCopilot,
   setMode,
   writeHookOutput,
-}, fs, { getDefaultMode, getClaudeDir, isShellSafe }, { getPonytailInstructions }, mode, output, path (+1 more)
+}, fs, { getDefaultMode, getClaudeDir, isShellSafe }, { getPonytailInstructions }, mode, output, path (+2 more)
 
 ### Community 43 - "IconBuilder24"
 Cohesion: 0.25
@@ -647,7 +650,7 @@ Nodes (3): 🔒 Disiplin Eksekusi, 🎯 Inti Pembelajaran (Engineering Invariant
 
 ### Community 196 - "useGoblix"
 Cohesion: 0.08
-Nodes (38): dynamic, GET(), dynamic, GET(), dynamic, GET(), metadata, RootLayout() (+30 more)
+Nodes (37): dynamic, GET(), dynamic, GET(), dynamic, GET(), metadata, RootLayout() (+29 more)
 
 ### Community 197 - "lib/auth.js"
 Cohesion: 0.24
@@ -670,21 +673,21 @@ Cohesion: 0.50
 Nodes (3): 🔒 Disiplin Eksekusi, 🎯 Inti Pembelajaran (Engineering Invariant), N058: Migrasi Arsitektur Goblix Cinema ke Next.js App Router
 
 ## Knowledge Gaps
-- **753 isolated node(s):** `dynamic`, `dynamic`, `dynamic`, `dynamic`, `dynamic` (+748 more)
+- **754 isolated node(s):** `dynamic`, `dynamic`, `dynamic`, `dynamic`, `dynamic` (+749 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **28 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **31 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Color` connect `Color` to `PaletteGenerator`, `run_self_tests`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **Why does `CubicBezier` connect `CubicBezier` to `run_self_tests`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **Why does `Vec2D` connect `Vec2D` to `CubicBezier`, `run_self_tests`?**
+  _High betweenness centrality (0.002) - this node is a cross-community bridge._
+- **Why does `run_self_tests()` connect `run_self_tests` to `Color`, `CubicBezier`, `PaletteGenerator`, `IconBuilder24`, `Vec2D`?**
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
+- **Why does `Color` connect `Color` to `PaletteGenerator`, `run_self_tests`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **What connects `dynamic`, `dynamic`, `dynamic` to the rest of the system?**
-  _753 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _754 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `run_deterministic_tests` be split into smaller, more focused modules?**
   _Cohesion score 0.06259426847662142 - nodes in this community are weakly interconnected._
 - **Should `Install` be split into smaller, more focused modules?**
