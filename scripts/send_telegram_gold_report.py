@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import urllib.request
 import json
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 
 def send_live_report():
     url = "https://data-api.binance.vision/api/v3/klines?symbol=PAXGUSDT&interval=15m&limit=60"
@@ -38,10 +38,16 @@ def send_live_report():
 
     curr_price = closes[-1]
     
-    # FVG
-    c1, c2, c3 = candles[-3], candles[-2], candles[-1]
-    bullish_fvg = (c3["low"] > c1["high"]) and (c3["low"] - c1["high"] > 0.2 * atr)
-    bearish_fvg = (c3["high"] < c1["low"]) and (c1["low"] - c3["high"] > 0.2 * atr)
+    # SMC Imbalance: Deteksi FVG & Pullback Retest (10 candle terakhir)
+    bullish_fvg = False
+    bearish_fvg = False
+    for i in range(len(candles)-10, len(candles)-1):
+        if candles[i]["low"] > candles[i-2]["high"] and (candles[i]["low"] - candles[i-2]["high"] > 0.2 * atr):
+            if curr_price <= candles[i]["low"] + (0.2 * atr):  # Harga retest masuk ke area FVG
+                bullish_fvg = True
+        if candles[i]["high"] < candles[i-2]["low"] and (candles[i-2]["low"] - candles[i]["high"] > 0.2 * atr):
+            if curr_price >= candles[i]["high"] - (0.2 * atr): # Harga retest naik ke area FVG
+                bearish_fvg = True
     
     # 5 Conditions Check
     trend_bull = ema20 > ema50
@@ -81,36 +87,45 @@ def send_live_report():
     else:
         direction = "SELL (SHORT)"
         score = bear_score
-        items = bear_items
         is_bull = False
         sl = round(curr_price + (1.5 * atr), 2)
         tp1 = round(curr_price - (3.0 * atr), 2)
         tp2 = round(curr_price - (4.5 * atr), 2)
         
-    missing = 5 - score
-    checklist_text = "\n".join([text for text, _ in items])
-    status_header = f"🔥 <b>5/5 KONDISI LENGKAP (SIAP EKSEKUSI)</b>" if score == 5 else f"⚠️ <b>{score}/5 KONDISI TERPENUHI (KURANG {missing} LAGI)</b>"
+    status_header = f"🔥 <b>EKSEKUSI ({score}/5)</b>" if score == 5 else f"⚠️ <b>SIAGA ({score}/5)</b>"
+    now_str = datetime.now(timezone(timedelta(hours=7))).strftime("%d %b %Y • %H:%M:%S WIB")
 
-    now_str = datetime.now().strftime("%A, %d %B %Y - %H:%M:%S WIB")
+    if is_bull:
+        check_txt = f"""{"✅" if trend_bull else "❌"} Trend Bullish
+{"✅" if price_above_ema else "❌"} Price > EMA20
+{"✅" if rsi_bull_ok else "❌"} RSI: {rsi:.1f}
+{"✅" if bullish_fvg else "❌"} FVG Retest
+{"✅" if atr_ok else "❌"} Volatilitas"""
+    else:
+        check_txt = f"""{"✅" if trend_bear else "❌"} Trend Bearish
+{"✅" if price_below_ema else "❌"} Price < EMA20
+{"✅" if rsi_bear_ok else "❌"} RSI: {rsi:.1f}
+{"✅" if bearish_fvg else "❌"} FVG Retest
+{"✅" if atr_ok else "❌"} Volatilitas"""
 
-    msg = f"""🟡 <b>RADAR PASAR EMAS & STATUS EKSEKUSI (XAU/USD)</b>
-━━━━━━━━━━━━━━━━━━━━━━━━━━
-📅 <b>Waktu:</b> <code>{now_str}</code>
-💵 <b>Harga Emas:</b> <code>${curr_price:,.2f} / Troy Ounce</code>
-🎯 <b>Bias Arah:</b> <code>{direction}</code>
-📊 <b>Kesiapan:</b> {status_header}
+    msg = f"""🌟 <b>Market Radar (M15)</b>
+━━━━━━━━━━━━━━━━━━━━
+🪙 <b>Pair:</b> <code>XAUUSD</code>
+⏱️ <code>{now_str}</code>
+💵 <b>Price:</b> <code>${curr_price:,.2f}</code>
 
-📋 <b>CHECKLIST 5 KONDISI INSTITUSIONAL:</b>
-{checklist_text}
+{status_header}
+🧭 <b>Bias:</b> <b>{direction}</b>
 
-🎯 <b>LEVEL HARGA (RRR 1:3.0):</b>
-• 🟢 <b>Area Entri:</b> <code>${curr_price:,.2f}</code>
-• 🛑 <b>Stop Loss (SL):</b> <code>${sl:,.2f}</code> (Risiko: ${abs(curr_price - sl):.2f})
-• 🎯 <b>Take Profit 1 (TP1):</b> <code>${tp1:,.2f}</code> (RRR 1:3.0)
-• 🎯 <b>Take Profit 2 (TP2):</b> <code>${tp2:,.2f}</code> (RRR 1:4.5)
+<b>[ Parameter Checklist ]</b>
+{check_txt}
 
-💡 <i>Notifikasi radar dikirim saat 3/5 atau 4/5 terpenuhi. Sinyal eksekusi langsung ditembak saat 5/5 lengkap.</i>
-━━━━━━━━━━━━━━━━━━━━━━━━━━"""
+<b>[ Action Plan ]</b>
+🎯 <b>Entry:</b> <code>${curr_price:,.2f}</code>
+🛑 <b>SL:</b> <code>${sl:,.2f}</code>
+🏆 <b>TP1 (1:3):</b> <code>${tp1:,.2f}</code>
+🚀 <b>TP2 (1:4.5):</b> <code>${tp2:,.2f}</code>
+━━━━━━━━━━━━━━━━━━━━"""
 
     BOT_TOKEN = "***TELEGRAM_TOKEN_REMOVED***"
     CHAT_ID = ***CHAT_ID_REMOVED***
