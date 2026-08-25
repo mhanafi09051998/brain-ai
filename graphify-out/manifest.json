@@ -1546,5 +1546,29 @@
     "seen": 1787650110.300569,
     "ast_hash": "ed07867bf2919743f8705993a58bbfec",
     "semantic_hash": ""
+  },
+  "scripts/debug_subs.py": {
+    "mtime": 1787650266.961331,
+    "seen": 1787650336.6473446,
+    "ast_hash": "a21f79a93d9ab9214f1bdc37b2fa4b7f",
+    "semantic_hash": ""
+  },
+  "scripts/download_all_full_subs.py": {
+    "mtime": 1787650230.7073698,
+    "seen": 1787650336.6473446,
+    "ast_hash": "ffa95cd94468a0c5d668d2473375208e",
+    "semantic_hash": ""
+  },
+  "scripts/download_all_subs.py": {
+    "mtime": 1787650304.7784023,
+    "seen": 1787650336.6473446,
+    "ast_hash": "b230df84633c9cf26278e0a6fe70e3ee",
+    "semantic_hash": ""
+  },
+  "scripts/print_sub_links.py": {
+    "mtime": 1787650291.6329615,
+    "seen": 1787650336.6473446,
+    "ast_hash": "6be36191df257b0412d6043cdb450e20",
+    "semantic_hash": ""
   }
 }

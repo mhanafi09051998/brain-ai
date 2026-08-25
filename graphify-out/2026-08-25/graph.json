@@ -2727,6 +2727,30 @@
       "source_location": "L621"
     },
     {
+      "id": "scripts_test_subtitle_parser_parsewebvtt",
+      "label": "parseWebVTT()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 185,
+      "community_name": "test_subtitle_parser.js",
+      "file_type": "code",
+      "norm_label": "parsewebvtt()",
+      "source_file": "scripts/test_subtitle_parser.js",
+      "source_location": "L3"
+    },
+    {
+      "id": "scripts_download_yts_sub_get_yts_subtitles",
+      "label": "get_yts_subtitles()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 186,
+      "community_name": "download_yts_sub.py",
+      "file_type": "code",
+      "norm_label": "get_yts_subtitles()",
+      "source_file": "scripts/download_yts_sub.py",
+      "source_location": "L3"
+    },
+    {
       "id": "ponytail_hooks_ponytail_config_getclaudedir",
       "label": "getClaudeDir()",
       "_callable": true,
@@ -9429,6 +9453,105 @@
       "file_type": "code",
       "norm_label": "get_topgun_backdrops.py",
       "source_file": "scripts/get_topgun_backdrops.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_test_subtitle_parser",
+      "label": "test_subtitle_parser.js",
+      "_origin": "ast",
+      "community": 185,
+      "community_name": "test_subtitle_parser.js",
+      "file_type": "code",
+      "norm_label": "test_subtitle_parser.js",
+      "source_file": "scripts/test_subtitle_parser.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_test_subtitle_parser_cues1",
+      "label": "cues1",
+      "_origin": "ast",
+      "community": 185,
+      "community_name": "test_subtitle_parser.js",
+      "file_type": "code",
+      "norm_label": "cues1",
+      "source_file": "scripts/test_subtitle_parser.js",
+      "source_location": "L52"
+    },
+    {
+      "id": "scripts_test_subtitle_parser_cues2",
+      "label": "cues2",
+      "_origin": "ast",
+      "community": 185,
+      "community_name": "test_subtitle_parser.js",
+      "file_type": "code",
+      "norm_label": "cues2",
+      "source_file": "scripts/test_subtitle_parser.js",
+      "source_location": "L56"
+    },
+    {
+      "id": "scripts_test_subtitle_parser_fs",
+      "label": "fs",
+      "_origin": "ast",
+      "community": 185,
+      "community_name": "test_subtitle_parser.js",
+      "file_type": "code",
+      "norm_label": "fs",
+      "source_file": "scripts/test_subtitle_parser.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_test_subtitle_parser_vtt1",
+      "label": "vtt1",
+      "_origin": "ast",
+      "community": 185,
+      "community_name": "test_subtitle_parser.js",
+      "file_type": "code",
+      "norm_label": "vtt1",
+      "source_file": "scripts/test_subtitle_parser.js",
+      "source_location": "L51"
+    },
+    {
+      "id": "scripts_test_subtitle_parser_vtt2",
+      "label": "vtt2",
+      "_origin": "ast",
+      "community": 185,
+      "community_name": "test_subtitle_parser.js",
+      "file_type": "code",
+      "norm_label": "vtt2",
+      "source_file": "scripts/test_subtitle_parser.js",
+      "source_location": "L55"
+    },
+    {
+      "id": "scripts_download_yts_sub",
+      "label": "download_yts_sub.py",
+      "_origin": "ast",
+      "community": 186,
+      "community_name": "download_yts_sub.py",
+      "file_type": "code",
+      "norm_label": "download_yts_sub.py",
+      "source_file": "scripts/download_yts_sub.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_process_topgun_vtt",
+      "label": "process_topgun_vtt.py",
+      "_origin": "ast",
+      "community": 187,
+      "community_name": "process_topgun_vtt.py",
+      "file_type": "code",
+      "norm_label": "process_topgun_vtt.py",
+      "source_file": "scripts/process_topgun_vtt.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_vps_download_sub",
+      "label": "vps_download_sub.py",
+      "_origin": "ast",
+      "community": 188,
+      "community_name": "vps_download_sub.py",
+      "file_type": "code",
+      "norm_label": "vps_download_sub.py",
+      "source_file": "scripts/vps_download_sub.py",
       "source_location": "L1"
     },
     {
@@ -35805,6 +35928,17 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_download_yts_sub",
+      "target": "scripts_download_yts_sub_get_yts_subtitles",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/download_yts_sub.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
       "source": "scripts_fetch_imdb_metadata",
       "target": "scripts_fetch_imdb_metadata_update_movies_database",
       "relation": "contains",
@@ -36693,6 +36827,72 @@
       "confidence_score": 1.0,
       "source_file": "scripts/test_playback.py",
       "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_subtitle_parser",
+      "target": "scripts_test_subtitle_parser_fs",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/test_subtitle_parser.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_subtitle_parser",
+      "target": "scripts_test_subtitle_parser_parsewebvtt",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/test_subtitle_parser.js",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_subtitle_parser",
+      "target": "scripts_test_subtitle_parser_vtt1",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/test_subtitle_parser.js",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_subtitle_parser",
+      "target": "scripts_test_subtitle_parser_cues1",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/test_subtitle_parser.js",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_subtitle_parser",
+      "target": "scripts_test_subtitle_parser_vtt2",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/test_subtitle_parser.js",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_subtitle_parser",
+      "target": "scripts_test_subtitle_parser_cues2",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/test_subtitle_parser.js",
+      "source_location": "L56",
       "weight": 1.0
     },
     {
@@ -40473,5 +40673,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "9720fb76fa0bd42ee73a0f24f15efe7919cb14a1"
+  "built_at_commit": "9663c9d5426331c036c55c4c52a5596f3f9d075d"
 }
