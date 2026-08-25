@@ -156,5 +156,8 @@
   "154": "patch_tiingo.py",
   "155": "test3.py",
   "156": "patch_local2.py",
-  "157": "patch_revert.py"
+  "157": "patch_revert.py",
+  "158": "PaletteGenerator",
+  "159": "patch_fvg_zone.py",
+  "160": "patch_twelve_again.py"
 }
