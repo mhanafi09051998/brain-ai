@@ -2,7 +2,8 @@
   {
     "id": "x-men-first-class",
     "slug": "x-men-first-class",
-    "title": "X-Men: First Class (2011)",
+    "imdbId": "tt1270798",
+    "title": "X-Men: First Class",
     "year": 2011,
     "duration": "2 Jam 12 Menit",
     "ageRating": "13+",
@@ -10,12 +11,20 @@
     "quality": "1080p BluRay",
     "audio": "Dolby AAC 5.1",
     "subtitle": "Bahasa Indonesia (Resmi)",
-    "genres": ["Action", "Sci-Fi", "Adventure", "Superhero"],
-    "poster": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=800&auto=format&fit=crop&q=80",
-    "backdrop": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=1600&auto=format&fit=crop&q=80",
-    "synopsis": "Di era Perang Dingin tahun 1962, Charles Xavier dan Erik Lehnsherr (Magneto) bekerja sama dengan CIA untuk mengumpulkan mutan muda demi mencegah krisis nuklir global yang dirancang oleh Sebastian Shaw.",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Adventure",
+      "Superhero"
+    ],
+    "poster": "https://m.media-amazon.com/images/M/MV5BMTg5OTMxNzk4Nl5BMl5BanBnXkFtZTcwOTk1MjAwNQ@@._V1_FMjpg_UX1000_.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/original/hNEokmUke0dazoBhttFN0o3L7Xv.jpg",
+    "synopsis": "Di era Perang Dingin tahun 1962, Charles Xavier (Professor X) dan Erik Lehnsherr (Magneto) bekerja sama dengan CIA untuk mengumpulkan mutan muda pertama demi mencegah ancaman perang nuklir global dari Hellfire Club yang dipimpin oleh Sebastian Shaw.",
     "director": "Matthew Vaughn",
-    "cast": ["James McAvoy", "Michael Fassbender", "Jennifer Lawrence", "Kevin Bacon"],
+    "cast": [
+      "James McAvoy",
+      "Michael Fassbender"
+    ],
     "streamUrl": "/stream/x-men-first-class.mp4",
     "subtitleUrl": "/api/subtitles/x-men-first-class"
   }
