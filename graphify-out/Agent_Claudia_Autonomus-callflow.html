@@ -60,7 +60,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 <div class="container">
 
 <h1>Agent_Claudia_Autonomus — Complete Call Flow &amp; Architecture Documentation</h1>
-<p class="subtitle">Generated from graphify knowledge graph: 1609 nodes, 1868 edges, 183 communities. Commit: b06376c</p>
+<p class="subtitle">Generated from graphify knowledge graph: 1621 nodes, 1886 edges, 184 communities. Commit: 62b13cb</p>
 
 <div class="nav">
     <a href="#overview">Architecture Overview</a>
@@ -96,15 +96,15 @@ flowchart LR
     class ANALYSIS_CLUSTERING_C79796DA module;
     OUTPUTS_DOCS_ED82387C("Outputs &amp; Docs<br/><small>74 nodes</small>")
     class OUTPUTS_DOCS_ED82387C module;
-    CLI_SKILLS_9964CBB8("CLI &amp; Skill Installers<br/><small>231 nodes</small>")
+    CLI_SKILLS_9964CBB8("CLI &amp; Skill Installers<br/><small>232 nodes</small>")
     class CLI_SKILLS_9964CBB8 module;
-    INGEST_CACHE_UPDATE_FF457338("Ingestion &amp; Updates<br/><small>58 nodes</small>")
+    INGEST_CACHE_UPDATE_FF457338("Ingestion &amp; Updates<br/><small>70 nodes</small>")
     class INGEST_CACHE_UPDATE_FF457338 module;
     SERVE_API_35EC8E86("Serving API<br/><small>59 nodes</small>")
     class SERVE_API_35EC8E86 module;
-    SECURITY_GLOBAL_5B9C6A04("Security &amp; Global Graph<br/><small>41 nodes</small>")
+    SECURITY_GLOBAL_5B9C6A04("Security &amp; Global Graph<br/><small>46 nodes</small>")
     class SECURITY_GLOBAL_5B9C6A04 module;
-    TESTS_FIXTURES_B84B1DCC("Tests &amp; Fixtures<br/><small>110 nodes</small>")
+    TESTS_FIXTURES_B84B1DCC("Tests &amp; Fixtures<br/><small>104 nodes</small>")
     class TESTS_FIXTURES_B84B1DCC module;
     APP_JS_CC08AAF7("app.js<br/><small>39 nodes</small>")
     class APP_JS_CC08AAF7 module;
@@ -118,18 +118,18 @@ flowchart LR
     class NEURON_N046_ALGORITHMIC_EXECUTION_ENGINES_SMART_186F44EA module;
     OTHER_D0941E68("Other<br/><small>525 nodes</small>")
     class OTHER_D0941E68 module;
-    TESTS_FIXTURES_B84B1DCC -->|calls x19| OTHER_D0941E68
-    OTHER_D0941E68 -->|imports x11| CLI_SKILLS_9964CBB8
-    TESTS_FIXTURES_B84B1DCC -->|calls x10| OUTPUTS_DOCS_ED82387C
+    TESTS_FIXTURES_B84B1DCC -->|calls x27| OTHER_D0941E68
+    TESTS_FIXTURES_B84B1DCC -->|calls x11| OUTPUTS_DOCS_ED82387C
+    OTHER_D0941E68 -->|imports x10| CLI_SKILLS_9964CBB8
+    TESTS_FIXTURES_B84B1DCC -->|calls x9| CLI_SKILLS_9964CBB8
+    TESTS_FIXTURES_B84B1DCC -->|calls x7| SECURITY_GLOBAL_5B9C6A04
     TESTS_FIXTURES_B84B1DCC -->|calls x7| ANALYSIS_CLUSTERING_C79796DA
-    TESTS_FIXTURES_B84B1DCC -->|calls x7| CLI_SKILLS_9964CBB8
     OTHER_D0941E68 -->|calls x6| ANALYSIS_CLUSTERING_C79796DA
-    OTHER_D0941E68 -->|calls x5| SECURITY_GLOBAL_5B9C6A04
-    CLI_SKILLS_9964CBB8 -->|indirect call x5| TESTS_FIXTURES_B84B1DCC
-    OTHER_D0941E68 -->|method x4| TESTS_FIXTURES_B84B1DCC
+    TESTS_FIXTURES_B84B1DCC -->|calls x4| BUILD_GRAPH_321CBB04
     OUTPUTS_DOCS_ED82387C -->|calls x4| OTHER_D0941E68
     ANALYSIS_CLUSTERING_C79796DA -->|imports x4| OTHER_D0941E68
-    TESTS_FIXTURES_B84B1DCC -->|calls x3| BUILD_GRAPH_321CBB04
+    SECURITY_GLOBAL_5B9C6A04 -->|references x3| OTHER_D0941E68
+    OTHER_D0941E68 -->|method x3| TESTS_FIXTURES_B84B1DCC
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -146,19 +146,19 @@ flowchart LR
     <h4>Architecture Layers</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>Layer</th><th>Nodes</th><th>Communities</th></tr>
-      <tr><td>Extraction Pipeline</td><td>124</td><td><code>8, 11, 25, 26, 29, 40, 45, 84, 96, 97</code></td></tr><tr><td>Graph Build</td><td>153</td><td><code>0, 4, 28, 129, 36, 62, 67, 124, 125</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>111</td><td><code>146, 6, 14, 31, 46, 68</code></td></tr><tr><td>Outputs &amp; Docs</td><td>74</td><td><code>3, 43, 133, 32, 181</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>231</td><td><code>1, 2, 5, 22, 39, 49, 53, 54, 56, 69, 70, 71, 74, 75, 76, 77, 82, 86, 91, 116, 118, 119, 120, 121, 122, 123</code></td></tr><tr><td>Ingestion &amp; Updates</td><td>58</td><td><code>19, 168, 178, 73, 114, 177, 88, 135, 136, 138</code></td></tr><tr><td>Serving API</td><td>59</td><td><code>182, 38, 95, 173</code></td></tr><tr><td>Security &amp; Global Graph</td><td>41</td><td><code>9, 128, 52</code></td></tr><tr><td>Tests &amp; Fixtures</td><td>110</td><td><code>7, 23, 18, 48, 130, 162, 58, 139, 174</code></td></tr><tr><td>app.js</td><td>39</td><td><code>161</code></td></tr><tr><td>Neuron N056: Image Processing, Computer Vision &amp; AI Visual Generation Mastery</td><td>23</td><td><code>47</code></td></tr><tr><td>Neuron N044: Statistical Arbitrage, Pairs Trading &amp; Cointegration</td><td>22</td><td><code>10</code></td></tr><tr><td>==========================================</td><td>20</td><td><code>12</code></td></tr><tr><td>Neuron N046: Algorithmic Execution Engines &amp; Smart Order Routing</td><td>19</td><td><code>13</code></td></tr><tr><td>Other</td><td>525</td><td><code>15, 16, 17, 131, 20, 21, 24, 27, 87, 169, 30, 33, 34, 35, 37, 41, 179, 42, 44, 170, 50, 51, 132, 55, 57, 59, 60, 61, 63, 64, 65, 66, 134, 172, 72, 171, 78, 79, 80, 81, 83, 85, 89, 90, 100, 101, 102, 103, 137, 92, 93, 94, 98, 99, 104, 105, 106, 107, 108, 109, 110, 111, 112, 176, 113, 115, 117, 126, 127, 140, 141, 142, 143, 144, 145, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 163, 164, 165, 166, 167, 175, 180</code></td></tr>
+      <tr><td>Extraction Pipeline</td><td>124</td><td><code>8, 11, 25, 26, 29, 40, 45, 84, 96, 97</code></td></tr><tr><td>Graph Build</td><td>153</td><td><code>0, 4, 28, 129, 36, 62, 67, 124, 125</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>111</td><td><code>146, 6, 14, 31, 46, 68</code></td></tr><tr><td>Outputs &amp; Docs</td><td>74</td><td><code>3, 43, 133, 32, 181</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>232</td><td><code>1, 2, 5, 22, 39, 49, 53, 54, 56, 69, 70, 71, 74, 75, 76, 77, 82, 86, 91, 116, 118, 119, 120, 121, 122, 123</code></td></tr><tr><td>Ingestion &amp; Updates</td><td>70</td><td><code>178, 19, 168, 73, 114, 177, 88, 135, 136, 138</code></td></tr><tr><td>Serving API</td><td>59</td><td><code>182, 38, 95, 173</code></td></tr><tr><td>Security &amp; Global Graph</td><td>46</td><td><code>9, 128, 52</code></td></tr><tr><td>Tests &amp; Fixtures</td><td>104</td><td><code>7, 18, 23, 48, 162, 131, 58, 139, 174</code></td></tr><tr><td>app.js</td><td>39</td><td><code>161</code></td></tr><tr><td>Neuron N056: Image Processing, Computer Vision &amp; AI Visual Generation Mastery</td><td>23</td><td><code>47</code></td></tr><tr><td>Neuron N044: Statistical Arbitrage, Pairs Trading &amp; Cointegration</td><td>22</td><td><code>10</code></td></tr><tr><td>==========================================</td><td>20</td><td><code>12</code></td></tr><tr><td>Neuron N046: Algorithmic Execution Engines &amp; Smart Order Routing</td><td>19</td><td><code>13</code></td></tr><tr><td>Other</td><td>525</td><td><code>15, 16, 17, 20, 21, 24, 27, 87, 169, 30, 33, 34, 35, 37, 130, 41, 42, 179, 44, 132, 170, 50, 51, 55, 57, 59, 60, 61, 63, 64, 65, 66, 134, 172, 72, 171, 183, 78, 79, 80, 81, 83, 85, 89, 90, 100, 101, 102, 103, 137, 92, 93, 94, 98, 99, 104, 105, 106, 107, 108, 109, 110, 111, 112, 176, 113, 115, 117, 126, 127, 140, 141, 142, 143, 144, 145, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 163, 164, 165, 166, 167, 175, 180</code></td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Core Flow</h4>
-    <div class="arrow-chain">Extraction Pipeline -&gt; Graph Build -&gt; Security &amp; Global Graph -&gt; Analysis &amp; Clustering -&gt; Other -&gt; CLI &amp; Skill Installers -&gt; Tests &amp; Fixtures</div>
+    <div class="arrow-chain">Extraction Pipeline -&gt; Graph Build -&gt; Security &amp; Global Graph -&gt; Other -&gt; CLI &amp; Skill Installers -&gt; Tests &amp; Fixtures -&gt; Outputs &amp; Docs</div>
   </div>
 </div>
 <div class="grid">
   <div class="card">
     <h4>Graph Report Highlights</h4>
     <ul>
-      <li>1609 nodes · 1868 edges · 183 communities (157 shown, 26 thin omitted)</li>
+      <li>1621 nodes · 1886 edges · 184 communities (157 shown, 27 thin omitted)</li>
       <li>Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 36 edges (avg confidence: 0.85)</li>
       <li>Token cost: 0 input · 0 output</li>
       <li>1. `Vec2D` - 25 edges</li>
@@ -1573,12 +1573,12 @@ flowchart LR
 
 <!-- ====== 6. CLI & Skill Installers ====== -->
 <h2 id="cli-skills">6. CLI &amp; Skill Installers</h2>
-<p>CLI &amp; Skill Installers groups implementation around ponytail, skills, skillmd, learning, mostly in ponytail/README.md, ponytail/README.ko.md, ponytail/README.es.md. This section covers 231 nodes and 216 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>CLI &amp; Skill Installers groups implementation around ponytail, skills, skillmd, learning, mostly in ponytail/README.md, ponytail/README.ko.md, ponytail/README.es.md. This section covers 232 nodes and 217 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: CLI &amp; Skill Installers (231 nodes, 216 edges)
+    %% Section: CLI &amp; Skill Installers (232 nodes, 217 edges)
     subgraph cli_skills_opencode_plugins_ponytail_mjs_a268305e[".opencode/plugins/ponytail.mjs"]
         ponytail_opencode_plugins_ponytail_b70099ee("ponytail.mjs")
         ponytail_opencode_plugins_ponytail_readmode_6df6db11("readMode()<br/><small>.opencode/plugins/ponytail.mjs</small>")
@@ -1615,7 +1615,7 @@ flowchart LR
     ponytail_opencode_plugins_ponytail_b70099ee -->|imports| ponytail_opencode_plugins_ponytail_frontmatter_p_5d2c27cd
     ponytail_opencode_plugins_ponytail_b70099ee -->|imports| ponytail_hooks_ponytail_config_1f171eac
     ponytail_opencode_plugins_ponytail_b70099ee -->|imports| ponytail_opencode_plugins_ponytail_frontmatter_e526c9f5
-    %% Omitted for readability: 213 nodes, 0 edges
+    %% Omitted for readability: 214 nodes, 0 edges
     class ponytail_opencode_plugins_ponytail_b70099ee function;
     class ponytail_opencode_plugins_ponytail_readmode_6df6db11 function;
     class ponytail_opencode_plugins_ponytail_dirname_a4d86cba function;
@@ -1905,7 +1905,7 @@ flowchart LR
       <tr><td><code>ponytail/README.md</code></td><td>25 nodes</td></tr>
 <tr><td><code>ponytail/README.ko.md</code></td><td>22 nodes</td></tr>
 <tr><td><code>ponytail/README.es.md</code></td><td>21 nodes</td></tr>
-<tr><td><code>ponytail/hooks/ponytail-config.js</code></td><td>12 nodes</td></tr>
+<tr><td><code>ponytail/hooks/ponytail-config.js</code></td><td>13 nodes</td></tr>
 <tr><td><code>skills/ponytail/SKILL.md</code></td><td>9 nodes</td></tr>
 <tr><td><code>learning/neurons/N022_multi_agent_consensus.md</code></td><td>9 nodes</td></tr>
 <tr><td><code>.opencode/plugins/ponytail.mjs</code></td><td>9 nodes</td></tr>
@@ -1914,35 +1914,37 @@ flowchart LR
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x184, references x12, indirect call x8, calls x5. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x185, references x12, indirect call x8, calls x5. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
 
 <!-- ====== 7. Ingestion & Updates ====== -->
 <h2 id="ingest-cache-update">7. Ingestion &amp; Updates</h2>
-<p>Ingestion &amp; Updates groups implementation around scripts, learning, neurons, webrtc, mostly in learning/neurons/N039_webrtc_av_dsp_streaming.md, goblix/public/manifest.json, scripts/fetch_imdb_metadata.py. This section covers 58 nodes and 53 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Ingestion &amp; Updates groups implementation around scripts, download, learning, neurons, mostly in learning/neurons/N039_webrtc_av_dsp_streaming.md, scripts/download_movie_and_subtitle.py, goblix/public/manifest.json. This section covers 70 nodes and 71 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Ingestion &amp; Updates (58 nodes, 53 edges)
+    %% Section: Ingestion &amp; Updates (70 nodes, 71 edges)
+    subgraph ingest_cache_update_scripts_download_movie_and_s_0a99f8eb["scripts/download_movie_and_subtitle.py"]
+        scripts_download_movie_and_subtitle_main_7ca68d94("main()<br/><small>scripts/download_movie_and_subtitle.py</small>")
+        scripts_download_movie_and_subtitle_download_and_64dfcde4("and process subtitle()<br/><small>scripts/download_movie_and_subtitle.py</small>")
+        scripts_download_movie_and_subtitle_b6c76bb6("download_movie_and_subtitle.py")
+        scripts_download_movie_and_subtitle_srt_to_vtt_96f51502("srt_to_vtt()<br/><small>scripts/download_movie_and_subtitle.py</small>")
+        scripts_download_movie_and_subtitle_sanitize_sub_ae41f1a8("sanitize_subtitles()<br/><small>scripts/download_movie_and_subtitle.py</small>")
+        scripts_download_movie_and_subtitle_download_fil_f39c8f4d("download_file()<br/><small>scripts/download_movie_and_subtitle.py</small>")
+        scripts_download_movie_and_subtitle_register_mov_0de04742("register_movie()<br/><small>scripts/download_movie_and_subtitle.py</small>")
+    end
+    subgraph ingest_cache_update_scripts_fetch_imdb_metadata_2ef2c0c7["scripts/fetch_imdb_metadata.py"]
+        scripts_fetch_imdb_metadata_update_movies_databa_41ee8484("update_movies_database()<br/><small>scripts/fetch_imdb_metadata.py</small>")
+        scripts_fetch_imdb_metadata_enrich_movie_metadat_90174307("enrich_movie_metadata()<br/><small>scripts/fetch_imdb_metadata.py</small>")
+        scripts_fetch_imdb_metadata_search_imdb_64267231("search_imdb()<br/><small>scripts/fetch_imdb_metadata.py</small>")
+        scripts_fetch_imdb_metadata_fetch_tmdb_backdrop_787c71db("fetch_tmdb_backdrop()<br/><small>scripts/fetch_imdb_metadata.py</small>")
+    end
     subgraph ingest_cache_update_goblix_public_manifest_json_32850c0c["goblix/public/manifest.json"]
         goblix_public_manifest_background_color_b1242cdd("background_color<br/><small>goblix/public/manifest.json</small>")
         goblix_public_manifest_description_09530496("description<br/><small>goblix/public/manifest.json</small>")
-        goblix_public_manifest_display_2004e34f("display<br/><small>goblix/public/manifest.json</small>")
-        goblix_public_manifest_icons_5abf8062("icons<br/><small>goblix/public/manifest.json</small>")
-        goblix_public_manifest_11ac7ea2("manifest.json")
-        goblix_public_manifest_name_34652af6("name<br/><small>goblix/public/manifest.json</small>")
-        goblix_public_manifest_short_name_4dc245c0("short_name<br/><small>goblix/public/manifest.json</small>")
-        goblix_public_manifest_start_url_f3bfb518("start_url<br/><small>goblix/public/manifest.json</small>")
-        goblix_public_manifest_theme_color_57de44ef("theme_color<br/><small>goblix/public/manifest.json</small>")
-    end
-    subgraph ingest_cache_update_scripts_fetch_imdb_metadata_2ef2c0c7["scripts/fetch_imdb_metadata.py"]
-        scripts_fetch_imdb_metadata_enrich_movie_metadat_90174307("enrich_movie_metadata()<br/><small>scripts/fetch_imdb_metadata.py</small>")
-        scripts_fetch_imdb_metadata_update_movies_databa_41ee8484("update_movies_database()<br/><small>scripts/fetch_imdb_metadata.py</small>")
-        scripts_fetch_imdb_metadata_search_imdb_64267231("search_imdb()<br/><small>scripts/fetch_imdb_metadata.py</small>")
-        scripts_fetch_imdb_metadata_fetch_tmdb_backdrop_787c71db("fetch_tmdb_backdrop()<br/><small>scripts/fetch_imdb_metadata.py</small>")
     end
     subgraph ingest_cache_update_scripts_ingest_frontier_know_5784d46d["scripts/ingest_frontier_knowledge.py"]
         scripts_ingest_frontier_knowledge_build_all_fron_ff8b9479("all frontier datasets()<br/><small>scripts/ingest_frontier_knowledge.py</small>")
@@ -1954,24 +1956,31 @@ flowchart LR
     end
     scripts_ingest_swot_knowledge_py_any_7a6c95ab("Any")
     scripts_ingest_swot_knowledge_train_and_evaluate_b1d92e19 -->|calls| scripts_ingest_swot_knowledge_process_case_9d305efc
+    scripts_download_movie_and_subtitle_download_and_64dfcde4 -->|calls| scripts_download_movie_and_subtitle_srt_to_vtt_96f51502
+    scripts_download_movie_and_subtitle_download_and_64dfcde4 -->|calls| scripts_download_movie_and_subtitle_sanitize_sub_ae41f1a8
+    scripts_download_movie_and_subtitle_main_7ca68d94 -->|calls| scripts_download_movie_and_subtitle_download_fil_f39c8f4d
+    scripts_download_movie_and_subtitle_main_7ca68d94 -->|calls| scripts_download_movie_and_subtitle_download_and_64dfcde4
+    scripts_download_movie_and_subtitle_main_7ca68d94 -->|calls| scripts_download_movie_and_subtitle_register_mov_0de04742
+    scripts_download_movie_and_subtitle_register_mov_0de04742 -->|calls| scripts_fetch_imdb_metadata_enrich_movie_metadat_90174307
     scripts_fetch_imdb_metadata_enrich_movie_metadat_90174307 -->|calls| scripts_fetch_imdb_metadata_search_imdb_64267231
     scripts_fetch_imdb_metadata_enrich_movie_metadat_90174307 -->|calls| scripts_fetch_imdb_metadata_fetch_tmdb_backdrop_787c71db
     scripts_fetch_imdb_metadata_update_movies_databa_41ee8484 -->|calls| scripts_fetch_imdb_metadata_enrich_movie_metadat_90174307
     scripts_ingest_frontier_knowledge_build_all_fron_ff8b9479 -->|calls| scripts_ingest_frontier_knowledge_ensure_dirs_f31a27a1
-    %% Omitted for readability: 40 nodes, 0 edges
-    class goblix_public_manifest_background_color_b1242cdd function;
-    class goblix_public_manifest_description_09530496 function;
-    class goblix_public_manifest_display_2004e34f function;
-    class goblix_public_manifest_icons_5abf8062 function;
-    class goblix_public_manifest_11ac7ea2 function;
-    class goblix_public_manifest_name_34652af6 function;
-    class goblix_public_manifest_short_name_4dc245c0 function;
-    class goblix_public_manifest_start_url_f3bfb518 function;
-    class goblix_public_manifest_theme_color_57de44ef function;
-    class scripts_fetch_imdb_metadata_enrich_movie_metadat_90174307 function;
+    scripts_download_movie_and_subtitle_b6c76bb6 -->|imports| scripts_fetch_imdb_metadata_enrich_movie_metadat_90174307
+    %% Omitted for readability: 52 nodes, 0 edges
+    class scripts_download_movie_and_subtitle_main_7ca68d94 function;
+    class scripts_download_movie_and_subtitle_download_and_64dfcde4 function;
+    class scripts_download_movie_and_subtitle_b6c76bb6 module;
+    class scripts_download_movie_and_subtitle_srt_to_vtt_96f51502 function;
+    class scripts_download_movie_and_subtitle_sanitize_sub_ae41f1a8 function;
+    class scripts_download_movie_and_subtitle_download_fil_f39c8f4d function;
+    class scripts_download_movie_and_subtitle_register_mov_0de04742 function;
     class scripts_fetch_imdb_metadata_update_movies_databa_41ee8484 function;
+    class scripts_fetch_imdb_metadata_enrich_movie_metadat_90174307 function;
     class scripts_fetch_imdb_metadata_search_imdb_64267231 function;
     class scripts_fetch_imdb_metadata_fetch_tmdb_backdrop_787c71db function;
+    class goblix_public_manifest_background_color_b1242cdd function;
+    class goblix_public_manifest_description_09530496 function;
     class scripts_ingest_frontier_knowledge_build_all_fron_ff8b9479 function;
     class scripts_ingest_frontier_knowledge_ensure_dirs_f31a27a1 function;
     class scripts_ingest_swot_knowledge_train_and_evaluate_b1d92e19 function;
@@ -2000,230 +2009,62 @@ flowchart LR
 </tr>
 <tr>
   <td>1</td>
-  <td><code>N039_webrtc_av_dsp_streaming.md</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing N039_webrtc_av_dsp_streaming.md.</td>
+  <td><code>download_and_process_subtitle()</code><br><small style="color:var(--muted)">scripts/download_movie_and_subtitle.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>main()</code><br><small style="color:var(--muted)">scripts/download_movie_and_subtitle.py</small></td>
+  <td><code>sanitize_subtitles()</code><br><small style="color:var(--muted)">scripts/download_movie_and_subtitle.py</small><br><code>srt_to_vtt()</code><br><small style="color:var(--muted)">scripts/download_movie_and_subtitle.py</small></td>
+  <td>download_and_process_subtitle() node in scripts/download_movie_and_subtitle.py.</td>
 </tr>
 <tr>
   <td>2</td>
-  <td><code>1.1. End-to-End Latency Budget Breakdown ($&lt; 100\text{ ms}$)</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
+  <td><code>download_file()</code><br><small style="color:var(--muted)">scripts/download_movie_and_subtitle.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>main()</code><br><small style="color:var(--muted)">scripts/download_movie_and_subtitle.py</small></td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing 1.1. End-to-End Latency Budget Breakdown ($&lt; 100\text{ ms}$).</td>
+  <td>download_file() node in scripts/download_movie_and_subtitle.py.</td>
 </tr>
 <tr>
   <td>3</td>
-  <td><code>1.2. WebRTC Transport Protocol Stack &amp; Cryptographic Handshake</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
+  <td><code>main()</code><br><small style="color:var(--muted)">scripts/download_movie_and_subtitle.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 1.2. WebRTC Transport Protocol Stack &amp; Cryptographic Handshake.</td>
+  <td><code>and process subtitle()</code><br><small style="color:var(--muted)">scripts/download_movie_and_subtitle.py</small><br><code>download_file()</code><br><small style="color:var(--muted)">scripts/download_movie_and_subtitle.py</small><br><code>register_movie()</code><br><small style="color:var(--muted)">scripts/download_movie_and_subtitle.py</small></td>
+  <td>main() node in scripts/download_movie_and_subtitle.py.</td>
 </tr>
 <tr>
   <td>4</td>
-  <td><code>1.3. Transport-Wide Congestion Control (TWCC - RFC 8888) &amp; BWE Algorithms</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 1.3. Transport-Wide Congestion Control (TWCC - RFC 8888) &amp; BWE Algorithms.</td>
+  <td><code>register_movie()</code><br><small style="color:var(--muted)">scripts/download_movie_and_subtitle.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>main()</code><br><small style="color:var(--muted)">scripts/download_movie_and_subtitle.py</small></td>
+  <td><code>enrich_movie_metadata()</code><br><small style="color:var(--muted)">scripts/fetch_imdb_metadata.py</small></td>
+  <td>register_movie() node in scripts/download_movie_and_subtitle.py.</td>
 </tr>
 <tr>
   <td>5</td>
-  <td><code>🌐 1. Ultra-Low Latency (&lt;100ms) WebRTC Architecture &amp; Transport Pipeline</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
+  <td><code>sanitize_subtitles()</code><br><small style="color:var(--muted)">scripts/download_movie_and_subtitle.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>and process subtitle()</code><br><small style="color:var(--muted)">scripts/download_movie_and_subtitle.py</small></td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing 🌐 1. Ultra-Low Latency (&lt;100ms) WebRTC Architecture &amp; Transport Pipeline.</td>
+  <td>sanitize_subtitles() node in scripts/download_movie_and_subtitle.py.</td>
 </tr>
 <tr>
   <td>6</td>
-  <td><code>2.1. Topologi Media: Matriks Perbandingan Kritis</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
+  <td><code>srt_to_vtt()</code><br><small style="color:var(--muted)">scripts/download_movie_and_subtitle.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>and process subtitle()</code><br><small style="color:var(--muted)">scripts/download_movie_and_subtitle.py</small></td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing 2.1. Topologi Media: Matriks Perbandingan Kritis.</td>
+  <td>srt_to_vtt() node in scripts/download_movie_and_subtitle.py.</td>
 </tr>
 <tr>
   <td>7</td>
-  <td><code>2.2. SFU Zero-Decode Routing &amp; RTP Stream Rewriting</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 2.2. SFU Zero-Decode Routing &amp; RTP Stream Rewriting.</td>
-</tr>
-<tr>
-  <td>8</td>
-  <td><code>2.3. Simulcast vs AV1 Scalable Video Coding (SVC)</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 2.3. Simulcast vs AV1 Scalable Video Coding (SVC).</td>
-</tr>
-<tr>
-  <td>9</td>
-  <td><code>🏢 2. Media Topology: SFU vs MCU vs Mesh &amp; Scalable Video Routing</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 🏢 2. Media Topology: SFU vs MCU vs Mesh &amp; Scalable Video Routing.</td>
-</tr>
-<tr>
-  <td>10</td>
-  <td><code>3.1. Real-Time Audio DSP Engine (AEC3, NS, AGC2 &amp; Opus)</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 3.1. Real-Time Audio DSP Engine (AEC3, NS, AGC2 &amp; Opus).</td>
-</tr>
-<tr>
-  <td>11</td>
-  <td><code>3.2. AV1 Real-Time Hardware Transcoding &amp; Codec Invariants</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 3.2. AV1 Real-Time Hardware Transcoding &amp; Codec Invariants.</td>
-</tr>
-<tr>
-  <td>12</td>
-  <td><code>🎙️ 3. Audio/Video DSP Pipelines, Opus &amp; AV1 Hardware Transcoding</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 🎙️ 3. Audio/Video DSP Pipelines, Opus &amp; AV1 Hardware Transcoding.</td>
-</tr>
-<tr>
-  <td>13</td>
-  <td><code>4.1. RFC 3550 Inter-Arrival Jitter Estimation &amp; Playout Target</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 4.1. RFC 3550 Inter-Arrival Jitter Estimation &amp; Playout Target.</td>
-</tr>
-<tr>
-  <td>14</td>
-  <td><code>4.2. Time-Scale Modification via WSOLA (Waveform Similarity Overlap-Add)</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 4.2. Time-Scale Modification via WSOLA (Waveform Similarity Overlap-Add).</td>
-</tr>
-<tr>
-  <td>15</td>
-  <td><code>4.3. Hybrid Loss Recovery &amp; Packet Loss Concealment (PLC)</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 4.3. Hybrid Loss Recovery &amp; Packet Loss Concealment (PLC).</td>
-</tr>
-<tr>
-  <td>16</td>
-  <td><code>🛡️ 4. Adaptive Jitter Buffer (NetEq) &amp; Packet Loss Concealment (PLC)</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 🛡️ 4. Adaptive Jitter Buffer (NetEq) &amp; Packet Loss Concealment (PLC).</td>
-</tr>
-<tr>
-  <td>17</td>
-  <td><code>🧪 5. Invariant Self-Check Executable (Pure Python Standard Library)</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 🧪 5. Invariant Self-Check Executable (Pure Python Standard Library).</td>
-</tr>
-<tr>
-  <td>18</td>
-  <td><code>Neuron N039: Real-Time WebRTC, Audio/Video DSP &amp; AV1 Streaming</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Neuron N039: Real-Time WebRTC, Audio/Video DSP &amp; AV1 Streaming.</td>
-</tr>
-<tr>
-  <td>19</td>
-  <td><code>manifest.json</code><br><small style="color:var(--muted)">goblix/public/manifest.json</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>manifest.json node in goblix/public/manifest.json.</td>
-</tr>
-<tr>
-  <td>20</td>
-  <td><code>background_color</code><br><small style="color:var(--muted)">goblix/public/manifest.json</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>background_color node in goblix/public/manifest.json.</td>
-</tr>
-<tr>
-  <td>21</td>
-  <td><code>description</code><br><small style="color:var(--muted)">goblix/public/manifest.json</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>description node in goblix/public/manifest.json.</td>
-</tr>
-<tr>
-  <td>22</td>
-  <td><code>display</code><br><small style="color:var(--muted)">goblix/public/manifest.json</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>display node in goblix/public/manifest.json.</td>
-</tr>
-<tr>
-  <td>23</td>
-  <td><code>icons</code><br><small style="color:var(--muted)">goblix/public/manifest.json</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>icons node in goblix/public/manifest.json.</td>
-</tr>
-<tr>
-  <td>24</td>
-  <td><code>name</code><br><small style="color:var(--muted)">goblix/public/manifest.json</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>name node in goblix/public/manifest.json.</td>
-</tr>
-<tr>
-  <td>25</td>
-  <td><code>short_name</code><br><small style="color:var(--muted)">goblix/public/manifest.json</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>short_name node in goblix/public/manifest.json.</td>
-</tr>
-<tr>
-  <td>26</td>
-  <td><code>start_url</code><br><small style="color:var(--muted)">goblix/public/manifest.json</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>start_url node in goblix/public/manifest.json.</td>
-</tr>
-<tr>
-  <td>27</td>
-  <td><code>theme_color</code><br><small style="color:var(--muted)">goblix/public/manifest.json</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>theme_color node in goblix/public/manifest.json.</td>
-</tr>
-<tr>
-  <td>28</td>
   <td><code>enrich_movie_metadata()</code><br><small style="color:var(--muted)">scripts/fetch_imdb_metadata.py</small></td>
   <td><span class="tag tag-func">Function</span></td>
-  <td><code>update_movies_database()</code><br><small style="color:var(--muted)">scripts/fetch_imdb_metadata.py</small></td>
+  <td><code>download_movie_and_subtitle.py</code><br><small style="color:var(--muted)">scripts/download_movie_and_subtitle.py</small><br><code>register_movie()</code><br><small style="color:var(--muted)">scripts/download_movie_and_subtitle.py</small><br><code>update_movies_database()</code><br><small style="color:var(--muted)">scripts/fetch_imdb_metadata.py</small></td>
   <td><code>fetch_tmdb_backdrop()</code><br><small style="color:var(--muted)">scripts/fetch_imdb_metadata.py</small><br><code>search_imdb()</code><br><small style="color:var(--muted)">scripts/fetch_imdb_metadata.py</small></td>
   <td>enrich_movie_metadata() node in scripts/fetch_imdb_metadata.py.</td>
 </tr>
 <tr>
-  <td>29</td>
+  <td>8</td>
   <td><code>fetch_tmdb_backdrop()</code><br><small style="color:var(--muted)">scripts/fetch_imdb_metadata.py</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>enrich_movie_metadata()</code><br><small style="color:var(--muted)">scripts/fetch_imdb_metadata.py</small></td>
@@ -2231,12 +2072,180 @@ flowchart LR
   <td>fetch_tmdb_backdrop() node in scripts/fetch_imdb_metadata.py.</td>
 </tr>
 <tr>
-  <td>30</td>
+  <td>9</td>
   <td><code>search_imdb()</code><br><small style="color:var(--muted)">scripts/fetch_imdb_metadata.py</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>enrich_movie_metadata()</code><br><small style="color:var(--muted)">scripts/fetch_imdb_metadata.py</small></td>
   <td>No direct outbound edge</td>
   <td>search_imdb() node in scripts/fetch_imdb_metadata.py.</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>update_movies_database()</code><br><small style="color:var(--muted)">scripts/fetch_imdb_metadata.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>enrich_movie_metadata()</code><br><small style="color:var(--muted)">scripts/fetch_imdb_metadata.py</small></td>
+  <td>update_movies_database() node in scripts/fetch_imdb_metadata.py.</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>download_movie_and_subtitle.py</code><br><small style="color:var(--muted)">scripts/download_movie_and_subtitle.py</small></td>
+  <td><span class="tag tag-class">Module</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>enrich_movie_metadata()</code><br><small style="color:var(--muted)">scripts/fetch_imdb_metadata.py</small></td>
+  <td>Module file in scripts/download_movie_and_subtitle.py.</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>fetch_imdb_metadata.py</code><br><small style="color:var(--muted)">scripts/fetch_imdb_metadata.py</small></td>
+  <td><span class="tag tag-class">Module</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in scripts/fetch_imdb_metadata.py.</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>Downloads or saves subtitle, sanitizes it, and converts to WebVTT.</code><br><small style="color:var(--muted)">scripts/download_movie_and_subtitle.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Downloads or saves subtitle, sanitizes it, and converts to WebVTT..</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>Integrates movie into Goblix catalog database.</code><br><small style="color:var(--muted)">scripts/download_movie_and_subtitle.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Integrates movie into Goblix catalog database..</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>Downloads large media file in chunks with a live progress bar.</code><br><small style="color:var(--muted)">scripts/download_movie_and_subtitle.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Downloads large media file in chunks with a live progress bar..</td>
+</tr>
+<tr>
+  <td>16</td>
+  <td><code>Converts SubRip (.srt) subtitle format into WebVTT format.</code><br><small style="color:var(--muted)">scripts/download_movie_and_subtitle.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Converts SubRip (.srt) subtitle format into WebVTT format..</td>
+</tr>
+<tr>
+  <td>17</td>
+  <td><code>Sanitizes subtitle text, purging any gambling or promo spam.</code><br><small style="color:var(--muted)">scripts/download_movie_and_subtitle.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Sanitizes subtitle text, purging any gambling or promo spam..</td>
+</tr>
+<tr>
+  <td>18</td>
+  <td><code>Scrapes TMDB for official 1920x1080 cinematic backdrop</code><br><small style="color:var(--muted)">scripts/fetch_imdb_metadata.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Scrapes TMDB for official 1920x1080 cinematic backdrop.</td>
+</tr>
+<tr>
+  <td>19</td>
+  <td><code>N039_webrtc_av_dsp_streaming.md</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing N039_webrtc_av_dsp_streaming.md.</td>
+</tr>
+<tr>
+  <td>20</td>
+  <td><code>1.1. End-to-End Latency Budget Breakdown ($&lt; 100\text{ ms}$)</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 1.1. End-to-End Latency Budget Breakdown ($&lt; 100\text{ ms}$).</td>
+</tr>
+<tr>
+  <td>21</td>
+  <td><code>1.2. WebRTC Transport Protocol Stack &amp; Cryptographic Handshake</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 1.2. WebRTC Transport Protocol Stack &amp; Cryptographic Handshake.</td>
+</tr>
+<tr>
+  <td>22</td>
+  <td><code>1.3. Transport-Wide Congestion Control (TWCC - RFC 8888) &amp; BWE Algorithms</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 1.3. Transport-Wide Congestion Control (TWCC - RFC 8888) &amp; BWE Algorithms.</td>
+</tr>
+<tr>
+  <td>23</td>
+  <td><code>🌐 1. Ultra-Low Latency (&lt;100ms) WebRTC Architecture &amp; Transport Pipeline</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🌐 1. Ultra-Low Latency (&lt;100ms) WebRTC Architecture &amp; Transport Pipeline.</td>
+</tr>
+<tr>
+  <td>24</td>
+  <td><code>2.1. Topologi Media: Matriks Perbandingan Kritis</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 2.1. Topologi Media: Matriks Perbandingan Kritis.</td>
+</tr>
+<tr>
+  <td>25</td>
+  <td><code>2.2. SFU Zero-Decode Routing &amp; RTP Stream Rewriting</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 2.2. SFU Zero-Decode Routing &amp; RTP Stream Rewriting.</td>
+</tr>
+<tr>
+  <td>26</td>
+  <td><code>2.3. Simulcast vs AV1 Scalable Video Coding (SVC)</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 2.3. Simulcast vs AV1 Scalable Video Coding (SVC).</td>
+</tr>
+<tr>
+  <td>27</td>
+  <td><code>🏢 2. Media Topology: SFU vs MCU vs Mesh &amp; Scalable Video Routing</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🏢 2. Media Topology: SFU vs MCU vs Mesh &amp; Scalable Video Routing.</td>
+</tr>
+<tr>
+  <td>28</td>
+  <td><code>3.1. Real-Time Audio DSP Engine (AEC3, NS, AGC2 &amp; Opus)</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 3.1. Real-Time Audio DSP Engine (AEC3, NS, AGC2 &amp; Opus).</td>
+</tr>
+<tr>
+  <td>29</td>
+  <td><code>3.2. AV1 Real-Time Hardware Transcoding &amp; Codec Invariants</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 3.2. AV1 Real-Time Hardware Transcoding &amp; Codec Invariants.</td>
+</tr>
+<tr>
+  <td>30</td>
+  <td><code>🎙️ 3. Audio/Video DSP Pipelines, Opus &amp; AV1 Hardware Transcoding</code><br><small style="color:var(--muted)">learning/neurons/N039_webrtc_av_dsp_streaming.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🎙️ 3. Audio/Video DSP Pipelines, Opus &amp; AV1 Hardware Transcoding.</td>
 </tr>
 </table>
 
@@ -2246,18 +2255,18 @@ flowchart LR
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
       <tr><td><code>learning/neurons/N039_webrtc_av_dsp_streaming.md</code></td><td>18 nodes</td></tr>
+<tr><td><code>scripts/download_movie_and_subtitle.py</code></td><td>12 nodes</td></tr>
 <tr><td><code>goblix/public/manifest.json</code></td><td>9 nodes</td></tr>
 <tr><td><code>scripts/fetch_imdb_metadata.py</code></td><td>6 nodes</td></tr>
 <tr><td><code>learning/neurons/N027_tensor_simd_vectorization.md</code></td><td>5 nodes</td></tr>
 <tr><td><code>scripts/fix_jellyfin_db.py</code></td><td>4 nodes</td></tr>
 <tr><td><code>scripts/ingest_frontier_knowledge.py</code></td><td>4 nodes</td></tr>
 <tr><td><code>scripts/download_avengers.py</code></td><td>3 nodes</td></tr>
-<tr><td><code>scripts/download_deadpool.py</code></td><td>3 nodes</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x44, calls x5, explains x3, references x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x50, calls x11, explains x8, references x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -2626,12 +2635,24 @@ flowchart LR
 
 <!-- ====== 9. Security & Global Graph ====== -->
 <h2 id="security-global">9. Security &amp; Global Graph</h2>
-<p>Security &amp; Global Graph groups implementation around learning, neurons, wasi, wasm, mostly in learning/neurons/N037_wasm_wasi_microvm_sandboxing.md, scripts/image_vision_nucleus_engine.py, learning/neurons/N038_red_team_pentest_cve_patching.md. This section covers 41 nodes and 38 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Security &amp; Global Graph groups implementation around learning, neurons, wasi, wasm, mostly in learning/neurons/N037_wasm_wasi_microvm_sandboxing.md, scripts/image_vision_nucleus_engine.py, learning/neurons/N038_red_team_pentest_cve_patching.md. This section covers 46 nodes and 45 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Security &amp; Global Graph (41 nodes, 38 edges)
+    %% Section: Security &amp; Global Graph (46 nodes, 45 edges)
+    subgraph security_global_scripts_image_vision_nucleus_eng_3b9fb383["scripts/image_vision_nucleus_engine.py"]
+        scripts_image_vision_nucleus_engine_geometricres_298a726b("GeometricRescaler<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_geometricres_6fd47290("letterbox_aspect_preserver()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_imagematrix_7f251986("clone()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_vaedecodenod_0e6de4a1("execute()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7("ImageMatrix<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_geometricres_e2e40808("bilinear_rescale()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_imagematrix_6fdcd274("set_pixel()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_imagematrix_2560d8f8("__init__()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_imagematrix_e3cc11b8("from_nested_list()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_imagematrix_c813a7e3("get_pixel()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+    end
     subgraph security_global_learning_neurons_N037_wasm_wasi_16924d4f["learning/neurons/N037_wasm_wasi_microvm_sandboxing.md"]
         learning_neurons_n037_wasm_wasi_microvm_sandboxi_90247e40("1.1. Linear Memory Model &amp; Page Granula...<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
         learning_neurons_n037_wasm_wasi_microvm_sandboxi_237d218e("1.2. Hardware Guard Pages &amp; Zero-Cost S...<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
@@ -2641,26 +2662,29 @@ flowchart LR
         learning_neurons_n037_wasm_wasi_microvm_sandboxi_62cdee95("3.1. Wasmtime &amp; Cranelift JIT Invariants<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
         learning_neurons_n037_wasm_wasi_microvm_sandboxi_8ab7433d("3.2. Extism Universal Plugin Framework<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
         learning_neurons_n037_wasm_wasi_microvm_sandboxi_aad29d59("4.1. Hardware Virtualization (KVM: /de...<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
-        learning_neurons_n037_wasm_wasi_microvm_sandboxi_bbb2ae2f("4.2. Arsitektur Firecracker Micro-VM<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
-        learning_neurons_n037_wasm_wasi_microvm_sandboxi_3d3644da("4.3. Confinement &amp; The Firecracker Jailer<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
-        learning_neurons_n037_wasm_wasi_microvm_sandboxi_3b999852("5.1. Arsitektur V8 Isolate (Cloudflare...<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
     end
-    subgraph security_global_scripts_image_vision_nucleus_eng_3b9fb383["scripts/image_vision_nucleus_engine.py"]
-        scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7("ImageMatrix<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_imagematrix_7f251986("clone()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_streamingtil_edab8255("process_tiled_convolution()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_imagematrix_6fdcd274("set_pixel()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_imagematrix_2560d8f8("__init__()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_imagematrix_e3cc11b8("from_nested_list()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_imagematrix_c813a7e3("get_pixel()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-    end
+    scripts_image_vision_nucleus_engine_geometricres_298a726b -->|method| scripts_image_vision_nucleus_engine_geometricres_e2e40808
+    scripts_image_vision_nucleus_engine_geometricres_298a726b -->|method| scripts_image_vision_nucleus_engine_geometricres_6fd47290
     scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7 -->|method| scripts_image_vision_nucleus_engine_imagematrix_6fdcd274
     scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7 -->|method| scripts_image_vision_nucleus_engine_imagematrix_2560d8f8
     scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7 -->|method| scripts_image_vision_nucleus_engine_imagematrix_e3cc11b8
     scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7 -->|method| scripts_image_vision_nucleus_engine_imagematrix_c813a7e3
+    scripts_image_vision_nucleus_engine_geometricres_e2e40808 -->|calls| scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7
+    scripts_image_vision_nucleus_engine_geometricres_6fd47290 -->|calls| scripts_image_vision_nucleus_engine_geometricres_e2e40808
+    scripts_image_vision_nucleus_engine_geometricres_6fd47290 -->|calls| scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7
     scripts_image_vision_nucleus_engine_imagematrix_7f251986 -->|calls| scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7
-    scripts_image_vision_nucleus_engine_streamingtil_edab8255 -->|calls| scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7
-    %% Omitted for readability: 23 nodes, 0 edges
+    scripts_image_vision_nucleus_engine_vaedecodenod_0e6de4a1 -->|calls| scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7
+    %% Omitted for readability: 28 nodes, 0 edges
+    class scripts_image_vision_nucleus_engine_geometricres_298a726b klass;
+    class scripts_image_vision_nucleus_engine_geometricres_6fd47290 function;
+    class scripts_image_vision_nucleus_engine_imagematrix_7f251986 function;
+    class scripts_image_vision_nucleus_engine_vaedecodenod_0e6de4a1 function;
+    class scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7 klass;
+    class scripts_image_vision_nucleus_engine_geometricres_e2e40808 function;
+    class scripts_image_vision_nucleus_engine_imagematrix_6fdcd274 function;
+    class scripts_image_vision_nucleus_engine_imagematrix_2560d8f8 function;
+    class scripts_image_vision_nucleus_engine_imagematrix_e3cc11b8 function;
+    class scripts_image_vision_nucleus_engine_imagematrix_c813a7e3 function;
     class learning_neurons_n037_wasm_wasi_microvm_sandboxi_90247e40 concept;
     class learning_neurons_n037_wasm_wasi_microvm_sandboxi_237d218e concept;
     class learning_neurons_n037_wasm_wasi_microvm_sandboxi_77914e3c concept;
@@ -2669,16 +2693,6 @@ flowchart LR
     class learning_neurons_n037_wasm_wasi_microvm_sandboxi_62cdee95 concept;
     class learning_neurons_n037_wasm_wasi_microvm_sandboxi_8ab7433d concept;
     class learning_neurons_n037_wasm_wasi_microvm_sandboxi_aad29d59 concept;
-    class learning_neurons_n037_wasm_wasi_microvm_sandboxi_bbb2ae2f concept;
-    class learning_neurons_n037_wasm_wasi_microvm_sandboxi_3d3644da concept;
-    class learning_neurons_n037_wasm_wasi_microvm_sandboxi_3b999852 concept;
-    class scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7 klass;
-    class scripts_image_vision_nucleus_engine_imagematrix_7f251986 function;
-    class scripts_image_vision_nucleus_engine_streamingtil_edab8255 function;
-    class scripts_image_vision_nucleus_engine_imagematrix_6fdcd274 function;
-    class scripts_image_vision_nucleus_engine_imagematrix_2560d8f8 function;
-    class scripts_image_vision_nucleus_engine_imagematrix_e3cc11b8 function;
-    class scripts_image_vision_nucleus_engine_imagematrix_c813a7e3 function;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -2878,6 +2892,14 @@ flowchart LR
 </tr>
 <tr>
   <td>23</td>
+  <td><code>GeometricRescaler</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>bilinear_rescale()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br><code>letterbox_aspect_preserver()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br><code>unletterbox_box()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
+  <td>GeometricRescaler node in scripts/image_vision_nucleus_engine.py.</td>
+</tr>
+<tr>
+  <td>24</td>
   <td><code>ImageMatrix</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
   <td><span class="tag tag-class">Class</span></td>
   <td><code>bilinear_rescale()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br><code>clone()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br><code>convolve_2d()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br>+5 more</td>
@@ -2885,7 +2907,23 @@ flowchart LR
   <td>ImageMatrix node in scripts/image_vision_nucleus_engine.py.</td>
 </tr>
 <tr>
-  <td>24</td>
+  <td>25</td>
+  <td><code>.bilinear_rescale()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>GeometricRescaler</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br><code>letterbox_aspect_preserver()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br><code>run_tests()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
+  <td><code>ImageMatrix</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
+  <td>.bilinear_rescale() node in scripts/image_vision_nucleus_engine.py.</td>
+</tr>
+<tr>
+  <td>26</td>
+  <td><code>.letterbox_aspect_preserver()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>GeometricRescaler</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br><code>run_tests()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
+  <td><code>bilinear_rescale()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br><code>ImageMatrix</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
+  <td>.letterbox_aspect_preserver() node in scripts/image_vision_nucleus_engine.py.</td>
+</tr>
+<tr>
+  <td>27</td>
   <td><code>.clone()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -2893,7 +2931,7 @@ flowchart LR
   <td>Turns a local path or remote repository into analysis context.</td>
 </tr>
 <tr>
-  <td>25</td>
+  <td>28</td>
   <td><code>.from_nested_list()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>ImageMatrix</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br><code>run_tests()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
@@ -2901,7 +2939,7 @@ flowchart LR
   <td>.from_nested_list() node in scripts/image_vision_nucleus_engine.py.</td>
 </tr>
 <tr>
-  <td>26</td>
+  <td>29</td>
   <td><code>.get_pixel()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>ImageMatrix</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
@@ -2909,36 +2947,12 @@ flowchart LR
   <td>.get_pixel() node in scripts/image_vision_nucleus_engine.py.</td>
 </tr>
 <tr>
-  <td>27</td>
+  <td>30</td>
   <td><code>.__init__()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>ImageMatrix</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
   <td>No direct outbound edge</td>
   <td>.__init__() node in scripts/image_vision_nucleus_engine.py.</td>
-</tr>
-<tr>
-  <td>28</td>
-  <td><code>.set_pixel()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>ImageMatrix</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
-  <td>No direct outbound edge</td>
-  <td>.set_pixel() node in scripts/image_vision_nucleus_engine.py.</td>
-</tr>
-<tr>
-  <td>29</td>
-  <td><code>.process_tiled_convolution()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>run_tests()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br><code>StreamingTileProcessor</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
-  <td><code>ImageMatrix</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
-  <td>.process_tiled_convolution() node in scripts/image_vision_nucleus_engine.py.</td>
-</tr>
-<tr>
-  <td>30</td>
-  <td><code>Lightweight, high-performance 2D/3D pure Python pixel matrix. Layout:…</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Design note for Lightweight, high-performance 2D/3D pure Python pixel matrix. Layout:….</td>
 </tr>
 </table>
 
@@ -2948,34 +2962,25 @@ flowchart LR
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
       <tr><td><code>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</code></td><td>22 nodes</td></tr>
-<tr><td><code>scripts/image_vision_nucleus_engine.py</code></td><td>10 nodes</td></tr>
+<tr><td><code>scripts/image_vision_nucleus_engine.py</code></td><td>15 nodes</td></tr>
 <tr><td><code>learning/neurons/N038_red_team_pentest_cve_patching.md</code></td><td>9 nodes</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x29, method x4, explains x3, calls x2. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x29, method x6, calls x5, explains x5. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
 
 <!-- ====== 10. Tests & Fixtures ====== -->
 <h2 id="tests-fixtures">10. Tests &amp; Fixtures</h2>
-<p>Tests &amp; Fixtures groups implementation around scripts, enginepy, test, nucleus, mostly in scripts/marketing_nucleus_engine.py, learning/neurons/N036_fullstack_product_synthesizer.md, scripts/image_vision_nucleus_engine.py. This section covers 110 nodes and 138 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Tests &amp; Fixtures groups implementation around scripts, enginepy, test, nucleus, mostly in scripts/marketing_nucleus_engine.py, learning/neurons/N036_fullstack_product_synthesizer.md, ponytail/pi-extension/index.js. This section covers 104 nodes and 138 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Tests &amp; Fixtures (110 nodes, 138 edges)
-    subgraph tests_fixtures_scripts_image_vision_nucleus_engi_c8d0a62e["scripts/image_vision_nucleus_engine.py"]
-        scripts_image_vision_nucleus_engine_colorspacema_f993f2f8("ColorSpaceMath<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_run_tests_fa28542f("run_tests()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_colorspacema_2830666e("rgb_to_grayscale()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_colorspacema_3515cadd("rgb_to_hsv()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_colorspacema_0ed59fc1("hsv_to_rgb()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_colorspacema_bf01af6a("rgb_to_ycbcr()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_colorspacema_39a5b669("ycbcr_to_rgb()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-    end
+    %% Section: Tests &amp; Fixtures (104 nodes, 138 edges)
     subgraph tests_fixtures_scripts_marketing_nucleus_engine_031ec47b["scripts/marketing_nucleus_engine.py"]
         scripts_marketing_nucleus_engine_run_verificatio_ef97097f("run_verification_tests()<br/><small>scripts/marketing_nucleus_engine.py</small>")
         scripts_marketing_nucleus_engine_bg_nbdengine_2a9e36db("BG_NBDEngine<br/><small>scripts/marketing_nucleus_engine.py</small>")
@@ -2983,6 +2988,12 @@ flowchart LR
         scripts_marketing_nucleus_engine_bg_nbdengine_ex_74042c3a("expected_future_purchases()<br/><small>scripts/marketing_nucleus_engine.py</small>")
         scripts_marketing_nucleus_engine_bg_nbdengine_ca_0b080fae("calculate_clv()<br/><small>scripts/marketing_nucleus_engine.py</small>")
         scripts_marketing_nucleus_engine_causaluplifteng_fdac6a02("CausalUpliftEngine<br/><small>scripts/marketing_nucleus_engine.py</small>")
+        scripts_marketing_nucleus_engine_causaluplifteng_1fda682f("calculate_individual_uplift()<br/><small>scripts/marketing_nucleus_engine.py</small>")
+        scripts_marketing_nucleus_engine_causaluplifteng_4f461f71("classify_customer()<br/><small>scripts/marketing_nucleus_engine.py</small>")
+        scripts_marketing_nucleus_engine_marketingmixeng_5ed62719("MarketingMixEngine<br/><small>scripts/marketing_nucleus_engine.py</small>")
+        scripts_marketing_nucleus_engine_marketingmixeng_b4307b94("geometric_adstock()<br/><small>scripts/marketing_nucleus_engine.py</small>")
+        scripts_marketing_nucleus_engine_marketingmixeng_8405dc25("hill_saturation()<br/><small>scripts/marketing_nucleus_engine.py</small>")
+        scripts_marketing_nucleus_engine_marketingmixeng_adce8145("optimize_channel_budget()<br/><small>scripts/marketing_nucleus_engine.py</small>")
     end
     subgraph tests_fixtures_scripts_graphic_design_visual_eng_05a6bfa8["scripts/graphic_design_visual_engine.py"]
         scripts_graphic_design_visual_engine_run_self_te_0b5fe8fc("run_self_tests()<br/><small>scripts/graphic_design_visual_engine.py</small>")
@@ -2990,44 +3001,46 @@ flowchart LR
         scripts_graphic_design_visual_engine_generativep_1821e72a("__init__()<br/><small>scripts/graphic_design_visual_engine.py</small>")
     end
     ponytail_pi_extension_test_helpers_test_2bad389e("helpers.test.js")
+    scripts_image_vision_nucleus_engine_run_tests_fa28542f("run_tests()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
     scripts_test_brain_run_all_d04a7277("run_all()<br/><small>scripts/test_brain.py</small>")
-    scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 -->|method| scripts_image_vision_nucleus_engine_colorspacema_2830666e
-    scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 -->|method| scripts_image_vision_nucleus_engine_colorspacema_3515cadd
-    scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 -->|method| scripts_image_vision_nucleus_engine_colorspacema_0ed59fc1
-    scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 -->|method| scripts_image_vision_nucleus_engine_colorspacema_bf01af6a
-    scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 -->|method| scripts_image_vision_nucleus_engine_colorspacema_39a5b669
     scripts_graphic_design_visual_engine_generativep_020abc00 -->|method| scripts_graphic_design_visual_engine_generativep_1821e72a
     scripts_marketing_nucleus_engine_bg_nbdengine_2a9e36db -->|method| scripts_marketing_nucleus_engine_bg_nbdengine_pr_f5a1c982
     scripts_marketing_nucleus_engine_bg_nbdengine_2a9e36db -->|method| scripts_marketing_nucleus_engine_bg_nbdengine_ex_74042c3a
     scripts_marketing_nucleus_engine_bg_nbdengine_2a9e36db -->|method| scripts_marketing_nucleus_engine_bg_nbdengine_ca_0b080fae
-    scripts_image_vision_nucleus_engine_run_tests_fa28542f -->|calls| scripts_image_vision_nucleus_engine_colorspacema_2830666e
-    scripts_image_vision_nucleus_engine_run_tests_fa28542f -->|calls| scripts_image_vision_nucleus_engine_colorspacema_3515cadd
-    scripts_image_vision_nucleus_engine_run_tests_fa28542f -->|calls| scripts_image_vision_nucleus_engine_colorspacema_0ed59fc1
-    scripts_image_vision_nucleus_engine_run_tests_fa28542f -->|calls| scripts_image_vision_nucleus_engine_colorspacema_bf01af6a
-    scripts_image_vision_nucleus_engine_run_tests_fa28542f -->|calls| scripts_image_vision_nucleus_engine_colorspacema_39a5b669
+    scripts_marketing_nucleus_engine_causaluplifteng_fdac6a02 -->|method| scripts_marketing_nucleus_engine_causaluplifteng_1fda682f
+    scripts_marketing_nucleus_engine_causaluplifteng_fdac6a02 -->|method| scripts_marketing_nucleus_engine_causaluplifteng_4f461f71
+    scripts_marketing_nucleus_engine_marketingmixeng_5ed62719 -->|method| scripts_marketing_nucleus_engine_marketingmixeng_b4307b94
+    scripts_marketing_nucleus_engine_marketingmixeng_5ed62719 -->|method| scripts_marketing_nucleus_engine_marketingmixeng_8405dc25
+    scripts_marketing_nucleus_engine_marketingmixeng_5ed62719 -->|method| scripts_marketing_nucleus_engine_marketingmixeng_adce8145
     scripts_graphic_design_visual_engine_run_self_te_0b5fe8fc -->|calls| scripts_graphic_design_visual_engine_generativep_020abc00
     scripts_marketing_nucleus_engine_bg_nbdengine_ex_74042c3a -->|calls| scripts_marketing_nucleus_engine_bg_nbdengine_pr_f5a1c982
+    scripts_marketing_nucleus_engine_causaluplifteng_4f461f71 -->|calls| scripts_marketing_nucleus_engine_causaluplifteng_1fda682f
+    scripts_marketing_nucleus_engine_marketingmixeng_adce8145 -->|calls| scripts_marketing_nucleus_engine_marketingmixeng_8405dc25
+    scripts_marketing_nucleus_engine_run_verificatio_ef97097f -->|calls| scripts_marketing_nucleus_engine_marketingmixeng_b4307b94
+    scripts_marketing_nucleus_engine_run_verificatio_ef97097f -->|calls| scripts_marketing_nucleus_engine_marketingmixeng_8405dc25
+    scripts_marketing_nucleus_engine_run_verificatio_ef97097f -->|calls| scripts_marketing_nucleus_engine_marketingmixeng_adce8145
+    scripts_marketing_nucleus_engine_run_verificatio_ef97097f -->|calls| scripts_marketing_nucleus_engine_causaluplifteng_4f461f71
     scripts_marketing_nucleus_engine_run_verificatio_ef97097f -->|calls| scripts_marketing_nucleus_engine_bg_nbdengine_pr_f5a1c982
     scripts_marketing_nucleus_engine_run_verificatio_ef97097f -->|calls| scripts_marketing_nucleus_engine_bg_nbdengine_ex_74042c3a
     scripts_marketing_nucleus_engine_run_verificatio_ef97097f -->|calls| scripts_marketing_nucleus_engine_bg_nbdengine_ca_0b080fae
-    %% Omitted for readability: 92 nodes, 0 edges
-    class scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 klass;
-    class scripts_image_vision_nucleus_engine_run_tests_fa28542f function;
-    class scripts_image_vision_nucleus_engine_colorspacema_2830666e function;
-    class scripts_image_vision_nucleus_engine_colorspacema_3515cadd function;
-    class scripts_image_vision_nucleus_engine_colorspacema_0ed59fc1 function;
-    class scripts_image_vision_nucleus_engine_colorspacema_bf01af6a function;
-    class scripts_image_vision_nucleus_engine_colorspacema_39a5b669 function;
+    %% Omitted for readability: 86 nodes, 0 edges
     class scripts_marketing_nucleus_engine_run_verificatio_ef97097f function;
     class scripts_marketing_nucleus_engine_bg_nbdengine_2a9e36db klass;
     class scripts_marketing_nucleus_engine_bg_nbdengine_pr_f5a1c982 function;
     class scripts_marketing_nucleus_engine_bg_nbdengine_ex_74042c3a function;
     class scripts_marketing_nucleus_engine_bg_nbdengine_ca_0b080fae function;
     class scripts_marketing_nucleus_engine_causaluplifteng_fdac6a02 klass;
+    class scripts_marketing_nucleus_engine_causaluplifteng_1fda682f function;
+    class scripts_marketing_nucleus_engine_causaluplifteng_4f461f71 function;
+    class scripts_marketing_nucleus_engine_marketingmixeng_5ed62719 klass;
+    class scripts_marketing_nucleus_engine_marketingmixeng_b4307b94 function;
+    class scripts_marketing_nucleus_engine_marketingmixeng_8405dc25 function;
+    class scripts_marketing_nucleus_engine_marketingmixeng_adce8145 function;
     class scripts_graphic_design_visual_engine_run_self_te_0b5fe8fc function;
     class scripts_graphic_design_visual_engine_generativep_020abc00 klass;
     class scripts_graphic_design_visual_engine_generativep_1821e72a function;
     class ponytail_pi_extension_test_helpers_test_2bad389e test;
+    class scripts_image_vision_nucleus_engine_run_tests_fa28542f function;
     class scripts_test_brain_run_all_d04a7277 test;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
@@ -3236,59 +3249,59 @@ flowchart LR
 </tr>
 <tr>
   <td>24</td>
-  <td><code>normalizeConfigMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>normalizePersistedMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>ponytail-config.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td><code>N036_fullstack_product_synthesizer.md</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Reads, resolves, or persists project configuration.</td>
+  <td>Documentation node describing N036_fullstack_product_synthesizer.md.</td>
 </tr>
 <tr>
   <td>25</td>
-  <td><code>normalizePersistedMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>getPonytailInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>parsePonytailCommand()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br>+6 more</td>
-  <td><code>normalizeConfigMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>normalizeMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
-  <td>normalizePersistedMode() node in ponytail/hooks/ponytail-config.js.</td>
+  <td><code>🏗️ 1. 0-to-1 Full-Stack Product Synthesis Architecture</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🏗️ 1. 0-to-1 Full-Stack Product Synthesis Architecture.</td>
 </tr>
 <tr>
   <td>26</td>
-  <td><code>parsePonytailCommand()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
-  <td><span class="tag tag-cmd">Entry</span></td>
-  <td><code>helpers.test.js</code><br><small style="color:var(--muted)">pi-extension/test/helpers.test.js</small><br><code>ponytailExtension()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
-  <td><code>normalizeMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>normalizePersistedMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
-  <td>parsePonytailCommand() node in ponytail/pi-extension/index.js.</td>
+  <td><code>🗄️ 2. Database Layer &amp; Dual-Dialect Drizzle Schema Synthesis</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🗄️ 2. Database Layer &amp; Dual-Dialect Drizzle Schema Synthesis.</td>
 </tr>
 <tr>
   <td>27</td>
-  <td><code>ponytailExtension()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>createPiHarness()</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small><br><code>extension.test.js</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small></td>
-  <td><code>getDefaultMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>getHideStatus()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>getPonytailInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br>+6 more</td>
-  <td>ponytailExtension() node in ponytail/pi-extension/index.js.</td>
+  <td><code>⚡ 3. API Gateway &amp; Sub-Millisecond Type-Safe RPC Layer (Hono v4)</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing ⚡ 3. API Gateway &amp; Sub-Millisecond Type-Safe RPC Layer (Hono v4).</td>
 </tr>
 <tr>
   <td>28</td>
-  <td><code>syncStatus()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
+  <td><code>🎨 4. Frontend UI Engine &amp; Next.js 15 App Router + Tailwind v4</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>syncStatus() node in ponytail/pi-extension/index.js.</td>
+  <td>Documentation node describing 🎨 4. Frontend UI Engine &amp; Next.js 15 App Router + Tailwind v4.</td>
 </tr>
 <tr>
   <td>29</td>
-  <td><code>resolveSessionMode()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>helpers.test.js</code><br><small style="color:var(--muted)">pi-extension/test/helpers.test.js</small><br><code>ponytailExtension()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
-  <td><code>normalizePersistedMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
-  <td>resolveSessionMode() node in ponytail/pi-extension/index.js.</td>
+  <td><code>🎭 5. Playwright E2E Test Oracle &amp; Zero-Flakiness Testing Matrix</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 🎭 5. Playwright E2E Test Oracle &amp; Zero-Flakiness Testing Matrix.</td>
 </tr>
 <tr>
   <td>30</td>
-  <td><code>createCommandContext()</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small></td>
-  <td><span class="tag tag-func">Test</span></td>
+  <td><code>📋 6. Autonomous 0-to-1 Synthesis Pipeline Checklist</code><br><small style="color:var(--muted)">learning/neurons/N036_fullstack_product_synthesizer.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>createCommandContext() node in pi-extension/test/extension.test.js.</td>
+  <td>Documentation node describing 📋 6. Autonomous 0-to-1 Synthesis Pipeline Checklist.</td>
 </tr>
 </table>
 
@@ -3299,9 +3312,9 @@ flowchart LR
       <tr><th>File</th><th>Coverage</th></tr>
       <tr><td><code>scripts/marketing_nucleus_engine.py</code></td><td>22 nodes</td></tr>
 <tr><td><code>learning/neurons/N036_fullstack_product_synthesizer.md</code></td><td>18 nodes</td></tr>
-<tr><td><code>scripts/image_vision_nucleus_engine.py</code></td><td>13 nodes</td></tr>
 <tr><td><code>ponytail/pi-extension/index.js</code></td><td>11 nodes</td></tr>
 <tr><td><code>scripts/graphic_design_visual_engine.py</code></td><td>10 nodes</td></tr>
+<tr><td><code>scripts/image_vision_nucleus_engine.py</code></td><td>9 nodes</td></tr>
 <tr><td><code>scripts/test_brain.py</code></td><td>8 nodes</td></tr>
 <tr><td><code>scripts/claudia_live_watchdog.py</code></td><td>7 nodes</td></tr>
 <tr><td><code>pi-extension/test/extension.test.js</code></td><td>5 nodes</td></tr>
@@ -3309,7 +3322,7 @@ flowchart LR
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x51, calls x36, explains x19, imports x15. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x58, calls x35, explains x14, imports x14. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -4736,25 +4749,28 @@ flowchart LR
 
 <!-- ====== 16. Other ====== -->
 <h2 id="other">16. Other</h2>
-<p>Other groups implementation around learning, neurons, scripts, enginepy, mostly in scripts/graphic_design_visual_engine.py, scripts/image_vision_nucleus_engine.py, learning/neurons/N051_system_architecture_devops_mastery.md. This section covers 525 nodes and 495 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Other groups implementation around learning, neurons, scripts, enginepy, mostly in scripts/graphic_design_visual_engine.py, scripts/image_vision_nucleus_engine.py, learning/neurons/N051_system_architecture_devops_mastery.md. This section covers 525 nodes and 477 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Other (525 nodes, 495 edges)
+    %% Section: Other (525 nodes, 477 edges)
     subgraph other_scripts_image_vision_nucleus_engine_py_c18108d9["scripts/image_vision_nucleus_engine.py"]
-        scripts_image_vision_nucleus_engine_checkpointlo_eabfb942("CheckpointLoaderNode<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_checkpointlo_0808e002("execute()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_cliptextenco_e02dcc9b("CLIPTextEncodeNode<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_cliptextenco_6c37bac8("execute()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_comfynode_58ca4b80("ComfyNode<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_comfynode_in_59eee64f("__init__()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_comfynode_ex_88a74f68("execute()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_controlnetap_bc580037("ControlNetApplyNode<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_controlnetap_1556d5e7("execute()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_ksamplernode_8d3ba7b8("KSamplerNode<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_ksamplernode_012f57f9("execute()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_vaedecodenod_f5e532da("VAEDecodeNode<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_colorspacema_f993f2f8("ColorSpaceMath<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_colorspacema_2830666e("rgb_to_grayscale()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_colorspacema_3515cadd("rgb_to_hsv()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_colorspacema_0ed59fc1("hsv_to_rgb()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_colorspacema_bf01af6a("rgb_to_ycbcr()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_colorspacema_39a5b669("ycbcr_to_rgb()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_generativegr_7abd7f76("GenerativeGraphExecutor<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_generativegr_f697021a("__init__()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_generativegr_340e9d0c("add_node()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_generativegr_739f3566("run_dag()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+    end
+    subgraph other_scripts_strategic_swot_nucleus_engine_py_b3571c53["scripts/strategic_swot_nucleus_engine.py"]
+        scripts_strategic_swot_nucleus_engine_strategics_91c3d769("StrategicSWOTNucleusEngine<br/><small>scripts/strategic_swot_nucleus_engine.py</small>")
+        scripts_strategic_swot_nucleus_engine_strategics_a6771422("print_executive_report()<br/><small>scripts/strategic_swot_nucleus_engine.py</small>")
+        scripts_strategic_swot_nucleus_engine_strategics_2819dd00("__init__()<br/><small>scripts/strategic_swot_nucleus_engine.py</small>")
     end
     subgraph other_ponytail_hooks_ponytail_mode_tracker_js_00c57f5d["ponytail/hooks/ponytail-mode-tracker.js"]
         ponytail_hooks_ponytail_mode_tracker_febd017e("ponytail-mode-tracker.js")
@@ -4765,32 +4781,35 @@ flowchart LR
         scripts_graphic_design_visual_engine_palettegene_2f7b1ecf("PaletteGenerator<br/><small>scripts/graphic_design_visual_engine.py</small>")
     end
     ponytail_hooks_ponytail_activate_5d3f34a7("ponytail-activate.js")
-    scripts_strategic_swot_nucleus_engine_strategics_91c3d769("StrategicSWOTNucleusEngine<br/><small>scripts/strategic_swot_nucleus_engine.py</small>")
-    scripts_image_vision_nucleus_engine_checkpointlo_eabfb942 -->|method| scripts_image_vision_nucleus_engine_checkpointlo_0808e002
-    scripts_image_vision_nucleus_engine_cliptextenco_e02dcc9b -->|method| scripts_image_vision_nucleus_engine_cliptextenco_6c37bac8
-    scripts_image_vision_nucleus_engine_comfynode_58ca4b80 -->|method| scripts_image_vision_nucleus_engine_comfynode_in_59eee64f
-    scripts_image_vision_nucleus_engine_comfynode_58ca4b80 -->|method| scripts_image_vision_nucleus_engine_comfynode_ex_88a74f68
-    scripts_image_vision_nucleus_engine_controlnetap_bc580037 -->|method| scripts_image_vision_nucleus_engine_controlnetap_1556d5e7
-    scripts_image_vision_nucleus_engine_ksamplernode_8d3ba7b8 -->|method| scripts_image_vision_nucleus_engine_ksamplernode_012f57f9
+    scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 -->|method| scripts_image_vision_nucleus_engine_colorspacema_2830666e
+    scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 -->|method| scripts_image_vision_nucleus_engine_colorspacema_3515cadd
+    scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 -->|method| scripts_image_vision_nucleus_engine_colorspacema_0ed59fc1
+    scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 -->|method| scripts_image_vision_nucleus_engine_colorspacema_bf01af6a
+    scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 -->|method| scripts_image_vision_nucleus_engine_colorspacema_39a5b669
+    scripts_image_vision_nucleus_engine_generativegr_7abd7f76 -->|method| scripts_image_vision_nucleus_engine_generativegr_f697021a
+    scripts_image_vision_nucleus_engine_generativegr_7abd7f76 -->|method| scripts_image_vision_nucleus_engine_generativegr_340e9d0c
+    scripts_image_vision_nucleus_engine_generativegr_7abd7f76 -->|method| scripts_image_vision_nucleus_engine_generativegr_739f3566
+    scripts_strategic_swot_nucleus_engine_strategics_91c3d769 -->|method| scripts_strategic_swot_nucleus_engine_strategics_a6771422
+    scripts_strategic_swot_nucleus_engine_strategics_91c3d769 -->|method| scripts_strategic_swot_nucleus_engine_strategics_2819dd00
     %% Omitted for readability: 507 nodes, 0 edges
-    class scripts_image_vision_nucleus_engine_checkpointlo_eabfb942 klass;
-    class scripts_image_vision_nucleus_engine_checkpointlo_0808e002 function;
-    class scripts_image_vision_nucleus_engine_cliptextenco_e02dcc9b entry;
-    class scripts_image_vision_nucleus_engine_cliptextenco_6c37bac8 function;
-    class scripts_image_vision_nucleus_engine_comfynode_58ca4b80 klass;
-    class scripts_image_vision_nucleus_engine_comfynode_in_59eee64f function;
-    class scripts_image_vision_nucleus_engine_comfynode_ex_88a74f68 function;
-    class scripts_image_vision_nucleus_engine_controlnetap_bc580037 klass;
-    class scripts_image_vision_nucleus_engine_controlnetap_1556d5e7 function;
-    class scripts_image_vision_nucleus_engine_ksamplernode_8d3ba7b8 klass;
-    class scripts_image_vision_nucleus_engine_ksamplernode_012f57f9 function;
-    class scripts_image_vision_nucleus_engine_vaedecodenod_f5e532da klass;
+    class scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 klass;
+    class scripts_image_vision_nucleus_engine_colorspacema_2830666e function;
+    class scripts_image_vision_nucleus_engine_colorspacema_3515cadd function;
+    class scripts_image_vision_nucleus_engine_colorspacema_0ed59fc1 function;
+    class scripts_image_vision_nucleus_engine_colorspacema_bf01af6a function;
+    class scripts_image_vision_nucleus_engine_colorspacema_39a5b669 function;
+    class scripts_image_vision_nucleus_engine_generativegr_7abd7f76 klass;
+    class scripts_image_vision_nucleus_engine_generativegr_f697021a function;
+    class scripts_image_vision_nucleus_engine_generativegr_340e9d0c function;
+    class scripts_image_vision_nucleus_engine_generativegr_739f3566 function;
+    class scripts_strategic_swot_nucleus_engine_strategics_91c3d769 klass;
+    class scripts_strategic_swot_nucleus_engine_strategics_a6771422 function;
+    class scripts_strategic_swot_nucleus_engine_strategics_2819dd00 function;
     class ponytail_hooks_ponytail_mode_tracker_febd017e module;
     class ponytail_hooks_ponytail_mode_tracker_finish_01f4ad14 function;
     class scripts_graphic_design_visual_engine_color_35110404 klass;
     class scripts_graphic_design_visual_engine_palettegene_2f7b1ecf klass;
     class ponytail_hooks_ponytail_activate_5d3f34a7 module;
-    class scripts_strategic_swot_nucleus_engine_strategics_91c3d769 klass;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -5060,7 +5079,7 @@ flowchart LR
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
       <tr><td><code>scripts/graphic_design_visual_engine.py</code></td><td>39 nodes</td></tr>
-<tr><td><code>scripts/image_vision_nucleus_engine.py</code></td><td>30 nodes</td></tr>
+<tr><td><code>scripts/image_vision_nucleus_engine.py</code></td><td>29 nodes</td></tr>
 <tr><td><code>learning/neurons/N051_system_architecture_devops_mastery.md</code></td><td>19 nodes</td></tr>
 <tr><td><code>learning/neurons/N054_system_design_planning_mastery.md</code></td><td>19 nodes</td></tr>
 <tr><td><code>learning/neurons/N045_volatility_options_greeks.md</code></td><td>18 nodes</td></tr>
@@ -5071,7 +5090,7 @@ flowchart LR
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x342, method x43, calls x34, explains x33. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x333, method x39, explains x36, calls x33. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -5082,17 +5101,17 @@ flowchart LR
   <div class="card">
     <h4>Graph</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>Nodes</td><td>1609</td></tr>
-      <tr><td>Edges</td><td>1868</td></tr>
+      <tr><td>Nodes</td><td>1621</td></tr>
+      <tr><td>Edges</td><td>1886</td></tr>
       <tr><td>Hyperedges</td><td>0</td></tr>
-      <tr><td>Communities</td><td>183</td></tr>
+      <tr><td>Communities</td><td>184</td></tr>
       <tr><td>Documented Sections</td><td>15</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Edge Confidence</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>EXTRACTED</td><td>1832</td></tr>
+      <tr><td>EXTRACTED</td><td>1850</td></tr>
       <tr><td>INFERRED</td><td>36</td></tr>
       <tr><td>AMBIGUOUS</td><td>0</td></tr>
     </table>
@@ -5101,7 +5120,7 @@ flowchart LR
 
 <div style="text-align:center; padding:40px 0; color: var(--muted); font-size:0.9rem;">
   <p>Agent_Claudia_Autonomus — Architecture Documentation</p>
-  <p>Generated: 2026-08-25 09:15 UTC · graphify callflow-html</p>
+  <p>Generated: 2026-08-25 09:18 UTC · graphify callflow-html</p>
 </div>
 
 </div><!-- .container -->

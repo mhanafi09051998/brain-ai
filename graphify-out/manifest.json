@@ -1510,5 +1510,11 @@
     "seen": 1787649358.1128745,
     "ast_hash": "5244d0a9ea1016b1019317db4dab5354",
     "semantic_hash": ""
+  },
+  "scripts/download_movie_and_subtitle.py": {
+    "mtime": 1787649496.774584,
+    "seen": 1787649513.6181195,
+    "ast_hash": "59794602bcd43fbb3c68f41e6e6789b6",
+    "semantic_hash": ""
   }
 }
