@@ -1,16 +1,16 @@
 # Graph Report - Agent_Claudia_Autonomus  (2026-08-25)
 
 ## Corpus Check
-- 235 files · ~234,407 words
+- 239 files · ~235,365 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1633 nodes · 1893 edges · 189 communities (162 shown, 27 thin omitted)
+- 1640 nodes · 1896 edges · 193 communities (166 shown, 27 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 36 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `9663c9d5`
+- Built from commit: `0e063e6c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -180,7 +180,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (189 total, 27 thin omitted)
+## Communities (193 total, 27 thin omitted)
 
 ### Community 0 - "run_deterministic_tests"
 Cohesion: 0.06
@@ -646,11 +646,11 @@ Nodes (5): cues1, cues2, fs, vtt1, vtt2
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Vec2D` connect `Vec2D` to `run_self_tests`, `.build_svg`?**
+- **Why does `Color` connect `Color` to `run_self_tests`, `.from_lab`, `PaletteGenerator`, `.build_svg`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **Why does `CubicBezier` connect `Vec2D` to `run_self_tests`, `.build_svg`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **Why does `Color` connect `Color` to `run_self_tests`, `.from_lab`, `PaletteGenerator`, `.build_svg`?**
+- **Why does `Vec2D` connect `Vec2D` to `run_self_tests`, `.build_svg`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **What connects `MOVIES_DATA`, `WATCH_PROGRESS`, `MY_LIST` to the rest of the system?**
   _711 weakly-connected nodes found - possible documentation gaps or missing edges._

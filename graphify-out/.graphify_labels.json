@@ -187,5 +187,9 @@
   "185": "test_subtitle_parser.js",
   "186": "download_yts_sub.py",
   "187": "process_topgun_vtt.py",
-  "188": "vps_download_sub.py"
+  "188": "vps_download_sub.py",
+  "189": "debug_subs.py",
+  "190": "download_all_full_subs.py",
+  "191": "download_all_subs.py",
+  "192": "print_sub_links.py"
 }

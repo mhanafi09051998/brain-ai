@@ -183,5 +183,9 @@
   "181": ".build_svg",
   "182": "js/app.js",
   "183": ".process_tiled_convolution",
-  "184": "get_topgun_backdrops.py"
+  "184": "get_topgun_backdrops.py",
+  "185": "test_subtitle_parser.js",
+  "186": "download_yts_sub.py",
+  "187": "process_topgun_vtt.py",
+  "188": "vps_download_sub.py"
 }
