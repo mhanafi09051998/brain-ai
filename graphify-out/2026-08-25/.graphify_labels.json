@@ -165,5 +165,6 @@
   "163": "patch_fvg_local.py",
   "164": "patch_fvg_unconditional.py",
   "165": "patch_limit_local.py",
-  "166": "patch_limit_order.py"
+  "166": "patch_limit_order.py",
+  "167": "patch_remove_memory.py"
 }
