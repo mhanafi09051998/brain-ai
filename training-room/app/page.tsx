@@ -49,21 +49,20 @@ interface SessionData {
   updated_at: string;
 }
 
-const metricExplanations = [
+const metricCardDefinitions = [
   {
     key: "terminal_coding",
     icon: Terminal,
     title: "Agentic Terminal Coding",
     benchmark: "Frontier-Bench v0.1",
     category: "Coding & Systems",
-    color: "emerald",
+    competitor: "Opus 5: 43.3%",
     desc: "Menguji kemampuan agen AI dalam mengendalikan environment shell/terminal interaktif (Linux/Windows) secara mandiri: eksekusi script, inspeksi log error, manajemen dependensi, dan recovery otomatis proses yang crash tanpa campur tangan manusia.",
     criteria: [
       "Verifikasi status exit code & error stream parsing",
       "Manajemen subproses jangka panjang & piping IPC",
       "Isolasi sandbox & mitigasi command injection"
-    ],
-    highlight: "Claudia: 49.52% • Opus 5: 43.3%"
+    ]
   },
   {
     key: "knowledge_work",
@@ -71,14 +70,13 @@ const metricExplanations = [
     title: "Knowledge Work & Strategic Analysis",
     benchmark: "GDPval-AA v2",
     category: "Reasoning & Business",
-    color: "blue",
+    competitor: "Opus 5: 1861 Elo",
     desc: "Tolok ukur otomatisasi pekerjaan profesional tingkat tinggi yang bernilai ekonomi riil (GDP-valued tasks): perancangan dokumen arsitektur C-level, analisis laporan keuangan 10-K, dan sintesis SOP bisnis terstruktur.",
     criteria: [
       "Presisi data analitik & hitungan finansial 100%",
       "Struktur dokumen eksekutif standar korporat",
       "Zero factual hallucination & verifiable citations"
-    ],
-    highlight: "Claudia: 1946 Elo • Opus 5: 1861 Elo"
+    ]
   },
   {
     key: "novel_problem_solving",
@@ -86,14 +84,13 @@ const metricExplanations = [
     title: "Novel Problem-Solving & Spatial Logic",
     benchmark: "ARC-AGI-3",
     category: "Pure Intelligence",
-    color: "purple",
+    competitor: "Opus 5: 30.2%",
     desc: "Ujian generalisasi murni (out-of-distribution reasoning) pada masalah visual-spasial abstrak yang dirancang kebal hafalan. Mengukur kemampuan AI beradaptasi pada aturan konsep baru yang belum pernah ditemui pada data pelatihan.",
     criteria: [
       "Induksi transformasi matriks grid secara deterministik",
       "Penalaran simetri, rotasi, dan topologi geometris",
       "Pencarian solusi minimal berbasis Graph-of-Thought"
-    ],
-    highlight: "Claudia: 38.28% • Opus 5: 30.2%"
+    ]
   },
   {
     key: "agentic_search",
@@ -101,29 +98,27 @@ const metricExplanations = [
     title: "Agentic Search & Deep Retrieval",
     benchmark: "BrowseComp",
     category: "Autonomous Agent",
-    color: "cyan",
+    competitor: "Opus 5: 90.8%",
     desc: "Menguji navigasi web otonom multi-langkah (deep research): penelusuran DOM dinamis, bypassing halaman kompleks, ekstraksi data tabular, dan validasi silang fakta dari berbagai sumber web independen.",
     criteria: [
       "Validasi silang minimal 3 sumber web independen",
       "Ekstraksi data tabular presisi tanpa distorsi",
       "Navigasi DOM cerdas tahan blocking & anti-bot"
-    ],
-    highlight: "Claudia: 94.66% • Opus 5: 90.8%"
+    ]
   },
   {
-    key: "multidisciplinary",
+    key: "multidisciplinary_with_tools",
     icon: GraduationCap,
     title: "Multidisciplinary Frontier Reasoning",
     benchmark: "Humanity's Last Exam",
     category: "PhD-Level Science",
-    color: "amber",
+    competitor: "Opus 5: 64.7%",
     desc: "Ujian akademik pamungkas tingkat doktoral (PhD) mencakup 500+ bidang akademik (fisika kuantum, biokimia, ekonometrika) yang dirancang khusus oleh para pakar dunia agar tidak dapat dijawab dengan tebakan AI biasa.",
     criteria: [
       "Penalaran prinsip pertama (First Principles Reasoning)",
       "Derivasi rumus analitik formal & pembuktian ketat",
       "MCTS PUCT tree search untuk rantai logika kompleks"
-    ],
-    highlight: "Claudia (Tools): 72.18% • Opus 5: 64.7%"
+    ]
   },
   {
     key: "computer_use",
@@ -131,14 +126,13 @@ const metricExplanations = [
     title: "Computer Use & Desktop GUI Grounding",
     benchmark: "OSWorld 2.0",
     category: "OS Automation",
-    color: "indigo",
+    competitor: "Opus 5: 70.6%",
     desc: "Pengoperasian antarmuka grafis sistem operasi (GUI desktop) secara nyata: pergerakan kursor mouse, pengetikan keyboard, manajemen jendela aplikasi, dan interoperabilitas alur kerja lintas software desktop.",
     criteria: [
       "Pemetaan koordinat spasial DOM & pixel 100% presisi",
       "Verifikasi visual state change pasca-aksi interaksi",
       "Pencegahan aksi destruktif pada sistem operasi"
-    ],
-    highlight: "Claudia: 77.86% • Opus 5: 70.6%"
+    ]
   },
   {
     key: "agentic_coding_deepswe",
@@ -146,14 +140,13 @@ const metricExplanations = [
     title: "Deep Repository SWE Refactoring",
     benchmark: "DeepSWE v1.1",
     category: "Coding & Systems",
-    color: "emerald",
+    competitor: "GPT-5.6 Sol: 72.7%",
     desc: "Penyelesaian issue dan bug rekayasa perangkat lunak berskala repositori nyata. AI dituntut memetakan dependensi AST multi-file, memahami arsitektur proyek, dan menghasilkan patch kode bersih tanpa efek samping regresi.",
     criteria: [
       "Analisis AST dependency graph sebelum modifikasi",
       "Prinsip Single Root Fix (perbaikan di fungsi akar)",
       "Runnable regression test & zero breaking changes"
-    ],
-    highlight: "Claudia: 78.30% • GPT-5.6: 72.7%"
+    ]
   },
   {
     key: "agentic_coding_frontier",
@@ -161,14 +154,13 @@ const metricExplanations = [
     title: "Complex Algorithmic Synthesis",
     benchmark: "FrontierCode v1.1, Main",
     category: "Competitive Algorithms",
-    color: "emerald",
+    competitor: "Fable 5: 53.5%",
     desc: "Sintesis kode algoritma kompetisi internasional tingkat lanjut (setara ICPC / Codeforces Grandmaster): optimasi kompleksitas waktu optimal, pencegahan stack overflow rekursi, dan struktur data lanjutan.",
     criteria: [
       "Optimasi kompleksitas waktu O(N log N) / O(N)",
       "Penerapan struktur data tingkat lanjut (Tree DP, BIT, CHT)",
       "Batas memori efisien O(1) space allocation"
-    ],
-    highlight: "Claudia: 59.46% • Fable 5: 53.5%"
+    ]
   },
   {
     key: "business_workflows",
@@ -176,14 +168,13 @@ const metricExplanations = [
     title: "Enterprise Business Workflows & RPA",
     benchmark: "AutomationBench",
     category: "Enterprise Workflows",
-    color: "orange",
+    competitor: "Opus 5: 26.0%",
     desc: "Orkestrasi alur kerja proses bisnis terpadu antar-sistem: sinkronisasi CRM, ERP, pemrosesan tagihan/invoice, manajemen tiket, dan keandalan transaksi terdistribusi berbasis pola SAGA.",
     criteria: [
       "Idempotensi transaksi & penanganan webhook gagal",
       "Kompensasi rollback otomatis saat step error",
       "Audit trail compliance & konsistensi data relational"
-    ],
-    highlight: "Claudia: 33.05% • Opus 5: 26.0%"
+    ]
   },
   {
     key: "legal",
@@ -191,14 +182,13 @@ const metricExplanations = [
     title: "Legal Reasoning & Contract Jurisprudence",
     benchmark: "Legal Agent Benchmark, Held-out",
     category: "Specialized Professional",
-    color: "rose",
+    competitor: "Fable 5: 13.3%",
     desc: "Analisis yurisprudensi dan hukum kontrak: audit klausul indemnifikasi & liabilitas, kepatuhan regulasi multi-yurisdiksi, interpretasi perundang-undangan, dan deteksi risiko hukum tersembunyi tanpa halusinasi pasal.",
     criteria: [
       "Rujukan pasal spesifik tanpa distorsi regulasi",
       "Pemisahan interpretasi literal vs purposive legal intent",
       "Mitigasi liabilitas klausul kontrak komersial"
-    ],
-    highlight: "Claudia: 17.85% • Fable 5: 13.3%"
+    ]
   },
   {
     key: "health",
@@ -206,29 +196,27 @@ const metricExplanations = [
     title: "Clinical Medicine & Diagnostic Precision",
     benchmark: "HealthBench Professional",
     category: "Medical & Health",
-    color: "red",
+    competitor: "Mythos 5: 66.0%",
     desc: "Penalaran diagnostik medis klinis dan farmakologi: analisis data laboratorium pasien, evaluasi diferensial diagnosis berbasis bukti medis, farmakokinetik, dan mitigasi kontraindikasi interaksi obat.",
     criteria: [
       "Strict clinical boundary checking & evidence lattice",
       "Pencegahan kontraindikasi obat berbahaya",
       "Diferensial diagnosis berbasis evidence-based medicine"
-    ],
-    highlight: "Claudia: 71.48% • Mythos 5: 66.0%"
+    ]
   },
   {
-    key: "biology",
+    key: "biology_hard",
     icon: Dna,
     title: "Molecular Biology & Genomic Mystery",
     benchmark: "BioMysteryBench",
     category: "Biological Sciences",
-    color: "teal",
+    competitor: "Opus 5: 49.4%",
     desc: "Pemecahan misteri biologi molekuler dan komputasi genomik: analisis dinamika lipatan protein, konformasi struktural, pemodelan jalur metabolik, dan validasi sekuens pengenalan genetik CRISPR-Cas9.",
     criteria: [
       "Validasi konformasi biokimia & protein folding",
       "Korelasi sekuens genomik deterministik",
       "Pemodelan jalur metabolik berbasis dataset multi-omik"
-    ],
-    highlight: "Claudia (Hard): 56.28% • Opus 5: 49.4%"
+    ]
   }
 ];
 
@@ -516,7 +504,7 @@ export default function TrainingRoomPage() {
 
       </div>
 
-      {/* ================= BOTTOM SECTION: 12 METRICS DETAILED EXPLANATION GRID ================= */}
+      {/* ================= BOTTOM SECTION: 12 METRICS DETAILED EXPLANATION GRID (LIVE DATA BINDING) ================= */}
       <section className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm mb-8">
         <div className="flex items-center justify-between border-b border-slate-100 pb-4 mb-6">
           <div className="flex items-center gap-2.5">
@@ -527,22 +515,38 @@ export default function TrainingRoomPage() {
               <h2 className="text-lg font-black text-slate-900 tracking-tight">
                 Detail &amp; Penjelasan 12 Parameter Frontier Benchmark 2026
               </h2>
-              <p className="text-xs text-slate-500 mt-0.5">Panduan komprehensif standar pengujian kecerdasan otonom model AI modern</p>
+              <p className="text-xs text-slate-500 mt-0.5">Seluruh skor di bawah ini terikat secara dinamis ke telemetri real-time SQLite</p>
             </div>
           </div>
-          <span className="text-xs font-bold bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full border border-emerald-200">
-            12 Domain Lengkap
+          <span className="text-xs font-bold bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full border border-emerald-200 flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            12 Live Dynamic Cards
           </span>
         </div>
 
-        {/* 12 Cards Grid (3 columns on xl, 2 columns on md, 1 column on mobile) */}
+        {/* 12 Cards Grid (Dynamic Live Score Binding from SQLite) */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
-          {metricExplanations.map((m, idx) => {
+          {metricCardDefinitions.map((m, idx) => {
             const IconComponent = m.icon;
+            const liveMetric = metrics.find(item => item.key === m.key);
+            const isUpdated = updatedKeys.includes(m.key);
+            
+            const currentScoreStr = liveMetric 
+              ? (liveMetric.unit === '%' ? `${liveMetric.claudia_score.toFixed(2)}%` : `${liveMetric.claudia_score} Elo`)
+              : 'Loading...';
+            
+            const growthDeltaStr = liveMetric 
+              ? `▲ +${liveMetric.growth_delta.toFixed(2)}${liveMetric.unit === '%' ? '%' : ''}`
+              : '';
+
+            const solvedCount = liveMetric ? liveMetric.problems_solved.toLocaleString() : '0';
+
             return (
               <div 
                 key={m.key} 
-                className="bg-slate-50/60 border border-slate-200/80 rounded-xl p-5 hover:bg-white hover:border-slate-300 hover:shadow-md transition-all duration-200 flex flex-col justify-between"
+                className={`bg-slate-50/60 border rounded-xl p-5 hover:bg-white hover:shadow-md transition-all duration-300 flex flex-col justify-between ${
+                  isUpdated ? 'border-emerald-400 bg-emerald-50/30' : 'border-slate-200/80'
+                }`}
               >
                 <div>
                   {/* Top Badge & Number */}
@@ -582,12 +586,19 @@ export default function TrainingRoomPage() {
                   </div>
                 </div>
 
-                {/* Bottom SOTA Benchmark Pill */}
+                {/* Bottom SOTA Benchmark Pill (DYNAMIC LIVE DATA BINDING) */}
                 <div className="pt-3 border-t border-slate-200/60 flex items-center justify-between text-[11px]">
-                  <span className="text-slate-400 font-medium">Perbandingan SOTA:</span>
-                  <span className="font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200/60 font-mono text-[10.5px]">
-                    {m.highlight}
-                  </span>
+                  <div>
+                    <span className="text-slate-400 font-medium block text-[10px]">Competitor SOTA:</span>
+                    <span className="font-mono text-slate-600 font-semibold text-[11px]">{m.competitor}</span>
+                  </div>
+                  <div className="text-right">
+                    <span className="text-emerald-700 font-bold block text-[10px]">Claudia Live (SQLite):</span>
+                    <div className="inline-flex items-center gap-1 bg-emerald-50 text-emerald-800 px-2 py-0.5 rounded border border-emerald-200 font-mono font-bold text-[11px]">
+                      <span>{currentScoreStr}</span>
+                      <span className="text-[9.5px] text-emerald-600 font-sans font-semibold">({growthDeltaStr})</span>
+                    </div>
+                  </div>
                 </div>
 
               </div>

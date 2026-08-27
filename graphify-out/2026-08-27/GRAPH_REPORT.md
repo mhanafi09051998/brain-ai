@@ -1,16 +1,16 @@
 # Graph Report - GEMINI-HANAFI  (2026-08-27)
 
 ## Corpus Check
-- 324 files · ~424,543 words
+- 324 files · ~426,632 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2111 nodes · 2421 edges · 265 communities (230 shown, 35 thin omitted)
+- 2117 nodes · 2427 edges · 265 communities (229 shown, 36 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 38 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `19432818`
+- Built from commit: `40555eac`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -137,6 +137,8 @@
 - RasterToVectorTracer
 - GenerativeGraphExecutor
 - server.js
+- page.tsx
+- layout.tsx
 - app.js
 - manifest.json
 - StrategicSWOTNucleusEngine
@@ -232,7 +234,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (265 total, 35 thin omitted)
+## Communities (265 total, 36 thin omitted)
 
 ### Community 0 - "run_deterministic_tests"
 Cohesion: 0.06
@@ -638,6 +640,10 @@ Nodes (5): RasterToVectorTracer, Converts raster mask contours to simplified vec
 Cohesion: 0.09
 Nodes (31): fs, getMoviesDB(), { getUsersDB, saveUsersDB, hashPassword, generateToken, getAuthUser }, http, MIME_TYPES, MOVIES_FILE, normalizeMovie(), parseJSONBody() (+23 more)
 
+### Community 153 - "page.tsx"
+Cohesion: 0.40
+Nodes (3): metricExplanations, MetricItem, SessionData
+
 ### Community 161 - "app.js"
 Cohesion: 0.11
 Nodes (33): checkAuthSession(), clearSearch(), fetchMovies(), fetchServerWatchProgress(), formatTime(), getLocalProgress(), getToken(), handleLogout() (+25 more)
@@ -867,21 +873,21 @@ Cohesion: 0.18
 Nodes (8): PaletteGenerator, Harmonious color palette generator supporting classical color wheel (HSL) and…, Generate a monochromatic ramp varying in Lightness., Generate analogous colors clustered around base hue., Generate split-complementary harmony (base + 2 colors flanking complement)., Generate tetradic rectangular 4-color harmony., Generate multi-stop gradient scale interpolated in CIELAB space., Construct Color from HSL (H in [0, 360), S in [0, 1], L in [0, 1]).
 
 ## Knowledge Gaps
-- **961 isolated node(s):** `dynamic`, `dynamic`, `dynamic`, `dynamic`, `dynamic` (+956 more)
+- **965 isolated node(s):** `dynamic`, `dynamic`, `dynamic`, `dynamic`, `dynamic` (+960 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **35 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **36 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `run_tests()` connect `run_tests` to `ImageMatrix`, `ConvolutionKernelEngine`, `ColorSpaceMath`, `Any`, `RasterToVectorTracer`, `GenerativeGraphExecutor`, `.process_tiled_convolution`?**
-  _High betweenness centrality (0.001) - this node is a cross-community bridge._
-- **Why does `ImageMatrix` connect `ImageMatrix` to `ConvolutionKernelEngine`, `.process_tiled_convolution`, `run_tests`, `RasterToVectorTracer`?**
-  _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **Why does `Color` connect `Color` to `PaletteGenerator`, `run_self_tests`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
+- **Why does `CubicBezier` connect `CubicBezier` to `run_self_tests`?**
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
+- **Why does `run_tests()` connect `run_tests` to `ImageMatrix`, `ConvolutionKernelEngine`, `ColorSpaceMath`, `Any`, `RasterToVectorTracer`, `GenerativeGraphExecutor`, `.process_tiled_convolution`?**
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **What connects `dynamic`, `dynamic`, `dynamic` to the rest of the system?**
-  _961 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _965 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `run_deterministic_tests` be split into smaller, more focused modules?**
   _Cohesion score 0.06259426847662142 - nodes in this community are weakly interconnected._
 - **Should `CubicBezier` be split into smaller, more focused modules?**
