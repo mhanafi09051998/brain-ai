@@ -1,16 +1,16 @@
 # Graph Report - GEMINI-HANAFI  (2026-08-27)
 
 ## Corpus Check
-- 313 files · ~423,637 words
+- 315 files · ~425,838 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2031 nodes · 2341 edges · 253 communities (220 shown, 33 thin omitted)
+- 2032 nodes · 2341 edges · 254 communities (221 shown, 33 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 38 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `6ce2f17c`
+- Built from commit: `1034554d`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -222,7 +222,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (253 total, 33 thin omitted)
+## Communities (254 total, 33 thin omitted)
 
 ### Community 0 - "run_deterministic_tests"
 Cohesion: 0.06
@@ -834,8 +834,6 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Vec2D` connect `Vec2D` to `CubicBezier`, `run_self_tests`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **Why does `run_self_tests()` connect `run_self_tests` to `IconBuilder24`, `Color`, `CubicBezier`, `Vec2D`?**
-  _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **Why does `Color` connect `Color` to `run_self_tests`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **What connects `dynamic`, `dynamic`, `dynamic` to the rest of the system?**
@@ -846,3 +844,5 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.044444444444444446 - nodes in this community are weakly interconnected._
 - **Should `CubicBezier` be split into smaller, more focused modules?**
   _Cohesion score 0.11067193675889328 - nodes in this community are weakly interconnected._
+- **Should `ponytail/package.json` be split into smaller, more focused modules?**
+  _Cohesion score 0.05365853658536585 - nodes in this community are weakly interconnected._

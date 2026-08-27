@@ -2076,9 +2076,21 @@
     "semantic_hash": ""
   },
   "frontier_benchmark_monitor.html": {
-    "mtime": 1787814546.288493,
-    "seen": 1787814557.058372,
-    "ast_hash": "43c49af930ef81d047d456c9b8600acf",
+    "mtime": 1787814598.3938131,
+    "seen": 1787814608.0155365,
+    "ast_hash": "2585144a25076e81ebf9692ac30d8e99",
+    "semantic_hash": ""
+  },
+  "learning/frontier_datasets/claudia_live_eval_2026.json": {
+    "mtime": 1787814598.3928127,
+    "seen": 1787814608.015033,
+    "ast_hash": "59cea3073f73f8880486a432152dd924",
+    "semantic_hash": ""
+  },
+  "run_12_frontier_eval.py": {
+    "mtime": 1787814598.2708864,
+    "seen": 1787814608.015033,
+    "ast_hash": "d532ac31fe98b594ecd013511dd31ec6",
     "semantic_hash": ""
   }
 }
