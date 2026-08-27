@@ -36,7 +36,7 @@
   "34": "Color",
   "35": "Ponytail, lazy senior dev mode",
   "36": "🎯 5 Pilar & Invarian Operasional Edge & Containerization",
-  "37": "PaletteGenerator",
+  "37": "run_self_tests",
   "38": "Neuron N031: Modern Data Architecture & Hybrid Search (PostgreSQL 17, pgvector HNSW, Drizzle ORM, SQLite WAL)",
   "39": "ponytail.mjs",
   "40": "official_runner_real.py",
@@ -251,5 +251,6 @@
   "249": "N080: Meta-Compiler Tiered JIT, Polyhedral Loop Transformations & SIMD Coalescing",
   "250": ".process_tiled_convolution",
   "251": "🎯 Inti Pembelajaran (Engineering Invariant)",
-  "252": "run_self_tests"
+  "252": "🎯 Inti Pembelajaran (12 Parameter Evaluasi Model AI Generasi Baru)",
+  "253": "integrate_n082.py"
 }
