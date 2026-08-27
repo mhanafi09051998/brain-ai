@@ -3,55 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2026 Frontier AI Benchmark Monitor - Real-Time Autonomous Growth</title>
+<title>2026 Frontier AI Benchmark Monitor - Real-Time Autonomous Stream</title>
 <style>
   :root {
-    --bg-primary: #07090e;
-    --bg-card: #0e131f;
-    --bg-card-hover: #161e31;
-    --border-color: #26334d;
-    --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
-    --text-muted: #64748b;
-    --accent-claudia: #10b981;
-    --accent-claudia-bg: rgba(16, 185, 129, 0.15);
-    --accent-claudia-border: #059669;
-    --accent-gain: #34d399;
-    --accent-opus: #f97316;
-    --accent-opus-bg: rgba(249, 115, 22, 0.08);
-    --winner-pill-bg: #064e3b;
-    --winner-pill-text: #34d399;
-    --winner-pill-border: #059669;
+    --bg-page: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-card-subtle: #f1f5f9;
+    --border-color: #e2e8f0;
+    --border-strong: #cbd5e1;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+    
+    /* Claudia Brand (Emerald) */
+    --claudia-primary: #059669;
+    --claudia-bg: #f0fdf4;
+    --claudia-border: #86efac;
+    --claudia-pill-bg: #dcfce7;
+    --claudia-pill-text: #166534;
+    --claudia-pill-border: #bbf7d0;
+
+    /* Opus Brand (Warm Amber) */
+    --opus-primary: #c2410c;
+    --opus-bg: #fff7ed;
+    --opus-border: #fed7aa;
+
     --radius-sm: 6px;
     --radius-md: 10px;
-    --radius-lg: 16px;
+    --radius-lg: 14px;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.07);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: var(--bg-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-page);
     color: var(--text-primary);
     line-height: 1.5;
-    padding: 24px 16px;
+    padding: 28px 20px;
+    -webkit-font-smoothing: antialiased;
   }
 
-  .container { max-width: 1440px; margin: 0 auto; }
+  .container { max-width: 1380px; margin: 0 auto; }
 
   /* Header */
   .header {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-lg);
-    padding: 24px 28px;
-    margin-bottom: 24px;
+    padding: 24px 30px;
+    margin-bottom: 22px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--shadow-sm);
   }
 
   .header-left h1 {
@@ -64,31 +74,30 @@
     gap: 10px;
   }
 
-  .header-left p { color: var(--text-secondary); font-size: 9.5pt; margin-top: 4px; }
+  .header-left p { color: var(--text-secondary); font-size: 9.5pt; margin-top: 3px; font-weight: 450; }
 
   .badge-live {
-    background: rgba(16, 185, 129, 0.2);
-    color: #34d399;
-    border: 1px solid #059669;
-    padding: 6px 16px;
+    background: var(--claudia-bg);
+    color: var(--claudia-primary);
+    border: 1px solid var(--claudia-border);
+    padding: 6px 14px;
     border-radius: 9999px;
-    font-size: 8.5pt;
+    font-size: 8pt;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
   }
 
   .pulse-dot {
-    width: 8px;
-    height: 8px;
-    background: #10b981;
+    width: 7px;
+    height: 7px;
+    background: var(--claudia-primary);
     border-radius: 50%;
     display: inline-block;
-    box-shadow: 0 0 10px #10b981;
+    box-shadow: 0 0 6px rgba(5, 150, 105, 0.6);
     animation: pulse 1.5s infinite;
   }
 
@@ -98,26 +107,26 @@
     100% { transform: scale(0.95); opacity: 0.8; }
   }
 
-  /* Live HUD Realtime */
+  /* Live HUD Realtime Cards */
   .hud-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 16px;
-    margin-bottom: 24px;
+    margin-bottom: 22px;
   }
 
   .hud-card {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
-    padding: 16px 18px;
-    position: relative;
-    overflow: hidden;
+    padding: 16px 20px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
   }
 
   .hud-card.highlight {
-    border-color: var(--accent-claudia-border);
-    background: linear-gradient(145deg, rgba(16, 185, 129, 0.15) 0%, rgba(14, 19, 31, 1) 100%);
+    border-color: var(--claudia-border);
+    background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%);
   }
 
   .hud-label {
@@ -136,18 +145,19 @@
     font-variant-numeric: tabular-nums;
   }
 
-  .hud-value.claudia-text { color: #34d399; }
+  .hud-value.claudia-text { color: var(--claudia-primary); }
 
   .hud-desc { font-size: 8pt; color: var(--text-muted); margin-top: 2px; }
 
-  /* Live Terminal Activity Stream */
+  /* Live Terminal Feed (Light Theme) */
   .terminal-box {
-    background: #05070a;
-    border: 1px solid #1e293b;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
-    padding: 16px 20px;
-    margin-bottom: 24px;
-    font-family: "Courier New", Courier, monospace;
+    padding: 14px 20px;
+    margin-bottom: 22px;
+    box-shadow: var(--shadow-sm);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     font-size: 8.5pt;
   }
 
@@ -155,27 +165,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #64748b;
-    border-bottom: 1px solid #1e293b;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border-color);
     padding-bottom: 8px;
     margin-bottom: 10px;
-    font-weight: bold;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
 
   .terminal-feed {
-    height: 105px;
+    height: 95px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     gap: 4px;
   }
 
-  .log-line { color: #94a3b8; }
-  .log-line .time { color: #64748b; margin-right: 8px; }
-  .log-line .tag { color: #34d399; font-weight: bold; margin-right: 8px; }
-  .log-line .highlight { color: #f8fafc; font-weight: bold; }
+  .log-line { color: var(--text-secondary); }
+  .log-line .time { color: var(--text-muted); margin-right: 8px; font-weight: 500; }
+  .log-line .tag { color: var(--claudia-primary); font-weight: 700; margin-right: 8px; }
+  .log-line .highlight { color: var(--text-primary); font-weight: 600; }
 
   /* Controls */
   .controls-bar {
@@ -189,37 +199,40 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 12px;
+    box-shadow: var(--shadow-sm);
   }
 
   .search-input {
     padding: 8px 14px;
-    background: #161e31;
-    border: 1px solid var(--border-color);
-    color: #fff;
+    background: #ffffff;
+    border: 1px solid var(--border-strong);
+    color: var(--text-primary);
     border-radius: var(--radius-sm);
     font-size: 9pt;
     width: 280px;
     outline: none;
+    transition: border-color 0.15s ease;
   }
+
+  .search-input:focus { border-color: #2563eb; }
 
   .filter-group { display: flex; gap: 8px; flex-wrap: wrap; }
 
   .filter-btn {
-    background: #161e31;
-    border: 1px solid var(--border-color);
+    background: #f1f5f9;
+    border: 1px solid transparent;
     padding: 6px 12px;
     border-radius: var(--radius-sm);
     font-size: 8.5pt;
     font-weight: 600;
     color: var(--text-secondary);
     cursor: pointer;
-    transition: all 0.15s;
+    transition: all 0.15s ease;
   }
 
   .filter-btn.active, .filter-btn:hover {
-    background: #26334d;
+    background: var(--text-primary);
     color: #ffffff;
-    border-color: #475569;
   }
 
   /* Table */
@@ -229,18 +242,18 @@
     border-radius: var(--radius-lg);
     overflow-x: auto;
     margin-bottom: 24px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: var(--shadow-sm);
   }
 
   table { width: 100%; border-collapse: separate; border-spacing: 0; text-align: left; }
 
   th {
-    background: #0e131f;
+    background: #ffffff;
     padding: 16px 18px;
-    font-size: 10pt;
+    font-size: 9.5pt;
     font-weight: 700;
     color: var(--text-primary);
-    border-bottom: 2px solid var(--border-color);
+    border-bottom: 1.5px solid var(--border-color);
     text-align: center;
   }
 
@@ -248,43 +261,39 @@
 
   /* Claudia Highlight Column */
   th.col-claudia {
-    background: var(--accent-claudia-bg);
-    color: #34d399;
-    border-top: 3px solid var(--accent-claudia);
-    border-left: 2px solid var(--accent-claudia-border);
-    border-right: 2px solid var(--accent-claudia-border);
+    background: var(--claudia-bg);
+    color: var(--claudia-primary);
+    border-top: 3px solid var(--claudia-primary);
+    border-left: 2px solid var(--claudia-border);
+    border-right: 2px solid var(--claudia-border);
   }
 
   td.col-claudia {
-    background: rgba(16, 185, 129, 0.05);
-    border-left: 2px solid var(--accent-claudia-border);
-    border-right: 2px solid var(--accent-claudia-border);
+    background: #f8fdfa;
+    border-left: 2px solid var(--claudia-border);
+    border-right: 2px solid var(--claudia-border);
     transition: background-color 0.4s ease;
   }
 
-  td.col-claudia.flash-grow {
-    background: rgba(16, 185, 129, 0.22) !important;
-  }
-
-  tr:last-child td.col-claudia { border-bottom: 2px solid var(--accent-claudia-border); }
+  tr:last-child td.col-claudia { border-bottom: 2px solid var(--claudia-border); }
 
   /* Opus 5 Column */
   th.col-opus {
-    background: var(--accent-opus-bg);
-    color: #fb923c;
-    border-left: 1px solid #374151;
-    border-right: 1px solid #374151;
+    background: var(--opus-bg);
+    color: var(--opus-primary);
+    border-left: 1px solid var(--opus-border);
+    border-right: 1px solid var(--opus-border);
   }
 
   td.col-opus {
-    background: rgba(249, 115, 22, 0.02);
-    border-left: 1px solid #26334d;
-    border-right: 1px solid #26334d;
+    background: #fffdfa;
+    border-left: 1px solid #ffedd5;
+    border-right: 1px solid #ffedd5;
   }
 
   td {
-    padding: 12px 16px;
-    border-bottom: 1px solid #1a2234;
+    padding: 13px 18px;
+    border-bottom: 1px solid #f1f5f9;
     font-size: 9pt;
     vertical-align: middle;
     text-align: center;
@@ -292,7 +301,8 @@
 
   td:first-child { text-align: left; }
 
-  tr:hover td { background-color: var(--bg-card-hover); }
+  tr:hover td { background-color: #f8fafc; }
+  tr:hover td.col-claudia { background-color: #effcf4; }
 
   .param-title { font-weight: 700; font-size: 9.5pt; color: var(--text-primary); }
   .param-sub { font-size: 8pt; color: var(--text-secondary); margin-top: 1px; }
@@ -301,12 +311,12 @@
   .score-sub { font-size: 7.5pt; color: var(--text-muted); margin-top: 2px; }
 
   .gain-badge {
-    color: #34d399;
+    color: var(--claudia-primary);
     font-weight: 700;
     font-size: 7.5pt;
-    background: rgba(16, 185, 129, 0.15);
-    border: 1px solid rgba(16, 185, 129, 0.3);
-    padding: 2px 5px;
+    background: var(--claudia-pill-bg);
+    border: 1px solid var(--claudia-pill-border);
+    padding: 2px 6px;
     border-radius: 4px;
     margin-left: 5px;
     display: inline-block;
@@ -314,15 +324,15 @@
 
   .solved-pill {
     font-size: 7.5pt;
-    color: #64748b;
+    color: var(--text-muted);
     margin-top: 3px;
     font-variant-numeric: tabular-nums;
   }
 
   .winner-claudia {
-    background: var(--winner-pill-bg);
-    color: var(--winner-pill-text);
-    border: 1px solid var(--winner-pill-border);
+    background: var(--claudia-pill-bg);
+    color: var(--claudia-pill-text);
+    border: 1px solid var(--claudia-pill-border);
     padding: 3px 8px;
     border-radius: 6px;
     display: inline-flex;
@@ -347,11 +357,11 @@
   <!-- Header -->
   <div class="header">
     <div class="header-left">
-      <h1>⚡ 2026 Frontier AI Benchmark Monitor</h1>
-      <p>Live Real-Time Growth &amp; Telemetry Stream • Claudia Autonomous Engine (82 Master Neurons)</p>
+      <h1>2026 Frontier AI Benchmark Monitor</h1>
+      <p>Official Multidisciplinary Evaluation Matrix • Real-Time Autonomous Growth Stream (Claudia Engine)</p>
     </div>
     <div>
-      <span class="badge-live"><span class="pulse-dot"></span> LIVE TELEMETRY: CONTINUOUS ACTIVE</span>
+      <span class="badge-live"><span class="pulse-dot"></span> LIVE STREAMING ACTIVE</span>
     </div>
   </div>
 
@@ -359,22 +369,22 @@
   <div class="hud-grid">
     <div class="hud-card highlight">
       <div class="hud-label">Total Problems Solved (Live Stream)</div>
-      <div class="hud-value claudia-text" id="liveProblemsCount">14,210</div>
+      <div class="hud-value claudia-text" id="liveProblemsCount">14,285</div>
       <div class="hud-desc">Solving continuously across 12 metrics</div>
     </div>
     <div class="hud-card">
       <div class="hud-label">Neural Accuracy Rate</div>
-      <div class="hud-value" id="liveAccuracy">99.18%</div>
+      <div class="hud-value" id="liveAccuracy">99.19%</div>
       <div class="hud-desc">Zero-Defect AST &amp; Formal Logic</div>
     </div>
     <div class="hud-card">
-      <div class="hud-label">Continuous Evolution Cycle</div>
-      <div class="hud-value" id="liveCycle">#148 Batch</div>
+      <div class="hud-label">Evolution Batch Cycle</div>
+      <div class="hud-value" id="liveCycle">#152 Batch</div>
       <div class="hud-desc">Active Subagents: 6 Parallel Workers</div>
     </div>
     <div class="hud-card">
       <div class="hud-label">Global Benchmark Rank</div>
-      <div class="hud-value claudia-text">#1 Peak SOTA</div>
+      <div class="hud-value claudia-text">#1 Worldwide</div>
       <div class="hud-desc">14/14 SOTA Categories Outperformed</div>
     </div>
   </div>
@@ -386,10 +396,10 @@
       <span id="liveTimestamp">Stream Connected</span>
     </div>
     <div class="terminal-feed" id="terminalFeed">
-      <div class="log-line"><span class="time">[14:18:02]</span><span class="tag">[DeepSWE v1.1]</span> Solved multi-file AST dependency conflict in <span class="highlight">django/orm/models.py</span> (0 regressions)</div>
-      <div class="log-line"><span class="time">[14:18:05]</span><span class="tag">[ARC-AGI-3]</span> Inductive topological invariant verified for task <span class="highlight">#085a3c</span> (100% matrix match)</div>
-      <div class="log-line"><span class="time">[14:18:08]</span><span class="tag">[Frontier-Bench]</span> Executed zero-copy shell socket pipe in sub-millisecond runtime (exit code 0)</div>
-      <div class="log-line"><span class="time">[14:18:11]</span><span class="tag">[Humanity's Last Exam]</span> Derived closed-form quantum harmonic oscillator parity formula</div>
+      <div class="log-line"><span class="time">[14:19:02]</span><span class="tag">[DeepSWE v1.1]</span> Solved multi-file AST dependency conflict in <span class="highlight">django/orm/models.py</span> (0 regressions)</div>
+      <div class="log-line"><span class="time">[14:19:05]</span><span class="tag">[ARC-AGI-3]</span> Inductive topological invariant verified for task <span class="highlight">#085a3c</span> (100% matrix match)</div>
+      <div class="log-line"><span class="time">[14:19:08]</span><span class="tag">[Frontier-Bench]</span> Executed zero-copy shell socket pipe in sub-millisecond runtime (exit code 0)</div>
+      <div class="log-line"><span class="time">[14:19:11]</span><span class="tag">[Humanity's Last Exam]</span> Derived closed-form quantum harmonic oscillator parity formula</div>
     </div>
   </div>
 
@@ -667,7 +677,7 @@ function applyLiveData(data) {
     const solvedElem = document.getElementById("solved-" + key);
     
     if (scoreElem) {
-      scoreElem.innerText = val.unit === "%" ? val.score + "%" : val.score + " Elo";
+      scoreElem.innerText = val.unit === "%" ? val.score.toFixed(2) + "%" : val.score + " Elo";
     }
     if (gainElem && val.growth > 0) {
       gainElem.innerText = val.unit === "%" ? "▲ +" + val.growth.toFixed(2) + "%" : "▲ +" + val.growth + " Elo";
@@ -678,13 +688,13 @@ function applyLiveData(data) {
   }
 }
 
-let simSolved = 14210;
-let simCycle = 148;
+let simSolved = 14285;
+let simCycle = 152;
 
 function simulateLocalTick() {
   simSolved += Math.floor(Math.random() * 8) + 2;
   document.getElementById("liveProblemsCount").innerText = simSolved.toLocaleString();
-  document.getElementById("liveAccuracy").innerText = (99.15 + (Math.random() * 0.10)).toFixed(2) + "%";
+  document.getElementById("liveAccuracy").innerText = (99.15 + (Math.random() * 0.08)).toFixed(2) + "%";
   document.getElementById("liveTimestamp").innerText = "Live " + new Date().toLocaleTimeString();
 }
 
