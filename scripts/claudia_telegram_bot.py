@@ -137,7 +137,7 @@ def run_claudia_bot():
                         continue
 
                     if text == "/start":
-                        send_telegram_message(chat_id, "👑 *Halo Mas Hanafi!*\n\nClaudia Ultra Quantum Apex siap mendampingi rekayasa perangkat lunak & operasi server.")
+                        send_telegram_message(chat_id, "⚡ *Halo!*\n\nClaudia Ultra Quantum Apex siap mendampingi rekayasa perangkat lunak & operasi server.")
                         continue
                     elif text == "/reset":
                         user_sessions[user_id] = []

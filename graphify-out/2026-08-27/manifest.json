@@ -522,9 +522,9 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1787793523.3071334,
-    "seen": 1787793958.3189566,
-    "ast_hash": "d0931e43d373c704af34b1704993568a",
+    "mtime": 1787818687.7681189,
+    "seen": 1787818701.1169438,
+    "ast_hash": "37e7b286a1cfca60adda106ae9021430",
     "semantic_hash": ""
   },
   "scripts/auto_sync_github.py": {
@@ -648,9 +648,9 @@
     "semantic_hash": ""
   },
   "scripts/learn_index.html": {
-    "mtime": 1787793523.4534214,
-    "seen": 1787793958.3189566,
-    "ast_hash": "3fa4e01471dc0cc71bdf6450d4caded8",
+    "mtime": 1787818687.771278,
+    "seen": 1787818701.1169438,
+    "ast_hash": "83db9949ea0a9a8d36f716a41684d37d",
     "semantic_hash": ""
   },
   "scripts/parallel_runner.py": {
@@ -660,9 +660,9 @@
     "semantic_hash": ""
   },
   "scripts/zolu_learn_server.js": {
-    "mtime": 1787793523.4620607,
-    "seen": 1787793958.3189566,
-    "ast_hash": "5a82a63186dfe697a2a49507b7110895",
+    "mtime": 1787818687.772317,
+    "seen": 1787818701.1169438,
+    "ast_hash": "fbb6b955e399e09876e1f94e3a229036",
     "semantic_hash": ""
   },
   "learning/frontier_datasets/aime_2024_full.json": {
@@ -696,9 +696,9 @@
     "semantic_hash": "7448f56bfe2c158862b552cd3b52f8fc"
   },
   "scripts/claudiacode_server.js": {
-    "mtime": 1787816349.08796,
-    "seen": 1787816367.6380544,
-    "ast_hash": "bf2ecef164437ae0bfa5fe9cb0796099",
+    "mtime": 1787818687.7686286,
+    "seen": 1787818701.1169438,
+    "ast_hash": "3324ae8bdc3a9f05cd40d90fc7aa670d",
     "semantic_hash": ""
   },
   "scripts/claudiacode_login.html": {
@@ -762,9 +762,9 @@
     "semantic_hash": ""
   },
   "scripts/build_learn_ui.py": {
-    "mtime": 1787793523.4415226,
-    "seen": 1787793958.3189566,
-    "ast_hash": "cf4a17c4319d11bb01c5f11ecd0e90af",
+    "mtime": 1787818687.7701871,
+    "seen": 1787818701.1169438,
+    "ast_hash": "4c66e459d7b2292d2d8eb026b8262f19",
     "semantic_hash": ""
   },
   "scripts/build_neural_mesh_ui.py": {
@@ -1902,9 +1902,9 @@
     "semantic_hash": ""
   },
   "scripts/claudia_telegram_bot.py": {
-    "mtime": 1787816327.26141,
-    "seen": 1787816367.6380544,
-    "ast_hash": "9f16a37f058ae25b487724acf21b03fd",
+    "mtime": 1787818687.769145,
+    "seen": 1787818701.1169438,
+    "ast_hash": "fa9238f950d8b2fffdbf3dc3925134f8",
     "semantic_hash": ""
   },
   "learning/neurons/N059_clean_monochrome_report_and_stru.md": {
@@ -2076,9 +2076,9 @@
     "semantic_hash": ""
   },
   "learning/frontier_datasets/claudia_continuous_stream.json": {
-    "mtime": 1787818532.22583,
-    "seen": 1787818533.6488194,
-    "ast_hash": "7f6c8f949a00534d4097ba53136d8547",
+    "mtime": 1787818700.314535,
+    "seen": 1787818701.1169438,
+    "ast_hash": "5fbade7d4ad2b5a0f2f07ed2f5e07f00",
     "semantic_hash": ""
   },
   "training-room/app/api/stream/route.ts": {
