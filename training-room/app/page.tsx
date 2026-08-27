@@ -292,7 +292,7 @@ export default function TrainingRoomPage() {
             </div>
             <div>
               <h1 className="text-xl md:text-2xl font-black text-slate-900 tracking-tight flex items-center gap-2">
-                Training Room <span className="text-emerald-600 font-semibold text-xs px-2.5 py-0.5 bg-emerald-50 rounded-full border border-emerald-200">Next.js App Router • SQLite</span>
+                Training Room 
               </h1>
               <p className="text-xs text-slate-500 mt-0.5">Real-Time Model Training &amp; 12 Frontier Benchmark Growth Stream</p>
             </div>
@@ -465,7 +465,7 @@ export default function TrainingRoomPage() {
                   <tr className="border-b border-slate-200 bg-slate-50/75">
                     <th className="py-4 px-4 font-bold text-slate-800 w-[26%]">Benchmark &amp; Parameter</th>
                     <th className="py-4 px-3 font-bold text-emerald-700 bg-emerald-50/60 border-x border-emerald-200 text-center w-[22%]">
-                      🧠 Claudia Ultra (Live Growth)
+                      Claudia Ultra (Live Growth)
                     </th>
                     <th className="py-4 px-3 font-bold text-amber-800 bg-amber-50/50 border-r border-amber-200 text-center">
                       Opus 5
@@ -640,7 +640,7 @@ export default function TrainingRoomPage() {
       {/* Footer */}
       <footer className="text-center text-xs text-slate-400 pb-8 flex items-center justify-center gap-2">
         <Database className="w-3.5 h-3.5 text-emerald-600" />
-        <span>Training Room • Built with Next.js 14 App Router, React 18, Tailwind CSS &amp; Native Node SQLite</span>
+        <span>Training Room • Autonomous AI Benchmark &amp; Model Telemetry Platform</span>
       </footer>
 
     </div>
