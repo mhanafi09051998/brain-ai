@@ -6,9 +6,9 @@
     "semantic_hash": ""
   },
   "learning/NEURON_INDEX.json": {
-    "mtime": 1787813217.1347215,
-    "seen": 1787813225.3556986,
-    "ast_hash": "45a0761c59778ea93431242b373b6d69",
+    "mtime": 1787814260.5417228,
+    "seen": 1787814270.0065162,
+    "ast_hash": "52b35ca2160fc9348b9f67a77d1503b5",
     "semantic_hash": ""
   },
   "learning/scripts/grow_neurons.py": {
@@ -312,9 +312,9 @@
     "semantic_hash": ""
   },
   "memory.md": {
-    "mtime": 1787813217.1347215,
-    "seen": 1787813225.3556986,
-    "ast_hash": "c0ea86021f2d1d4d8cfc503837d9c530",
+    "mtime": 1787814260.5417228,
+    "seen": 1787814270.0065162,
+    "ast_hash": "278f89d251e9a36d308033b31a9a0c84",
     "semantic_hash": ""
   },
   "memory/neurons/ai_engine_9router.md": {
@@ -2027,12 +2027,6 @@
     "ast_hash": "748e94714f4d86f63338a17e5f876d88",
     "semantic_hash": ""
   },
-  "integrate_80_neurons.py": {
-    "mtime": 1787813217.044485,
-    "seen": 1787813225.3556986,
-    "ast_hash": "8fc6ee1ca5da0886226fa103919b45bc",
-    "semantic_hash": ""
-  },
   "learning/neurons/N075_crdt_local_first_state_sync.md": {
     "mtime": 1787813147.0409977,
     "seen": 1787813225.3556986,
@@ -2067,6 +2061,18 @@
     "mtime": 1787813186.9403787,
     "seen": 1787813225.3556986,
     "ast_hash": "4e0c0f4365927bd0eee1e209ab9f05d2",
+    "semantic_hash": ""
+  },
+  "integrate_n081.py": {
+    "mtime": 1787814260.4445932,
+    "seen": 1787814270.0065162,
+    "ast_hash": "51d8abc17c89c87147ae4b0e6d195389",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N081_world_class_repository_architecture.md": {
+    "mtime": 1787814260.5392177,
+    "seen": 1787814270.0065162,
+    "ast_hash": "ee073d7b3d0cbc9ad59c2f9473537760",
     "semantic_hash": ""
   }
 }

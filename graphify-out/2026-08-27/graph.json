@@ -15587,14 +15587,122 @@
       "source_location": "L626"
     },
     {
-      "id": "integrate_80_neurons",
-      "label": "integrate_80_neurons.py",
+      "id": "learning_neurons_n081_world_class_repository_architecture",
+      "label": "N081_world_class_repository_architecture.md",
       "_origin": "ast",
       "community": 251,
-      "community_name": "integrate_80_neurons.py",
+      "community_name": "\ud83c\udfaf Inti Pembelajaran (Engineering Invariant)",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "n081_world_class_repository_architecture.md",
+      "source_file": "learning/neurons/N081_world_class_repository_architecture.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "learning_neurons_n081_world_class_repository_architecture_1_struktur_top_level_standar_dunia_monorepo_polyrepo",
+      "label": "1. Struktur Top-Level Standar Dunia (Monorepo & Polyrepo)",
+      "_origin": "ast",
+      "community": 251,
+      "community_name": "\ud83c\udfaf Inti Pembelajaran (Engineering Invariant)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. struktur top-level standar dunia (monorepo & polyrepo)",
+      "source_file": "learning/neurons/N081_world_class_repository_architecture.md",
+      "source_location": "L11"
+    },
+    {
+      "id": "learning_neurons_n081_world_class_repository_architecture_2_invarian_hermetic_builds_dependency_graph",
+      "label": "2. Invarian Hermetic Builds & Dependency Graph",
+      "_origin": "ast",
+      "community": 251,
+      "community_name": "\ud83c\udfaf Inti Pembelajaran (Engineering Invariant)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. invarian hermetic builds & dependency graph",
+      "source_file": "learning/neurons/N081_world_class_repository_architecture.md",
+      "source_location": "L24"
+    },
+    {
+      "id": "learning_neurons_n081_world_class_repository_architecture_3_single_source_of_truth_contract_first_architecture",
+      "label": "3. Single Source of Truth (Contract-First Architecture)",
+      "_origin": "ast",
+      "community": 251,
+      "community_name": "\ud83c\udfaf Inti Pembelajaran (Engineering Invariant)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. single source of truth (contract-first architecture)",
+      "source_file": "learning/neurons/N081_world_class_repository_architecture.md",
+      "source_location": "L29"
+    },
+    {
+      "id": "learning_neurons_n081_world_class_repository_architecture_4_zero_friction_developer_experience_dx_5_minute_rule",
+      "label": "4. Zero-Friction Developer Experience (DX) & 5-Minute Rule",
+      "_origin": "ast",
+      "community": 251,
+      "community_name": "\ud83c\udfaf Inti Pembelajaran (Engineering Invariant)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. zero-friction developer experience (dx) & 5-minute rule",
+      "source_file": "learning/neurons/N081_world_class_repository_architecture.md",
+      "source_location": "L33"
+    },
+    {
+      "id": "learning_neurons_n081_world_class_repository_architecture_akar_masalah_pencegahan_regresi_root_cause_analysis",
+      "label": "\ud83d\udd0d Akar Masalah & Pencegahan Regresi (Root Cause Analysis)",
+      "_origin": "ast",
+      "community": 251,
+      "community_name": "\ud83c\udfaf Inti Pembelajaran (Engineering Invariant)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udd0d akar masalah & pencegahan regresi (root cause analysis)",
+      "source_file": "learning/neurons/N081_world_class_repository_architecture.md",
+      "source_location": "L40"
+    },
+    {
+      "id": "learning_neurons_n081_world_class_repository_architecture_disiplin_eksekusi_ponytail_standard",
+      "label": "\ud83d\udd12 Disiplin Eksekusi (Ponytail Standard)",
+      "_origin": "ast",
+      "community": 251,
+      "community_name": "\ud83c\udfaf Inti Pembelajaran (Engineering Invariant)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udd12 disiplin eksekusi (ponytail standard)",
+      "source_file": "learning/neurons/N081_world_class_repository_architecture.md",
+      "source_location": "L47"
+    },
+    {
+      "id": "learning_neurons_n081_world_class_repository_architecture_inti_pembelajaran_engineering_invariant",
+      "label": "\ud83c\udfaf Inti Pembelajaran (Engineering Invariant)",
+      "_origin": "ast",
+      "community": 251,
+      "community_name": "\ud83c\udfaf Inti Pembelajaran (Engineering Invariant)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83c\udfaf inti pembelajaran (engineering invariant)",
+      "source_file": "learning/neurons/N081_world_class_repository_architecture.md",
+      "source_location": "L9"
+    },
+    {
+      "id": "learning_neurons_n081_world_class_repository_architecture_n081_world_class_repository_architecture_trunk_based_dx_engineering",
+      "label": "N081: World-Class Repository Architecture & Trunk-Based DX Engineering",
+      "_origin": "ast",
+      "community": 251,
+      "community_name": "\ud83c\udfaf Inti Pembelajaran (Engineering Invariant)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "n081: world-class repository architecture & trunk-based dx engineering",
+      "source_file": "learning/neurons/N081_world_class_repository_architecture.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "integrate_n081",
+      "label": "integrate_n081.py",
+      "_origin": "ast",
+      "community": 252,
+      "community_name": "integrate_n081.py",
       "file_type": "code",
-      "norm_label": "integrate_80_neurons.py",
-      "source_file": "integrate_80_neurons.py",
+      "norm_label": "integrate_n081.py",
+      "source_file": "integrate_n081.py",
       "source_location": "L1"
     },
     {
@@ -17288,7 +17396,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\udccb active tasks & history",
       "source_file": "memory.md",
-      "source_location": "L81"
+      "source_location": "L82"
     },
     {
       "id": "memory_claudia_neuron_memory_network",
@@ -17312,7 +17420,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\udccb prosedur pembaruan memori",
       "source_file": "memory.md",
-      "source_location": "L75"
+      "source_location": "L76"
     },
     {
       "id": "learning_neurons_n032_cloud_native_edge_infra",
@@ -42081,6 +42189,94 @@
       "weight": 1.0
     },
     {
+      "source": "learning_neurons_n081_world_class_repository_architecture",
+      "target": "learning_neurons_n081_world_class_repository_architecture_n081_world_class_repository_architecture_trunk_based_dx_engineering",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N081_world_class_repository_architecture.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n081_world_class_repository_architecture_inti_pembelajaran_engineering_invariant",
+      "target": "learning_neurons_n081_world_class_repository_architecture_1_struktur_top_level_standar_dunia_monorepo_polyrepo",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N081_world_class_repository_architecture.md",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n081_world_class_repository_architecture_inti_pembelajaran_engineering_invariant",
+      "target": "learning_neurons_n081_world_class_repository_architecture_2_invarian_hermetic_builds_dependency_graph",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N081_world_class_repository_architecture.md",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n081_world_class_repository_architecture_inti_pembelajaran_engineering_invariant",
+      "target": "learning_neurons_n081_world_class_repository_architecture_3_single_source_of_truth_contract_first_architecture",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N081_world_class_repository_architecture.md",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n081_world_class_repository_architecture_inti_pembelajaran_engineering_invariant",
+      "target": "learning_neurons_n081_world_class_repository_architecture_4_zero_friction_developer_experience_dx_5_minute_rule",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N081_world_class_repository_architecture.md",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n081_world_class_repository_architecture_n081_world_class_repository_architecture_trunk_based_dx_engineering",
+      "target": "learning_neurons_n081_world_class_repository_architecture_akar_masalah_pencegahan_regresi_root_cause_analysis",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N081_world_class_repository_architecture.md",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n081_world_class_repository_architecture_n081_world_class_repository_architecture_trunk_based_dx_engineering",
+      "target": "learning_neurons_n081_world_class_repository_architecture_disiplin_eksekusi_ponytail_standard",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N081_world_class_repository_architecture.md",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n081_world_class_repository_architecture_n081_world_class_repository_architecture_trunk_based_dx_engineering",
+      "target": "learning_neurons_n081_world_class_repository_architecture_inti_pembelajaran_engineering_invariant",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N081_world_class_repository_architecture.md",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
       "source": "learning_playbooks_graphify_workflow",
       "target": "learning_playbooks_graphify_workflow_playbook_graphify_workflow",
       "relation": "contains",
@@ -42231,7 +42427,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "memory.md",
-      "source_location": "L75",
+      "source_location": "L76",
       "weight": 1.0
     },
     {
@@ -42242,7 +42438,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "memory.md",
-      "source_location": "L81",
+      "source_location": "L82",
       "weight": 1.0
     },
     {
@@ -49864,5 +50060,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "6a5f850aabc436a90952e19a7dbedae848f710e7"
+  "built_at_commit": "9cb1bd681820d55fd702d820bb62d58bf8e16515"
 }
