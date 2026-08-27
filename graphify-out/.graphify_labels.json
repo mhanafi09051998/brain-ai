@@ -251,5 +251,6 @@
   "249": "N080: Meta-Compiler Tiered JIT, Polyhedral Loop Transformations & SIMD Coalescing",
   "250": ".process_tiled_convolution",
   "251": "🎯 Inti Pembelajaran (Engineering Invariant)",
-  "252": "🎯 Inti Pembelajaran (12 Parameter Evaluasi Model AI Generasi Baru)"
+  "252": "🎯 Inti Pembelajaran (12 Parameter Evaluasi Model AI Generasi Baru)",
+  "253": "run_12_frontier_eval.py"
 }
