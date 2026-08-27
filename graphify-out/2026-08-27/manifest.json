@@ -6,9 +6,9 @@
     "semantic_hash": ""
   },
   "learning/NEURON_INDEX.json": {
-    "mtime": 1787806355.7252386,
-    "seen": 1787806363.4811711,
-    "ast_hash": "b8a8ee4b1d3bbe14dc664cfa865f3e2e",
+    "mtime": 1787806562.1774292,
+    "seen": 1787806570.4486742,
+    "ast_hash": "3095b7d321294b59347cd05989b0c314",
     "semantic_hash": ""
   },
   "learning/scripts/grow_neurons.py": {
@@ -312,9 +312,9 @@
     "semantic_hash": ""
   },
   "memory.md": {
-    "mtime": 1787806355.7252386,
-    "seen": 1787806363.4811711,
-    "ast_hash": "f810b4cdf3ac911792730a9cf6bad0c4",
+    "mtime": 1787806562.17795,
+    "seen": 1787806570.44921,
+    "ast_hash": "8923ed8980b6b2b6af71e52d01a227be",
     "semantic_hash": ""
   },
   "memory/neurons/ai_engine_9router.md": {
@@ -1937,12 +1937,6 @@
     "ast_hash": "f2ee9e08f191526014b62f8e72a80122",
     "semantic_hash": ""
   },
-  "run_self_learning_loop.py": {
-    "mtime": 1787806355.5969706,
-    "seen": 1787806363.4811711,
-    "ast_hash": "45e1b5be97791d4f11671cbe61eecdf6",
-    "semantic_hash": ""
-  },
   "learning/neurons/N060_advanced_algorithmic_mastery.md": {
     "mtime": 1787806355.72324,
     "seen": 1787806363.4811711,
@@ -1959,6 +1953,84 @@
     "mtime": 1787806355.724239,
     "seen": 1787806363.4811711,
     "ast_hash": "f7ad1fc9224b91ceefc8e072b1f934eb",
+    "semantic_hash": ""
+  },
+  "integrate_all_neurons.py": {
+    "mtime": 1787806562.066339,
+    "seen": 1787806570.4486742,
+    "ast_hash": "391c9722c8713e4826f624bd16f511d0",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N063_mcts_agentic_planning_self_correction.md": {
+    "mtime": 1787806495.5717194,
+    "seen": 1787806570.44921,
+    "ast_hash": "02e729f5509ba76804056df762db4bb0",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N064_graph_of_thought_swarm_consensus.md": {
+    "mtime": 1787806522.8159485,
+    "seen": 1787806570.44921,
+    "ast_hash": "c7f30c88244c6d7b0437547e75d93925",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N065_linux_io_uring_zero_copy_pipelines.md": {
+    "mtime": 1787806492.9607203,
+    "seen": 1787806570.44921,
+    "ast_hash": "0b8a882d5aedbb4bdf13b1f0f58ffe3f",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N066_wasi_preview2_tokio_internals.md": {
+    "mtime": 1787806504.7843761,
+    "seen": 1787806570.44921,
+    "ast_hash": "c61a806519baed36316e23a4f2982785",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N067_multiraft_distributed_acid_hlc.md": {
+    "mtime": 1787806494.0687425,
+    "seen": 1787806570.44921,
+    "ast_hash": "635688c9a431e965b0b7188e79879685",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N068_storage_engine_lsm_cdc_streaming.md": {
+    "mtime": 1787806501.863042,
+    "seen": 1787806570.44921,
+    "ast_hash": "10755af66a9af4a1bdfabbd55644be53",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N069_expand_contract_zerodowntime_migrations.md": {
+    "mtime": 1787806496.559533,
+    "seen": 1787806570.44921,
+    "ast_hash": "f3708ece45e3bb343f0e8ecfaec372d2",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N070_firecracker_microvm_multitenant_rls.md": {
+    "mtime": 1787806508.1431732,
+    "seen": 1787806570.44921,
+    "ast_hash": "f8236b6ec40ef6f43379bbd131fea6a8",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N071_automated_fuzzing_cve_hotpatching.md": {
+    "mtime": 1787806522.028093,
+    "seen": 1787806570.44921,
+    "ast_hash": "56582c98a6529cca6a1dc1590b2d4660",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N072_post_quantum_cryptography_paseto.md": {
+    "mtime": 1787806538.9072454,
+    "seen": 1787806570.44921,
+    "ast_hash": "f288218f6a8c17cc8fff45f99f7e5e5d",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N073_lob_microstructure_vpin_toxicity.md": {
+    "mtime": 1787806503.1125658,
+    "seen": 1787806570.44921,
+    "ast_hash": "71cc5dc4084599fc85ca488855fb6fa5",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N074_kalman_stat_arbitrage_risk_killswitch.md": {
+    "mtime": 1787806529.3186526,
+    "seen": 1787806570.44921,
+    "ast_hash": "748e94714f4d86f63338a17e5f876d88",
     "semantic_hash": ""
   }
 }
