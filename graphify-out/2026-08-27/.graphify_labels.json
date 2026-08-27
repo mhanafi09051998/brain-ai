@@ -36,7 +36,7 @@
   "34": "Color",
   "35": "Ponytail, lazy senior dev mode",
   "36": "🎯 5 Pilar & Invarian Operasional Edge & Containerization",
-  "37": "run_self_tests",
+  "37": "PaletteGenerator",
   "38": "Neuron N031: Modern Data Architecture & Hybrid Search (PostgreSQL 17, pgvector HNSW, Drizzle ORM, SQLite WAL)",
   "39": "ponytail.mjs",
   "40": "official_runner_real.py",
@@ -205,7 +205,7 @@
   "203": "tailwind.config.js",
   "204": "next",
   "205": "tailwindcss",
-  "206": "claudia_telegram_bot.py",
+  "206": "run_self_tests",
   "207": "N058: Migrasi Arsitektur Goblix Cinema ke Next.js App Router",
   "208": "download_full_synced_subtitles.py",
   "209": "sanitize_and_sync_all_subs.py",
@@ -217,6 +217,5 @@
   "215": "search_github_subs.py",
   "216": "test_det.py",
   "217": "test_sub_dl.py",
-  "218": "test_subcat.py",
-  "219": "N059: Clean Monochrome Report and Structured Prompt Architecture"
+  "218": "test_subcat.py"
 }

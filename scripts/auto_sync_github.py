@@ -5,7 +5,7 @@ if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")
     sys.stderr.reconfigure(encoding="utf-8")
 
-WORKSPACE = r"D:\Agent_Claudia_Autonomus"
+WORKSPACE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(WORKSPACE)
 
 def run_cmd(cmd):
@@ -43,7 +43,14 @@ def auto_sync():
     run_cmd(f'git commit -m "{commit_msg}"')
     print(f"[COMMIT] {commit_msg}")
     
-    # 3. Push to GitHub via VPS Tunnel
+    # 3. Direct Git Push to GitHub
+    push_out, push_err, push_code = run_cmd("git push origin main")
+    if push_code == 0:
+        print("[SUKSES] Berhasil push langsung ke GitHub repository main!")
+    else:
+        print(f"[INFO] Direct push status: {push_out} {push_err}")
+    
+    # 4. Optional Push to VPS via Tunnel if configured
     temp_bundle = os.path.join(tempfile.gettempdir(), "claudia_repo.bundle")
     if os.path.exists(temp_bundle):
         try: os.remove(temp_bundle)
@@ -51,15 +58,15 @@ def auto_sync():
 
     run_cmd(f'git bundle create "{temp_bundle}" --all')
     
-    scp_res = subprocess.run(["scp", "-o", "BatchMode=yes", temp_bundle, "vps_claudia:/home/ubuntu/claudia_repo.bundle"], capture_output=True, text=True, timeout=30)
-    
-    vps_sync_cmd = 'cd /home/ubuntu/Agent_Claudia_Autonomus && git pull /home/ubuntu/claudia_repo.bundle main --no-edit && git push origin main && rm -f /home/ubuntu/claudia_repo.bundle'
-    res = subprocess.run(["ssh", "-o", "BatchMode=yes", "vps_claudia", vps_sync_cmd], capture_output=True, text=True, timeout=60)
-    
-    if res.returncode == 0:
-        print("[SUKSES] Berhasil sinkronisasi dan push 40 Master Neurons ke repositori GitHub & VPS!")
-    else:
-        print("[STATUS] Output push:", res.stdout.strip(), res.stderr.strip())
+    try:
+        scp_res = subprocess.run(["scp", "-o", "BatchMode=yes", "-o", "ConnectTimeout=5", temp_bundle, "vps_claudia:/home/ubuntu/claudia_repo.bundle"], capture_output=True, text=True, timeout=10)
+        if scp_res.returncode == 0:
+            vps_sync_cmd = 'cd /home/ubuntu/Agent_Claudia_Autonomus && git pull /home/ubuntu/claudia_repo.bundle main --no-edit && git push origin main && rm -f /home/ubuntu/claudia_repo.bundle'
+            res = subprocess.run(["ssh", "-o", "BatchMode=yes", "-o", "ConnectTimeout=5", "vps_claudia", vps_sync_cmd], capture_output=True, text=True, timeout=30)
+            if res.returncode == 0:
+                print("[SUKSES] Berhasil sinkronisasi dan push ke VPS!")
+    except Exception as e:
+        pass
 
 if __name__ == "__main__":
     auto_sync()
