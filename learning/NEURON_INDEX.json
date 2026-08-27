@@ -1,8 +1,8 @@
 {
   "version": "1.2.0",
-  "updated_at": "2026-08-27 08:25:53",
-  "total_neurons": 59,
-  "total_synapses": 230,
+  "updated_at": "2026-08-27 11:52:35",
+  "total_neurons": 62,
+  "total_synapses": 242,
   "mesh_density": 0.0679,
   "neurons": [
     {
@@ -736,6 +736,39 @@
         "N001",
         "N004",
         "N007"
+      ]
+    },
+    {
+      "id": "N060",
+      "label": "Neuron N060: Advanced Algorithmic Mastery & Dynamic Graph Automata",
+      "file": "N060_advanced_algorithmic_mastery.md",
+      "connections": [
+        "N001",
+        "N004",
+        "N009",
+        "N011"
+      ]
+    },
+    {
+      "id": "N061",
+      "label": "Neuron N061: Lock-Free Concurrency, Memory Barriers & Cache-Oblivious Architecture",
+      "file": "N061_lock_free_concurrency_and_cache.md",
+      "connections": [
+        "N001",
+        "N004",
+        "N009",
+        "N011"
+      ]
+    },
+    {
+      "id": "N062",
+      "label": "Neuron N062: Distributed Consensus Invariants, Log Compaction & Idempotent SAGA",
+      "file": "N062_distributed_consensus_and_saga.md",
+      "connections": [
+        "N001",
+        "N004",
+        "N009",
+        "N011"
       ]
     }
   ]
