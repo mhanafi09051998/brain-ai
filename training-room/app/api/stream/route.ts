@@ -86,20 +86,38 @@ export async function GET() {
     totalAddedInBatch += added;
     
     const isElo = key === "knowledge_work";
-    const delta = isElo ? Math.floor(Math.random() * 2) + 1 : Number((Math.random() * 0.03 + 0.01).toFixed(2));
+    const currentMetric = db.prepare("SELECT claudia_score, unit FROM benchmark_metrics WHERE key = ?").get(key) as any;
+    
+    let newScore: number;
+    let growthDelta: number;
+
+    if (isElo) {
+      const eloDelta = Math.floor(Math.random() * 2) + 1;
+      newScore = currentMetric.claudia_score + eloDelta;
+      growthDelta = eloDelta;
+    } else {
+      // Asymptotic diminishing returns formula: Delta decreases as score approaches 100%
+      const remainingHeadroom = Math.max(0.1, 100.0 - currentMetric.claudia_score);
+      const rawDelta = (Math.random() * 0.02 + 0.005) * Math.pow(remainingHeadroom / 100.0, 1.5);
+      const roundedDelta = Number(rawDelta.toFixed(3));
+      
+      // Strict mathematical ceiling: Never exceed 98.8%
+      newScore = Math.min(98.80, Number((currentMetric.claudia_score + roundedDelta).toFixed(2)));
+      growthDelta = Number(roundedDelta.toFixed(2));
+    }
     
     db.prepare(`
       UPDATE benchmark_metrics 
-      SET claudia_score = round(claudia_score + ?, 2),
+      SET claudia_score = ?,
           growth_delta = round(growth_delta + ?, 2),
           problems_solved = problems_solved + ?
       WHERE key = ?
-    `).run(delta, delta, added, key);
+    `).run(newScore, growthDelta, added, key);
     
     // Insert execution log
     const msgs = logMessages[key] || ["Executed benchmark problem batch"];
     const msg = msgs[Math.floor(Math.random() * msgs.length)];
-    const metricObj = db.prepare("SELECT name FROM benchmark_metrics WHERE key = ?").get() as any;
+    const metricObj = db.prepare("SELECT name FROM benchmark_metrics WHERE key = ?").get(key) as any;
     const tag = metricObj ? metricObj.name : key;
     
     db.prepare(`
