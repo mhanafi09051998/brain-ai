@@ -1,8 +1,8 @@
 {
   "version": "1.2.0",
-  "updated_at": "2026-08-27 11:52:35",
-  "total_neurons": 62,
-  "total_synapses": 242,
+  "updated_at": "2026-08-27 11:56:02",
+  "total_neurons": 74,
+  "total_synapses": 289,
   "mesh_density": 0.0679,
   "neurons": [
     {
@@ -770,6 +770,161 @@
         "N009",
         "N011"
       ]
+    },
+    {
+      "id": "N063",
+      "label": "Neuron N063: MCTS Agentic Planning, State Backpropagation & Self-Correction Engine",
+      "file": "N063_mcts_agentic_planning_self_correction.md",
+      "connections": [
+        "N001",
+        "N004",
+        "N007",
+        "N022"
+      ],
+      "synapse_count": 4,
+      "size_bytes": 11110
+    },
+    {
+      "id": "N064",
+      "label": "Neuron N064: Graph-of-Thought (GoT) Non-Linear Reasoning & Swarm Consensus Engine",
+      "file": "N064_graph_of_thought_swarm_consensus.md",
+      "connections": [
+        "N001",
+        "N005",
+        "N012",
+        "N022"
+      ],
+      "synapse_count": 4,
+      "size_bytes": 9920
+    },
+    {
+      "id": "N065",
+      "label": "Neuron N065: Linux io_uring, Kernel Bypass & Zero-Copy Memory Pipelines",
+      "file": "N065_linux_io_uring_zero_copy_pipelines.md",
+      "connections": [
+        "N009",
+        "N011",
+        "N029",
+        "N034"
+      ],
+      "synapse_count": 4,
+      "size_bytes": 8706
+    },
+    {
+      "id": "N066",
+      "label": "Neuron N066: WASI Preview 2, Tokio Work-Stealing Internals & Async Cancellation Safety",
+      "file": "N066_wasi_preview2_tokio_internals.md",
+      "connections": [
+        "N015",
+        "N029",
+        "N037",
+        "N065"
+      ],
+      "synapse_count": 4,
+      "size_bytes": 9483
+    },
+    {
+      "id": "N067",
+      "label": "Neuron N067: Multi-Raft Range Partitioning, Distributed ACID & Hybrid Logical Clocks (HLC)",
+      "file": "N067_multiraft_distributed_acid_hlc.md",
+      "connections": [
+        "N010",
+        "N013",
+        "N028",
+        "N062"
+      ],
+      "synapse_count": 4,
+      "size_bytes": 6557
+    },
+    {
+      "id": "N068",
+      "label": "Neuron N068: Storage Engine LSM Leveled Compaction, B-Link Concurrency & Real-Time CDC Streaming",
+      "file": "N068_storage_engine_lsm_cdc_streaming.md",
+      "connections": [
+        "N012",
+        "N013",
+        "N031",
+        "N035"
+      ],
+      "synapse_count": 4,
+      "size_bytes": 5870
+    },
+    {
+      "id": "N069",
+      "label": "Neuron N069: 6-Phase Expand-and-Contract Zero-Downtime Database Schema Evolution",
+      "file": "N069_expand_contract_zerodowntime_migrations.md",
+      "connections": [
+        "N031",
+        "N032",
+        "N051",
+        "N068"
+      ],
+      "synapse_count": 4,
+      "size_bytes": 7668
+    },
+    {
+      "id": "N070",
+      "label": "Neuron N070: Firecracker MicroVM Sandboxing & PostgreSQL Multi-Tenant Row-Level Security (RLS)",
+      "file": "N070_firecracker_microvm_multitenant_rls.md",
+      "connections": [
+        "N014",
+        "N032",
+        "N037",
+        "N069"
+      ],
+      "synapse_count": 4,
+      "size_bytes": 7871
+    },
+    {
+      "id": "N071",
+      "label": "Neuron N071: Automated AST Mutation Fuzzing, Source-to-Sink Taint Lattice & Zero-Downtime CVE Hotpatching",
+      "file": "N071_automated_fuzzing_cve_hotpatching.md",
+      "connections": [
+        "N014",
+        "N015",
+        "N023",
+        "N038"
+      ],
+      "synapse_count": 4,
+      "size_bytes": 11646
+    },
+    {
+      "id": "N072",
+      "label": "Neuron N072: NIST Post-Quantum Cryptography (ML-KEM / ML-DSA), PASETO v4 & Hardware Enclaves",
+      "file": "N072_post_quantum_cryptography_paseto.md",
+      "connections": [
+        "N014",
+        "N024",
+        "N071"
+      ],
+      "synapse_count": 3,
+      "size_bytes": 13450
+    },
+    {
+      "id": "N073",
+      "label": "Neuron N073: Level-3 Limit Order Book Dynamics, VPIN Toxicity & Dynamic Spread Adaptation",
+      "file": "N073_lob_microstructure_vpin_toxicity.md",
+      "connections": [
+        "N021",
+        "N025",
+        "N043",
+        "N046"
+      ],
+      "synapse_count": 4,
+      "size_bytes": 12019
+    },
+    {
+      "id": "N074",
+      "label": "Neuron N074: Online 2D Kalman Statistical Arbitrage, Continuous OU SDEs & Sub-Millisecond Kill-Switch",
+      "file": "N074_kalman_stat_arbitrage_risk_killswitch.md",
+      "connections": [
+        "N021",
+        "N044",
+        "N045",
+        "N047"
+      ],
+      "synapse_count": 4,
+      "size_bytes": 14043
     }
   ]
 }
