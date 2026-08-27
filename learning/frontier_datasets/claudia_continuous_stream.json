@@ -1,97 +1,97 @@
 {
   "status": "LIVE_STREAMING_ACTIVE",
-  "last_tick": "2026-08-27 14:35:27",
-  "batch_cycle": 642,
-  "total_problems_solved": 33235,
-  "accuracy_rate": 99.17,
+  "last_tick": "2026-08-27 14:39:27",
+  "batch_cycle": 762,
+  "total_problems_solved": 37249,
+  "accuracy_rate": 99.14,
   "updated_keys": [
-    "biology_hard",
-    "novel_problem_solving",
-    "biology_human"
+    "terminal_coding",
+    "knowledge_work",
+    "business_workflows"
   ],
   "metrics": {
     "terminal_coding": {
-      "score": 51.92,
-      "growth": 2.42,
-      "solved": 2404,
+      "score": 52.57,
+      "growth": 3.07,
+      "solved": 2705,
       "unit": "%"
     },
     "knowledge_work": {
-      "score": 2182,
-      "growth": 240,
-      "solved": 2456,
+      "score": 2243,
+      "growth": 301,
+      "solved": 2823,
       "unit": "Elo"
     },
     "novel_problem_solving": {
-      "score": 41.2,
-      "growth": 3.0,
-      "solved": 2261,
+      "score": 42.0,
+      "growth": 3.8,
+      "solved": 2611,
       "unit": "%"
     },
     "agentic_search": {
-      "score": 97.38,
-      "growth": 2.78,
-      "solved": 2609,
+      "score": 97.92,
+      "growth": 3.32,
+      "solved": 2820,
       "unit": "%"
     },
     "multidisciplinary_no_tools": {
-      "score": 64.22,
-      "growth": 2.82,
-      "solved": 2247,
+      "score": 64.64,
+      "growth": 3.24,
+      "solved": 2457,
       "unit": "%"
     },
     "multidisciplinary_with_tools": {
-      "score": 74.65,
-      "growth": 2.55,
-      "solved": 2567,
+      "score": 75.47,
+      "growth": 3.37,
+      "solved": 2901,
       "unit": "%"
     },
     "computer_use": {
-      "score": 81.24,
-      "growth": 3.44,
-      "solved": 2586,
+      "score": 81.82,
+      "growth": 4.02,
+      "solved": 2852,
       "unit": "%"
     },
     "agentic_coding_deepswe": {
-      "score": 80.48,
-      "growth": 2.28,
-      "solved": 2724,
+      "score": 81.21,
+      "growth": 3.01,
+      "solved": 3047,
       "unit": "%"
     },
     "agentic_coding_frontier": {
-      "score": 61.91,
-      "growth": 2.51,
-      "solved": 2468,
+      "score": 62.72,
+      "growth": 3.32,
+      "solved": 2767,
       "unit": "%"
     },
     "business_workflows": {
-      "score": 35.22,
-      "growth": 2.22,
-      "solved": 1871,
+      "score": 35.76,
+      "growth": 2.76,
+      "solved": 2121,
       "unit": "%"
     },
     "legal": {
-      "score": 20.38,
-      "growth": 2.58,
-      "solved": 1766,
+      "score": 20.9,
+      "growth": 3.1,
+      "solved": 2026,
       "unit": "%"
     },
     "health": {
-      "score": 73.96,
-      "growth": 2.56,
-      "solved": 2226,
+      "score": 74.48,
+      "growth": 3.08,
+      "solved": 2432,
       "unit": "%"
     },
     "biology_hard": {
-      "score": 59.47,
-      "growth": 3.27,
-      "solved": 2478,
+      "score": 60.06,
+      "growth": 3.86,
+      "solved": 2748,
       "unit": "%"
     },
     "biology_human": {
-      "score": 98.04,
-      "growth": 2.64,
-      "solved": 2572,
+      "score": 98.77,
+      "growth": 3.37,
+      "solved": 2939,
       "unit": "%"
     }
   }

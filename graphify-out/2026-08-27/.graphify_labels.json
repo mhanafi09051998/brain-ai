@@ -262,5 +262,6 @@
   "260": "route.ts",
   "261": "training-room/next.config.mjs",
   "262": "tailwind.config.ts",
-  "263": "training-room/postcss.config.js"
+  "263": "training-room/postcss.config.js",
+  "264": "PaletteGenerator"
 }

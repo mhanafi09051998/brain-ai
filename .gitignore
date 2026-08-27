@@ -1,66 +1,46 @@
-# =============================================================================
-# SECURITY & CREDENTIALS (STRICTLY IGNORED)
-# =============================================================================
+# Environment & Secrets
 .env
 .env.*
 *.env
-.secrets/
-secrets/
-private/
-credentials.json
-*.json.secret
-cookies.txt
 *.key
 *.pem
 *.ppk
-*.id_rsa
-*.id_ed25519
-connect_vps.*
-scripts/connect_vps.*
+*.p12
+*.pfx
+*.credentials
+*.secret
+credentials.json
+secrets.json
+master.key
 
-# =============================================================================
-# EXTRANEOUS APP CODE & ASSETS (OUT OF SCOPE FOR AGENT BRAIN)
-# =============================================================================
-*.tsx
-*.jsx
-*.vue
-*.svelte
-poster-*/
-assets/banners/
-*.bundle
-
-# =============================================================================
-# RUNTIME, DEPENDENCIES & LOGS
-# =============================================================================
-node_modules/
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# =============================================================================
-# DATABASES & LOCAL CACHES
-# =============================================================================
+# Databases & SQLite
 *.sqlite
 *.sqlite3
 *.sqlite-journal
 *.sqlite-wal
+*.sqlite-shm
 *.db
-.pm2/
-graphify-out/cache/
-.tempmediaStorage/
-.system_generated/
+training_room.sqlite
 
-opencode.json
-prod_planner.md
+# Node & Next.js
+node_modules/
+.next/
+out/
+build/
+dist/
 
-.claudia/
+# Logs & Dumps
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# Runtime daemon live telemetry & logs
-learning/neural_live_logs.jsonl
-learning/watchdog_telemetry.json
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# OS artifacts
+.DS_Store
+Thumbs.db

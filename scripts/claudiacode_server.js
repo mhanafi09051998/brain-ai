@@ -77,12 +77,12 @@ app.post('/api/register', (req, res) => {
     const dlStmt = db.prepare('INSERT INTO downloads (user_id, os_type, ip_address) VALUES (?, ?, ?)');
     dlStmt.run(info.lastInsertRowid, os_type || 'windows', req.ip || '127.0.0.1');
 
-    const token = 'cc_live_' + Buffer.from(`${cleanUser}:${Date.now()}`).toString('hex');
+    const sessionId = 'session_' + Buffer.from(`${cleanUser}:${Date.now()}`).toString('hex');
     res.json({
       success: true,
       message: 'Account created successfully!',
       user: { id: info.lastInsertRowid, username: cleanUser, email: cleanEmail, plan: 'Apex Master' },
-      token
+      sessionId
     });
   } catch (err) {
     res.status(500).json({ error: 'Database error: ' + err.message });
@@ -107,11 +107,11 @@ app.post('/api/login', (req, res) => {
 
     db.prepare('UPDATE users SET last_login_at = CURRENT_TIMESTAMP WHERE id = ?').run(user.id);
 
-    const token = 'cc_live_' + Buffer.from(`${user.username}:${Date.now()}`).toString('hex');
+    const sessionId = 'session_' + Buffer.from(`${user.username}:${Date.now()}`).toString('hex');
     res.json({
       success: true,
       user: { id: user.id, username: user.username, email: user.email, plan: user.plan || 'Apex Master' },
-      token
+      sessionId
     });
   } catch (err) {
     res.status(500).json({ error: 'Database error: ' + err.message });

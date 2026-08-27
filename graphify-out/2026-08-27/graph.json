@@ -329,6 +329,19 @@
       "source_location": "L614"
     },
     {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator",
+      "label": "PaletteGenerator",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 264,
+      "community_name": "PaletteGenerator",
+      "file_type": "code",
+      "norm_label": "palettegenerator",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L271"
+    },
+    {
       "id": "scripts_graphic_design_visual_engine_cubicbezier",
       "label": "CubicBezier",
       "_callable": true,
@@ -366,19 +379,6 @@
       "norm_label": "generativeposter",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L625"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator",
-      "label": "PaletteGenerator",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": "palettegenerator",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L271"
     },
     {
       "id": "scripts_graphic_design_visual_engine_iconbuilder24",
@@ -3708,7 +3708,7 @@
       "file_type": "code",
       "norm_label": "get()",
       "source_file": "training-room/app/api/stream/route.ts",
-      "source_location": "L7"
+      "source_location": "L66"
     },
     {
       "id": "training_room_lib_db_getdb",
@@ -3733,6 +3733,78 @@
       "norm_label": "seeddatabase()",
       "source_file": "training-room/lib/seed.ts",
       "source_location": "L3"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_color_from_hsl",
+      "label": ".from_hsl()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 264,
+      "community_name": "PaletteGenerator",
+      "file_type": "code",
+      "norm_label": ".from_hsl()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L67"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_analogous",
+      "label": ".analogous()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 264,
+      "community_name": "PaletteGenerator",
+      "file_type": "code",
+      "norm_label": ".analogous()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L284"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_monochromatic",
+      "label": ".monochromatic()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 264,
+      "community_name": "PaletteGenerator",
+      "file_type": "code",
+      "norm_label": ".monochromatic()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L277"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_scale",
+      "label": ".scale()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 264,
+      "community_name": "PaletteGenerator",
+      "file_type": "code",
+      "norm_label": ".scale()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L332"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_split_complementary",
+      "label": ".split_complementary()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 264,
+      "community_name": "PaletteGenerator",
+      "file_type": "code",
+      "norm_label": ".split_complementary()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L311"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_tetradic",
+      "label": ".tetradic()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 264,
+      "community_name": "PaletteGenerator",
+      "file_type": "code",
+      "norm_label": ".tetradic()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L321"
     },
     {
       "id": "scripts_graphic_design_visual_engine_cubicbezier_acceleration",
@@ -4167,18 +4239,6 @@
       "source_location": "L44"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_color_from_hsl",
-      "label": ".from_hsl()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": ".from_hsl()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L67"
-    },
-    {
       "id": "scripts_graphic_design_visual_engine_generativeposter_build_svg",
       "label": ".build_svg()",
       "_callable": true,
@@ -4203,18 +4263,6 @@
       "source_location": "L632"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_analogous",
-      "label": ".analogous()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": ".analogous()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L284"
-    },
-    {
       "id": "scripts_graphic_design_visual_engine_palettegenerator_complementary",
       "label": ".complementary()",
       "_callable": true,
@@ -4225,54 +4273,6 @@
       "norm_label": ".complementary()",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L295"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_monochromatic",
-      "label": ".monochromatic()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": ".monochromatic()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L277"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_scale",
-      "label": ".scale()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": ".scale()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L332"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_split_complementary",
-      "label": ".split_complementary()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": ".split_complementary()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L311"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_tetradic",
-      "label": ".tetradic()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": ".tetradic()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L321"
     },
     {
       "id": "scripts_graphic_design_visual_engine_palettegenerator_triadic",
@@ -16997,6 +16997,17 @@
       "source_location": "L5"
     },
     {
+      "id": "training_room_app_api_stream_route_logmessages",
+      "label": "logMessages",
+      "_origin": "ast",
+      "community": 260,
+      "community_name": "route.ts",
+      "file_type": "code",
+      "norm_label": "logmessages",
+      "source_file": "training-room/app/api/stream/route.ts",
+      "source_location": "L7"
+    },
+    {
       "id": "training_room_lib_db",
       "label": "db.ts",
       "_origin": "ast",
@@ -17105,6 +17116,83 @@
       "norm_label": "training-room/postcss.config.js",
       "source_file": "training-room/postcss.config.js",
       "source_location": "L1"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_272",
+      "label": "Harmonious color palette generator supporting classical color wheel (HSL) and\u2026",
+      "_origin": "ast",
+      "community": 264,
+      "community_name": "PaletteGenerator",
+      "file_type": "rationale",
+      "norm_label": "harmonious color palette generator supporting classical color wheel (hsl) and...",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L272"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_278",
+      "label": "Generate a monochromatic ramp varying in Lightness.",
+      "_origin": "ast",
+      "community": 264,
+      "community_name": "PaletteGenerator",
+      "file_type": "rationale",
+      "norm_label": "generate a monochromatic ramp varying in lightness.",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L278"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_285",
+      "label": "Generate analogous colors clustered around base hue.",
+      "_origin": "ast",
+      "community": 264,
+      "community_name": "PaletteGenerator",
+      "file_type": "rationale",
+      "norm_label": "generate analogous colors clustered around base hue.",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L285"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_312",
+      "label": "Generate split-complementary harmony (base + 2 colors flanking complement).",
+      "_origin": "ast",
+      "community": 264,
+      "community_name": "PaletteGenerator",
+      "file_type": "rationale",
+      "norm_label": "generate split-complementary harmony (base + 2 colors flanking complement).",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L312"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_322",
+      "label": "Generate tetradic rectangular 4-color harmony.",
+      "_origin": "ast",
+      "community": 264,
+      "community_name": "PaletteGenerator",
+      "file_type": "rationale",
+      "norm_label": "generate tetradic rectangular 4-color harmony.",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L322"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_333",
+      "label": "Generate multi-stop gradient scale interpolated in CIELAB space.",
+      "_origin": "ast",
+      "community": 264,
+      "community_name": "PaletteGenerator",
+      "file_type": "rationale",
+      "norm_label": "generate multi-stop gradient scale interpolated in cielab space.",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L333"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_68",
+      "label": "Construct Color from HSL (H in [0, 360), S in [0, 1], L in [0, 1]).",
+      "_origin": "ast",
+      "community": 264,
+      "community_name": "PaletteGenerator",
+      "file_type": "rationale",
+      "norm_label": "construct color from hsl (h in [0, 360), s in [0, 1], l in [0, 1]).",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L68"
     },
     {
       "id": "learning_neurons_n041_macro_gold_intermarket",
@@ -18799,39 +18887,6 @@
       "source_location": "L1"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_rationale_272",
-      "label": "Harmonious color palette generator supporting classical color wheel (HSL) and\u2026",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "harmonious color palette generator supporting classical color wheel (hsl) and...",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L272"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_278",
-      "label": "Generate a monochromatic ramp varying in Lightness.",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "generate a monochromatic ramp varying in lightness.",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L278"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_285",
-      "label": "Generate analogous colors clustered around base hue.",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "generate analogous colors clustered around base hue.",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L285"
-    },
-    {
       "id": "scripts_graphic_design_visual_engine_rationale_296",
       "label": "Generate complementary color pair (180\u00b0 offset).",
       "_origin": "ast",
@@ -18852,39 +18907,6 @@
       "norm_label": "generate triadic 3-color harmony (120\u00b0 offsets).",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L302"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_312",
-      "label": "Generate split-complementary harmony (base + 2 colors flanking complement).",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "generate split-complementary harmony (base + 2 colors flanking complement).",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L312"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_322",
-      "label": "Generate tetradic rectangular 4-color harmony.",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "generate tetradic rectangular 4-color harmony.",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L322"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_333",
-      "label": "Generate multi-stop gradient scale interpolated in CIELAB space.",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "generate multi-stop gradient scale interpolated in cielab space.",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L333"
     },
     {
       "id": "scripts_graphic_design_visual_engine_rationale_45",
@@ -18918,17 +18940,6 @@
       "norm_label": "generate full svg graphic poster with mathematical curves and layered depth.",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L638"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_68",
-      "label": "Construct Color from HSL (H in [0, 360), S in [0, 1], L in [0, 1]).",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "construct color from hsl (h in [0, 360), s in [0, 1], l in [0, 1]).",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L68"
     },
     {
       "id": "scripts_graphic_design_visual_engine_rationale_745",
@@ -28783,7 +28794,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "training-room/app/api/stream/route.ts",
-      "source_location": "L8",
+      "source_location": "L67",
       "weight": 1.0
     },
     {
@@ -28795,7 +28806,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "training-room/app/api/stream/route.ts",
-      "source_location": "L9",
+      "source_location": "L68",
       "weight": 1.0
     },
     {
@@ -47976,6 +47987,17 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "training-room/app/api/stream/route.ts",
+      "source_location": "L66",
+      "weight": 1.0
+    },
+    {
+      "source": "training_room_app_api_stream_route",
+      "target": "training_room_app_api_stream_route_logmessages",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "training-room/app/api/stream/route.ts",
       "source_location": "L7",
       "weight": 1.0
     },
@@ -52177,5 +52199,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "8cea4f28ee203fb5aecbf899713ccfec57e2ad8c"
+  "built_at_commit": "1943281864edf0aab145b3dccd4189bb33ca0081"
 }

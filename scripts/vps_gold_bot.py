@@ -4,7 +4,7 @@ import json
 from datetime import datetime, timezone, timedelta
 import time
 
-BOT_TOKEN = "***TELEGRAM_TOKEN_REMOVED***"
+BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 CHAT_ID = ***CHAT_ID_REMOVED***
 
 def fetch_data():

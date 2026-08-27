@@ -127,7 +127,7 @@ def send_live_report():
 🚀 <b>TP2 (1:4.5):</b> <code>${tp2:,.2f}</code>
 ━━━━━━━━━━━━━━━━━━━━"""
 
-    BOT_TOKEN = "***TELEGRAM_TOKEN_REMOVED***"
+    BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
     CHAT_ID = ***CHAT_ID_REMOVED***
 
     print(msg)

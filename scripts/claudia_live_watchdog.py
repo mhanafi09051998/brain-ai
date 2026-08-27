@@ -47,7 +47,7 @@ def send_telegram_server(text: str) -> bool:
 # ==========================================
 # FETCHERS
 # ==========================================
-TWELVE_API_KEY = "958225eca53b4155b28c09f3159e44a5"
+TWELVE_API_KEY = os.environ.get("TWELVEDATA_API_KEY", "")
 
 def fetch_klines_twelve(ticker: str):
     url = f"https://api.twelvedata.com/time_series?symbol={ticker}&interval=15min&outputsize=60&apikey={TWELVE_API_KEY}&timezone=Asia/Jakarta"
