@@ -56,6 +56,7 @@ const metricCardDefinitions = [
     title: "Agentic Terminal Coding",
     benchmark: "Frontier-Bench v0.1",
     category: "Coding & Systems",
+    unit: "% (Pass Rate)",
     competitor: "Opus 5: 43.3%",
     desc: "Menguji kemampuan agen AI dalam mengendalikan environment shell/terminal interaktif (Linux/Windows) secara mandiri: eksekusi script, inspeksi log error, manajemen dependensi, dan recovery otomatis proses yang crash tanpa campur tangan manusia.",
     criteria: [
@@ -70,6 +71,7 @@ const metricCardDefinitions = [
     title: "Knowledge Work & Strategic Analysis",
     benchmark: "GDPval-AA v2",
     category: "Reasoning & Business",
+    unit: "Elo (Relative Rating)",
     competitor: "Opus 5: 1861 Elo",
     desc: "Tolok ukur otomatisasi pekerjaan profesional tingkat tinggi yang bernilai ekonomi riil (GDP-valued tasks): perancangan dokumen arsitektur C-level, analisis laporan keuangan 10-K, dan sintesis SOP bisnis terstruktur.",
     criteria: [
@@ -84,6 +86,7 @@ const metricCardDefinitions = [
     title: "Novel Problem-Solving & Spatial Logic",
     benchmark: "ARC-AGI-3",
     category: "Pure Intelligence",
+    unit: "% (Out-of-Distribution Pass)",
     competitor: "Opus 5: 30.2%",
     desc: "Ujian generalisasi murni (out-of-distribution reasoning) pada masalah visual-spasial abstrak yang dirancang kebal hafalan. Mengukur kemampuan AI beradaptasi pada aturan konsep baru yang belum pernah ditemui pada data pelatihan.",
     criteria: [
@@ -98,6 +101,7 @@ const metricCardDefinitions = [
     title: "Agentic Search & Deep Retrieval",
     benchmark: "BrowseComp",
     category: "Autonomous Agent",
+    unit: "% (Factual Accuracy)",
     competitor: "Opus 5: 90.8%",
     desc: "Menguji navigasi web otonom multi-langkah (deep research): penelusuran DOM dinamis, bypassing halaman kompleks, ekstraksi data tabular, dan validasi silang fakta dari berbagai sumber web independen.",
     criteria: [
@@ -110,8 +114,9 @@ const metricCardDefinitions = [
     key: "multidisciplinary_with_tools",
     icon: GraduationCap,
     title: "Multidisciplinary Frontier Reasoning",
-    benchmark: "Humanity's Last Exam",
+    benchmark: "Humanity's Last Exam (with tools)",
     category: "PhD-Level Science",
+    unit: "% (Accuracy Rate)",
     competitor: "Opus 5: 64.7%",
     desc: "Ujian akademik pamungkas tingkat doktoral (PhD) mencakup 500+ bidang akademik (fisika kuantum, biokimia, ekonometrika) yang dirancang khusus oleh para pakar dunia agar tidak dapat dijawab dengan tebakan AI biasa.",
     criteria: [
@@ -126,6 +131,7 @@ const metricCardDefinitions = [
     title: "Computer Use & Desktop GUI Grounding",
     benchmark: "OSWorld 2.0",
     category: "OS Automation",
+    unit: "% (Task Success Rate)",
     competitor: "Opus 5: 70.6%",
     desc: "Pengoperasian antarmuka grafis sistem operasi (GUI desktop) secara nyata: pergerakan kursor mouse, pengetikan keyboard, manajemen jendela aplikasi, dan interoperabilitas alur kerja lintas software desktop.",
     criteria: [
@@ -140,6 +146,7 @@ const metricCardDefinitions = [
     title: "Deep Repository SWE Refactoring",
     benchmark: "DeepSWE v1.1",
     category: "Coding & Systems",
+    unit: "% (Issue Resolved Rate)",
     competitor: "GPT-5.6 Sol: 72.7%",
     desc: "Penyelesaian issue dan bug rekayasa perangkat lunak berskala repositori nyata. AI dituntut memetakan dependensi AST multi-file, memahami arsitektur proyek, dan menghasilkan patch kode bersih tanpa efek samping regresi.",
     criteria: [
@@ -154,6 +161,7 @@ const metricCardDefinitions = [
     title: "Complex Algorithmic Synthesis",
     benchmark: "FrontierCode v1.1, Main",
     category: "Competitive Algorithms",
+    unit: "% (pass@1 Accuracy)",
     competitor: "Fable 5: 53.5%",
     desc: "Sintesis kode algoritma kompetisi internasional tingkat lanjut (setara ICPC / Codeforces Grandmaster): optimasi kompleksitas waktu optimal, pencegahan stack overflow rekursi, dan struktur data lanjutan.",
     criteria: [
@@ -168,6 +176,7 @@ const metricCardDefinitions = [
     title: "Enterprise Business Workflows & RPA",
     benchmark: "AutomationBench",
     category: "Enterprise Workflows",
+    unit: "% (Workflow Completion)",
     competitor: "Opus 5: 26.0%",
     desc: "Orkestrasi alur kerja proses bisnis terpadu antar-sistem: sinkronisasi CRM, ERP, pemrosesan tagihan/invoice, manajemen tiket, dan keandalan transaksi terdistribusi berbasis pola SAGA.",
     criteria: [
@@ -182,6 +191,7 @@ const metricCardDefinitions = [
     title: "Legal Reasoning & Contract Jurisprudence",
     benchmark: "Legal Agent Benchmark, Held-out",
     category: "Specialized Professional",
+    unit: "% (Contract Audit Accuracy)",
     competitor: "Fable 5: 13.3%",
     desc: "Analisis yurisprudensi dan hukum kontrak: audit klausul indemnifikasi & liabilitas, kepatuhan regulasi multi-yurisdiksi, interpretasi perundang-undangan, dan deteksi risiko hukum tersembunyi tanpa halusinasi pasal.",
     criteria: [
@@ -196,6 +206,7 @@ const metricCardDefinitions = [
     title: "Clinical Medicine & Diagnostic Precision",
     benchmark: "HealthBench Professional",
     category: "Medical & Health",
+    unit: "% (Clinical Diagnostic Accuracy)",
     competitor: "Mythos 5: 66.0%",
     desc: "Penalaran diagnostik medis klinis dan farmakologi: analisis data laboratorium pasien, evaluasi diferensial diagnosis berbasis bukti medis, farmakokinetik, dan mitigasi kontraindikasi interaksi obat.",
     criteria: [
@@ -208,8 +219,9 @@ const metricCardDefinitions = [
     key: "biology_hard",
     icon: Dna,
     title: "Molecular Biology & Genomic Mystery",
-    benchmark: "BioMysteryBench",
+    benchmark: "BioMysteryBench (hard)",
     category: "Biological Sciences",
+    unit: "% (Mystery Solved Rate)",
     competitor: "Opus 5: 49.4%",
     desc: "Pemecahan misteri biologi molekuler dan komputasi genomik: analisis dinamika lipatan protein, konformasi struktural, pemodelan jalur metabolik, dan validasi sekuens pengenalan genetik CRISPR-Cas9.",
     criteria: [
@@ -236,7 +248,6 @@ export default function TrainingRoomPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [lastTickTime, setLastTickTime] = useState('');
 
-  // Polling Stream from Next.js SQLite Route Handler every 2 seconds
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -304,7 +315,7 @@ export default function TrainingRoomPage() {
             <Zap className="w-4 h-4 text-emerald-600" />
           </div>
           <div className="text-2xl font-extrabold text-emerald-700 mt-2 font-mono">
-            {session.total_problems.toLocaleString()}
+            {session.total_problems.toLocaleString()} <span className="text-xs font-sans text-slate-400 font-normal">problems</span>
           </div>
           <div className="text-[11px] text-slate-400 mt-0.5">Continuous multi-agent training</div>
         </div>
@@ -446,7 +457,7 @@ export default function TrainingRoomPage() {
             </div>
           </div>
 
-          {/* Benchmark Table */}
+          {/* Benchmark Table with Explicit Unit Display */}
           <div className="bg-white border border-slate-200 rounded-2xl shadow-sm overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs border-collapse">
@@ -467,19 +478,34 @@ export default function TrainingRoomPage() {
                 <tbody className="divide-y divide-slate-100">
                   {filteredMetrics.map((item) => {
                     const isUpdated = updatedKeys.includes(item.key);
+                    const isElo = item.unit === 'Elo';
+                    
+                    const claudiaScoreDisplay = isElo 
+                      ? `${item.claudia_score} Elo` 
+                      : `${item.claudia_score.toFixed(2)}%`;
+                    
+                    const deltaDisplay = isElo
+                      ? `▲ +${item.growth_delta} Elo`
+                      : `▲ +${item.growth_delta.toFixed(2)}%`;
+
                     return (
                       <tr key={item.key} className="hover:bg-slate-50/80 transition-colors">
                         <td className="py-3 px-4">
                           <div className="font-bold text-slate-900 text-[13px]">{item.name}</div>
-                          <div className="text-[11px] text-slate-400 font-medium">{item.benchmark_name}</div>
+                          <div className="text-[11px] text-slate-400 font-medium flex items-center gap-1.5">
+                            <span>{item.benchmark_name}</span>
+                            <span className="text-[9.5px] bg-slate-100 text-slate-600 px-1.5 py-0.2 rounded border border-slate-200 font-mono">
+                              {item.unit === 'Elo' ? 'Elo' : '%'}
+                            </span>
+                          </div>
                         </td>
                         <td className={`py-3 px-3 text-center border-x transition-all duration-500 ${
                           isUpdated ? 'bg-emerald-100/90 border-emerald-300 scale-[1.01]' : 'bg-emerald-50/30 border-emerald-100'
                         }`}>
                           <div className="inline-flex items-center gap-1 px-2 py-1 bg-emerald-100/70 text-emerald-800 rounded-md font-bold font-mono text-[11px]">
-                            <span>{item.unit === '%' ? `${item.claudia_score.toFixed(2)}%` : `${item.claudia_score} Elo`}</span>
+                            <span>{claudiaScoreDisplay}</span>
                             <span className="text-[9.5px] text-emerald-700 bg-white/90 px-1 py-0.5 rounded border border-emerald-200 font-sans font-semibold">
-                              ▲ +{item.growth_delta.toFixed(2)}{item.unit === '%' ? '%' : ''}
+                              {deltaDisplay}
                             </span>
                           </div>
                           <div className="text-[10px] text-slate-400 font-mono mt-1">
@@ -504,7 +530,7 @@ export default function TrainingRoomPage() {
 
       </div>
 
-      {/* ================= BOTTOM SECTION: 12 METRICS DETAILED EXPLANATION GRID (LIVE DATA BINDING) ================= */}
+      {/* ================= BOTTOM SECTION: 12 METRICS DETAILED EXPLANATION GRID (WITH ACCURATE UNITS) ================= */}
       <section className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm mb-8">
         <div className="flex items-center justify-between border-b border-slate-100 pb-4 mb-6">
           <div className="flex items-center gap-2.5">
@@ -515,31 +541,30 @@ export default function TrainingRoomPage() {
               <h2 className="text-lg font-black text-slate-900 tracking-tight">
                 Detail &amp; Penjelasan 12 Parameter Frontier Benchmark 2026
               </h2>
-              <p className="text-xs text-slate-500 mt-0.5">Seluruh skor di bawah ini terikat secara dinamis ke telemetri real-time SQLite</p>
+              <p className="text-xs text-slate-500 mt-0.5">Seluruh parameter terverifikasi dengan satuan ilmiah resmi (Percentage % dan Elo Rating)</p>
             </div>
           </div>
           <span className="text-xs font-bold bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full border border-emerald-200 flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            12 Live Dynamic Cards
+            12 Validated Units
           </span>
         </div>
 
-        {/* 12 Cards Grid (Dynamic Live Score Binding from SQLite) */}
+        {/* 12 Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
           {metricCardDefinitions.map((m, idx) => {
             const IconComponent = m.icon;
             const liveMetric = metrics.find(item => item.key === m.key);
             const isUpdated = updatedKeys.includes(m.key);
+            const isElo = liveMetric ? liveMetric.unit === 'Elo' : m.unit.includes('Elo');
             
             const currentScoreStr = liveMetric 
-              ? (liveMetric.unit === '%' ? `${liveMetric.claudia_score.toFixed(2)}%` : `${liveMetric.claudia_score} Elo`)
+              ? (isElo ? `${liveMetric.claudia_score} Elo` : `${liveMetric.claudia_score.toFixed(2)}%`)
               : 'Loading...';
             
             const growthDeltaStr = liveMetric 
-              ? `▲ +${liveMetric.growth_delta.toFixed(2)}${liveMetric.unit === '%' ? '%' : ''}`
+              ? (isElo ? `▲ +${liveMetric.growth_delta} Elo` : `▲ +${liveMetric.growth_delta.toFixed(2)}%`)
               : '';
-
-            const solvedCount = liveMetric ? liveMetric.problems_solved.toLocaleString() : '0';
 
             return (
               <div 
@@ -564,10 +589,15 @@ export default function TrainingRoomPage() {
                     </span>
                   </div>
 
-                  {/* Title */}
-                  <h3 className="text-sm font-bold text-slate-900 mb-2">
-                    {m.title}
-                  </h3>
+                  {/* Title & Unit Badge */}
+                  <div className="flex items-baseline justify-between gap-2 mb-2">
+                    <h3 className="text-sm font-bold text-slate-900">
+                      {m.title}
+                    </h3>
+                    <span className="text-[10px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded border border-slate-200 shrink-0">
+                      Satuan: {m.unit}
+                    </span>
+                  </div>
 
                   {/* Description */}
                   <p className="text-xs text-slate-600 leading-relaxed mb-4">
@@ -586,7 +616,7 @@ export default function TrainingRoomPage() {
                   </div>
                 </div>
 
-                {/* Bottom SOTA Benchmark Pill (DYNAMIC LIVE DATA BINDING) */}
+                {/* Bottom SOTA Benchmark Pill with Exact Units */}
                 <div className="pt-3 border-t border-slate-200/60 flex items-center justify-between text-[11px]">
                   <div>
                     <span className="text-slate-400 font-medium block text-[10px]">Competitor SOTA:</span>

@@ -1,92 +1,92 @@
 {
   "status": "LIVE_STREAMING_ACTIVE",
-  "last_tick": "2026-08-27 15:12:00",
-  "batch_cycle": 173,
-  "total_problems_solved": 16095,
-  "accuracy_rate": 99.25,
+  "last_tick": "2026-08-27 15:14:56",
+  "batch_cycle": 261,
+  "total_problems_solved": 18970,
+  "accuracy_rate": 99.26,
   "metrics": {
     "terminal_coding": {
-      "score": 49.53,
-      "growth": 0.03,
-      "solved": 1323,
+      "score": 49.64,
+      "growth": 0.14,
+      "solved": 1590,
       "unit": "%"
     },
     "knowledge_work": {
-      "score": 1952,
-      "growth": 10,
-      "solved": 1190,
+      "score": 1998,
+      "growth": 56,
+      "solved": 1484,
       "unit": "Elo"
     },
     "novel_problem_solving": {
-      "score": 38.24,
-      "growth": 0.04,
-      "solved": 902,
+      "score": 38.33,
+      "growth": 0.13,
+      "solved": 1040,
       "unit": "%"
     },
     "agentic_search": {
       "score": 94.85,
       "growth": 0.25,
-      "solved": 1498,
+      "solved": 1702,
       "unit": "%"
     },
     "multidisciplinary_no_tools": {
-      "score": 61.42,
-      "growth": 0.02,
-      "solved": 983,
+      "score": 61.43,
+      "growth": 0.03,
+      "solved": 1128,
       "unit": "%"
     },
     "multidisciplinary_with_tools": {
       "score": 72.14,
       "growth": 0.04,
-      "solved": 1358,
+      "solved": 1533,
       "unit": "%"
     },
     "computer_use": {
       "score": 77.83,
       "growth": 0.03,
-      "solved": 1182,
+      "solved": 1382,
       "unit": "%"
     },
     "agentic_coding_deepswe": {
       "score": 78.25,
       "growth": 0.05,
-      "solved": 1728,
+      "solved": 1912,
       "unit": "%"
     },
     "agentic_coding_frontier": {
-      "score": 59.43,
-      "growth": 0.03,
-      "solved": 1246,
+      "score": 59.45,
+      "growth": 0.05,
+      "solved": 1497,
       "unit": "%"
     },
     "business_workflows": {
-      "score": 33.05,
-      "growth": 0.05,
-      "solved": 823,
+      "score": 33.18,
+      "growth": 0.18,
+      "solved": 1000,
       "unit": "%"
     },
     "legal": {
-      "score": 17.87,
-      "growth": 0.07,
-      "solved": 702,
+      "score": 18.05,
+      "growth": 0.25,
+      "solved": 952,
       "unit": "%"
     },
     "health": {
       "score": 71.44,
       "growth": 0.04,
-      "solved": 957,
+      "solved": 1189,
       "unit": "%"
     },
     "biology_hard": {
       "score": 56.25,
       "growth": 0.05,
-      "solved": 852,
+      "solved": 976,
       "unit": "%"
     },
     "biology_human": {
       "score": 95.42,
       "growth": 0.02,
-      "solved": 1351,
+      "solved": 1585,
       "unit": "%"
     }
   }
