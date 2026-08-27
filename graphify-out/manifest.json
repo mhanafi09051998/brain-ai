@@ -2075,12 +2075,6 @@
     "ast_hash": "35bf576bce7a5d5f3c0cc1ef5fd829d3",
     "semantic_hash": ""
   },
-  "frontier_benchmark_monitor.html": {
-    "mtime": 1787815169.0437183,
-    "seen": 1787815183.35808,
-    "ast_hash": "a8b3bf69180a91ca36e9f663663b69ab",
-    "semantic_hash": ""
-  },
   "learning/frontier_datasets/claudia_live_eval_2026.json": {
     "mtime": 1787814726.9314117,
     "seen": 1787814735.9287565,
@@ -2094,9 +2088,57 @@
     "semantic_hash": ""
   },
   "learning/frontier_datasets/claudia_continuous_stream.json": {
-    "mtime": 1787815183.043254,
-    "seen": 1787815183.35808,
-    "ast_hash": "10300410b9ed131e89cad96f86f5cadf",
+    "mtime": 1787815595.2580698,
+    "seen": 1787815595.9381833,
+    "ast_hash": "916d0f4e4c6d7aac89155104388404e1",
+    "semantic_hash": ""
+  },
+  "training-room/app/api/stream/route.ts": {
+    "mtime": 1787815513.82787,
+    "seen": 1787815595.939183,
+    "ast_hash": "e0a98a40093f9f127f1f6a753613bfd1",
+    "semantic_hash": ""
+  },
+  "training-room/lib/db.ts": {
+    "mtime": 1787815559.9228115,
+    "seen": 1787815595.939183,
+    "ast_hash": "36be7dd9a9979bb13a5e2cad6ecb84eb",
+    "semantic_hash": ""
+  },
+  "training-room/lib/seed.ts": {
+    "mtime": 1787815513.82787,
+    "seen": 1787815595.939183,
+    "ast_hash": "3a7d16fa909cc5ed1b1c6b47af2b53e8",
+    "semantic_hash": ""
+  },
+  "training-room/next.config.mjs": {
+    "mtime": 1787815495.9959965,
+    "seen": 1787815595.939183,
+    "ast_hash": "f53bf377566882e87c2a1687e6c30d77",
+    "semantic_hash": ""
+  },
+  "training-room/package.json": {
+    "mtime": 1787815495.9944854,
+    "seen": 1787815595.939183,
+    "ast_hash": "7f6bf45d3c89ddc395482361918b5f54",
+    "semantic_hash": ""
+  },
+  "training-room/postcss.config.js": {
+    "mtime": 1787815495.9959965,
+    "seen": 1787815595.939183,
+    "ast_hash": "9a248c780e4c76f85b0f492f63a3d417",
+    "semantic_hash": ""
+  },
+  "training-room/tailwind.config.ts": {
+    "mtime": 1787815495.9959965,
+    "seen": 1787815595.939183,
+    "ast_hash": "26812d3006e82acd0cbd96be7d009a76",
+    "semantic_hash": ""
+  },
+  "training-room/tsconfig.json": {
+    "mtime": 1787815495.9944854,
+    "seen": 1787815595.939183,
+    "ast_hash": "72cef95efc2eb6b60105980e9fbd8916",
     "semantic_hash": ""
   }
 }

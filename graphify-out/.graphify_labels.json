@@ -1,6 +1,6 @@
 {
   "0": "run_deterministic_tests",
-  "1": "Install",
+  "1": "README.es.md",
   "2": "Neuron N020: Autonomous Cross-Session Memory & Resilient Checkpoint Continuity",
   "3": "CubicBezier",
   "4": "ponytail/package.json",
@@ -36,7 +36,7 @@
   "34": "Color",
   "35": "Ponytail, lazy senior dev mode",
   "36": "🎯 5 Pilar & Invarian Operasional Edge & Containerization",
-  "37": "PaletteGenerator",
+  "37": "run_self_tests",
   "38": "Neuron N031: Modern Data Architecture & Hybrid Search (PostgreSQL 17, pgvector HNSW, Drizzle ORM, SQLite WAL)",
   "39": "ponytail.mjs",
   "40": "official_runner_real.py",
@@ -252,6 +252,15 @@
   "250": ".process_tiled_convolution",
   "251": "🎯 Inti Pembelajaran (Engineering Invariant)",
   "252": "🎯 Inti Pembelajaran (12 Parameter Evaluasi Model AI Generasi Baru)",
-  "253": "run_self_tests",
-  "254": "continuous_12_frontier_daemon.py"
+  "253": "devDependencies",
+  "254": "continuous_12_frontier_daemon.py",
+  "255": "compilerOptions",
+  "256": "ponytail/README.md",
+  "257": "Install",
+  "258": "Instalación",
+  "259": "README.ko.md",
+  "260": "route.ts",
+  "261": "training-room/next.config.mjs",
+  "262": "tailwind.config.ts",
+  "263": "training-room/postcss.config.js"
 }
