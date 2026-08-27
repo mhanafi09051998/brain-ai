@@ -329,19 +329,6 @@
       "source_location": "L614"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_generativeposter",
-      "label": "GenerativePoster",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 206,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": "generativeposter",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L625"
-    },
-    {
       "id": "scripts_graphic_design_visual_engine_cubicbezier",
       "label": "CubicBezier",
       "_callable": true,
@@ -368,13 +355,26 @@
       "source_location": "L27"
     },
     {
+      "id": "scripts_graphic_design_visual_engine_generativeposter",
+      "label": "GenerativePoster",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": "generativeposter",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L625"
+    },
+    {
       "id": "scripts_graphic_design_visual_engine_palettegenerator",
       "label": "PaletteGenerator",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "code",
       "norm_label": "palettegenerator",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -3267,64 +3267,64 @@
       "source_location": "L6"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_color_from_hex",
-      "label": ".from_hex()",
+      "id": "scripts_claudia_telegram_bot_query_claudia_llm",
+      "label": "query_claudia_llm()",
       "_callable": true,
       "_origin": "ast",
       "community": 206,
-      "community_name": "run_self_tests",
+      "community_name": "claudia_telegram_bot.py",
       "file_type": "code",
-      "norm_label": ".from_hex()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L44"
+      "norm_label": "query_claudia_llm()",
+      "source_file": "scripts/claudia_telegram_bot.py",
+      "source_location": "L77"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_generativeposter_build_svg",
-      "label": ".build_svg()",
+      "id": "scripts_claudia_telegram_bot_record_telegram_training",
+      "label": "record_telegram_training()",
       "_callable": true,
       "_origin": "ast",
       "community": 206,
-      "community_name": "run_self_tests",
+      "community_name": "claudia_telegram_bot.py",
       "file_type": "code",
-      "norm_label": ".build_svg()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L637"
+      "norm_label": "record_telegram_training()",
+      "source_file": "scripts/claudia_telegram_bot.py",
+      "source_location": "L35"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_generativeposter_init",
-      "label": ".__init__()",
+      "id": "scripts_claudia_telegram_bot_run_claudia_bot",
+      "label": "run_claudia_bot()",
       "_callable": true,
       "_origin": "ast",
       "community": 206,
-      "community_name": "run_self_tests",
+      "community_name": "claudia_telegram_bot.py",
       "file_type": "code",
-      "norm_label": ".__init__()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L632"
+      "norm_label": "run_claudia_bot()",
+      "source_file": "scripts/claudia_telegram_bot.py",
+      "source_location": "L113"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_triadic",
-      "label": ".triadic()",
+      "id": "scripts_claudia_telegram_bot_send_chat_action",
+      "label": "send_chat_action()",
       "_callable": true,
       "_origin": "ast",
       "community": 206,
-      "community_name": "run_self_tests",
+      "community_name": "claudia_telegram_bot.py",
       "file_type": "code",
-      "norm_label": ".triadic()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L301"
+      "norm_label": "send_chat_action()",
+      "source_file": "scripts/claudia_telegram_bot.py",
+      "source_location": "L71"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_run_self_tests",
-      "label": "run_self_tests()",
+      "id": "scripts_claudia_telegram_bot_send_telegram_message",
+      "label": "send_telegram_message()",
       "_callable": true,
       "_origin": "ast",
       "community": 206,
-      "community_name": "run_self_tests",
+      "community_name": "claudia_telegram_bot.py",
       "file_type": "code",
-      "norm_label": "run_self_tests()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L744"
+      "norm_label": "send_telegram_message()",
+      "source_file": "scripts/claudia_telegram_bot.py",
+      "source_location": "L53"
     },
     {
       "id": "scripts_download_full_synced_subtitles_fetch_and_save",
@@ -3495,16 +3495,16 @@
       "source_location": "L105"
     },
     {
-      "id": "ponytail_hooks_ponytail_config_normalizeconfigmode",
-      "label": "normalizeConfigMode()",
+      "id": "ponytail_hooks_ponytail_config_isshellsafe",
+      "label": "isShellSafe()",
       "_callable": true,
       "_origin": "ast",
       "community": 22,
       "community_name": "ponytail-config.js",
       "file_type": "code",
-      "norm_label": "normalizeconfigmode()",
+      "norm_label": "isshellsafe()",
       "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L26"
+      "source_location": "L50"
     },
     {
       "id": "ponytail_scripts_uninstall_removeifexists",
@@ -3517,6 +3517,18 @@
       "norm_label": "removeifexists()",
       "source_file": "ponytail/scripts/uninstall.js",
       "source_location": "L14"
+    },
+    {
+      "id": "ponytail_hooks_ponytail_config_normalizeconfigmode",
+      "label": "normalizeConfigMode()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "index.js",
+      "file_type": "code",
+      "norm_label": "normalizeconfigmode()",
+      "source_file": "ponytail/hooks/ponytail-config.js",
+      "source_location": "L26"
     },
     {
       "id": "ponytail_hooks_ponytail_config_normalizepersistedmode",
@@ -4107,16 +4119,52 @@
       "source_location": "L237"
     },
     {
+      "id": "scripts_graphic_design_visual_engine_color_from_hex",
+      "label": ".from_hex()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": ".from_hex()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L44"
+    },
+    {
       "id": "scripts_graphic_design_visual_engine_color_from_hsl",
       "label": ".from_hsl()",
       "_callable": true,
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "code",
       "norm_label": ".from_hsl()",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L67"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_generativeposter_build_svg",
+      "label": ".build_svg()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": ".build_svg()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L637"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_generativeposter_init",
+      "label": ".__init__()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": ".__init__()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L632"
     },
     {
       "id": "scripts_graphic_design_visual_engine_palettegenerator_analogous",
@@ -4124,7 +4172,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "code",
       "norm_label": ".analogous()",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -4136,7 +4184,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "code",
       "norm_label": ".complementary()",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -4148,7 +4196,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "code",
       "norm_label": ".monochromatic()",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -4160,7 +4208,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "code",
       "norm_label": ".scale()",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -4172,7 +4220,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "code",
       "norm_label": ".split_complementary()",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -4184,11 +4232,35 @@
       "_callable": true,
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "code",
       "norm_label": ".tetradic()",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L321"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_triadic",
+      "label": ".triadic()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": ".triadic()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L301"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_run_self_tests",
+      "label": "run_self_tests()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": "run_self_tests()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L744"
     },
     {
       "id": "ponytail_hooks_ponytail_config_getdefaultmode",
@@ -4333,18 +4405,6 @@
       "norm_label": "verify_math_gpqa()",
       "source_file": "scripts/official_runner_real.py",
       "source_location": "L415"
-    },
-    {
-      "id": "ponytail_hooks_ponytail_config_isshellsafe",
-      "label": "isShellSafe()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 42,
-      "community_name": "ponytail-activate.js",
-      "file_type": "code",
-      "norm_label": "isshellsafe()",
-      "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L50"
     },
     {
       "id": "scripts_graphic_design_visual_engine_iconbuilder24_cpu_neural",
@@ -12085,70 +12145,15 @@
       "source_file": "tailwindcss"
     },
     {
-      "id": "scripts_graphic_design_visual_engine",
-      "label": "graphic_design_visual_engine.py",
+      "id": "scripts_claudia_telegram_bot",
+      "label": "claudia_telegram_bot.py",
       "_origin": "ast",
       "community": 206,
-      "community_name": "run_self_tests",
+      "community_name": "claudia_telegram_bot.py",
       "file_type": "code",
-      "norm_label": "graphic_design_visual_engine.py",
-      "source_file": "scripts/graphic_design_visual_engine.py",
+      "norm_label": "claudia_telegram_bot.py",
+      "source_file": "scripts/claudia_telegram_bot.py",
       "source_location": "L1"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_302",
-      "label": "Generate triadic 3-color harmony (120\u00b0 offsets).",
-      "_origin": "ast",
-      "community": 206,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "generate triadic 3-color harmony (120\u00b0 offsets).",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L302"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_45",
-      "label": "Parse hex color (#RGB, #RGBA, #RRGGBB, #RRGGBBAA).",
-      "_origin": "ast",
-      "community": 206,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "parse hex color (#rgb, #rgba, #rrggbb, #rrggbbaa).",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L45"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_626",
-      "label": "Algorithmic generative poster generator synthesizing: - Parametric Lissajous &\u2026",
-      "_origin": "ast",
-      "community": 206,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "algorithmic generative poster generator synthesizing: - parametric lissajous &...",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L626"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_638",
-      "label": "Generate full SVG graphic poster with mathematical curves and layered depth.",
-      "_origin": "ast",
-      "community": 206,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "generate full svg graphic poster with mathematical curves and layered depth.",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L638"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_745",
-      "label": "Execute 100% deterministic test suite covering color math, WCAG contrast,\u2026",
-      "_origin": "ast",
-      "community": 206,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "execute 100% deterministic test suite covering color math, wcag contrast,...",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L745"
     },
     {
       "id": "learning_neurons_n058_migrasi_arsitektur_goblix_cinema",
@@ -12555,6 +12560,66 @@
       "source_location": "L1"
     },
     {
+      "id": "learning_neurons_n059_clean_monochrome_report_and_stru",
+      "label": "N059_clean_monochrome_report_and_stru.md",
+      "_origin": "ast",
+      "community": 219,
+      "community_name": "N059: Clean Monochrome Report and Structured Prompt Architecture",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "n059_clean_monochrome_report_and_stru.md",
+      "source_file": "learning/neurons/N059_clean_monochrome_report_and_stru.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "learning_neurons_n059_clean_monochrome_report_and_stru_akar_masalah_pencegahan_regresi_root_cause_analysis",
+      "label": "\ud83d\udd0d Akar Masalah & Pencegahan Regresi (Root Cause Analysis)",
+      "_origin": "ast",
+      "community": 219,
+      "community_name": "N059: Clean Monochrome Report and Structured Prompt Architecture",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udd0d akar masalah & pencegahan regresi (root cause analysis)",
+      "source_file": "learning/neurons/N059_clean_monochrome_report_and_stru.md",
+      "source_location": "L12"
+    },
+    {
+      "id": "learning_neurons_n059_clean_monochrome_report_and_stru_disiplin_eksekusi",
+      "label": "\ud83d\udd12 Disiplin Eksekusi",
+      "_origin": "ast",
+      "community": 219,
+      "community_name": "N059: Clean Monochrome Report and Structured Prompt Architecture",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udd12 disiplin eksekusi",
+      "source_file": "learning/neurons/N059_clean_monochrome_report_and_stru.md",
+      "source_location": "L16"
+    },
+    {
+      "id": "learning_neurons_n059_clean_monochrome_report_and_stru_inti_pembelajaran_engineering_invariant",
+      "label": "\ud83c\udfaf Inti Pembelajaran (Engineering Invariant)",
+      "_origin": "ast",
+      "community": 219,
+      "community_name": "N059: Clean Monochrome Report and Structured Prompt Architecture",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83c\udfaf inti pembelajaran (engineering invariant)",
+      "source_file": "learning/neurons/N059_clean_monochrome_report_and_stru.md",
+      "source_location": "L9"
+    },
+    {
+      "id": "learning_neurons_n059_clean_monochrome_report_and_stru_n059_clean_monochrome_report_and_structured_prompt_architecture",
+      "label": "N059: Clean Monochrome Report and Structured Prompt Architecture",
+      "_origin": "ast",
+      "community": 219,
+      "community_name": "N059: Clean Monochrome Report and Structured Prompt Architecture",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "n059: clean monochrome report and structured prompt architecture",
+      "source_file": "learning/neurons/N059_clean_monochrome_report_and_stru.md",
+      "source_location": "L1"
+    },
+    {
       "id": "ponytail_hooks_ponytail_config",
       "label": "ponytail-config.js",
       "_origin": "ast",
@@ -12597,17 +12662,6 @@
       "norm_label": "path",
       "source_file": "ponytail/hooks/ponytail-config.js",
       "source_location": "L13"
-    },
-    {
-      "id": "ponytail_hooks_ponytail_config_runtime_modes",
-      "label": "RUNTIME_MODES",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "ponytail-config.js",
-      "file_type": "code",
-      "norm_label": "runtime_modes",
-      "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L18"
     },
     {
       "id": "ponytail_hooks_ponytail_config_valid_modes",
@@ -12676,6 +12730,17 @@
       "source_location": "L26"
     },
     {
+      "id": "ponytail_hooks_ponytail_config_runtime_modes",
+      "label": "RUNTIME_MODES",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "index.js",
+      "file_type": "code",
+      "norm_label": "runtime_modes",
+      "source_file": "ponytail/hooks/ponytail-config.js",
+      "source_location": "L18"
+    },
+    {
       "id": "ponytail_pi_extension_index",
       "label": "index.js",
       "_origin": "ast",
@@ -12688,12 +12753,12 @@
     },
     {
       "id": "ponytail_pi_extension_index_default_mode_runtime_modes_getdefaultmode_getquietstartup_gethidestatus_normalizemode_normalizepersistedmode_isdeactivationcommand_writedefaultmode",
-      "label": "{\n  DEFAULT_MODE,\n  RUNTIME_MODES,\n  getDefaultMode,\n  getQuietStartup,\n  getHideStatus,\n  normalizeMode,\n  normalizePersistedMode,\n  isDeactivationCommand,\n  writeDefaultMode,\n}",
+      "label": "{\r\n  DEFAULT_MODE,\r\n  RUNTIME_MODES,\r\n  getDefaultMode,\r\n  getQuietStartup,\r\n  getHideStatus,\r\n  normalizeMode,\r\n  normalizePersistedMode,\r\n  isDeactivationCommand,\r\n  writeDefaultMode,\r\n}",
       "_origin": "ast",
       "community": 23,
       "community_name": "index.js",
       "file_type": "code",
-      "norm_label": "{\n  default_mode,\n  runtime_modes,\n  getdefaultmode,\n  getquietstartup,\n  gethidestatus,\n  normalizemode,\n  normalizepersistedmode,\n  isdeactivationcommand,\n  writedefaultmode,\n}",
+      "norm_label": "{\r\n  default_mode,\r\n  runtime_modes,\r\n  getdefaultmode,\r\n  getquietstartup,\r\n  gethidestatus,\r\n  normalizemode,\r\n  normalizepersistedmode,\r\n  isdeactivationcommand,\r\n  writedefaultmode,\r\n}",
       "source_file": "ponytail/pi-extension/index.js",
       "source_location": "L4"
     },
@@ -14824,7 +14889,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\udccb active tasks & history",
       "source_file": "memory.md",
-      "source_location": "L59"
+      "source_location": "L60"
     },
     {
       "id": "memory_claudia_neuron_memory_network",
@@ -14848,7 +14913,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\udccb prosedur pembaruan memori",
       "source_file": "memory.md",
-      "source_location": "L53"
+      "source_location": "L54"
     },
     {
       "id": "learning_neurons_n032_cloud_native_edge_infra",
@@ -15019,11 +15084,22 @@
       "source_location": "L75"
     },
     {
+      "id": "scripts_graphic_design_visual_engine",
+      "label": "graphic_design_visual_engine.py",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": "graphic_design_visual_engine.py",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L1"
+    },
+    {
       "id": "scripts_graphic_design_visual_engine_rationale_272",
       "label": "Harmonious color palette generator supporting classical color wheel (HSL) and\u2026",
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "rationale",
       "norm_label": "harmonious color palette generator supporting classical color wheel (hsl) and...",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -15034,7 +15110,7 @@
       "label": "Generate a monochromatic ramp varying in Lightness.",
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "rationale",
       "norm_label": "generate a monochromatic ramp varying in lightness.",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -15045,7 +15121,7 @@
       "label": "Generate analogous colors clustered around base hue.",
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "rationale",
       "norm_label": "generate analogous colors clustered around base hue.",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -15056,18 +15132,29 @@
       "label": "Generate complementary color pair (180\u00b0 offset).",
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "rationale",
       "norm_label": "generate complementary color pair (180\u00b0 offset).",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L296"
     },
     {
+      "id": "scripts_graphic_design_visual_engine_rationale_302",
+      "label": "Generate triadic 3-color harmony (120\u00b0 offsets).",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "generate triadic 3-color harmony (120\u00b0 offsets).",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L302"
+    },
+    {
       "id": "scripts_graphic_design_visual_engine_rationale_312",
       "label": "Generate split-complementary harmony (base + 2 colors flanking complement).",
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "rationale",
       "norm_label": "generate split-complementary harmony (base + 2 colors flanking complement).",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -15078,7 +15165,7 @@
       "label": "Generate tetradic rectangular 4-color harmony.",
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "rationale",
       "norm_label": "generate tetradic rectangular 4-color harmony.",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -15089,22 +15176,66 @@
       "label": "Generate multi-stop gradient scale interpolated in CIELAB space.",
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "rationale",
       "norm_label": "generate multi-stop gradient scale interpolated in cielab space.",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L333"
     },
     {
+      "id": "scripts_graphic_design_visual_engine_rationale_45",
+      "label": "Parse hex color (#RGB, #RGBA, #RRGGBB, #RRGGBBAA).",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "parse hex color (#rgb, #rgba, #rrggbb, #rrggbbaa).",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L45"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_626",
+      "label": "Algorithmic generative poster generator synthesizing: - Parametric Lissajous &\u2026",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "algorithmic generative poster generator synthesizing: - parametric lissajous &...",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L626"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_638",
+      "label": "Generate full SVG graphic poster with mathematical curves and layered depth.",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "generate full svg graphic poster with mathematical curves and layered depth.",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L638"
+    },
+    {
       "id": "scripts_graphic_design_visual_engine_rationale_68",
       "label": "Construct Color from HSL (H in [0, 360), S in [0, 1], L in [0, 1]).",
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "rationale",
       "norm_label": "construct color from hsl (h in [0, 360), s in [0, 1], l in [0, 1]).",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L68"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_745",
+      "label": "Execute 100% deterministic test suite covering color math, WCAG contrast,\u2026",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "execute 100% deterministic test suite covering color math, wcag contrast,...",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L745"
     },
     {
       "id": "learning_neurons_n031_modern_data_storage_pgvector",
@@ -16001,12 +16132,12 @@
     },
     {
       "id": "ponytail_hooks_ponytail_activate_clearmode_iscodex_iscopilot_setmode_writehookoutput",
-      "label": "{\n  clearMode,\n  isCodex,\n  isCopilot,\n  setMode,\n  writeHookOutput,\n}",
+      "label": "{\r\n  clearMode,\r\n  isCodex,\r\n  isCopilot,\r\n  setMode,\r\n  writeHookOutput,\r\n}",
       "_origin": "ast",
       "community": 42,
       "community_name": "ponytail-activate.js",
       "file_type": "code",
-      "norm_label": "{\n  clearmode,\n  iscodex,\n  iscopilot,\n  setmode,\n  writehookoutput,\n}",
+      "norm_label": "{\r\n  clearmode,\r\n  iscodex,\r\n  iscopilot,\r\n  setmode,\r\n  writehookoutput,\r\n}",
       "source_file": "ponytail/hooks/ponytail-activate.js",
       "source_location": "L13"
     },
@@ -16876,7 +17007,7 @@
       "file_type": "document",
       "frontmatter": {
         "name": "ponytail",
-        "description": "Forces the laziest solution that actually works, simplest, shortest, most minimal. Channels a senior dev who has seen everything: question whether the task needs to exist at all (YAGNI), reach for the standard library before custom code, native platform features before dependencies, one line before fifty. Supports intensity levels: lite, full (default), ultra. Use on ANY coding task: writing, adding, refactoring, fixing, reviewing, or designing code, and choosing libraries or dependencies. Also use whenever",
+        "description": "&gt;",
         "argument-hint": "[lite|full|ultra]",
         "license": "MIT"
       },
@@ -17638,7 +17769,7 @@
       "file_type": "document",
       "frontmatter": {
         "name": "ponytail",
-        "description": "Forces the laziest solution that actually works, simplest, shortest, most minimal. Channels a senior dev who has seen everything: question whether the task needs to exist at all (YAGNI), reach for the standard library before custom code, native platform features before dependencies, one line before fifty. Supports intensity levels: lite, full (default), ultra. Use on ANY coding task: writing, adding, refactoring, fixing, reviewing, or designing code, and choosing libraries or dependencies. Also use whenever",
+        "description": "&gt;",
         "argument-hint": "[lite|full|ultra]",
         "license": "MIT"
       },
@@ -17752,7 +17883,7 @@
       "file_type": "document",
       "frontmatter": {
         "name": "ponytail-help",
-        "description": "Quick-reference card for all ponytail modes, skills, and commands. One-shot display, not a persistent mode. Trigger: /ponytail-help, &quot;ponytail help&quot;, &quot;what ponytail commands&quot;, &quot;how do I use ponytail&quot;."
+        "description": "&gt;"
       },
       "node_kind": "page",
       "norm_label": ".agents/skills/ponytail-help/skill.md",
@@ -17948,7 +18079,7 @@
       "file_type": "document",
       "frontmatter": {
         "name": "ponytail-help",
-        "description": "Quick-reference card for all ponytail modes, skills, and commands. One-shot display, not a persistent mode. Trigger: /ponytail-help, &quot;ponytail help&quot;, &quot;what ponytail commands&quot;, &quot;how do I use ponytail&quot;."
+        "description": "&gt;"
       },
       "node_kind": "page",
       "norm_label": "ponytail/skills/ponytail-help/skill.md",
@@ -18972,7 +19103,7 @@
       "file_type": "document",
       "frontmatter": {
         "name": "ponytail-audit",
-        "description": "Whole-repo audit for over-engineering. Like ponytail-review, but scans the entire codebase instead of a diff: a ranked list of what to delete, simplify, or replace with stdlib/native equivalents. Use when the user says &quot;audit this codebase&quot;, &quot;audit for over-engineering&quot;, &quot;what can I delete from this repo&quot;, &quot;find bloat&quot;, &quot;ponytail-audit&quot;, or &quot;/ponytail-audit&quot;. One-shot report, does not apply fixes."
+        "description": "&gt;"
       },
       "node_kind": "page",
       "norm_label": ".agents/skills/ponytail-audit/skill.md",
@@ -19157,7 +19288,7 @@
       "file_type": "document",
       "frontmatter": {
         "name": "ponytail-gain",
-        "description": "Show ponytail&#x27;s measured impact as a compact scoreboard: less code, less cost, more speed, from the benchmark medians. One-shot display, not a persistent mode, and not a per-repo number. Trigger: /ponytail-gain, &quot;ponytail gain&quot;, &quot;what does ponytail save&quot;, &quot;show ponytail impact&quot;, &quot;ponytail scoreboard&quot;."
+        "description": "&gt;"
       },
       "node_kind": "page",
       "norm_label": ".agents/skills/ponytail-gain/skill.md",
@@ -19221,7 +19352,7 @@
       "file_type": "document",
       "frontmatter": {
         "name": "ponytail-review",
-        "description": "Code review focused exclusively on over-engineering. Finds what to delete: reinvented standard library, unneeded dependencies, speculative abstractions, dead flexibility. One line per finding: location, what to cut, what replaces it. Use when the user says &quot;review for over-engineering&quot;, &quot;what can we delete&quot;, &quot;is this over-engineered&quot;, &quot;simplify review&quot;, or invokes /ponytail-review. Complements correctness-focused review, this one only hunts complexity."
+        "description": "&gt;"
       },
       "node_kind": "page",
       "norm_label": ".agents/skills/ponytail-review/skill.md",
@@ -19405,7 +19536,7 @@
       "file_type": "document",
       "frontmatter": {
         "name": "ponytail-audit",
-        "description": "Whole-repo audit for over-engineering. Like ponytail-review, but scans the entire codebase instead of a diff: a ranked list of what to delete, simplify, or replace with stdlib/native equivalents. Use when the user says &quot;audit this codebase&quot;, &quot;audit for over-engineering&quot;, &quot;what can I delete from this repo&quot;, &quot;find bloat&quot;, &quot;ponytail-audit&quot;, or &quot;/ponytail-audit&quot;. One-shot report, does not apply fixes."
+        "description": "&gt;"
       },
       "node_kind": "page",
       "norm_label": "ponytail/skills/ponytail-audit/skill.md",
@@ -19469,7 +19600,7 @@
       "file_type": "document",
       "frontmatter": {
         "name": "ponytail-gain",
-        "description": "Show ponytail&#x27;s measured impact as a compact scoreboard: less code, less cost, more speed, from the benchmark medians. One-shot display, not a persistent mode, and not a per-repo number. Trigger: /ponytail-gain, &quot;ponytail gain&quot;, &quot;what does ponytail save&quot;, &quot;show ponytail impact&quot;, &quot;ponytail scoreboard&quot;."
+        "description": "&gt;"
       },
       "node_kind": "page",
       "norm_label": "ponytail/skills/ponytail-gain/skill.md",
@@ -19533,7 +19664,7 @@
       "file_type": "document",
       "frontmatter": {
         "name": "ponytail-review",
-        "description": "Code review focused exclusively on over-engineering. Finds what to delete: reinvented standard library, unneeded dependencies, speculative abstractions, dead flexibility. One line per finding: location, what to cut, what replaces it. Use when the user says &quot;review for over-engineering&quot;, &quot;what can we delete&quot;, &quot;is this over-engineered&quot;, &quot;simplify review&quot;, or invokes /ponytail-review. Complements correctness-focused review, this one only hunts complexity."
+        "description": "&gt;"
       },
       "node_kind": "page",
       "norm_label": "ponytail/skills/ponytail-review/skill.md",
@@ -19597,7 +19728,7 @@
       "file_type": "document",
       "frontmatter": {
         "name": "ponytail-debt",
-        "description": "Harvest every `ponytail:` comment in the codebase into a debt ledger, so the deliberate shortcuts and deferrals ponytail leaves behind get tracked instead of rotting into &quot;later means never&quot;. Use when the user says &quot;ponytail debt&quot;, &quot;/ponytail-debt&quot;, &quot;what did ponytail defer&quot;, &quot;list the shortcuts&quot;, &quot;ponytail ledger&quot;, or &quot;what did we mark to do later&quot;. One-shot report, changes nothing."
+        "description": "&gt;"
       },
       "node_kind": "page",
       "norm_label": ".agents/skills/ponytail-debt/skill.md",
@@ -20297,7 +20428,7 @@
       "file_type": "document",
       "frontmatter": {
         "name": "ponytail-debt",
-        "description": "Harvest every `ponytail:` comment in the codebase into a debt ledger, so the deliberate shortcuts and deferrals ponytail leaves behind get tracked instead of rotting into &quot;later means never&quot;. Use when the user says &quot;ponytail debt&quot;, &quot;/ponytail-debt&quot;, &quot;what did ponytail defer&quot;, &quot;list the shortcuts&quot;, &quot;ponytail ledger&quot;, or &quot;what did we mark to do later&quot;. One-shot report, changes nothing."
+        "description": "&gt;"
       },
       "node_kind": "page",
       "norm_label": "ponytail/skills/ponytail-debt/skill.md",
@@ -23113,6 +23244,54 @@
       "context": "call",
       "source_file": "scripts/claudia_live_watchdog.py",
       "source_location": "L247",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_claudia_telegram_bot_query_claudia_llm",
+      "target": "scripts_claudia_telegram_bot_record_telegram_training",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/claudia_telegram_bot.py",
+      "source_location": "L106",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_claudia_telegram_bot_run_claudia_bot",
+      "target": "scripts_claudia_telegram_bot_send_telegram_message",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/claudia_telegram_bot.py",
+      "source_location": "L136",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_claudia_telegram_bot_run_claudia_bot",
+      "target": "scripts_claudia_telegram_bot_send_chat_action",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/claudia_telegram_bot.py",
+      "source_location": "L147",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_claudia_telegram_bot_run_claudia_bot",
+      "target": "scripts_claudia_telegram_bot_query_claudia_llm",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/claudia_telegram_bot.py",
+      "source_location": "L148",
       "weight": 1.0
     },
     {
@@ -37512,6 +37691,50 @@
       "weight": 1.0
     },
     {
+      "source": "learning_neurons_n059_clean_monochrome_report_and_stru",
+      "target": "learning_neurons_n059_clean_monochrome_report_and_stru_n059_clean_monochrome_report_and_structured_prompt_architecture",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N059_clean_monochrome_report_and_stru.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n059_clean_monochrome_report_and_stru_n059_clean_monochrome_report_and_structured_prompt_architecture",
+      "target": "learning_neurons_n059_clean_monochrome_report_and_stru_akar_masalah_pencegahan_regresi_root_cause_analysis",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N059_clean_monochrome_report_and_stru.md",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n059_clean_monochrome_report_and_stru_n059_clean_monochrome_report_and_structured_prompt_architecture",
+      "target": "learning_neurons_n059_clean_monochrome_report_and_stru_disiplin_eksekusi",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N059_clean_monochrome_report_and_stru.md",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n059_clean_monochrome_report_and_stru_n059_clean_monochrome_report_and_structured_prompt_architecture",
+      "target": "learning_neurons_n059_clean_monochrome_report_and_stru_inti_pembelajaran_engineering_invariant",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N059_clean_monochrome_report_and_stru.md",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
       "source": "learning_playbooks_graphify_workflow",
       "target": "learning_playbooks_graphify_workflow_playbook_graphify_workflow",
       "relation": "contains",
@@ -37651,7 +37874,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "memory.md",
-      "source_location": "L53",
+      "source_location": "L54",
       "weight": 1.0
     },
     {
@@ -37662,7 +37885,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "memory.md",
-      "source_location": "L59",
+      "source_location": "L60",
       "weight": 1.0
     },
     {
@@ -39973,6 +40196,61 @@
       "confidence_score": 1.0,
       "source_file": "scripts/claudia_live_watchdog.py",
       "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_claudia_telegram_bot",
+      "target": "scripts_claudia_telegram_bot_run_claudia_bot",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/claudia_telegram_bot.py",
+      "source_location": "L113",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_claudia_telegram_bot",
+      "target": "scripts_claudia_telegram_bot_record_telegram_training",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/claudia_telegram_bot.py",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_claudia_telegram_bot",
+      "target": "scripts_claudia_telegram_bot_send_telegram_message",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/claudia_telegram_bot.py",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_claudia_telegram_bot",
+      "target": "scripts_claudia_telegram_bot_send_chat_action",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/claudia_telegram_bot.py",
+      "source_location": "L71",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_claudia_telegram_bot",
+      "target": "scripts_claudia_telegram_bot_query_claudia_llm",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/claudia_telegram_bot.py",
+      "source_location": "L77",
       "weight": 1.0
     },
     {
@@ -45097,5 +45375,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "a382f763bf01b5eeb3555989af3640cd49607465"
+  "built_at_commit": "543fa2de80a95ebebc5150ec7736a18819264c7c"
 }

@@ -1,16 +1,16 @@
 # Graph Report - GEMINI-HANAFI  (2026-08-27)
 
 ## Corpus Check
-- 289 files · ~394,367 words
+- 289 files · ~394,389 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1807 nodes · 2128 edges · 220 communities (189 shown, 31 thin omitted)
+- 1807 nodes · 2128 edges · 220 communities (190 shown, 30 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 38 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `543fa2de`
+- Built from commit: `401f1b8c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -131,9 +131,9 @@
 - fix_jellyfin_db.py
 - ImageMatrix
 - ConvolutionKernelEngine
-- ColorSpaceMath
 - run_tests
-- Any
+- image_vision_nucleus_engine.py
+- .letterbox_aspect_preserver
 - RasterToVectorTracer
 - GenerativeGraphExecutor
 - server.js
@@ -154,7 +154,7 @@
 - useGoblix
 - lib/auth.js
 - include
-- .process_tiled_convolution
+- PaletteGenerator
 - stream/[slug]/route.js
 - next.config.mjs
 - claudia_telegram_bot.py
@@ -191,7 +191,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (220 total, 31 thin omitted)
+## Communities (220 total, 30 thin omitted)
 
 ### Community 0 - "run_deterministic_tests"
 Cohesion: 0.06
@@ -352,8 +352,8 @@ Cohesion: 0.14
 Nodes (13): 1. Edge Ingress Caddyfile Blueprint (Caddy 2.8+ HTTP/3 + Security Headers + Passive Healthcheck), 1. Modern Edge Ingress & Transport Layer (Caddy 2.8+ HTTP/3 QUIC & TLS 1.3 0-RTT), 2. Multi-Stage Distroless Dockerfile Blueprint, 2. Multi-Stage Distroless Hardening & Minimal Attack Surface, 3. PM2 Zero-Downtime Cluster Blueprint (`ecosystem.config.js`), 3. Zero-Downtime Cluster Supervision & Process Lifecycle (PM2 Orchestration), 4. Linux Kernel Namespaces & cgroups v2 Sandboxing, 5. Autonomous Edge SRE & High-Availability Playbook (+5 more)
 
 ### Community 37 - "run_self_tests"
-Cohesion: 0.10
-Nodes (16): GenerativePoster, PaletteGenerator, Harmonious color palette generator supporting classical color wheel (HSL) and…, Generate a monochromatic ramp varying in Lightness., Generate analogous colors clustered around base hue., Generate complementary color pair (180° offset)., Generate triadic 3-color harmony (120° offsets)., Generate split-complementary harmony (base + 2 colors flanking complement). (+8 more)
+Cohesion: 0.18
+Nodes (8): GenerativePoster, Generate complementary color pair (180° offset)., Generate triadic 3-color harmony (120° offsets)., Parse hex color (#RGB, #RGBA, #RRGGBB, #RRGGBBAA)., Algorithmic generative poster generator synthesizing: - Parametric Lissajous &…, Generate full SVG graphic poster with mathematical curves and layered depth., Execute 100% deterministic test suite covering color math, WCAG contrast,…, run_self_tests()
 
 ### Community 38 - "Neuron N031: Modern Data Architecture & Hybrid Search (PostgreSQL 17, pgvector HNSW, Drizzle ORM, SQLite WAL)"
 Cohesion: 0.15
@@ -574,20 +574,24 @@ Cohesion: 0.83
 Nodes (3): main(), record_new_learning(), slugify()
 
 ### Community 128 - "ImageMatrix"
-Cohesion: 0.15
-Nodes (7): GeometricRescaler, ImageMatrix, Lightweight, high-performance 2D/3D pure Python pixel matrix. Layout:…, Sub-pixel Geometric Rescaling and Aspect Ratio Preserver., High-precision bilinear interpolation rescaling. Maps target pixel centers…, Scales image while strictly preserving native aspect ratio, padding the…, Safe pixel retrieval with deterministic boundary clamping. Supported border…
+Cohesion: 0.20
+Nodes (4): ImageMatrix, Lightweight, high-performance 2D/3D pure Python pixel matrix. Layout:…, Convolves an image in bounded memory tiles of tile_size x tile_size. Uses…, Safe pixel retrieval with deterministic boundary clamping. Supported border…
 
 ### Community 129 - "ConvolutionKernelEngine"
 Cohesion: 0.16
 Nodes (8): ConvolutionKernelEngine, Pure Python Spatial Convolution Engine with standard and custom kernels., Generates normalized (2k+1)x(2k+1) 2D Gaussian Kernel: G(u,v) =…, Returns standard 3x3 Sobel kernels for horizontal (Gx) and vertical (Gy)…, Returns 3x3 Sharpen kernel: center = 1 + 4*strength, orthogonal edges =…, Returns standard 3x3 discrete Laplacian second-derivative kernel., Applies 2D spatial convolution across all channels of the image matrix., Calculates Sobel Edge Gradient Magnitude M = sqrt(Gx^2 + Gy^2) and Direction…
 
-### Community 130 - "ColorSpaceMath"
-Cohesion: 0.17
-Nodes (7): ColorSpaceMath, Standard-compliant color space transformation algorithms., Weighted luminosity grayscale conversion. - BT.601 (SDTV/OpenCV default): Y =…, Converts RGB [0..255] to HSV (Hue in [0..360), Saturation in [0..1], Value in…, Converts HSV (Hue [0..360), Saturation [0..1], Value [0..1]) back to RGB…, Converts RGB [0..255] to ITU-R BT.601 YCbCr digital video standard., Converts ITU-R BT.601 YCbCr back to RGB [0..255].
+### Community 130 - "run_tests"
+Cohesion: 0.21
+Nodes (8): ColorSpaceMath, Standard-compliant color space transformation algorithms., Weighted luminosity grayscale conversion. - BT.601 (SDTV/OpenCV default): Y =…, Converts RGB [0..255] to HSV (Hue in [0..360), Saturation in [0..1], Value in…, Converts HSV (Hue [0..360), Saturation [0..1], Value [0..1]) back to RGB…, Converts RGB [0..255] to ITU-R BT.601 YCbCr digital video standard., Converts ITU-R BT.601 YCbCr back to RGB [0..255]., run_tests()
 
-### Community 131 - "run_tests"
-Cohesion: 0.50
-Nodes (8): CheckpointLoaderNode, CLIPTextEncodeNode, ComfyNode, ControlNetApplyNode, KSamplerNode, Base executable node in a generative AI visual DAG., run_tests(), VAEDecodeNode
+### Community 131 - "image_vision_nucleus_engine.py"
+Cohesion: 0.18
+Nodes (10): CheckpointLoaderNode, CLIPTextEncodeNode, ComfyNode, ControlNetApplyNode, KSamplerNode, Any, Demand-driven tile chunking pipeline for low-memory image processing. Executes…, Base executable node in a generative AI visual DAG. (+2 more)
+
+### Community 132 - ".letterbox_aspect_preserver"
+Cohesion: 0.29
+Nodes (5): GeometricRescaler, Sub-pixel Geometric Rescaling and Aspect Ratio Preserver., High-precision bilinear interpolation rescaling. Maps target pixel centers…, Scales image while strictly preserving native aspect ratio, padding the…, Maps a bounding box (x, y, w, h) from letterboxed space back to native source…
 
 ### Community 133 - "RasterToVectorTracer"
 Cohesion: 0.31
@@ -661,9 +665,9 @@ Nodes (13): dynamic, POST(), dynamic, GET(), dynamic, POST(), generateToken(), g
 Cohesion: 0.15
 Nodes (12): compilerOptions, baseUrl, paths, exclude, include, **/*.js, **/*.jsx, next-env.d.ts (+4 more)
 
-### Community 199 - ".process_tiled_convolution"
-Cohesion: 0.50
-Nodes (3): Demand-driven tile chunking pipeline for low-memory image processing. Executes…, Convolves an image in bounded memory tiles of tile_size x tile_size. Uses…, StreamingTileProcessor
+### Community 199 - "PaletteGenerator"
+Cohesion: 0.18
+Nodes (8): PaletteGenerator, Harmonious color palette generator supporting classical color wheel (HSL) and…, Generate a monochromatic ramp varying in Lightness., Generate analogous colors clustered around base hue., Generate split-complementary harmony (base + 2 colors flanking complement)., Generate tetradic rectangular 4-color harmony., Generate multi-stop gradient scale interpolated in CIELAB space., Construct Color from HSL (H in [0, 360), S in [0, 1], L in [0, 1]).
 
 ### Community 206 - "claudia_telegram_bot.py"
 Cohesion: 0.60
@@ -680,14 +684,14 @@ Nodes (4): 🔍 Akar Masalah & Pencegahan Regresi (Root Cause Analysis), 🔒 Di
 ## Knowledge Gaps
 - **757 isolated node(s):** `dynamic`, `dynamic`, `dynamic`, `dynamic`, `dynamic` (+752 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **31 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **30 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Vec2D` connect `Vec2D` to `CubicBezier`, `run_self_tests`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **Why does `run_self_tests()` connect `run_self_tests` to `IconBuilder24`, `Color`, `CubicBezier`, `Vec2D`?**
+- **Why does `run_self_tests()` connect `run_self_tests` to `Color`, `CubicBezier`, `PaletteGenerator`, `IconBuilder24`, `Vec2D`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **What connects `dynamic`, `dynamic`, `dynamic` to the rest of the system?**
   _757 weakly-connected nodes found - possible documentation gaps or missing edges._
