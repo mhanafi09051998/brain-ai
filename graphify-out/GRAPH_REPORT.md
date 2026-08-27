@@ -1,16 +1,16 @@
 # Graph Report - GEMINI-HANAFI  (2026-08-27)
 
 ## Corpus Check
-- 312 files · ~421,689 words
+- 313 files · ~422,500 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2007 nodes · 2318 edges · 252 communities (219 shown, 33 thin omitted)
+- 2016 nodes · 2326 edges · 253 communities (220 shown, 33 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 38 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `6a5f850a`
+- Built from commit: `9cb1bd68`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -192,6 +192,7 @@
 - 🎯 Core Invariants & Mathematical Framework
 - N080: Meta-Compiler Tiered JIT, Polyhedral Loop Transformations & SIMD Coalescing
 - .process_tiled_convolution
+- 🎯 Inti Pembelajaran (Engineering Invariant)
 
 ## God Nodes (most connected - your core abstractions)
 1. `Vec2D` - 25 edges
@@ -220,7 +221,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (252 total, 33 thin omitted)
+## Communities (253 total, 33 thin omitted)
 
 ### Community 0 - "run_deterministic_tests"
 Cohesion: 0.06
@@ -814,8 +815,12 @@ Nodes (9): 🎯 1. Meta-Compiler Tiered Architecture & Polyhedral Pipeline, 2.1.
 Cohesion: 0.50
 Nodes (3): Demand-driven tile chunking pipeline for low-memory image processing. Executes…, Convolves an image in bounded memory tiles of tile_size x tile_size. Uses…, StreamingTileProcessor
 
+### Community 251 - "🎯 Inti Pembelajaran (Engineering Invariant)"
+Cohesion: 0.22
+Nodes (8): 1. Struktur Top-Level Standar Dunia (Monorepo & Polyrepo), 2. Invarian Hermetic Builds & Dependency Graph, 3. Single Source of Truth (Contract-First Architecture), 4. Zero-Friction Developer Experience (DX) & 5-Minute Rule, 🔍 Akar Masalah & Pencegahan Regresi (Root Cause Analysis), 🔒 Disiplin Eksekusi (Ponytail Standard), 🎯 Inti Pembelajaran (Engineering Invariant), N081: World-Class Repository Architecture & Trunk-Based DX Engineering
+
 ## Knowledge Gaps
-- **894 isolated node(s):** `dynamic`, `dynamic`, `dynamic`, `dynamic`, `dynamic` (+889 more)
+- **900 isolated node(s):** `dynamic`, `dynamic`, `dynamic`, `dynamic`, `dynamic` (+895 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **33 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -827,7 +832,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `Color` connect `Color` to `run_self_tests`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **What connects `dynamic`, `dynamic`, `dynamic` to the rest of the system?**
-  _894 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _900 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `run_deterministic_tests` be split into smaller, more focused modules?**
   _Cohesion score 0.06259426847662142 - nodes in this community are weakly interconnected._
 - **Should `Install` be split into smaller, more focused modules?**

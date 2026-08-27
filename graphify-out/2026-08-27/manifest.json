@@ -6,9 +6,9 @@
     "semantic_hash": ""
   },
   "learning/NEURON_INDEX.json": {
-    "mtime": 1787806562.1774292,
-    "seen": 1787806570.4486742,
-    "ast_hash": "3095b7d321294b59347cd05989b0c314",
+    "mtime": 1787813217.1347215,
+    "seen": 1787813225.3556986,
+    "ast_hash": "45a0761c59778ea93431242b373b6d69",
     "semantic_hash": ""
   },
   "learning/scripts/grow_neurons.py": {
@@ -312,9 +312,9 @@
     "semantic_hash": ""
   },
   "memory.md": {
-    "mtime": 1787806562.17795,
-    "seen": 1787806570.44921,
-    "ast_hash": "8923ed8980b6b2b6af71e52d01a227be",
+    "mtime": 1787813217.1347215,
+    "seen": 1787813225.3556986,
+    "ast_hash": "c0ea86021f2d1d4d8cfc503837d9c530",
     "semantic_hash": ""
   },
   "memory/neurons/ai_engine_9router.md": {
@@ -1955,12 +1955,6 @@
     "ast_hash": "f7ad1fc9224b91ceefc8e072b1f934eb",
     "semantic_hash": ""
   },
-  "integrate_all_neurons.py": {
-    "mtime": 1787806562.066339,
-    "seen": 1787806570.4486742,
-    "ast_hash": "391c9722c8713e4826f624bd16f511d0",
-    "semantic_hash": ""
-  },
   "learning/neurons/N063_mcts_agentic_planning_self_correction.md": {
     "mtime": 1787806495.5717194,
     "seen": 1787806570.44921,
@@ -2031,6 +2025,48 @@
     "mtime": 1787806529.3186526,
     "seen": 1787806570.44921,
     "ast_hash": "748e94714f4d86f63338a17e5f876d88",
+    "semantic_hash": ""
+  },
+  "integrate_80_neurons.py": {
+    "mtime": 1787813217.044485,
+    "seen": 1787813225.3556986,
+    "ast_hash": "8fc6ee1ca5da0886226fa103919b45bc",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N075_crdt_local_first_state_sync.md": {
+    "mtime": 1787813147.0409977,
+    "seen": 1787813225.3556986,
+    "ast_hash": "cf0ea91be92e8cc476d5377375a444ef",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N076_formal_verification_z3_smt_prover.md": {
+    "mtime": 1787813196.3959708,
+    "seen": 1787813225.3556986,
+    "ast_hash": "274ebb95334a0ba86ca633611486ac1e",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N077_runtime_self_healing_pid_chaos.md": {
+    "mtime": 1787813143.246644,
+    "seen": 1787813225.3556986,
+    "ast_hash": "57281c0903cff741ba9affb5a08b5329",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N078_zero_knowledge_proofs_verifiable_compute.md": {
+    "mtime": 1787813178.845361,
+    "seen": 1787813225.3556986,
+    "ast_hash": "427c960837263b9cdd95acf671206a66",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N079_kernel_bypass_dpdk_rdma_roce.md": {
+    "mtime": 1787813152.7067027,
+    "seen": 1787813225.3556986,
+    "ast_hash": "9a1a2ab278bcf5f6800e6cb4f6d10481",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N080_meta_compiler_jit_polyhedral_vectorization.md": {
+    "mtime": 1787813186.9403787,
+    "seen": 1787813225.3556986,
+    "ast_hash": "4e0c0f4365927bd0eee1e209ab9f05d2",
     "semantic_hash": ""
   }
 }

@@ -1,8 +1,8 @@
 {
   "version": "1.2.0",
-  "updated_at": "2026-08-27 13:46:57",
-  "total_neurons": 80,
-  "total_synapses": 313,
+  "updated_at": "2026-08-27 14:04:20",
+  "total_neurons": 81,
+  "total_synapses": 318,
   "mesh_density": 0.0679,
   "neurons": [
     {
@@ -1003,6 +1003,20 @@
       ],
       "synapse_count": 4,
       "size_bytes": 13849
+    },
+    {
+      "id": "N081",
+      "label": "Neuron N081: World-Class Repository Architecture & Trunk-Based DX Engineering",
+      "file": "N081_world_class_repository_architecture.md",
+      "connections": [
+        "N001",
+        "N004",
+        "N030",
+        "N036",
+        "N054"
+      ],
+      "synapse_count": 5,
+      "size_bytes": 3890
     }
   ]
 }
