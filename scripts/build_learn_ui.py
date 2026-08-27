@@ -89,7 +89,7 @@ html = f"""<!DOCTYPE html>
         </div>
         <div>
           <h1 class="font-bold text-base tracking-tight text-white flex items-center gap-2">
-            Claudia Max
+            Claudia Ultra
             <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 font-mono font-semibold border border-emerald-500/30">v5.0</span>
           </h1>
           <p class="text-xs text-slate-400 font-medium">Gahar Inovasi Teknologi</p>

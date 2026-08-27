@@ -140,7 +140,7 @@ app.get('/api/status', (req, res) => {
     status: 'online',
     app: 'Claudia Code Official Gateway',
     version: '5.0.0 Apex',
-    engine: 'Claudia Max 4.0 Quantum Apex',
+    engine: 'Claudia Ultra Quantum Apex',
     oauthPortal: 'https://claudiacode.zolu.my.id/login',
     installWindows: 'irm https://get.zolu.my.id/win | iex',
     installUnix: 'curl -fsSL https://get.zolu.my.id | bash',

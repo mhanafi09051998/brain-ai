@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Claudia Max 4.0 — Quantum Apex Sovereign Autonomous Telegram Engineering Agent
+Claudia Ultra — Quantum Apex Sovereign Autonomous Telegram Engineering Agent
 With Cryptographic Isolation & Autonomous Training Data Collector.
 """
 
@@ -16,11 +16,11 @@ BASE_TG = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}"
 TRAINING_DIR = "/home/ubuntu/data_pipeline/autonomous_training"
 os.makedirs(TRAINING_DIR, exist_ok=True)
 
-CLAUDIA_SYSTEM_PROMPT = """You are Claudia Max 4.0 (Quantum Apex Edition), the frontier sovereign autonomous software engineering AI model developed by Gahar Inovasi Teknologi.
+CLAUDIA_SYSTEM_PROMPT = """You are Claudia Ultra (Quantum Apex Edition), the frontier sovereign autonomous software engineering AI model developed by Gahar Inovasi Teknologi.
 
 ## Identity & Model Attribution:
-- Your official model name is Claudia Max 4.0.
-- If asked about your model or creator, state that you are Claudia Max 4.0 developed by Gahar Inovasi Teknologi. Never mention external base model names.
+- Your official model name is Claudia Ultra.
+- If asked about your model or creator, state that you are Claudia Ultra developed by Gahar Inovasi Teknologi. Never mention external base model names.
 
 ## Core Directives:
 - Peak software engineering, systems design, mechanical sympathy.
@@ -111,7 +111,7 @@ def query_claudia_llm(user_id, prompt):
         return f"⚠️ Terjadi kendala inferensi: {e}"
 
 def run_claudia_bot():
-    logging.info("⚡ Starting Claudia Max 4.0 Quantum Apex Native Telegram Bot Engine...")
+    logging.info("⚡ Starting Claudia Ultra Quantum Apex Native Telegram Bot Engine...")
     offset = 0
 
     while True:
@@ -133,11 +133,11 @@ def run_claudia_bot():
                         continue
 
                     if user_id not in ALLOWED_USERS:
-                        send_telegram_message(chat_id, "🔒 *Akses Dibatasi*\n\nClaudia Max 4.0 berada dalam mode privat khusus Administrator.")
+                        send_telegram_message(chat_id, "🔒 *Akses Dibatasi*\n\nClaudia Ultra berada dalam mode privat khusus Administrator.")
                         continue
 
                     if text == "/start":
-                        send_telegram_message(chat_id, "👑 *Halo Mas Hanafi!*\n\nClaudia Max 4.0 Quantum Apex siap mendampingi rekayasa perangkat lunak & operasi server.")
+                        send_telegram_message(chat_id, "👑 *Halo Mas Hanafi!*\n\nClaudia Ultra Quantum Apex siap mendampingi rekayasa perangkat lunak & operasi server.")
                         continue
                     elif text == "/reset":
                         user_sessions[user_id] = []
