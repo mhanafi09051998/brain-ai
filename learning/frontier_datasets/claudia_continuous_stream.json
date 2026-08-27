@@ -1,98 +1,96 @@
 {
   "status": "LIVE_STREAMING_ACTIVE",
-  "last_tick": "2026-08-27 14:26:37",
-  "batch_cycle": 377,
-  "total_problems_solved": 23765,
-  "accuracy_rate": 99.18,
+  "last_tick": "2026-08-27 14:29:29",
+  "batch_cycle": 463,
+  "total_problems_solved": 26838,
+  "accuracy_rate": 99.21,
   "updated_keys": [
-    "business_workflows",
-    "legal",
-    "agentic_coding_deepswe",
-    "knowledge_work"
+    "computer_use",
+    "health"
   ],
   "metrics": {
     "terminal_coding": {
-      "score": 50.54,
-      "growth": 1.04,
-      "solved": 1743,
+      "score": 50.96,
+      "growth": 1.46,
+      "solved": 1913,
       "unit": "%"
     },
     "knowledge_work": {
-      "score": 2041,
-      "growth": 99,
-      "solved": 1642,
+      "score": 2084,
+      "growth": 142,
+      "solved": 1878,
       "unit": "Elo"
     },
     "novel_problem_solving": {
-      "score": 39.6,
-      "growth": 1.4,
-      "solved": 1483,
+      "score": 40.08,
+      "growth": 1.88,
+      "solved": 1730,
       "unit": "%"
     },
     "agentic_search": {
-      "score": 96.07,
-      "growth": 1.47,
-      "solved": 2072,
+      "score": 96.51,
+      "growth": 1.91,
+      "solved": 2233,
       "unit": "%"
     },
     "multidisciplinary_no_tools": {
-      "score": 62.82,
-      "growth": 1.42,
-      "solved": 1555,
+      "score": 63.28,
+      "growth": 1.88,
+      "solved": 1777,
       "unit": "%"
     },
     "multidisciplinary_with_tools": {
-      "score": 73.52,
-      "growth": 1.42,
-      "solved": 2001,
+      "score": 74.08,
+      "growth": 1.98,
+      "solved": 2226,
       "unit": "%"
     },
     "computer_use": {
-      "score": 79.38,
-      "growth": 1.58,
-      "solved": 1789,
+      "score": 80.1,
+      "growth": 2.3,
+      "solved": 2102,
       "unit": "%"
     },
     "agentic_coding_deepswe": {
-      "score": 79.19,
-      "growth": 0.99,
-      "solved": 2132,
+      "score": 79.53,
+      "growth": 1.33,
+      "solved": 2323,
       "unit": "%"
     },
     "agentic_coding_frontier": {
-      "score": 60.51,
-      "growth": 1.11,
-      "solved": 1779,
+      "score": 61.04,
+      "growth": 1.64,
+      "solved": 2012,
       "unit": "%"
     },
     "business_workflows": {
-      "score": 34.02,
-      "growth": 1.02,
-      "solved": 1278,
+      "score": 34.49,
+      "growth": 1.49,
+      "solved": 1515,
       "unit": "%"
     },
     "legal": {
-      "score": 19.18,
-      "growth": 1.38,
-      "solved": 1276,
+      "score": 19.45,
+      "growth": 1.65,
+      "solved": 1403,
       "unit": "%"
     },
     "health": {
-      "score": 72.59,
-      "growth": 1.19,
-      "solved": 1563,
+      "score": 73.02,
+      "growth": 1.62,
+      "solved": 1770,
       "unit": "%"
     },
     "biology_hard": {
-      "score": 57.83,
-      "growth": 1.63,
-      "solved": 1610,
+      "score": 58.27,
+      "growth": 2.07,
+      "solved": 1868,
       "unit": "%"
     },
     "biology_human": {
-      "score": 96.53,
-      "growth": 1.13,
-      "solved": 1842,
+      "score": 97.02,
+      "growth": 1.62,
+      "solved": 2088,
       "unit": "%"
     }
   }
