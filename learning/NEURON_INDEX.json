@@ -1,8 +1,8 @@
 {
   "version": "1.2.0",
-  "updated_at": "2026-08-27 14:04:20",
-  "total_neurons": 81,
-  "total_synapses": 318,
+  "updated_at": "2026-08-27 14:07:21",
+  "total_neurons": 82,
+  "total_synapses": 324,
   "mesh_density": 0.0679,
   "neurons": [
     {
@@ -1017,6 +1017,21 @@
       ],
       "synapse_count": 5,
       "size_bytes": 3890
+    },
+    {
+      "id": "N082",
+      "label": "Neuron N082: 2026 Next-Gen Frontier Benchmark Matrix (12 Parameter Evaluasi AI)",
+      "file": "N082_nextgen_frontier_benchmark_matrix.md",
+      "connections": [
+        "N001",
+        "N004",
+        "N016",
+        "N018",
+        "N019",
+        "N081"
+      ],
+      "synapse_count": 6,
+      "size_bytes": 4857
     }
   ]
 }

@@ -6,9 +6,9 @@
     "semantic_hash": ""
   },
   "learning/NEURON_INDEX.json": {
-    "mtime": 1787814260.5417228,
-    "seen": 1787814270.0065162,
-    "ast_hash": "52b35ca2160fc9348b9f67a77d1503b5",
+    "mtime": 1787814441.519925,
+    "seen": 1787814449.8853319,
+    "ast_hash": "dfbd2c180447cb6c76f907685bc006c4",
     "semantic_hash": ""
   },
   "learning/scripts/grow_neurons.py": {
@@ -312,9 +312,9 @@
     "semantic_hash": ""
   },
   "memory.md": {
-    "mtime": 1787814260.5417228,
-    "seen": 1787814270.0065162,
-    "ast_hash": "278f89d251e9a36d308033b31a9a0c84",
+    "mtime": 1787814441.519925,
+    "seen": 1787814449.8853319,
+    "ast_hash": "3bb957f94f5bc1445a24cfa349f6025b",
     "semantic_hash": ""
   },
   "memory/neurons/ai_engine_9router.md": {
@@ -2067,6 +2067,18 @@
     "mtime": 1787814260.5392177,
     "seen": 1787814270.0065162,
     "ast_hash": "ee073d7b3d0cbc9ad59c2f9473537760",
+    "semantic_hash": ""
+  },
+  "integrate_n082.py": {
+    "mtime": 1787814441.4232693,
+    "seen": 1787814449.8853319,
+    "ast_hash": "18e645162d70cd33c531c02ff96ced83",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N082_nextgen_frontier_benchmark_matrix.md": {
+    "mtime": 1787814441.519393,
+    "seen": 1787814449.8853319,
+    "ast_hash": "35bf576bce7a5d5f3c0cc1ef5fd829d3",
     "semantic_hash": ""
   }
 }
