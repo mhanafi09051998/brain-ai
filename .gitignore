@@ -13,6 +13,12 @@ credentials.json
 secrets.json
 master.key
 
+# Web Applications & Projects (Excluded from Intelligence Repo)
+training-room/
+muhammadfatoni-web/
+sol-zolu-vault/
+claudia-ultra-project/
+
 # Databases & SQLite
 *.sqlite
 *.sqlite3
@@ -20,7 +26,7 @@ master.key
 *.sqlite-wal
 *.sqlite-shm
 *.db
-training_room.sqlite
+data/
 
 # Node & Next.js
 node_modules/
