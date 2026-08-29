@@ -198,11 +198,11 @@ def run_claudia_bot():
 • Investor Name : <code>Muhammad Hanafi</code>
 • Status Akun   : <code>Verified Tier-1 Investor</code>
 
-<b>PORSI MODAL & PROFIT SHARING</b>
-• Porsi Modal   : <code>100.00% ($10,000.00 Deposit)</code>
-• Profit Sharing: <code>80% Investor / 20% Engine Performance</code>
-• Akumulasi PnL : <code>+$160.68 Net Yield</code>
-• Hak Penarikan : <code>Instant Withdrawal On-Chain</code>
+<b>PORSI MODAL & ALOKASI PROFIT</b>
+• Porsi Modal    : <code>100.00% ($10,000.00 / Total Vault)</code>
+• Skema Alokasi  : <code>Proporsional Murni (Pro-Rata Sesuai Modal)</code>
+• Akumulasi PnL  : <code>+$160.68 Net Yield</code>
+• Hak Penarikan  : <code>Instant Withdrawal On-Chain</code>
 
 ──────────────────────────
 <i>Claudia Ultra Engine • Investor Governance</i>""", parse_mode="HTML")

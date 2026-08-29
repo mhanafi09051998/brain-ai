@@ -131,11 +131,11 @@ def get_user_slash_msg(user_id=***CHAT_ID_REMOVED***, deposit_usd=10000.00, net_
 • Investor Name : <code>Muhammad Hanafi</code>
 • Status Akun   : <code>Verified Tier-1 Investor</code>
 
-<b>PORSI MODAL & PROFIT SHARING</b>
-• Porsi Modal   : <code>100.00% (${deposit_usd:,.2f} Deposit)</code>
-• Profit Sharing: <code>80% Investor / 20% Engine Performance</code>
-• Akumulasi PnL : <code>+${net_yield_usd:,.2f} Net Yield</code>
-• Hak Penarikan : <code>Instant Withdrawal On-Chain</code>
+<b>PORSI MODAL & ALOKASI PROFIT</b>
+• Porsi Modal    : <code>100.00% (${deposit_usd:,.2f} / Total Vault)</code>
+• Skema Alokasi  : <code>Proporsional Murni (Pro-Rata Sesuai Modal)</code>
+• Akumulasi PnL  : <code>+${net_yield_usd:,.2f} Net Yield</code>
+• Hak Penarikan  : <code>Instant Withdrawal On-Chain</code>
 
 ──────────────────────────
 <i>Claudia Ultra Engine • Investor Governance</i>"""
