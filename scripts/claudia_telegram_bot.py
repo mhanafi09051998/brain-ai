@@ -132,11 +132,16 @@ def run_claudia_bot():
                     if not text:
                         continue
 
-                    if user_id not in ALLOWED_USERS:
-                        send_telegram_message(chat_id, "🔒 *Akses Dibatasi*\n\nClaudia Ultra berada dalam mode privat khusus Administrator.")
-                        continue
+                    chat_type = msg.get("chat", {}).get("type", "private")
+                    user_name = msg.get("from", {}).get("first_name", "Investor")
+                    if msg.get("from", {}).get("last_name"):
+                        user_name += f" {msg.get('from', {}).get('last_name')}"
+                    
+                    raw_cmd = text.split()[0].lower() if text else ""
+                    cmd = raw_cmd.split("@")[0]
 
-                    if text in ["/start", "/help"]:
+                    # Public informational commands available in both group and DM
+                    if cmd in ["/start", "/help"]:
                         send_telegram_message(chat_id, """<b>ZOLU ASSET VAULT — CONTROL TERMINAL</b>
 <code>Engine : Claudia Ultra Quantitative Router</code>
 ──────────────────────────
@@ -151,7 +156,7 @@ def run_claudia_bot():
 ──────────────────────────
 <i>Gahar Inovasi Teknologi • Quantitative Asset Management</i>""", parse_mode="HTML")
                         continue
-                    elif text == "/saldo":
+                    elif cmd == "/saldo":
                         send_telegram_message(chat_id, f"""<b>ZOLU ASSET VAULT — SALDO & KEUNTUNGAN</b>
 <code>Updated : {time.strftime('%d %b %Y, %H:%M WIB')}</code>
 ──────────────────────────
@@ -169,7 +174,7 @@ def run_claudia_bot():
 ──────────────────────────
 <i>Claudia Ultra Engine • Transparency Verified</i>""", parse_mode="HTML")
                         continue
-                    elif text == "/status":
+                    elif cmd == "/status":
                         send_telegram_message(chat_id, f"""<b>ZOLU ASSET VAULT — STATUS ENGINE & HARGA</b>
 <code>Updated : {time.strftime('%d %b %Y, %H:%M WIB')}</code>
 ──────────────────────────
@@ -188,14 +193,14 @@ def run_claudia_bot():
 ──────────────────────────
 <i>Claudia Ultra Engine • Live Telemetry</i>""", parse_mode="HTML")
                         continue
-                    elif text == "/user":
+                    elif cmd == "/user":
                         send_telegram_message(chat_id, f"""<b>ZOLU ASSET VAULT — INVESTOR SHARING</b>
 <code>Updated : {time.strftime('%d %b %Y, %H:%M WIB')}</code>
 ──────────────────────────
 
 <b>PROFIL INVESTOR</b>
 • Telegram ID   : <code>{user_id}</code>
-• Investor Name : <code>Muhammad Hanafi</code>
+• Investor Name : <code>{user_name}</code>
 • Status Akun   : <code>Verified Tier-1 Investor</code>
 
 <b>PORSI MODAL & ALOKASI PROFIT</b>
@@ -207,10 +212,16 @@ def run_claudia_bot():
 ──────────────────────────
 <i>Claudia Ultra Engine • Investor Governance</i>""", parse_mode="HTML")
                         continue
-                    elif text == "/report":
+                    elif cmd == "/report":
                         from scripts.send_hourly_investor_report import generate_hourly_report
                         report_msg = generate_hourly_report()
                         send_telegram_message(chat_id, report_msg, parse_mode="HTML")
+                        continue
+
+                    # Direct LLM Chatting restricted to allowed admins
+                    if user_id not in ALLOWED_USERS:
+                        if chat_type == "private":
+                            send_telegram_message(chat_id, "🔒 *Akses Dibatasi*\n\nClaudia Ultra berada dalam mode privat khusus Administrator.")
                         continue
 
                     send_chat_action(chat_id, "typing")
