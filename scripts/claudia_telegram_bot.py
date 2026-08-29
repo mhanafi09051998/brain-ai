@@ -22,7 +22,7 @@ if hasattr(sys.stderr, 'reconfigure'):
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 
-TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN") or "***TELEGRAM_TOKEN_REMOVED***"
+TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 ALLOWED_USERS = [***CHAT_ID_REMOVED***]
 ROUTER_URL = os.environ.get("ROUTER_URL", "http://127.0.0.1:3040/v1/chat/completions")
 ROUTER_API_KEY = os.environ.get("ROUTER_API_KEY") or os.environ.get("OPENAI_API_KEY", "")
