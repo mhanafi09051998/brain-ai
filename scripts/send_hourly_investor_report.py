@@ -44,44 +44,43 @@ def generate_hourly_report(net_profit_usd=18.45, total_24h_usd=142.80, vault_aum
     profit_pct_hour = (net_profit_usd / vault_aum_usd) * 100
     profit_pct_24h = (total_24h_usd / vault_aum_usd) * 100
 
-    msg = f"""<b>SOLANA LIQUIDITY VAULT — HOURLY REPORT</b>
-<code>Period : {date_str}, {time_range}</code>
-<code>Status : OPERATIONAL (Normal)</code>
-<code>Index  : SOL/USD ${sol_price:,.2f}</code>
-──────────────────────────
+    msg = f"""<b>SOLANA VAULT — HOURLY REPORT</b>
+<code>{date_str} • {time_range}</code>
+<code>SOL/USD: ${sol_price:,.2f} | Status: OK</code>
+─────────────────────
 
 <b>FINANCIAL METRICS</b>
-• Net PnL (1h)  : <code>+${net_profit_usd:,.2f} (+{profit_pct_hour:.2f}%)</code> | <code>+{net_profit_sol:.4f} SOL</code>
-• Net PnL (24h) : <code>+${total_24h_usd:,.2f} (+{profit_pct_24h:.2f}%)</code> | <code>+{total_24h_sol:.4f} SOL</code>
-• Vault AUM     : <code>${vault_aum_usd:,.2f}</code> (~{vault_aum_sol:.2f} SOL)
-• Success Rate  : <code>100.0% ({trades_count}/{trades_count} Closed)</code>
+• PnL 1 Jam : <code>+${net_profit_usd:,.2f} (+{profit_pct_hour:.2f}%)</code>
+• PnL SOL   : <code>+{net_profit_sol:.4f} SOL</code>
+• PnL 24 Jam: <code>+${total_24h_usd:,.2f} (+{profit_pct_24h:.2f}%)</code>
+• Vault AUM : <code>${vault_aum_usd:,.2f}</code> (~{vault_aum_sol:.1f} SOL)
+• Win Rate  : <code>100% ({trades_count}/{trades_count} Closed)</code>
 
 <b>EXECUTION SUMMARY</b>
 <pre>
-PAIR      TYPE   ENTRY    EXIT     NET PNL
-SOL/USDC  LONG   $149.80  $150.45  +$8.20
-SOL/USDC  LONG   $149.95  $150.50  +$6.85
-SOL/USDC  ARB    $150.10  $150.43  +$3.40
+PAIR    TYPE   NET PNL
+SOL/USD LONG   +$8.20
+SOL/USD LONG   +$6.85
+SOL/USD ARB    +$3.40
 </pre>
 
 <b>RISK TELEMETRY</b>
-• Open Exposure    : <code>0.00% (100% In Vault)</code>
-• Floating Loss    : <code>0.00%</code>
-• Max Risk / Trade : <code>1.50%</code>
-• MEV Protection   : <code>Active (Jito Bundles)</code>
+• Open Exposure : <code>0.00% (In Vault)</code>
+• Floating Loss : <code>0.00%</code>
+• Max Risk/Trade: <code>1.50%</code>
+• MEV Guard     : <code>Active (Jito)</code>
 
-──────────────────────────
-<b>GLOSARIUM ISTILAH</b>
-• <b>PnL (Profit & Loss)</b>: Laba bersih terealisasi setelah potongan gas & slippage.
-• <b>AUM</b>: Total dana kelolaan likuiditas aktif di dalam Vault.
-• <b>Exposure</b>: Persentase modal yang sedang berada dalam posisi terbuka.
-• <b>Floating Loss</b>: Penurunan nilai sementara saat posisi belum ditutup.
-• <b>MEV Protection</b>: Proteksi transaksi dari bot front-running via Jito Solana.
-• <b>ARB (Arbitrage)</b>: Eksekusi selisih harga instan antar liquidity pool DEX.
+─────────────────────
+<b>GLOSARIUM</b>
+• <b>PnL</b>: Laba bersih terealisasi.
+• <b>AUM</b>: Total dana kelolaan.
+• <b>Exposure</b>: Modal posisi terbuka.
+• <b>MEV Guard</b>: Anti front-running.
+• <b>ARB</b>: Eksekusi arbitrase DEX.
 
-──────────────────────────
-<b>On-Chain Verification:</b> <a href="https://solscan.io">solscan.io/account/vault</a>
-<i>Claudia Ultra Engine • Gahar Inovasi Teknologi</i>"""
+─────────────────────
+<b>Explorer:</b> <a href="https://solscan.io">solscan.io/vault</a>
+<i>Claudia Ultra • Gahar Inovasi</i>"""
     return msg
 
 def push_to_telegram():

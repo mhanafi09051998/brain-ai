@@ -142,75 +142,77 @@ def run_claudia_bot():
 
                     # Public informational commands available in both group and DM
                     if cmd in ["/start", "/help"]:
-                        send_telegram_message(chat_id, """<b>ZOLU ASSET VAULT — CONTROL TERMINAL</b>
-<code>Engine : Claudia Ultra Quantitative Router</code>
-──────────────────────────
+                        send_telegram_message(chat_id, """<b>ZOLU ASSET VAULT</b>
+<code>Claudia Ultra Terminal</code>
+─────────────────────
 
 <b>DAFTAR PERINTAH</b>
-• <code>/saldo</code>  : Lihat ringkasan saldo modal dan keuntungan.
-• <code>/status</code> : Lihat status engine dan rentang harga aktif.
-• <code>/user</code>   : Lihat sharing porsi modal & profit investor.
-• <code>/report</code> : Laporan berkala kinerja likuiditas per jam.
-• <code>/help</code>   : Menampilkan daftar panduan perintah terminal.
+• <code>/saldo</code> : Saldo & total profit
+• <code>/status</code>: Status & harga aktif
+• <code>/user</code>  : Porsi modal investor
+• <code>/report</code>: Laporan per jam
+• <code>/help</code>  : Panduan terminal
 
-──────────────────────────
-<i>Gahar Inovasi Teknologi • Quantitative Asset Management</i>""", parse_mode="HTML")
+─────────────────────
+<i>Gahar Inovasi Teknologi</i>""", parse_mode="HTML")
                         continue
                     elif cmd == "/saldo":
-                        send_telegram_message(chat_id, f"""<b>ZOLU ASSET VAULT — SALDO & KEUNTUNGAN</b>
-<code>Updated : {time.strftime('%d %b %Y, %H:%M WIB')}</code>
-──────────────────────────
+                        send_telegram_message(chat_id, f"""<b>VAULT — SALDO & PROFIT</b>
+<code>Updated : {time.strftime('%d %b, %H:%M WIB')}</code>
+─────────────────────
 
-<b>RINGKASAN MODAL (AUM)</b>
-• Modal Awal    : <code>$10,000.00</code>
-• Nilai Vault   : <code>$10,160.68</code> (~67.62 SOL)
-• Total Profit  : <code>+$160.68 (+1.61%)</code>
+<b>RINGKASAN MODAL</b>
+• Modal Awal : <code>$10,000.00</code>
+• Nilai Vault: <code>$10,160.68</code>
+  (~67.62 SOL)
+• Total PnL  : <code>+$160.68 (+1.61%)</code>
 
 <b>DISTRIBUSI ASET</b>
-• USDC (Cash)   : <code>$8,500.00 (83.66%)</code>
-• SOL (Asset)   : <code>11.05 SOL (~$1,660.68)</code>
-• Open Exposure : <code>0.00% (Cash Settled)</code>
+• USDC (Cash): <code>$8,500.00 (83.7%)</code>
+• SOL (Asset): <code>11.05 SOL ($1,660)</code>
+• Exposure   : <code>0.00% (Settled)</code>
 
-──────────────────────────
-<i>Claudia Ultra Engine • Transparency Verified</i>""", parse_mode="HTML")
+─────────────────────
+<i>Claudia Ultra Engine</i>""", parse_mode="HTML")
                         continue
                     elif cmd == "/status":
-                        send_telegram_message(chat_id, f"""<b>ZOLU ASSET VAULT — STATUS ENGINE & HARGA</b>
-<code>Updated : {time.strftime('%d %b %Y, %H:%M WIB')}</code>
-──────────────────────────
+                        send_telegram_message(chat_id, f"""<b>VAULT — STATUS ENGINE</b>
+<code>Updated : {time.strftime('%d %b, %H:%M WIB')}</code>
+─────────────────────
 
 <b>STATUS OPERASIONAL</b>
-• Engine State   : <code>ONLINE (Radar Active)</code>
-• Target Pair    : <code>SOL/USDC (15m Timeframe)</code>
-• Live Index     : <code>SOL/USD $150.25</code>
+• Engine: <code>ONLINE (Radar)</code>
+• Pair  : <code>SOL/USDC (15m)</code>
+• Index : <code>SOL $150.25</code>
 
 <b>RENTANG HARGA AKTIF</b>
-• Support / FVG  : <code>$149.20 - $149.80</code>
-• Resistance     : <code>$151.80 - $152.40</code>
-• Trend Baseline : <code>Bullish (EMA20 > EMA50)</code>
-• Risk Lock      : <code>Max 1.5% Risk per Entry</code>
+• Support   : <code>$149.20-$149.80</code>
+• Resistance: <code>$151.80-$152.40</code>
+• Trend     : <code>Bullish (EMA20>50)</code>
+• Risk Lock : <code>Max 1.5%/Trade</code>
 
-──────────────────────────
-<i>Claudia Ultra Engine • Live Telemetry</i>""", parse_mode="HTML")
+─────────────────────
+<i>Claudia Ultra Telemetry</i>""", parse_mode="HTML")
                         continue
                     elif cmd == "/user":
-                        send_telegram_message(chat_id, f"""<b>ZOLU ASSET VAULT — INVESTOR SHARING</b>
-<code>Updated : {time.strftime('%d %b %Y, %H:%M WIB')}</code>
-──────────────────────────
+                        send_telegram_message(chat_id, f"""<b>VAULT — INVESTOR INFO</b>
+<code>Updated : {time.strftime('%d %b, %H:%M WIB')}</code>
+─────────────────────
 
 <b>PROFIL INVESTOR</b>
-• Telegram ID   : <code>{user_id}</code>
-• Investor Name : <code>{user_name}</code>
-• Status Akun   : <code>Verified Tier-1 Investor</code>
+• ID   : <code>{user_id}</code>
+• Nama : <code>{user_name}</code>
+• Akun : <code>Tier-1 Investor</code>
 
-<b>PORSI MODAL & ALOKASI PROFIT</b>
-• Porsi Modal    : <code>100.00% ($10,000.00 / Total Vault)</code>
-• Skema Alokasi  : <code>Proporsional Murni (Pro-Rata Sesuai Modal)</code>
-• Akumulasi PnL  : <code>+$160.68 Net Yield</code>
-• Hak Penarikan  : <code>Instant Withdrawal On-Chain</code>
+<b>PORSI & ALOKASI</b>
+• Porsi Modal : <code>100.00%</code>
+• Deposit     : <code>$10,000.00</code>
+• Skema       : <code>Pro-Rata Modal</code>
+• Total Yield : <code>+$160.68</code>
+• Penarikan   : <code>Instant On-Chain</code>
 
-──────────────────────────
-<i>Claudia Ultra Engine • Investor Governance</i>""", parse_mode="HTML")
+─────────────────────
+<i>Claudia Ultra Governance</i>""", parse_mode="HTML")
                         continue
                     elif cmd == "/report":
                         from scripts.send_hourly_investor_report import generate_hourly_report
