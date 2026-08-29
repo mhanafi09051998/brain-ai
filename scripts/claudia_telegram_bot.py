@@ -201,32 +201,35 @@ def run_claudia_bot():
 <i>Gahar Inovasi Teknologi</i>""")
                         continue
                     elif cmd == "/saldo":
-                        sol_price = fetch_live_sol_price()
-                        rate = 16250
-                        vault_aum = 10160
-                        initial_usd = 10000
-                        pnl_usd = vault_aum - initial_usd
-                        pnl_idr = pnl_usd * rate
-                        vault_idr = vault_aum * rate
+                        rate = 17717.16
+                        initial_usd = 931.53
                         initial_idr = initial_usd * rate
-                        vault_sol = int(round(vault_aum / sol_price))
-                        send_telegram_message(chat_id, f"""<b>VAULT — SALDO & PROFIT</b>
-<code>Updated : {time.strftime('%d %b, %H:%M WIB')}</code>
-─────────────────────
-
-<b>RINGKASAN MODAL</b>
-• Modal Awal : <code>${initial_usd:,} (Rp {initial_idr:,})</code>
-• Nilai Vault: <code>${vault_aum:,} (Rp {vault_idr:,})</code>
-  (~{vault_sol} SOL)
-• Total PnL  : <code>+${pnl_usd:,} (Rp {pnl_idr:,})</code>
-
-<b>DISTRIBUSI ASET</b>
-• USDC (Kas) : <code>$8.500 (84%)</code>
-• SOL (Aset) : <code>11 SOL ($1.660)</code>
-• Exposure   : <code>0% (Settled)</code>
-
-─────────────────────
-<i>Claudia Ultra Engine</i>""".replace(",", "."))
+                        current_usd = 901.31
+                        current_idr = current_usd * rate
+                        profit_usd = 1.5155
+                        profit_idr = profit_usd * rate
+                        gas_sol = 4.4982
+                        saldo_msg = f"""💼 <b>RINGKASAN SALDO VAULT</b>\n━━━━━━━━━━━━━━━━━━━━\n""" \
+                                    f"""🌱 <b>Modal Awal (Initial Deposit):</b>\n""" \
+                                    f"""${initial_usd:.2f} USD\n""" \
+                                    f"""(≈ Rp {initial_idr:,.3f})\n\n""" \
+                                    f"""💰 <b>Modal Pokok Aktif (Current Equity):</b>\n""" \
+                                    f"""${current_usd:.2f} USD\n""" \
+                                    f"""(≈ Rp {current_idr:,.2f})\n\n""" \
+                                    f"""✅ <b>Total Keuntungan Bersih (100% Milik Anda):</b>\n""" \
+                                    f"""<b>+${profit_usd:.4f} USD</b>\n""" \
+                                    f"""(≈ <b>Rp {profit_idr:,.2f}</b>)\n\n""" \
+                                    f"""⛽ <b>Cadangan Gas Fee:</b> {gas_sol:.4f} SOL\n""" \
+                                    f"""━━━━━━━━━━━━━━━━━━━━"""
+                        # Convert to Indonesian number format (, -> . and . -> ,)
+                        parts = saldo_msg.split("(≈ Rp ")
+                        formatted_parts = [parts[0]]
+                        for p in parts[1:]:
+                            rp_val, rest = p.split(")", 1)
+                            # format Indonesian thousand . and decimal ,
+                            formatted_val = rp_val.replace(",", "X").replace(".", ",").replace("X", ".")
+                            formatted_parts.append(formatted_val + ")" + rest)
+                        send_telegram_message(chat_id, "".join(formatted_parts))
                         continue
                     elif cmd == "/status":
                         sol_price = int(round(fetch_live_sol_price()))
