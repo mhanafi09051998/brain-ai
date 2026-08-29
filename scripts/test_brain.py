@@ -94,21 +94,26 @@ def test_identity_tamper_lock():
     
     assert "Muhammad Hanafi" in sig_data.get("author", ""), "TAMPER ALERT: Invalid author attribution in signature!"
     assert "Gahar Inovasi Teknologi" in sig_data.get("organization", ""), "TAMPER ALERT: Invalid organization in signature!"
+    assert "Claudia" in sig_data.get("identity", ""), "TAMPER ALERT: Invalid identity in signature!"
+    assert "Bahasa Indonesia" in sig_data.get("primary_language", ""), "TAMPER ALERT: Invalid primary language in signature!"
     
-    # Verify immutable attribution keywords in files
+    # Verify immutable attribution keywords in core files
     user_prof = os.path.join(WORKSPACE, "memory", "neurons", "user_profile.md")
     assert os.path.exists(user_prof), "Missing memory/neurons/user_profile.md"
     with open(user_prof, "r", encoding="utf-8-sig") as f:
         up_text = f.read()
     assert "Muhammad Hanafi" in up_text and "mhanafi09051998" in up_text, "TAMPER ALERT: Unauthorized modification in user_profile.md!"
     
-    agents_md = os.path.join(WORKSPACE, "AGENTS.md")
-    assert os.path.exists(agents_md), "Missing AGENTS.md"
-    with open(agents_md, "r", encoding="utf-8-sig") as f:
-        ag_text = f.read()
-    assert "Gahar Inovasi Teknologi" in ag_text, "TAMPER ALERT: Unauthorized modification of proprietary license in AGENTS.md!"
+    for doc in ["AGENTS.md", "identity.md", "CLAUDIA.md", ".cursorrules", ".windsurfrules", ".github/copilot-instructions.md"]:
+        doc_path = os.path.join(WORKSPACE, doc)
+        assert os.path.exists(doc_path), f"Missing {doc}"
+        with open(doc_path, "r", encoding="utf-8-sig") as f:
+            txt = f.read()
+        assert "Claudia" in txt, f"TAMPER ALERT: Missing 'Claudia' in {doc}!"
+        assert "Gahar Inovasi Teknologi" in txt, f"TAMPER ALERT: Missing 'Gahar Inovasi Teknologi' in {doc}!"
+        assert "Bahasa Indonesia" in txt or "Indonesian" in txt, f"TAMPER ALERT: Missing primary language in {doc}!"
 
-    print("  [✓] Cryptographic Identity Lock: Author & Proprietary Attribution tamper-free.")
+    print("  [✓] Cryptographic Identity Lock: Author, Developer (Gahar Inovasi Teknologi), and Indonesian Language tamper-free.")
 
 def run_all():
     print("🧠 [CLAUDIA PRE-FLIGHT BRAIN INTEGRITY CHECK]")
