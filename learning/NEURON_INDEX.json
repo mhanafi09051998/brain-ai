@@ -1,9 +1,9 @@
 {
   "version": "1.2.0",
-  "updated_at": "2026-08-29 10:03:15",
-  "total_neurons": 88,
-  "total_synapses": 352,
-  "mesh_density": 0.046,
+  "updated_at": "2026-08-29 10:09:42",
+  "total_neurons": 94,
+  "total_synapses": 380,
+  "mesh_density": 0.0435,
   "neurons": [
     {
       "id": "N001",
@@ -1114,6 +1114,88 @@
       ],
       "synapse_count": 6,
       "size_bytes": 3410
+    },
+    {
+      "id": "N089",
+      "label": "Neuron N089: Cellular Automata, Fractal Geometry & Higher-Order Spatial Induction",
+      "file": "N089_cellular_automata_fractal_induction.md",
+      "connections": [
+        "N001",
+        "N009",
+        "N060",
+        "N083",
+        "N082"
+      ],
+      "synapse_count": 5,
+      "size_bytes": 3350
+    },
+    {
+      "id": "N090",
+      "label": "Neuron N090: International Arbitration, Cross-Border Statutory Law & Regulatory Compliance",
+      "file": "N090_international_arbitration_crossborder_law.md",
+      "connections": [
+        "N001",
+        "N012",
+        "N084",
+        "N082"
+      ],
+      "synapse_count": 4,
+      "size_bytes": 3240
+    },
+    {
+      "id": "N091",
+      "label": "Neuron N091: Enterprise ERP Event-Sourcing & Distributed SAGA Choreography",
+      "file": "N091_enterprise_erp_event_sourcing_saga.md",
+      "connections": [
+        "N010",
+        "N031",
+        "N068",
+        "N085",
+        "N082"
+      ],
+      "synapse_count": 5,
+      "size_bytes": 3420
+    },
+    {
+      "id": "N092",
+      "label": "Neuron N092: Allosteric Enzyme Kinetics & Molecular Flux Dynamics",
+      "file": "N092_allosteric_enzyme_kinetics_molecular_flux.md",
+      "connections": [
+        "N001",
+        "N040",
+        "N086",
+        "N082"
+      ],
+      "synapse_count": 4,
+      "size_bytes": 3310
+    },
+    {
+      "id": "N093",
+      "label": "Neuron N093: Cross-Domain First-Principles Deductive Synthesis",
+      "file": "N093_cross_domain_first_principles_deductive_synthesis.md",
+      "connections": [
+        "N001",
+        "N017",
+        "N040",
+        "N076",
+        "N082"
+      ],
+      "synapse_count": 5,
+      "size_bytes": 3480
+    },
+    {
+      "id": "N094",
+      "label": "Neuron N094: Headless Terminal eBPF & Concurrency Core-Dump Debugging",
+      "file": "N094_headless_terminal_ebpf_debugging.md",
+      "connections": [
+        "N002",
+        "N011",
+        "N034",
+        "N088",
+        "N082"
+      ],
+      "synapse_count": 5,
+      "size_bytes": 3390
     }
   ]
 }

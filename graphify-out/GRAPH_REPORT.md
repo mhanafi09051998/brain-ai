@@ -1,16 +1,16 @@
 # Graph Report - GEMINI-HANAFI  (2026-08-29)
 
 ## Corpus Check
-- 291 files · ~403,751 words
+- 297 files · ~405,994 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2050 nodes · 2376 edges · 240 communities (207 shown, 33 thin omitted)
+- 2092 nodes · 2412 edges · 246 communities (213 shown, 33 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 38 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `611fda82`
+- Built from commit: `8de69beb`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -148,6 +148,12 @@
 - 🎯 Invarian Inti (Core Invariants)
 - 🎯 Invarian Inti (Core Invariants)
 - 🎯 Invarian Inti (Core Invariants)
+- 🎯 Invarian Inti (Core Invariants)
+- 🎯 Invarian Inti (Core Invariants)
+- 🎯 Invarian Inti (Core Invariants)
+- 🎯 Invarian Inti (Core Invariants)
+- 🎯 Invarian Inti (Core Invariants)
+- 🎯 Invarian Inti (Core Invariants)
 - app.js
 - manifest.json
 - StrategicSWOTNucleusEngine
@@ -232,7 +238,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (240 total, 33 thin omitted)
+## Communities (246 total, 33 thin omitted)
 
 ### Community 0 - "run_deterministic_tests"
 Cohesion: 0.06
@@ -480,7 +486,7 @@ Nodes (7): Configure Default Mode, Deactivate, Levels, More, Ponytail Help, Skil
 
 ### Community 57 - "⚡ CLAUDIA ULTRA (2026 World Frontier Edition)"
 Cohesion: 0.17
-Nodes (11): 🌌 1. Filosofi Rekayasa Inti: *The Minimality Ladder*, 🧠 2. Cognitive Neural Mesh (88 Master Neurons Matrix), 📊 3. 2026 Frontier Benchmark Matrix (Claudia Ultra vs SOTA), 🏆 4. Hasil & Pencapaian Pelatihan Otonom (Empirical Training Milestones), 🚀 5. Cara Menjalankan & Mengkloning Kecerdasan Claudia, 🔬 A. Topologi Jaringan Kognitif (Neural Mesh Metrics), *Autonomous Principal AI Engineer & Quantitative Hedge Fund Intelligence*, 📈 B. Hasil Evaluasi & Benchmark Otonom (+3 more)
+Nodes (11): 🌌 1. Filosofi Rekayasa Inti: *The Minimality Ladder*, 🧠 2. Cognitive Neural Mesh (94 Master Neurons Matrix), 📊 3. 2026 Frontier Benchmark Matrix (Claudia Ultra vs SOTA), 🏆 4. Hasil & Pencapaian Pelatihan Otonom (Empirical Training Milestones), 🚀 5. Cara Menjalankan & Mengkloning Kecerdasan Claudia, 🔬 A. Topologi Jaringan Kognitif (Neural Mesh Metrics), *Autonomous Principal AI Engineer & Quantitative Hedge Fund Intelligence*, 📈 B. Hasil Evaluasi & Benchmark Otonom (+3 more)
 
 ### Community 58 - "test_brain.py"
 Cohesion: 0.46
@@ -682,6 +688,30 @@ Nodes (6): 1. Spatial Coordinate Normalization & Visual Grounding, 2. State-Acti
 Cohesion: 0.29
 Nodes (6): 1. Root-Cause Single-Point Patch Invariant, 2. Zero Speculative Abstractions (The Strict Ponytail Invariant), 3. Automated Invariant Assertion Synthesis, 💻 Algoritma Deterministik (Pure Python Implementation), 🎯 Invarian Inti (Core Invariants), Neuron N088: DeepSWE AST Patch Minimality & Zero-Overengineering Oracle
 
+### Community 155 - "🎯 Invarian Inti (Core Invariants)"
+Cohesion: 0.29
+Nodes (6): 1. Rekursi Fraktal & Hierarki Multi-Skala (Self-Similarity), 2. 2D Cellular Automata Step Simulation, 3. Spatial Topology & Pathfinding Invariants, 💻 Algoritma Deterministik (Pure Python Implementation), 🎯 Invarian Inti (Core Invariants), Neuron N089: Cellular Automata, Fractal Geometry & Higher-Order Spatial Induction
+
+### Community 156 - "🎯 Invarian Inti (Core Invariants)"
+Cohesion: 0.29
+Nodes (6): 1. Arbitrase Komersial Internasional (UNCITRAL / SIAC / ICC), 2. Conflict of Laws & Dépeçage, 3. Kepatuhan Regulasi AI & Data Global (EU AI Act, GDPR, UU PDP), 💻 Algoritma Deterministik (Pure Python Implementation), 🎯 Invarian Inti (Core Invariants), Neuron N090: International Arbitration, Cross-Border Statutory Law & Regulatory Compliance
+
+### Community 157 - "🎯 Invarian Inti (Core Invariants)"
+Cohesion: 0.29
+Nodes (6): 1. Immutable Event Sourcing & CQRS Balance Sheet, 2. SAGA Choreography vs Orchestration Hybrid, 3. Asynchronous ERP Reconciliation (SAP/NetSuite/Odoo API Standards), 💻 Algoritma Deterministik (Pure Python Implementation), 🎯 Invarian Inti (Core Invariants), Neuron N091: Enterprise ERP Event-Sourcing & Distributed SAGA Choreography
+
+### Community 158 - "🎯 Invarian Inti (Core Invariants)"
+Cohesion: 0.29
+Nodes (6): 1. Kinetika Enzim Allosterik & Hill Equation, 2. Metabolic Flux Analysis & Stoichiometric Conservation, 3. Protein Folding Thermodynamics & Ramachandran Invariants, 💻 Algoritma Deterministik (Pure Python Implementation), 🎯 Invarian Inti (Core Invariants), Neuron N092: Allosteric Enzyme Kinetics & Molecular Flux Dynamics
+
+### Community 159 - "🎯 Invarian Inti (Core Invariants)"
+Cohesion: 0.29
+Nodes (6): 1. Penalaran Aksiomatis & Reduksi Prinsip Pertama (First-Principles), 2. Teori Bilangan Aljabar & Geometri Diferensial, 3. Ekonomi Makro Stokastik & Game Theory, 💻 Algoritma Deterministik (Pure Python Implementation), 🎯 Invarian Inti (Core Invariants), Neuron N093: Cross-Domain First-Principles Deductive Synthesis
+
+### Community 160 - "🎯 Invarian Inti (Core Invariants)"
+Cohesion: 0.29
+Nodes (6): 1. Headless Non-Interactive Terminal Scripting, 2. eBPF Kernel Probing & System Call Tracing, 3. GDB Batch Core Dump & Deadlock Analysis, 💻 Algoritma Deterministik (Pure Python Implementation), 🎯 Invarian Inti (Core Invariants), Neuron N094: Headless Terminal eBPF & Concurrency Core-Dump Debugging
+
 ### Community 161 - "app.js"
 Cohesion: 0.11
 Nodes (33): checkAuthSession(), clearSearch(), fetchMovies(), fetchServerWatchProgress(), formatTime(), getLocalProgress(), getToken(), handleLogout() (+25 more)
@@ -875,7 +905,7 @@ Cohesion: 0.12
 Nodes (15): 10. Legal — **Legal Agent Benchmark, Held-out**, 11. Health — **HealthBench Professional**, 12. Biology — **BioMysteryBench**, 1. Agentic Terminal Coding — **Frontier-Bench v0.1**, 2. Knowledge Work — **GDPval-AA v2**, 3. Novel Problem-Solving — **ARC-AGI-3**, 4. Agentic Search — **BrowseComp**, 5. Multidisciplinary Reasoning — **Humanity's Last Exam** (+7 more)
 
 ## Knowledge Gaps
-- **943 isolated node(s):** `dynamic`, `dynamic`, `dynamic`, `dynamic`, `dynamic` (+938 more)
+- **967 isolated node(s):** `dynamic`, `dynamic`, `dynamic`, `dynamic`, `dynamic` (+962 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **33 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -889,7 +919,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `RasterToVectorTracer` connect `RasterToVectorTracer` to `image_vision_nucleus_engine.py`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **What connects `dynamic`, `dynamic`, `dynamic` to the rest of the system?**
-  _943 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _967 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `run_deterministic_tests` be split into smaller, more focused modules?**
   _Cohesion score 0.06259426847662142 - nodes in this community are weakly interconnected._
 - **Should `CubicBezier` be split into smaller, more focused modules?**

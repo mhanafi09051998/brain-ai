@@ -6,9 +6,9 @@
     "semantic_hash": ""
   },
   "learning/NEURON_INDEX.json": {
-    "mtime": 1787972595.7132864,
-    "seen": 1787972637.4911635,
-    "ast_hash": "224ca2428e77ff14b25550fde1bc83aa",
+    "mtime": 1787972982.2265217,
+    "seen": 1787973059.2772524,
+    "ast_hash": "1dbf6d339b6aae35ea8d7b670a6807bf",
     "semantic_hash": ""
   },
   "learning/scripts/grow_neurons.py": {
@@ -312,9 +312,9 @@
     "semantic_hash": ""
   },
   "memory.md": {
-    "mtime": 1787972601.8950405,
-    "seen": 1787972637.4916842,
-    "ast_hash": "a643edde9071d8936ed2519f2583a27f",
+    "mtime": 1787972997.0270696,
+    "seen": 1787973059.2772524,
+    "ast_hash": "3a753eb6690a39f99714c24c175745c8",
     "semantic_hash": ""
   },
   "memory/neurons/ai_engine_9router.md": {
@@ -522,9 +522,9 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1787972617.5419104,
-    "seen": 1787972637.4916842,
-    "ast_hash": "06677928826bae86a571807c2696c5a0",
+    "mtime": 1787973025.1971343,
+    "seen": 1787973059.2772524,
+    "ast_hash": "fa913c0c0d42de5b3d939de6ed2a0167",
     "semantic_hash": ""
   },
   "scripts/auto_sync_github.py": {
@@ -1854,9 +1854,9 @@
     "semantic_hash": ""
   },
   "learning/frontier_datasets/claudia_continuous_stream.json": {
-    "mtime": 1787972620.968737,
-    "seen": 1787972637.4911635,
-    "ast_hash": "923b11febc31b344eae95aeb7f104d31",
+    "mtime": 1787973039.0462022,
+    "seen": 1787973059.2772524,
+    "ast_hash": "bb964bb249f003396ba64f927702c7fc",
     "semantic_hash": ""
   },
   "learning/neurons/N083_arc_agi_spatial_inductive_reasoning.md": {
@@ -1893,6 +1893,42 @@
     "mtime": 1787972584.920777,
     "seen": 1787972637.4916842,
     "ast_hash": "30417fab6589e7adc7a86884d8c738fb",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N089_cellular_automata_fractal_induction.md": {
+    "mtime": 1787972948.0842998,
+    "seen": 1787973059.2772524,
+    "ast_hash": "32a2e612ec99eb8dbe4dcc9ca0329610",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N090_international_arbitration_crossborder_law.md": {
+    "mtime": 1787972952.8043036,
+    "seen": 1787973059.2772524,
+    "ast_hash": "44edf3d24a1afd99949f7ad63c17c6d9",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N091_enterprise_erp_event_sourcing_saga.md": {
+    "mtime": 1787972958.633152,
+    "seen": 1787973059.2772524,
+    "ast_hash": "3cb5090dfe55f645b5e6ada737ad48da",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N092_allosteric_enzyme_kinetics_molecular_flux.md": {
+    "mtime": 1787972964.729386,
+    "seen": 1787973059.2772524,
+    "ast_hash": "b8be1a4d1d1a3426889835c401bac332",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N093_cross_domain_first_principles_deductive_synthesis.md": {
+    "mtime": 1787972969.5263734,
+    "seen": 1787973059.2772524,
+    "ast_hash": "9d3c16fefb0e299102999395ef52b748",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N094_headless_terminal_ebpf_debugging.md": {
+    "mtime": 1787972974.783317,
+    "seen": 1787973059.2772524,
+    "ast_hash": "e5fae89f8afadf2708341445a1edac4f",
     "semantic_hash": ""
   }
 }

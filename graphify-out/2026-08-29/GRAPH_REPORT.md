@@ -1,22 +1,22 @@
 # Graph Report - GEMINI-HANAFI  (2026-08-29)
 
 ## Corpus Check
-- 285 files · ~401,339 words
+- 291 files · ~403,751 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2008 nodes · 2340 edges · 231 communities (197 shown, 34 thin omitted)
+- 2050 nodes · 2376 edges · 240 communities (207 shown, 33 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 38 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `993492bc`
+- Built from commit: `611fda82`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - run_deterministic_tests
-- Install
+- README.es.md
 - Neuron N020: Autonomous Cross-Session Memory & Resilient Checkpoint Continuity
 - CubicBezier
 - ponytail/package.json
@@ -128,17 +128,26 @@
 - user_profile.md
 - vps_infrastructure.md
 - ponytail-statusline.sh script
-- .process_tiled_convolution
+- ponytail/README.md
 - fix_jellyfin_db.py
 - copilot-instructions.md
 - ImageMatrix
 - ConvolutionKernelEngine
-- ColorSpaceMath
 - run_tests
-- Any
+- image_vision_nucleus_engine.py
+- .letterbox_aspect_preserver
 - RasterToVectorTracer
 - GenerativeGraphExecutor
+- Install
 - server.js
+- Instalación
+- README.ko.md
+- 🎯 Invarian Inti (Core Invariants)
+- 🎯 Invarian Inti (Core Invariants)
+- 🎯 Invarian Inti (Core Invariants)
+- 🎯 Invarian Inti (Core Invariants)
+- 🎯 Invarian Inti (Core Invariants)
+- 🎯 Invarian Inti (Core Invariants)
 - app.js
 - manifest.json
 - StrategicSWOTNucleusEngine
@@ -223,15 +232,15 @@
 ## Import Cycles
 - None detected.
 
-## Communities (231 total, 34 thin omitted)
+## Communities (240 total, 33 thin omitted)
 
 ### Community 0 - "run_deterministic_tests"
 Cohesion: 0.06
 Nodes (32): ArchitectureDecisionRecordManager, C4Element, C4ModelGenerator, C4Relation, CapacityInput, CapacityOutput, ConsistentHashRing, OpenAPIContractValidator (+24 more)
 
-### Community 1 - "Install"
-Cohesion: 0.04
-Nodes (42): Ponytail, lazy senior dev mode, Antes / después, Antigravity CLI, Claude Code, CodeWhale, Codex, Comandos, Cómo funciona (+34 more)
+### Community 1 - "README.es.md"
+Cohesion: 0.17
+Nodes (10): Ponytail, lazy senior dev mode, Antes / después, Comandos, Cómo funciona, Desarrollo, FAQ, Historial de estrellas, Licencia (+2 more)
 
 ### Community 2 - "Neuron N020: Autonomous Cross-Session Memory & Resilient Checkpoint Continuity"
 Cohesion: 0.25
@@ -246,8 +255,8 @@ Cohesion: 0.05
 Nodes (40): author, name, url, bugs, url, description, exports, ./plugin (+32 more)
 
 ### Community 5 - "Install"
-Cohesion: 0.07
-Nodes (25): Ponytail, lazy senior dev mode, Antigravity CLI, Before / after, Claude Code, CodeWhale, Codex, Commands, Development (+17 more)
+Cohesion: 0.13
+Nodes (15): Antigravity CLI, Claude Code, CodeWhale, Codex, Devin CLI, Gemini CLI, GitHub Copilot CLI, Hermes Agent (+7 more)
 
 ### Community 6 - "MultiHopEngine"
 Cohesion: 0.10
@@ -471,7 +480,7 @@ Nodes (7): Configure Default Mode, Deactivate, Levels, More, Ponytail Help, Skil
 
 ### Community 57 - "⚡ CLAUDIA ULTRA (2026 World Frontier Edition)"
 Cohesion: 0.17
-Nodes (11): 🌌 1. Filosofi Rekayasa Inti: *The Minimality Ladder*, 🧠 2. Cognitive Neural Mesh (82 Master Neurons Matrix), 📊 3. 2026 Frontier Benchmark Matrix (Claudia Ultra vs SOTA), 🏆 4. Hasil & Pencapaian Pelatihan Otonom (Empirical Training Milestones), 🚀 5. Cara Menjalankan & Mengkloning Kecerdasan Claudia, 🔬 A. Topologi Jaringan Kognitif (Neural Mesh Metrics), *Autonomous Principal AI Engineer & Quantitative Hedge Fund Intelligence*, 📈 B. Hasil Evaluasi & Benchmark Otonom (+3 more)
+Nodes (11): 🌌 1. Filosofi Rekayasa Inti: *The Minimality Ladder*, 🧠 2. Cognitive Neural Mesh (88 Master Neurons Matrix), 📊 3. 2026 Frontier Benchmark Matrix (Claudia Ultra vs SOTA), 🏆 4. Hasil & Pencapaian Pelatihan Otonom (Empirical Training Milestones), 🚀 5. Cara Menjalankan & Mengkloning Kecerdasan Claudia, 🔬 A. Topologi Jaringan Kognitif (Neural Mesh Metrics), *Autonomous Principal AI Engineer & Quantitative Hedge Fund Intelligence*, 📈 B. Hasil Evaluasi & Benchmark Otonom (+3 more)
 
 ### Community 58 - "test_brain.py"
 Cohesion: 0.46
@@ -605,33 +614,73 @@ Nodes (3): fetch_tmdb_poster(), main(), search_apibay()
 Cohesion: 0.83
 Nodes (3): main(), record_new_learning(), slugify()
 
-### Community 113 - ".process_tiled_convolution"
-Cohesion: 0.50
-Nodes (3): Demand-driven tile chunking pipeline for low-memory image processing. Executes…, Convolves an image in bounded memory tiles of tile_size x tile_size. Uses…, StreamingTileProcessor
+### Community 113 - "ponytail/README.md"
+Cohesion: 0.17
+Nodes (10): Ponytail, lazy senior dev mode, Before / after, Commands, Development, FAQ, How it works, License, Numbers (+2 more)
 
 ### Community 128 - "ImageMatrix"
-Cohesion: 0.15
-Nodes (7): GeometricRescaler, ImageMatrix, Lightweight, high-performance 2D/3D pure Python pixel matrix. Layout:…, Sub-pixel Geometric Rescaling and Aspect Ratio Preserver., High-precision bilinear interpolation rescaling. Maps target pixel centers…, Scales image while strictly preserving native aspect ratio, padding the…, Safe pixel retrieval with deterministic boundary clamping. Supported border…
+Cohesion: 0.20
+Nodes (4): ImageMatrix, Lightweight, high-performance 2D/3D pure Python pixel matrix. Layout:…, Convolves an image in bounded memory tiles of tile_size x tile_size. Uses…, Safe pixel retrieval with deterministic boundary clamping. Supported border…
 
 ### Community 129 - "ConvolutionKernelEngine"
 Cohesion: 0.16
 Nodes (8): ConvolutionKernelEngine, Pure Python Spatial Convolution Engine with standard and custom kernels., Generates normalized (2k+1)x(2k+1) 2D Gaussian Kernel: G(u,v) =…, Returns standard 3x3 Sobel kernels for horizontal (Gx) and vertical (Gy)…, Returns 3x3 Sharpen kernel: center = 1 + 4*strength, orthogonal edges =…, Returns standard 3x3 discrete Laplacian second-derivative kernel., Applies 2D spatial convolution across all channels of the image matrix., Calculates Sobel Edge Gradient Magnitude M = sqrt(Gx^2 + Gy^2) and Direction…
 
-### Community 130 - "ColorSpaceMath"
-Cohesion: 0.17
-Nodes (7): ColorSpaceMath, Standard-compliant color space transformation algorithms., Weighted luminosity grayscale conversion. - BT.601 (SDTV/OpenCV default): Y =…, Converts RGB [0..255] to HSV (Hue in [0..360), Saturation in [0..1], Value in…, Converts HSV (Hue [0..360), Saturation [0..1], Value [0..1]) back to RGB…, Converts RGB [0..255] to ITU-R BT.601 YCbCr digital video standard., Converts ITU-R BT.601 YCbCr back to RGB [0..255].
+### Community 130 - "run_tests"
+Cohesion: 0.21
+Nodes (8): ColorSpaceMath, Standard-compliant color space transformation algorithms., Weighted luminosity grayscale conversion. - BT.601 (SDTV/OpenCV default): Y =…, Converts RGB [0..255] to HSV (Hue in [0..360), Saturation in [0..1], Value in…, Converts HSV (Hue [0..360), Saturation [0..1], Value [0..1]) back to RGB…, Converts RGB [0..255] to ITU-R BT.601 YCbCr digital video standard., Converts ITU-R BT.601 YCbCr back to RGB [0..255]., run_tests()
 
-### Community 131 - "run_tests"
-Cohesion: 0.50
-Nodes (8): CheckpointLoaderNode, CLIPTextEncodeNode, ComfyNode, ControlNetApplyNode, KSamplerNode, Base executable node in a generative AI visual DAG., run_tests(), VAEDecodeNode
+### Community 131 - "image_vision_nucleus_engine.py"
+Cohesion: 0.18
+Nodes (10): CheckpointLoaderNode, CLIPTextEncodeNode, ComfyNode, ControlNetApplyNode, KSamplerNode, Any, Demand-driven tile chunking pipeline for low-memory image processing. Executes…, Base executable node in a generative AI visual DAG. (+2 more)
+
+### Community 132 - ".letterbox_aspect_preserver"
+Cohesion: 0.29
+Nodes (5): GeometricRescaler, Sub-pixel Geometric Rescaling and Aspect Ratio Preserver., High-precision bilinear interpolation rescaling. Maps target pixel centers…, Scales image while strictly preserving native aspect ratio, padding the…, Maps a bounding box (x, y, w, h) from letterboxed space back to native source…
 
 ### Community 133 - "RasterToVectorTracer"
 Cohesion: 0.31
 Nodes (5): RasterToVectorTracer, Converts raster mask contours to simplified vector polygons & SVG paths. Uses…, Ramer-Douglas-Peucker (RDP) algorithm for polyline vertex decimation., Simple boundary walking detector that extracts perimeter polygons from binary…, Generates standard SVG vector XML code from a raster mask.
 
+### Community 140 - "Install"
+Cohesion: 0.17
+Nodes (12): Antigravity CLI, Claude Code, CodeWhale, Codex, Devin CLI, Gemini CLI, GitHub Copilot CLI, Install (+4 more)
+
 ### Community 146 - "server.js"
 Cohesion: 0.09
 Nodes (31): fs, getMoviesDB(), { getUsersDB, saveUsersDB, hashPassword, generateToken, getAuthUser }, http, MIME_TYPES, MOVIES_FILE, normalizeMovie(), parseJSONBody() (+23 more)
+
+### Community 147 - "Instalación"
+Cohesion: 0.18
+Nodes (11): Antigravity CLI, Claude Code, CodeWhale, Codex, Devin CLI, Gemini CLI, GitHub Copilot CLI, Instalación (+3 more)
+
+### Community 148 - "README.ko.md"
+Cohesion: 0.20
+Nodes (9): Before / after, Commands, Development, FAQ, How it works, License, Numbers, Sponsors (+1 more)
+
+### Community 149 - "🎯 Invarian Inti (Core Invariants)"
+Cohesion: 0.29
+Nodes (6): 1. Dekomposisi Objek Spasial (Connected-Component Labeling & Topology), 2. Domain-Specific Language (DSL) Program Induction, 3. Cellular Automata & Constraint Propagation, 💻 Algoritma Deterministik (Pure Python Implementation), 🎯 Invarian Inti (Core Invariants), Neuron N083: ARC-AGI-3 Spatial Inductive Reasoning & DSL Program Synthesis
+
+### Community 150 - "🎯 Invarian Inti (Core Invariants)"
+Cohesion: 0.29
+Nodes (6): 1. Dekomposisi Klausul Kontrak (Risk Allocation & Indemnity Lattice), 2. Hierarki Hukum Positif & Statutory Precedence, 3. Automated Legal Risk Matrix & Redlining Logic, 💻 Algoritma Deterministik (Pure Python Implementation), 🎯 Invarian Inti (Core Invariants), Neuron N084: Enterprise Legal Synthesis & Statutory Compliance Engine
+
+### Community 151 - "🎯 Invarian Inti (Core Invariants)"
+Cohesion: 0.29
+Nodes (6): 1. Finite State Machine (FSM) & Idempotent SAGA Execution, 2. Backoff, Jitter & Circuit Breaker Invariants, 3. Reconciliator & Eventual Consistency Loop, 💻 Algoritma Deterministik (Pure Python Implementation), 🎯 Invarian Inti (Core Invariants), Neuron N085: Autonomous Business Workflow & SAGA Orchestration Engine
+
+### Community 152 - "🎯 Invarian Inti (Core Invariants)"
+Cohesion: 0.29
+Nodes (6): 1. Bayesian Clinical Diagnostic Invariants, 2. Pharmacokinetics & Drug Interaction Invariants, 3. Molecular Biology & Genetic Pathways, 💻 Algoritma Deterministik (Pure Python Implementation), 🎯 Invarian Inti (Core Invariants), Neuron N086: Biomedical Clinical Diagnosis & Molecular Pathway Invariants
+
+### Community 153 - "🎯 Invarian Inti (Core Invariants)"
+Cohesion: 0.29
+Nodes (6): 1. Spatial Coordinate Normalization & Visual Grounding, 2. State-Action Loop & Visual Verification (Look-Before-Leap), 3. Agentic Search & Multi-Source Synthesis (BrowseComp), 💻 Algoritma Deterministik (Pure Python Implementation), 🎯 Invarian Inti (Core Invariants), Neuron N087: Multimodal OSWorld Computer Use & Agentic Search Engine
+
+### Community 154 - "🎯 Invarian Inti (Core Invariants)"
+Cohesion: 0.29
+Nodes (6): 1. Root-Cause Single-Point Patch Invariant, 2. Zero Speculative Abstractions (The Strict Ponytail Invariant), 3. Automated Invariant Assertion Synthesis, 💻 Algoritma Deterministik (Pure Python Implementation), 🎯 Invarian Inti (Core Invariants), Neuron N088: DeepSWE AST Patch Minimality & Zero-Overengineering Oracle
 
 ### Community 161 - "app.js"
 Cohesion: 0.11
@@ -826,24 +875,24 @@ Cohesion: 0.12
 Nodes (15): 10. Legal — **Legal Agent Benchmark, Held-out**, 11. Health — **HealthBench Professional**, 12. Biology — **BioMysteryBench**, 1. Agentic Terminal Coding — **Frontier-Bench v0.1**, 2. Knowledge Work — **GDPval-AA v2**, 3. Novel Problem-Solving — **ARC-AGI-3**, 4. Agentic Search — **BrowseComp**, 5. Multidisciplinary Reasoning — **Humanity's Last Exam** (+7 more)
 
 ## Knowledge Gaps
-- **919 isolated node(s):** `dynamic`, `dynamic`, `dynamic`, `dynamic`, `dynamic` (+914 more)
+- **943 isolated node(s):** `dynamic`, `dynamic`, `dynamic`, `dynamic`, `dynamic` (+938 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **34 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **33 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Color` connect `Color` to `run_self_tests`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **Why does `CubicBezier` connect `CubicBezier` to `run_self_tests`?**
+- **Why does `run_tests()` connect `run_tests` to `ImageMatrix`, `ConvolutionKernelEngine`, `image_vision_nucleus_engine.py`, `.letterbox_aspect_preserver`, `RasterToVectorTracer`, `GenerativeGraphExecutor`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
-- **Why does `Vec2D` connect `Vec2D` to `CubicBezier`, `run_self_tests`?**
+- **Why does `Color` connect `Color` to `run_self_tests`?**
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
+- **Why does `RasterToVectorTracer` connect `RasterToVectorTracer` to `image_vision_nucleus_engine.py`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **What connects `dynamic`, `dynamic`, `dynamic` to the rest of the system?**
-  _919 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _943 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `run_deterministic_tests` be split into smaller, more focused modules?**
   _Cohesion score 0.06259426847662142 - nodes in this community are weakly interconnected._
-- **Should `Install` be split into smaller, more focused modules?**
-  _Cohesion score 0.044444444444444446 - nodes in this community are weakly interconnected._
 - **Should `CubicBezier` be split into smaller, more focused modules?**
   _Cohesion score 0.11067193675889328 - nodes in this community are weakly interconnected._
+- **Should `ponytail/package.json` be split into smaller, more focused modules?**
+  _Cohesion score 0.05365853658536585 - nodes in this community are weakly interconnected._
