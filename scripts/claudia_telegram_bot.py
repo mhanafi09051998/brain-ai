@@ -10,10 +10,10 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(me
 
 TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 ALLOWED_USERS = [***CHAT_ID_REMOVED***]
-ROUTER_URL = "http://127.0.0.1:3040/v1/chat/completions"
-ROUTER_API_KEY = os.environ['OPENAI_API_KEY']
+ROUTER_URL = os.environ.get("ROUTER_URL", "http://127.0.0.1:3040/v1/chat/completions")
+ROUTER_API_KEY = os.environ.get("ROUTER_API_KEY") or os.environ.get("OPENAI_API_KEY", "")
 BASE_TG = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}"
-TRAINING_DIR = "/home/ubuntu/data_pipeline/autonomous_training"
+TRAINING_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "learning", "telegram_traces")
 os.makedirs(TRAINING_DIR, exist_ok=True)
 
 CLAUDIA_SYSTEM_PROMPT = """You are Claudia Ultra (Quantum Apex Edition), the frontier sovereign autonomous software engineering AI model developed by Gahar Inovasi Teknologi.
@@ -206,6 +206,11 @@ def run_claudia_bot():
 
 ──────────────────────────
 <i>Claudia Ultra Engine • Investor Governance</i>""", parse_mode="HTML")
+                        continue
+                    elif text == "/report":
+                        from scripts.send_hourly_investor_report import generate_hourly_report
+                        report_msg = generate_hourly_report()
+                        send_telegram_message(chat_id, report_msg, parse_mode="HTML")
                         continue
 
                     send_chat_action(chat_id, "typing")
