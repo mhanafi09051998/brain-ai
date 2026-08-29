@@ -83,21 +83,17 @@ SOL/USD ARB    +$3.40
 <i>Claudia Ultra • Gahar Inovasi</i>"""
     return msg
 
-def push_to_telegram():
+def push_to_telegram(target_id=None):
+    chat_id = target_id or TARGET_CHAT_ID
     msg = generate_hourly_report()
-    print("--- [GENERATED HOURLY REPORT MESSAGE] ---")
-    print(msg)
-    print("-----------------------------------------")
     
     if not BOT_TOKEN:
-        print("\n[INFO] TELEGRAM_BOT_TOKEN belum diset di environment.")
-        print(f"Untuk mengirim langsung ke DM Telegram (Chat ID: {TARGET_CHAT_ID}), jalankan:")
-        print(f"$env:TELEGRAM_BOT_TOKEN=\"<TOKEN_BOT_KAMU>\"; python scripts/send_hourly_investor_report.py")
+        print("[!] TELEGRAM_BOT_TOKEN missing.")
         return False
         
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
     payload = json.dumps({
-        "chat_id": TARGET_CHAT_ID,
+        "chat_id": chat_id,
         "text": msg,
         "parse_mode": "HTML",
         "disable_web_page_preview": True
@@ -106,11 +102,45 @@ def push_to_telegram():
     try:
         req = urllib.request.Request(url, data=payload, headers={"Content-Type": "application/json"})
         with urllib.request.urlopen(req, timeout=10) as resp:
-            print(f"[✓] Berhasil dikirim ke Telegram DM (Chat ID: {TARGET_CHAT_ID}) dengan status {resp.status}")
+            print(f"[✓] Berhasil dikirim ke Telegram Chat ID: {chat_id} (Status {resp.status})")
             return True
     except Exception as e:
-        print(f"[!] Gagal mengirim ke Telegram: {e}")
+        print(f"[!] Gagal mengirim ke Telegram Chat ID {chat_id}: {e}")
         return False
 
+def run_hourly_scheduler():
+    import time
+    print("⚡ [START] Claudia Ultra 24/7 Hourly Investor Report Scheduler Activated.")
+    print(f"[*] Target Primary Chat ID: {TARGET_CHAT_ID}")
+    
+    group_id_env = os.environ.get("TELEGRAM_GROUP_CHAT_ID")
+    group_id = int(group_id_env) if group_id_env else None
+    
+    # 1. Send immediate startup baseline
+    print("[*] Sending initial startup report...")
+    push_to_telegram(TARGET_CHAT_ID)
+    if group_id and group_id != TARGET_CHAT_ID:
+        push_to_telegram(group_id)
+        
+    last_sent_hour = datetime.now(timezone(timedelta(hours=7))).hour
+    
+    while True:
+        try:
+            now_wib = datetime.now(timezone(timedelta(hours=7)))
+            if now_wib.minute == 0 and now_wib.hour != last_sent_hour:
+                print(f"\n[⚡ TOP OF HOUR] {now_wib.strftime('%d %b %Y %H:%M:%S WIB')} — Triggering hourly report...")
+                push_to_telegram(TARGET_CHAT_ID)
+                if group_id and group_id != TARGET_CHAT_ID:
+                    push_to_telegram(group_id)
+                last_sent_hour = now_wib.hour
+                print(f"[✓] Hourly report dispatched. Next cycle at {(now_wib + timedelta(hours=1)).strftime('%H:00')} WIB.")
+            time.sleep(20)
+        except Exception as e:
+            print(f"[!] Scheduler exception: {e}")
+            time.sleep(20)
+
 if __name__ == "__main__":
-    push_to_telegram()
+    if "--daemon" in sys.argv or "--schedule" in sys.argv:
+        run_hourly_scheduler()
+    else:
+        push_to_telegram()
