@@ -1,16 +1,16 @@
 # Graph Report - GEMINI-HANAFI  (2026-08-29)
 
 ## Corpus Check
-- 298 files · ~407,721 words
+- 299 files · ~407,866 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2097 nodes · 2417 edges · 248 communities (215 shown, 33 thin omitted)
+- 2101 nodes · 2420 edges · 248 communities (215 shown, 33 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 38 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `54717d30`
+- Built from commit: `97a5d5d8`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -52,7 +52,7 @@
 - Color
 - Ponytail, lazy senior dev mode
 - 🎯 5 Pilar & Invarian Operasional Edge & Containerization
-- PaletteGenerator
+- run_self_tests
 - Neuron N031: Modern Data Architecture & Hybrid Search (PostgreSQL 17, pgvector HNSW, Drizzle ORM, SQLite WAL)
 - ponytail.mjs
 - official_runner_real.py
@@ -155,7 +155,7 @@
 - 🎯 Invarian Inti (Core Invariants)
 - 🎯 Invarian Inti (Core Invariants)
 - app.js
-- run_self_tests
+- N096: Solana DLMM Alpha Quantitative Yield Maximizer
 - N095: Zolu Solana Vault Telegram Formatting & Accounting Engine
 - manifest.json
 - StrategicSWOTNucleusEngine
@@ -400,9 +400,9 @@ Nodes (12): Graphify, Brain Verification & Continuous Learning Loop:, ?? Kerahas
 Cohesion: 0.14
 Nodes (13): 1. Edge Ingress Caddyfile Blueprint (Caddy 2.8+ HTTP/3 + Security Headers + Passive Healthcheck), 1. Modern Edge Ingress & Transport Layer (Caddy 2.8+ HTTP/3 QUIC & TLS 1.3 0-RTT), 2. Multi-Stage Distroless Dockerfile Blueprint, 2. Multi-Stage Distroless Hardening & Minimal Attack Surface, 3. PM2 Zero-Downtime Cluster Blueprint (`ecosystem.config.js`), 3. Zero-Downtime Cluster Supervision & Process Lifecycle (PM2 Orchestration), 4. Linux Kernel Namespaces & cgroups v2 Sandboxing, 5. Autonomous Edge SRE & High-Availability Playbook (+5 more)
 
-### Community 37 - "PaletteGenerator"
-Cohesion: 0.16
-Nodes (9): PaletteGenerator, Harmonious color palette generator supporting classical color wheel (HSL) and…, Generate a monochromatic ramp varying in Lightness., Generate analogous colors clustered around base hue., Generate complementary color pair (180° offset)., Generate split-complementary harmony (base + 2 colors flanking complement)., Generate tetradic rectangular 4-color harmony., Generate multi-stop gradient scale interpolated in CIELAB space. (+1 more)
+### Community 37 - "run_self_tests"
+Cohesion: 0.10
+Nodes (16): GenerativePoster, PaletteGenerator, Harmonious color palette generator supporting classical color wheel (HSL) and…, Generate a monochromatic ramp varying in Lightness., Generate analogous colors clustered around base hue., Generate complementary color pair (180° offset)., Generate triadic 3-color harmony (120° offsets)., Generate split-complementary harmony (base + 2 colors flanking complement). (+8 more)
 
 ### Community 38 - "Neuron N031: Modern Data Architecture & Hybrid Search (PostgreSQL 17, pgvector HNSW, Drizzle ORM, SQLite WAL)"
 Cohesion: 0.15
@@ -718,9 +718,9 @@ Nodes (6): 1. Headless Non-Interactive Terminal Scripting, 2. eBPF Kernel Probin
 Cohesion: 0.11
 Nodes (33): checkAuthSession(), clearSearch(), fetchMovies(), fetchServerWatchProgress(), formatTime(), getLocalProgress(), getToken(), handleLogout() (+25 more)
 
-### Community 163 - "run_self_tests"
-Cohesion: 0.20
-Nodes (7): GenerativePoster, Generate triadic 3-color harmony (120° offsets)., Parse hex color (#RGB, #RGBA, #RRGGBB, #RRGGBBAA)., Algorithmic generative poster generator synthesizing: - Parametric Lissajous &…, Generate full SVG graphic poster with mathematical curves and layered depth., Execute 100% deterministic test suite covering color math, WCAG contrast,…, run_self_tests()
+### Community 163 - "N096: Solana DLMM Alpha Quantitative Yield Maximizer"
+Cohesion: 0.50
+Nodes (3): 🔒 Disiplin Eksekusi, 🎯 Inti Pembelajaran (Engineering Invariant), N096: Solana DLMM Alpha Quantitative Yield Maximizer
 
 ### Community 164 - "N095: Zolu Solana Vault Telegram Formatting & Accounting Engine"
 Cohesion: 0.50
@@ -915,21 +915,21 @@ Cohesion: 0.12
 Nodes (15): 10. Legal — **Legal Agent Benchmark, Held-out**, 11. Health — **HealthBench Professional**, 12. Biology — **BioMysteryBench**, 1. Agentic Terminal Coding — **Frontier-Bench v0.1**, 2. Knowledge Work — **GDPval-AA v2**, 3. Novel Problem-Solving — **ARC-AGI-3**, 4. Agentic Search — **BrowseComp**, 5. Multidisciplinary Reasoning — **Humanity's Last Exam** (+7 more)
 
 ## Knowledge Gaps
-- **969 isolated node(s):** `dynamic`, `dynamic`, `dynamic`, `dynamic`, `dynamic` (+964 more)
+- **971 isolated node(s):** `dynamic`, `dynamic`, `dynamic`, `dynamic`, `dynamic` (+966 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **33 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Color` connect `Color` to `run_self_tests`, `PaletteGenerator`?**
+- **Why does `Color` connect `Color` to `run_self_tests`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **Why does `run_tests()` connect `run_tests` to `ImageMatrix`, `ConvolutionKernelEngine`, `image_vision_nucleus_engine.py`, `.letterbox_aspect_preserver`, `RasterToVectorTracer`, `GenerativeGraphExecutor`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **Why does `Vec2D` connect `Vec2D` to `CubicBezier`, `run_self_tests`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **What connects `dynamic`, `dynamic`, `dynamic` to the rest of the system?**
-  _969 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _971 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `run_deterministic_tests` be split into smaller, more focused modules?**
   _Cohesion score 0.06259426847662142 - nodes in this community are weakly interconnected._
 - **Should `CubicBezier` be split into smaller, more focused modules?**

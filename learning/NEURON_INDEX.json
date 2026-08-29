@@ -1,8 +1,8 @@
 {
   "version": "1.2.0",
-  "updated_at": "2026-08-29 11:38:21",
-  "total_neurons": 96,
-  "total_synapses": 386,
+  "updated_at": "2026-08-29 11:40:34",
+  "total_neurons": 97,
+  "total_synapses": 389,
   "mesh_density": 0.0435,
   "neurons": [
     {
@@ -1211,6 +1211,16 @@
       "id": "N096",
       "label": "Neuron N096: Solana DLMM Alpha Quantitative Yield Maximizer",
       "file": "N096_solana_dlmm_alpha_quantitative_y.md",
+      "connections": [
+        "N001",
+        "N004",
+        "N007"
+      ]
+    },
+    {
+      "id": "N097",
+      "label": "Neuron N097: Solana Vault 50:50 Auto Diversification & Bot Lifecycle DM Notification",
+      "file": "N097_solana_vault_5050_auto_diversifi.md",
       "connections": [
         "N001",
         "N004",

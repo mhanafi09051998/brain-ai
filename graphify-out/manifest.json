@@ -6,9 +6,9 @@
     "semantic_hash": ""
   },
   "learning/NEURON_INDEX.json": {
-    "mtime": 1787978301.771391,
-    "seen": 1787978319.8815172,
-    "ast_hash": "e466d3a83706e51a9f940ad6509dddef",
+    "mtime": 1787978434.0456686,
+    "seen": 1787978447.3577442,
+    "ast_hash": "8fdce6d62a07b12efbf762ad4cbd1e9f",
     "semantic_hash": ""
   },
   "learning/scripts/grow_neurons.py": {
@@ -312,9 +312,9 @@
     "semantic_hash": ""
   },
   "memory.md": {
-    "mtime": 1787978301.7719553,
-    "seen": 1787978319.8815172,
-    "ast_hash": "06f92ef631801a0e97ad6e5db2da878f",
+    "mtime": 1787978434.0456686,
+    "seen": 1787978447.3587484,
+    "ast_hash": "3250336e1420375fd87d6754495aa6f0",
     "semantic_hash": ""
   },
   "memory/neurons/ai_engine_9router.md": {
@@ -1680,9 +1680,9 @@
     "semantic_hash": ""
   },
   "scripts/claudia_telegram_bot.py": {
-    "mtime": 1787977891.7105308,
-    "seen": 1787978319.8815172,
-    "ast_hash": "ea324239658811368c411ba777c190f1",
+    "mtime": 1787978423.215557,
+    "seen": 1787978447.3587484,
+    "ast_hash": "7b425421ba2c5fb4057d092e12705457",
     "semantic_hash": ""
   },
   "learning/neurons/N059_clean_monochrome_report_and_stru.md": {
@@ -1941,6 +1941,12 @@
     "mtime": 1787978301.7698872,
     "seen": 1787978319.8815172,
     "ast_hash": "b7628617cde9440799dfee080c02a788",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N097_solana_vault_5050_auto_diversifi.md": {
+    "mtime": 1787978434.0446682,
+    "seen": 1787978447.3587484,
+    "ast_hash": "6fb3cbcfef905798676c79199b5357be",
     "semantic_hash": ""
   }
 }
