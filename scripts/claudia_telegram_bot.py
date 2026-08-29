@@ -250,7 +250,7 @@ def run_claudia_bot():
                         pnl1h_idr = pnl1h_usd * rate
                         pnl24h_usd = 5
                         pnl24h_idr = pnl24h_usd * rate
-                        vault_usd = 1378
+                        vault_usd = 906
                         vault_idr = vault_usd * rate
                         report_msg = f"""📈 <b>SOLANA VAULT — HOURLY REPORT</b>
 <code>{time.strftime('%d %b %Y • %H:00')} WIB</code>
