@@ -227,8 +227,8 @@ def run_claudia_bot():
                         rate = 16250
                         members = [
                             {"name": "Duri", "id": "INV-003", "invest_usd": 28, "invest_idr": 498379, "sol": max(1, round(28 / sol_price)), "pnl_usd": 1, "pnl_idr": 1 * rate, "pct": 3},
-                            {"name": "Hanafi", "id": "INV-001", "invest_usd": 369, "invest_idr": 6543986, "sol": max(1, round(369 / sol_price)), "pnl_usd": 2, "pnl_idr": 2 * rate, "pct": 38},
                             {"name": "Purwanto", "id": "INV-002", "invest_usd": 562, "invest_idr": 9958549, "sol": max(1, round(562 / sol_price)), "pnl_usd": 3, "pnl_idr": 3 * rate, "pct": 59},
+                            {"name": "Hanafi", "id": "INV-001", "invest_usd": 369, "invest_idr": 6543986, "sol": max(1, round(369 / sol_price)), "pnl_usd": 2, "pnl_idr": 2 * rate, "pct": 38},
                         ]
                         user_msg = "👥 <b>RINCIAN MODAL & SHARING PnL</b>\n─────────────────────\n"
                         for i, inv in enumerate(members, 1):
@@ -262,8 +262,8 @@ def run_claudia_bot():
 • Yield SOL    : 🟢 +1 SOL (+1%)
 • PnL 24 Jam   : 🟢 +${pnl24h_usd} (Rp {pnl24h_idr:,})
 • PnL All-Time : 🟢 +${pnl24h_usd} (Rp {pnl24h_idr:,})
-• Total AUM    : ${vault_usd:,} (Rp {vault_idr:,})
-• Total Eksekusi : 8 Transaksi
+• Modal Pokok Aktif : ${vault_usd:,} (Rp {vault_idr:,})
+• Total Eksekusi    : 8 Transaksi
 
 <b>EKSEKUSI TRANSAKSI TERAKHIR</b>
 <pre>
@@ -276,14 +276,14 @@ SOL/USD ARB     +Rp 56.000 🟢
 <b>TELEMETRI RISIKO</b>
 • Open Exposure : 1% (1 Posisi Aktif)
 • Floating Loss : 0% 🟢
-• Proteksi MEV  : Aktif (Jito Solana) 🟢
+• Keamanan Transaksi : Jalur Privat (Anti-Bot) 🟢
 
 ─────────────────────
 <b>GLOSARIUM</b>
 • <b>PnL</b>: Keuntungan bersih terealisasi.
-• <b>AUM</b>: Total dana kelolaan likuiditas.
+• <b>Modal Aktif</b>: Dana yang sedang berputar di pool.
 • <b>Exposure</b>: Modal pada posisi terbuka.
-• <b>MEV Guard</b>: Proteksi anti-frontrunning.
+• <b>Anti-Bot</b>: Jalur transaksi privat bebas serobotan bot.
 
 ─────────────────────
 <b>Explorer:</b> <a href="https://solscan.io">solscan.io/vault</a>
