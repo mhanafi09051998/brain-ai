@@ -93,11 +93,32 @@ def get_help_slash_msg():
 • <code>/status</code>  : Telemetry status sistem, uptime server, dan engine radar.
 • <code>/vault</code>   : Neraca saldo AUM, alokasi aset, dan open exposure.
 • <code>/pnl</code>     : Ringkasan profit harian, mingguan, dan rekap win rate.
+• <code>/user</code>    : Informasi profil pengguna, peran, dan hak akses terminal.
 • <code>/report</code>  : Generate instant hourly investor report snapshot.
 • <code>/reset</code>   : Reset sesi percakapan memori asisten AI.
 
 ──────────────────────────
 <i>Gahar Inovasi Teknologi • Quantitative Engineering</i>"""
+
+def get_user_slash_msg(user_id=***CHAT_ID_REMOVED***):
+    now_str = datetime.now(timezone(timedelta(hours=7))).strftime("%d %b %Y, %H:%M WIB")
+    return f"""<b>USER PROFILE & ACCESS CONTROL</b>
+<code>Updated : {now_str}</code>
+──────────────────────────
+
+<b>USER IDENTIFIER</b>
+• Telegram ID  : <code>{user_id}</code>
+• Identity     : <code>Muhammad Hanafi (SuperAdmin)</code>
+• Organization : <code>Gahar Inovasi Teknologi</code>
+
+<b>PRIVILEGES & POLICY</b>
+• Role Level   : <code>TIER-0 (Full Sovereign Access)</code>
+• Execution    : <code>Unrestricted (All Slash Commands)</code>
+• Vault Access : <code>Read / Write / Rebalance</code>
+• Audit Status : <code>Zero-Trust Cryptographic Verified</code>
+
+──────────────────────────
+<i>Claudia Ultra Engine • Security Governance</i>"""
 
 def get_status_slash_msg():
     now_str = datetime.now(timezone(timedelta(hours=7))).strftime("%d %b %Y, %H:%M WIB")
@@ -146,3 +167,6 @@ if __name__ == "__main__":
     if action in ["help", "all"]:
         print("--- SENDING SLASH COMMAND HELP ---")
         send_msg(get_help_slash_msg())
+    if action in ["user", "all"]:
+        print("--- SENDING SLASH COMMAND USER ---")
+        send_msg(get_user_slash_msg())
