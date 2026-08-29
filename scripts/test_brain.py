@@ -55,7 +55,9 @@ def test_knowledge_graph():
 def test_security_and_secrets():
     secret_patterns = [
         re.compile(r'sk-[a-zA-Z0-9_-]{20,}'),
-        re.compile(r'kZn6giai9TEvwW\?')
+        re.compile(r'[0-9]{8,11}:[A-Za-z0-9_-]{30,}'),
+        re.compile(r'token=[a-f0-9]{32,}'),
+        re.compile(r'-----BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY-----')
     ]
     tracked_files = []
     try:

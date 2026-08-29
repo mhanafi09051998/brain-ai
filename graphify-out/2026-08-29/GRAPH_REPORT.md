@@ -1,16 +1,16 @@
-# Graph Report - GEMINI-HANAFI  (2026-08-29)
+# Graph Report - GEMINI-HANAFI  (2026-08-27)
 
 ## Corpus Check
-- 285 files · ~400,483 words
+- 324 files · ~426,789 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2000 nodes · 2332 edges · 235 communities (203 shown, 32 thin omitted)
+- 2116 nodes · 2426 edges · 264 communities (228 shown, 36 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 38 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `94782bb3`
+- Built from commit: `8a5d0eb7`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -52,7 +52,7 @@
 - Color
 - Ponytail, lazy senior dev mode
 - 🎯 5 Pilar & Invarian Operasional Edge & Containerization
-- PaletteGenerator
+- run_self_tests
 - Neuron N031: Modern Data Architecture & Hybrid Search (PostgreSQL 17, pgvector HNSW, Drizzle ORM, SQLite WAL)
 - ponytail.mjs
 - official_runner_real.py
@@ -128,16 +128,17 @@
 - user_profile.md
 - vps_infrastructure.md
 - ponytail-statusline.sh script
-- run_self_tests
 - fix_jellyfin_db.py
 - ImageMatrix
 - ConvolutionKernelEngine
+- ColorSpaceMath
 - run_tests
-- image_vision_nucleus_engine.py
-- .letterbox_aspect_preserver
+- Any
 - RasterToVectorTracer
 - GenerativeGraphExecutor
 - server.js
+- page.tsx
+- layout.tsx
 - app.js
 - manifest.json
 - StrategicSWOTNucleusEngine
@@ -192,24 +193,30 @@
 - 🎯 Core Invariants & Mathematical Framework
 - 🎯 Core Invariants & Mathematical Framework
 - N080: Meta-Compiler Tiered JIT, Polyhedral Loop Transformations & SIMD Coalescing
+- .process_tiled_convolution
 - 🎯 Inti Pembelajaran (Engineering Invariant)
 - 🎯 Inti Pembelajaran (12 Parameter Evaluasi Model AI Generasi Baru)
+- devDependencies
+- compilerOptions
 - ponytail/README.md
 - Install
 - Instalación
 - README.ko.md
+- route.ts
+- training-room/next.config.mjs
+- tailwind.config.ts
 
 ## God Nodes (most connected - your core abstractions)
 1. `Vec2D` - 25 edges
 2. `run_tests()` - 22 edges
 3. `useGoblix()` - 18 edges
 4. `ImageMatrix` - 16 edges
-5. `CubicBezier` - 15 edges
-6. `Install` - 15 edges
-7. `==========================================` - 14 edges
-8. `getPonytailInstructions()` - 13 edges
-9. `ponytailExtension()` - 13 edges
-10. `run_self_tests()` - 13 edges
+5. `compilerOptions` - 16 edges
+6. `CubicBezier` - 15 edges
+7. `Install` - 15 edges
+8. `==========================================` - 14 edges
+9. `getPonytailInstructions()` - 13 edges
+10. `ponytailExtension()` - 13 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `GET()` --calls--> `getMovieBySlug()`  [EXTRACTED]
@@ -226,7 +233,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (235 total, 32 thin omitted)
+## Communities (264 total, 36 thin omitted)
 
 ### Community 0 - "run_deterministic_tests"
 Cohesion: 0.06
@@ -386,9 +393,9 @@ Nodes (11): Graphify, Brain Verification & Continuous Learning Loop:, ?? Kerahas
 Cohesion: 0.14
 Nodes (13): 1. Edge Ingress Caddyfile Blueprint (Caddy 2.8+ HTTP/3 + Security Headers + Passive Healthcheck), 1. Modern Edge Ingress & Transport Layer (Caddy 2.8+ HTTP/3 QUIC & TLS 1.3 0-RTT), 2. Multi-Stage Distroless Dockerfile Blueprint, 2. Multi-Stage Distroless Hardening & Minimal Attack Surface, 3. PM2 Zero-Downtime Cluster Blueprint (`ecosystem.config.js`), 3. Zero-Downtime Cluster Supervision & Process Lifecycle (PM2 Orchestration), 4. Linux Kernel Namespaces & cgroups v2 Sandboxing, 5. Autonomous Edge SRE & High-Availability Playbook (+5 more)
 
-### Community 37 - "PaletteGenerator"
-Cohesion: 0.16
-Nodes (9): PaletteGenerator, Harmonious color palette generator supporting classical color wheel (HSL) and…, Generate a monochromatic ramp varying in Lightness., Generate analogous colors clustered around base hue., Generate complementary color pair (180° offset)., Generate split-complementary harmony (base + 2 colors flanking complement)., Generate tetradic rectangular 4-color harmony., Generate multi-stop gradient scale interpolated in CIELAB space. (+1 more)
+### Community 37 - "run_self_tests"
+Cohesion: 0.10
+Nodes (16): GenerativePoster, PaletteGenerator, Harmonious color palette generator supporting classical color wheel (HSL) and…, Generate a monochromatic ramp varying in Lightness., Generate analogous colors clustered around base hue., Generate complementary color pair (180° offset)., Generate triadic 3-color harmony (120° offsets)., Generate split-complementary harmony (base + 2 colors flanking complement). (+8 more)
 
 ### Community 38 - "Neuron N031: Modern Data Architecture & Hybrid Search (PostgreSQL 17, pgvector HNSW, Drizzle ORM, SQLite WAL)"
 Cohesion: 0.15
@@ -437,7 +444,7 @@ Cohesion: 0.09
 Nodes (22): 1. Peta Repositori & Standar Visual Computing Terbaik Dunia, 1. RGB ke Grayscale (Luminosity Weighting), 2. Matematika Pemrosesan Citra Klasik (Classical Image Processing), 2. RGB ke HSV (Hue, Saturation, Value), 3. Arsitektur AI Generatif Visual & Latent Diffusion, 3. RGB ke YCbCr (Luma-Chroma Video Subsampling), 4. Segmentasi Alpha Matting & Tracing Vektor (Raster-to-Vector), 5. Streaming Citra Memori Rendah (`libvips`) & Super-Resolution (`Real-ESRGAN`) (+14 more)
 
 ### Community 48 - "claudia_live_watchdog.py"
-Cohesion: 0.52
+Cohesion: 0.18
 Nodes (5): calc_indicators(), fetch_klines_twelve(), run_watchdog(), scan_asset(), send_telegram_msg()
 
 ### Community 49 - "Ponytail"
@@ -608,29 +615,21 @@ Nodes (3): fetch_tmdb_poster(), main(), search_apibay()
 Cohesion: 0.83
 Nodes (3): main(), record_new_learning(), slugify()
 
-### Community 113 - "run_self_tests"
-Cohesion: 0.20
-Nodes (7): GenerativePoster, Generate triadic 3-color harmony (120° offsets)., Parse hex color (#RGB, #RGBA, #RRGGBB, #RRGGBBAA)., Algorithmic generative poster generator synthesizing: - Parametric Lissajous &…, Generate full SVG graphic poster with mathematical curves and layered depth., Execute 100% deterministic test suite covering color math, WCAG contrast,…, run_self_tests()
-
 ### Community 128 - "ImageMatrix"
-Cohesion: 0.20
-Nodes (4): ImageMatrix, Lightweight, high-performance 2D/3D pure Python pixel matrix. Layout:…, Convolves an image in bounded memory tiles of tile_size x tile_size. Uses…, Safe pixel retrieval with deterministic boundary clamping. Supported border…
+Cohesion: 0.15
+Nodes (7): GeometricRescaler, ImageMatrix, Lightweight, high-performance 2D/3D pure Python pixel matrix. Layout:…, Sub-pixel Geometric Rescaling and Aspect Ratio Preserver., High-precision bilinear interpolation rescaling. Maps target pixel centers…, Scales image while strictly preserving native aspect ratio, padding the…, Safe pixel retrieval with deterministic boundary clamping. Supported border…
 
 ### Community 129 - "ConvolutionKernelEngine"
 Cohesion: 0.16
 Nodes (8): ConvolutionKernelEngine, Pure Python Spatial Convolution Engine with standard and custom kernels., Generates normalized (2k+1)x(2k+1) 2D Gaussian Kernel: G(u,v) =…, Returns standard 3x3 Sobel kernels for horizontal (Gx) and vertical (Gy)…, Returns 3x3 Sharpen kernel: center = 1 + 4*strength, orthogonal edges =…, Returns standard 3x3 discrete Laplacian second-derivative kernel., Applies 2D spatial convolution across all channels of the image matrix., Calculates Sobel Edge Gradient Magnitude M = sqrt(Gx^2 + Gy^2) and Direction…
 
-### Community 130 - "run_tests"
-Cohesion: 0.21
-Nodes (8): ColorSpaceMath, Standard-compliant color space transformation algorithms., Weighted luminosity grayscale conversion. - BT.601 (SDTV/OpenCV default): Y =…, Converts RGB [0..255] to HSV (Hue in [0..360), Saturation in [0..1], Value in…, Converts HSV (Hue [0..360), Saturation [0..1], Value [0..1]) back to RGB…, Converts RGB [0..255] to ITU-R BT.601 YCbCr digital video standard., Converts ITU-R BT.601 YCbCr back to RGB [0..255]., run_tests()
+### Community 130 - "ColorSpaceMath"
+Cohesion: 0.17
+Nodes (7): ColorSpaceMath, Standard-compliant color space transformation algorithms., Weighted luminosity grayscale conversion. - BT.601 (SDTV/OpenCV default): Y =…, Converts RGB [0..255] to HSV (Hue in [0..360), Saturation in [0..1], Value in…, Converts HSV (Hue [0..360), Saturation [0..1], Value [0..1]) back to RGB…, Converts RGB [0..255] to ITU-R BT.601 YCbCr digital video standard., Converts ITU-R BT.601 YCbCr back to RGB [0..255].
 
-### Community 131 - "image_vision_nucleus_engine.py"
-Cohesion: 0.18
-Nodes (10): CheckpointLoaderNode, CLIPTextEncodeNode, ComfyNode, ControlNetApplyNode, KSamplerNode, Any, Demand-driven tile chunking pipeline for low-memory image processing. Executes…, Base executable node in a generative AI visual DAG. (+2 more)
-
-### Community 132 - ".letterbox_aspect_preserver"
-Cohesion: 0.29
-Nodes (5): GeometricRescaler, Sub-pixel Geometric Rescaling and Aspect Ratio Preserver., High-precision bilinear interpolation rescaling. Maps target pixel centers…, Scales image while strictly preserving native aspect ratio, padding the…, Maps a bounding box (x, y, w, h) from letterboxed space back to native source…
+### Community 131 - "run_tests"
+Cohesion: 0.50
+Nodes (8): CheckpointLoaderNode, CLIPTextEncodeNode, ComfyNode, ControlNetApplyNode, KSamplerNode, Base executable node in a generative AI visual DAG., run_tests(), VAEDecodeNode
 
 ### Community 133 - "RasterToVectorTracer"
 Cohesion: 0.31
@@ -639,6 +638,10 @@ Nodes (5): RasterToVectorTracer, Converts raster mask contours to simplified vec
 ### Community 146 - "server.js"
 Cohesion: 0.09
 Nodes (31): fs, getMoviesDB(), { getUsersDB, saveUsersDB, hashPassword, generateToken, getAuthUser }, http, MIME_TYPES, MOVIES_FILE, normalizeMovie(), parseJSONBody() (+23 more)
+
+### Community 153 - "page.tsx"
+Cohesion: 0.40
+Nodes (3): metricCardDefinitions, MetricItem, SessionData
 
 ### Community 161 - "app.js"
 Cohesion: 0.11
@@ -678,7 +681,7 @@ Nodes (4): Immutable 2D vector for visual geometry and coordinate transformation
 
 ### Community 181 - "goblix/package.json"
 Cohesion: 0.08
-Nodes (23): autoprefixer, dependencies, next, react, react-dom, description, devDependencies, autoprefixer (+15 more)
+Nodes (23): dependencies, next, react, react-dom, description, devDependencies, autoprefixer, postcss (+15 more)
 
 ### Community 182 - "js/app.js"
 Cohesion: 0.13
@@ -702,7 +705,7 @@ Nodes (13): dynamic, POST(), dynamic, GET(), dynamic, POST(), generateToken(), g
 
 ### Community 198 - "include"
 Cohesion: 0.15
-Nodes (12): compilerOptions, baseUrl, paths, exclude, include, **/*.js, **/*.jsx, next-env.d.ts (+4 more)
+Nodes (12): compilerOptions, baseUrl, paths, exclude, include, next-env.d.ts, .next/types/**/*.ts, node_modules (+4 more)
 
 ### Community 199 - "N079: Kernel Bypass Networking, DPDK PMD, RDMA RoCEv2 & Zero-Copy Architecture"
 Cohesion: 0.18
@@ -824,6 +827,10 @@ Nodes (9): 1. Rank-1 Constraint Systems (R1CS) over Finite Field $\mathbb{F}_p$,
 Cohesion: 0.20
 Nodes (9): 🎯 1. Meta-Compiler Tiered Architecture & Polyhedral Pipeline, 2.1. Polyhedral Loop Transformation Model (SCoP), 2.2. Tiered Speculative JIT & Deoptimization Bailout, 2.3. Automated SIMD Memory Coalescing, 📐 2. Core Invariants & Mathematical Formulations, 💻 3. Zero-Dependency Production Implementation, 🔍 4. Root Cause Analysis & Failure Mode Guards, 🔒 5. Execution Discipline & Operational Invariants (+1 more)
 
+### Community 250 - ".process_tiled_convolution"
+Cohesion: 0.50
+Nodes (3): Demand-driven tile chunking pipeline for low-memory image processing. Executes…, Convolves an image in bounded memory tiles of tile_size x tile_size. Uses…, StreamingTileProcessor
+
 ### Community 251 - "🎯 Inti Pembelajaran (Engineering Invariant)"
 Cohesion: 0.22
 Nodes (8): 1. Struktur Top-Level Standar Dunia (Monorepo & Polyrepo), 2. Invarian Hermetic Builds & Dependency Graph, 3. Single Source of Truth (Contract-First Architecture), 4. Zero-Friction Developer Experience (DX) & 5-Minute Rule, 🔍 Akar Masalah & Pencegahan Regresi (Root Cause Analysis), 🔒 Disiplin Eksekusi (Ponytail Standard), 🎯 Inti Pembelajaran (Engineering Invariant), N081: World-Class Repository Architecture & Trunk-Based DX Engineering
@@ -831,6 +838,14 @@ Nodes (8): 1. Struktur Top-Level Standar Dunia (Monorepo & Polyrepo), 2. Invaria
 ### Community 252 - "🎯 Inti Pembelajaran (12 Parameter Evaluasi Model AI Generasi Baru)"
 Cohesion: 0.12
 Nodes (15): 10. Legal — **Legal Agent Benchmark, Held-out**, 11. Health — **HealthBench Professional**, 12. Biology — **BioMysteryBench**, 1. Agentic Terminal Coding — **Frontier-Bench v0.1**, 2. Knowledge Work — **GDPval-AA v2**, 3. Novel Problem-Solving — **ARC-AGI-3**, 4. Agentic Search — **BrowseComp**, 5. Multidisciplinary Reasoning — **Humanity's Last Exam** (+7 more)
+
+### Community 253 - "devDependencies"
+Cohesion: 0.06
+Nodes (35): clsx, lucide-react, tailwind-merge, dependencies, clsx, lucide-react, next, react (+27 more)
+
+### Community 255 - "compilerOptions"
+Cohesion: 0.07
+Nodes (26): dom, dom.iterable, esnext, compilerOptions, allowJs, esModuleInterop, incremental, isolatedModules (+18 more)
 
 ### Community 256 - "ponytail/README.md"
 Cohesion: 0.17
@@ -848,22 +863,26 @@ Nodes (11): Antigravity CLI, Claude Code, CodeWhale, Codex, Devin CLI, Gemini CL
 Cohesion: 0.20
 Nodes (9): Before / after, Commands, Development, FAQ, How it works, License, Numbers, Sponsors (+1 more)
 
+### Community 260 - "route.ts"
+Cohesion: 0.31
+Nodes (8): dynamic, GET(), logMessages, { DatabaseSync }, dataDir, dbPath, getDb(), seedDatabase()
+
 ## Knowledge Gaps
-- **912 isolated node(s):** `dynamic`, `dynamic`, `dynamic`, `dynamic`, `dynamic` (+907 more)
+- **964 isolated node(s):** `dynamic`, `dynamic`, `dynamic`, `dynamic`, `dynamic` (+959 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **32 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **36 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Color` connect `Color` to `run_self_tests`, `PaletteGenerator`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
+- **Why does `Color` connect `Color` to `run_self_tests`?**
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **Why does `CubicBezier` connect `CubicBezier` to `run_self_tests`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
-- **Why does `Vec2D` connect `Vec2D` to `run_self_tests`, `CubicBezier`?**
+- **Why does `run_tests()` connect `run_tests` to `ImageMatrix`, `ConvolutionKernelEngine`, `ColorSpaceMath`, `Any`, `RasterToVectorTracer`, `GenerativeGraphExecutor`, `.process_tiled_convolution`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **What connects `dynamic`, `dynamic`, `dynamic` to the rest of the system?**
-  _912 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _964 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `run_deterministic_tests` be split into smaller, more focused modules?**
   _Cohesion score 0.06259426847662142 - nodes in this community are weakly interconnected._
 - **Should `CubicBezier` be split into smaller, more focused modules?**
