@@ -148,6 +148,7 @@ def run_claudia_bot():
 • <code>/pnl</code>     : Ringkasan profit harian, mingguan, dan rekap win rate.
 • <code>/user</code>    : Informasi profil pengguna, peran, dan hak akses terminal.
 • <code>/report</code>  : Generate instant hourly investor report snapshot.
+• <code>/help</code>    : Menampilkan panduan dan daftar perintah terminal.
 
 ──────────────────────────
 <i>Gahar Inovasi Teknologi • Quantitative Engineering</i>""", parse_mode="HTML")
