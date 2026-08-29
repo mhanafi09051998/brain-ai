@@ -216,7 +216,7 @@ def run_claudia_bot():
                                     f"""<b>Modal Pokok Aktif (Current Equity):</b>\n""" \
                                     f"""${current_usd} USD (Rp {current_idr:,})\n\n""" \
                                     f"""<b>Total Keuntungan Bersih:</b>\n""" \
-                                    f"""<b>+${profit_usd} USD</b> (<b>Rp {profit_idr:,}</b>)\n\n""" \
+                                    f"""🟢 <b>+${profit_usd} USD</b> (<b>Rp {profit_idr:,}</b>)\n\n""" \
                                     f"""<b>Cadangan Gas Fee:</b> {gas_sol} SOL (Rp {gas_idr:,})\n""" \
                                     f"""─────────────────────\n""" \
                                     f"""<i>Dana teralokasi otomatis pada pool likuiditas Solana.</i>"""
@@ -236,9 +236,9 @@ def run_claudia_bot():
                                         f"• Porsi Modal : {inv['pct']}%\n" \
                                         f"• Investasi   : ${inv['invest_usd']} (Rp {inv['invest_idr']:,})\n" \
                                         f"• Ekuivalen   : {inv['sol']} SOL\n" \
-                                        f"• PnL Didapat : +${inv['pnl_usd']} (Rp {inv['pnl_idr']:,})\n\n"
+                                        f"• PnL Didapat : 🟢 +${inv['pnl_usd']} (Rp {inv['pnl_idr']:,})\n\n"
                         user_msg += "─────────────────────\n" \
-                                    f"*Total Gabungan: $960 (Rp 17.000.914) | PnL: +$5 (Rp {5*rate:,})\n\n" \
+                                    f"*Total Gabungan: $960 (Rp 17.000.914) | PnL: 🟢 +$5 (Rp {5*rate:,})\n\n" \
                                     "<i>PnL didistribusikan ke setiap investor secara otomatis (proporsional) mengikuti rasio porsi modal masing-masing.</i>"
                         send_telegram_message(chat_id, user_msg.replace(",", "."))
                         continue
@@ -254,28 +254,28 @@ def run_claudia_bot():
                         vault_idr = vault_usd * rate
                         report_msg = f"""📈 <b>SOLANA VAULT — HOURLY REPORT</b>
 <code>{time.strftime('%d %b %Y • %H:00')} WIB</code>
-<code>SOL: ${sol_price} (Rp {sol_idr:,}) | Normal</code>
+<code>SOL: ${sol_price} (Rp {sol_idr:,}) | Normal 🟢</code>
 ─────────────────────
 
 <b>METRIK KEUANGAN</b>
-• PnL 1 Jam : +${pnl1h_usd} (Rp {pnl1h_idr:,})
-• Yield SOL : +1 SOL (+1%)
-• PnL 24 Jam: +${pnl24h_usd} (Rp {pnl24h_idr:,})
+• PnL 1 Jam : 🟢 +${pnl1h_usd} (Rp {pnl1h_idr:,})
+• Yield SOL : 🟢 +1 SOL (+1%)
+• PnL 24 Jam: 🟢 +${pnl24h_usd} (Rp {pnl24h_idr:,})
 • Total AUM : ${vault_usd:,} (Rp {vault_idr:,})
 • Total Eksekusi : 8 Transaksi
 
 <b>EKSEKUSI TRANSAKSI TERAKHIR</b>
 <pre>
 PAIR    POSISI  HASIL (IDR)
-SOL/USD BUY     +Rp 134.000
-SOL/USD BUY     +Rp 112.000
-SOL/USD ARB     +Rp 56.000
+SOL/USD BUY     +Rp 134.000 🟢
+SOL/USD BUY     +Rp 112.000 🟢
+SOL/USD ARB     +Rp 56.000 🟢
 </pre>
 
 <b>TELEMETRI RISIKO</b>
 • Open Exposure : 1% (1 Posisi Aktif)
-• Floating Loss : 0%
-• Proteksi MEV  : Aktif (Jito Solana)
+• Floating Loss : 0% 🟢
+• Proteksi MEV  : Aktif (Jito Solana) 🟢
 
 ─────────────────────
 <b>GLOSARIUM</b>
