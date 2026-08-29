@@ -71,6 +71,15 @@ SOL/USDC  ARB    $150.10  $150.43  +$3.40
 • MEV Protection   : <code>Active (Jito Bundles)</code>
 
 ──────────────────────────
+<b>GLOSARIUM ISTILAH</b>
+• <b>PnL (Profit & Loss)</b>: Laba bersih terealisasi setelah potongan gas & slippage.
+• <b>AUM</b>: Total dana kelolaan likuiditas aktif di dalam Vault.
+• <b>Exposure</b>: Persentase modal yang sedang berada dalam posisi terbuka.
+• <b>Floating Loss</b>: Penurunan nilai sementara saat posisi belum ditutup.
+• <b>MEV Protection</b>: Proteksi transaksi dari bot front-running via Jito Solana.
+• <b>ARB (Arbitrage)</b>: Eksekusi selisih harga instan antar liquidity pool DEX.
+
+──────────────────────────
 <b>On-Chain Verification:</b> <a href="https://solscan.io">solscan.io/account/vault</a>
 <i>Claudia Ultra Engine • Gahar Inovasi Teknologi</i>"""
     return msg
