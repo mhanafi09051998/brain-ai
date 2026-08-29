@@ -258,10 +258,11 @@ def run_claudia_bot():
 ─────────────────────
 
 <b>METRIK KEUANGAN</b>
-• PnL 1 Jam : 🟢 +${pnl1h_usd} (Rp {pnl1h_idr:,})
-• Yield SOL : 🟢 +1 SOL (+1%)
-• PnL 24 Jam: 🟢 +${pnl24h_usd} (Rp {pnl24h_idr:,})
-• Total AUM : ${vault_usd:,} (Rp {vault_idr:,})
+• PnL 1 Jam    : 🟢 +${pnl1h_usd} (Rp {pnl1h_idr:,})
+• Yield SOL    : 🟢 +1 SOL (+1%)
+• PnL 24 Jam   : 🟢 +${pnl24h_usd} (Rp {pnl24h_idr:,})
+• PnL All-Time : 🟢 +${pnl24h_usd} (Rp {pnl24h_idr:,})
+• Total AUM    : ${vault_usd:,} (Rp {vault_idr:,})
 • Total Eksekusi : 8 Transaksi
 
 <b>EKSEKUSI TRANSAKSI TERAKHIR</b>
