@@ -209,48 +209,26 @@ def run_claudia_bot():
                         profit_usd = 1.5155
                         profit_idr = profit_usd * rate
                         gas_sol = 4.4982
-                        saldo_msg = f"""💼 <b>RINGKASAN SALDO VAULT</b>\n━━━━━━━━━━━━━━━━━━━━\n""" \
-                                    f"""🌱 <b>Modal Awal (Initial Deposit):</b>\n""" \
+                        saldo_msg = f"""<b>RINGKASAN SALDO VAULT</b>\n─────────────────────\n""" \
+                                    f"""<b>Modal Awal (Initial Deposit):</b>\n""" \
                                     f"""${initial_usd:.2f} USD\n""" \
                                     f"""(≈ Rp {initial_idr:,.3f})\n\n""" \
-                                    f"""💰 <b>Modal Pokok Aktif (Current Equity):</b>\n""" \
+                                    f"""<b>Modal Pokok Aktif (Current Equity):</b>\n""" \
                                     f"""${current_usd:.2f} USD\n""" \
                                     f"""(≈ Rp {current_idr:,.2f})\n\n""" \
-                                    f"""✅ <b>Total Keuntungan Bersih (100% Milik Anda):</b>\n""" \
+                                    f"""<b>Total Keuntungan Bersih (100% Milik Anda):</b>\n""" \
                                     f"""<b>+${profit_usd:.4f} USD</b>\n""" \
                                     f"""(≈ <b>Rp {profit_idr:,.2f}</b>)\n\n""" \
-                                    f"""⛽ <b>Cadangan Gas Fee:</b> {gas_sol:.4f} SOL\n""" \
-                                    f"""━━━━━━━━━━━━━━━━━━━━"""
+                                    f"""<b>Cadangan Gas Fee:</b> {gas_sol:.4f} SOL\n""" \
+                                    f"""─────────────────────"""
                         # Convert to Indonesian number format (, -> . and . -> ,)
                         parts = saldo_msg.split("(≈ Rp ")
                         formatted_parts = [parts[0]]
                         for p in parts[1:]:
                             rp_val, rest = p.split(")", 1)
-                            # format Indonesian thousand . and decimal ,
                             formatted_val = rp_val.replace(",", "X").replace(".", ",").replace("X", ".")
                             formatted_parts.append(formatted_val + ")" + rest)
                         send_telegram_message(chat_id, "".join(formatted_parts))
-                        continue
-                    elif cmd == "/status":
-                        sol_price = int(round(fetch_live_sol_price()))
-                        sol_idr = sol_price * 16250
-                        send_telegram_message(chat_id, f"""<b>VAULT — STATUS ENGINE</b>
-<code>Updated : {time.strftime('%d %b, %H:%M WIB')}</code>
-─────────────────────
-
-<b>STATUS OPERASIONAL</b>
-• Engine: <code>ONLINE (Radar)</code>
-• Pair  : <code>SOL/USDC (15m)</code>
-• Index : <code>SOL ${sol_price} (Rp {sol_idr:,})</code>
-
-<b>RENTANG HARGA AKTIF</b>
-• Support   : <code>${int(sol_price*0.993)}-${int(sol_price*0.997)}</code>
-• Resistance: <code>${int(sol_price*1.010)}-${int(sol_price*1.014)}</code>
-• Trend     : <code>Bullish (EMA20>50)</code>
-• Risk Lock : <code>Max 1.5%/Trade</code>
-
-─────────────────────
-<i>Claudia Ultra Telemetry</i>""".replace(",", "."))
                         continue
                     elif cmd == "/user":
                         sol_price = fetch_live_sol_price()
@@ -260,16 +238,16 @@ def run_claudia_bot():
                             {"name": "Hanafi", "id": "INV-001", "invest_usd": 369.36, "invest_idr": 6543986, "sol": 3.4977, "pnl_usd": 0.7695, "pnl_idr": 13632, "pct": 38.49},
                             {"name": "Purwanto", "id": "INV-002", "invest_usd": 562.09, "invest_idr": 9958549, "sol": 5.3228, "pnl_usd": 1.1709, "pnl_idr": 20746, "pct": 58.58},
                         ]
-                        user_msg = "👥 <b>DATA INVESTOR & SHARING PnL</b>\n━━━━━━━━━━━━━━━━━━━━\n"
+                        user_msg = "<b>DATA INVESTOR & SHARING PnL</b>\n─────────────────────\n"
                         for i, inv in enumerate(investors, 1):
                             user_msg += f"<b>{i}. {inv['name']} (ID: {inv['id']})</b>\n" \
                                         f"• Porsi Modal: {inv['pct']:.2f}%\n" \
                                         f"• Investasi: {inv['invest_usd']:.2f} (≈ Rp {inv['invest_idr']:,})\n" \
                                         f"• Ekuivalen: {inv['sol']:.4f} SOL\n" \
                                         f"• PnL Didapat: +{inv['pnl_usd']:.4f} (≈ Rp {inv['pnl_idr']:,})\n\n"
-                        user_msg += "━━━━━━━━━━━━━━━━━━━━\n" \
+                        user_msg += "─────────────────────\n" \
                                     "*Total Gabungan: 959.58 (≈ Rp 17.000.914) | PnL: +1.9990 (≈ Rp 35.416)\n\n" \
-                                    "💡 <i>PnL didistribusikan ke setiap investor secara otomatis (proporsional) mengikuti rasio porsi modal masing-masing.</i>"
+                                    "<i>PnL didistribusikan ke setiap investor secara otomatis (proporsional) mengikuti rasio porsi modal masing-masing.</i>"
                         send_telegram_message(chat_id, user_msg.replace(",", "."))
                         continue
                     elif cmd == "/report":
