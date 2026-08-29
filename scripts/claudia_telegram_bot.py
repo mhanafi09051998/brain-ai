@@ -193,7 +193,7 @@ def run_claudia_bot():
 
 <b>DAFTAR PERINTAH</b>
 • <code>/saldo</code>  : Saldo modal & keuntungan aktif
-• <code>/user</code>   : Porsi modal & bagi hasil investor
+• <code>/user</code>   : Rincian modal & bagi hasil
 • <code>/report</code> : Laporan likuiditas per jam
 • <code>/help</code>   : Panduan terminal bot
 
@@ -225,21 +225,21 @@ def run_claudia_bot():
                     elif cmd == "/user":
                         sol_price = int(round(fetch_live_sol_price()))
                         rate = 16250
-                        investors = [
+                        members = [
                             {"name": "Duri", "id": "INV-003", "invest_usd": 28, "invest_idr": 498379, "sol": max(1, round(28 / sol_price)), "pnl_usd": 1, "pnl_idr": 1 * rate, "pct": 3},
                             {"name": "Hanafi", "id": "INV-001", "invest_usd": 369, "invest_idr": 6543986, "sol": max(1, round(369 / sol_price)), "pnl_usd": 2, "pnl_idr": 2 * rate, "pct": 38},
                             {"name": "Purwanto", "id": "INV-002", "invest_usd": 562, "invest_idr": 9958549, "sol": max(1, round(562 / sol_price)), "pnl_usd": 3, "pnl_idr": 3 * rate, "pct": 59},
                         ]
-                        user_msg = "👥 <b>DATA INVESTOR & SHARING PnL</b>\n─────────────────────\n"
-                        for i, inv in enumerate(investors, 1):
+                        user_msg = "👥 <b>RINCIAN MODAL & SHARING PnL</b>\n─────────────────────\n"
+                        for i, inv in enumerate(members, 1):
                             user_msg += f"<b>{i}. {inv['name']} (ID: {inv['id']})</b>\n" \
                                         f"• Porsi Modal : {inv['pct']}%\n" \
-                                        f"• Investasi   : ${inv['invest_usd']} (Rp {inv['invest_idr']:,})\n" \
+                                        f"• Alokasi Dana: ${inv['invest_usd']} (Rp {inv['invest_idr']:,})\n" \
                                         f"• Ekuivalen   : {inv['sol']} SOL\n" \
                                         f"• PnL Didapat : 🟢 +${inv['pnl_usd']} (Rp {inv['pnl_idr']:,})\n\n"
                         user_msg += "─────────────────────\n" \
                                     f"*Total Gabungan: $960 (Rp 17.000.914) | PnL: 🟢 +$5 (Rp {5*rate:,})\n\n" \
-                                    "<i>PnL didistribusikan ke setiap investor secara otomatis (proporsional) mengikuti rasio porsi modal masing-masing.</i>"
+                                    "<i>PnL didistribusikan secara otomatis mengikuti rasio porsi modal masing-masing.</i>"
                         send_telegram_message(chat_id, user_msg.replace(",", "."))
                         continue
                     elif cmd == "/report":
