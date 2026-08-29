@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """
 Claudia Autonomous Continuous Learning & Self-Improving Feedback Loop
 Synthesizes newly discovered engineering invariants directly into neuron files,
@@ -95,7 +95,8 @@ def record_new_learning(topic: str, category: str, invariant: str, root_cause: s
         with open(mem_file, "r", encoding="utf-8") as f:
             mem_text = f.read()
         if file_name not in mem_text:
-            new_item = f"{len(neurons)}. **[`{file_name}`](file:///D:/Agent_Claudia_Autonomus/learning/neurons/{file_name})** — **{topic}**: {invariant[:80]}...\n"
+            ws_uri = WORKSPACE.replace('\\', '/')
+            new_item = f"{len(neurons)}. **[`{file_name}`](file:///{ws_uri}/learning/neurons/{file_name})** — **{topic}**: {invariant[:80]}...\n"
             if "## 🧠 Active Memory Neurons" in mem_text:
                 parts = mem_text.split("## 🧠 Active Memory Neurons\n")
                 updated_mem = parts[0] + "## 🧠 Active Memory Neurons\n" + new_item + parts[1]

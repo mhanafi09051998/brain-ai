@@ -3,11 +3,11 @@
 # ⚡ CLAUDIA ULTRA (2026 World Frontier Edition)
 ### *Autonomous Principal AI Engineer & Quantitative Hedge Fund Intelligence*
 
-[![Architecture](https://img.shields.io/badge/Architecture-82%20Master%20Neurons%20Mesh-7c3aed.svg?style=for-the-badge&logo=cpu)](https://github.com/mhanafi09051998/Agent_Claudia_Autonomus)
-[![Evaluation](https://img.shields.io/badge/Frontier%20Score-Top%201%20Worldwide%20SOTA-10b981.svg?style=for-the-badge&logo=speedtest)](https://github.com/mhanafi09051998/Agent_Claudia_Autonomus)
-[![Security](https://img.shields.io/badge/Security-Zero--Trust%20Clean%20%26%20NIST%20PQC-ef4444.svg?style=for-the-badge&logo=shield)](https://github.com/mhanafi09051998/Agent_Claudia_Autonomus)
-[![Training Room](https://img.shields.io/badge/Training%20Room-Next.js%20%26%20SQLite%20Live%20Stream-0ea5e9.svg?style=for-the-badge&logo=nextdotjs)](https://github.com/mhanafi09051998/Agent_Claudia_Autonomus)
-[![License](https://img.shields.io/badge/License-Proprietary%20Sovereign-06b6d4.svg?style=for-the-badge&logo=git)](https://github.com/mhanafi09051998/Agent_Claudia_Autonomus)
+[![Architecture](https://img.shields.io/badge/Architecture-82%20Master%20Neurons%20Mesh-7c3aed.svg?style=for-the-badge&logo=cpu)](https://github.com/mhanafi09051998/claudia-ultra)
+[![Evaluation](https://img.shields.io/badge/Frontier%20Score-Top%201%20Worldwide%20SOTA-10b981.svg?style=for-the-badge&logo=speedtest)](https://github.com/mhanafi09051998/claudia-ultra)
+[![Security](https://img.shields.io/badge/Security-Zero--Trust%20Clean%20%26%20NIST%20PQC-ef4444.svg?style=for-the-badge&logo=shield)](https://github.com/mhanafi09051998/claudia-ultra)
+[![Training Room](https://img.shields.io/badge/Training%20Room-Next.js%20%26%20SQLite%20Live%20Stream-0ea5e9.svg?style=for-the-badge&logo=nextdotjs)](https://github.com/mhanafi09051998/claudia-ultra)
+[![License](https://img.shields.io/badge/License-Proprietary%20Sovereign-06b6d4.svg?style=for-the-badge&logo=git)](https://github.com/mhanafi09051998/claudia-ultra)
 
 <p align="center">
   <strong>"The autonomous senior engineer who has seen everything. Minimalist, empirical, continuous, and built for extreme production excellence."</strong><br>
@@ -152,8 +152,8 @@ Berdasarkan hasil uji suite lokal ([`scripts/benchmark_engine.py`](scripts/bench
 
 ```bash
 # 1. Clone Repositori
-git clone https://github.com/mhanafi09051998/Agent_Claudia_Autonomus.git
-cd Agent_Claudia_Autonomus
+git clone https://github.com/mhanafi09051998/claudia-ultra.git
+cd claudia-ultra
 
 # 2. Jalankan Verifikasi Integritas Otak (Zero-Trust Pre-Flight)
 python scripts/test_brain.py

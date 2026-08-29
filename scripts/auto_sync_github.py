@@ -61,7 +61,7 @@ def auto_sync():
     try:
         scp_res = subprocess.run(["scp", "-o", "BatchMode=yes", "-o", "ConnectTimeout=5", temp_bundle, "vps_claudia:/home/ubuntu/claudia_repo.bundle"], capture_output=True, text=True, timeout=10)
         if scp_res.returncode == 0:
-            vps_sync_cmd = 'cd /home/ubuntu/Agent_Claudia_Autonomus && git pull /home/ubuntu/claudia_repo.bundle main --no-edit && git push origin main && rm -f /home/ubuntu/claudia_repo.bundle'
+            vps_sync_cmd = '(cd /home/ubuntu/claudia-ultra 2>/dev/null || cd /home/ubuntu/Agent_Claudia_Autonomus) && git pull /home/ubuntu/claudia_repo.bundle main --no-edit && git push origin main && rm -f /home/ubuntu/claudia_repo.bundle'
             res = subprocess.run(["ssh", "-o", "BatchMode=yes", "-o", "ConnectTimeout=5", "vps_claudia", vps_sync_cmd], capture_output=True, text=True, timeout=30)
             if res.returncode == 0:
                 print("[SUKSES] Berhasil sinkronisasi dan push ke VPS!")
