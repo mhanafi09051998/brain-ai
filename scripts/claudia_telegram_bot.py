@@ -195,11 +195,46 @@ def run_claudia_bot():
 • <code>/saldo</code>  : Saldo modal & keuntungan
 • <code>/user</code>   : Rincian porsi modal & laba
 • <code>/report</code> : Laporan likuiditas per jam
+• <code>/estimasi</code> : Proyeksi hasil backtest
 • <code>/diversifikasi</code> : Seimbangkan 50:50
 • <code>/help</code>   : Panduan terminal bot
 
 ───────────────
 <i>Gahar Inovasi Teknologi</i>""")
+                        continue
+                    elif cmd == "/estimasi":
+                        rate = 16250
+                        current_usd = 906
+                        current_idr = current_usd * rate
+                        est_msg = f"""📊 <b>ESTIMASI PROYEKSI BACKTEST</b>
+<code>Modal: ${current_usd} USD (Rp {current_idr:,})</code>
+───────────────
+
+<b>TABEL ESTIMASI IMBAL HASIL</b>
+<pre>
+PASAR   HARIAN   BULANAN   EST APY
+Sepi    +$4 (0.4%) +$120   ~150% 🟢
+Sedang  +$7 (0.8%) +$210   ~260% 🟢
+Ramai   +$15 (1.6%)+$450   ~540% 🟢
+</pre>
+
+<b>PROYEKSI RUPIAH (IDR):</b>
+• <b>Pasar Sepi (Sideways):</b>
+  ~Rp {4*rate:,} / hr (Rp {120*rate:,} / bln)
+• <b>Pasar Sedang (Normal):</b>
+  ~Rp {7*rate:,} / hr (Rp {210*rate:,} / bln)
+• <b>Pasar Ramai (Bull/Volatile):</b>
+  ~Rp {15*rate:,} / hr (Rp {450*rate:,} / bln)
+
+───────────────
+<b>KETERANGAN SKENARIO</b>
+• <b>Sepi</b>: Volatilitas rendah, kerapatan likuiditas maksimal (3.5x).
+• <b>Sedang</b>: Aktivitas transaksi stabil di DEX Solana.
+• <b>Ramai</b>: Volume swap melonjak & sering terjadi arb rebalance.
+
+───────────────
+<i>*Hasil berbasis data backtest historis DLMM & auto-compounding.</i>""".replace(",", ".")
+                        send_telegram_message(chat_id, est_msg)
                         continue
                     elif cmd in ["/diversifikasi", "/disverifikasi"]:
                         if chat_type != "private" or user_id not in ALLOWED_USERS:
