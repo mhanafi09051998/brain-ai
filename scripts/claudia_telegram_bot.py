@@ -209,6 +209,7 @@ def run_claudia_bot():
                         profit_usd = 5
                         profit_idr = profit_usd * rate
                         gas_sol = 5
+                        gas_idr = gas_sol * 104 * rate
                         saldo_msg = f"""<b>RINGKASAN SALDO VAULT</b>\n─────────────────────\n""" \
                                     f"""<b>Modal Awal (Initial Deposit):</b>\n""" \
                                     f"""${initial_usd} USD\n""" \
@@ -219,7 +220,7 @@ def run_claudia_bot():
                                     f"""<b>Total Keuntungan Bersih (100% Milik Anda):</b>\n""" \
                                     f"""<b>+${profit_usd} USD</b>\n""" \
                                     f"""(<b>Rp {profit_idr:,}</b>)\n\n""" \
-                                    f"""<b>Cadangan Gas Fee:</b> {gas_sol} SOL (Rp {gas_sol*104*rate:,})\n""" \
+                                    f"""<b>Cadangan Gas Fee:</b> {gas_sol} SOL (Rp {gas_idr:,})\n""" \
                                     f"""─────────────────────"""
                         send_telegram_message(chat_id, saldo_msg.replace(",", "."))
                         continue
