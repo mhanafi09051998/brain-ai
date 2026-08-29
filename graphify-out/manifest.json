@@ -6,9 +6,9 @@
     "semantic_hash": ""
   },
   "learning/NEURON_INDEX.json": {
-    "mtime": 1787978434.0456686,
-    "seen": 1787978447.3577442,
-    "ast_hash": "8fdce6d62a07b12efbf762ad4cbd1e9f",
+    "mtime": 1787983744.3898299,
+    "seen": 1787983757.8137586,
+    "ast_hash": "b175f538e070e8a2da07f0ec3f1399b8",
     "semantic_hash": ""
   },
   "learning/scripts/grow_neurons.py": {
@@ -312,9 +312,9 @@
     "semantic_hash": ""
   },
   "memory.md": {
-    "mtime": 1787978434.0456686,
-    "seen": 1787978447.3587484,
-    "ast_hash": "3250336e1420375fd87d6754495aa6f0",
+    "mtime": 1787983744.3908286,
+    "seen": 1787983757.8137586,
+    "ast_hash": "3d1e8f5efe9d43fea576b98245e4c372",
     "semantic_hash": ""
   },
   "memory/neurons/ai_engine_9router.md": {
@@ -1680,9 +1680,9 @@
     "semantic_hash": ""
   },
   "scripts/claudia_telegram_bot.py": {
-    "mtime": 1787978423.215557,
-    "seen": 1787978447.3587484,
-    "ast_hash": "7b425421ba2c5fb4057d092e12705457",
+    "mtime": 1787979498.39068,
+    "seen": 1787983757.8137586,
+    "ast_hash": "f80376c7ec257c34c7e2a35db0e0b1f7",
     "semantic_hash": ""
   },
   "learning/neurons/N059_clean_monochrome_report_and_stru.md": {
@@ -1947,6 +1947,30 @@
     "mtime": 1787978434.0446682,
     "seen": 1787978447.3587484,
     "ast_hash": "6fb3cbcfef905798676c79199b5357be",
+    "semantic_hash": ""
+  },
+  "learning/frontier_datasets/network_engineering_master_dataset.json": {
+    "mtime": 1787983739.4439552,
+    "seen": 1787983757.8137586,
+    "ast_hash": "e8dda714aee80ff20be22690887eb161",
+    "semantic_hash": ""
+  },
+  "scripts/scrape_network_knowledge_engine.py": {
+    "mtime": 1787983736.9539382,
+    "seen": 1787983757.8137586,
+    "ast_hash": "62c8723254e2bc28a35d555f5f84db4b",
+    "semantic_hash": ""
+  },
+  "learning/knowledge_base/network_engineering_world_class.md": {
+    "mtime": 1787983739.4439552,
+    "seen": 1787983757.8137586,
+    "ast_hash": "233ec3da526ac046cdba90e5b62d5af3",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N098_world_class_high_performance_net.md": {
+    "mtime": 1787983744.3888333,
+    "seen": 1787983757.8137586,
+    "ast_hash": "629572e9dd93eb032edf417904994d19",
     "semantic_hash": ""
   }
 }
