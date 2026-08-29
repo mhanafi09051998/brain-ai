@@ -188,17 +188,17 @@ def run_claudia_bot():
                     # Public informational commands available in both group and DM
                     if cmd in ["/start", "/help"]:
                         send_telegram_message(chat_id, """🤖 <b>ZOLU ASSET VAULT</b>
-✨ <code>Claudia Ultra Terminal</code>
-━━━━━━━━━━━━━━━━━━━━
+<code>Claudia Ultra Terminal</code>
+─────────────────────
 
-📋 <b>DAFTAR PERINTAH</b>
-💼 • <code>/saldo</code>  : Saldo modal & keuntungan aktif
-👥 • <code>/user</code>   : Porsi modal & bagi hasil investor
-📊 • <code>/report</code> : Laporan likuiditas per jam
-ℹ️ • <code>/help</code>   : Panduan terminal bot
+<b>DAFTAR PERINTAH</b>
+• <code>/saldo</code>  : Saldo modal & keuntungan aktif
+• <code>/user</code>   : Porsi modal & bagi hasil investor
+• <code>/report</code> : Laporan likuiditas per jam
+• <code>/help</code>   : Panduan terminal bot
 
-━━━━━━━━━━━━━━━━━━━━
-🌟 <i>Gahar Inovasi Teknologi</i>""")
+─────────────────────
+<i>Gahar Inovasi Teknologi</i>""")
                         continue
                     elif cmd == "/saldo":
                         rate = 16250
@@ -210,19 +210,16 @@ def run_claudia_bot():
                         profit_idr = profit_usd * rate
                         gas_sol = 5
                         gas_idr = gas_sol * 104 * rate
-                        saldo_msg = f"""💼 <b>RINGKASAN SALDO VAULT</b>\n━━━━━━━━━━━━━━━━━━━━\n""" \
-                                    f"""🌱 <b>Modal Awal (Initial Deposit):</b>\n""" \
-                                    f"""💵 <code>${initial_usd} USD</code>\n""" \
-                                    f"""🇮🇩 (Rp {initial_idr:,})\n\n""" \
-                                    f"""💰 <b>Modal Pokok Aktif (Current Equity):</b>\n""" \
-                                    f"""💵 <code>${current_usd} USD</code>\n""" \
-                                    f"""🇮🇩 (Rp {current_idr:,})\n\n""" \
-                                    f"""✨ <b>Total Keuntungan Bersih (100% Milik Anda):</b>\n""" \
-                                    f"""📈 <b>+${profit_usd} USD</b>\n""" \
-                                    f"""🎉 (<b>Rp {profit_idr:,}</b>)\n\n""" \
-                                    f"""⛽ <b>Cadangan Gas Fee:</b> <code>{gas_sol} SOL</code> (Rp {gas_idr:,})\n""" \
-                                    f"""━━━━━━━━━━━━━━━━━━━━\n""" \
-                                    f"""💡 <i>Dana teralokasi otomatis pada pool likuiditas terdesentralisasi Solana.</i>"""
+                        saldo_msg = f"""💼 <b>RINGKASAN SALDO VAULT</b>\n─────────────────────\n""" \
+                                    f"""<b>Modal Awal (Initial Deposit):</b>\n""" \
+                                    f"""${initial_usd} USD (Rp {initial_idr:,})\n\n""" \
+                                    f"""<b>Modal Pokok Aktif (Current Equity):</b>\n""" \
+                                    f"""${current_usd} USD (Rp {current_idr:,})\n\n""" \
+                                    f"""<b>Total Keuntungan Bersih:</b>\n""" \
+                                    f"""<b>+${profit_usd} USD</b> (<b>Rp {profit_idr:,}</b>)\n\n""" \
+                                    f"""<b>Cadangan Gas Fee:</b> {gas_sol} SOL (Rp {gas_idr:,})\n""" \
+                                    f"""─────────────────────\n""" \
+                                    f"""<i>Dana teralokasi otomatis pada pool likuiditas Solana.</i>"""
                         send_telegram_message(chat_id, saldo_msg.replace(",", "."))
                         continue
                     elif cmd == "/user":
@@ -233,16 +230,16 @@ def run_claudia_bot():
                             {"name": "Hanafi", "id": "INV-001", "invest_usd": 369, "invest_idr": 6543986, "sol": max(1, round(369 / sol_price)), "pnl_usd": 2, "pnl_idr": 2 * rate, "pct": 38},
                             {"name": "Purwanto", "id": "INV-002", "invest_usd": 562, "invest_idr": 9958549, "sol": max(1, round(562 / sol_price)), "pnl_usd": 3, "pnl_idr": 3 * rate, "pct": 59},
                         ]
-                        user_msg = "👥 <b>DATA INVESTOR & SHARING PnL</b>\n━━━━━━━━━━━━━━━━━━━━\n"
+                        user_msg = "👥 <b>DATA INVESTOR & SHARING PnL</b>\n─────────────────────\n"
                         for i, inv in enumerate(investors, 1):
-                            user_msg += f"👑 <b>{i}. {inv['name']} (ID: {inv['id']})</b>\n" \
-                                        f"📊 • Porsi Modal: <b>{inv['pct']}%</b>\n" \
-                                        f"💵 • Investasi: <b>${inv['invest_usd']}</b> (Rp {inv['invest_idr']:,})\n" \
-                                        f"⚡ • Ekuivalen: <code>{inv['sol']} SOL</code>\n" \
-                                        f"🎁 • PnL Didapat: <b>+${inv['pnl_usd']}</b> (Rp {inv['pnl_idr']:,})\n\n"
-                        user_msg += "━━━━━━━━━━━━━━━━━━━━\n" \
-                                    f"💎 <b>Total Gabungan:</b> <code>$960 (Rp 17.000.914)</code> | <b>PnL:</b> <code>+$5 (Rp {5*rate:,})</code>\n\n" \
-                                    "💡 <i>PnL didistribusikan ke setiap investor secara otomatis (proporsional) mengikuti rasio porsi modal masing-masing.</i>"
+                            user_msg += f"<b>{i}. {inv['name']} (ID: {inv['id']})</b>\n" \
+                                        f"• Porsi Modal : {inv['pct']}%\n" \
+                                        f"• Investasi   : ${inv['invest_usd']} (Rp {inv['invest_idr']:,})\n" \
+                                        f"• Ekuivalen   : {inv['sol']} SOL\n" \
+                                        f"• PnL Didapat : +${inv['pnl_usd']} (Rp {inv['pnl_idr']:,})\n\n"
+                        user_msg += "─────────────────────\n" \
+                                    f"*Total Gabungan: $960 (Rp 17.000.914) | PnL: +$5 (Rp {5*rate:,})\n\n" \
+                                    "<i>PnL didistribusikan ke setiap investor secara otomatis (proporsional) mengikuti rasio porsi modal masing-masing.</i>"
                         send_telegram_message(chat_id, user_msg.replace(",", "."))
                         continue
                     elif cmd == "/report":
@@ -255,41 +252,41 @@ def run_claudia_bot():
                         pnl24h_idr = pnl24h_usd * rate
                         vault_usd = 1378
                         vault_idr = vault_usd * rate
-                        report_msg = f"""🚀 <b>SOLANA VAULT — HOURLY REPORT</b>
-⏰ <code>{time.strftime('%d %b %Y • %H:00')} WIB</code>
-⚡ <code>SOL: ${sol_price} (Rp {sol_idr:,}) | Normal 🟢</code>
-━━━━━━━━━━━━━━━━━━━━
+                        report_msg = f"""📈 <b>SOLANA VAULT — HOURLY REPORT</b>
+<code>{time.strftime('%d %b %Y • %H:00')} WIB</code>
+<code>SOL: ${sol_price} (Rp {sol_idr:,}) | Normal</code>
+─────────────────────
 
-📊 <b>METRIK KEUANGAN</b>
-💰 • PnL 1 Jam : <b>+${pnl1h_usd}</b> (Rp {pnl1h_idr:,})
-🌾 • Yield SOL : <b>+1 SOL (+1%)</b>
-📈 • PnL 24 Jam: <b>+${pnl24h_usd}</b> (Rp {pnl24h_idr:,})
-🏦 • Total AUM : <b>${vault_usd:,}</b> (Rp {vault_idr:,})
-🎯 • Total Eksekusi : <b>8 Transaksi</b>
+<b>METRIK KEUANGAN</b>
+• PnL 1 Jam : +${pnl1h_usd} (Rp {pnl1h_idr:,})
+• Yield SOL : +1 SOL (+1%)
+• PnL 24 Jam: +${pnl24h_usd} (Rp {pnl24h_idr:,})
+• Total AUM : ${vault_usd:,} (Rp {vault_idr:,})
+• Total Eksekusi : 8 Transaksi
 
-⚡ <b>EKSEKUSI TRANSAKSI TERAKHIR</b>
+<b>EKSEKUSI TRANSAKSI TERAKHIR</b>
 <pre>
 PAIR    POSISI  HASIL (IDR)
-SOL/USD BUY     +Rp 134.000 🟢
-SOL/USD BUY     +Rp 112.000 🟢
-SOL/USD ARB     +Rp 56.000 🟢
+SOL/USD BUY     +Rp 134.000
+SOL/USD BUY     +Rp 112.000
+SOL/USD ARB     +Rp 56.000
 </pre>
 
-🛡️ <b>TELEMETRI RISIKO</b>
-🎯 • Open Exposure : <b>1%</b> (1 Posisi Aktif)
-📉 • Floating Loss : <b>0%</b>
-🛡️ • Proteksi MEV  : <b>Aktif (Jito Solana)</b>
+<b>TELEMETRI RISIKO</b>
+• Open Exposure : 1% (1 Posisi Aktif)
+• Floating Loss : 0%
+• Proteksi MEV  : Aktif (Jito Solana)
 
-━━━━━━━━━━━━━━━━━━━━
-📖 <b>GLOSARIUM</b>
+─────────────────────
+<b>GLOSARIUM</b>
 • <b>PnL</b>: Keuntungan bersih terealisasi.
 • <b>AUM</b>: Total dana kelolaan likuiditas.
 • <b>Exposure</b>: Modal pada posisi terbuka.
 • <b>MEV Guard</b>: Proteksi anti-frontrunning.
 
-━━━━━━━━━━━━━━━━━━━━
-🔗 <b>Explorer:</b> <a href="https://solscan.io">solscan.io/vault</a>
-🤖 <i>Claudia Ultra • Gahar Inovasi Teknologi</i>""".replace(",", ".")
+─────────────────────
+<b>Explorer:</b> <a href="https://solscan.io">solscan.io/vault</a>
+<i>Claudia Ultra • Gahar Inovasi Teknologi</i>""".replace(",", ".")
                         send_telegram_message(chat_id, report_msg)
                         continue
 
