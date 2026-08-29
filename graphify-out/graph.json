@@ -277,19 +277,6 @@
       "source_location": "L746"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator",
-      "label": "PaletteGenerator",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 163,
-      "community_name": "PaletteGenerator",
-      "file_type": "code",
-      "norm_label": "palettegenerator",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L271"
-    },
-    {
       "id": "scripts_image_vision_nucleus_engine_streamingtileprocessor",
       "label": "StreamingTileProcessor",
       "_callable": true,
@@ -379,6 +366,19 @@
       "norm_label": "generativeposter",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L625"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator",
+      "label": "PaletteGenerator",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": "palettegenerator",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L271"
     },
     {
       "id": "scripts_graphic_design_visual_engine_iconbuilder24",
@@ -1803,76 +1803,88 @@
       "source_location": "L141"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_color_from_hsl",
-      "label": ".from_hsl()",
+      "id": "scripts_test_dm_trade_alerts_get_closed_position_msg",
+      "label": "get_closed_position_msg()",
       "_callable": true,
       "_origin": "ast",
       "community": 163,
-      "community_name": "PaletteGenerator",
+      "community_name": "test_dm_trade_alerts.py",
       "file_type": "code",
-      "norm_label": ".from_hsl()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L67"
+      "norm_label": "get_closed_position_msg()",
+      "source_file": "scripts/test_dm_trade_alerts.py",
+      "source_location": "L54"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_analogous",
-      "label": ".analogous()",
+      "id": "scripts_test_dm_trade_alerts_get_help_slash_msg",
+      "label": "get_help_slash_msg()",
       "_callable": true,
       "_origin": "ast",
       "community": 163,
-      "community_name": "PaletteGenerator",
+      "community_name": "test_dm_trade_alerts.py",
       "file_type": "code",
-      "norm_label": ".analogous()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L284"
+      "norm_label": "get_help_slash_msg()",
+      "source_file": "scripts/test_dm_trade_alerts.py",
+      "source_location": "L83"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_monochromatic",
-      "label": ".monochromatic()",
+      "id": "scripts_test_dm_trade_alerts_get_open_position_msg",
+      "label": "get_open_position_msg()",
       "_callable": true,
       "_origin": "ast",
       "community": 163,
-      "community_name": "PaletteGenerator",
+      "community_name": "test_dm_trade_alerts.py",
       "file_type": "code",
-      "norm_label": ".monochromatic()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L277"
+      "norm_label": "get_open_position_msg()",
+      "source_file": "scripts/test_dm_trade_alerts.py",
+      "source_location": "L23"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_scale",
-      "label": ".scale()",
+      "id": "scripts_test_dm_trade_alerts_get_saldo_slash_msg",
+      "label": "get_saldo_slash_msg()",
       "_callable": true,
       "_origin": "ast",
       "community": 163,
-      "community_name": "PaletteGenerator",
+      "community_name": "test_dm_trade_alerts.py",
       "file_type": "code",
-      "norm_label": ".scale()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L332"
+      "norm_label": "get_saldo_slash_msg()",
+      "source_file": "scripts/test_dm_trade_alerts.py",
+      "source_location": "L98"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_split_complementary",
-      "label": ".split_complementary()",
+      "id": "scripts_test_dm_trade_alerts_get_status_slash_msg",
+      "label": "get_status_slash_msg()",
       "_callable": true,
       "_origin": "ast",
       "community": 163,
-      "community_name": "PaletteGenerator",
+      "community_name": "test_dm_trade_alerts.py",
       "file_type": "code",
-      "norm_label": ".split_complementary()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L311"
+      "norm_label": "get_status_slash_msg()",
+      "source_file": "scripts/test_dm_trade_alerts.py",
+      "source_location": "L142"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_tetradic",
-      "label": ".tetradic()",
+      "id": "scripts_test_dm_trade_alerts_get_user_slash_msg",
+      "label": "get_user_slash_msg()",
       "_callable": true,
       "_origin": "ast",
       "community": 163,
-      "community_name": "PaletteGenerator",
+      "community_name": "test_dm_trade_alerts.py",
       "file_type": "code",
-      "norm_label": ".tetradic()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L321"
+      "norm_label": "get_user_slash_msg()",
+      "source_file": "scripts/test_dm_trade_alerts.py",
+      "source_location": "L121"
+    },
+    {
+      "id": "scripts_test_dm_trade_alerts_send_msg",
+      "label": "send_msg()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 163,
+      "community_name": "test_dm_trade_alerts.py",
+      "file_type": "code",
+      "norm_label": "send_msg()",
+      "source_file": "scripts/test_dm_trade_alerts.py",
+      "source_location": "L162"
     },
     {
       "id": "scripts_image_vision_nucleus_engine_streamingtileprocessor_process_tiled_convolution",
@@ -3339,6 +3351,18 @@
       "source_location": "L6"
     },
     {
+      "id": "scripts_claudia_telegram_bot_fetch_live_sol_price",
+      "label": "fetch_live_sol_price()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "claudia_telegram_bot.py",
+      "file_type": "code",
+      "norm_label": "fetch_live_sol_price()",
+      "source_file": "scripts/claudia_telegram_bot.py",
+      "source_location": "L137"
+    },
+    {
       "id": "scripts_claudia_telegram_bot_query_claudia_llm",
       "label": "query_claudia_llm()",
       "_callable": true,
@@ -3348,7 +3372,7 @@
       "file_type": "code",
       "norm_label": "query_claudia_llm()",
       "source_file": "scripts/claudia_telegram_bot.py",
-      "source_location": "L77"
+      "source_location": "L100"
     },
     {
       "id": "scripts_claudia_telegram_bot_record_telegram_training",
@@ -3360,7 +3384,7 @@
       "file_type": "code",
       "norm_label": "record_telegram_training()",
       "source_file": "scripts/claudia_telegram_bot.py",
-      "source_location": "L35"
+      "source_location": "L49"
     },
     {
       "id": "scripts_claudia_telegram_bot_run_claudia_bot",
@@ -3372,7 +3396,7 @@
       "file_type": "code",
       "norm_label": "run_claudia_bot()",
       "source_file": "scripts/claudia_telegram_bot.py",
-      "source_location": "L113"
+      "source_location": "L147"
     },
     {
       "id": "scripts_claudia_telegram_bot_send_chat_action",
@@ -3384,7 +3408,7 @@
       "file_type": "code",
       "norm_label": "send_chat_action()",
       "source_file": "scripts/claudia_telegram_bot.py",
-      "source_location": "L71"
+      "source_location": "L90"
     },
     {
       "id": "scripts_claudia_telegram_bot_send_telegram_message",
@@ -3396,7 +3420,43 @@
       "file_type": "code",
       "norm_label": "send_telegram_message()",
       "source_file": "scripts/claudia_telegram_bot.py",
-      "source_location": "L53"
+      "source_location": "L67"
+    },
+    {
+      "id": "scripts_send_hourly_investor_report_fetch_sol_price",
+      "label": "fetch_sol_price()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "claudia_telegram_bot.py",
+      "file_type": "code",
+      "norm_label": "fetch_sol_price()",
+      "source_file": "scripts/send_hourly_investor_report.py",
+      "source_location": "L22"
+    },
+    {
+      "id": "scripts_send_hourly_investor_report_generate_hourly_report",
+      "label": "generate_hourly_report()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "claudia_telegram_bot.py",
+      "file_type": "code",
+      "norm_label": "generate_hourly_report()",
+      "source_file": "scripts/send_hourly_investor_report.py",
+      "source_location": "L33"
+    },
+    {
+      "id": "scripts_send_hourly_investor_report_push_to_telegram",
+      "label": "push_to_telegram()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "claudia_telegram_bot.py",
+      "file_type": "code",
+      "norm_label": "push_to_telegram()",
+      "source_file": "scripts/send_hourly_investor_report.py",
+      "source_location": "L86"
     },
     {
       "id": "scripts_download_full_synced_subtitles_fetch_and_save",
@@ -3567,16 +3627,16 @@
       "source_location": "L105"
     },
     {
-      "id": "ponytail_hooks_ponytail_config_isshellsafe",
-      "label": "isShellSafe()",
+      "id": "ponytail_hooks_ponytail_config_normalizeconfigmode",
+      "label": "normalizeConfigMode()",
       "_callable": true,
       "_origin": "ast",
       "community": 22,
       "community_name": "ponytail-config.js",
       "file_type": "code",
-      "norm_label": "isshellsafe()",
+      "norm_label": "normalizeconfigmode()",
       "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L50"
+      "source_location": "L26"
     },
     {
       "id": "ponytail_scripts_uninstall_removeifexists",
@@ -3589,18 +3649,6 @@
       "norm_label": "removeifexists()",
       "source_file": "ponytail/scripts/uninstall.js",
       "source_location": "L14"
-    },
-    {
-      "id": "ponytail_hooks_ponytail_config_normalizeconfigmode",
-      "label": "normalizeConfigMode()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "index.js",
-      "file_type": "code",
-      "norm_label": "normalizeconfigmode()",
-      "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L26"
     },
     {
       "id": "ponytail_hooks_ponytail_config_normalizepersistedmode",
@@ -4203,6 +4251,18 @@
       "source_location": "L44"
     },
     {
+      "id": "scripts_graphic_design_visual_engine_color_from_hsl",
+      "label": ".from_hsl()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": ".from_hsl()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L67"
+    },
+    {
       "id": "scripts_graphic_design_visual_engine_generativeposter_build_svg",
       "label": ".build_svg()",
       "_callable": true,
@@ -4227,6 +4287,18 @@
       "source_location": "L632"
     },
     {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_analogous",
+      "label": ".analogous()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": ".analogous()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L284"
+    },
+    {
       "id": "scripts_graphic_design_visual_engine_palettegenerator_complementary",
       "label": ".complementary()",
       "_callable": true,
@@ -4237,6 +4309,54 @@
       "norm_label": ".complementary()",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L295"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_monochromatic",
+      "label": ".monochromatic()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": ".monochromatic()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L277"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_scale",
+      "label": ".scale()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": ".scale()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L332"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_split_complementary",
+      "label": ".split_complementary()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": ".split_complementary()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L311"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_tetradic",
+      "label": ".tetradic()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": ".tetradic()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L321"
     },
     {
       "id": "scripts_graphic_design_visual_engine_palettegenerator_triadic",
@@ -4405,6 +4525,18 @@
       "norm_label": "verify_math_gpqa()",
       "source_file": "scripts/official_runner_real.py",
       "source_location": "L416"
+    },
+    {
+      "id": "ponytail_hooks_ponytail_config_isshellsafe",
+      "label": "isShellSafe()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "ponytail-activate.js",
+      "file_type": "code",
+      "norm_label": "isshellsafe()",
+      "source_file": "ponytail/hooks/ponytail-config.js",
+      "source_location": "L50"
     },
     {
       "id": "scripts_graphic_design_visual_engine_iconbuilder24_cpu_neural",
@@ -5318,30 +5450,6 @@
       "norm_label": "high-precision large-scale capacity and infrastructure resource estimator....",
       "source_file": "scripts/system_design_planning_engine.py",
       "source_location": "L88"
-    },
-    {
-      "id": "ponytail_agents",
-      "label": "ponytail/AGENTS.md",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "README.es.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "ponytail/agents.md",
-      "source_file": "ponytail/AGENTS.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "ponytail_agents_ponytail_lazy_senior_dev_mode",
-      "label": "Ponytail, lazy senior dev mode",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "README.es.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "ponytail, lazy senior dev mode",
-      "source_file": "ponytail/AGENTS.md",
-      "source_location": "L1"
     },
     {
       "id": "ponytail_readme_es",
@@ -8292,6 +8400,30 @@
       "source_location": "L155"
     },
     {
+      "id": "ponytail_agents",
+      "label": "ponytail/AGENTS.md",
+      "_origin": "ast",
+      "community": 148,
+      "community_name": "README.ko.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "ponytail/agents.md",
+      "source_file": "ponytail/AGENTS.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "ponytail_agents_ponytail_lazy_senior_dev_mode",
+      "label": "Ponytail, lazy senior dev mode",
+      "_origin": "ast",
+      "community": 148,
+      "community_name": "README.ko.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "ponytail, lazy senior dev mode",
+      "source_file": "ponytail/AGENTS.md",
+      "source_location": "L1"
+    },
+    {
       "id": "ponytail_readme_ko",
       "label": "README.ko.md",
       "_origin": "ast",
@@ -9942,81 +10074,15 @@
       "source_location": "L1"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_rationale_272",
-      "label": "Harmonious color palette generator supporting classical color wheel (HSL) and\u2026",
+      "id": "scripts_test_dm_trade_alerts",
+      "label": "test_dm_trade_alerts.py",
       "_origin": "ast",
       "community": 163,
-      "community_name": "PaletteGenerator",
-      "file_type": "rationale",
-      "norm_label": "harmonious color palette generator supporting classical color wheel (hsl) and...",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L272"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_278",
-      "label": "Generate a monochromatic ramp varying in Lightness.",
-      "_origin": "ast",
-      "community": 163,
-      "community_name": "PaletteGenerator",
-      "file_type": "rationale",
-      "norm_label": "generate a monochromatic ramp varying in lightness.",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L278"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_285",
-      "label": "Generate analogous colors clustered around base hue.",
-      "_origin": "ast",
-      "community": 163,
-      "community_name": "PaletteGenerator",
-      "file_type": "rationale",
-      "norm_label": "generate analogous colors clustered around base hue.",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L285"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_312",
-      "label": "Generate split-complementary harmony (base + 2 colors flanking complement).",
-      "_origin": "ast",
-      "community": 163,
-      "community_name": "PaletteGenerator",
-      "file_type": "rationale",
-      "norm_label": "generate split-complementary harmony (base + 2 colors flanking complement).",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L312"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_322",
-      "label": "Generate tetradic rectangular 4-color harmony.",
-      "_origin": "ast",
-      "community": 163,
-      "community_name": "PaletteGenerator",
-      "file_type": "rationale",
-      "norm_label": "generate tetradic rectangular 4-color harmony.",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L322"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_333",
-      "label": "Generate multi-stop gradient scale interpolated in CIELAB space.",
-      "_origin": "ast",
-      "community": 163,
-      "community_name": "PaletteGenerator",
-      "file_type": "rationale",
-      "norm_label": "generate multi-stop gradient scale interpolated in cielab space.",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L333"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_68",
-      "label": "Construct Color from HSL (H in [0, 360), S in [0, 1], L in [0, 1]).",
-      "_origin": "ast",
-      "community": 163,
-      "community_name": "PaletteGenerator",
-      "file_type": "rationale",
-      "norm_label": "construct color from hsl (h in [0, 360), s in [0, 1], l in [0, 1]).",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L68"
+      "community_name": "test_dm_trade_alerts.py",
+      "file_type": "code",
+      "norm_label": "test_dm_trade_alerts.py",
+      "source_file": "scripts/test_dm_trade_alerts.py",
+      "source_location": "L1"
     },
     {
       "id": "scripts_image_vision_nucleus_engine_rationale_615",
@@ -12844,6 +12910,28 @@
       "source_location": "L1"
     },
     {
+      "id": "scripts_send_hourly_investor_report",
+      "label": "send_hourly_investor_report.py",
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "claudia_telegram_bot.py",
+      "file_type": "code",
+      "norm_label": "send_hourly_investor_report.py",
+      "source_file": "scripts/send_hourly_investor_report.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_send_hourly_investor_report_rationale_23",
+      "label": "Fetch live SOL/USDT price from public exchange API.",
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "claudia_telegram_bot.py",
+      "file_type": "rationale",
+      "norm_label": "fetch live sol/usdt price from public exchange api.",
+      "source_file": "scripts/send_hourly_investor_report.py",
+      "source_location": "L23"
+    },
+    {
       "id": "learning_neurons_n058_migrasi_arsitektur_goblix_cinema",
       "label": "N058_migrasi_arsitektur_goblix_cinema.md",
       "_origin": "ast",
@@ -13350,6 +13438,17 @@
       "norm_label": "path",
       "source_file": "ponytail/hooks/ponytail-config.js",
       "source_location": "L13"
+    },
+    {
+      "id": "ponytail_hooks_ponytail_config_runtime_modes",
+      "label": "RUNTIME_MODES",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "ponytail-config.js",
+      "file_type": "code",
+      "norm_label": "runtime_modes",
+      "source_file": "ponytail/hooks/ponytail-config.js",
+      "source_location": "L18"
     },
     {
       "id": "ponytail_hooks_ponytail_config_valid_modes",
@@ -14364,17 +14463,6 @@
       "norm_label": "n071: automated fuzzing, ast taint analysis & semantic cve hotpatching",
       "source_file": "learning/neurons/N071_automated_fuzzing_cve_hotpatching.md",
       "source_location": "L1"
-    },
-    {
-      "id": "ponytail_hooks_ponytail_config_runtime_modes",
-      "label": "RUNTIME_MODES",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "index.js",
-      "file_type": "code",
-      "norm_label": "runtime_modes",
-      "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L18"
     },
     {
       "id": "ponytail_pi_extension_index",
@@ -18794,6 +18882,39 @@
       "source_location": "L1"
     },
     {
+      "id": "scripts_graphic_design_visual_engine_rationale_272",
+      "label": "Harmonious color palette generator supporting classical color wheel (HSL) and\u2026",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "harmonious color palette generator supporting classical color wheel (hsl) and...",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L272"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_278",
+      "label": "Generate a monochromatic ramp varying in Lightness.",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "generate a monochromatic ramp varying in lightness.",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L278"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_285",
+      "label": "Generate analogous colors clustered around base hue.",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "generate analogous colors clustered around base hue.",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L285"
+    },
+    {
       "id": "scripts_graphic_design_visual_engine_rationale_296",
       "label": "Generate complementary color pair (180\u00b0 offset).",
       "_origin": "ast",
@@ -18814,6 +18935,39 @@
       "norm_label": "generate triadic 3-color harmony (120\u00b0 offsets).",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L302"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_312",
+      "label": "Generate split-complementary harmony (base + 2 colors flanking complement).",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "generate split-complementary harmony (base + 2 colors flanking complement).",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L312"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_322",
+      "label": "Generate tetradic rectangular 4-color harmony.",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "generate tetradic rectangular 4-color harmony.",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L322"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_333",
+      "label": "Generate multi-stop gradient scale interpolated in CIELAB space.",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "generate multi-stop gradient scale interpolated in cielab space.",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L333"
     },
     {
       "id": "scripts_graphic_design_visual_engine_rationale_45",
@@ -18847,6 +19001,17 @@
       "norm_label": "generate full svg graphic poster with mathematical curves and layered depth.",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L638"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_68",
+      "label": "Construct Color from HSL (H in [0, 360), S in [0, 1], L in [0, 1]).",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "construct color from hsl (h in [0, 360), s in [0, 1], l in [0, 1]).",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L68"
     },
     {
       "id": "scripts_graphic_design_visual_engine_rationale_745",
@@ -26705,7 +26870,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/claudia_telegram_bot.py",
-      "source_location": "L106",
+      "source_location": "L132",
       "weight": 1.0
     },
     {
@@ -26717,7 +26882,31 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/claudia_telegram_bot.py",
-      "source_location": "L136",
+      "source_location": "L182",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_claudia_telegram_bot_run_claudia_bot",
+      "target": "scripts_claudia_telegram_bot_fetch_live_sol_price",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/claudia_telegram_bot.py",
+      "source_location": "L197",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_claudia_telegram_bot_run_claudia_bot",
+      "target": "scripts_send_hourly_investor_report_generate_hourly_report",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/claudia_telegram_bot.py",
+      "source_location": "L261",
       "weight": 1.0
     },
     {
@@ -26729,7 +26918,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/claudia_telegram_bot.py",
-      "source_location": "L147",
+      "source_location": "L271",
       "weight": 1.0
     },
     {
@@ -26741,7 +26930,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/claudia_telegram_bot.py",
-      "source_location": "L148",
+      "source_location": "L272",
       "weight": 1.0
     },
     {
@@ -28194,6 +28383,30 @@
       "context": "call",
       "source_file": "scripts/sanitize_and_sync_all_subs.py",
       "source_location": "L95",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_send_hourly_investor_report_generate_hourly_report",
+      "target": "scripts_send_hourly_investor_report_fetch_sol_price",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/send_hourly_investor_report.py",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_send_hourly_investor_report_push_to_telegram",
+      "target": "scripts_send_hourly_investor_report_generate_hourly_report",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/send_hourly_investor_report.py",
+      "source_location": "L87",
       "weight": 1.0
     },
     {
@@ -31002,6 +31215,18 @@
       "context": "import",
       "source_file": "scripts/benchmark_engine.py",
       "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_claudia_telegram_bot",
+      "target": "scripts_send_hourly_investor_report_generate_hourly_report",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "scripts/claudia_telegram_bot.py",
+      "source_location": "L260",
       "weight": 1.0
     },
     {
@@ -46623,13 +46848,35 @@
     },
     {
       "source": "scripts_claudia_telegram_bot",
+      "target": "scripts_claudia_telegram_bot_query_claudia_llm",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/claudia_telegram_bot.py",
+      "source_location": "L100",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_claudia_telegram_bot",
+      "target": "scripts_claudia_telegram_bot_fetch_live_sol_price",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/claudia_telegram_bot.py",
+      "source_location": "L137",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_claudia_telegram_bot",
       "target": "scripts_claudia_telegram_bot_run_claudia_bot",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/claudia_telegram_bot.py",
-      "source_location": "L113",
+      "source_location": "L147",
       "weight": 1.0
     },
     {
@@ -46640,7 +46887,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/claudia_telegram_bot.py",
-      "source_location": "L35",
+      "source_location": "L49",
       "weight": 1.0
     },
     {
@@ -46651,7 +46898,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/claudia_telegram_bot.py",
-      "source_location": "L53",
+      "source_location": "L67",
       "weight": 1.0
     },
     {
@@ -46662,18 +46909,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/claudia_telegram_bot.py",
-      "source_location": "L71",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_claudia_telegram_bot",
-      "target": "scripts_claudia_telegram_bot_query_claudia_llm",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/claudia_telegram_bot.py",
-      "source_location": "L77",
+      "source_location": "L90",
       "weight": 1.0
     },
     {
@@ -47678,6 +47914,39 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_send_hourly_investor_report",
+      "target": "scripts_send_hourly_investor_report_fetch_sol_price",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/send_hourly_investor_report.py",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_send_hourly_investor_report",
+      "target": "scripts_send_hourly_investor_report_generate_hourly_report",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/send_hourly_investor_report.py",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_send_hourly_investor_report",
+      "target": "scripts_send_hourly_investor_report_push_to_telegram",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/send_hourly_investor_report.py",
+      "source_location": "L86",
+      "weight": 1.0
+    },
+    {
       "source": "scripts_send_telegram_gold_report",
       "target": "scripts_send_telegram_gold_report_send_live_report",
       "relation": "contains",
@@ -47917,6 +48186,83 @@
       "confidence_score": 1.0,
       "source_file": "scripts/test_brain.py",
       "source_location": "L89",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_dm_trade_alerts",
+      "target": "scripts_test_dm_trade_alerts_get_user_slash_msg",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/test_dm_trade_alerts.py",
+      "source_location": "L121",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_dm_trade_alerts",
+      "target": "scripts_test_dm_trade_alerts_get_status_slash_msg",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/test_dm_trade_alerts.py",
+      "source_location": "L142",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_dm_trade_alerts",
+      "target": "scripts_test_dm_trade_alerts_send_msg",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/test_dm_trade_alerts.py",
+      "source_location": "L162",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_dm_trade_alerts",
+      "target": "scripts_test_dm_trade_alerts_get_open_position_msg",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/test_dm_trade_alerts.py",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_dm_trade_alerts",
+      "target": "scripts_test_dm_trade_alerts_get_closed_position_msg",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/test_dm_trade_alerts.py",
+      "source_location": "L54",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_dm_trade_alerts",
+      "target": "scripts_test_dm_trade_alerts_get_help_slash_msg",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/test_dm_trade_alerts.py",
+      "source_location": "L83",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_dm_trade_alerts",
+      "target": "scripts_test_dm_trade_alerts_get_saldo_slash_msg",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/test_dm_trade_alerts.py",
+      "source_location": "L98",
       "weight": 1.0
     },
     {
@@ -50879,6 +51225,17 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_send_hourly_investor_report_rationale_23",
+      "target": "scripts_send_hourly_investor_report_fetch_sol_price",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/send_hourly_investor_report.py",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
       "source": "scripts_strategic_swot_nucleus_engine_rationale_37",
       "target": "scripts_strategic_swot_nucleus_engine_strategicswotnucleusengine_add_swot",
       "relation": "rationale_for",
@@ -51941,5 +52298,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "4dc93b2ee98e6bfe06b933d85a660cea91f5da57"
+  "built_at_commit": "6787e1c79d4ac666d7c1d87673f187524da707da"
 }

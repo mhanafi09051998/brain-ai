@@ -1,16 +1,16 @@
 # Graph Report - GEMINI-HANAFI  (2026-08-29)
 
 ## Corpus Check
-- 297 files · ~405,994 words
+- 297 files · ~406,908 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2092 nodes · 2412 edges · 246 communities (213 shown, 33 thin omitted)
+- 2092 nodes · 2412 edges · 248 communities (214 shown, 34 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 38 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `8de69beb`
+- Built from commit: `4dc93b2e`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -133,9 +133,9 @@
 - copilot-instructions.md
 - ImageMatrix
 - ConvolutionKernelEngine
+- ColorSpaceMath
 - run_tests
-- image_vision_nucleus_engine.py
-- .letterbox_aspect_preserver
+- Any
 - RasterToVectorTracer
 - GenerativeGraphExecutor
 - Install
@@ -155,6 +155,8 @@
 - 🎯 Invarian Inti (Core Invariants)
 - 🎯 Invarian Inti (Core Invariants)
 - app.js
+- PaletteGenerator
+- .process_tiled_convolution
 - manifest.json
 - StrategicSWOTNucleusEngine
 - SWOTEngine
@@ -238,7 +240,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (246 total, 33 thin omitted)
+## Communities (248 total, 34 thin omitted)
 
 ### Community 0 - "run_deterministic_tests"
 Cohesion: 0.06
@@ -266,7 +268,7 @@ Nodes (15): Antigravity CLI, Claude Code, CodeWhale, Codex, Devin CLI, Gemini CL
 
 ### Community 6 - "MultiHopEngine"
 Cohesion: 0.10
-Nodes (14): Local Benchmark Evaluator & Verification Harness for Claudia 2.0 Includes SWE-…, run_evaluation_checks(), MultiHopEngine, Any, Multi-Hop Query Decomposer & GraphRAG Traversal Engine Author: Claudia…, Decomposes complex questions into atomic 1-hop sub-queries., Traverse knowledge graph from start entity up to max_depth hops., Reciprocal Rank Fusion (RRF) combining keyword and graph results. (+6 more)
+Nodes (14): Real Deterministic 12-Parameter Benchmark Evaluator & Ground-Truth Test Suite…, run_real_12_parameter_suite(), MultiHopEngine, Any, Multi-Hop Query Decomposer & GraphRAG Traversal Engine Author: Claudia…, Decomposes complex questions into atomic 1-hop sub-queries., Traverse knowledge graph from start entity up to max_depth hops., Reciprocal Rank Fusion (RRF) combining keyword and graph results. (+6 more)
 
 ### Community 7 - "run_verification_tests"
 Cohesion: 0.13
@@ -399,8 +401,8 @@ Cohesion: 0.14
 Nodes (13): 1. Edge Ingress Caddyfile Blueprint (Caddy 2.8+ HTTP/3 + Security Headers + Passive Healthcheck), 1. Modern Edge Ingress & Transport Layer (Caddy 2.8+ HTTP/3 QUIC & TLS 1.3 0-RTT), 2. Multi-Stage Distroless Dockerfile Blueprint, 2. Multi-Stage Distroless Hardening & Minimal Attack Surface, 3. PM2 Zero-Downtime Cluster Blueprint (`ecosystem.config.js`), 3. Zero-Downtime Cluster Supervision & Process Lifecycle (PM2 Orchestration), 4. Linux Kernel Namespaces & cgroups v2 Sandboxing, 5. Autonomous Edge SRE & High-Availability Playbook (+5 more)
 
 ### Community 37 - "run_self_tests"
-Cohesion: 0.10
-Nodes (16): GenerativePoster, PaletteGenerator, Harmonious color palette generator supporting classical color wheel (HSL) and…, Generate a monochromatic ramp varying in Lightness., Generate analogous colors clustered around base hue., Generate complementary color pair (180° offset)., Generate triadic 3-color harmony (120° offsets)., Generate split-complementary harmony (base + 2 colors flanking complement). (+8 more)
+Cohesion: 0.18
+Nodes (8): GenerativePoster, Generate complementary color pair (180° offset)., Generate triadic 3-color harmony (120° offsets)., Parse hex color (#RGB, #RGBA, #RRGGBB, #RRGGBBAA)., Algorithmic generative poster generator synthesizing: - Parametric Lissajous &…, Generate full SVG graphic poster with mathematical curves and layered depth., Execute 100% deterministic test suite covering color math, WCAG contrast,…, run_self_tests()
 
 ### Community 38 - "Neuron N031: Modern Data Architecture & Hybrid Search (PostgreSQL 17, pgvector HNSW, Drizzle ORM, SQLite WAL)"
 Cohesion: 0.15
@@ -625,24 +627,20 @@ Cohesion: 0.17
 Nodes (10): Ponytail, lazy senior dev mode, Before / after, Commands, Development, FAQ, How it works, License, Numbers (+2 more)
 
 ### Community 128 - "ImageMatrix"
-Cohesion: 0.20
-Nodes (4): ImageMatrix, Lightweight, high-performance 2D/3D pure Python pixel matrix. Layout:…, Convolves an image in bounded memory tiles of tile_size x tile_size. Uses…, Safe pixel retrieval with deterministic boundary clamping. Supported border…
+Cohesion: 0.15
+Nodes (7): GeometricRescaler, ImageMatrix, Lightweight, high-performance 2D/3D pure Python pixel matrix. Layout:…, Sub-pixel Geometric Rescaling and Aspect Ratio Preserver., High-precision bilinear interpolation rescaling. Maps target pixel centers…, Scales image while strictly preserving native aspect ratio, padding the…, Safe pixel retrieval with deterministic boundary clamping. Supported border…
 
 ### Community 129 - "ConvolutionKernelEngine"
 Cohesion: 0.16
 Nodes (8): ConvolutionKernelEngine, Pure Python Spatial Convolution Engine with standard and custom kernels., Generates normalized (2k+1)x(2k+1) 2D Gaussian Kernel: G(u,v) =…, Returns standard 3x3 Sobel kernels for horizontal (Gx) and vertical (Gy)…, Returns 3x3 Sharpen kernel: center = 1 + 4*strength, orthogonal edges =…, Returns standard 3x3 discrete Laplacian second-derivative kernel., Applies 2D spatial convolution across all channels of the image matrix., Calculates Sobel Edge Gradient Magnitude M = sqrt(Gx^2 + Gy^2) and Direction…
 
-### Community 130 - "run_tests"
-Cohesion: 0.21
-Nodes (8): ColorSpaceMath, Standard-compliant color space transformation algorithms., Weighted luminosity grayscale conversion. - BT.601 (SDTV/OpenCV default): Y =…, Converts RGB [0..255] to HSV (Hue in [0..360), Saturation in [0..1], Value in…, Converts HSV (Hue [0..360), Saturation [0..1], Value [0..1]) back to RGB…, Converts RGB [0..255] to ITU-R BT.601 YCbCr digital video standard., Converts ITU-R BT.601 YCbCr back to RGB [0..255]., run_tests()
+### Community 130 - "ColorSpaceMath"
+Cohesion: 0.17
+Nodes (7): ColorSpaceMath, Standard-compliant color space transformation algorithms., Weighted luminosity grayscale conversion. - BT.601 (SDTV/OpenCV default): Y =…, Converts RGB [0..255] to HSV (Hue in [0..360), Saturation in [0..1], Value in…, Converts HSV (Hue [0..360), Saturation [0..1], Value [0..1]) back to RGB…, Converts RGB [0..255] to ITU-R BT.601 YCbCr digital video standard., Converts ITU-R BT.601 YCbCr back to RGB [0..255].
 
-### Community 131 - "image_vision_nucleus_engine.py"
-Cohesion: 0.18
-Nodes (10): CheckpointLoaderNode, CLIPTextEncodeNode, ComfyNode, ControlNetApplyNode, KSamplerNode, Any, Demand-driven tile chunking pipeline for low-memory image processing. Executes…, Base executable node in a generative AI visual DAG. (+2 more)
-
-### Community 132 - ".letterbox_aspect_preserver"
-Cohesion: 0.29
-Nodes (5): GeometricRescaler, Sub-pixel Geometric Rescaling and Aspect Ratio Preserver., High-precision bilinear interpolation rescaling. Maps target pixel centers…, Scales image while strictly preserving native aspect ratio, padding the…, Maps a bounding box (x, y, w, h) from letterboxed space back to native source…
+### Community 131 - "run_tests"
+Cohesion: 0.50
+Nodes (8): CheckpointLoaderNode, CLIPTextEncodeNode, ComfyNode, ControlNetApplyNode, KSamplerNode, Base executable node in a generative AI visual DAG., run_tests(), VAEDecodeNode
 
 ### Community 133 - "RasterToVectorTracer"
 Cohesion: 0.31
@@ -715,6 +713,14 @@ Nodes (6): 1. Headless Non-Interactive Terminal Scripting, 2. eBPF Kernel Probin
 ### Community 161 - "app.js"
 Cohesion: 0.11
 Nodes (33): checkAuthSession(), clearSearch(), fetchMovies(), fetchServerWatchProgress(), formatTime(), getLocalProgress(), getToken(), handleLogout() (+25 more)
+
+### Community 163 - "PaletteGenerator"
+Cohesion: 0.18
+Nodes (8): PaletteGenerator, Harmonious color palette generator supporting classical color wheel (HSL) and…, Generate a monochromatic ramp varying in Lightness., Generate analogous colors clustered around base hue., Generate split-complementary harmony (base + 2 colors flanking complement)., Generate tetradic rectangular 4-color harmony., Generate multi-stop gradient scale interpolated in CIELAB space., Construct Color from HSL (H in [0, 360), S in [0, 1], L in [0, 1]).
+
+### Community 164 - ".process_tiled_convolution"
+Cohesion: 0.50
+Nodes (3): Demand-driven tile chunking pipeline for low-memory image processing. Executes…, Convolves an image in bounded memory tiles of tile_size x tile_size. Uses…, StreamingTileProcessor
 
 ### Community 168 - "manifest.json"
 Cohesion: 0.22
@@ -907,16 +913,16 @@ Nodes (15): 10. Legal — **Legal Agent Benchmark, Held-out**, 11. Health — **
 ## Knowledge Gaps
 - **967 isolated node(s):** `dynamic`, `dynamic`, `dynamic`, `dynamic`, `dynamic` (+962 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **33 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **34 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `run_tests()` connect `run_tests` to `ImageMatrix`, `ConvolutionKernelEngine`, `image_vision_nucleus_engine.py`, `.letterbox_aspect_preserver`, `RasterToVectorTracer`, `GenerativeGraphExecutor`?**
+- **Why does `run_tests()` connect `run_tests` to `ImageMatrix`, `ConvolutionKernelEngine`, `ColorSpaceMath`, `Any`, `RasterToVectorTracer`, `GenerativeGraphExecutor`, `.process_tiled_convolution`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
-- **Why does `Color` connect `Color` to `run_self_tests`?**
+- **Why does `Color` connect `Color` to `PaletteGenerator`, `run_self_tests`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
-- **Why does `RasterToVectorTracer` connect `RasterToVectorTracer` to `image_vision_nucleus_engine.py`?**
+- **Why does `RasterToVectorTracer` connect `RasterToVectorTracer` to `run_tests`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **What connects `dynamic`, `dynamic`, `dynamic` to the rest of the system?**
   _967 weakly-connected nodes found - possible documentation gaps or missing edges._
