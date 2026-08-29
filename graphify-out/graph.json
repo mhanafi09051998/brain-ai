@@ -121,6 +121,19 @@
       "source_location": "L87"
     },
     {
+      "id": "scripts_image_vision_nucleus_engine_geometricrescaler",
+      "label": "GeometricRescaler",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 128,
+      "community_name": "ImageMatrix",
+      "file_type": "code",
+      "norm_label": "geometricrescaler",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L364"
+    },
+    {
       "id": "scripts_image_vision_nucleus_engine_imagematrix",
       "label": "ImageMatrix",
       "_callable": true,
@@ -153,7 +166,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 130,
-      "community_name": "run_tests",
+      "community_name": "ColorSpaceMath",
       "file_type": "code",
       "norm_label": "colorspacemath",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -166,7 +179,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 131,
-      "community_name": "image_vision_nucleus_engine.py",
+      "community_name": "run_tests",
       "file_type": "code",
       "norm_label": "checkpointloadernode",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -179,7 +192,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 131,
-      "community_name": "image_vision_nucleus_engine.py",
+      "community_name": "run_tests",
       "file_type": "code",
       "norm_label": "cliptextencodenode",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -192,7 +205,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 131,
-      "community_name": "image_vision_nucleus_engine.py",
+      "community_name": "run_tests",
       "file_type": "code",
       "norm_label": "comfynode",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -205,7 +218,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 131,
-      "community_name": "image_vision_nucleus_engine.py",
+      "community_name": "run_tests",
       "file_type": "code",
       "norm_label": "controlnetapplynode",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -218,24 +231,11 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 131,
-      "community_name": "image_vision_nucleus_engine.py",
+      "community_name": "run_tests",
       "file_type": "code",
       "norm_label": "ksamplernode",
       "source_file": "scripts/image_vision_nucleus_engine.py",
       "source_location": "L710"
-    },
-    {
-      "id": "scripts_image_vision_nucleus_engine_streamingtileprocessor",
-      "label": "StreamingTileProcessor",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 131,
-      "community_name": "image_vision_nucleus_engine.py",
-      "file_type": "code",
-      "norm_label": "streamingtileprocessor",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L614"
     },
     {
       "id": "scripts_image_vision_nucleus_engine_vaedecodenode",
@@ -244,24 +244,11 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 131,
-      "community_name": "image_vision_nucleus_engine.py",
+      "community_name": "run_tests",
       "file_type": "code",
       "norm_label": "vaedecodenode",
       "source_file": "scripts/image_vision_nucleus_engine.py",
       "source_location": "L731"
-    },
-    {
-      "id": "scripts_image_vision_nucleus_engine_geometricrescaler",
-      "label": "GeometricRescaler",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 132,
-      "community_name": ".letterbox_aspect_preserver",
-      "file_type": "code",
-      "norm_label": "geometricrescaler",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L364"
     },
     {
       "id": "scripts_image_vision_nucleus_engine_rastertovectortracer",
@@ -316,6 +303,19 @@
       "source_location": "L17"
     },
     {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator",
+      "label": "PaletteGenerator",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 174,
+      "community_name": "PaletteGenerator",
+      "file_type": "code",
+      "norm_label": "palettegenerator",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L271"
+    },
+    {
       "id": "scripts_graphic_design_visual_engine_vec2d",
       "label": "Vec2D",
       "_callable": true,
@@ -327,6 +327,19 @@
       "norm_label": "vec2d",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L351"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_streamingtileprocessor",
+      "label": "StreamingTileProcessor",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 253,
+      "community_name": ".process_tiled_convolution",
+      "file_type": "code",
+      "norm_label": "streamingtileprocessor",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L614"
     },
     {
       "id": "scripts_graphic_design_visual_engine_cubicbezier",
@@ -366,19 +379,6 @@
       "norm_label": "generativeposter",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L625"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator",
-      "label": "PaletteGenerator",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": "palettegenerator",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L271"
     },
     {
       "id": "scripts_graphic_design_visual_engine_iconbuilder24",
@@ -759,6 +759,30 @@
       "source_location": "L14"
     },
     {
+      "id": "scripts_image_vision_nucleus_engine_geometricrescaler_bilinear_rescale",
+      "label": ".bilinear_rescale()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 128,
+      "community_name": "ImageMatrix",
+      "file_type": "code",
+      "norm_label": ".bilinear_rescale()",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L370"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_geometricrescaler_letterbox_aspect_preserver",
+      "label": ".letterbox_aspect_preserver()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 128,
+      "community_name": "ImageMatrix",
+      "file_type": "code",
+      "norm_label": ".letterbox_aspect_preserver()",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L408"
+    },
+    {
       "id": "scripts_image_vision_nucleus_engine_imagematrix_clone",
       "label": ".clone()",
       "_callable": true,
@@ -819,16 +843,16 @@
       "source_location": "L100"
     },
     {
-      "id": "scripts_image_vision_nucleus_engine_streamingtileprocessor_process_tiled_convolution",
-      "label": ".process_tiled_convolution()",
+      "id": "scripts_image_vision_nucleus_engine_vaedecodenode_execute",
+      "label": ".execute()",
       "_callable": true,
       "_origin": "ast",
       "community": 128,
       "community_name": "ImageMatrix",
       "file_type": "code",
-      "norm_label": ".process_tiled_convolution()",
+      "norm_label": ".execute()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L621"
+      "source_location": "L732"
     },
     {
       "id": "scripts_image_vision_nucleus_engine_convolutionkernelengine_convolve_2d",
@@ -908,7 +932,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 130,
-      "community_name": "run_tests",
+      "community_name": "ColorSpaceMath",
       "file_type": "code",
       "norm_label": ".hsv_to_rgb()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -920,7 +944,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 130,
-      "community_name": "run_tests",
+      "community_name": "ColorSpaceMath",
       "file_type": "code",
       "norm_label": ".rgb_to_grayscale()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -932,7 +956,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 130,
-      "community_name": "run_tests",
+      "community_name": "ColorSpaceMath",
       "file_type": "code",
       "norm_label": ".rgb_to_hsv()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -944,7 +968,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 130,
-      "community_name": "run_tests",
+      "community_name": "ColorSpaceMath",
       "file_type": "code",
       "norm_label": ".rgb_to_ycbcr()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -956,7 +980,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 130,
-      "community_name": "run_tests",
+      "community_name": "ColorSpaceMath",
       "file_type": "code",
       "norm_label": ".ycbcr_to_rgb()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -967,7 +991,7 @@
       "label": "run_tests()",
       "_callable": true,
       "_origin": "ast",
-      "community": 130,
+      "community": 131,
       "community_name": "run_tests",
       "file_type": "code",
       "norm_label": "run_tests()",
@@ -979,8 +1003,8 @@
       "label": ".execute()",
       "_callable": true,
       "_origin": "ast",
-      "community": 131,
-      "community_name": "image_vision_nucleus_engine.py",
+      "community": 132,
+      "community_name": "Any",
       "file_type": "code",
       "norm_label": ".execute()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -991,8 +1015,8 @@
       "label": ".execute()",
       "_callable": true,
       "_origin": "ast",
-      "community": 131,
-      "community_name": "image_vision_nucleus_engine.py",
+      "community": 132,
+      "community_name": "Any",
       "file_type": "code",
       "norm_label": ".execute()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -1003,8 +1027,8 @@
       "label": ".execute()",
       "_callable": true,
       "_origin": "ast",
-      "community": 131,
-      "community_name": "image_vision_nucleus_engine.py",
+      "community": 132,
+      "community_name": "Any",
       "file_type": "code",
       "norm_label": ".execute()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -1015,8 +1039,8 @@
       "label": ".__init__()",
       "_callable": true,
       "_origin": "ast",
-      "community": 131,
-      "community_name": "image_vision_nucleus_engine.py",
+      "community": 132,
+      "community_name": "Any",
       "file_type": "code",
       "norm_label": ".__init__()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -1027,60 +1051,12 @@
       "label": ".execute()",
       "_callable": true,
       "_origin": "ast",
-      "community": 131,
-      "community_name": "image_vision_nucleus_engine.py",
+      "community": 132,
+      "community_name": "Any",
       "file_type": "code",
       "norm_label": ".execute()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
       "source_location": "L696"
-    },
-    {
-      "id": "scripts_image_vision_nucleus_engine_ksamplernode_execute",
-      "label": ".execute()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 131,
-      "community_name": "image_vision_nucleus_engine.py",
-      "file_type": "code",
-      "norm_label": ".execute()",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L711"
-    },
-    {
-      "id": "scripts_image_vision_nucleus_engine_vaedecodenode_execute",
-      "label": ".execute()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 131,
-      "community_name": "image_vision_nucleus_engine.py",
-      "file_type": "code",
-      "norm_label": ".execute()",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L732"
-    },
-    {
-      "id": "scripts_image_vision_nucleus_engine_geometricrescaler_bilinear_rescale",
-      "label": ".bilinear_rescale()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 132,
-      "community_name": ".letterbox_aspect_preserver",
-      "file_type": "code",
-      "norm_label": ".bilinear_rescale()",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L370"
-    },
-    {
-      "id": "scripts_image_vision_nucleus_engine_geometricrescaler_letterbox_aspect_preserver",
-      "label": ".letterbox_aspect_preserver()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 132,
-      "community_name": ".letterbox_aspect_preserver",
-      "file_type": "code",
-      "norm_label": ".letterbox_aspect_preserver()",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L408"
     },
     {
       "id": "scripts_image_vision_nucleus_engine_geometricrescaler_unletterbox_box",
@@ -1088,11 +1064,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 132,
-      "community_name": ".letterbox_aspect_preserver",
+      "community_name": "Any",
       "file_type": "code",
       "norm_label": ".unletterbox_box()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
       "source_location": "L455"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_ksamplernode_execute",
+      "label": ".execute()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 132,
+      "community_name": "Any",
+      "file_type": "code",
+      "norm_label": ".execute()",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L711"
     },
     {
       "id": "scripts_image_vision_nucleus_engine_rastertovectortracer_generate_svg_from_mask",
@@ -2064,7 +2052,7 @@
       "file_type": "code",
       "norm_label": "build_network_master_dataset()",
       "source_file": "scripts/scrape_network_knowledge_engine.py",
-      "source_location": "L33"
+      "source_location": "L34"
     },
     {
       "id": "scripts_scrape_network_knowledge_engine_generate_knowledge_base_markdown",
@@ -2076,7 +2064,7 @@
       "file_type": "code",
       "norm_label": "generate_knowledge_base_markdown()",
       "source_file": "scripts/scrape_network_knowledge_engine.py",
-      "source_location": "L276"
+      "source_location": "L458"
     },
     {
       "id": "scripts_scrape_network_knowledge_engine_run_pipeline",
@@ -2088,7 +2076,79 @@
       "file_type": "code",
       "norm_label": "run_pipeline()",
       "source_file": "scripts/scrape_network_knowledge_engine.py",
-      "source_location": "L413"
+      "source_location": "L591"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_color_from_hsl",
+      "label": ".from_hsl()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 174,
+      "community_name": "PaletteGenerator",
+      "file_type": "code",
+      "norm_label": ".from_hsl()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L67"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_analogous",
+      "label": ".analogous()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 174,
+      "community_name": "PaletteGenerator",
+      "file_type": "code",
+      "norm_label": ".analogous()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L284"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_complementary",
+      "label": ".complementary()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 174,
+      "community_name": "PaletteGenerator",
+      "file_type": "code",
+      "norm_label": ".complementary()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L295"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_monochromatic",
+      "label": ".monochromatic()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 174,
+      "community_name": "PaletteGenerator",
+      "file_type": "code",
+      "norm_label": ".monochromatic()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L277"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_split_complementary",
+      "label": ".split_complementary()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 174,
+      "community_name": "PaletteGenerator",
+      "file_type": "code",
+      "norm_label": ".split_complementary()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L311"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_tetradic",
+      "label": ".tetradic()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 174,
+      "community_name": "PaletteGenerator",
+      "file_type": "code",
+      "norm_label": ".tetradic()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L321"
     },
     {
       "id": "scripts_ingest_swot_knowledge_process_case",
@@ -3747,6 +3807,18 @@
       "source_location": "L100"
     },
     {
+      "id": "scripts_image_vision_nucleus_engine_streamingtileprocessor_process_tiled_convolution",
+      "label": ".process_tiled_convolution()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 253,
+      "community_name": ".process_tiled_convolution",
+      "file_type": "code",
+      "norm_label": ".process_tiled_convolution()",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L621"
+    },
+    {
       "id": "scripts_graphic_design_visual_engine_cubicbezier_acceleration",
       "label": ".acceleration()",
       "_callable": true,
@@ -4179,18 +4251,6 @@
       "source_location": "L44"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_color_from_hsl",
-      "label": ".from_hsl()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": ".from_hsl()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L67"
-    },
-    {
       "id": "scripts_graphic_design_visual_engine_generativeposter_build_svg",
       "label": ".build_svg()",
       "_callable": true,
@@ -4215,42 +4275,6 @@
       "source_location": "L632"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_analogous",
-      "label": ".analogous()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": ".analogous()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L284"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_complementary",
-      "label": ".complementary()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": ".complementary()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L295"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_monochromatic",
-      "label": ".monochromatic()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": ".monochromatic()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L277"
-    },
-    {
       "id": "scripts_graphic_design_visual_engine_palettegenerator_scale",
       "label": ".scale()",
       "_callable": true,
@@ -4261,30 +4285,6 @@
       "norm_label": ".scale()",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L332"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_split_complementary",
-      "label": ".split_complementary()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": ".split_complementary()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L311"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_tetradic",
-      "label": ".tetradic()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": ".tetradic()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L321"
     },
     {
       "id": "scripts_graphic_design_visual_engine_palettegenerator_triadic",
@@ -6948,15 +6948,37 @@
       "source_location": "L28"
     },
     {
-      "id": "scripts_image_vision_nucleus_engine_rationale_626",
-      "label": "Convolves an image in bounded memory tiles of tile_size x tile_size. Uses\u2026",
+      "id": "scripts_image_vision_nucleus_engine_rationale_365",
+      "label": "Sub-pixel Geometric Rescaling and Aspect Ratio Preserver.",
       "_origin": "ast",
       "community": 128,
       "community_name": "ImageMatrix",
       "file_type": "rationale",
-      "norm_label": "convolves an image in bounded memory tiles of tile_size x tile_size. uses...",
+      "norm_label": "sub-pixel geometric rescaling and aspect ratio preserver.",
       "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L626"
+      "source_location": "L365"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_rationale_371",
+      "label": "High-precision bilinear interpolation rescaling. Maps target pixel centers\u2026",
+      "_origin": "ast",
+      "community": 128,
+      "community_name": "ImageMatrix",
+      "file_type": "rationale",
+      "norm_label": "high-precision bilinear interpolation rescaling. maps target pixel centers...",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L371"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_rationale_415",
+      "label": "Scales image while strictly preserving native aspect ratio, padding the\u2026",
+      "_origin": "ast",
+      "community": 128,
+      "community_name": "ImageMatrix",
+      "file_type": "rationale",
+      "norm_label": "scales image while strictly preserving native aspect ratio, padding the...",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L415"
     },
     {
       "id": "scripts_image_vision_nucleus_engine_rationale_71",
@@ -7279,7 +7301,7 @@
       "label": "Standard-compliant color space transformation algorithms.",
       "_origin": "ast",
       "community": 130,
-      "community_name": "run_tests",
+      "community_name": "ColorSpaceMath",
       "file_type": "rationale",
       "norm_label": "standard-compliant color space transformation algorithms.",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -7290,7 +7312,7 @@
       "label": "Weighted luminosity grayscale conversion. - BT.601 (SDTV/OpenCV default): Y =\u2026",
       "_origin": "ast",
       "community": 130,
-      "community_name": "run_tests",
+      "community_name": "ColorSpaceMath",
       "file_type": "rationale",
       "norm_label": "weighted luminosity grayscale conversion. - bt.601 (sdtv/opencv default): y =...",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -7301,7 +7323,7 @@
       "label": "Converts RGB [0..255] to HSV (Hue in [0..360), Saturation in [0..1], Value in\u2026",
       "_origin": "ast",
       "community": 130,
-      "community_name": "run_tests",
+      "community_name": "ColorSpaceMath",
       "file_type": "rationale",
       "norm_label": "converts rgb [0..255] to hsv (hue in [0..360), saturation in [0..1], value in...",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -7312,7 +7334,7 @@
       "label": "Converts HSV (Hue [0..360), Saturation [0..1], Value [0..1]) back to RGB\u2026",
       "_origin": "ast",
       "community": 130,
-      "community_name": "run_tests",
+      "community_name": "ColorSpaceMath",
       "file_type": "rationale",
       "norm_label": "converts hsv (hue [0..360), saturation [0..1], value [0..1]) back to rgb...",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -7323,7 +7345,7 @@
       "label": "Converts RGB [0..255] to ITU-R BT.601 YCbCr digital video standard.",
       "_origin": "ast",
       "community": 130,
-      "community_name": "run_tests",
+      "community_name": "ColorSpaceMath",
       "file_type": "rationale",
       "norm_label": "converts rgb [0..255] to itu-r bt.601 ycbcr digital video standard.",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -7334,7 +7356,7 @@
       "label": "Converts ITU-R BT.601 YCbCr back to RGB [0..255].",
       "_origin": "ast",
       "community": 130,
-      "community_name": "run_tests",
+      "community_name": "ColorSpaceMath",
       "file_type": "rationale",
       "norm_label": "converts itu-r bt.601 ycbcr back to rgb [0..255].",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -7345,84 +7367,40 @@
       "label": "image_vision_nucleus_engine.py",
       "_origin": "ast",
       "community": 131,
-      "community_name": "image_vision_nucleus_engine.py",
+      "community_name": "run_tests",
       "file_type": "code",
       "norm_label": "image_vision_nucleus_engine.py",
       "source_file": "scripts/image_vision_nucleus_engine.py",
       "source_location": "L1"
     },
     {
-      "id": "scripts_image_vision_nucleus_engine_py_any",
-      "label": "Any",
-      "_origin": "ast",
-      "community": 131,
-      "community_name": "image_vision_nucleus_engine.py",
-      "file_type": "code",
-      "norm_label": "any",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "scripts_image_vision_nucleus_engine_rationale_615",
-      "label": "Demand-driven tile chunking pipeline for low-memory image processing. Executes\u2026",
-      "_origin": "ast",
-      "community": 131,
-      "community_name": "image_vision_nucleus_engine.py",
-      "file_type": "rationale",
-      "norm_label": "demand-driven tile chunking pipeline for low-memory image processing. executes...",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L615"
-    },
-    {
       "id": "scripts_image_vision_nucleus_engine_rationale_662",
       "label": "Base executable node in a generative AI visual DAG.",
       "_origin": "ast",
       "community": 131,
-      "community_name": "image_vision_nucleus_engine.py",
+      "community_name": "run_tests",
       "file_type": "rationale",
       "norm_label": "base executable node in a generative ai visual dag.",
       "source_file": "scripts/image_vision_nucleus_engine.py",
       "source_location": "L662"
     },
     {
-      "id": "scripts_image_vision_nucleus_engine_rationale_365",
-      "label": "Sub-pixel Geometric Rescaling and Aspect Ratio Preserver.",
+      "id": "scripts_image_vision_nucleus_engine_py_any",
+      "label": "Any",
       "_origin": "ast",
       "community": 132,
-      "community_name": ".letterbox_aspect_preserver",
-      "file_type": "rationale",
-      "norm_label": "sub-pixel geometric rescaling and aspect ratio preserver.",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L365"
-    },
-    {
-      "id": "scripts_image_vision_nucleus_engine_rationale_371",
-      "label": "High-precision bilinear interpolation rescaling. Maps target pixel centers\u2026",
-      "_origin": "ast",
-      "community": 132,
-      "community_name": ".letterbox_aspect_preserver",
-      "file_type": "rationale",
-      "norm_label": "high-precision bilinear interpolation rescaling. maps target pixel centers...",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L371"
-    },
-    {
-      "id": "scripts_image_vision_nucleus_engine_rationale_415",
-      "label": "Scales image while strictly preserving native aspect ratio, padding the\u2026",
-      "_origin": "ast",
-      "community": 132,
-      "community_name": ".letterbox_aspect_preserver",
-      "file_type": "rationale",
-      "norm_label": "scales image while strictly preserving native aspect ratio, padding the...",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L415"
+      "community_name": "Any",
+      "file_type": "code",
+      "norm_label": "any",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "scripts_image_vision_nucleus_engine_rationale_459",
       "label": "Maps a bounding box (x, y, w, h) from letterboxed space back to native source\u2026",
       "_origin": "ast",
       "community": 132,
-      "community_name": ".letterbox_aspect_preserver",
+      "community_name": "Any",
       "file_type": "rationale",
       "norm_label": "maps a bounding box (x, y, w, h) from letterboxed space back to native source...",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -10160,7 +10138,7 @@
       "label": "network_engineering_world_class.md",
       "_origin": "ast",
       "community": 166,
-      "community_name": "World-Class Computer Networking & Systems Engineering: The Definitive Reference",
+      "community_name": "World-Class Computer Networking & MikroTik RouterOS Architecture: The Definitive Reference",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "network_engineering_world_class.md",
@@ -10172,19 +10150,19 @@
       "label": "1. The Networking Stack: Layer-by-Layer Architectural Invariants",
       "_origin": "ast",
       "community": 166,
-      "community_name": "World-Class Computer Networking & Systems Engineering: The Definitive Reference",
+      "community_name": "World-Class Computer Networking & MikroTik RouterOS Architecture: The Definitive Reference",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "1. the networking stack: layer-by-layer architectural invariants",
       "source_file": "learning/knowledge_base/network_engineering_world_class.md",
-      "source_location": "L19"
+      "source_location": "L20"
     },
     {
       "id": "learning_knowledge_base_network_engineering_world_class_2_transport_layer_tcp_udp_quic_and_congestion_control",
       "label": "2. Transport Layer: TCP, UDP, QUIC, and Congestion Control",
       "_origin": "ast",
       "community": 166,
-      "community_name": "World-Class Computer Networking & Systems Engineering: The Definitive Reference",
+      "community_name": "World-Class Computer Networking & MikroTik RouterOS Architecture: The Definitive Reference",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "2. transport layer: tcp, udp, quic, and congestion control",
@@ -10196,175 +10174,163 @@
       "label": "3. Low-Level Socket Programming & Asynchronous I/O",
       "_origin": "ast",
       "community": 166,
-      "community_name": "World-Class Computer Networking & Systems Engineering: The Definitive Reference",
+      "community_name": "World-Class Computer Networking & MikroTik RouterOS Architecture: The Definitive Reference",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "3. low-level socket programming & asynchronous i/o",
       "source_file": "learning/knowledge_base/network_engineering_world_class.md",
-      "source_location": "L72"
+      "source_location": "L67"
     },
     {
       "id": "learning_knowledge_base_network_engineering_world_class_4_kernel_networking_ebpf_xdp_high_speed_packet_processing",
       "label": "4. Kernel Networking, eBPF & XDP High-Speed Packet Processing",
       "_origin": "ast",
       "community": 166,
-      "community_name": "World-Class Computer Networking & Systems Engineering: The Definitive Reference",
+      "community_name": "World-Class Computer Networking & MikroTik RouterOS Architecture: The Definitive Reference",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "4. kernel networking, ebpf & xdp high-speed packet processing",
       "source_file": "learning/knowledge_base/network_engineering_world_class.md",
-      "source_location": "L86"
+      "source_location": "L73"
     },
     {
-      "id": "learning_knowledge_base_network_engineering_world_class_5_distributed_cloud_networking_cni_service_mesh",
-      "label": "5. Distributed Cloud Networking, CNI, & Service Mesh",
+      "id": "learning_knowledge_base_network_engineering_world_class_5_1_packet_flow_fasttrack_acceleration",
+      "label": "5.1 Packet Flow & FastTrack Acceleration",
       "_origin": "ast",
       "community": 166,
-      "community_name": "World-Class Computer Networking & Systems Engineering: The Definitive Reference",
+      "community_name": "World-Class Computer Networking & MikroTik RouterOS Architecture: The Definitive Reference",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "5. distributed cloud networking, cni, & service mesh",
+      "norm_label": "5.1 packet flow & fasttrack acceleration",
       "source_file": "learning/knowledge_base/network_engineering_world_class.md",
-      "source_location": "L103"
+      "source_location": "L81"
     },
     {
-      "id": "learning_knowledge_base_network_engineering_world_class_6_network_security_protocol_exploits_and_cryptographic_defenses",
-      "label": "6. Network Security, Protocol Exploits, and Cryptographic Defenses",
+      "id": "learning_knowledge_base_network_engineering_world_class_5_2_multi_wan_load_balancing_with_pcc_per_connection_classifier",
+      "label": "5.2 Multi-WAN Load Balancing with PCC (Per Connection Classifier)",
       "_origin": "ast",
       "community": 166,
-      "community_name": "World-Class Computer Networking & Systems Engineering: The Definitive Reference",
+      "community_name": "World-Class Computer Networking & MikroTik RouterOS Architecture: The Definitive Reference",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "6. network security, protocol exploits, and cryptographic defenses",
+      "norm_label": "5.2 multi-wan load balancing with pcc (per connection classifier)",
       "source_file": "learning/knowledge_base/network_engineering_world_class.md",
-      "source_location": "L116"
+      "source_location": "L89"
     },
     {
-      "id": "learning_knowledge_base_network_engineering_world_class_congestion_control_algorithms",
-      "label": "Congestion Control Algorithms",
+      "id": "learning_knowledge_base_network_engineering_world_class_5_3_qos_htb_pcq_per_connection_queue",
+      "label": "5.3 QoS, HTB & PCQ (Per Connection Queue)",
       "_origin": "ast",
       "community": 166,
-      "community_name": "World-Class Computer Networking & Systems Engineering: The Definitive Reference",
+      "community_name": "World-Class Computer Networking & MikroTik RouterOS Architecture: The Definitive Reference",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "congestion control algorithms",
+      "norm_label": "5.3 qos, htb & pcq (per connection queue)",
       "source_file": "learning/knowledge_base/network_engineering_world_class.md",
-      "source_location": "L65"
+      "source_location": "L94"
     },
     {
-      "id": "learning_knowledge_base_network_engineering_world_class_ebpf_sockmap_service_mesh_acceleration",
-      "label": "eBPF SOCKMAP & Service Mesh Acceleration",
+      "id": "learning_knowledge_base_network_engineering_world_class_5_4_bridge_vlan_filtering_hardware_offload_crs_ccr",
+      "label": "5.4 Bridge VLAN Filtering & Hardware Offload (CRS/CCR)",
       "_origin": "ast",
       "community": 166,
-      "community_name": "World-Class Computer Networking & Systems Engineering: The Definitive Reference",
+      "community_name": "World-Class Computer Networking & MikroTik RouterOS Architecture: The Definitive Reference",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "ebpf sockmap & service mesh acceleration",
+      "norm_label": "5.4 bridge vlan filtering & hardware offload (crs/ccr)",
       "source_file": "learning/knowledge_base/network_engineering_world_class.md",
-      "source_location": "L97"
+      "source_location": "L98"
     },
     {
-      "id": "learning_knowledge_base_network_engineering_world_class_express_data_path_xdp",
-      "label": "eXpress Data Path (XDP)",
+      "id": "learning_knowledge_base_network_engineering_world_class_5_5_enterprise_bgp_in_routeros_v7",
+      "label": "5.5 Enterprise BGP in RouterOS v7",
       "_origin": "ast",
       "community": 166,
-      "community_name": "World-Class Computer Networking & Systems Engineering: The Definitive Reference",
+      "community_name": "World-Class Computer Networking & MikroTik RouterOS Architecture: The Definitive Reference",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "express data path (xdp)",
+      "norm_label": "5.5 enterprise bgp in routeros v7",
       "source_file": "learning/knowledge_base/network_engineering_world_class.md",
-      "source_location": "L88"
+      "source_location": "L102"
     },
     {
-      "id": "learning_knowledge_base_network_engineering_world_class_high_performance_zero_copy_primitives",
-      "label": "High-Performance Zero-Copy Primitives",
+      "id": "learning_knowledge_base_network_engineering_world_class_5_6_wireguard_site_to_site_tunneling",
+      "label": "5.6 WireGuard Site-to-Site Tunneling",
       "_origin": "ast",
       "community": 166,
-      "community_name": "World-Class Computer Networking & Systems Engineering: The Definitive Reference",
+      "community_name": "World-Class Computer Networking & MikroTik RouterOS Architecture: The Definitive Reference",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "high-performance zero-copy primitives",
+      "norm_label": "5.6 wireguard site-to-site tunneling",
+      "source_file": "learning/knowledge_base/network_engineering_world_class.md",
+      "source_location": "L106"
+    },
+    {
+      "id": "learning_knowledge_base_network_engineering_world_class_5_mikrotik_routeros_v7_enterprise_traffic_engineering",
+      "label": "5. MikroTik RouterOS v7 & Enterprise Traffic Engineering",
+      "_origin": "ast",
+      "community": 166,
+      "community_name": "World-Class Computer Networking & MikroTik RouterOS Architecture: The Definitive Reference",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "5. mikrotik routeros v7 & enterprise traffic engineering",
       "source_file": "learning/knowledge_base/network_engineering_world_class.md",
       "source_location": "L79"
+    },
+    {
+      "id": "learning_knowledge_base_network_engineering_world_class_6_distributed_cloud_networking_cni_service_mesh",
+      "label": "6. Distributed Cloud Networking, CNI, & Service Mesh",
+      "_origin": "ast",
+      "community": 166,
+      "community_name": "World-Class Computer Networking & MikroTik RouterOS Architecture: The Definitive Reference",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "6. distributed cloud networking, cni, & service mesh",
+      "source_file": "learning/knowledge_base/network_engineering_world_class.md",
+      "source_location": "L112"
+    },
+    {
+      "id": "learning_knowledge_base_network_engineering_world_class_7_network_security_protocol_exploits_and_cryptographic_defenses",
+      "label": "7. Network Security, Protocol Exploits, and Cryptographic Defenses",
+      "_origin": "ast",
+      "community": 166,
+      "community_name": "World-Class Computer Networking & MikroTik RouterOS Architecture: The Definitive Reference",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "7. network security, protocol exploits, and cryptographic defenses",
+      "source_file": "learning/knowledge_base/network_engineering_world_class.md",
+      "source_location": "L118"
     },
     {
       "id": "learning_knowledge_base_network_engineering_world_class_key_transmission_invariants",
       "label": "Key Transmission Invariants",
       "_origin": "ast",
       "community": 166,
-      "community_name": "World-Class Computer Networking & Systems Engineering: The Definitive Reference",
+      "community_name": "World-Class Computer Networking & MikroTik RouterOS Architecture: The Definitive Reference",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "key transmission invariants",
       "source_file": "learning/knowledge_base/network_engineering_world_class.md",
-      "source_location": "L32"
-    },
-    {
-      "id": "learning_knowledge_base_network_engineering_world_class_kubernetes_cni_architecture",
-      "label": "Kubernetes CNI Architecture",
-      "_origin": "ast",
-      "community": 166,
-      "community_name": "World-Class Computer Networking & Systems Engineering: The Definitive Reference",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "kubernetes cni architecture",
-      "source_file": "learning/knowledge_base/network_engineering_world_class.md",
-      "source_location": "L105"
-    },
-    {
-      "id": "learning_knowledge_base_network_engineering_world_class_linux_sockets_epoll_edge_triggered_loop",
-      "label": "Linux Sockets & epoll Edge-Triggered Loop",
-      "_origin": "ast",
-      "community": 166,
-      "community_name": "World-Class Computer Networking & Systems Engineering: The Definitive Reference",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "linux sockets & epoll edge-triggered loop",
-      "source_file": "learning/knowledge_base/network_engineering_world_class.md",
-      "source_location": "L74"
-    },
-    {
-      "id": "learning_knowledge_base_network_engineering_world_class_load_balancing_strategies_l4_vs_l7",
-      "label": "Load Balancing Strategies: L4 vs L7",
-      "_origin": "ast",
-      "community": 166,
-      "community_name": "World-Class Computer Networking & Systems Engineering: The Definitive Reference",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "load balancing strategies: l4 vs l7",
-      "source_file": "learning/knowledge_base/network_engineering_world_class.md",
-      "source_location": "L110"
-    },
-    {
-      "id": "learning_knowledge_base_network_engineering_world_class_major_attack_vectors_canonical_mitigations",
-      "label": "Major Attack Vectors & Canonical Mitigations",
-      "_origin": "ast",
-      "community": 166,
-      "community_name": "World-Class Computer Networking & Systems Engineering: The Definitive Reference",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "major attack vectors & canonical mitigations",
-      "source_file": "learning/knowledge_base/network_engineering_world_class.md",
-      "source_location": "L118"
+      "source_location": "L33"
     },
     {
       "id": "learning_knowledge_base_network_engineering_world_class_osi_7_layer_vs_tcp_ip_4_layer_mapping",
       "label": "OSI 7-Layer vs TCP/IP 4-Layer Mapping",
       "_origin": "ast",
       "community": 166,
-      "community_name": "World-Class Computer Networking & Systems Engineering: The Definitive Reference",
+      "community_name": "World-Class Computer Networking & MikroTik RouterOS Architecture: The Definitive Reference",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "osi 7-layer vs tcp/ip 4-layer mapping",
       "source_file": "learning/knowledge_base/network_engineering_world_class.md",
-      "source_location": "L21"
+      "source_location": "L22"
     },
     {
       "id": "learning_knowledge_base_network_engineering_world_class_table_of_contents",
       "label": "\ud83d\udcd1 Table of Contents",
       "_origin": "ast",
       "community": 166,
-      "community_name": "World-Class Computer Networking & Systems Engineering: The Definitive Reference",
+      "community_name": "World-Class Computer Networking & MikroTik RouterOS Architecture: The Definitive Reference",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\ud83d\udcd1 table of contents",
@@ -10376,7 +10342,7 @@
       "label": "TCP 3-Way Handshake & Teardown State Transitions",
       "_origin": "ast",
       "community": 166,
-      "community_name": "World-Class Computer Networking & Systems Engineering: The Definitive Reference",
+      "community_name": "World-Class Computer Networking & MikroTik RouterOS Architecture: The Definitive Reference",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "tcp 3-way handshake & teardown state transitions",
@@ -10384,14 +10350,14 @@
       "source_location": "L41"
     },
     {
-      "id": "learning_knowledge_base_network_engineering_world_class_world_class_computer_networking_systems_engineering_the_definitive_reference",
-      "label": "World-Class Computer Networking & Systems Engineering: The Definitive Reference",
+      "id": "learning_knowledge_base_network_engineering_world_class_world_class_computer_networking_mikrotik_routeros_architecture_the_definitive_reference",
+      "label": "World-Class Computer Networking & MikroTik RouterOS Architecture: The Definitive Reference",
       "_origin": "ast",
       "community": 166,
-      "community_name": "World-Class Computer Networking & Systems Engineering: The Definitive Reference",
+      "community_name": "World-Class Computer Networking & MikroTik RouterOS Architecture: The Definitive Reference",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "world-class computer networking & systems engineering: the definitive reference",
+      "norm_label": "world-class computer networking & mikrotik routeros architecture: the definitive reference",
       "source_file": "learning/knowledge_base/network_engineering_world_class.md",
       "source_location": "L1"
     },
@@ -10902,6 +10868,83 @@
       "norm_label": "scrape_network_knowledge_engine.py",
       "source_file": "scripts/scrape_network_knowledge_engine.py",
       "source_location": "L1"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_272",
+      "label": "Harmonious color palette generator supporting classical color wheel (HSL) and\u2026",
+      "_origin": "ast",
+      "community": 174,
+      "community_name": "PaletteGenerator",
+      "file_type": "rationale",
+      "norm_label": "harmonious color palette generator supporting classical color wheel (hsl) and...",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L272"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_278",
+      "label": "Generate a monochromatic ramp varying in Lightness.",
+      "_origin": "ast",
+      "community": 174,
+      "community_name": "PaletteGenerator",
+      "file_type": "rationale",
+      "norm_label": "generate a monochromatic ramp varying in lightness.",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L278"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_285",
+      "label": "Generate analogous colors clustered around base hue.",
+      "_origin": "ast",
+      "community": 174,
+      "community_name": "PaletteGenerator",
+      "file_type": "rationale",
+      "norm_label": "generate analogous colors clustered around base hue.",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L285"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_296",
+      "label": "Generate complementary color pair (180\u00b0 offset).",
+      "_origin": "ast",
+      "community": 174,
+      "community_name": "PaletteGenerator",
+      "file_type": "rationale",
+      "norm_label": "generate complementary color pair (180\u00b0 offset).",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L296"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_312",
+      "label": "Generate split-complementary harmony (base + 2 colors flanking complement).",
+      "_origin": "ast",
+      "community": 174,
+      "community_name": "PaletteGenerator",
+      "file_type": "rationale",
+      "norm_label": "generate split-complementary harmony (base + 2 colors flanking complement).",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L312"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_322",
+      "label": "Generate tetradic rectangular 4-color harmony.",
+      "_origin": "ast",
+      "community": 174,
+      "community_name": "PaletteGenerator",
+      "file_type": "rationale",
+      "norm_label": "generate tetradic rectangular 4-color harmony.",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L322"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_68",
+      "label": "Construct Color from HSL (H in [0, 360), S in [0, 1], L in [0, 1]).",
+      "_origin": "ast",
+      "community": 174,
+      "community_name": "PaletteGenerator",
+      "file_type": "rationale",
+      "norm_label": "construct color from hsl (h in [0, 360), s in [0, 1], l in [0, 1]).",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L68"
     },
     {
       "id": "scripts_register_n056",
@@ -16989,6 +17032,54 @@
       "source_location": "L145"
     },
     {
+      "id": "learning_neurons_n099_enterprise_mikrotik_routeros_arc",
+      "label": "N099_enterprise_mikrotik_routeros_arc.md",
+      "_origin": "ast",
+      "community": 250,
+      "community_name": "N099: Enterprise MikroTik RouterOS Architecture and Traffic Engineering",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "n099_enterprise_mikrotik_routeros_arc.md",
+      "source_file": "learning/neurons/N099_enterprise_mikrotik_routeros_arc.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "learning_neurons_n099_enterprise_mikrotik_routeros_arc_disiplin_eksekusi",
+      "label": "\ud83d\udd12 Disiplin Eksekusi",
+      "_origin": "ast",
+      "community": 250,
+      "community_name": "N099: Enterprise MikroTik RouterOS Architecture and Traffic Engineering",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udd12 disiplin eksekusi",
+      "source_file": "learning/neurons/N099_enterprise_mikrotik_routeros_arc.md",
+      "source_location": "L12"
+    },
+    {
+      "id": "learning_neurons_n099_enterprise_mikrotik_routeros_arc_inti_pembelajaran_engineering_invariant",
+      "label": "\ud83c\udfaf Inti Pembelajaran (Engineering Invariant)",
+      "_origin": "ast",
+      "community": 250,
+      "community_name": "N099: Enterprise MikroTik RouterOS Architecture and Traffic Engineering",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83c\udfaf inti pembelajaran (engineering invariant)",
+      "source_file": "learning/neurons/N099_enterprise_mikrotik_routeros_arc.md",
+      "source_location": "L9"
+    },
+    {
+      "id": "learning_neurons_n099_enterprise_mikrotik_routeros_arc_n099_enterprise_mikrotik_routeros_architecture_and_traffic_engineering",
+      "label": "N099: Enterprise MikroTik RouterOS Architecture and Traffic Engineering",
+      "_origin": "ast",
+      "community": 250,
+      "community_name": "N099: Enterprise MikroTik RouterOS Architecture and Traffic Engineering",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "n099: enterprise mikrotik routeros architecture and traffic engineering",
+      "source_file": "learning/neurons/N099_enterprise_mikrotik_routeros_arc.md",
+      "source_location": "L1"
+    },
+    {
       "id": "learning_neurons_n081_world_class_repository_architecture",
       "label": "N081_world_class_repository_architecture.md",
       "_origin": "ast",
@@ -17287,6 +17378,28 @@
       "norm_label": "n082: 2026 next-gen frontier benchmark matrix & autonomous evaluation invariants",
       "source_file": "learning/neurons/N082_nextgen_frontier_benchmark_matrix.md",
       "source_location": "L1"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_rationale_615",
+      "label": "Demand-driven tile chunking pipeline for low-memory image processing. Executes\u2026",
+      "_origin": "ast",
+      "community": 253,
+      "community_name": ".process_tiled_convolution",
+      "file_type": "rationale",
+      "norm_label": "demand-driven tile chunking pipeline for low-memory image processing. executes...",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L615"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_rationale_626",
+      "label": "Convolves an image in bounded memory tiles of tile_size x tile_size. Uses\u2026",
+      "_origin": "ast",
+      "community": 253,
+      "community_name": ".process_tiled_convolution",
+      "file_type": "rationale",
+      "norm_label": "convolves an image in bounded memory tiles of tile_size x tile_size. uses...",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L626"
     },
     {
       "id": "scripts_continuous_12_frontier_daemon",
@@ -19002,7 +19115,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\udccb active tasks & history",
       "source_file": "memory.md",
-      "source_location": "L99"
+      "source_location": "L100"
     },
     {
       "id": "memory_claudia_neuron_memory_network",
@@ -19026,7 +19139,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\udccb prosedur pembaruan memori",
       "source_file": "memory.md",
-      "source_location": "L93"
+      "source_location": "L94"
     },
     {
       "id": "learning_neurons_n032_cloud_native_edge_infra",
@@ -19208,50 +19321,6 @@
       "source_location": "L1"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_rationale_272",
-      "label": "Harmonious color palette generator supporting classical color wheel (HSL) and\u2026",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "harmonious color palette generator supporting classical color wheel (hsl) and...",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L272"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_278",
-      "label": "Generate a monochromatic ramp varying in Lightness.",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "generate a monochromatic ramp varying in lightness.",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L278"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_285",
-      "label": "Generate analogous colors clustered around base hue.",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "generate analogous colors clustered around base hue.",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L285"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_296",
-      "label": "Generate complementary color pair (180\u00b0 offset).",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "generate complementary color pair (180\u00b0 offset).",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L296"
-    },
-    {
       "id": "scripts_graphic_design_visual_engine_rationale_302",
       "label": "Generate triadic 3-color harmony (120\u00b0 offsets).",
       "_origin": "ast",
@@ -19261,28 +19330,6 @@
       "norm_label": "generate triadic 3-color harmony (120\u00b0 offsets).",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L302"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_312",
-      "label": "Generate split-complementary harmony (base + 2 colors flanking complement).",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "generate split-complementary harmony (base + 2 colors flanking complement).",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L312"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_322",
-      "label": "Generate tetradic rectangular 4-color harmony.",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "generate tetradic rectangular 4-color harmony.",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L322"
     },
     {
       "id": "scripts_graphic_design_visual_engine_rationale_333",
@@ -19327,17 +19374,6 @@
       "norm_label": "generate full svg graphic poster with mathematical curves and layered depth.",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L638"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_68",
-      "label": "Construct Color from HSL (H in [0, 360), S in [0, 1], L in [0, 1]).",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "construct color from hsl (h in [0, 360), s in [0, 1], l in [0, 1]).",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L68"
     },
     {
       "id": "scripts_graphic_design_visual_engine_rationale_745",
@@ -28708,7 +28744,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/scrape_network_knowledge_engine.py",
-      "source_location": "L414",
+      "source_location": "L592",
       "weight": 1.0
     },
     {
@@ -28720,7 +28756,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/scrape_network_knowledge_engine.py",
-      "source_location": "L423",
+      "source_location": "L601",
       "weight": 1.0
     },
     {
@@ -35314,7 +35350,7 @@
     },
     {
       "source": "learning_knowledge_base_network_engineering_world_class",
-      "target": "learning_knowledge_base_network_engineering_world_class_world_class_computer_networking_systems_engineering_the_definitive_reference",
+      "target": "learning_knowledge_base_network_engineering_world_class_world_class_computer_networking_mikrotik_routeros_architecture_the_definitive_reference",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -35331,7 +35367,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "learning/knowledge_base/network_engineering_world_class.md",
-      "source_location": "L21",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -35342,7 +35378,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "learning/knowledge_base/network_engineering_world_class.md",
-      "source_location": "L32",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -35357,85 +35393,85 @@
       "weight": 1.0
     },
     {
-      "source": "learning_knowledge_base_network_engineering_world_class_2_transport_layer_tcp_udp_quic_and_congestion_control",
-      "target": "learning_knowledge_base_network_engineering_world_class_congestion_control_algorithms",
+      "source": "learning_knowledge_base_network_engineering_world_class_5_mikrotik_routeros_v7_enterprise_traffic_engineering",
+      "target": "learning_knowledge_base_network_engineering_world_class_5_5_enterprise_bgp_in_routeros_v7",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "learning/knowledge_base/network_engineering_world_class.md",
-      "source_location": "L65",
+      "source_location": "L102",
       "weight": 1.0
     },
     {
-      "source": "learning_knowledge_base_network_engineering_world_class_3_low_level_socket_programming_asynchronous_i_o",
-      "target": "learning_knowledge_base_network_engineering_world_class_linux_sockets_epoll_edge_triggered_loop",
+      "source": "learning_knowledge_base_network_engineering_world_class_5_mikrotik_routeros_v7_enterprise_traffic_engineering",
+      "target": "learning_knowledge_base_network_engineering_world_class_5_6_wireguard_site_to_site_tunneling",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "learning/knowledge_base/network_engineering_world_class.md",
-      "source_location": "L74",
+      "source_location": "L106",
       "weight": 1.0
     },
     {
-      "source": "learning_knowledge_base_network_engineering_world_class_3_low_level_socket_programming_asynchronous_i_o",
-      "target": "learning_knowledge_base_network_engineering_world_class_high_performance_zero_copy_primitives",
+      "source": "learning_knowledge_base_network_engineering_world_class_5_mikrotik_routeros_v7_enterprise_traffic_engineering",
+      "target": "learning_knowledge_base_network_engineering_world_class_5_1_packet_flow_fasttrack_acceleration",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "learning/knowledge_base/network_engineering_world_class.md",
-      "source_location": "L79",
+      "source_location": "L81",
       "weight": 1.0
     },
     {
-      "source": "learning_knowledge_base_network_engineering_world_class_4_kernel_networking_ebpf_xdp_high_speed_packet_processing",
-      "target": "learning_knowledge_base_network_engineering_world_class_express_data_path_xdp",
+      "source": "learning_knowledge_base_network_engineering_world_class_5_mikrotik_routeros_v7_enterprise_traffic_engineering",
+      "target": "learning_knowledge_base_network_engineering_world_class_5_2_multi_wan_load_balancing_with_pcc_per_connection_classifier",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "learning/knowledge_base/network_engineering_world_class.md",
-      "source_location": "L88",
+      "source_location": "L89",
       "weight": 1.0
     },
     {
-      "source": "learning_knowledge_base_network_engineering_world_class_4_kernel_networking_ebpf_xdp_high_speed_packet_processing",
-      "target": "learning_knowledge_base_network_engineering_world_class_ebpf_sockmap_service_mesh_acceleration",
+      "source": "learning_knowledge_base_network_engineering_world_class_5_mikrotik_routeros_v7_enterprise_traffic_engineering",
+      "target": "learning_knowledge_base_network_engineering_world_class_5_3_qos_htb_pcq_per_connection_queue",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "learning/knowledge_base/network_engineering_world_class.md",
-      "source_location": "L97",
+      "source_location": "L94",
       "weight": 1.0
     },
     {
-      "source": "learning_knowledge_base_network_engineering_world_class_5_distributed_cloud_networking_cni_service_mesh",
-      "target": "learning_knowledge_base_network_engineering_world_class_kubernetes_cni_architecture",
+      "source": "learning_knowledge_base_network_engineering_world_class_5_mikrotik_routeros_v7_enterprise_traffic_engineering",
+      "target": "learning_knowledge_base_network_engineering_world_class_5_4_bridge_vlan_filtering_hardware_offload_crs_ccr",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "learning/knowledge_base/network_engineering_world_class.md",
-      "source_location": "L105",
+      "source_location": "L98",
       "weight": 1.0
     },
     {
-      "source": "learning_knowledge_base_network_engineering_world_class_5_distributed_cloud_networking_cni_service_mesh",
-      "target": "learning_knowledge_base_network_engineering_world_class_load_balancing_strategies_l4_vs_l7",
+      "source": "learning_knowledge_base_network_engineering_world_class_world_class_computer_networking_mikrotik_routeros_architecture_the_definitive_reference",
+      "target": "learning_knowledge_base_network_engineering_world_class_6_distributed_cloud_networking_cni_service_mesh",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "learning/knowledge_base/network_engineering_world_class.md",
-      "source_location": "L110",
+      "source_location": "L112",
       "weight": 1.0
     },
     {
-      "source": "learning_knowledge_base_network_engineering_world_class_6_network_security_protocol_exploits_and_cryptographic_defenses",
-      "target": "learning_knowledge_base_network_engineering_world_class_major_attack_vectors_canonical_mitigations",
+      "source": "learning_knowledge_base_network_engineering_world_class_world_class_computer_networking_mikrotik_routeros_architecture_the_definitive_reference",
+      "target": "learning_knowledge_base_network_engineering_world_class_7_network_security_protocol_exploits_and_cryptographic_defenses",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -35445,40 +35481,18 @@
       "weight": 1.0
     },
     {
-      "source": "learning_knowledge_base_network_engineering_world_class_world_class_computer_networking_systems_engineering_the_definitive_reference",
-      "target": "learning_knowledge_base_network_engineering_world_class_5_distributed_cloud_networking_cni_service_mesh",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "learning/knowledge_base/network_engineering_world_class.md",
-      "source_location": "L103",
-      "weight": 1.0
-    },
-    {
-      "source": "learning_knowledge_base_network_engineering_world_class_world_class_computer_networking_systems_engineering_the_definitive_reference",
-      "target": "learning_knowledge_base_network_engineering_world_class_6_network_security_protocol_exploits_and_cryptographic_defenses",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "learning/knowledge_base/network_engineering_world_class.md",
-      "source_location": "L116",
-      "weight": 1.0
-    },
-    {
-      "source": "learning_knowledge_base_network_engineering_world_class_world_class_computer_networking_systems_engineering_the_definitive_reference",
+      "source": "learning_knowledge_base_network_engineering_world_class_world_class_computer_networking_mikrotik_routeros_architecture_the_definitive_reference",
       "target": "learning_knowledge_base_network_engineering_world_class_1_the_networking_stack_layer_by_layer_architectural_invariants",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "learning/knowledge_base/network_engineering_world_class.md",
-      "source_location": "L19",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
-      "source": "learning_knowledge_base_network_engineering_world_class_world_class_computer_networking_systems_engineering_the_definitive_reference",
+      "source": "learning_knowledge_base_network_engineering_world_class_world_class_computer_networking_mikrotik_routeros_architecture_the_definitive_reference",
       "target": "learning_knowledge_base_network_engineering_world_class_2_transport_layer_tcp_udp_quic_and_congestion_control",
       "relation": "contains",
       "_origin": "ast",
@@ -35489,29 +35503,40 @@
       "weight": 1.0
     },
     {
-      "source": "learning_knowledge_base_network_engineering_world_class_world_class_computer_networking_systems_engineering_the_definitive_reference",
+      "source": "learning_knowledge_base_network_engineering_world_class_world_class_computer_networking_mikrotik_routeros_architecture_the_definitive_reference",
       "target": "learning_knowledge_base_network_engineering_world_class_3_low_level_socket_programming_asynchronous_i_o",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "learning/knowledge_base/network_engineering_world_class.md",
-      "source_location": "L72",
+      "source_location": "L67",
       "weight": 1.0
     },
     {
-      "source": "learning_knowledge_base_network_engineering_world_class_world_class_computer_networking_systems_engineering_the_definitive_reference",
+      "source": "learning_knowledge_base_network_engineering_world_class_world_class_computer_networking_mikrotik_routeros_architecture_the_definitive_reference",
       "target": "learning_knowledge_base_network_engineering_world_class_4_kernel_networking_ebpf_xdp_high_speed_packet_processing",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "learning/knowledge_base/network_engineering_world_class.md",
-      "source_location": "L86",
+      "source_location": "L73",
       "weight": 1.0
     },
     {
-      "source": "learning_knowledge_base_network_engineering_world_class_world_class_computer_networking_systems_engineering_the_definitive_reference",
+      "source": "learning_knowledge_base_network_engineering_world_class_world_class_computer_networking_mikrotik_routeros_architecture_the_definitive_reference",
+      "target": "learning_knowledge_base_network_engineering_world_class_5_mikrotik_routeros_v7_enterprise_traffic_engineering",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/knowledge_base/network_engineering_world_class.md",
+      "source_location": "L79",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_knowledge_base_network_engineering_world_class_world_class_computer_networking_mikrotik_routeros_architecture_the_definitive_reference",
       "target": "learning_knowledge_base_network_engineering_world_class_table_of_contents",
       "relation": "contains",
       "_origin": "ast",
@@ -44982,6 +45007,39 @@
       "weight": 1.0
     },
     {
+      "source": "learning_neurons_n099_enterprise_mikrotik_routeros_arc",
+      "target": "learning_neurons_n099_enterprise_mikrotik_routeros_arc_n099_enterprise_mikrotik_routeros_architecture_and_traffic_engineering",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N099_enterprise_mikrotik_routeros_arc.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n099_enterprise_mikrotik_routeros_arc_n099_enterprise_mikrotik_routeros_architecture_and_traffic_engineering",
+      "target": "learning_neurons_n099_enterprise_mikrotik_routeros_arc_disiplin_eksekusi",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N099_enterprise_mikrotik_routeros_arc.md",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n099_enterprise_mikrotik_routeros_arc_n099_enterprise_mikrotik_routeros_architecture_and_traffic_engineering",
+      "target": "learning_neurons_n099_enterprise_mikrotik_routeros_arc_inti_pembelajaran_engineering_invariant",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N099_enterprise_mikrotik_routeros_arc.md",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
       "source": "learning_playbooks_graphify_workflow",
       "target": "learning_playbooks_graphify_workflow_playbook_graphify_workflow",
       "relation": "contains",
@@ -45115,6 +45173,17 @@
     },
     {
       "source": "memory_claudia_neuron_memory_network",
+      "target": "memory_active_tasks_history",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "memory.md",
+      "source_location": "L100",
+      "weight": 1.0
+    },
+    {
+      "source": "memory_claudia_neuron_memory_network",
       "target": "memory_active_memory_neurons",
       "relation": "contains",
       "_origin": "ast",
@@ -45132,18 +45201,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "memory.md",
-      "source_location": "L93",
-      "weight": 1.0
-    },
-    {
-      "source": "memory_claudia_neuron_memory_network",
-      "target": "memory_active_tasks_history",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "memory.md",
-      "source_location": "L99",
+      "source_location": "L94",
       "weight": 1.0
     },
     {
@@ -48558,24 +48616,24 @@
     },
     {
       "source": "scripts_scrape_network_knowledge_engine",
-      "target": "scripts_scrape_network_knowledge_engine_generate_knowledge_base_markdown",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/scrape_network_knowledge_engine.py",
-      "source_location": "L276",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_scrape_network_knowledge_engine",
       "target": "scripts_scrape_network_knowledge_engine_build_network_master_dataset",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/scrape_network_knowledge_engine.py",
-      "source_location": "L33",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_scrape_network_knowledge_engine",
+      "target": "scripts_scrape_network_knowledge_engine_generate_knowledge_base_markdown",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/scrape_network_knowledge_engine.py",
+      "source_location": "L458",
       "weight": 1.0
     },
     {
@@ -48586,7 +48644,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/scrape_network_knowledge_engine.py",
-      "source_location": "L413",
+      "source_location": "L591",
       "weight": 1.0
     },
     {
@@ -52853,5 +52911,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "faa636772a265940d1a2205a65df88bc0471b4d8"
+  "built_at_commit": "244b276d29384a480b4bc4acc3af33a5d7a64531"
 }

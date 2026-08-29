@@ -1,16 +1,16 @@
 # Graph Report - GEMINI-HANAFI  (2026-08-29)
 
 ## Corpus Check
-- 300 files · ~408,129 words
+- 304 files · ~415,984 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2105 nodes · 2423 edges · 250 communities (216 shown, 34 thin omitted)
+- 2133 nodes · 2450 edges · 252 communities (219 shown, 33 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 38 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c690365a`
+- Built from commit: `faa63677`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -133,9 +133,9 @@
 - copilot-instructions.md
 - ImageMatrix
 - ConvolutionKernelEngine
-- ColorSpaceMath
 - run_tests
-- Any
+- image_vision_nucleus_engine.py
+- .letterbox_aspect_preserver
 - RasterToVectorTracer
 - GenerativeGraphExecutor
 - Install
@@ -158,12 +158,14 @@
 - N096: Solana DLMM Alpha Quantitative Yield Maximizer
 - N095: Zolu Solana Vault Telegram Formatting & Accounting Engine
 - N097: Solana Vault 50:50 Auto Diversification & Bot Lifecycle DM Notification
-- .process_tiled_convolution
+- World-Class Computer Networking & Systems Engineering: The Definitive Reference
+- N098: World Class High Performance Network Architecture
 - manifest.json
 - StrategicSWOTNucleusEngine
 - SWOTEngine
 - N056: Strategic SWOT and TOWS Matrix Analysis
 - N056: Strategic SWOT, TOWS Matrix, PESTLE & Porter's 5 Forces Architecture Mastery
+- scrape_network_knowledge_engine.py
 - sw.js
 - process_case
 - download_movie_and_subtitle.py
@@ -242,7 +244,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (250 total, 34 thin omitted)
+## Communities (252 total, 33 thin omitted)
 
 ### Community 0 - "run_deterministic_tests"
 Cohesion: 0.06
@@ -629,20 +631,24 @@ Cohesion: 0.17
 Nodes (10): Ponytail, lazy senior dev mode, Before / after, Commands, Development, FAQ, How it works, License, Numbers (+2 more)
 
 ### Community 128 - "ImageMatrix"
-Cohesion: 0.15
-Nodes (7): GeometricRescaler, ImageMatrix, Lightweight, high-performance 2D/3D pure Python pixel matrix. Layout:…, Sub-pixel Geometric Rescaling and Aspect Ratio Preserver., High-precision bilinear interpolation rescaling. Maps target pixel centers…, Scales image while strictly preserving native aspect ratio, padding the…, Safe pixel retrieval with deterministic boundary clamping. Supported border…
+Cohesion: 0.20
+Nodes (4): ImageMatrix, Lightweight, high-performance 2D/3D pure Python pixel matrix. Layout:…, Convolves an image in bounded memory tiles of tile_size x tile_size. Uses…, Safe pixel retrieval with deterministic boundary clamping. Supported border…
 
 ### Community 129 - "ConvolutionKernelEngine"
 Cohesion: 0.16
 Nodes (8): ConvolutionKernelEngine, Pure Python Spatial Convolution Engine with standard and custom kernels., Generates normalized (2k+1)x(2k+1) 2D Gaussian Kernel: G(u,v) =…, Returns standard 3x3 Sobel kernels for horizontal (Gx) and vertical (Gy)…, Returns 3x3 Sharpen kernel: center = 1 + 4*strength, orthogonal edges =…, Returns standard 3x3 discrete Laplacian second-derivative kernel., Applies 2D spatial convolution across all channels of the image matrix., Calculates Sobel Edge Gradient Magnitude M = sqrt(Gx^2 + Gy^2) and Direction…
 
-### Community 130 - "ColorSpaceMath"
-Cohesion: 0.17
-Nodes (7): ColorSpaceMath, Standard-compliant color space transformation algorithms., Weighted luminosity grayscale conversion. - BT.601 (SDTV/OpenCV default): Y =…, Converts RGB [0..255] to HSV (Hue in [0..360), Saturation in [0..1], Value in…, Converts HSV (Hue [0..360), Saturation [0..1], Value [0..1]) back to RGB…, Converts RGB [0..255] to ITU-R BT.601 YCbCr digital video standard., Converts ITU-R BT.601 YCbCr back to RGB [0..255].
+### Community 130 - "run_tests"
+Cohesion: 0.21
+Nodes (8): ColorSpaceMath, Standard-compliant color space transformation algorithms., Weighted luminosity grayscale conversion. - BT.601 (SDTV/OpenCV default): Y =…, Converts RGB [0..255] to HSV (Hue in [0..360), Saturation in [0..1], Value in…, Converts HSV (Hue [0..360), Saturation [0..1], Value [0..1]) back to RGB…, Converts RGB [0..255] to ITU-R BT.601 YCbCr digital video standard., Converts ITU-R BT.601 YCbCr back to RGB [0..255]., run_tests()
 
-### Community 131 - "run_tests"
-Cohesion: 0.50
-Nodes (8): CheckpointLoaderNode, CLIPTextEncodeNode, ComfyNode, ControlNetApplyNode, KSamplerNode, Base executable node in a generative AI visual DAG., run_tests(), VAEDecodeNode
+### Community 131 - "image_vision_nucleus_engine.py"
+Cohesion: 0.18
+Nodes (10): CheckpointLoaderNode, CLIPTextEncodeNode, ComfyNode, ControlNetApplyNode, KSamplerNode, Any, Demand-driven tile chunking pipeline for low-memory image processing. Executes…, Base executable node in a generative AI visual DAG. (+2 more)
+
+### Community 132 - ".letterbox_aspect_preserver"
+Cohesion: 0.29
+Nodes (5): GeometricRescaler, Sub-pixel Geometric Rescaling and Aspect Ratio Preserver., High-precision bilinear interpolation rescaling. Maps target pixel centers…, Scales image while strictly preserving native aspect ratio, padding the…, Maps a bounding box (x, y, w, h) from letterboxed space back to native source…
 
 ### Community 133 - "RasterToVectorTracer"
 Cohesion: 0.31
@@ -728,9 +734,13 @@ Nodes (3): 🔒 Disiplin Eksekusi, 🎯 Inti Pembelajaran (Engineering Invariant
 Cohesion: 0.50
 Nodes (3): 🔒 Disiplin Eksekusi, 🎯 Inti Pembelajaran (Engineering Invariant), N097: Solana Vault 50:50 Auto Diversification & Bot Lifecycle DM Notification
 
-### Community 166 - ".process_tiled_convolution"
+### Community 166 - "World-Class Computer Networking & Systems Engineering: The Definitive Reference"
+Cohesion: 0.10
+Nodes (19): 1. The Networking Stack: Layer-by-Layer Architectural Invariants, 2. Transport Layer: TCP, UDP, QUIC, and Congestion Control, 3. Low-Level Socket Programming & Asynchronous I/O, 4. Kernel Networking, eBPF & XDP High-Speed Packet Processing, 5. Distributed Cloud Networking, CNI, & Service Mesh, 6. Network Security, Protocol Exploits, and Cryptographic Defenses, Congestion Control Algorithms, eBPF SOCKMAP & Service Mesh Acceleration (+11 more)
+
+### Community 167 - "N098: World Class High Performance Network Architecture"
 Cohesion: 0.50
-Nodes (3): Demand-driven tile chunking pipeline for low-memory image processing. Executes…, Convolves an image in bounded memory tiles of tile_size x tile_size. Uses…, StreamingTileProcessor
+Nodes (3): 🔒 Disiplin Eksekusi, 🎯 Inti Pembelajaran (Engineering Invariant), N098: World Class High Performance Network Architecture
 
 ### Community 168 - "manifest.json"
 Cohesion: 0.22
@@ -751,6 +761,10 @@ Nodes (3): 🔒 Disiplin Eksekusi, 🎯 Inti Pembelajaran (Engineering Invariant
 ### Community 172 - "N056: Strategic SWOT, TOWS Matrix, PESTLE & Porter's 5 Forces Architecture Mastery"
 Cohesion: 0.40
 Nodes (4): 1. Fondasi Invarian Strategis, 2. Integrasi Porter's Five Forces & PESTLE, 3. Implementasi Mesin Nukleus, N056: Strategic SWOT, TOWS Matrix, PESTLE & Porter's 5 Forces Architecture Mastery
+
+### Community 173 - "scrape_network_knowledge_engine.py"
+Cohesion: 0.83
+Nodes (3): build_network_master_dataset(), generate_knowledge_base_markdown(), run_pipeline()
 
 ### Community 177 - "process_case"
 Cohesion: 0.67
@@ -921,21 +935,21 @@ Cohesion: 0.12
 Nodes (15): 10. Legal — **Legal Agent Benchmark, Held-out**, 11. Health — **HealthBench Professional**, 12. Biology — **BioMysteryBench**, 1. Agentic Terminal Coding — **Frontier-Bench v0.1**, 2. Knowledge Work — **GDPval-AA v2**, 3. Novel Problem-Solving — **ARC-AGI-3**, 4. Agentic Search — **BrowseComp**, 5. Multidisciplinary Reasoning — **Humanity's Last Exam** (+7 more)
 
 ## Knowledge Gaps
-- **973 isolated node(s):** `dynamic`, `dynamic`, `dynamic`, `dynamic`, `dynamic` (+968 more)
+- **987 isolated node(s):** `dynamic`, `dynamic`, `dynamic`, `dynamic`, `dynamic` (+982 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **34 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **33 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Color` connect `Color` to `run_self_tests`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
-- **Why does `run_tests()` connect `run_tests` to `ImageMatrix`, `ConvolutionKernelEngine`, `ColorSpaceMath`, `Any`, `RasterToVectorTracer`, `GenerativeGraphExecutor`, `.process_tiled_convolution`?**
+- **Why does `run_tests()` connect `run_tests` to `ImageMatrix`, `ConvolutionKernelEngine`, `image_vision_nucleus_engine.py`, `.letterbox_aspect_preserver`, `RasterToVectorTracer`, `GenerativeGraphExecutor`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **Why does `Vec2D` connect `Vec2D` to `CubicBezier`, `run_self_tests`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **What connects `dynamic`, `dynamic`, `dynamic` to the rest of the system?**
-  _973 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _987 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `run_deterministic_tests` be split into smaller, more focused modules?**
   _Cohesion score 0.06259426847662142 - nodes in this community are weakly interconnected._
 - **Should `CubicBezier` be split into smaller, more focused modules?**

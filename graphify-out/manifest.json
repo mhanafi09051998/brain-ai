@@ -6,9 +6,9 @@
     "semantic_hash": ""
   },
   "learning/NEURON_INDEX.json": {
-    "mtime": 1787983744.3898299,
-    "seen": 1787983757.8137586,
-    "ast_hash": "b175f538e070e8a2da07f0ec3f1399b8",
+    "mtime": 1787983832.2372859,
+    "seen": 1787983847.031696,
+    "ast_hash": "4a6147b5c9c89083932ee26af78f4b4a",
     "semantic_hash": ""
   },
   "learning/scripts/grow_neurons.py": {
@@ -312,9 +312,9 @@
     "semantic_hash": ""
   },
   "memory.md": {
-    "mtime": 1787983744.3908286,
-    "seen": 1787983757.8137586,
-    "ast_hash": "3d1e8f5efe9d43fea576b98245e4c372",
+    "mtime": 1787983832.2381558,
+    "seen": 1787983847.0320091,
+    "ast_hash": "dc4a0770a34af5b0cf0ca0332c50f62a",
     "semantic_hash": ""
   },
   "memory/neurons/ai_engine_9router.md": {
@@ -1950,27 +1950,33 @@
     "semantic_hash": ""
   },
   "learning/frontier_datasets/network_engineering_master_dataset.json": {
-    "mtime": 1787983739.4439552,
-    "seen": 1787983757.8137586,
-    "ast_hash": "e8dda714aee80ff20be22690887eb161",
+    "mtime": 1787983830.1740365,
+    "seen": 1787983847.031696,
+    "ast_hash": "f62e30fcac3cd89192f0020bb50d627e",
     "semantic_hash": ""
   },
   "scripts/scrape_network_knowledge_engine.py": {
-    "mtime": 1787983736.9539382,
-    "seen": 1787983757.8137586,
-    "ast_hash": "62c8723254e2bc28a35d555f5f84db4b",
+    "mtime": 1787983827.562181,
+    "seen": 1787983847.0320091,
+    "ast_hash": "f9b041d6072c11ce48f00fc527d2b68f",
     "semantic_hash": ""
   },
   "learning/knowledge_base/network_engineering_world_class.md": {
-    "mtime": 1787983739.4439552,
-    "seen": 1787983757.8137586,
-    "ast_hash": "233ec3da526ac046cdba90e5b62d5af3",
+    "mtime": 1787983830.1740365,
+    "seen": 1787983847.0320091,
+    "ast_hash": "ce2c3860613bd78c0c2c94689d968834",
     "semantic_hash": ""
   },
   "learning/neurons/N098_world_class_high_performance_net.md": {
     "mtime": 1787983744.3888333,
     "seen": 1787983757.8137586,
     "ast_hash": "629572e9dd93eb032edf417904994d19",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N099_enterprise_mikrotik_routeros_arc.md": {
+    "mtime": 1787983832.2355537,
+    "seen": 1787983847.0320091,
+    "ast_hash": "ab9b49bd2c091bc6b8402bbc4425fac5",
     "semantic_hash": ""
   }
 }

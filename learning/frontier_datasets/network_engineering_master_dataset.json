@@ -66,7 +66,7 @@
     "source": "Beej's Guide / Linux man epoll(7)",
     "title": "Linux epoll Architecture: Level-Triggered (LT) vs Edge-Triggered (ET) & Non-Blocking Sockets",
     "prompt": "Write a complete, idiomatic non-blocking TCP socket event loop using epoll in Edge-Triggered mode (`EPOLLET`). Explain the starvation hazard and the mandatory requirement to loop `read()`/`recv()` until `EAGAIN` or `EWOULDBLOCK` is returned, as well as socket flags `O_NONBLOCK`, `SO_REUSEADDR`, and `SO_REUSEPORT`.",
-    "code_example": "#include <sys/epoll.h>\n#include <fcntl.h>\n#include <unistd.h>\n#include <errno.h>\n#include <stdio.h>\n#include <netinet/in.h>\n\nint set_nonblocking(int fd) {\n    int flags = fcntl(fd, F_GETFL, 0);\n    return fcntl(fd, F_SETFL, flags | O_NONBLOCK);\n}\n\nvoid handle_et_read(int epoll_fd, int sock_fd) {\n    char buf[4096];\n    while (1) {\n        ssize_t bytes = read(sock_fd, buf, sizeof(buf));\n        if (bytes > 0) {\n            // Process payload\n            write(sock_fd, buf, bytes); // echo\n        } else if (bytes == 0) {\n            // Connection closed by peer\n            close(sock_fd);\n            break;\n        } else {\n            if (errno == EAGAIN || errno == EWOULDBLOCK) {\n                // Buffer completely drained, wait for next epoll event\n                break;\n            }\n            // Real error occurred\n            close(sock_fd);\n            break;\n        }\n    }\n}\n",
+    "code_example": "#include <sys/epoll.h>\n#include <fcntl.h>\n#include <unistd.h>\n#include <errno.h>\n#include <stdio.h>\n#include <netinet/in.h>\n\nint set_nonblocking(int fd) {\n    int flags = fcntl(fd, F_GETFL, 0);\n    return fcntl(fd, F_SETFL, flags | O_NONBLOCK);\n}\n\nvoid handle_et_read(int epoll_fd, int sock_fd) {\n    char buf[4096];\n    while (1) {\n        ssize_t bytes = read(sock_fd, buf, sizeof(buf));\n        if (bytes > 0) {\n            write(sock_fd, buf, bytes); // echo\n        } else if (bytes == 0) {\n            close(sock_fd);\n            break;\n        } else {\n            if (errno == EAGAIN || errno == EWOULDBLOCK) {\n                break;\n            }\n            close(sock_fd);\n            break;\n        }\n    }\n}\n",
     "invariants": [
       "Level-Triggered (LT): epoll_wait returns as long as the file descriptor is ready for I/O (buffer not empty).",
       "Edge-Triggered (ET): epoll_wait returns ONLY when state changes from not-ready to ready. If you do not drain the buffer completely with a while loop until EAGAIN/EWOULDBLOCK, leftover data will sit in the kernel buffer forever without triggering a new event, causing permanent hang.",
@@ -99,57 +99,113 @@
     "invariants": [
       "sk_buff allocation and metadata overhead is the primary bottleneck in the Linux kernel network stack for high packet rates.",
       "XDP executes eBPF bytecode directly inside the network driver's RX ring before memory allocation for `sk_buff`, achieving line-rate DDoS filtering (>20-40 million packets/second per core).",
-      "XDP Action Codes:",
-      "  - XDP_DROP: Drop packet immediately at lowest cost (sub-microsecond CPU time).",
-      "  - XDP_TX: Bounce the packet back out the same network interface it arrived on (ideal for ultra-fast L4 load balancers like Facebook Katran).",
-      "  - XDP_REDIRECT: Redirect packet to another NIC, CPU core, or AF_XDP user-space socket.",
-      "  - XDP_PASS: Pass packet up to standard Linux networking stack (`sk_buff` allocated).",
-      "TC (Traffic Control) runs later in the stack after `sk_buff` allocation, supporting both ingress and egress shaping, packet mangling, and full socket context."
+      "XDP Action Codes: XDP_DROP (fast drop), XDP_TX (reflect to same interface), XDP_REDIRECT (forward to another NIC or AF_XDP socket), XDP_PASS (hand over to standard Linux stack)."
     ],
     "difficulty": "Expert",
     "benchmark_eval": "SWE-eBPF-01"
   },
   {
-    "id": "net_ebpf_sockmap_acceleration",
-    "domain": "Kernel & eBPF Networking",
-    "source": "Cilium Service Mesh / BPF_MAP_TYPE_SOCKMAP",
-    "title": "Accelerating Local TCP Microservices via eBPF SOCKMAP Socket Redirection",
-    "prompt": "In service mesh sidecar architectures (Envoy/Istio), inter-process communication on localhost incurs full TCP/IP stack overhead (IP routing, TCP handshake, congestion control, checksums). Explain how `BPF_MAP_TYPE_SOCKMAP` and `BPF_PROG_TYPE_SK_MSG` redirect socket buffers directly between socket send/receive queues in the kernel, bypassing TCP/IP processing.",
+    "id": "net_mikrotik_packet_flow_fasttrack",
+    "domain": "MikroTik RouterOS",
+    "source": "MikroTik RouterOS v7 Packet Flow Documentation",
+    "title": "RouterOS v7 Packet Flow, Connection Tracking, and FastTrack Bypass Invariants",
+    "prompt": "Detail the 5 core stages of MikroTik RouterOS packet flow: Prerouting (Raw, ConnTrack, Mangle, D-NAT), Input/Forward/Output decision, and Postrouting (Mangle, S-NAT/Masquerade, Queue Tree). Explain the mechanism and trade-offs of FastTrack (`fasttrack-connection` in firewall filter forward chain): why it dramatically decreases CPU usage and increases throughput, and why it bypasses Simple Queues, Queue Tree, and Mangle marks unless explicitly filtered.",
     "invariants": [
-      "Standard localhost TCP connections pass through the entire kernel networking stack twice (tx path: socket -> TCP -> IP -> loopback device -> rx path: loopback -> IP -> TCP -> socket).",
-      "eBPF SOCKMAP registers established TCP socket file descriptors into a kernel map.",
-      "When a process writes data into Socket A, the `sk_msg` eBPF program intercepts the memory buffer (`sk_msg`) and redirects it directly into Socket B's receive queue via `bpf_msg_redirect_map()`, achieving zero-overhead socket-to-socket fast-path streaming with 50-80% lower latency."
+      "RouterOS Packet Flow Order for Forward Traffic: Ingress -> Prerouting (Raw -> ConnTrack -> Mangle -> D-NAT) -> Routing Decision -> Forward (Mangle -> Filter -> Queue Tree) -> Routing Decision -> Postrouting (Mangle -> Queue Tree -> S-NAT) -> Egress.",
+      "FastTrack acceleration marks established & related TCP/UDP connections to skip connection tracking recalculation, firewall filters, mangle, and queue trees on subsequent packets.",
+      "FastTrack trade-off: Achieves multi-gigabit wire speed on CPU-limited RouterBOARDs, but completely disables bandwidth limiting (Simple Queues & Queue Trees) and policy packet marking for fasttracked streams. Production rule: If precise per-user QoS/Queue Tree or PCC marking is required, FastTrack must be disabled or conditionally scoped."
+    ],
+    "difficulty": "Hard",
+    "benchmark_eval": "SWE-MikroTik-01"
+  },
+  {
+    "id": "net_mikrotik_pcc_multiwan_loadbalancing",
+    "domain": "MikroTik RouterOS",
+    "source": "MikroTik RouterOS Multi-WAN & PCC Engineering Reference",
+    "title": "MikroTik Multi-WAN Load Balancing via Per Connection Classifier (PCC) & Failover",
+    "prompt": "Write a complete, production-grade MikroTik RouterOS script implementing 2-WAN PCC (Per Connection Classifier) load balancing with WAN failover (`check-gateway=ping`). Detail the Mangle rules for input chain connection marking, prerouting connection splitting (`both-addresses-and-ports`), route marking, and policy-based routing tables in RouterOS v7.",
+    "code_example": "# MikroTik RouterOS v7 Multi-WAN PCC Script (2x WAN)\n/routing table add name=to-WAN1 fib\n/routing table add name=to-WAN2 fib\n\n/ip firewall mangle\n# 1. Accept LAN-to-LAN traffic without mark\nadd chain=prerouting dst-address=192.168.0.0/16 action=accept\n\n# 2. Preserve incoming connections on specific WAN interface (Input & Output symmetry)\nadd chain=input in-interface=ether1-WAN1 action=mark-connection new-connection-mark=WAN1_conn passthrough=yes\nadd chain=input in-interface=ether2-WAN2 action=mark-connection new-connection-mark=WAN2_conn passthrough=yes\nadd chain=output connection-mark=WAN1_conn action=mark-routing new-routing-mark=to-WAN1 passthrough=no\nadd chain=output connection-mark=WAN2_conn action=mark-routing new-routing-mark=to-WAN2 passthrough=no\n\n# 3. PCC Classifier for LAN Outbound Connections\nadd chain=prerouting in-interface=bridge-LAN connection-mark=no-mark per-connection-classifier=both-addresses-and-ports:2/0 action=mark-connection new-connection-mark=WAN1_conn passthrough=yes\nadd chain=prerouting in-interface=bridge-LAN connection-mark=no-mark per-connection-classifier=both-addresses-and-ports:2/1 action=mark-connection new-connection-mark=WAN2_conn passthrough=yes\n\n# 4. Mark Routing based on connection marks\nadd chain=prerouting in-interface=bridge-LAN connection-mark=WAN1_conn action=mark-routing new-routing-mark=to-WAN1 passthrough=no\nadd chain=prerouting in-interface=bridge-LAN connection-mark=WAN2_conn action=mark-routing new-routing-mark=to-WAN2 passthrough=no\n\n# 5. NAT Masquerade\n/ip firewall nat\nadd chain=srcnat out-interface=ether1-WAN1 action=masquerade\nadd chain=srcnat out-interface=ether2-WAN2 action=masquerade\n\n# 6. Default Routes with Failover in RouterOS v7\n/ip route\nadd dst-address=0.0.0.0/0 gateway=192.168.1.1 routing-table=to-WAN1 check-gateway=ping distance=1\nadd dst-address=0.0.0.0/0 gateway=192.168.2.1 routing-table=to-WAN2 check-gateway=ping distance=1\nadd dst-address=0.0.0.0/0 gateway=192.168.1.1 distance=1 check-gateway=ping\nadd dst-address=0.0.0.0/0 gateway=192.168.2.1 distance=2\n",
+    "invariants": [
+      "PCC hashing with `both-addresses-and-ports` ensures HTTPS banking and session-sensitive services stay pinned to the same external IP for the duration of a TCP session while distributing multiple connections evenly.",
+      "Input and Output chain connection marking prevents asynchronous routing (reply packets exiting a different WAN interface than the one the request arrived on, which gets dropped by ISP reverse path filtering / RPF).",
+      "RouterOS v7 requires explicit creation of routing tables with `/routing table add name=... fib` before assigning `routing-table` in `/ip route`."
+    ],
+    "difficulty": "Hard",
+    "benchmark_eval": "SWE-MikroTik-02"
+  },
+  {
+    "id": "net_mikrotik_qos_pcq_queue_tree",
+    "domain": "MikroTik RouterOS",
+    "source": "MikroTik HTB & PCQ Bandwidth Management Guide",
+    "title": "Hierarchical Token Bucket (HTB) & Per Connection Queue (PCQ) Dynamic Bandwidth Fair-Share",
+    "prompt": "Explain how MikroTik HTB (Hierarchical Token Bucket) in `/queue tree` calculates CIR (limit-at) and MIR (max-limit). Explain why PCQ (Per Connection Queue) is superior to hundreds of static Simple Queues in high-density ISP/enterprise networks, and write the configuration for bidirectional PCQ fair-sharing with bufferbloat mitigation.",
+    "code_example": "# MikroTik RouterOS v7 PCQ Queue Tree Configuration\n/queue type\nadd name=PCQ-Download kind=pcq pcq-rate=0 pcq-limit=50KiB pcq-total-limit=2000KiB pcq-classifier=dst-address pcq-src-address-mask=32 pcq-dst-address-mask=32\nadd name=PCQ-Upload kind=pcq pcq-rate=0 pcq-limit=50KiB pcq-total-limit=2000KiB pcq-classifier=src-address pcq-src-address-mask=32 pcq-dst-address-mask=32\n\n/ip firewall mangle\nadd chain=forward out-interface=bridge-LAN action=mark-packet new-packet-mark=client_download passthrough=no\nadd chain=forward in-interface=bridge-LAN action=mark-packet new-packet-mark=client_upload passthrough=no\n\n/queue tree\nadd name=TOTAL-DOWNLOAD parent=bridge-LAN max-limit=100M\nadd name=PCQ-CLIENTS-DOWN parent=TOTAL-DOWNLOAD packet-mark=client_download queue=PCQ-Download max-limit=100M\n\nadd name=TOTAL-UPLOAD parent=ether1-WAN max-limit=50M\nadd name=PCQ-CLIENTS-UP parent=TOTAL-UPLOAD packet-mark=client_upload queue=PCQ-Upload max-limit=50M\n",
+    "invariants": [
+      "HTB Parent Queues enforce global link capacity (`max-limit`), while Child Queues allocate guaranteed bandwidth (`limit-at`) and dynamically borrow excess bandwidth up to `max-limit` using priority levels 1 (highest) to 8 (lowest).",
+      "PCQ dynamically creates sub-queues for every active client IP on the fly. `pcq-rate=0` divides total available bandwidth equally among all active users (`Rate = Max_Limit / Active_Users`), preventing any single user from monopolizing the pipeline.",
+      "For Download queues, `pcq-classifier=dst-address` groups packets by destination client IP. For Upload queues, `pcq-classifier=src-address` groups packets by source client IP."
+    ],
+    "difficulty": "Hard",
+    "benchmark_eval": "SWE-MikroTik-03"
+  },
+  {
+    "id": "net_mikrotik_bridge_vlan_hw_offload",
+    "domain": "MikroTik RouterOS",
+    "source": "MikroTik CRS3xx/CCR2xxx Bridge VLAN Filtering & L3 HW Offloading",
+    "title": "Bridge VLAN Filtering, 802.1Q Trunks, and Hardware Offloading (L2/L3 HW-Offload)",
+    "prompt": "Explain the architectural difference between legacy software bridge VLANs and RouterOS v7 Bridge VLAN Filtering (`/interface bridge vlan`). Detail how Hardware Offloading (`hw=yes`) programs the physical switch ASIC (Marvell Prestera / SwOS chip) to achieve non-blocking wire-speed switching (Gbps/10Gbps) with 0% CPU usage, and write the configuration for tagged trunk ports and untagged access ports.",
+    "code_example": "# MikroTik Bridge VLAN Filtering with Hardware Offloading\n/interface bridge\nadd name=bridge1 vlan-filtering=no\n\n/interface bridge port\n# Trunk Port connected to Core Switch / AP\nadd bridge=bridge1 interface=ether1 hw=yes\n# Access Port for VLAN 10 (Office LAN)\nadd bridge=bridge1 interface=ether2 pvid=10 hw=yes\n# Access Port for VLAN 20 (Guest Wi-Fi)\nadd bridge=bridge1 interface=ether3 pvid=20 hw=yes\n\n/interface bridge vlan\nadd bridge=bridge1 vlan-ids=10 tagged=bridge1,ether1 untagged=ether2\nadd bridge=bridge1 vlan-ids=20 tagged=bridge1,ether1 untagged=ether3\n\n# Router Gateway Interfaces (CPU Interface)\n/interface vlan\nadd name=VLAN10-GW vlan-id=10 interface=bridge1\nadd name=VLAN20-GW vlan-id=20 interface=bridge1\n\n/ip address\nadd address=192.168.10.1/24 interface=VLAN10-GW\nadd address=192.168.20.1/24 interface=VLAN20-GW\n\n# Enable VLAN Filtering after configuration\n/interface bridge set bridge1 vlan-filtering=yes\n",
+    "invariants": [
+      "Hardware Offloading (`hw=yes` in `/interface bridge port`) offloads packet forwarding to the onboard Switch Chip ASIC, eliminating CPU processing for L2 frames.",
+      "When `vlan-filtering=yes` is enabled, the bridge CPU port (`bridge1`) MUST be added as a `tagged` member in `/interface bridge vlan` for any VLAN where the router itself needs an IP gateway (`/interface vlan`).",
+      "Always configure VLANs with `vlan-filtering=no` first, and enable `vlan-filtering=yes` only as the final step to avoid accidental Winbox/SSH disconnection lockout."
+    ],
+    "difficulty": "Hard",
+    "benchmark_eval": "SWE-MikroTik-04"
+  },
+  {
+    "id": "net_mikrotik_bgp_v7_routing_filters",
+    "domain": "MikroTik RouterOS",
+    "source": "MikroTik RouterOS v7 BGP & Routing Engine",
+    "title": "MikroTik RouterOS v7 Enterprise BGP Peering & Programmatic Routing Filters",
+    "prompt": "Explain the major architectural changes in MikroTik RouterOS v7 BGP implementation compared to v6 (new routing engine, multi-threaded BGP convergence, and structured filter language). Write a complete BGP peering configuration with an upstream ISP (AS65001 to AS65002), announcing a public /24 prefix, applying AS-Path prepending for backup paths, and filtering bogon prefixes.",
+    "code_example": "# MikroTik RouterOS v7 BGP Configuration\n/routing bgp template\nadd name=ISP-Template as=65001 router-id=203.0.113.1 hold-time=90s keepalive-time=30s\n\n# Programmatic Routing Filters in RouterOS v7\n/routing filter rule\n# Inbound Filter: Drop default route & RFC 1918 bogons from peer\nadd chain=BGP-IN rule=\"if dst in 0.0.0.0/0 && dst-len == 0 { reject; }\"\nadd chain=BGP-IN rule=\"if dst in 10.0.0.0/8 || dst in 172.16.0.0/12 || dst in 192.168.0.0/16 { reject; }\"\nadd chain=BGP-IN rule=\"accept;\"\n\n# Outbound Filter: Only announce our public /24 prefix and prepend AS for backup\nadd chain=BGP-OUT-PRIMARY rule=\"if dst == 203.0.113.0/24 { set bgp-communities 65001:100; accept; } else { reject; }\"\nadd chain=BGP-OUT-BACKUP rule=\"if dst == 203.0.113.0/24 { set bgp-path-prepend 2; accept; } else { reject; }\"\n\n# BGP Connection Peering\n/routing bgp connection\nadd name=PEER-ISP1 template=ISP-Template remote.address=198.51.100.2 .as=65002 input.filter-chain=BGP-IN output.filter-chain=BGP-OUT-PRIMARY output.network=203.0.113.0/24\nadd name=PEER-ISP2-BACKUP template=ISP-Template remote.address=198.51.200.2 .as=65003 input.filter-chain=BGP-IN output.filter-chain=BGP-OUT-BACKUP output.network=203.0.113.0/24\n",
+    "invariants": [
+      "RouterOS v7 uses a modern, high-performance multi-threaded BGP daemon capable of loading full Internet routing tables (900k+ prefixes) across multiple CPU cores in seconds.",
+      "Routing Filters in v7 use a C-like programmable syntax (`if ... { ... }`) replacing the legacy chain-action dropdown lists in v6.",
+      "`output.network` in `/routing bgp connection` or route presence in the routing table is mandatory for announcing prefixes; unreachability in the local FIB automatically withdraws the BGP advertisement."
     ],
     "difficulty": "Expert",
-    "benchmark_eval": "SWE-eBPF-02"
+    "benchmark_eval": "SWE-MikroTik-05"
   },
   {
-    "id": "net_k8s_cni_overlay_vs_routing",
-    "domain": "Cloud & Distributed Networking",
-    "source": "Kubernetes The Hard Way / Calico / Cilium Documentation",
-    "title": "Kubernetes CNI: Overlay Networks (VXLAN/Geneve) vs Flat Routed Networks (BGP)",
-    "prompt": "Compare Overlay Networking (e.g., Flannel VXLAN, Calico VXLAN) with Flat Routed Networking (e.g., Calico BGP peering with Top-of-Rack switches, AWS VPC CNI). Analyze MTU overhead (50 bytes VXLAN header), packet encapsulation/decapsulation CPU tax, cross-subnet routing, and security policy enforcement.",
+    "id": "net_mikrotik_wireguard_overlay_vpn",
+    "domain": "MikroTik RouterOS",
+    "source": "MikroTik RouterOS v7 WireGuard & Site-to-Site Documentation",
+    "title": "Site-to-Site WireGuard VPN Tunneling & MTU Clamping on RouterOS v7",
+    "prompt": "Configure a high-performance Site-to-Site WireGuard tunnel between two MikroTik RouterOS v7 routers. Explain why WireGuard operates with MTU 1420 (accounting for 80 bytes of IPv4/UDP/WireGuard header overhead) and how to configure MSS Clamping (`change-mss`) in `/ip firewall mangle` to eliminate TCP PMTUD blackholes.",
+    "code_example": "# Router 1 (HQ: 10.254.0.1/30, Public IP: 203.0.113.10)\n/interface wireguard\nadd name=wg0 listen-port=51820 mtu=1420\n\n/ip address\nadd address=10.254.0.1/30 interface=wg0\n\n/interface wireguard peers\nadd interface=wg0 public-key=\"PEER2_PUBLIC_KEY_BASE64=\" endpoint-address=\"198.51.100.20\" endpoint-port=51820 allowed-address=10.254.0.2/32,192.168.20.0/24 persistent-keepalive=25s\n\n/ip route\nadd dst-address=192.168.20.0/24 gateway=10.254.0.2\n\n# MSS Clamping to prevent fragmentation and blackholing\n/ip firewall mangle\nadd chain=forward protocol=tcp tcp-flags=syn action=change-mss new-mss=clamp-to-pmtu passthrough=yes\n",
     "invariants": [
-      "Overlay (VXLAN): Encapsulates Layer 2 Pod Ethernet frames inside Layer 4 UDP packets (port 4789). Works across any underlying network without router reconfiguration, but incurs 50 bytes encapsulation overhead per packet (reducing MTU from 1500 to 1450) and CPU cost for encapsulation/decapsulation.",
-      "Flat Routed (BGP): Each K8s node acts as a BGP speaker (e.g., Calico Bird), announcing its Pod CIDR subnet to Top-of-Rack (ToR) physical switches or route reflectors. Packets travel natively with standard MTU (1500 or 9000 Jumbo Frames) without encapsulation overhead, achieving raw wire speed.",
-      "Cilium CNI leverages native eBPF routing to replace kube-proxy iptables/IPVS, performing L4 load balancing directly at the socket level (`sock_ops`) without conntrack table locks."
+      "WireGuard encapsulation overhead: 20 bytes IPv4 + 8 bytes UDP + 32 bytes WireGuard header + 16 bytes auth tag = up to 80 bytes overhead on IPv4, requiring tunnel MTU of 1420 (or 1400 on IPv6/PPPoE).",
+      "`allowed-address` serves as both an egress routing selector and an ingress cryptographic access control list; packets from non-matching source IPs are silently dropped by the WireGuard cryptokey routing engine.",
+      "`persistent-keepalive=25s` is essential for peers located behind NAT or stateful firewalls to maintain UDP conntrack bindings on intermediate routers."
     ],
     "difficulty": "Hard",
-    "benchmark_eval": "SWE-Cloud-01"
+    "benchmark_eval": "SWE-MikroTik-06"
   },
   {
-    "id": "net_load_balancing_l4_vs_l7",
-    "domain": "Cloud & Distributed Networking",
-    "source": "donnemartin/system-design-primer & Envoy Architecture",
-    "title": "Load Balancing Architecture: L4 (Direct Server Return / Maglev) vs L7 (Envoy / Reverse Proxy)",
-    "prompt": "Explain the architectural difference between Layer 4 Load Balancing (TCP/UDP, Maglev consistent hashing, Direct Server Return / DSR) and Layer 7 Load Balancing (HTTP, gRPC, SSL termination, path-based routing, circuit breaking). Explain why DSR enables a single L4 load balancer to handle hundreds of gigabits of traffic.",
+    "id": "net_mikrotik_raw_firewall_hardening",
+    "domain": "MikroTik RouterOS",
+    "source": "MikroTik RouterOS Security & Defense Architecture",
+    "title": "MikroTik Raw Firewall Pre-ConnTrack DDoS Defense & Brute Force Blacklisting",
+    "prompt": "Explain why `/ip firewall raw` is critical for high-volume DDoS mitigation compared to `/ip firewall filter`. Write a RouterOS security hardening script that drops port scanners and brute-force attacks against Winbox (8291) and SSH (22) using staged Address Lists (`stage1`, `stage2`, `stage3`, `blacklist_7d`).",
+    "code_example": "# MikroTik Pre-ConnTrack Raw Firewall & Brute-Force Defense\n/ip firewall raw\n# 1. Drop known blacklisted IPs with ZERO conntrack memory allocation\nadd chain=prerouting src-address-list=blacklisted_attackers action=drop comment=\"Drop Blacklisted Attackers\"\nadd chain=prerouting tcp-flags=!fin,!syn,!rst,!ack action=drop comment=\"Drop NULL Scan\"\nadd chain=prerouting tcp-flags=fin,syn action=drop comment=\"Drop SYN-FIN Scan\"\nadd chain=prerouting tcp-flags=fin,psh,urg,!syn,!rst,!ack action=drop comment=\"Drop XMAS Scan\"\n\n/ip firewall filter\n# 2. FastTrack Established Connections\nadd chain=forward action=fasttrack-connection connection-state=established,related\nadd chain=forward action=accept connection-state=established,related\nadd chain=forward action=drop connection-state=invalid\n\n# 3. Progressive 3-Stage Winbox/SSH Brute Force Defense\nadd chain=input protocol=tcp dst-port=8291,22 connection-state=new src-address-list=stage3 action=add-src-to-address-list address-list=blacklisted_attackers address-list-timeout=7d\nadd chain=input protocol=tcp dst-port=8291,22 connection-state=new src-address-list=stage2 action=add-src-to-address-list address-list=stage3 address-list-timeout=1m\nadd chain=input protocol=tcp dst-port=8291,22 connection-state=new src-address-list=stage1 action=add-src-to-address-list address-list=stage2 address-list-timeout=1m\nadd chain=input protocol=tcp dst-port=8291,22 connection-state=new action=add-src-to-address-list address-list=stage1 address-list-timeout=1m\n",
     "invariants": [
-      "L4 Load Balancing operates at the transport layer without terminating TCP/TLS. In Direct Server Return (DSR), incoming requests pass through the L4 load balancer which modifies the destination MAC address to the chosen backend server, but the backend server responds DIRECTLY to the client with the Virtual IP (VIP) as source IP.",
-      "DSR exploits the asymmetry of web traffic (requests are tiny ~1KB, responses are huge ~1MB-10MB), allowing the load balancer to handle 10x-100x more throughput since it never processes egress response traffic.",
-      "L7 Load Balancing terminates TCP and TLS, parses HTTP headers/JSON/gRPC payloads, and maintains two separate connection pools (client-to-proxy, proxy-to-upstream). It enables complex routing, authentication, retry policies, and circuit breaking at the cost of higher CPU and memory overhead."
+      "The `/ip firewall raw` table intercepts packets before connection tracking (`conntrack`). Under high-volume SYN/UDP floods, dropping packets in `/ip firewall filter` still consumes 100% CPU creating conntrack entries; `/ip firewall raw` drops them statelessly with negligible CPU impact.",
+      "Staged address lists prevent legitimate users who mistyped their password once or twice from being locked out for a week, while instantly blacklisting automated high-frequency brute-force bots."
     ],
     "difficulty": "Hard",
-    "benchmark_eval": "SWE-Cloud-02"
+    "benchmark_eval": "SWE-MikroTik-07"
   },
   {
     "id": "net_bgp_hijacking_and_rpki",
