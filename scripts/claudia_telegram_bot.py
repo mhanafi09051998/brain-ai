@@ -192,11 +192,10 @@ def run_claudia_bot():
 ─────────────────────
 
 <b>DAFTAR PERINTAH</b>
-• <code>/saldo</code> : Saldo & total profit
-• <code>/status</code>: Status & harga aktif
-• <code>/user</code>  : Porsi modal investor
-• <code>/report</code>: Laporan per jam
-• <code>/help</code>  : Panduan terminal
+• <code>/saldo</code>  : Saldo modal & keuntungan
+• <code>/user</code>   : Porsi modal investor
+• <code>/report</code> : Laporan likuiditas per jam
+• <code>/help</code>   : Panduan terminal
 
 ─────────────────────
 <i>Gahar Inovasi Teknologi</i>""")
