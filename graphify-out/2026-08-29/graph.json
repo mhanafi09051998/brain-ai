@@ -9166,6 +9166,426 @@
       "source_location": "L1"
     },
     {
+      "id": "learning_neurons_n089_cellular_automata_fractal_induction",
+      "label": "N089_cellular_automata_fractal_induction.md",
+      "_origin": "ast",
+      "community": 155,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "n089_cellular_automata_fractal_induction.md",
+      "source_file": "learning/neurons/N089_cellular_automata_fractal_induction.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "learning_neurons_n089_cellular_automata_fractal_induction_1_rekursi_fraktal_hierarki_multi_skala_self_similarity",
+      "label": "1. Rekursi Fraktal & Hierarki Multi-Skala (Self-Similarity)",
+      "_origin": "ast",
+      "community": 155,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. rekursi fraktal & hierarki multi-skala (self-similarity)",
+      "source_file": "learning/neurons/N089_cellular_automata_fractal_induction.md",
+      "source_location": "L11"
+    },
+    {
+      "id": "learning_neurons_n089_cellular_automata_fractal_induction_2_2d_cellular_automata_step_simulation",
+      "label": "2. 2D Cellular Automata Step Simulation",
+      "_origin": "ast",
+      "community": 155,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. 2d cellular automata step simulation",
+      "source_file": "learning/neurons/N089_cellular_automata_fractal_induction.md",
+      "source_location": "L19"
+    },
+    {
+      "id": "learning_neurons_n089_cellular_automata_fractal_induction_3_spatial_topology_pathfinding_invariants",
+      "label": "3. Spatial Topology & Pathfinding Invariants",
+      "_origin": "ast",
+      "community": 155,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. spatial topology & pathfinding invariants",
+      "source_file": "learning/neurons/N089_cellular_automata_fractal_induction.md",
+      "source_location": "L25"
+    },
+    {
+      "id": "learning_neurons_n089_cellular_automata_fractal_induction_algoritma_deterministik_pure_python_implementation",
+      "label": "\ud83d\udcbb Algoritma Deterministik (Pure Python Implementation)",
+      "_origin": "ast",
+      "community": 155,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udcbb algoritma deterministik (pure python implementation)",
+      "source_file": "learning/neurons/N089_cellular_automata_fractal_induction.md",
+      "source_location": "L31"
+    },
+    {
+      "id": "learning_neurons_n089_cellular_automata_fractal_induction_invarian_inti_core_invariants",
+      "label": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "_origin": "ast",
+      "community": 155,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83c\udfaf invarian inti (core invariants)",
+      "source_file": "learning/neurons/N089_cellular_automata_fractal_induction.md",
+      "source_location": "L9"
+    },
+    {
+      "id": "learning_neurons_n089_cellular_automata_fractal_induction_neuron_n089_cellular_automata_fractal_geometry_higher_order_spatial_induction",
+      "label": "Neuron N089: Cellular Automata, Fractal Geometry & Higher-Order Spatial Induction",
+      "_origin": "ast",
+      "community": 155,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "neuron n089: cellular automata, fractal geometry & higher-order spatial induction",
+      "source_file": "learning/neurons/N089_cellular_automata_fractal_induction.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "learning_neurons_n090_international_arbitration_crossborder_law",
+      "label": "N090_international_arbitration_crossborder_law.md",
+      "_origin": "ast",
+      "community": 156,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "n090_international_arbitration_crossborder_law.md",
+      "source_file": "learning/neurons/N090_international_arbitration_crossborder_law.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "learning_neurons_n090_international_arbitration_crossborder_law_1_arbitrase_komersial_internasional_uncitral_siac_icc",
+      "label": "1. Arbitrase Komersial Internasional (UNCITRAL / SIAC / ICC)",
+      "_origin": "ast",
+      "community": 156,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. arbitrase komersial internasional (uncitral / siac / icc)",
+      "source_file": "learning/neurons/N090_international_arbitration_crossborder_law.md",
+      "source_location": "L11"
+    },
+    {
+      "id": "learning_neurons_n090_international_arbitration_crossborder_law_2_conflict_of_laws_d\u00e9pe\u00e7age",
+      "label": "2. Conflict of Laws & D\u00e9pe\u00e7age",
+      "_origin": "ast",
+      "community": 156,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. conflict of laws & depecage",
+      "source_file": "learning/neurons/N090_international_arbitration_crossborder_law.md",
+      "source_location": "L15"
+    },
+    {
+      "id": "learning_neurons_n090_international_arbitration_crossborder_law_3_kepatuhan_regulasi_ai_data_global_eu_ai_act_gdpr_uu_pdp",
+      "label": "3. Kepatuhan Regulasi AI & Data Global (EU AI Act, GDPR, UU PDP)",
+      "_origin": "ast",
+      "community": 156,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. kepatuhan regulasi ai & data global (eu ai act, gdpr, uu pdp)",
+      "source_file": "learning/neurons/N090_international_arbitration_crossborder_law.md",
+      "source_location": "L21"
+    },
+    {
+      "id": "learning_neurons_n090_international_arbitration_crossborder_law_algoritma_deterministik_pure_python_implementation",
+      "label": "\ud83d\udcbb Algoritma Deterministik (Pure Python Implementation)",
+      "_origin": "ast",
+      "community": 156,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udcbb algoritma deterministik (pure python implementation)",
+      "source_file": "learning/neurons/N090_international_arbitration_crossborder_law.md",
+      "source_location": "L27"
+    },
+    {
+      "id": "learning_neurons_n090_international_arbitration_crossborder_law_invarian_inti_core_invariants",
+      "label": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "_origin": "ast",
+      "community": 156,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83c\udfaf invarian inti (core invariants)",
+      "source_file": "learning/neurons/N090_international_arbitration_crossborder_law.md",
+      "source_location": "L9"
+    },
+    {
+      "id": "learning_neurons_n090_international_arbitration_crossborder_law_neuron_n090_international_arbitration_cross_border_statutory_law_regulatory_compliance",
+      "label": "Neuron N090: International Arbitration, Cross-Border Statutory Law & Regulatory Compliance",
+      "_origin": "ast",
+      "community": 156,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "neuron n090: international arbitration, cross-border statutory law & regulatory compliance",
+      "source_file": "learning/neurons/N090_international_arbitration_crossborder_law.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "learning_neurons_n091_enterprise_erp_event_sourcing_saga",
+      "label": "N091_enterprise_erp_event_sourcing_saga.md",
+      "_origin": "ast",
+      "community": 157,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "n091_enterprise_erp_event_sourcing_saga.md",
+      "source_file": "learning/neurons/N091_enterprise_erp_event_sourcing_saga.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "learning_neurons_n091_enterprise_erp_event_sourcing_saga_1_immutable_event_sourcing_cqrs_balance_sheet",
+      "label": "1. Immutable Event Sourcing & CQRS Balance Sheet",
+      "_origin": "ast",
+      "community": 157,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. immutable event sourcing & cqrs balance sheet",
+      "source_file": "learning/neurons/N091_enterprise_erp_event_sourcing_saga.md",
+      "source_location": "L11"
+    },
+    {
+      "id": "learning_neurons_n091_enterprise_erp_event_sourcing_saga_2_saga_choreography_vs_orchestration_hybrid",
+      "label": "2. SAGA Choreography vs Orchestration Hybrid",
+      "_origin": "ast",
+      "community": 157,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. saga choreography vs orchestration hybrid",
+      "source_file": "learning/neurons/N091_enterprise_erp_event_sourcing_saga.md",
+      "source_location": "L17"
+    },
+    {
+      "id": "learning_neurons_n091_enterprise_erp_event_sourcing_saga_3_asynchronous_erp_reconciliation_sap_netsuite_odoo_api_standards",
+      "label": "3. Asynchronous ERP Reconciliation (SAP/NetSuite/Odoo API Standards)",
+      "_origin": "ast",
+      "community": 157,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. asynchronous erp reconciliation (sap/netsuite/odoo api standards)",
+      "source_file": "learning/neurons/N091_enterprise_erp_event_sourcing_saga.md",
+      "source_location": "L21"
+    },
+    {
+      "id": "learning_neurons_n091_enterprise_erp_event_sourcing_saga_algoritma_deterministik_pure_python_implementation",
+      "label": "\ud83d\udcbb Algoritma Deterministik (Pure Python Implementation)",
+      "_origin": "ast",
+      "community": 157,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udcbb algoritma deterministik (pure python implementation)",
+      "source_file": "learning/neurons/N091_enterprise_erp_event_sourcing_saga.md",
+      "source_location": "L27"
+    },
+    {
+      "id": "learning_neurons_n091_enterprise_erp_event_sourcing_saga_invarian_inti_core_invariants",
+      "label": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "_origin": "ast",
+      "community": 157,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83c\udfaf invarian inti (core invariants)",
+      "source_file": "learning/neurons/N091_enterprise_erp_event_sourcing_saga.md",
+      "source_location": "L9"
+    },
+    {
+      "id": "learning_neurons_n091_enterprise_erp_event_sourcing_saga_neuron_n091_enterprise_erp_event_sourcing_distributed_saga_choreography",
+      "label": "Neuron N091: Enterprise ERP Event-Sourcing & Distributed SAGA Choreography",
+      "_origin": "ast",
+      "community": 157,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "neuron n091: enterprise erp event-sourcing & distributed saga choreography",
+      "source_file": "learning/neurons/N091_enterprise_erp_event_sourcing_saga.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "learning_neurons_n092_allosteric_enzyme_kinetics_molecular_flux",
+      "label": "N092_allosteric_enzyme_kinetics_molecular_flux.md",
+      "_origin": "ast",
+      "community": 158,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "n092_allosteric_enzyme_kinetics_molecular_flux.md",
+      "source_file": "learning/neurons/N092_allosteric_enzyme_kinetics_molecular_flux.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "learning_neurons_n092_allosteric_enzyme_kinetics_molecular_flux_1_kinetika_enzim_allosterik_hill_equation",
+      "label": "1. Kinetika Enzim Allosterik & Hill Equation",
+      "_origin": "ast",
+      "community": 158,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. kinetika enzim allosterik & hill equation",
+      "source_file": "learning/neurons/N092_allosteric_enzyme_kinetics_molecular_flux.md",
+      "source_location": "L11"
+    },
+    {
+      "id": "learning_neurons_n092_allosteric_enzyme_kinetics_molecular_flux_2_metabolic_flux_analysis_stoichiometric_conservation",
+      "label": "2. Metabolic Flux Analysis & Stoichiometric Conservation",
+      "_origin": "ast",
+      "community": 158,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. metabolic flux analysis & stoichiometric conservation",
+      "source_file": "learning/neurons/N092_allosteric_enzyme_kinetics_molecular_flux.md",
+      "source_location": "L20"
+    },
+    {
+      "id": "learning_neurons_n092_allosteric_enzyme_kinetics_molecular_flux_3_protein_folding_thermodynamics_ramachandran_invariants",
+      "label": "3. Protein Folding Thermodynamics & Ramachandran Invariants",
+      "_origin": "ast",
+      "community": 158,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. protein folding thermodynamics & ramachandran invariants",
+      "source_file": "learning/neurons/N092_allosteric_enzyme_kinetics_molecular_flux.md",
+      "source_location": "L26"
+    },
+    {
+      "id": "learning_neurons_n092_allosteric_enzyme_kinetics_molecular_flux_algoritma_deterministik_pure_python_implementation",
+      "label": "\ud83d\udcbb Algoritma Deterministik (Pure Python Implementation)",
+      "_origin": "ast",
+      "community": 158,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udcbb algoritma deterministik (pure python implementation)",
+      "source_file": "learning/neurons/N092_allosteric_enzyme_kinetics_molecular_flux.md",
+      "source_location": "L32"
+    },
+    {
+      "id": "learning_neurons_n092_allosteric_enzyme_kinetics_molecular_flux_invarian_inti_core_invariants",
+      "label": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "_origin": "ast",
+      "community": 158,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83c\udfaf invarian inti (core invariants)",
+      "source_file": "learning/neurons/N092_allosteric_enzyme_kinetics_molecular_flux.md",
+      "source_location": "L9"
+    },
+    {
+      "id": "learning_neurons_n092_allosteric_enzyme_kinetics_molecular_flux_neuron_n092_allosteric_enzyme_kinetics_molecular_flux_dynamics",
+      "label": "Neuron N092: Allosteric Enzyme Kinetics & Molecular Flux Dynamics",
+      "_origin": "ast",
+      "community": 158,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "neuron n092: allosteric enzyme kinetics & molecular flux dynamics",
+      "source_file": "learning/neurons/N092_allosteric_enzyme_kinetics_molecular_flux.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "learning_neurons_n093_cross_domain_first_principles_deductive_synthesis",
+      "label": "N093_cross_domain_first_principles_deductive_synthesis.md",
+      "_origin": "ast",
+      "community": 159,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "n093_cross_domain_first_principles_deductive_synthesis.md",
+      "source_file": "learning/neurons/N093_cross_domain_first_principles_deductive_synthesis.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "learning_neurons_n093_cross_domain_first_principles_deductive_synthesis_1_penalaran_aksiomatis_reduksi_prinsip_pertama_first_principles",
+      "label": "1. Penalaran Aksiomatis & Reduksi Prinsip Pertama (First-Principles)",
+      "_origin": "ast",
+      "community": 159,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. penalaran aksiomatis & reduksi prinsip pertama (first-principles)",
+      "source_file": "learning/neurons/N093_cross_domain_first_principles_deductive_synthesis.md",
+      "source_location": "L11"
+    },
+    {
+      "id": "learning_neurons_n093_cross_domain_first_principles_deductive_synthesis_2_teori_bilangan_aljabar_geometri_diferensial",
+      "label": "2. Teori Bilangan Aljabar & Geometri Diferensial",
+      "_origin": "ast",
+      "community": 159,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. teori bilangan aljabar & geometri diferensial",
+      "source_file": "learning/neurons/N093_cross_domain_first_principles_deductive_synthesis.md",
+      "source_location": "L18"
+    },
+    {
+      "id": "learning_neurons_n093_cross_domain_first_principles_deductive_synthesis_3_ekonomi_makro_stokastik_game_theory",
+      "label": "3. Ekonomi Makro Stokastik & Game Theory",
+      "_origin": "ast",
+      "community": 159,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. ekonomi makro stokastik & game theory",
+      "source_file": "learning/neurons/N093_cross_domain_first_principles_deductive_synthesis.md",
+      "source_location": "L22"
+    },
+    {
+      "id": "learning_neurons_n093_cross_domain_first_principles_deductive_synthesis_algoritma_deterministik_pure_python_implementation",
+      "label": "\ud83d\udcbb Algoritma Deterministik (Pure Python Implementation)",
+      "_origin": "ast",
+      "community": 159,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udcbb algoritma deterministik (pure python implementation)",
+      "source_file": "learning/neurons/N093_cross_domain_first_principles_deductive_synthesis.md",
+      "source_location": "L29"
+    },
+    {
+      "id": "learning_neurons_n093_cross_domain_first_principles_deductive_synthesis_invarian_inti_core_invariants",
+      "label": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "_origin": "ast",
+      "community": 159,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83c\udfaf invarian inti (core invariants)",
+      "source_file": "learning/neurons/N093_cross_domain_first_principles_deductive_synthesis.md",
+      "source_location": "L9"
+    },
+    {
+      "id": "learning_neurons_n093_cross_domain_first_principles_deductive_synthesis_neuron_n093_cross_domain_first_principles_deductive_synthesis",
+      "label": "Neuron N093: Cross-Domain First-Principles Deductive Synthesis",
+      "_origin": "ast",
+      "community": 159,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "neuron n093: cross-domain first-principles deductive synthesis",
+      "source_file": "learning/neurons/N093_cross_domain_first_principles_deductive_synthesis.md",
+      "source_location": "L1"
+    },
+    {
       "id": "learning_neurons_n054_system_design_planning_mastery",
       "label": "N054_system_design_planning_mastery.md",
       "_origin": "ast",
@@ -9391,6 +9811,90 @@
       "node_kind": "heading",
       "norm_label": "neuron n054: large-scale system design, architecture planning & contract-first engineering mastery",
       "source_file": "learning/neurons/N054_system_design_planning_mastery.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "learning_neurons_n094_headless_terminal_ebpf_debugging",
+      "label": "N094_headless_terminal_ebpf_debugging.md",
+      "_origin": "ast",
+      "community": 160,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "n094_headless_terminal_ebpf_debugging.md",
+      "source_file": "learning/neurons/N094_headless_terminal_ebpf_debugging.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "learning_neurons_n094_headless_terminal_ebpf_debugging_1_headless_non_interactive_terminal_scripting",
+      "label": "1. Headless Non-Interactive Terminal Scripting",
+      "_origin": "ast",
+      "community": 160,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. headless non-interactive terminal scripting",
+      "source_file": "learning/neurons/N094_headless_terminal_ebpf_debugging.md",
+      "source_location": "L11"
+    },
+    {
+      "id": "learning_neurons_n094_headless_terminal_ebpf_debugging_2_ebpf_kernel_probing_system_call_tracing",
+      "label": "2. eBPF Kernel Probing & System Call Tracing",
+      "_origin": "ast",
+      "community": 160,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. ebpf kernel probing & system call tracing",
+      "source_file": "learning/neurons/N094_headless_terminal_ebpf_debugging.md",
+      "source_location": "L15"
+    },
+    {
+      "id": "learning_neurons_n094_headless_terminal_ebpf_debugging_3_gdb_batch_core_dump_deadlock_analysis",
+      "label": "3. GDB Batch Core Dump & Deadlock Analysis",
+      "_origin": "ast",
+      "community": 160,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. gdb batch core dump & deadlock analysis",
+      "source_file": "learning/neurons/N094_headless_terminal_ebpf_debugging.md",
+      "source_location": "L19"
+    },
+    {
+      "id": "learning_neurons_n094_headless_terminal_ebpf_debugging_algoritma_deterministik_pure_python_implementation",
+      "label": "\ud83d\udcbb Algoritma Deterministik (Pure Python Implementation)",
+      "_origin": "ast",
+      "community": 160,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udcbb algoritma deterministik (pure python implementation)",
+      "source_file": "learning/neurons/N094_headless_terminal_ebpf_debugging.md",
+      "source_location": "L30"
+    },
+    {
+      "id": "learning_neurons_n094_headless_terminal_ebpf_debugging_invarian_inti_core_invariants",
+      "label": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "_origin": "ast",
+      "community": 160,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83c\udfaf invarian inti (core invariants)",
+      "source_file": "learning/neurons/N094_headless_terminal_ebpf_debugging.md",
+      "source_location": "L9"
+    },
+    {
+      "id": "learning_neurons_n094_headless_terminal_ebpf_debugging_neuron_n094_headless_terminal_ebpf_concurrency_core_dump_debugging",
+      "label": "Neuron N094: Headless Terminal eBPF & Concurrency Core-Dump Debugging",
+      "_origin": "ast",
+      "community": 160,
+      "community_name": "\ud83c\udfaf Invarian Inti (Core Invariants)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "neuron n094: headless terminal ebpf & concurrency core-dump debugging",
+      "source_file": "learning/neurons/N094_headless_terminal_ebpf_debugging.md",
       "source_location": "L1"
     },
     {
@@ -18007,7 +18511,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\udccb active tasks & history",
       "source_file": "memory.md",
-      "source_location": "L89"
+      "source_location": "L95"
     },
     {
       "id": "memory_claudia_neuron_memory_network",
@@ -18031,7 +18535,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\udccb prosedur pembaruan memori",
       "source_file": "memory.md",
-      "source_location": "L83"
+      "source_location": "L89"
     },
     {
       "id": "learning_neurons_n032_cloud_native_edge_infra",
@@ -21093,14 +21597,14 @@
       "source_location": "L21"
     },
     {
-      "id": "readme_2_cognitive_neural_mesh_88_master_neurons_matrix",
-      "label": "\ud83e\udde0 2. Cognitive Neural Mesh (88 Master Neurons Matrix)",
+      "id": "readme_2_cognitive_neural_mesh_94_master_neurons_matrix",
+      "label": "\ud83e\udde0 2. Cognitive Neural Mesh (94 Master Neurons Matrix)",
       "_origin": "ast",
       "community": 57,
       "community_name": "\u26a1 CLAUDIA ULTRA (2026 World Frontier Edition)",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "\ud83e\udde0 2. cognitive neural mesh (88 master neurons matrix)",
+      "norm_label": "\ud83e\udde0 2. cognitive neural mesh (94 master neurons matrix)",
       "source_file": "README.md",
       "source_location": "L43"
     },
@@ -21114,7 +21618,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\udcca 3. 2026 frontier benchmark matrix (claudia ultra vs sota)",
       "source_file": "README.md",
-      "source_location": "L115"
+      "source_location": "L121"
     },
     {
       "id": "readme_4_hasil_pencapaian_pelatihan_otonom_empirical_training_milestones",
@@ -21126,7 +21630,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83c\udfc6 4. hasil & pencapaian pelatihan otonom (empirical training milestones)",
       "source_file": "README.md",
-      "source_location": "L138"
+      "source_location": "L144"
     },
     {
       "id": "readme_5_cara_menjalankan_mengkloning_kecerdasan_claudia",
@@ -21138,7 +21642,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\ude80 5. cara menjalankan & mengkloning kecerdasan claudia",
       "source_file": "README.md",
-      "source_location": "L173"
+      "source_location": "L179"
     },
     {
       "id": "readme_a_topologi_jaringan_kognitif_neural_mesh_metrics",
@@ -21150,7 +21654,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\udd2c a. topologi jaringan kognitif (neural mesh metrics)",
       "source_file": "README.md",
-      "source_location": "L142"
+      "source_location": "L148"
     },
     {
       "id": "readme_autonomous_principal_ai_engineer_quantitative_hedge_fund_intelligence",
@@ -21174,7 +21678,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\udcc8 b. hasil evaluasi & benchmark otonom",
       "source_file": "README.md",
-      "source_location": "L147"
+      "source_location": "L153"
     },
     {
       "id": "readme_c_hasil_pelatihan_domain_spesifik_yang_telah_tersintesis",
@@ -21186,7 +21690,7 @@
       "node_kind": "heading",
       "norm_label": "\u26a1 c. hasil pelatihan domain spesifik yang telah tersintesis",
       "source_file": "README.md",
-      "source_location": "L155"
+      "source_location": "L161"
     },
     {
       "id": "readme_claudia_ultra_2026_world_frontier_edition",
@@ -21210,7 +21714,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\udee1\ufe0f d. verifikasi integritas otak (zero-trust security)",
       "source_file": "README.md",
-      "source_location": "L167"
+      "source_location": "L173"
     },
     {
       "id": "scripts_test_brain",
@@ -43214,6 +43718,402 @@
       "weight": 1.0
     },
     {
+      "source": "learning_neurons_n089_cellular_automata_fractal_induction",
+      "target": "learning_neurons_n089_cellular_automata_fractal_induction_neuron_n089_cellular_automata_fractal_geometry_higher_order_spatial_induction",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N089_cellular_automata_fractal_induction.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n089_cellular_automata_fractal_induction_invarian_inti_core_invariants",
+      "target": "learning_neurons_n089_cellular_automata_fractal_induction_1_rekursi_fraktal_hierarki_multi_skala_self_similarity",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N089_cellular_automata_fractal_induction.md",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n089_cellular_automata_fractal_induction_invarian_inti_core_invariants",
+      "target": "learning_neurons_n089_cellular_automata_fractal_induction_2_2d_cellular_automata_step_simulation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N089_cellular_automata_fractal_induction.md",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n089_cellular_automata_fractal_induction_invarian_inti_core_invariants",
+      "target": "learning_neurons_n089_cellular_automata_fractal_induction_3_spatial_topology_pathfinding_invariants",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N089_cellular_automata_fractal_induction.md",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n089_cellular_automata_fractal_induction_neuron_n089_cellular_automata_fractal_geometry_higher_order_spatial_induction",
+      "target": "learning_neurons_n089_cellular_automata_fractal_induction_algoritma_deterministik_pure_python_implementation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N089_cellular_automata_fractal_induction.md",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n089_cellular_automata_fractal_induction_neuron_n089_cellular_automata_fractal_geometry_higher_order_spatial_induction",
+      "target": "learning_neurons_n089_cellular_automata_fractal_induction_invarian_inti_core_invariants",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N089_cellular_automata_fractal_induction.md",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n090_international_arbitration_crossborder_law",
+      "target": "learning_neurons_n090_international_arbitration_crossborder_law_neuron_n090_international_arbitration_cross_border_statutory_law_regulatory_compliance",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N090_international_arbitration_crossborder_law.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n090_international_arbitration_crossborder_law_invarian_inti_core_invariants",
+      "target": "learning_neurons_n090_international_arbitration_crossborder_law_1_arbitrase_komersial_internasional_uncitral_siac_icc",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N090_international_arbitration_crossborder_law.md",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n090_international_arbitration_crossborder_law_invarian_inti_core_invariants",
+      "target": "learning_neurons_n090_international_arbitration_crossborder_law_2_conflict_of_laws_d\u00e9pe\u00e7age",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N090_international_arbitration_crossborder_law.md",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n090_international_arbitration_crossborder_law_invarian_inti_core_invariants",
+      "target": "learning_neurons_n090_international_arbitration_crossborder_law_3_kepatuhan_regulasi_ai_data_global_eu_ai_act_gdpr_uu_pdp",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N090_international_arbitration_crossborder_law.md",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n090_international_arbitration_crossborder_law_neuron_n090_international_arbitration_cross_border_statutory_law_regulatory_compliance",
+      "target": "learning_neurons_n090_international_arbitration_crossborder_law_algoritma_deterministik_pure_python_implementation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N090_international_arbitration_crossborder_law.md",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n090_international_arbitration_crossborder_law_neuron_n090_international_arbitration_cross_border_statutory_law_regulatory_compliance",
+      "target": "learning_neurons_n090_international_arbitration_crossborder_law_invarian_inti_core_invariants",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N090_international_arbitration_crossborder_law.md",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n091_enterprise_erp_event_sourcing_saga",
+      "target": "learning_neurons_n091_enterprise_erp_event_sourcing_saga_neuron_n091_enterprise_erp_event_sourcing_distributed_saga_choreography",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N091_enterprise_erp_event_sourcing_saga.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n091_enterprise_erp_event_sourcing_saga_invarian_inti_core_invariants",
+      "target": "learning_neurons_n091_enterprise_erp_event_sourcing_saga_1_immutable_event_sourcing_cqrs_balance_sheet",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N091_enterprise_erp_event_sourcing_saga.md",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n091_enterprise_erp_event_sourcing_saga_invarian_inti_core_invariants",
+      "target": "learning_neurons_n091_enterprise_erp_event_sourcing_saga_2_saga_choreography_vs_orchestration_hybrid",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N091_enterprise_erp_event_sourcing_saga.md",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n091_enterprise_erp_event_sourcing_saga_invarian_inti_core_invariants",
+      "target": "learning_neurons_n091_enterprise_erp_event_sourcing_saga_3_asynchronous_erp_reconciliation_sap_netsuite_odoo_api_standards",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N091_enterprise_erp_event_sourcing_saga.md",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n091_enterprise_erp_event_sourcing_saga_neuron_n091_enterprise_erp_event_sourcing_distributed_saga_choreography",
+      "target": "learning_neurons_n091_enterprise_erp_event_sourcing_saga_algoritma_deterministik_pure_python_implementation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N091_enterprise_erp_event_sourcing_saga.md",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n091_enterprise_erp_event_sourcing_saga_neuron_n091_enterprise_erp_event_sourcing_distributed_saga_choreography",
+      "target": "learning_neurons_n091_enterprise_erp_event_sourcing_saga_invarian_inti_core_invariants",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N091_enterprise_erp_event_sourcing_saga.md",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n092_allosteric_enzyme_kinetics_molecular_flux",
+      "target": "learning_neurons_n092_allosteric_enzyme_kinetics_molecular_flux_neuron_n092_allosteric_enzyme_kinetics_molecular_flux_dynamics",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N092_allosteric_enzyme_kinetics_molecular_flux.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n092_allosteric_enzyme_kinetics_molecular_flux_invarian_inti_core_invariants",
+      "target": "learning_neurons_n092_allosteric_enzyme_kinetics_molecular_flux_1_kinetika_enzim_allosterik_hill_equation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N092_allosteric_enzyme_kinetics_molecular_flux.md",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n092_allosteric_enzyme_kinetics_molecular_flux_invarian_inti_core_invariants",
+      "target": "learning_neurons_n092_allosteric_enzyme_kinetics_molecular_flux_2_metabolic_flux_analysis_stoichiometric_conservation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N092_allosteric_enzyme_kinetics_molecular_flux.md",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n092_allosteric_enzyme_kinetics_molecular_flux_invarian_inti_core_invariants",
+      "target": "learning_neurons_n092_allosteric_enzyme_kinetics_molecular_flux_3_protein_folding_thermodynamics_ramachandran_invariants",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N092_allosteric_enzyme_kinetics_molecular_flux.md",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n092_allosteric_enzyme_kinetics_molecular_flux_neuron_n092_allosteric_enzyme_kinetics_molecular_flux_dynamics",
+      "target": "learning_neurons_n092_allosteric_enzyme_kinetics_molecular_flux_algoritma_deterministik_pure_python_implementation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N092_allosteric_enzyme_kinetics_molecular_flux.md",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n092_allosteric_enzyme_kinetics_molecular_flux_neuron_n092_allosteric_enzyme_kinetics_molecular_flux_dynamics",
+      "target": "learning_neurons_n092_allosteric_enzyme_kinetics_molecular_flux_invarian_inti_core_invariants",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N092_allosteric_enzyme_kinetics_molecular_flux.md",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n093_cross_domain_first_principles_deductive_synthesis",
+      "target": "learning_neurons_n093_cross_domain_first_principles_deductive_synthesis_neuron_n093_cross_domain_first_principles_deductive_synthesis",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N093_cross_domain_first_principles_deductive_synthesis.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n093_cross_domain_first_principles_deductive_synthesis_invarian_inti_core_invariants",
+      "target": "learning_neurons_n093_cross_domain_first_principles_deductive_synthesis_1_penalaran_aksiomatis_reduksi_prinsip_pertama_first_principles",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N093_cross_domain_first_principles_deductive_synthesis.md",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n093_cross_domain_first_principles_deductive_synthesis_invarian_inti_core_invariants",
+      "target": "learning_neurons_n093_cross_domain_first_principles_deductive_synthesis_2_teori_bilangan_aljabar_geometri_diferensial",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N093_cross_domain_first_principles_deductive_synthesis.md",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n093_cross_domain_first_principles_deductive_synthesis_invarian_inti_core_invariants",
+      "target": "learning_neurons_n093_cross_domain_first_principles_deductive_synthesis_3_ekonomi_makro_stokastik_game_theory",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N093_cross_domain_first_principles_deductive_synthesis.md",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n093_cross_domain_first_principles_deductive_synthesis_neuron_n093_cross_domain_first_principles_deductive_synthesis",
+      "target": "learning_neurons_n093_cross_domain_first_principles_deductive_synthesis_algoritma_deterministik_pure_python_implementation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N093_cross_domain_first_principles_deductive_synthesis.md",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n093_cross_domain_first_principles_deductive_synthesis_neuron_n093_cross_domain_first_principles_deductive_synthesis",
+      "target": "learning_neurons_n093_cross_domain_first_principles_deductive_synthesis_invarian_inti_core_invariants",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N093_cross_domain_first_principles_deductive_synthesis.md",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n094_headless_terminal_ebpf_debugging",
+      "target": "learning_neurons_n094_headless_terminal_ebpf_debugging_neuron_n094_headless_terminal_ebpf_concurrency_core_dump_debugging",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N094_headless_terminal_ebpf_debugging.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n094_headless_terminal_ebpf_debugging_invarian_inti_core_invariants",
+      "target": "learning_neurons_n094_headless_terminal_ebpf_debugging_1_headless_non_interactive_terminal_scripting",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N094_headless_terminal_ebpf_debugging.md",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n094_headless_terminal_ebpf_debugging_invarian_inti_core_invariants",
+      "target": "learning_neurons_n094_headless_terminal_ebpf_debugging_2_ebpf_kernel_probing_system_call_tracing",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N094_headless_terminal_ebpf_debugging.md",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n094_headless_terminal_ebpf_debugging_invarian_inti_core_invariants",
+      "target": "learning_neurons_n094_headless_terminal_ebpf_debugging_3_gdb_batch_core_dump_deadlock_analysis",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N094_headless_terminal_ebpf_debugging.md",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n094_headless_terminal_ebpf_debugging_neuron_n094_headless_terminal_ebpf_concurrency_core_dump_debugging",
+      "target": "learning_neurons_n094_headless_terminal_ebpf_debugging_algoritma_deterministik_pure_python_implementation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N094_headless_terminal_ebpf_debugging.md",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n094_headless_terminal_ebpf_debugging_neuron_n094_headless_terminal_ebpf_concurrency_core_dump_debugging",
+      "target": "learning_neurons_n094_headless_terminal_ebpf_debugging_invarian_inti_core_invariants",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N094_headless_terminal_ebpf_debugging.md",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
       "source": "learning_playbooks_graphify_workflow",
       "target": "learning_playbooks_graphify_workflow_playbook_graphify_workflow",
       "relation": "contains",
@@ -43364,7 +44264,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "memory.md",
-      "source_location": "L83",
+      "source_location": "L89",
       "weight": 1.0
     },
     {
@@ -43375,7 +44275,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "memory.md",
-      "source_location": "L89",
+      "source_location": "L95",
       "weight": 1.0
     },
     {
@@ -45509,7 +46409,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L142",
+      "source_location": "L148",
       "weight": 1.0
     },
     {
@@ -45520,7 +46420,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L147",
+      "source_location": "L153",
       "weight": 1.0
     },
     {
@@ -45531,7 +46431,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L155",
+      "source_location": "L161",
       "weight": 1.0
     },
     {
@@ -45542,7 +46442,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L167",
+      "source_location": "L173",
       "weight": 1.0
     },
     {
@@ -45553,7 +46453,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L115",
+      "source_location": "L121",
       "weight": 1.0
     },
     {
@@ -45564,7 +46464,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L138",
+      "source_location": "L144",
       "weight": 1.0
     },
     {
@@ -45575,7 +46475,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L173",
+      "source_location": "L179",
       "weight": 1.0
     },
     {
@@ -45602,7 +46502,7 @@
     },
     {
       "source": "readme_claudia_ultra_2026_world_frontier_edition",
-      "target": "readme_2_cognitive_neural_mesh_88_master_neurons_matrix",
+      "target": "readme_2_cognitive_neural_mesh_94_master_neurons_matrix",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -51041,5 +51941,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "611fda820f45e5a53d32f43296b6d07de2821d90"
+  "built_at_commit": "8de69beb1024ab5ce68fa756738bd31854101a1b"
 }

@@ -15,8 +15,9 @@ Strict Rule: Under 450 lines of code.
 import json, os, sys, time, re, sqlite3, random, urllib.request, subprocess, ast, hashlib
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-DB_PATH = "/home/ubuntu/benchmarks/benchmark_results.db"
-ROUTER_URL = "http://127.0.0.1:3040/v1/chat/completions"
+WORKSPACE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DB_PATH = os.environ.get("BENCHMARK_DB_PATH") or ("/home/ubuntu/benchmarks/benchmark_results.db" if os.path.exists("/home/ubuntu") else os.path.join(WORKSPACE, "learning", "benchmark_results.db"))
+ROUTER_URL = os.environ.get("ROUTER_URL") or "https://9router.zolu.my.id/v1/chat/completions"
 ROUTER_KEY = os.environ.get("ANTHROPIC_AUTH_TOKEN") or os.environ.get("ROUTER_API_KEY", "")
 
 KV_CACHE = {}

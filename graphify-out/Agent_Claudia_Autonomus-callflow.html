@@ -60,7 +60,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 <div class="container">
 
 <h1>GEMINI-HANAFI — Complete Call Flow &amp; Architecture Documentation</h1>
-<p class="subtitle">Generated from graphify knowledge graph: 2092 nodes, 2412 edges, 246 communities. Commit: 8de69be</p>
+<p class="subtitle">Generated from graphify knowledge graph: 2092 nodes, 2412 edges, 248 communities. Commit: 4dc93b2</p>
 
 <div class="nav">
     <a href="#overview">Architecture Overview</a>
@@ -102,9 +102,9 @@ flowchart LR
     class INGEST_CACHE_UPDATE_FF457338 module;
     SERVE_API_35EC8E86("Serving API<br/><small>149 nodes</small>")
     class SERVE_API_35EC8E86 module;
-    SECURITY_GLOBAL_5B9C6A04("Security &amp; Global Graph<br/><small>66 nodes</small>")
+    SECURITY_GLOBAL_5B9C6A04("Security &amp; Global Graph<br/><small>71 nodes</small>")
     class SECURITY_GLOBAL_5B9C6A04 module;
-    TESTS_FIXTURES_B84B1DCC("Tests &amp; Fixtures<br/><small>115 nodes</small>")
+    TESTS_FIXTURES_B84B1DCC("Tests &amp; Fixtures<br/><small>97 nodes</small>")
     class TESTS_FIXTURES_B84B1DCC module;
     APP_JS_CC08AAF7("app.js<br/><small>39 nodes</small>")
     class APP_JS_CC08AAF7 module;
@@ -116,20 +116,20 @@ flowchart LR
     class NEURON_N044_STATISTICAL_ARBITRAGE_PAIRS_TRADING_CC6EBDBF module;
     SECTION_15_F840E13C("==========================================<br/><small>20 nodes</small>")
     class SECTION_15_F840E13C module;
-    OTHER_D0941E68("Other<br/><small>795 nodes</small>")
+    OTHER_D0941E68("Other<br/><small>808 nodes</small>")
     class OTHER_D0941E68 module;
-    TESTS_FIXTURES_B84B1DCC -->|calls x16| OTHER_D0941E68
+    TESTS_FIXTURES_B84B1DCC -->|calls x29| OTHER_D0941E68
     OTHER_D0941E68 -->|imports x14| CLI_SKILLS_9964CBB8
-    TESTS_FIXTURES_B84B1DCC -->|references x10| COLOR_6DD0FE80
+    TESTS_FIXTURES_B84B1DCC -->|calls x8| OUTPUTS_DOCS_ED82387C
     CLI_SKILLS_9964CBB8 -->|contains x8| OTHER_D0941E68
-    TESTS_FIXTURES_B84B1DCC -->|calls x7| OUTPUTS_DOCS_ED82387C
+    TESTS_FIXTURES_B84B1DCC -->|calls x7| SECURITY_GLOBAL_5B9C6A04
     TESTS_FIXTURES_B84B1DCC -->|calls x7| ANALYSIS_CLUSTERING_C79796DA
     TESTS_FIXTURES_B84B1DCC -->|calls x7| CLI_SKILLS_9964CBB8
     OTHER_D0941E68 -->|calls x6| ANALYSIS_CLUSTERING_C79796DA
     OUTPUTS_DOCS_ED82387C -->|references x6| OTHER_D0941E68
-    OTHER_D0941E68 -->|calls x5| SECURITY_GLOBAL_5B9C6A04
+    OTHER_D0941E68 -->|references x5| COLOR_6DD0FE80
+    TESTS_FIXTURES_B84B1DCC -->|references x5| COLOR_6DD0FE80
     CLI_SKILLS_9964CBB8 -->|indirect call x5| TESTS_FIXTURES_B84B1DCC
-    ANALYSIS_CLUSTERING_C79796DA -->|imports x4| OTHER_D0941E68
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -146,19 +146,19 @@ flowchart LR
     <h4>Architecture Layers</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>Layer</th><th>Nodes</th><th>Communities</th></tr>
-      <tr><td>Extraction Pipeline</td><td>163</td><td><code>8, 11, 25, 26, 29, 40, 229, 45, 235, 149, 154, 185, 84, 96, 97</code></td></tr><tr><td>Graph Build</td><td>207</td><td><code>0, 4, 181, 28, 129, 36, 198, 233, 62, 67, 225, 244, 124, 125</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>144</td><td><code>146, 6, 14, 252, 31, 57, 46, 68, 239</code></td></tr><tr><td>Outputs &amp; Docs</td><td>56</td><td><code>3, 43, 133, 32, 219</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>170</td><td><code>22, 5, 140, 39, 147, 49, 53, 236, 237, 54, 56, 69, 70, 71, 74, 75, 76, 77, 82, 86, 91, 116, 118, 119, 120, 121, 122, 123</code></td></tr><tr><td>Ingestion &amp; Updates</td><td>98</td><td><code>178, 19, 168, 226, 73, 114, 177, 208, 88, 135, 136, 138, 186, 190, 191, 210, 211, 212, 214, 162, 183, 188, 194, 195</code></td></tr><tr><td>Serving API</td><td>149</td><td><code>196, 182, 197, 38, 153, 207, 200, 95, 215</code></td></tr><tr><td>Security &amp; Global Graph</td><td>66</td><td><code>9, 220, 128, 230, 52, 243</code></td></tr><tr><td>Tests &amp; Fixtures</td><td>115</td><td><code>37, 7, 23, 18, 130, 58, 139, 216, 217, 218</code></td></tr><tr><td>app.js</td><td>39</td><td><code>161</code></td></tr><tr><td>Color</td><td>25</td><td><code>34</code></td></tr><tr><td>Neuron N056: Image Processing, Computer Vision &amp; AI Visual Generation Mastery</td><td>23</td><td><code>47</code></td></tr><tr><td>Neuron N044: Statistical Arbitrage, Pairs Trading &amp; Cointegration</td><td>22</td><td><code>10</code></td></tr><tr><td>==========================================</td><td>20</td><td><code>12</code></td></tr><tr><td>Other</td><td>795</td><td><code>13, 15, 16, 17, 179, 131, 20, 21, 24, 27, 87, 169, 30, 33, 35, 1, 113, 199, 222, 41, 148, 223, 224, 228, 231, 232, 245, 246, 247, 248, 249, 42, 44, 170, 234, 251, 50, 51, 55, 132, 2, 150, 151, 152, 155, 156, 157, 158, 159, 160, 48, 59, 60, 61, 63, 64, 206, 65, 66, 134, 172, 227, 72, 171, 193, 238, 78, 79, 80, 81, 83, 85, 89, 90, 100, 101, 102, 103, 137, 209, 240, 241, 242, 92, 93, 94, 98, 99, 104, 105, 106, 107, 108, 109, 110, 111, 112, 176, 189, 201, 213, 115, 117, 126, 127, 141, 142, 143, 144, 145, 175, 180, 184, 187, 192, 202, 203, 204, 205, 221, 254</code></td></tr>
+      <tr><td>Extraction Pipeline</td><td>163</td><td><code>8, 11, 25, 26, 29, 40, 229, 45, 235, 149, 154, 185, 84, 96, 97</code></td></tr><tr><td>Graph Build</td><td>207</td><td><code>0, 4, 181, 28, 129, 36, 198, 233, 62, 67, 225, 244, 124, 125</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>144</td><td><code>146, 6, 14, 252, 31, 57, 46, 68, 239</code></td></tr><tr><td>Outputs &amp; Docs</td><td>56</td><td><code>3, 43, 133, 32, 219</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>170</td><td><code>22, 5, 140, 39, 147, 49, 53, 236, 237, 54, 56, 69, 70, 71, 74, 75, 76, 77, 82, 86, 91, 116, 118, 119, 120, 121, 122, 123</code></td></tr><tr><td>Ingestion &amp; Updates</td><td>98</td><td><code>178, 19, 168, 226, 73, 114, 177, 208, 88, 135, 136, 138, 186, 190, 191, 210, 211, 212, 214, 162, 183, 188, 194, 195</code></td></tr><tr><td>Serving API</td><td>149</td><td><code>196, 182, 197, 38, 153, 207, 200, 95, 215</code></td></tr><tr><td>Security &amp; Global Graph</td><td>71</td><td><code>9, 128, 220, 230, 52, 243</code></td></tr><tr><td>Tests &amp; Fixtures</td><td>97</td><td><code>7, 23, 18, 37, 131, 58, 139, 216, 217, 218</code></td></tr><tr><td>app.js</td><td>39</td><td><code>161</code></td></tr><tr><td>Color</td><td>25</td><td><code>34</code></td></tr><tr><td>Neuron N056: Image Processing, Computer Vision &amp; AI Visual Generation Mastery</td><td>23</td><td><code>47</code></td></tr><tr><td>Neuron N044: Statistical Arbitrage, Pairs Trading &amp; Cointegration</td><td>22</td><td><code>10</code></td></tr><tr><td>==========================================</td><td>20</td><td><code>12</code></td></tr><tr><td>Other</td><td>808</td><td><code>13, 15, 16, 17, 179, 20, 21, 24, 27, 87, 169, 30, 33, 35, 163, 1, 113, 130, 199, 222, 41, 148, 223, 224, 228, 231, 232, 245, 246, 247, 248, 249, 42, 44, 132, 170, 234, 251, 50, 51, 55, 2, 150, 151, 152, 155, 156, 157, 158, 159, 160, 48, 59, 60, 61, 63, 64, 206, 65, 66, 134, 172, 227, 72, 164, 171, 193, 238, 78, 79, 80, 81, 83, 85, 89, 90, 100, 101, 102, 103, 137, 209, 240, 241, 242, 92, 93, 94, 98, 99, 104, 105, 106, 107, 108, 109, 110, 111, 112, 176, 189, 201, 213, 115, 117, 126, 127, 141, 142, 143, 144, 145, 175, 180, 184, 187, 192, 202, 203, 204, 205, 221, 254</code></td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Core Flow</h4>
-    <div class="arrow-chain">Ingestion &amp; Updates -&gt; Extraction Pipeline -&gt; Graph Build -&gt; Security &amp; Global Graph -&gt; Analysis &amp; Clustering -&gt; Other -&gt; CLI &amp; Skill Installers</div>
+    <div class="arrow-chain">Ingestion &amp; Updates -&gt; Extraction Pipeline -&gt; Graph Build -&gt; Security &amp; Global Graph -&gt; Other -&gt; CLI &amp; Skill Installers -&gt; Tests &amp; Fixtures</div>
   </div>
 </div>
 <div class="grid">
   <div class="card">
     <h4>Graph Report Highlights</h4>
     <ul>
-      <li>2092 nodes · 2412 edges · 246 communities (213 shown, 33 thin omitted)</li>
+      <li>2092 nodes · 2412 edges · 248 communities (214 shown, 34 thin omitted)</li>
       <li>Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 38 edges (avg confidence: 0.85)</li>
       <li>Token cost: 0 input · 0 output</li>
       <li>1. `Vec2D` - 25 edges</li>
@@ -2633,58 +2633,63 @@ flowchart LR
 
 <!-- ====== 9. Security & Global Graph ====== -->
 <h2 id="security-global">9. Security &amp; Global Graph</h2>
-<p>Security &amp; Global Graph groups implementation around learning, neurons, microvm, wasi, mostly in learning/neurons/N037_wasm_wasi_microvm_sandboxing.md, learning/neurons/N070_firecracker_microvm_multitenant_rls.md, scripts/image_vision_nucleus_engine.py. This section covers 66 nodes and 60 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Security &amp; Global Graph groups implementation around learning, neurons, microvm, wasi, mostly in learning/neurons/N037_wasm_wasi_microvm_sandboxing.md, scripts/image_vision_nucleus_engine.py, learning/neurons/N070_firecracker_microvm_multitenant_rls.md. This section covers 71 nodes and 67 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Security &amp; Global Graph (66 nodes, 60 edges)
+    %% Section: Security &amp; Global Graph (71 nodes, 67 edges)
+    subgraph security_global_scripts_image_vision_nucleus_eng_3b9fb383["scripts/image_vision_nucleus_engine.py"]
+        scripts_image_vision_nucleus_engine_geometricres_298a726b("GeometricRescaler<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_geometricres_6fd47290("letterbox_aspect_preserver()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_imagematrix_7f251986("clone()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_vaedecodenod_0e6de4a1("execute()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7("ImageMatrix<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_geometricres_e2e40808("bilinear_rescale()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_imagematrix_6fdcd274("set_pixel()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_imagematrix_2560d8f8("__init__()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_imagematrix_e3cc11b8("from_nested_list()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_imagematrix_c813a7e3("get_pixel()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+    end
     subgraph security_global_learning_neurons_N037_wasm_wasi_16924d4f["learning/neurons/N037_wasm_wasi_microvm_sandboxing.md"]
         learning_neurons_n037_wasm_wasi_microvm_sandboxi_90247e40("1.1. Linear Memory Model &amp; Page Granula...<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
         learning_neurons_n037_wasm_wasi_microvm_sandboxi_237d218e("1.2. Hardware Guard Pages &amp; Zero-Cost S...<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
         learning_neurons_n037_wasm_wasi_microvm_sandboxi_77914e3c("1.3. Shadow Stack &amp; Control-Flow Integr...<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
         learning_neurons_n037_wasm_wasi_microvm_sandboxi_bd2d55ca("2.1. Paradigma Capability-Based Securit...<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
         learning_neurons_n037_wasm_wasi_microvm_sandboxi_3896004c("2.2. Evolusi WASI &amp; The Component Model...<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
-        learning_neurons_n037_wasm_wasi_microvm_sandboxi_62cdee95("3.1. Wasmtime &amp; Cranelift JIT Invariants<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
-        learning_neurons_n037_wasm_wasi_microvm_sandboxi_8ab7433d("3.2. Extism Universal Plugin Framework<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
-        learning_neurons_n037_wasm_wasi_microvm_sandboxi_aad29d59("4.1. Hardware Virtualization (KVM: /de...<br/><small>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</small>")
-    end
-    subgraph security_global_scripts_image_vision_nucleus_eng_3b9fb383["scripts/image_vision_nucleus_engine.py"]
-        scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7("ImageMatrix<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_imagematrix_7f251986("clone()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_streamingtil_edab8255("process_tiled_convolution()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_imagematrix_6fdcd274("set_pixel()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_imagematrix_2560d8f8("__init__()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_imagematrix_e3cc11b8("from_nested_list()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_imagematrix_c813a7e3("get_pixel()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
     end
     subgraph security_global_learning_neurons_N014_zero_trust_d7c72573["learning/neurons/N014_zero_trust_security_and_cryptography.md"]
         learning_neurons_n014_zero_trust_security_and_cr_95165724("1. Modern Cryptography &amp; Token Architec...<br/><small>learning/neurons/N014_zero_trust_security_and_cryptography.md</small>")
         learning_neurons_n014_zero_trust_security_and_cr_a78b22de("2. Threat Modeling &amp; Runtime Protection<br/><small>learning/neurons/N014_zero_trust_security_and_cryptography.md</small>")
         learning_neurons_n014_zero_trust_security_and_cr_fcc2a53d("security and cryptography.md<br/><small>learning/neurons/N014_zero_trust_security_and_cryptography.md</small>")
     end
+    scripts_image_vision_nucleus_engine_geometricres_298a726b -->|method| scripts_image_vision_nucleus_engine_geometricres_e2e40808
+    scripts_image_vision_nucleus_engine_geometricres_298a726b -->|method| scripts_image_vision_nucleus_engine_geometricres_6fd47290
     scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7 -->|method| scripts_image_vision_nucleus_engine_imagematrix_6fdcd274
     scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7 -->|method| scripts_image_vision_nucleus_engine_imagematrix_2560d8f8
     scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7 -->|method| scripts_image_vision_nucleus_engine_imagematrix_e3cc11b8
     scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7 -->|method| scripts_image_vision_nucleus_engine_imagematrix_c813a7e3
+    scripts_image_vision_nucleus_engine_geometricres_e2e40808 -->|calls| scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7
+    scripts_image_vision_nucleus_engine_geometricres_6fd47290 -->|calls| scripts_image_vision_nucleus_engine_geometricres_e2e40808
+    scripts_image_vision_nucleus_engine_geometricres_6fd47290 -->|calls| scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7
     scripts_image_vision_nucleus_engine_imagematrix_7f251986 -->|calls| scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7
-    scripts_image_vision_nucleus_engine_streamingtil_edab8255 -->|calls| scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7
-    %% Omitted for readability: 48 nodes, 0 edges
+    scripts_image_vision_nucleus_engine_vaedecodenod_0e6de4a1 -->|calls| scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7
+    %% Omitted for readability: 53 nodes, 0 edges
+    class scripts_image_vision_nucleus_engine_geometricres_298a726b klass;
+    class scripts_image_vision_nucleus_engine_geometricres_6fd47290 function;
+    class scripts_image_vision_nucleus_engine_imagematrix_7f251986 function;
+    class scripts_image_vision_nucleus_engine_vaedecodenod_0e6de4a1 function;
+    class scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7 klass;
+    class scripts_image_vision_nucleus_engine_geometricres_e2e40808 function;
+    class scripts_image_vision_nucleus_engine_imagematrix_6fdcd274 function;
+    class scripts_image_vision_nucleus_engine_imagematrix_2560d8f8 function;
+    class scripts_image_vision_nucleus_engine_imagematrix_e3cc11b8 function;
+    class scripts_image_vision_nucleus_engine_imagematrix_c813a7e3 function;
     class learning_neurons_n037_wasm_wasi_microvm_sandboxi_90247e40 concept;
     class learning_neurons_n037_wasm_wasi_microvm_sandboxi_237d218e concept;
     class learning_neurons_n037_wasm_wasi_microvm_sandboxi_77914e3c concept;
     class learning_neurons_n037_wasm_wasi_microvm_sandboxi_bd2d55ca concept;
     class learning_neurons_n037_wasm_wasi_microvm_sandboxi_3896004c concept;
-    class learning_neurons_n037_wasm_wasi_microvm_sandboxi_62cdee95 concept;
-    class learning_neurons_n037_wasm_wasi_microvm_sandboxi_8ab7433d concept;
-    class learning_neurons_n037_wasm_wasi_microvm_sandboxi_aad29d59 concept;
-    class scripts_image_vision_nucleus_engine_imagematrix_e7b78ed7 klass;
-    class scripts_image_vision_nucleus_engine_imagematrix_7f251986 function;
-    class scripts_image_vision_nucleus_engine_streamingtil_edab8255 function;
-    class scripts_image_vision_nucleus_engine_imagematrix_6fdcd274 function;
-    class scripts_image_vision_nucleus_engine_imagematrix_2560d8f8 function;
-    class scripts_image_vision_nucleus_engine_imagematrix_e3cc11b8 function;
-    class scripts_image_vision_nucleus_engine_imagematrix_c813a7e3 function;
     class learning_neurons_n014_zero_trust_security_and_cr_95165724 concept;
     class learning_neurons_n014_zero_trust_security_and_cr_a78b22de concept;
     class learning_neurons_n014_zero_trust_security_and_cr_fcc2a53d concept;
@@ -2887,67 +2892,67 @@ flowchart LR
 </tr>
 <tr>
   <td>23</td>
-  <td><code>N070_firecracker_microvm_multitenant_rls.md</code><br><small style="color:var(--muted)">learning/neurons/N070_firecracker_microvm_multitenant_rls.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
+  <td><code>GeometricRescaler</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
+  <td><span class="tag tag-class">Class</span></td>
   <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing N070_firecracker_microvm_multitenant_rls.md.</td>
+  <td><code>bilinear_rescale()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br><code>letterbox_aspect_preserver()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br><code>unletterbox_box()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
+  <td>GeometricRescaler node in scripts/image_vision_nucleus_engine.py.</td>
 </tr>
 <tr>
   <td>24</td>
-  <td><code>🎯 1. Multi-Tenant Isolation Architecture</code><br><small style="color:var(--muted)">learning/neurons/N070_firecracker_microvm_multitenant_rls.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 🎯 1. Multi-Tenant Isolation Architecture.</td>
+  <td><code>ImageMatrix</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>bilinear_rescale()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br><code>clone()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br><code>convolve_2d()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br>+5 more</td>
+  <td><code>__init__()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br><code>from_nested_list()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br><code>get_pixel()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br>+1 more</td>
+  <td>ImageMatrix node in scripts/image_vision_nucleus_engine.py.</td>
 </tr>
 <tr>
   <td>25</td>
-  <td><code>2.1. MicroVM Provisioning Density Invariant</code><br><small style="color:var(--muted)">learning/neurons/N070_firecracker_microvm_multitenant_rls.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 2.1. MicroVM Provisioning Density Invariant.</td>
+  <td><code>.bilinear_rescale()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>GeometricRescaler</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br><code>letterbox_aspect_preserver()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br><code>run_tests()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
+  <td><code>ImageMatrix</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
+  <td>.bilinear_rescale() node in scripts/image_vision_nucleus_engine.py.</td>
 </tr>
 <tr>
   <td>26</td>
-  <td><code>2.2. Jailer Seccomp-BPF &amp; Namespace Confinement</code><br><small style="color:var(--muted)">learning/neurons/N070_firecracker_microvm_multitenant_rls.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 2.2. Jailer Seccomp-BPF &amp; Namespace Confinement.</td>
+  <td><code>.letterbox_aspect_preserver()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>GeometricRescaler</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br><code>run_tests()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
+  <td><code>bilinear_rescale()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br><code>ImageMatrix</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
+  <td>.letterbox_aspect_preserver() node in scripts/image_vision_nucleus_engine.py.</td>
 </tr>
 <tr>
   <td>27</td>
-  <td><code>2.3. Postgres Row-Level Security (RLS) Policy &amp; Leak Guard</code><br><small style="color:var(--muted)">learning/neurons/N070_firecracker_microvm_multitenant_rls.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
+  <td><code>.clone()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing 2.3. Postgres Row-Level Security (RLS) Policy &amp; Leak Guard.</td>
+  <td><code>ImageMatrix</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
+  <td>Turns a local path or remote repository into analysis context.</td>
 </tr>
 <tr>
   <td>28</td>
-  <td><code>📐 2. Core Mathematical &amp; Security Invariants</code><br><small style="color:var(--muted)">learning/neurons/N070_firecracker_microvm_multitenant_rls.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
+  <td><code>.from_nested_list()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>ImageMatrix</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small><br><code>run_tests()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing 📐 2. Core Mathematical &amp; Security Invariants.</td>
+  <td>.from_nested_list() node in scripts/image_vision_nucleus_engine.py.</td>
 </tr>
 <tr>
   <td>29</td>
-  <td><code>🔍 3. Root Cause Analysis &amp; Failure Mode Guards</code><br><small style="color:var(--muted)">learning/neurons/N070_firecracker_microvm_multitenant_rls.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
+  <td><code>.get_pixel()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>ImageMatrix</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing 🔍 3. Root Cause Analysis &amp; Failure Mode Guards.</td>
+  <td>.get_pixel() node in scripts/image_vision_nucleus_engine.py.</td>
 </tr>
 <tr>
   <td>30</td>
-  <td><code>4.1. PostgreSQL RLS Transactional Context (Python Async)</code><br><small style="color:var(--muted)">learning/neurons/N070_firecracker_microvm_multitenant_rls.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
+  <td><code>.__init__()</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>ImageMatrix</code><br><small style="color:var(--muted)">scripts/image_vision_nucleus_engine.py</small></td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing 4.1. PostgreSQL RLS Transactional Context (Python Async).</td>
+  <td>.__init__() node in scripts/image_vision_nucleus_engine.py.</td>
 </tr>
 </table>
 
@@ -2957,85 +2962,86 @@ flowchart LR
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
       <tr><td><code>learning/neurons/N037_wasm_wasi_microvm_sandboxing.md</code></td><td>22 nodes</td></tr>
+<tr><td><code>scripts/image_vision_nucleus_engine.py</code></td><td>15 nodes</td></tr>
 <tr><td><code>learning/neurons/N070_firecracker_microvm_multitenant_rls.md</code></td><td>12 nodes</td></tr>
 <tr><td><code>learning/neurons/N072_post_quantum_cryptography_paseto.md</code></td><td>10 nodes</td></tr>
-<tr><td><code>scripts/image_vision_nucleus_engine.py</code></td><td>10 nodes</td></tr>
 <tr><td><code>learning/neurons/N038_red_team_pentest_cve_patching.md</code></td><td>9 nodes</td></tr>
 <tr><td><code>learning/neurons/N014_zero_trust_security_and_cryptography.md</code></td><td>3 nodes</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x51, method x4, explains x3, calls x2. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x51, method x6, calls x5, explains x5. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
 
 <!-- ====== 10. Tests & Fixtures ====== -->
 <h2 id="tests-fixtures">10. Tests &amp; Fixtures</h2>
-<p>Tests &amp; Fixtures groups implementation around scripts, enginepy, nucleus, test, mostly in scripts/graphic_design_visual_engine.py, scripts/marketing_nucleus_engine.py, learning/neurons/N036_fullstack_product_synthesizer.md. This section covers 115 nodes and 148 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Tests &amp; Fixtures groups implementation around scripts, enginepy, test, nucleus, mostly in scripts/marketing_nucleus_engine.py, learning/neurons/N036_fullstack_product_synthesizer.md, scripts/graphic_design_visual_engine.py. This section covers 97 nodes and 127 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Tests &amp; Fixtures (115 nodes, 148 edges)
+    %% Section: Tests &amp; Fixtures (97 nodes, 127 edges)
+    subgraph tests_fixtures_scripts_marketing_nucleus_engine_031ec47b["scripts/marketing_nucleus_engine.py"]
+        scripts_marketing_nucleus_engine_run_verificatio_ef97097f("run_verification_tests()<br/><small>scripts/marketing_nucleus_engine.py</small>")
+        scripts_marketing_nucleus_engine_bg_nbdengine_2a9e36db("BG_NBDEngine<br/><small>scripts/marketing_nucleus_engine.py</small>")
+        scripts_marketing_nucleus_engine_bg_nbdengine_pr_f5a1c982("probability_alive()<br/><small>scripts/marketing_nucleus_engine.py</small>")
+        scripts_marketing_nucleus_engine_bg_nbdengine_ex_74042c3a("expected_future_purchases()<br/><small>scripts/marketing_nucleus_engine.py</small>")
+        scripts_marketing_nucleus_engine_bg_nbdengine_ca_0b080fae("calculate_clv()<br/><small>scripts/marketing_nucleus_engine.py</small>")
+        scripts_marketing_nucleus_engine_causaluplifteng_fdac6a02("CausalUpliftEngine<br/><small>scripts/marketing_nucleus_engine.py</small>")
+        scripts_marketing_nucleus_engine_causaluplifteng_1fda682f("calculate_individual_uplift()<br/><small>scripts/marketing_nucleus_engine.py</small>")
+        scripts_marketing_nucleus_engine_causaluplifteng_4f461f71("classify_customer()<br/><small>scripts/marketing_nucleus_engine.py</small>")
+        scripts_marketing_nucleus_engine_marketingmixeng_5ed62719("MarketingMixEngine<br/><small>scripts/marketing_nucleus_engine.py</small>")
+        scripts_marketing_nucleus_engine_marketingmixeng_b4307b94("geometric_adstock()<br/><small>scripts/marketing_nucleus_engine.py</small>")
+        scripts_marketing_nucleus_engine_marketingmixeng_8405dc25("hill_saturation()<br/><small>scripts/marketing_nucleus_engine.py</small>")
+    end
     subgraph tests_fixtures_scripts_graphic_design_visual_eng_05a6bfa8["scripts/graphic_design_visual_engine.py"]
-        scripts_graphic_design_visual_engine_palettegene_2f7b1ecf("PaletteGenerator<br/><small>scripts/graphic_design_visual_engine.py</small>")
         scripts_graphic_design_visual_engine_run_self_te_0b5fe8fc("run_self_tests()<br/><small>scripts/graphic_design_visual_engine.py</small>")
         scripts_graphic_design_visual_engine_generativep_020abc00("GenerativePoster<br/><small>scripts/graphic_design_visual_engine.py</small>")
         scripts_graphic_design_visual_engine_generativep_1821e72a("__init__()<br/><small>scripts/graphic_design_visual_engine.py</small>")
         scripts_graphic_design_visual_engine_generativep_a7d509c0("build_svg()<br/><small>scripts/graphic_design_visual_engine.py</small>")
-        scripts_graphic_design_visual_engine_palettegene_834d90d9("monochromatic()<br/><small>scripts/graphic_design_visual_engine.py</small>")
-        scripts_graphic_design_visual_engine_palettegene_c3b4a4ab("analogous()<br/><small>scripts/graphic_design_visual_engine.py</small>")
-        scripts_graphic_design_visual_engine_palettegene_ab4b502f("complementary()<br/><small>scripts/graphic_design_visual_engine.py</small>")
-        scripts_graphic_design_visual_engine_palettegene_d8698390("triadic()<br/><small>scripts/graphic_design_visual_engine.py</small>")
-    end
-    subgraph tests_fixtures_scripts_image_vision_nucleus_engi_c8d0a62e["scripts/image_vision_nucleus_engine.py"]
-        scripts_image_vision_nucleus_engine_colorspacema_f993f2f8("ColorSpaceMath<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_colorspacema_2830666e("rgb_to_grayscale()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_colorspacema_3515cadd("rgb_to_hsv()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_colorspacema_0ed59fc1("hsv_to_rgb()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_colorspacema_bf01af6a("rgb_to_ycbcr()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_colorspacema_39a5b669("ycbcr_to_rgb()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
     end
     ponytail_pi_extension_test_helpers_test_2bad389e("helpers.test.js")
-    scripts_marketing_nucleus_engine_run_verificatio_ef97097f("run_verification_tests()<br/><small>scripts/marketing_nucleus_engine.py</small>")
+    scripts_image_vision_nucleus_engine_run_tests_fa28542f("run_tests()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
     scripts_test_brain_run_all_d04a7277("run_all()<br/><small>scripts/test_brain.py</small>")
-    scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 -->|method| scripts_image_vision_nucleus_engine_colorspacema_2830666e
-    scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 -->|method| scripts_image_vision_nucleus_engine_colorspacema_3515cadd
-    scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 -->|method| scripts_image_vision_nucleus_engine_colorspacema_0ed59fc1
-    scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 -->|method| scripts_image_vision_nucleus_engine_colorspacema_bf01af6a
-    scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 -->|method| scripts_image_vision_nucleus_engine_colorspacema_39a5b669
     scripts_graphic_design_visual_engine_generativep_020abc00 -->|method| scripts_graphic_design_visual_engine_generativep_1821e72a
     scripts_graphic_design_visual_engine_generativep_020abc00 -->|method| scripts_graphic_design_visual_engine_generativep_a7d509c0
-    scripts_graphic_design_visual_engine_palettegene_2f7b1ecf -->|method| scripts_graphic_design_visual_engine_palettegene_834d90d9
-    scripts_graphic_design_visual_engine_palettegene_2f7b1ecf -->|method| scripts_graphic_design_visual_engine_palettegene_c3b4a4ab
-    scripts_graphic_design_visual_engine_palettegene_2f7b1ecf -->|method| scripts_graphic_design_visual_engine_palettegene_ab4b502f
-    scripts_graphic_design_visual_engine_palettegene_2f7b1ecf -->|method| scripts_graphic_design_visual_engine_palettegene_d8698390
-    scripts_graphic_design_visual_engine_generativep_a7d509c0 -->|calls| scripts_graphic_design_visual_engine_palettegene_ab4b502f
-    scripts_graphic_design_visual_engine_generativep_a7d509c0 -->|calls| scripts_graphic_design_visual_engine_palettegene_d8698390
-    scripts_graphic_design_visual_engine_run_self_te_0b5fe8fc -->|calls| scripts_graphic_design_visual_engine_palettegene_834d90d9
-    scripts_graphic_design_visual_engine_run_self_te_0b5fe8fc -->|calls| scripts_graphic_design_visual_engine_palettegene_ab4b502f
-    scripts_graphic_design_visual_engine_run_self_te_0b5fe8fc -->|calls| scripts_graphic_design_visual_engine_palettegene_d8698390
+    scripts_marketing_nucleus_engine_bg_nbdengine_2a9e36db -->|method| scripts_marketing_nucleus_engine_bg_nbdengine_pr_f5a1c982
+    scripts_marketing_nucleus_engine_bg_nbdengine_2a9e36db -->|method| scripts_marketing_nucleus_engine_bg_nbdengine_ex_74042c3a
+    scripts_marketing_nucleus_engine_bg_nbdengine_2a9e36db -->|method| scripts_marketing_nucleus_engine_bg_nbdengine_ca_0b080fae
+    scripts_marketing_nucleus_engine_causaluplifteng_fdac6a02 -->|method| scripts_marketing_nucleus_engine_causaluplifteng_1fda682f
+    scripts_marketing_nucleus_engine_causaluplifteng_fdac6a02 -->|method| scripts_marketing_nucleus_engine_causaluplifteng_4f461f71
+    scripts_marketing_nucleus_engine_marketingmixeng_5ed62719 -->|method| scripts_marketing_nucleus_engine_marketingmixeng_b4307b94
+    scripts_marketing_nucleus_engine_marketingmixeng_5ed62719 -->|method| scripts_marketing_nucleus_engine_marketingmixeng_8405dc25
     scripts_graphic_design_visual_engine_run_self_te_0b5fe8fc -->|calls| scripts_graphic_design_visual_engine_generativep_020abc00
-    %% Omitted for readability: 97 nodes, 0 edges
-    class scripts_graphic_design_visual_engine_palettegene_2f7b1ecf klass;
+    scripts_marketing_nucleus_engine_bg_nbdengine_ex_74042c3a -->|calls| scripts_marketing_nucleus_engine_bg_nbdengine_pr_f5a1c982
+    scripts_marketing_nucleus_engine_causaluplifteng_4f461f71 -->|calls| scripts_marketing_nucleus_engine_causaluplifteng_1fda682f
+    scripts_marketing_nucleus_engine_run_verificatio_ef97097f -->|calls| scripts_marketing_nucleus_engine_marketingmixeng_b4307b94
+    scripts_marketing_nucleus_engine_run_verificatio_ef97097f -->|calls| scripts_marketing_nucleus_engine_marketingmixeng_8405dc25
+    scripts_marketing_nucleus_engine_run_verificatio_ef97097f -->|calls| scripts_marketing_nucleus_engine_causaluplifteng_4f461f71
+    scripts_marketing_nucleus_engine_run_verificatio_ef97097f -->|calls| scripts_marketing_nucleus_engine_bg_nbdengine_pr_f5a1c982
+    scripts_marketing_nucleus_engine_run_verificatio_ef97097f -->|calls| scripts_marketing_nucleus_engine_bg_nbdengine_ex_74042c3a
+    scripts_marketing_nucleus_engine_run_verificatio_ef97097f -->|calls| scripts_marketing_nucleus_engine_bg_nbdengine_ca_0b080fae
+    %% Omitted for readability: 79 nodes, 0 edges
+    class scripts_marketing_nucleus_engine_run_verificatio_ef97097f function;
+    class scripts_marketing_nucleus_engine_bg_nbdengine_2a9e36db klass;
+    class scripts_marketing_nucleus_engine_bg_nbdengine_pr_f5a1c982 function;
+    class scripts_marketing_nucleus_engine_bg_nbdengine_ex_74042c3a function;
+    class scripts_marketing_nucleus_engine_bg_nbdengine_ca_0b080fae function;
+    class scripts_marketing_nucleus_engine_causaluplifteng_fdac6a02 klass;
+    class scripts_marketing_nucleus_engine_causaluplifteng_1fda682f function;
+    class scripts_marketing_nucleus_engine_causaluplifteng_4f461f71 function;
+    class scripts_marketing_nucleus_engine_marketingmixeng_5ed62719 klass;
+    class scripts_marketing_nucleus_engine_marketingmixeng_b4307b94 function;
+    class scripts_marketing_nucleus_engine_marketingmixeng_8405dc25 function;
     class scripts_graphic_design_visual_engine_run_self_te_0b5fe8fc function;
     class scripts_graphic_design_visual_engine_generativep_020abc00 klass;
     class scripts_graphic_design_visual_engine_generativep_1821e72a function;
     class scripts_graphic_design_visual_engine_generativep_a7d509c0 function;
-    class scripts_graphic_design_visual_engine_palettegene_834d90d9 function;
-    class scripts_graphic_design_visual_engine_palettegene_c3b4a4ab function;
-    class scripts_graphic_design_visual_engine_palettegene_ab4b502f function;
-    class scripts_graphic_design_visual_engine_palettegene_d8698390 function;
-    class scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 klass;
-    class scripts_image_vision_nucleus_engine_colorspacema_2830666e function;
-    class scripts_image_vision_nucleus_engine_colorspacema_3515cadd function;
-    class scripts_image_vision_nucleus_engine_colorspacema_0ed59fc1 function;
-    class scripts_image_vision_nucleus_engine_colorspacema_bf01af6a function;
-    class scripts_image_vision_nucleus_engine_colorspacema_39a5b669 function;
     class ponytail_pi_extension_test_helpers_test_2bad389e test;
-    class scripts_marketing_nucleus_engine_run_verificatio_ef97097f function;
+    class scripts_image_vision_nucleus_engine_run_tests_fa28542f function;
     class scripts_test_brain_run_all_d04a7277 test;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
@@ -3060,230 +3066,6 @@ flowchart LR
 </tr>
 <tr>
   <td>1</td>
-  <td><code>GenerativePoster</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td><code>run_self_tests()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><code>__init__()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small><br><code>build_svg()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td>GenerativePoster node in scripts/graphic_design_visual_engine.py.</td>
-</tr>
-<tr>
-  <td>2</td>
-  <td><code>PaletteGenerator</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td>External entry / no inbound edge</td>
-  <td><code>analogous()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small><br><code>complementary()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small><br><code>monochromatic()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small><br>+4 more</td>
-  <td>PaletteGenerator node in scripts/graphic_design_visual_engine.py.</td>
-</tr>
-<tr>
-  <td>3</td>
-  <td><code>.from_hex()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>Color</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small><br><code>run_self_tests()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td>No direct outbound edge</td>
-  <td>.from_hex() node in scripts/graphic_design_visual_engine.py.</td>
-</tr>
-<tr>
-  <td>4</td>
-  <td><code>.from_hsl()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>analogous()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small><br><code>Color</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small><br><code>complementary()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small><br>+4 more</td>
-  <td>No direct outbound edge</td>
-  <td>.from_hsl() node in scripts/graphic_design_visual_engine.py.</td>
-</tr>
-<tr>
-  <td>5</td>
-  <td><code>.build_svg()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>GenerativePoster</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><code>complementary()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small><br><code>CubicBezier</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small><br><code>triadic()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small><br>+1 more</td>
-  <td>.build_svg() node in scripts/graphic_design_visual_engine.py.</td>
-</tr>
-<tr>
-  <td>6</td>
-  <td><code>.__init__()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>GenerativePoster</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td>No direct outbound edge</td>
-  <td>.__init__() node in scripts/graphic_design_visual_engine.py.</td>
-</tr>
-<tr>
-  <td>7</td>
-  <td><code>.analogous()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>PaletteGenerator</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><code>from_hsl()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td>.analogous() node in scripts/graphic_design_visual_engine.py.</td>
-</tr>
-<tr>
-  <td>8</td>
-  <td><code>.complementary()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>build_svg()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small><br><code>PaletteGenerator</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small><br><code>run_self_tests()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><code>from_hsl()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td>.complementary() node in scripts/graphic_design_visual_engine.py.</td>
-</tr>
-<tr>
-  <td>9</td>
-  <td><code>.monochromatic()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>PaletteGenerator</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small><br><code>run_self_tests()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><code>from_hsl()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td>.monochromatic() node in scripts/graphic_design_visual_engine.py.</td>
-</tr>
-<tr>
-  <td>10</td>
-  <td><code>.scale()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>PaletteGenerator</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small><br><code>run_self_tests()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td>No direct outbound edge</td>
-  <td>.scale() node in scripts/graphic_design_visual_engine.py.</td>
-</tr>
-<tr>
-  <td>11</td>
-  <td><code>.split_complementary()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>PaletteGenerator</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><code>from_hsl()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td>.split_complementary() node in scripts/graphic_design_visual_engine.py.</td>
-</tr>
-<tr>
-  <td>12</td>
-  <td><code>.tetradic()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>PaletteGenerator</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><code>from_hsl()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td>.tetradic() node in scripts/graphic_design_visual_engine.py.</td>
-</tr>
-<tr>
-  <td>13</td>
-  <td><code>.triadic()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>build_svg()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small><br><code>PaletteGenerator</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small><br><code>run_self_tests()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><code>from_hsl()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td>.triadic() node in scripts/graphic_design_visual_engine.py.</td>
-</tr>
-<tr>
-  <td>14</td>
-  <td><code>run_self_tests()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td><code>complementary()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small><br><code>cpu_neural()</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small><br><code>CubicBezier</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small><br>+8 more</td>
-  <td>Verifies imports, entry points, or version behavior.</td>
-</tr>
-<tr>
-  <td>15</td>
-  <td><code>graphic_design_visual_engine.py</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><span class="tag tag-class">Module</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Module file in scripts/graphic_design_visual_engine.py.</td>
-</tr>
-<tr>
-  <td>16</td>
-  <td><code>Harmonious color palette generator supporting classical color wheel (HSL) and…</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Design note for Harmonious color palette generator supporting classical color wheel (HSL) and….</td>
-</tr>
-<tr>
-  <td>17</td>
-  <td><code>Generate a monochromatic ramp varying in Lightness.</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Design note for Generate a monochromatic ramp varying in Lightness..</td>
-</tr>
-<tr>
-  <td>18</td>
-  <td><code>Generate analogous colors clustered around base hue.</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Design note for Generate analogous colors clustered around base hue..</td>
-</tr>
-<tr>
-  <td>19</td>
-  <td><code>Generate complementary color pair (180° offset).</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Design note for Generate complementary color pair (180° offset)..</td>
-</tr>
-<tr>
-  <td>20</td>
-  <td><code>Generate triadic 3-color harmony (120° offsets).</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Design note for Generate triadic 3-color harmony (120° offsets)..</td>
-</tr>
-<tr>
-  <td>21</td>
-  <td><code>Generate split-complementary harmony (base + 2 colors flanking complement).</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Design note for Generate split-complementary harmony (base + 2 colors flanking complement)..</td>
-</tr>
-<tr>
-  <td>22</td>
-  <td><code>Generate tetradic rectangular 4-color harmony.</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Design note for Generate tetradic rectangular 4-color harmony..</td>
-</tr>
-<tr>
-  <td>23</td>
-  <td><code>Generate multi-stop gradient scale interpolated in CIELAB space.</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Design note for Generate multi-stop gradient scale interpolated in CIELAB space..</td>
-</tr>
-<tr>
-  <td>24</td>
-  <td><code>Parse hex color (#RGB, #RGBA, #RRGGBB, #RRGGBBAA).</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Design note for Parse hex color (#RGB, #RGBA, #RRGGBB, #RRGGBBAA)..</td>
-</tr>
-<tr>
-  <td>25</td>
-  <td><code>Algorithmic generative poster generator synthesizing: - Parametric Lissajous &amp;…</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Design note for Algorithmic generative poster generator synthesizing: - Parametric Lissajous &amp;….</td>
-</tr>
-<tr>
-  <td>26</td>
-  <td><code>Generate full SVG graphic poster with mathematical curves and layered depth.</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Design note for Generate full SVG graphic poster with mathematical curves and layered depth..</td>
-</tr>
-<tr>
-  <td>27</td>
-  <td><code>Construct Color from HSL (H in [0, 360), S in [0, 1], L in [0, 1]).</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Design note for Construct Color from HSL (H in [0, 360), S in [0, 1], L in [0, 1])..</td>
-</tr>
-<tr>
-  <td>28</td>
-  <td><code>Execute 100% deterministic test suite covering color math, WCAG contrast,…</code><br><small style="color:var(--muted)">scripts/graphic_design_visual_engine.py</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Design note for Execute 100% deterministic test suite covering color math, WCAG contrast,….</td>
-</tr>
-<tr>
-  <td>29</td>
   <td><code>BG_NBDEngine</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
   <td><span class="tag tag-class">Class</span></td>
   <td>External entry / no inbound edge</td>
@@ -3291,12 +3073,236 @@ flowchart LR
   <td>BG_NBDEngine node in scripts/marketing_nucleus_engine.py.</td>
 </tr>
 <tr>
-  <td>30</td>
+  <td>2</td>
   <td><code>CausalUpliftEngine</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
   <td><span class="tag tag-class">Class</span></td>
   <td>External entry / no inbound edge</td>
   <td><code>calculate_individual_uplift()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>classify_customer()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
   <td>CausalUpliftEngine node in scripts/marketing_nucleus_engine.py.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>MarketingMixEngine</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>geometric_adstock()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>hill_saturation()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>optimize_channel_budget()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td>MarketingMixEngine node in scripts/marketing_nucleus_engine.py.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>.calculate_clv()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>BG_NBDEngine</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>run_verification_tests()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td>No direct outbound edge</td>
+  <td>.calculate_clv() node in scripts/marketing_nucleus_engine.py.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>.expected_future_purchases()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>BG_NBDEngine</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>run_verification_tests()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><code>probability_alive()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td>.expected_future_purchases() node in scripts/marketing_nucleus_engine.py.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>.probability_alive()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>BG_NBDEngine</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>expected_future_purchases()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>run_verification_tests()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td>No direct outbound edge</td>
+  <td>.probability_alive() node in scripts/marketing_nucleus_engine.py.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>.calculate_individual_uplift()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>CausalUpliftEngine</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>classify_customer()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td>No direct outbound edge</td>
+  <td>.calculate_individual_uplift() node in scripts/marketing_nucleus_engine.py.</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>.classify_customer()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>CausalUpliftEngine</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>run_verification_tests()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><code>calculate_individual_uplift()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td>.classify_customer() node in scripts/marketing_nucleus_engine.py.</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>.geometric_adstock()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>MarketingMixEngine</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>run_verification_tests()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td>No direct outbound edge</td>
+  <td>.geometric_adstock() node in scripts/marketing_nucleus_engine.py.</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>.hill_saturation()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>MarketingMixEngine</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>optimize_channel_budget()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>run_verification_tests()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td>No direct outbound edge</td>
+  <td>.hill_saturation() node in scripts/marketing_nucleus_engine.py.</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>.optimize_channel_budget()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>MarketingMixEngine</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>run_verification_tests()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><code>hill_saturation()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td>.optimize_channel_budget() node in scripts/marketing_nucleus_engine.py.</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>run_verification_tests()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>calculate_clv()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>classify_customer()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br><code>expected_future_purchases()</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small><br>+4 more</td>
+  <td>Verifies imports, entry points, or version behavior.</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>marketing_nucleus_engine.py</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-class">Module</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in scripts/marketing_nucleus_engine.py.</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>Any</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Any node in project.</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>Segments audience into 4 Causal Quadrants to eliminate ad budget waste: 1.…</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Segments audience into 4 Causal Quadrants to eliminate ad budget waste: 1.….</td>
+</tr>
+<tr>
+  <td>16</td>
+  <td><code>Treatment Effect: tau = P(Y=1|W=1) - P(Y=1|W=0)</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Treatment Effect: tau = P(Y=1|W=1) - P(Y=1|W=0).</td>
+</tr>
+<tr>
+  <td>17</td>
+  <td><code>Beta-Geometric / Negative Binomial Distribution model for non-contractual CLV.…</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Beta-Geometric / Negative Binomial Distribution model for non-contractual CLV.….</td>
+</tr>
+<tr>
+  <td>18</td>
+  <td><code>P(Alive | frequency x, recency tx, tenure T)</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for P(Alive | frequency x, recency tx, tenure T).</td>
+</tr>
+<tr>
+  <td>19</td>
+  <td><code>Expected transactions in future window of duration t_future.</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Expected transactions in future window of duration t_future..</td>
+</tr>
+<tr>
+  <td>20</td>
+  <td><code>Total Net Monetary Lifetime Value</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Total Net Monetary Lifetime Value.</td>
+</tr>
+<tr>
+  <td>21</td>
+  <td><code>Calculate Geometric Adstock carryover decay. decay_rate: float between 0.0 (no…</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Calculate Geometric Adstock carryover decay. decay_rate: float between 0.0 (no….</td>
+</tr>
+<tr>
+  <td>22</td>
+  <td><code>Calculate Diminishing Returns via Hill Function. half_sat_k: Spend needed to…</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Calculate Diminishing Returns via Hill Function. half_sat_k: Spend needed to….</td>
+</tr>
+<tr>
+  <td>23</td>
+  <td><code>Greedy Marginal ROI Budget Allocator across Ad Channels.</code><br><small style="color:var(--muted)">scripts/marketing_nucleus_engine.py</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Design note for Greedy Marginal ROI Budget Allocator across Ad Channels..</td>
+</tr>
+<tr>
+  <td>24</td>
+  <td><code>normalizeConfigMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>normalizePersistedMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>ponytail-config.js</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td>No direct outbound edge</td>
+  <td>Reads, resolves, or persists project configuration.</td>
+</tr>
+<tr>
+  <td>25</td>
+  <td><code>normalizePersistedMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>getPonytailInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br><code>index.js</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br><code>parsePonytailCommand()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small><br>+6 more</td>
+  <td><code>normalizeConfigMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>normalizeMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td>normalizePersistedMode() node in ponytail/hooks/ponytail-config.js.</td>
+</tr>
+<tr>
+  <td>26</td>
+  <td><code>parsePonytailCommand()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
+  <td><span class="tag tag-cmd">Entry</span></td>
+  <td><code>helpers.test.js</code><br><small style="color:var(--muted)">pi-extension/test/helpers.test.js</small><br><code>ponytailExtension()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
+  <td><code>normalizeMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>normalizePersistedMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td>parsePonytailCommand() node in ponytail/pi-extension/index.js.</td>
+</tr>
+<tr>
+  <td>27</td>
+  <td><code>ponytailExtension()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>createPiHarness()</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small><br><code>extension.test.js</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small></td>
+  <td><code>getDefaultMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>getHideStatus()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small><br><code>getPonytailInstructions()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-instructions.js</small><br>+6 more</td>
+  <td>ponytailExtension() node in ponytail/pi-extension/index.js.</td>
+</tr>
+<tr>
+  <td>28</td>
+  <td><code>syncStatus()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>syncStatus() node in ponytail/pi-extension/index.js.</td>
+</tr>
+<tr>
+  <td>29</td>
+  <td><code>resolveSessionMode()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>helpers.test.js</code><br><small style="color:var(--muted)">pi-extension/test/helpers.test.js</small><br><code>ponytailExtension()</code><br><small style="color:var(--muted)">ponytail/pi-extension/index.js</small></td>
+  <td><code>normalizePersistedMode()</code><br><small style="color:var(--muted)">ponytail/hooks/ponytail-config.js</small></td>
+  <td>resolveSessionMode() node in ponytail/pi-extension/index.js.</td>
+</tr>
+<tr>
+  <td>30</td>
+  <td><code>createCommandContext()</code><br><small style="color:var(--muted)">pi-extension/test/extension.test.js</small></td>
+  <td><span class="tag tag-func">Test</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>createCommandContext() node in pi-extension/test/extension.test.js.</td>
 </tr>
 </table>
 
@@ -3305,11 +3311,11 @@ flowchart LR
     <h4>Key Files</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>scripts/graphic_design_visual_engine.py</code></td><td>28 nodes</td></tr>
-<tr><td><code>scripts/marketing_nucleus_engine.py</code></td><td>22 nodes</td></tr>
+      <tr><td><code>scripts/marketing_nucleus_engine.py</code></td><td>22 nodes</td></tr>
 <tr><td><code>learning/neurons/N036_fullstack_product_synthesizer.md</code></td><td>18 nodes</td></tr>
-<tr><td><code>scripts/image_vision_nucleus_engine.py</code></td><td>13 nodes</td></tr>
+<tr><td><code>scripts/graphic_design_visual_engine.py</code></td><td>14 nodes</td></tr>
 <tr><td><code>ponytail/pi-extension/index.js</code></td><td>11 nodes</td></tr>
+<tr><td><code>scripts/image_vision_nucleus_engine.py</code></td><td>9 nodes</td></tr>
 <tr><td><code>scripts/test_brain.py</code></td><td>8 nodes</td></tr>
 <tr><td><code>pi-extension/test/extension.test.js</code></td><td>5 nodes</td></tr>
 <tr><td><code>ponytail/hooks/ponytail-config.js</code></td><td>3 nodes</td></tr>
@@ -3317,7 +3323,7 @@ flowchart LR
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x46, calls x42, explains x28, method x22. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x52, calls x34, explains x16, method x10. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -4795,25 +4801,29 @@ flowchart LR
 
 <!-- ====== 16. Other ====== -->
 <h2 id="other">16. Other</h2>
-<p>Other groups implementation around learning, neurons, scripts, ponytail, mostly in scripts/image_vision_nucleus_engine.py, learning/neurons/N046_algorithmic_execution_engines.md, learning/neurons/N051_system_architecture_devops_mastery.md. This section covers 795 nodes and 735 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Other groups implementation around learning, neurons, scripts, ponytail, mostly in scripts/graphic_design_visual_engine.py, scripts/image_vision_nucleus_engine.py, learning/neurons/N046_algorithmic_execution_engines.md. This section covers 808 nodes and 732 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Other (795 nodes, 735 edges)
+    %% Section: Other (808 nodes, 732 edges)
     subgraph other_scripts_image_vision_nucleus_engine_py_c18108d9["scripts/image_vision_nucleus_engine.py"]
-        scripts_image_vision_nucleus_engine_checkpointlo_eabfb942("CheckpointLoaderNode<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_checkpointlo_0808e002("execute()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_cliptextenco_e02dcc9b("CLIPTextEncodeNode<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_cliptextenco_6c37bac8("execute()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_comfynode_58ca4b80("ComfyNode<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_comfynode_in_59eee64f("__init__()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_comfynode_ex_88a74f68("execute()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_controlnetap_bc580037("ControlNetApplyNode<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_controlnetap_1556d5e7("execute()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_ksamplernode_8d3ba7b8("KSamplerNode<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_ksamplernode_012f57f9("execute()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
-        scripts_image_vision_nucleus_engine_vaedecodenod_f5e532da("VAEDecodeNode<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_colorspacema_f993f2f8("ColorSpaceMath<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_colorspacema_2830666e("rgb_to_grayscale()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_colorspacema_3515cadd("rgb_to_hsv()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_colorspacema_0ed59fc1("hsv_to_rgb()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_colorspacema_bf01af6a("rgb_to_ycbcr()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_colorspacema_39a5b669("ycbcr_to_rgb()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_generativegr_7abd7f76("GenerativeGraphExecutor<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_generativegr_f697021a("__init__()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_generativegr_340e9d0c("add_node()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+        scripts_image_vision_nucleus_engine_generativegr_739f3566("run_dag()<br/><small>scripts/image_vision_nucleus_engine.py</small>")
+    end
+    subgraph other_scripts_graphic_design_visual_engine_py_658ba4a3["scripts/graphic_design_visual_engine.py"]
+        scripts_graphic_design_visual_engine_palettegene_2f7b1ecf("PaletteGenerator<br/><small>scripts/graphic_design_visual_engine.py</small>")
+        scripts_graphic_design_visual_engine_palettegene_834d90d9("monochromatic()<br/><small>scripts/graphic_design_visual_engine.py</small>")
+        scripts_graphic_design_visual_engine_palettegene_c3b4a4ab("analogous()<br/><small>scripts/graphic_design_visual_engine.py</small>")
+        scripts_graphic_design_visual_engine_palettegene_cad51f90("split_complementary()<br/><small>scripts/graphic_design_visual_engine.py</small>")
     end
     subgraph other_ponytail_hooks_ponytail_mode_tracker_js_00c57f5d["ponytail/hooks/ponytail-mode-tracker.js"]
         ponytail_hooks_ponytail_mode_tracker_febd017e("ponytail-mode-tracker.js")
@@ -4821,33 +4831,36 @@ flowchart LR
     end
     ponytail_hooks_ponytail_activate_5d3f34a7("ponytail-activate.js")
     scripts_strategic_swot_nucleus_engine_strategics_91c3d769("StrategicSWOTNucleusEngine<br/><small>scripts/strategic_swot_nucleus_engine.py</small>")
-    scripts_swot_engine_swotengine_4d9b97da("SWOTEngine<br/><small>scripts/swot_engine.py</small>")
-    scripts_train_trading_engine_train_and_synthesiz_daac8636("and synthesize neuron()<br/><small>scripts/train_trading_engine.py</small>")
-    scripts_image_vision_nucleus_engine_checkpointlo_eabfb942 -->|method| scripts_image_vision_nucleus_engine_checkpointlo_0808e002
-    scripts_image_vision_nucleus_engine_cliptextenco_e02dcc9b -->|method| scripts_image_vision_nucleus_engine_cliptextenco_6c37bac8
-    scripts_image_vision_nucleus_engine_comfynode_58ca4b80 -->|method| scripts_image_vision_nucleus_engine_comfynode_in_59eee64f
-    scripts_image_vision_nucleus_engine_comfynode_58ca4b80 -->|method| scripts_image_vision_nucleus_engine_comfynode_ex_88a74f68
-    scripts_image_vision_nucleus_engine_controlnetap_bc580037 -->|method| scripts_image_vision_nucleus_engine_controlnetap_1556d5e7
-    scripts_image_vision_nucleus_engine_ksamplernode_8d3ba7b8 -->|method| scripts_image_vision_nucleus_engine_ksamplernode_012f57f9
-    %% Omitted for readability: 777 nodes, 0 edges
-    class scripts_image_vision_nucleus_engine_checkpointlo_eabfb942 klass;
-    class scripts_image_vision_nucleus_engine_checkpointlo_0808e002 function;
-    class scripts_image_vision_nucleus_engine_cliptextenco_e02dcc9b entry;
-    class scripts_image_vision_nucleus_engine_cliptextenco_6c37bac8 function;
-    class scripts_image_vision_nucleus_engine_comfynode_58ca4b80 klass;
-    class scripts_image_vision_nucleus_engine_comfynode_in_59eee64f function;
-    class scripts_image_vision_nucleus_engine_comfynode_ex_88a74f68 function;
-    class scripts_image_vision_nucleus_engine_controlnetap_bc580037 klass;
-    class scripts_image_vision_nucleus_engine_controlnetap_1556d5e7 function;
-    class scripts_image_vision_nucleus_engine_ksamplernode_8d3ba7b8 klass;
-    class scripts_image_vision_nucleus_engine_ksamplernode_012f57f9 function;
-    class scripts_image_vision_nucleus_engine_vaedecodenod_f5e532da klass;
+    scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 -->|method| scripts_image_vision_nucleus_engine_colorspacema_2830666e
+    scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 -->|method| scripts_image_vision_nucleus_engine_colorspacema_3515cadd
+    scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 -->|method| scripts_image_vision_nucleus_engine_colorspacema_0ed59fc1
+    scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 -->|method| scripts_image_vision_nucleus_engine_colorspacema_bf01af6a
+    scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 -->|method| scripts_image_vision_nucleus_engine_colorspacema_39a5b669
+    scripts_image_vision_nucleus_engine_generativegr_7abd7f76 -->|method| scripts_image_vision_nucleus_engine_generativegr_f697021a
+    scripts_image_vision_nucleus_engine_generativegr_7abd7f76 -->|method| scripts_image_vision_nucleus_engine_generativegr_340e9d0c
+    scripts_image_vision_nucleus_engine_generativegr_7abd7f76 -->|method| scripts_image_vision_nucleus_engine_generativegr_739f3566
+    scripts_graphic_design_visual_engine_palettegene_2f7b1ecf -->|method| scripts_graphic_design_visual_engine_palettegene_834d90d9
+    scripts_graphic_design_visual_engine_palettegene_2f7b1ecf -->|method| scripts_graphic_design_visual_engine_palettegene_c3b4a4ab
+    scripts_graphic_design_visual_engine_palettegene_2f7b1ecf -->|method| scripts_graphic_design_visual_engine_palettegene_cad51f90
+    %% Omitted for readability: 790 nodes, 0 edges
+    class scripts_image_vision_nucleus_engine_colorspacema_f993f2f8 klass;
+    class scripts_image_vision_nucleus_engine_colorspacema_2830666e function;
+    class scripts_image_vision_nucleus_engine_colorspacema_3515cadd function;
+    class scripts_image_vision_nucleus_engine_colorspacema_0ed59fc1 function;
+    class scripts_image_vision_nucleus_engine_colorspacema_bf01af6a function;
+    class scripts_image_vision_nucleus_engine_colorspacema_39a5b669 function;
+    class scripts_image_vision_nucleus_engine_generativegr_7abd7f76 klass;
+    class scripts_image_vision_nucleus_engine_generativegr_f697021a function;
+    class scripts_image_vision_nucleus_engine_generativegr_340e9d0c function;
+    class scripts_image_vision_nucleus_engine_generativegr_739f3566 function;
+    class scripts_graphic_design_visual_engine_palettegene_2f7b1ecf klass;
+    class scripts_graphic_design_visual_engine_palettegene_834d90d9 function;
+    class scripts_graphic_design_visual_engine_palettegene_c3b4a4ab function;
+    class scripts_graphic_design_visual_engine_palettegene_cad51f90 function;
     class ponytail_hooks_ponytail_mode_tracker_febd017e module;
     class ponytail_hooks_ponytail_mode_tracker_finish_01f4ad14 function;
     class ponytail_hooks_ponytail_activate_5d3f34a7 module;
     class scripts_strategic_swot_nucleus_engine_strategics_91c3d769 klass;
-    class scripts_swot_engine_swotengine_4d9b97da klass;
-    class scripts_train_trading_engine_train_and_synthesiz_daac8636 function;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -5116,11 +5129,11 @@ flowchart LR
     <h4>Key Files</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>scripts/image_vision_nucleus_engine.py</code></td><td>30 nodes</td></tr>
+      <tr><td><code>scripts/graphic_design_visual_engine.py</code></td><td>33 nodes</td></tr>
+<tr><td><code>scripts/image_vision_nucleus_engine.py</code></td><td>29 nodes</td></tr>
 <tr><td><code>learning/neurons/N046_algorithmic_execution_engines.md</code></td><td>19 nodes</td></tr>
 <tr><td><code>learning/neurons/N051_system_architecture_devops_mastery.md</code></td><td>19 nodes</td></tr>
 <tr><td><code>learning/neurons/N054_system_design_planning_mastery.md</code></td><td>19 nodes</td></tr>
-<tr><td><code>scripts/graphic_design_visual_engine.py</code></td><td>19 nodes</td></tr>
 <tr><td><code>learning/neurons/N045_volatility_options_greeks.md</code></td><td>18 nodes</td></tr>
 <tr><td><code>learning/neurons/N050_systematic_backtesting_wfa.md</code></td><td>18 nodes</td></tr>
 <tr><td><code>scripts/zolu_learn_server.js</code></td><td>18 nodes</td></tr>
@@ -5128,7 +5141,7 @@ flowchart LR
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x603, calls x41, method x31, references x18. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x594, calls x44, method x32, explains x28. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -5142,7 +5155,7 @@ flowchart LR
       <tr><td>Nodes</td><td>2092</td></tr>
       <tr><td>Edges</td><td>2412</td></tr>
       <tr><td>Hyperedges</td><td>0</td></tr>
-      <tr><td>Communities</td><td>246</td></tr>
+      <tr><td>Communities</td><td>248</td></tr>
       <tr><td>Documented Sections</td><td>15</td></tr>
     </table>
   </div>
@@ -5158,7 +5171,7 @@ flowchart LR
 
 <div style="text-align:center; padding:40px 0; color: var(--muted); font-size:0.9rem;">
   <p>GEMINI-HANAFI — Architecture Documentation</p>
-  <p>Generated: 2026-08-29 03:10 UTC · graphify callflow-html</p>
+  <p>Generated: 2026-08-29 03:14 UTC · graphify callflow-html</p>
 </div>
 
 </div><!-- .container -->
