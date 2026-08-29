@@ -6,9 +6,9 @@
     "semantic_hash": ""
   },
   "learning/NEURON_INDEX.json": {
-    "mtime": 1787972982.2265217,
-    "seen": 1787973059.2772524,
-    "ast_hash": "1dbf6d339b6aae35ea8d7b670a6807bf",
+    "mtime": 1787977403.12837,
+    "seen": 1787977416.1514974,
+    "ast_hash": "4572c52c8762064630cc29050b21aaa6",
     "semantic_hash": ""
   },
   "learning/scripts/grow_neurons.py": {
@@ -312,9 +312,9 @@
     "semantic_hash": ""
   },
   "memory.md": {
-    "mtime": 1787972997.0270696,
-    "seen": 1787973059.2772524,
-    "ast_hash": "3a753eb6690a39f99714c24c175745c8",
+    "mtime": 1787977403.1293755,
+    "seen": 1787977416.1520119,
+    "ast_hash": "56c9f1b4b5e570779b43cd1f6a1e314e",
     "semantic_hash": ""
   },
   "memory/neurons/ai_engine_9router.md": {
@@ -1680,9 +1680,9 @@
     "semantic_hash": ""
   },
   "scripts/claudia_telegram_bot.py": {
-    "mtime": 1787975004.9117224,
-    "seen": 1787975061.2699108,
-    "ast_hash": "35fee78e3c8ea230a2d3995f5b905042",
+    "mtime": 1787977393.145644,
+    "seen": 1787977416.1520119,
+    "ast_hash": "f684a45371d3afb8d6f5484e7084aea8",
     "semantic_hash": ""
   },
   "learning/neurons/N059_clean_monochrome_report_and_stru.md": {
@@ -1931,16 +1931,10 @@
     "ast_hash": "e5fae89f8afadf2708341445a1edac4f",
     "semantic_hash": ""
   },
-  "scripts/send_hourly_investor_report.py": {
-    "mtime": 1787974840.609072,
-    "seen": 1787975061.2699108,
-    "ast_hash": "12c1025f7b2b374399eeede4f66ecd5c",
-    "semantic_hash": ""
-  },
-  "scripts/test_dm_trade_alerts.py": {
-    "mtime": 1787974863.3903039,
-    "seen": 1787975061.2699108,
-    "ast_hash": "6b0a8006e5432e24033dc365c493f836",
+  "learning/neurons/N095_zolu_solana_vault_telegram_forma.md": {
+    "mtime": 1787977403.127838,
+    "seen": 1787977416.1520119,
+    "ast_hash": "265e99cd5e44839964e250f9f953c144",
     "semantic_hash": ""
   }
 }

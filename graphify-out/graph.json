@@ -121,19 +121,6 @@
       "source_location": "L87"
     },
     {
-      "id": "scripts_image_vision_nucleus_engine_geometricrescaler",
-      "label": "GeometricRescaler",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 128,
-      "community_name": "ImageMatrix",
-      "file_type": "code",
-      "norm_label": "geometricrescaler",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L364"
-    },
-    {
       "id": "scripts_image_vision_nucleus_engine_imagematrix",
       "label": "ImageMatrix",
       "_callable": true,
@@ -166,7 +153,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "code",
       "norm_label": "colorspacemath",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -179,7 +166,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 131,
-      "community_name": "run_tests",
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": "checkpointloadernode",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -192,7 +179,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 131,
-      "community_name": "run_tests",
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": "cliptextencodenode",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -205,7 +192,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 131,
-      "community_name": "run_tests",
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": "comfynode",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -218,7 +205,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 131,
-      "community_name": "run_tests",
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": "controlnetapplynode",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -231,11 +218,24 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 131,
-      "community_name": "run_tests",
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": "ksamplernode",
       "source_file": "scripts/image_vision_nucleus_engine.py",
       "source_location": "L710"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_streamingtileprocessor",
+      "label": "StreamingTileProcessor",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
+      "file_type": "code",
+      "norm_label": "streamingtileprocessor",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L614"
     },
     {
       "id": "scripts_image_vision_nucleus_engine_vaedecodenode",
@@ -244,11 +244,24 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 131,
-      "community_name": "run_tests",
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": "vaedecodenode",
       "source_file": "scripts/image_vision_nucleus_engine.py",
       "source_location": "L731"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_geometricrescaler",
+      "label": "GeometricRescaler",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 132,
+      "community_name": ".letterbox_aspect_preserver",
+      "file_type": "code",
+      "norm_label": "geometricrescaler",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L364"
     },
     {
       "id": "scripts_image_vision_nucleus_engine_rastertovectortracer",
@@ -277,17 +290,17 @@
       "source_location": "L746"
     },
     {
-      "id": "scripts_image_vision_nucleus_engine_streamingtileprocessor",
-      "label": "StreamingTileProcessor",
+      "id": "scripts_graphic_design_visual_engine_generativeposter",
+      "label": "GenerativePoster",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 164,
-      "community_name": ".process_tiled_convolution",
+      "community": 163,
+      "community_name": "run_self_tests",
       "file_type": "code",
-      "norm_label": "streamingtileprocessor",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L614"
+      "norm_label": "generativeposter",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L625"
     },
     {
       "id": "scripts_strategic_swot_nucleus_engine_strategicswotnucleusengine",
@@ -355,26 +368,13 @@
       "source_location": "L27"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_generativeposter",
-      "label": "GenerativePoster",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": "generativeposter",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L625"
-    },
-    {
       "id": "scripts_graphic_design_visual_engine_palettegenerator",
       "label": "PaletteGenerator",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 37,
-      "community_name": "run_self_tests",
+      "community_name": "PaletteGenerator",
       "file_type": "code",
       "norm_label": "palettegenerator",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -759,30 +759,6 @@
       "source_location": "L14"
     },
     {
-      "id": "scripts_image_vision_nucleus_engine_geometricrescaler_bilinear_rescale",
-      "label": ".bilinear_rescale()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 128,
-      "community_name": "ImageMatrix",
-      "file_type": "code",
-      "norm_label": ".bilinear_rescale()",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L370"
-    },
-    {
-      "id": "scripts_image_vision_nucleus_engine_geometricrescaler_letterbox_aspect_preserver",
-      "label": ".letterbox_aspect_preserver()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 128,
-      "community_name": "ImageMatrix",
-      "file_type": "code",
-      "norm_label": ".letterbox_aspect_preserver()",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L408"
-    },
-    {
       "id": "scripts_image_vision_nucleus_engine_imagematrix_clone",
       "label": ".clone()",
       "_callable": true,
@@ -843,16 +819,16 @@
       "source_location": "L100"
     },
     {
-      "id": "scripts_image_vision_nucleus_engine_vaedecodenode_execute",
-      "label": ".execute()",
+      "id": "scripts_image_vision_nucleus_engine_streamingtileprocessor_process_tiled_convolution",
+      "label": ".process_tiled_convolution()",
       "_callable": true,
       "_origin": "ast",
       "community": 128,
       "community_name": "ImageMatrix",
       "file_type": "code",
-      "norm_label": ".execute()",
+      "norm_label": ".process_tiled_convolution()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L732"
+      "source_location": "L621"
     },
     {
       "id": "scripts_image_vision_nucleus_engine_convolutionkernelengine_convolve_2d",
@@ -932,7 +908,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "code",
       "norm_label": ".hsv_to_rgb()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -944,7 +920,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "code",
       "norm_label": ".rgb_to_grayscale()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -956,7 +932,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "code",
       "norm_label": ".rgb_to_hsv()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -968,7 +944,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "code",
       "norm_label": ".rgb_to_ycbcr()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -980,7 +956,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "code",
       "norm_label": ".ycbcr_to_rgb()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -991,7 +967,7 @@
       "label": "run_tests()",
       "_callable": true,
       "_origin": "ast",
-      "community": 131,
+      "community": 130,
       "community_name": "run_tests",
       "file_type": "code",
       "norm_label": "run_tests()",
@@ -1003,8 +979,8 @@
       "label": ".execute()",
       "_callable": true,
       "_origin": "ast",
-      "community": 132,
-      "community_name": "Any",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": ".execute()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -1015,8 +991,8 @@
       "label": ".execute()",
       "_callable": true,
       "_origin": "ast",
-      "community": 132,
-      "community_name": "Any",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": ".execute()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -1027,8 +1003,8 @@
       "label": ".execute()",
       "_callable": true,
       "_origin": "ast",
-      "community": 132,
-      "community_name": "Any",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": ".execute()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -1039,8 +1015,8 @@
       "label": ".__init__()",
       "_callable": true,
       "_origin": "ast",
-      "community": 132,
-      "community_name": "Any",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": ".__init__()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -1051,12 +1027,60 @@
       "label": ".execute()",
       "_callable": true,
       "_origin": "ast",
-      "community": 132,
-      "community_name": "Any",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": ".execute()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
       "source_location": "L696"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_ksamplernode_execute",
+      "label": ".execute()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
+      "file_type": "code",
+      "norm_label": ".execute()",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L711"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_vaedecodenode_execute",
+      "label": ".execute()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
+      "file_type": "code",
+      "norm_label": ".execute()",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L732"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_geometricrescaler_bilinear_rescale",
+      "label": ".bilinear_rescale()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 132,
+      "community_name": ".letterbox_aspect_preserver",
+      "file_type": "code",
+      "norm_label": ".bilinear_rescale()",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L370"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_geometricrescaler_letterbox_aspect_preserver",
+      "label": ".letterbox_aspect_preserver()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 132,
+      "community_name": ".letterbox_aspect_preserver",
+      "file_type": "code",
+      "norm_label": ".letterbox_aspect_preserver()",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L408"
     },
     {
       "id": "scripts_image_vision_nucleus_engine_geometricrescaler_unletterbox_box",
@@ -1064,23 +1088,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 132,
-      "community_name": "Any",
+      "community_name": ".letterbox_aspect_preserver",
       "file_type": "code",
       "norm_label": ".unletterbox_box()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
       "source_location": "L455"
-    },
-    {
-      "id": "scripts_image_vision_nucleus_engine_ksamplernode_execute",
-      "label": ".execute()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 132,
-      "community_name": "Any",
-      "file_type": "code",
-      "norm_label": ".execute()",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L711"
     },
     {
       "id": "scripts_image_vision_nucleus_engine_rastertovectortracer_generate_svg_from_mask",
@@ -1803,100 +1815,64 @@
       "source_location": "L141"
     },
     {
-      "id": "scripts_test_dm_trade_alerts_get_closed_position_msg",
-      "label": "get_closed_position_msg()",
+      "id": "scripts_graphic_design_visual_engine_color_from_hex",
+      "label": ".from_hex()",
       "_callable": true,
       "_origin": "ast",
       "community": 163,
-      "community_name": "test_dm_trade_alerts.py",
+      "community_name": "run_self_tests",
       "file_type": "code",
-      "norm_label": "get_closed_position_msg()",
-      "source_file": "scripts/test_dm_trade_alerts.py",
-      "source_location": "L54"
+      "norm_label": ".from_hex()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L44"
     },
     {
-      "id": "scripts_test_dm_trade_alerts_get_help_slash_msg",
-      "label": "get_help_slash_msg()",
+      "id": "scripts_graphic_design_visual_engine_generativeposter_build_svg",
+      "label": ".build_svg()",
       "_callable": true,
       "_origin": "ast",
       "community": 163,
-      "community_name": "test_dm_trade_alerts.py",
+      "community_name": "run_self_tests",
       "file_type": "code",
-      "norm_label": "get_help_slash_msg()",
-      "source_file": "scripts/test_dm_trade_alerts.py",
-      "source_location": "L83"
+      "norm_label": ".build_svg()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L637"
     },
     {
-      "id": "scripts_test_dm_trade_alerts_get_open_position_msg",
-      "label": "get_open_position_msg()",
+      "id": "scripts_graphic_design_visual_engine_generativeposter_init",
+      "label": ".__init__()",
       "_callable": true,
       "_origin": "ast",
       "community": 163,
-      "community_name": "test_dm_trade_alerts.py",
+      "community_name": "run_self_tests",
       "file_type": "code",
-      "norm_label": "get_open_position_msg()",
-      "source_file": "scripts/test_dm_trade_alerts.py",
-      "source_location": "L23"
+      "norm_label": ".__init__()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L632"
     },
     {
-      "id": "scripts_test_dm_trade_alerts_get_saldo_slash_msg",
-      "label": "get_saldo_slash_msg()",
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_triadic",
+      "label": ".triadic()",
       "_callable": true,
       "_origin": "ast",
       "community": 163,
-      "community_name": "test_dm_trade_alerts.py",
+      "community_name": "run_self_tests",
       "file_type": "code",
-      "norm_label": "get_saldo_slash_msg()",
-      "source_file": "scripts/test_dm_trade_alerts.py",
-      "source_location": "L98"
+      "norm_label": ".triadic()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L301"
     },
     {
-      "id": "scripts_test_dm_trade_alerts_get_status_slash_msg",
-      "label": "get_status_slash_msg()",
+      "id": "scripts_graphic_design_visual_engine_run_self_tests",
+      "label": "run_self_tests()",
       "_callable": true,
       "_origin": "ast",
       "community": 163,
-      "community_name": "test_dm_trade_alerts.py",
+      "community_name": "run_self_tests",
       "file_type": "code",
-      "norm_label": "get_status_slash_msg()",
-      "source_file": "scripts/test_dm_trade_alerts.py",
-      "source_location": "L142"
-    },
-    {
-      "id": "scripts_test_dm_trade_alerts_get_user_slash_msg",
-      "label": "get_user_slash_msg()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 163,
-      "community_name": "test_dm_trade_alerts.py",
-      "file_type": "code",
-      "norm_label": "get_user_slash_msg()",
-      "source_file": "scripts/test_dm_trade_alerts.py",
-      "source_location": "L121"
-    },
-    {
-      "id": "scripts_test_dm_trade_alerts_send_msg",
-      "label": "send_msg()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 163,
-      "community_name": "test_dm_trade_alerts.py",
-      "file_type": "code",
-      "norm_label": "send_msg()",
-      "source_file": "scripts/test_dm_trade_alerts.py",
-      "source_location": "L162"
-    },
-    {
-      "id": "scripts_image_vision_nucleus_engine_streamingtileprocessor_process_tiled_convolution",
-      "label": ".process_tiled_convolution()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 164,
-      "community_name": ".process_tiled_convolution",
-      "file_type": "code",
-      "norm_label": ".process_tiled_convolution()",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L621"
+      "norm_label": "run_self_tests()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L744"
     },
     {
       "id": "scripts_strategic_swot_nucleus_engine_run_verification_tests",
@@ -3423,42 +3399,6 @@
       "source_location": "L67"
     },
     {
-      "id": "scripts_send_hourly_investor_report_fetch_sol_price",
-      "label": "fetch_sol_price()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 206,
-      "community_name": "claudia_telegram_bot.py",
-      "file_type": "code",
-      "norm_label": "fetch_sol_price()",
-      "source_file": "scripts/send_hourly_investor_report.py",
-      "source_location": "L22"
-    },
-    {
-      "id": "scripts_send_hourly_investor_report_generate_hourly_report",
-      "label": "generate_hourly_report()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 206,
-      "community_name": "claudia_telegram_bot.py",
-      "file_type": "code",
-      "norm_label": "generate_hourly_report()",
-      "source_file": "scripts/send_hourly_investor_report.py",
-      "source_location": "L33"
-    },
-    {
-      "id": "scripts_send_hourly_investor_report_push_to_telegram",
-      "label": "push_to_telegram()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 206,
-      "community_name": "claudia_telegram_bot.py",
-      "file_type": "code",
-      "norm_label": "push_to_telegram()",
-      "source_file": "scripts/send_hourly_investor_report.py",
-      "source_location": "L86"
-    },
-    {
       "id": "scripts_download_full_synced_subtitles_fetch_and_save",
       "label": "fetch_and_save()",
       "_callable": true,
@@ -3627,16 +3567,16 @@
       "source_location": "L105"
     },
     {
-      "id": "ponytail_hooks_ponytail_config_normalizeconfigmode",
-      "label": "normalizeConfigMode()",
+      "id": "ponytail_hooks_ponytail_config_isshellsafe",
+      "label": "isShellSafe()",
       "_callable": true,
       "_origin": "ast",
       "community": 22,
       "community_name": "ponytail-config.js",
       "file_type": "code",
-      "norm_label": "normalizeconfigmode()",
+      "norm_label": "isshellsafe()",
       "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L26"
+      "source_location": "L50"
     },
     {
       "id": "ponytail_scripts_uninstall_removeifexists",
@@ -3649,6 +3589,18 @@
       "norm_label": "removeifexists()",
       "source_file": "ponytail/scripts/uninstall.js",
       "source_location": "L14"
+    },
+    {
+      "id": "ponytail_hooks_ponytail_config_normalizeconfigmode",
+      "label": "normalizeConfigMode()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "index.js",
+      "file_type": "code",
+      "norm_label": "normalizeconfigmode()",
+      "source_file": "ponytail/hooks/ponytail-config.js",
+      "source_location": "L26"
     },
     {
       "id": "ponytail_hooks_ponytail_config_normalizepersistedmode",
@@ -4239,52 +4191,16 @@
       "source_location": "L237"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_color_from_hex",
-      "label": ".from_hex()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": ".from_hex()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L44"
-    },
-    {
       "id": "scripts_graphic_design_visual_engine_color_from_hsl",
       "label": ".from_hsl()",
       "_callable": true,
       "_origin": "ast",
       "community": 37,
-      "community_name": "run_self_tests",
+      "community_name": "PaletteGenerator",
       "file_type": "code",
       "norm_label": ".from_hsl()",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L67"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_generativeposter_build_svg",
-      "label": ".build_svg()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": ".build_svg()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L637"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_generativeposter_init",
-      "label": ".__init__()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": ".__init__()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L632"
     },
     {
       "id": "scripts_graphic_design_visual_engine_palettegenerator_analogous",
@@ -4292,7 +4208,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 37,
-      "community_name": "run_self_tests",
+      "community_name": "PaletteGenerator",
       "file_type": "code",
       "norm_label": ".analogous()",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -4304,7 +4220,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 37,
-      "community_name": "run_self_tests",
+      "community_name": "PaletteGenerator",
       "file_type": "code",
       "norm_label": ".complementary()",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -4316,7 +4232,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 37,
-      "community_name": "run_self_tests",
+      "community_name": "PaletteGenerator",
       "file_type": "code",
       "norm_label": ".monochromatic()",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -4328,7 +4244,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 37,
-      "community_name": "run_self_tests",
+      "community_name": "PaletteGenerator",
       "file_type": "code",
       "norm_label": ".scale()",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -4340,7 +4256,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 37,
-      "community_name": "run_self_tests",
+      "community_name": "PaletteGenerator",
       "file_type": "code",
       "norm_label": ".split_complementary()",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -4352,35 +4268,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 37,
-      "community_name": "run_self_tests",
+      "community_name": "PaletteGenerator",
       "file_type": "code",
       "norm_label": ".tetradic()",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L321"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_triadic",
-      "label": ".triadic()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": ".triadic()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L301"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_run_self_tests",
-      "label": "run_self_tests()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": "run_self_tests()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L744"
     },
     {
       "id": "ponytail_hooks_ponytail_config_getdefaultmode",
@@ -4525,18 +4417,6 @@
       "norm_label": "verify_math_gpqa()",
       "source_file": "scripts/official_runner_real.py",
       "source_location": "L416"
-    },
-    {
-      "id": "ponytail_hooks_ponytail_config_isshellsafe",
-      "label": "isShellSafe()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 42,
-      "community_name": "ponytail-activate.js",
-      "file_type": "code",
-      "norm_label": "isshellsafe()",
-      "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L50"
     },
     {
       "id": "scripts_graphic_design_visual_engine_iconbuilder24_cpu_neural",
@@ -5450,6 +5330,30 @@
       "norm_label": "high-precision large-scale capacity and infrastructure resource estimator....",
       "source_file": "scripts/system_design_planning_engine.py",
       "source_location": "L88"
+    },
+    {
+      "id": "ponytail_agents",
+      "label": "ponytail/AGENTS.md",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "README.es.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "ponytail/agents.md",
+      "source_file": "ponytail/AGENTS.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "ponytail_agents_ponytail_lazy_senior_dev_mode",
+      "label": "Ponytail, lazy senior dev mode",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "README.es.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "ponytail, lazy senior dev mode",
+      "source_file": "ponytail/AGENTS.md",
+      "source_location": "L1"
     },
     {
       "id": "ponytail_readme_es",
@@ -7008,37 +6912,15 @@
       "source_location": "L28"
     },
     {
-      "id": "scripts_image_vision_nucleus_engine_rationale_365",
-      "label": "Sub-pixel Geometric Rescaling and Aspect Ratio Preserver.",
+      "id": "scripts_image_vision_nucleus_engine_rationale_626",
+      "label": "Convolves an image in bounded memory tiles of tile_size x tile_size. Uses\u2026",
       "_origin": "ast",
       "community": 128,
       "community_name": "ImageMatrix",
       "file_type": "rationale",
-      "norm_label": "sub-pixel geometric rescaling and aspect ratio preserver.",
+      "norm_label": "convolves an image in bounded memory tiles of tile_size x tile_size. uses...",
       "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L365"
-    },
-    {
-      "id": "scripts_image_vision_nucleus_engine_rationale_371",
-      "label": "High-precision bilinear interpolation rescaling. Maps target pixel centers\u2026",
-      "_origin": "ast",
-      "community": 128,
-      "community_name": "ImageMatrix",
-      "file_type": "rationale",
-      "norm_label": "high-precision bilinear interpolation rescaling. maps target pixel centers...",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L371"
-    },
-    {
-      "id": "scripts_image_vision_nucleus_engine_rationale_415",
-      "label": "Scales image while strictly preserving native aspect ratio, padding the\u2026",
-      "_origin": "ast",
-      "community": 128,
-      "community_name": "ImageMatrix",
-      "file_type": "rationale",
-      "norm_label": "scales image while strictly preserving native aspect ratio, padding the...",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L415"
+      "source_location": "L626"
     },
     {
       "id": "scripts_image_vision_nucleus_engine_rationale_71",
@@ -7361,7 +7243,7 @@
       "label": "Standard-compliant color space transformation algorithms.",
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "rationale",
       "norm_label": "standard-compliant color space transformation algorithms.",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -7372,7 +7254,7 @@
       "label": "Weighted luminosity grayscale conversion. - BT.601 (SDTV/OpenCV default): Y =\u2026",
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "rationale",
       "norm_label": "weighted luminosity grayscale conversion. - bt.601 (sdtv/opencv default): y =...",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -7383,7 +7265,7 @@
       "label": "Converts RGB [0..255] to HSV (Hue in [0..360), Saturation in [0..1], Value in\u2026",
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "rationale",
       "norm_label": "converts rgb [0..255] to hsv (hue in [0..360), saturation in [0..1], value in...",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -7394,7 +7276,7 @@
       "label": "Converts HSV (Hue [0..360), Saturation [0..1], Value [0..1]) back to RGB\u2026",
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "rationale",
       "norm_label": "converts hsv (hue [0..360), saturation [0..1], value [0..1]) back to rgb...",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -7405,7 +7287,7 @@
       "label": "Converts RGB [0..255] to ITU-R BT.601 YCbCr digital video standard.",
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "rationale",
       "norm_label": "converts rgb [0..255] to itu-r bt.601 ycbcr digital video standard.",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -7416,7 +7298,7 @@
       "label": "Converts ITU-R BT.601 YCbCr back to RGB [0..255].",
       "_origin": "ast",
       "community": 130,
-      "community_name": "ColorSpaceMath",
+      "community_name": "run_tests",
       "file_type": "rationale",
       "norm_label": "converts itu-r bt.601 ycbcr back to rgb [0..255].",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -7427,40 +7309,84 @@
       "label": "image_vision_nucleus_engine.py",
       "_origin": "ast",
       "community": 131,
-      "community_name": "run_tests",
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": "image_vision_nucleus_engine.py",
       "source_file": "scripts/image_vision_nucleus_engine.py",
       "source_location": "L1"
     },
     {
-      "id": "scripts_image_vision_nucleus_engine_rationale_662",
-      "label": "Base executable node in a generative AI visual DAG.",
-      "_origin": "ast",
-      "community": 131,
-      "community_name": "run_tests",
-      "file_type": "rationale",
-      "norm_label": "base executable node in a generative ai visual dag.",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L662"
-    },
-    {
       "id": "scripts_image_vision_nucleus_engine_py_any",
       "label": "Any",
       "_origin": "ast",
-      "community": 132,
-      "community_name": "Any",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
       "file_type": "code",
       "norm_label": "any",
       "source_file": "",
       "source_location": ""
     },
     {
+      "id": "scripts_image_vision_nucleus_engine_rationale_615",
+      "label": "Demand-driven tile chunking pipeline for low-memory image processing. Executes\u2026",
+      "_origin": "ast",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
+      "file_type": "rationale",
+      "norm_label": "demand-driven tile chunking pipeline for low-memory image processing. executes...",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L615"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_rationale_662",
+      "label": "Base executable node in a generative AI visual DAG.",
+      "_origin": "ast",
+      "community": 131,
+      "community_name": "image_vision_nucleus_engine.py",
+      "file_type": "rationale",
+      "norm_label": "base executable node in a generative ai visual dag.",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L662"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_rationale_365",
+      "label": "Sub-pixel Geometric Rescaling and Aspect Ratio Preserver.",
+      "_origin": "ast",
+      "community": 132,
+      "community_name": ".letterbox_aspect_preserver",
+      "file_type": "rationale",
+      "norm_label": "sub-pixel geometric rescaling and aspect ratio preserver.",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L365"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_rationale_371",
+      "label": "High-precision bilinear interpolation rescaling. Maps target pixel centers\u2026",
+      "_origin": "ast",
+      "community": 132,
+      "community_name": ".letterbox_aspect_preserver",
+      "file_type": "rationale",
+      "norm_label": "high-precision bilinear interpolation rescaling. maps target pixel centers...",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L371"
+    },
+    {
+      "id": "scripts_image_vision_nucleus_engine_rationale_415",
+      "label": "Scales image while strictly preserving native aspect ratio, padding the\u2026",
+      "_origin": "ast",
+      "community": 132,
+      "community_name": ".letterbox_aspect_preserver",
+      "file_type": "rationale",
+      "norm_label": "scales image while strictly preserving native aspect ratio, padding the...",
+      "source_file": "scripts/image_vision_nucleus_engine.py",
+      "source_location": "L415"
+    },
+    {
       "id": "scripts_image_vision_nucleus_engine_rationale_459",
       "label": "Maps a bounding box (x, y, w, h) from letterboxed space back to native source\u2026",
       "_origin": "ast",
       "community": 132,
-      "community_name": "Any",
+      "community_name": ".letterbox_aspect_preserver",
       "file_type": "rationale",
       "norm_label": "maps a bounding box (x, y, w, h) from letterboxed space back to native source...",
       "source_file": "scripts/image_vision_nucleus_engine.py",
@@ -8398,30 +8324,6 @@
       "norm_label": "pi agent harness",
       "source_file": "ponytail/README.es.md",
       "source_location": "L155"
-    },
-    {
-      "id": "ponytail_agents",
-      "label": "ponytail/AGENTS.md",
-      "_origin": "ast",
-      "community": 148,
-      "community_name": "README.ko.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "ponytail/agents.md",
-      "source_file": "ponytail/AGENTS.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "ponytail_agents_ponytail_lazy_senior_dev_mode",
-      "label": "Ponytail, lazy senior dev mode",
-      "_origin": "ast",
-      "community": 148,
-      "community_name": "README.ko.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "ponytail, lazy senior dev mode",
-      "source_file": "ponytail/AGENTS.md",
-      "source_location": "L1"
     },
     {
       "id": "ponytail_readme_ko",
@@ -10074,37 +9976,118 @@
       "source_location": "L1"
     },
     {
-      "id": "scripts_test_dm_trade_alerts",
-      "label": "test_dm_trade_alerts.py",
+      "id": "scripts_graphic_design_visual_engine",
+      "label": "graphic_design_visual_engine.py",
       "_origin": "ast",
       "community": 163,
-      "community_name": "test_dm_trade_alerts.py",
+      "community_name": "run_self_tests",
       "file_type": "code",
-      "norm_label": "test_dm_trade_alerts.py",
-      "source_file": "scripts/test_dm_trade_alerts.py",
+      "norm_label": "graphic_design_visual_engine.py",
+      "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L1"
     },
     {
-      "id": "scripts_image_vision_nucleus_engine_rationale_615",
-      "label": "Demand-driven tile chunking pipeline for low-memory image processing. Executes\u2026",
+      "id": "scripts_graphic_design_visual_engine_rationale_302",
+      "label": "Generate triadic 3-color harmony (120\u00b0 offsets).",
       "_origin": "ast",
-      "community": 164,
-      "community_name": ".process_tiled_convolution",
+      "community": 163,
+      "community_name": "run_self_tests",
       "file_type": "rationale",
-      "norm_label": "demand-driven tile chunking pipeline for low-memory image processing. executes...",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L615"
+      "norm_label": "generate triadic 3-color harmony (120\u00b0 offsets).",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L302"
     },
     {
-      "id": "scripts_image_vision_nucleus_engine_rationale_626",
-      "label": "Convolves an image in bounded memory tiles of tile_size x tile_size. Uses\u2026",
+      "id": "scripts_graphic_design_visual_engine_rationale_45",
+      "label": "Parse hex color (#RGB, #RGBA, #RRGGBB, #RRGGBBAA).",
+      "_origin": "ast",
+      "community": 163,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "parse hex color (#rgb, #rgba, #rrggbb, #rrggbbaa).",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L45"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_626",
+      "label": "Algorithmic generative poster generator synthesizing: - Parametric Lissajous &\u2026",
+      "_origin": "ast",
+      "community": 163,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "algorithmic generative poster generator synthesizing: - parametric lissajous &...",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L626"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_638",
+      "label": "Generate full SVG graphic poster with mathematical curves and layered depth.",
+      "_origin": "ast",
+      "community": 163,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "generate full svg graphic poster with mathematical curves and layered depth.",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L638"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_745",
+      "label": "Execute 100% deterministic test suite covering color math, WCAG contrast,\u2026",
+      "_origin": "ast",
+      "community": 163,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "execute 100% deterministic test suite covering color math, wcag contrast,...",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L745"
+    },
+    {
+      "id": "learning_neurons_n095_zolu_solana_vault_telegram_forma",
+      "label": "N095_zolu_solana_vault_telegram_forma.md",
       "_origin": "ast",
       "community": 164,
-      "community_name": ".process_tiled_convolution",
-      "file_type": "rationale",
-      "norm_label": "convolves an image in bounded memory tiles of tile_size x tile_size. uses...",
-      "source_file": "scripts/image_vision_nucleus_engine.py",
-      "source_location": "L626"
+      "community_name": "N095: Zolu Solana Vault Telegram Formatting & Accounting Engine",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "n095_zolu_solana_vault_telegram_forma.md",
+      "source_file": "learning/neurons/N095_zolu_solana_vault_telegram_forma.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "learning_neurons_n095_zolu_solana_vault_telegram_forma_disiplin_eksekusi",
+      "label": "\ud83d\udd12 Disiplin Eksekusi",
+      "_origin": "ast",
+      "community": 164,
+      "community_name": "N095: Zolu Solana Vault Telegram Formatting & Accounting Engine",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udd12 disiplin eksekusi",
+      "source_file": "learning/neurons/N095_zolu_solana_vault_telegram_forma.md",
+      "source_location": "L12"
+    },
+    {
+      "id": "learning_neurons_n095_zolu_solana_vault_telegram_forma_inti_pembelajaran_engineering_invariant",
+      "label": "\ud83c\udfaf Inti Pembelajaran (Engineering Invariant)",
+      "_origin": "ast",
+      "community": 164,
+      "community_name": "N095: Zolu Solana Vault Telegram Formatting & Accounting Engine",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83c\udfaf inti pembelajaran (engineering invariant)",
+      "source_file": "learning/neurons/N095_zolu_solana_vault_telegram_forma.md",
+      "source_location": "L9"
+    },
+    {
+      "id": "learning_neurons_n095_zolu_solana_vault_telegram_forma_n095_zolu_solana_vault_telegram_formatting_accounting_engine",
+      "label": "N095: Zolu Solana Vault Telegram Formatting & Accounting Engine",
+      "_origin": "ast",
+      "community": 164,
+      "community_name": "N095: Zolu Solana Vault Telegram Formatting & Accounting Engine",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "n095: zolu solana vault telegram formatting & accounting engine",
+      "source_file": "learning/neurons/N095_zolu_solana_vault_telegram_forma.md",
+      "source_location": "L1"
     },
     {
       "id": "goblix_public_manifest",
@@ -12910,28 +12893,6 @@
       "source_location": "L1"
     },
     {
-      "id": "scripts_send_hourly_investor_report",
-      "label": "send_hourly_investor_report.py",
-      "_origin": "ast",
-      "community": 206,
-      "community_name": "claudia_telegram_bot.py",
-      "file_type": "code",
-      "norm_label": "send_hourly_investor_report.py",
-      "source_file": "scripts/send_hourly_investor_report.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "scripts_send_hourly_investor_report_rationale_23",
-      "label": "Fetch live SOL/USDT price from public exchange API.",
-      "_origin": "ast",
-      "community": 206,
-      "community_name": "claudia_telegram_bot.py",
-      "file_type": "rationale",
-      "norm_label": "fetch live sol/usdt price from public exchange api.",
-      "source_file": "scripts/send_hourly_investor_report.py",
-      "source_location": "L23"
-    },
-    {
       "id": "learning_neurons_n058_migrasi_arsitektur_goblix_cinema",
       "label": "N058_migrasi_arsitektur_goblix_cinema.md",
       "_origin": "ast",
@@ -13438,17 +13399,6 @@
       "norm_label": "path",
       "source_file": "ponytail/hooks/ponytail-config.js",
       "source_location": "L13"
-    },
-    {
-      "id": "ponytail_hooks_ponytail_config_runtime_modes",
-      "label": "RUNTIME_MODES",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "ponytail-config.js",
-      "file_type": "code",
-      "norm_label": "runtime_modes",
-      "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L18"
     },
     {
       "id": "ponytail_hooks_ponytail_config_valid_modes",
@@ -14463,6 +14413,17 @@
       "norm_label": "n071: automated fuzzing, ast taint analysis & semantic cve hotpatching",
       "source_file": "learning/neurons/N071_automated_fuzzing_cve_hotpatching.md",
       "source_location": "L1"
+    },
+    {
+      "id": "ponytail_hooks_ponytail_config_runtime_modes",
+      "label": "RUNTIME_MODES",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "index.js",
+      "file_type": "code",
+      "norm_label": "runtime_modes",
+      "source_file": "ponytail/hooks/ponytail-config.js",
+      "source_location": "L18"
     },
     {
       "id": "ponytail_pi_extension_index",
@@ -18676,7 +18637,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\udccb active tasks & history",
       "source_file": "memory.md",
-      "source_location": "L95"
+      "source_location": "L96"
     },
     {
       "id": "memory_claudia_neuron_memory_network",
@@ -18700,7 +18661,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\udccb prosedur pembaruan memori",
       "source_file": "memory.md",
-      "source_location": "L89"
+      "source_location": "L90"
     },
     {
       "id": "learning_neurons_n032_cloud_native_edge_infra",
@@ -18871,22 +18832,11 @@
       "source_location": "L75"
     },
     {
-      "id": "scripts_graphic_design_visual_engine",
-      "label": "graphic_design_visual_engine.py",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": "graphic_design_visual_engine.py",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L1"
-    },
-    {
       "id": "scripts_graphic_design_visual_engine_rationale_272",
       "label": "Harmonious color palette generator supporting classical color wheel (HSL) and\u2026",
       "_origin": "ast",
       "community": 37,
-      "community_name": "run_self_tests",
+      "community_name": "PaletteGenerator",
       "file_type": "rationale",
       "norm_label": "harmonious color palette generator supporting classical color wheel (hsl) and...",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -18897,7 +18847,7 @@
       "label": "Generate a monochromatic ramp varying in Lightness.",
       "_origin": "ast",
       "community": 37,
-      "community_name": "run_self_tests",
+      "community_name": "PaletteGenerator",
       "file_type": "rationale",
       "norm_label": "generate a monochromatic ramp varying in lightness.",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -18908,7 +18858,7 @@
       "label": "Generate analogous colors clustered around base hue.",
       "_origin": "ast",
       "community": 37,
-      "community_name": "run_self_tests",
+      "community_name": "PaletteGenerator",
       "file_type": "rationale",
       "norm_label": "generate analogous colors clustered around base hue.",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -18919,29 +18869,18 @@
       "label": "Generate complementary color pair (180\u00b0 offset).",
       "_origin": "ast",
       "community": 37,
-      "community_name": "run_self_tests",
+      "community_name": "PaletteGenerator",
       "file_type": "rationale",
       "norm_label": "generate complementary color pair (180\u00b0 offset).",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L296"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_rationale_302",
-      "label": "Generate triadic 3-color harmony (120\u00b0 offsets).",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "generate triadic 3-color harmony (120\u00b0 offsets).",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L302"
-    },
-    {
       "id": "scripts_graphic_design_visual_engine_rationale_312",
       "label": "Generate split-complementary harmony (base + 2 colors flanking complement).",
       "_origin": "ast",
       "community": 37,
-      "community_name": "run_self_tests",
+      "community_name": "PaletteGenerator",
       "file_type": "rationale",
       "norm_label": "generate split-complementary harmony (base + 2 colors flanking complement).",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -18952,7 +18891,7 @@
       "label": "Generate tetradic rectangular 4-color harmony.",
       "_origin": "ast",
       "community": 37,
-      "community_name": "run_self_tests",
+      "community_name": "PaletteGenerator",
       "file_type": "rationale",
       "norm_label": "generate tetradic rectangular 4-color harmony.",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -18963,66 +18902,22 @@
       "label": "Generate multi-stop gradient scale interpolated in CIELAB space.",
       "_origin": "ast",
       "community": 37,
-      "community_name": "run_self_tests",
+      "community_name": "PaletteGenerator",
       "file_type": "rationale",
       "norm_label": "generate multi-stop gradient scale interpolated in cielab space.",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L333"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_rationale_45",
-      "label": "Parse hex color (#RGB, #RGBA, #RRGGBB, #RRGGBBAA).",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "parse hex color (#rgb, #rgba, #rrggbb, #rrggbbaa).",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L45"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_626",
-      "label": "Algorithmic generative poster generator synthesizing: - Parametric Lissajous &\u2026",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "algorithmic generative poster generator synthesizing: - parametric lissajous &...",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L626"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_638",
-      "label": "Generate full SVG graphic poster with mathematical curves and layered depth.",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "generate full svg graphic poster with mathematical curves and layered depth.",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L638"
-    },
-    {
       "id": "scripts_graphic_design_visual_engine_rationale_68",
       "label": "Construct Color from HSL (H in [0, 360), S in [0, 1], L in [0, 1]).",
       "_origin": "ast",
       "community": 37,
-      "community_name": "run_self_tests",
+      "community_name": "PaletteGenerator",
       "file_type": "rationale",
       "norm_label": "construct color from hsl (h in [0, 360), s in [0, 1], l in [0, 1]).",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L68"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_745",
-      "label": "Execute 100% deterministic test suite covering color math, WCAG contrast,\u2026",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "execute 100% deterministic test suite covering color math, wcag contrast,...",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L745"
     },
     {
       "id": "learning_neurons_n031_modern_data_storage_pgvector",
@@ -26882,7 +26777,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/claudia_telegram_bot.py",
-      "source_location": "L182",
+      "source_location": "L190",
       "weight": 1.0
     },
     {
@@ -26894,19 +26789,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/claudia_telegram_bot.py",
-      "source_location": "L197",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_claudia_telegram_bot_run_claudia_bot",
-      "target": "scripts_send_hourly_investor_report_generate_hourly_report",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/claudia_telegram_bot.py",
-      "source_location": "L261",
+      "source_location": "L226",
       "weight": 1.0
     },
     {
@@ -26918,7 +26801,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/claudia_telegram_bot.py",
-      "source_location": "L271",
+      "source_location": "L300",
       "weight": 1.0
     },
     {
@@ -26930,7 +26813,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/claudia_telegram_bot.py",
-      "source_location": "L272",
+      "source_location": "L301",
       "weight": 1.0
     },
     {
@@ -28383,30 +28266,6 @@
       "context": "call",
       "source_file": "scripts/sanitize_and_sync_all_subs.py",
       "source_location": "L95",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_send_hourly_investor_report_generate_hourly_report",
-      "target": "scripts_send_hourly_investor_report_fetch_sol_price",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/send_hourly_investor_report.py",
-      "source_location": "L34",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_send_hourly_investor_report_push_to_telegram",
-      "target": "scripts_send_hourly_investor_report_generate_hourly_report",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/send_hourly_investor_report.py",
-      "source_location": "L87",
       "weight": 1.0
     },
     {
@@ -31215,18 +31074,6 @@
       "context": "import",
       "source_file": "scripts/benchmark_engine.py",
       "source_location": "L20",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_claudia_telegram_bot",
-      "target": "scripts_send_hourly_investor_report_generate_hourly_report",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "scripts/claudia_telegram_bot.py",
-      "source_location": "L260",
       "weight": 1.0
     },
     {
@@ -44339,6 +44186,39 @@
       "weight": 1.0
     },
     {
+      "source": "learning_neurons_n095_zolu_solana_vault_telegram_forma",
+      "target": "learning_neurons_n095_zolu_solana_vault_telegram_forma_n095_zolu_solana_vault_telegram_formatting_accounting_engine",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N095_zolu_solana_vault_telegram_forma.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n095_zolu_solana_vault_telegram_forma_n095_zolu_solana_vault_telegram_formatting_accounting_engine",
+      "target": "learning_neurons_n095_zolu_solana_vault_telegram_forma_disiplin_eksekusi",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N095_zolu_solana_vault_telegram_forma.md",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n095_zolu_solana_vault_telegram_forma_n095_zolu_solana_vault_telegram_formatting_accounting_engine",
+      "target": "learning_neurons_n095_zolu_solana_vault_telegram_forma_inti_pembelajaran_engineering_invariant",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N095_zolu_solana_vault_telegram_forma.md",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
       "source": "learning_playbooks_graphify_workflow",
       "target": "learning_playbooks_graphify_workflow_playbook_graphify_workflow",
       "relation": "contains",
@@ -44489,7 +44369,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "memory.md",
-      "source_location": "L89",
+      "source_location": "L90",
       "weight": 1.0
     },
     {
@@ -44500,7 +44380,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "memory.md",
-      "source_location": "L95",
+      "source_location": "L96",
       "weight": 1.0
     },
     {
@@ -47914,39 +47794,6 @@
       "weight": 1.0
     },
     {
-      "source": "scripts_send_hourly_investor_report",
-      "target": "scripts_send_hourly_investor_report_fetch_sol_price",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/send_hourly_investor_report.py",
-      "source_location": "L22",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_send_hourly_investor_report",
-      "target": "scripts_send_hourly_investor_report_generate_hourly_report",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/send_hourly_investor_report.py",
-      "source_location": "L33",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_send_hourly_investor_report",
-      "target": "scripts_send_hourly_investor_report_push_to_telegram",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/send_hourly_investor_report.py",
-      "source_location": "L86",
-      "weight": 1.0
-    },
-    {
       "source": "scripts_send_telegram_gold_report",
       "target": "scripts_send_telegram_gold_report_send_live_report",
       "relation": "contains",
@@ -48186,83 +48033,6 @@
       "confidence_score": 1.0,
       "source_file": "scripts/test_brain.py",
       "source_location": "L89",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_test_dm_trade_alerts",
-      "target": "scripts_test_dm_trade_alerts_get_user_slash_msg",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/test_dm_trade_alerts.py",
-      "source_location": "L121",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_test_dm_trade_alerts",
-      "target": "scripts_test_dm_trade_alerts_get_status_slash_msg",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/test_dm_trade_alerts.py",
-      "source_location": "L142",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_test_dm_trade_alerts",
-      "target": "scripts_test_dm_trade_alerts_send_msg",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/test_dm_trade_alerts.py",
-      "source_location": "L162",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_test_dm_trade_alerts",
-      "target": "scripts_test_dm_trade_alerts_get_open_position_msg",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/test_dm_trade_alerts.py",
-      "source_location": "L23",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_test_dm_trade_alerts",
-      "target": "scripts_test_dm_trade_alerts_get_closed_position_msg",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/test_dm_trade_alerts.py",
-      "source_location": "L54",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_test_dm_trade_alerts",
-      "target": "scripts_test_dm_trade_alerts_get_help_slash_msg",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/test_dm_trade_alerts.py",
-      "source_location": "L83",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_test_dm_trade_alerts",
-      "target": "scripts_test_dm_trade_alerts_get_saldo_slash_msg",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/test_dm_trade_alerts.py",
-      "source_location": "L98",
       "weight": 1.0
     },
     {
@@ -51225,17 +50995,6 @@
       "weight": 1.0
     },
     {
-      "source": "scripts_send_hourly_investor_report_rationale_23",
-      "target": "scripts_send_hourly_investor_report_fetch_sol_price",
-      "relation": "rationale_for",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/send_hourly_investor_report.py",
-      "source_location": "L23",
-      "weight": 1.0
-    },
-    {
       "source": "scripts_strategic_swot_nucleus_engine_rationale_37",
       "target": "scripts_strategic_swot_nucleus_engine_strategicswotnucleusengine_add_swot",
       "relation": "rationale_for",
@@ -52298,5 +52057,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "6787e1c79d4ac666d7c1d87673f187524da707da"
+  "built_at_commit": "54717d3096c8a853256e5e2c0b7e24e923aa43fb"
 }

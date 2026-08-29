@@ -1,8 +1,8 @@
 {
   "version": "1.2.0",
-  "updated_at": "2026-08-29 10:09:42",
-  "total_neurons": 94,
-  "total_synapses": 380,
+  "updated_at": "2026-08-29 11:23:23",
+  "total_neurons": 95,
+  "total_synapses": 383,
   "mesh_density": 0.0435,
   "neurons": [
     {
@@ -1196,6 +1196,16 @@
       ],
       "synapse_count": 5,
       "size_bytes": 3390
+    },
+    {
+      "id": "N095",
+      "label": "Neuron N095: Zolu Solana Vault Telegram Formatting & Accounting Engine",
+      "file": "N095_zolu_solana_vault_telegram_forma.md",
+      "connections": [
+        "N001",
+        "N004",
+        "N007"
+      ]
     }
   ]
 }
