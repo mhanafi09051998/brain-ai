@@ -1978,5 +1978,23 @@
     "seen": 1787983847.0320091,
     "ast_hash": "ab9b49bd2c091bc6b8402bbc4425fac5",
     "semantic_hash": ""
+  },
+  "scripts/apply_pcc_mikrotik.py": {
+    "mtime": 1787984439.1829379,
+    "seen": 1787984835.6144874,
+    "ast_hash": "efa1157f587e0cb059014bd6bb3d635c",
+    "semantic_hash": ""
+  },
+  "scripts/apply_recursive_failover.py": {
+    "mtime": 1787984553.2224858,
+    "seen": 1787984835.6144874,
+    "ast_hash": "2d0ccc991cfe9ce23bea39a072dc84b1",
+    "semantic_hash": ""
+  },
+  "scripts/mikrotik_client.py": {
+    "mtime": 1787984003.992329,
+    "seen": 1787984835.6144874,
+    "ast_hash": "4d6c83530f8b434414d22778ff68b975",
+    "semantic_hash": ""
   }
 }

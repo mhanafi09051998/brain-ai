@@ -303,19 +303,6 @@
       "source_location": "L17"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator",
-      "label": "PaletteGenerator",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 174,
-      "community_name": "PaletteGenerator",
-      "file_type": "code",
-      "norm_label": "palettegenerator",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L271"
-    },
-    {
       "id": "scripts_graphic_design_visual_engine_vec2d",
       "label": "Vec2D",
       "_callable": true,
@@ -379,6 +366,19 @@
       "norm_label": "generativeposter",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L625"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator",
+      "label": "PaletteGenerator",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": "palettegenerator",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L271"
     },
     {
       "id": "scripts_graphic_design_visual_engine_iconbuilder24",
@@ -2079,76 +2079,16 @@
       "source_location": "L591"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_color_from_hsl",
-      "label": ".from_hsl()",
+      "id": "scripts_apply_pcc_mikrotik_apply_pcc",
+      "label": "apply_pcc()",
       "_callable": true,
       "_origin": "ast",
       "community": 174,
-      "community_name": "PaletteGenerator",
+      "community_name": "apply_pcc_mikrotik.py",
       "file_type": "code",
-      "norm_label": ".from_hsl()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L67"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_analogous",
-      "label": ".analogous()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 174,
-      "community_name": "PaletteGenerator",
-      "file_type": "code",
-      "norm_label": ".analogous()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L284"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_complementary",
-      "label": ".complementary()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 174,
-      "community_name": "PaletteGenerator",
-      "file_type": "code",
-      "norm_label": ".complementary()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L295"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_monochromatic",
-      "label": ".monochromatic()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 174,
-      "community_name": "PaletteGenerator",
-      "file_type": "code",
-      "norm_label": ".monochromatic()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L277"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_split_complementary",
-      "label": ".split_complementary()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 174,
-      "community_name": "PaletteGenerator",
-      "file_type": "code",
-      "norm_label": ".split_complementary()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L311"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_tetradic",
-      "label": ".tetradic()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 174,
-      "community_name": "PaletteGenerator",
-      "file_type": "code",
-      "norm_label": ".tetradic()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L321"
+      "norm_label": "apply_pcc()",
+      "source_file": "scripts/apply_pcc_mikrotik.py",
+      "source_location": "L69"
     },
     {
       "id": "scripts_ingest_swot_knowledge_process_case",
@@ -3603,16 +3543,16 @@
       "source_location": "L105"
     },
     {
-      "id": "ponytail_hooks_ponytail_config_isshellsafe",
-      "label": "isShellSafe()",
+      "id": "ponytail_hooks_ponytail_config_normalizeconfigmode",
+      "label": "normalizeConfigMode()",
       "_callable": true,
       "_origin": "ast",
       "community": 22,
       "community_name": "ponytail-config.js",
       "file_type": "code",
-      "norm_label": "isshellsafe()",
+      "norm_label": "normalizeconfigmode()",
       "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L50"
+      "source_location": "L26"
     },
     {
       "id": "ponytail_scripts_uninstall_removeifexists",
@@ -3625,18 +3565,6 @@
       "norm_label": "removeifexists()",
       "source_file": "ponytail/scripts/uninstall.js",
       "source_location": "L14"
-    },
-    {
-      "id": "ponytail_hooks_ponytail_config_normalizeconfigmode",
-      "label": "normalizeConfigMode()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "index.js",
-      "file_type": "code",
-      "norm_label": "normalizeconfigmode()",
-      "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L26"
     },
     {
       "id": "ponytail_hooks_ponytail_config_normalizepersistedmode",
@@ -3817,6 +3745,30 @@
       "norm_label": ".process_tiled_convolution()",
       "source_file": "scripts/image_vision_nucleus_engine.py",
       "source_location": "L621"
+    },
+    {
+      "id": "scripts_apply_recursive_failover_apply_recursive_failover",
+      "label": "apply_recursive_failover()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 255,
+      "community_name": "apply_recursive_failover.py",
+      "file_type": "code",
+      "norm_label": "apply_recursive_failover()",
+      "source_file": "scripts/apply_recursive_failover.py",
+      "source_location": "L43"
+    },
+    {
+      "id": "scripts_mikrotik_client_run_mikrotik_command",
+      "label": "run_mikrotik_command()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 256,
+      "community_name": "mikrotik_client.py",
+      "file_type": "code",
+      "norm_label": "run_mikrotik_command()",
+      "source_file": "scripts/mikrotik_client.py",
+      "source_location": "L19"
     },
     {
       "id": "scripts_graphic_design_visual_engine_cubicbezier_acceleration",
@@ -4251,6 +4203,18 @@
       "source_location": "L44"
     },
     {
+      "id": "scripts_graphic_design_visual_engine_color_from_hsl",
+      "label": ".from_hsl()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": ".from_hsl()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L67"
+    },
+    {
       "id": "scripts_graphic_design_visual_engine_generativeposter_build_svg",
       "label": ".build_svg()",
       "_callable": true,
@@ -4275,6 +4239,42 @@
       "source_location": "L632"
     },
     {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_analogous",
+      "label": ".analogous()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": ".analogous()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L284"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_complementary",
+      "label": ".complementary()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": ".complementary()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L295"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_monochromatic",
+      "label": ".monochromatic()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": ".monochromatic()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L277"
+    },
+    {
       "id": "scripts_graphic_design_visual_engine_palettegenerator_scale",
       "label": ".scale()",
       "_callable": true,
@@ -4285,6 +4285,30 @@
       "norm_label": ".scale()",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L332"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_split_complementary",
+      "label": ".split_complementary()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": ".split_complementary()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L311"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_tetradic",
+      "label": ".tetradic()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": ".tetradic()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L321"
     },
     {
       "id": "scripts_graphic_design_visual_engine_palettegenerator_triadic",
@@ -4453,6 +4477,18 @@
       "norm_label": "verify_math_gpqa()",
       "source_file": "scripts/official_runner_real.py",
       "source_location": "L416"
+    },
+    {
+      "id": "ponytail_hooks_ponytail_config_isshellsafe",
+      "label": "isShellSafe()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "ponytail-activate.js",
+      "file_type": "code",
+      "norm_label": "isshellsafe()",
+      "source_file": "ponytail/hooks/ponytail-config.js",
+      "source_location": "L50"
     },
     {
       "id": "scripts_graphic_design_visual_engine_iconbuilder24_cpu_neural",
@@ -5366,30 +5402,6 @@
       "norm_label": "high-precision large-scale capacity and infrastructure resource estimator....",
       "source_file": "scripts/system_design_planning_engine.py",
       "source_location": "L88"
-    },
-    {
-      "id": "ponytail_agents",
-      "label": "ponytail/AGENTS.md",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "README.es.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "ponytail/agents.md",
-      "source_file": "ponytail/AGENTS.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "ponytail_agents_ponytail_lazy_senior_dev_mode",
-      "label": "Ponytail, lazy senior dev mode",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "README.es.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "ponytail, lazy senior dev mode",
-      "source_file": "ponytail/AGENTS.md",
-      "source_location": "L1"
     },
     {
       "id": "ponytail_readme_es",
@@ -8340,6 +8352,30 @@
       "source_location": "L155"
     },
     {
+      "id": "ponytail_agents",
+      "label": "ponytail/AGENTS.md",
+      "_origin": "ast",
+      "community": 148,
+      "community_name": "README.ko.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "ponytail/agents.md",
+      "source_file": "ponytail/AGENTS.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "ponytail_agents_ponytail_lazy_senior_dev_mode",
+      "label": "Ponytail, lazy senior dev mode",
+      "_origin": "ast",
+      "community": 148,
+      "community_name": "README.ko.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "ponytail, lazy senior dev mode",
+      "source_file": "ponytail/AGENTS.md",
+      "source_location": "L1"
+    },
+    {
       "id": "ponytail_readme_ko",
       "label": "README.ko.md",
       "_origin": "ast",
@@ -10870,81 +10906,15 @@
       "source_location": "L1"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_rationale_272",
-      "label": "Harmonious color palette generator supporting classical color wheel (HSL) and\u2026",
+      "id": "scripts_apply_pcc_mikrotik",
+      "label": "apply_pcc_mikrotik.py",
       "_origin": "ast",
       "community": 174,
-      "community_name": "PaletteGenerator",
-      "file_type": "rationale",
-      "norm_label": "harmonious color palette generator supporting classical color wheel (hsl) and...",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L272"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_278",
-      "label": "Generate a monochromatic ramp varying in Lightness.",
-      "_origin": "ast",
-      "community": 174,
-      "community_name": "PaletteGenerator",
-      "file_type": "rationale",
-      "norm_label": "generate a monochromatic ramp varying in lightness.",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L278"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_285",
-      "label": "Generate analogous colors clustered around base hue.",
-      "_origin": "ast",
-      "community": 174,
-      "community_name": "PaletteGenerator",
-      "file_type": "rationale",
-      "norm_label": "generate analogous colors clustered around base hue.",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L285"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_296",
-      "label": "Generate complementary color pair (180\u00b0 offset).",
-      "_origin": "ast",
-      "community": 174,
-      "community_name": "PaletteGenerator",
-      "file_type": "rationale",
-      "norm_label": "generate complementary color pair (180\u00b0 offset).",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L296"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_312",
-      "label": "Generate split-complementary harmony (base + 2 colors flanking complement).",
-      "_origin": "ast",
-      "community": 174,
-      "community_name": "PaletteGenerator",
-      "file_type": "rationale",
-      "norm_label": "generate split-complementary harmony (base + 2 colors flanking complement).",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L312"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_322",
-      "label": "Generate tetradic rectangular 4-color harmony.",
-      "_origin": "ast",
-      "community": 174,
-      "community_name": "PaletteGenerator",
-      "file_type": "rationale",
-      "norm_label": "generate tetradic rectangular 4-color harmony.",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L322"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_68",
-      "label": "Construct Color from HSL (H in [0, 360), S in [0, 1], L in [0, 1]).",
-      "_origin": "ast",
-      "community": 174,
-      "community_name": "PaletteGenerator",
-      "file_type": "rationale",
-      "norm_label": "construct color from hsl (h in [0, 360), s in [0, 1], l in [0, 1]).",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L68"
+      "community_name": "apply_pcc_mikrotik.py",
+      "file_type": "code",
+      "norm_label": "apply_pcc_mikrotik.py",
+      "source_file": "scripts/apply_pcc_mikrotik.py",
+      "source_location": "L1"
     },
     {
       "id": "scripts_register_n056",
@@ -13809,6 +13779,17 @@
       "source_location": "L13"
     },
     {
+      "id": "ponytail_hooks_ponytail_config_runtime_modes",
+      "label": "RUNTIME_MODES",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "ponytail-config.js",
+      "file_type": "code",
+      "norm_label": "runtime_modes",
+      "source_file": "ponytail/hooks/ponytail-config.js",
+      "source_location": "L18"
+    },
+    {
       "id": "ponytail_hooks_ponytail_config_valid_modes",
       "label": "VALID_MODES",
       "_origin": "ast",
@@ -14821,17 +14802,6 @@
       "norm_label": "n071: automated fuzzing, ast taint analysis & semantic cve hotpatching",
       "source_file": "learning/neurons/N071_automated_fuzzing_cve_hotpatching.md",
       "source_location": "L1"
-    },
-    {
-      "id": "ponytail_hooks_ponytail_config_runtime_modes",
-      "label": "RUNTIME_MODES",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "index.js",
-      "file_type": "code",
-      "norm_label": "runtime_modes",
-      "source_file": "ponytail/hooks/ponytail-config.js",
-      "source_location": "L18"
     },
     {
       "id": "ponytail_pi_extension_index",
@@ -17413,6 +17383,28 @@
       "source_location": "L1"
     },
     {
+      "id": "scripts_apply_recursive_failover",
+      "label": "apply_recursive_failover.py",
+      "_origin": "ast",
+      "community": 255,
+      "community_name": "apply_recursive_failover.py",
+      "file_type": "code",
+      "norm_label": "apply_recursive_failover.py",
+      "source_file": "scripts/apply_recursive_failover.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_mikrotik_client",
+      "label": "mikrotik_client.py",
+      "_origin": "ast",
+      "community": 256,
+      "community_name": "mikrotik_client.py",
+      "file_type": "code",
+      "norm_label": "mikrotik_client.py",
+      "source_file": "scripts/mikrotik_client.py",
+      "source_location": "L1"
+    },
+    {
       "id": "learning_neurons_n033_python_high_performance",
       "label": "N033_python_high_performance.md",
       "_origin": "ast",
@@ -19321,6 +19313,50 @@
       "source_location": "L1"
     },
     {
+      "id": "scripts_graphic_design_visual_engine_rationale_272",
+      "label": "Harmonious color palette generator supporting classical color wheel (HSL) and\u2026",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "harmonious color palette generator supporting classical color wheel (hsl) and...",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L272"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_278",
+      "label": "Generate a monochromatic ramp varying in Lightness.",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "generate a monochromatic ramp varying in lightness.",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L278"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_285",
+      "label": "Generate analogous colors clustered around base hue.",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "generate analogous colors clustered around base hue.",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L285"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_296",
+      "label": "Generate complementary color pair (180\u00b0 offset).",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "generate complementary color pair (180\u00b0 offset).",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L296"
+    },
+    {
       "id": "scripts_graphic_design_visual_engine_rationale_302",
       "label": "Generate triadic 3-color harmony (120\u00b0 offsets).",
       "_origin": "ast",
@@ -19330,6 +19366,28 @@
       "norm_label": "generate triadic 3-color harmony (120\u00b0 offsets).",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L302"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_312",
+      "label": "Generate split-complementary harmony (base + 2 colors flanking complement).",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "generate split-complementary harmony (base + 2 colors flanking complement).",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L312"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_322",
+      "label": "Generate tetradic rectangular 4-color harmony.",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "generate tetradic rectangular 4-color harmony.",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L322"
     },
     {
       "id": "scripts_graphic_design_visual_engine_rationale_333",
@@ -19374,6 +19432,17 @@
       "norm_label": "generate full svg graphic poster with mathematical curves and layered depth.",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L638"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_68",
+      "label": "Construct Color from HSL (H in [0, 360), S in [0, 1], L in [0, 1]).",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "construct color from hsl (h in [0, 360), s in [0, 1], l in [0, 1]).",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L68"
     },
     {
       "id": "scripts_graphic_design_visual_engine_rationale_745",
@@ -47438,6 +47507,28 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_apply_pcc_mikrotik",
+      "target": "scripts_apply_pcc_mikrotik_apply_pcc",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/apply_pcc_mikrotik.py",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_apply_recursive_failover",
+      "target": "scripts_apply_recursive_failover_apply_recursive_failover",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/apply_recursive_failover.py",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
       "source": "scripts_auto_sync_github",
       "target": "scripts_auto_sync_github_run_cmd",
       "relation": "contains",
@@ -48392,6 +48483,17 @@
       "confidence_score": 1.0,
       "source_file": "scripts/masterpiece_completer.py",
       "source_location": "L78",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_mikrotik_client",
+      "target": "scripts_mikrotik_client_run_mikrotik_command",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/mikrotik_client.py",
+      "source_location": "L19",
       "weight": 1.0
     },
     {
@@ -52911,5 +53013,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "244b276d29384a480b4bc4acc3af33a5d7a64531"
+  "built_at_commit": "cde4369806047bb2f44a9d24674d3a6a7335074d"
 }

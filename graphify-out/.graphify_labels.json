@@ -173,7 +173,7 @@
   "171": "N056: Strategic SWOT and TOWS Matrix Analysis",
   "172": "N056: Strategic SWOT, TOWS Matrix, PESTLE & Porter's 5 Forces Architecture Mastery",
   "173": "scrape_network_knowledge_engine.py",
-  "174": "PaletteGenerator",
+  "174": "apply_pcc_mikrotik.py",
   "175": "register_n056.py",
   "176": "sw.js",
   "177": "process_case",
@@ -253,5 +253,7 @@
   "251": "🎯 Inti Pembelajaran (Engineering Invariant)",
   "252": "🎯 Inti Pembelajaran (12 Parameter Evaluasi Model AI Generasi Baru)",
   "253": ".process_tiled_convolution",
-  "254": "continuous_12_frontier_daemon.py"
+  "254": "continuous_12_frontier_daemon.py",
+  "255": "apply_recursive_failover.py",
+  "256": "mikrotik_client.py"
 }
