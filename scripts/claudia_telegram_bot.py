@@ -170,6 +170,14 @@ def run_claudia_bot():
                         continue
 
                     chat_type = msg.get("chat", {}).get("type", "private")
+                    if chat_type in ["group", "supergroup"]:
+                        group_file = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "learning", "telegram_group_id.txt")
+                        try:
+                            with open(group_file, "w") as gf:
+                                gf.write(str(chat_id))
+                        except Exception:
+                            pass
+
                     user_name = msg.get("from", {}).get("first_name", "Investor")
                     if msg.get("from", {}).get("last_name"):
                         user_name += f" {msg.get('from', {}).get('last_name')}"

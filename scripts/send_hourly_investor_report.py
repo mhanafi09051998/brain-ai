@@ -108,32 +108,51 @@ def push_to_telegram(target_id=None):
         print(f"[!] Gagal mengirim ke Telegram Chat ID {chat_id}: {e}")
         return False
 
+def get_target_group_id():
+    env_id = os.environ.get("TELEGRAM_GROUP_CHAT_ID")
+    if env_id:
+        try: return int(env_id)
+        except: pass
+    group_file = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "learning", "telegram_group_id.txt")
+    if os.path.exists(group_file):
+        try:
+            with open(group_file, "r") as gf:
+                content = gf.read().strip()
+                if content:
+                    return int(content)
+        except:
+            pass
+    return None
+
 def run_hourly_scheduler():
     import time
     print("⚡ [START] Claudia Ultra 24/7 Hourly Investor Report Scheduler Activated.")
-    print(f"[*] Target Primary Chat ID: {TARGET_CHAT_ID}")
+    print("🔒 [POLICY] DM Notifications DISABLED (Mas Hanafi is in the group).")
     
-    group_id_env = os.environ.get("TELEGRAM_GROUP_CHAT_ID")
-    group_id = int(group_id_env) if group_id_env else None
-    
-    # 1. Send immediate startup baseline
-    print("[*] Sending initial startup report...")
-    push_to_telegram(TARGET_CHAT_ID)
-    if group_id and group_id != TARGET_CHAT_ID:
+    group_id = get_target_group_id()
+    if group_id:
+        print(f"[*] Target Group Chat ID: {group_id}")
+        print("[*] Sending initial startup report to Group...")
         push_to_telegram(group_id)
+    else:
+        print("[!] Target Group Chat ID not yet detected. Waiting for message in group or TELEGRAM_GROUP_CHAT_ID...")
         
     last_sent_hour = datetime.now(timezone(timedelta(hours=7))).hour
     
     while True:
         try:
+            group_id = get_target_group_id()
             now_wib = datetime.now(timezone(timedelta(hours=7)))
+            
             if now_wib.minute == 0 and now_wib.hour != last_sent_hour:
                 print(f"\n[⚡ TOP OF HOUR] {now_wib.strftime('%d %b %Y %H:%M:%S WIB')} — Triggering hourly report...")
-                push_to_telegram(TARGET_CHAT_ID)
-                if group_id and group_id != TARGET_CHAT_ID:
+                if group_id:
                     push_to_telegram(group_id)
+                    print(f"[✓] Hourly report dispatched to Group ({group_id}).")
+                else:
+                    print("[!] Skipped: Group Chat ID not found.")
                 last_sent_hour = now_wib.hour
-                print(f"[✓] Hourly report dispatched. Next cycle at {(now_wib + timedelta(hours=1)).strftime('%H:00')} WIB.")
+                print(f"[*] Next cycle at {(now_wib + timedelta(hours=1)).strftime('%H:00')} WIB.")
             time.sleep(20)
         except Exception as e:
             print(f"[!] Scheduler exception: {e}")
@@ -143,4 +162,5 @@ if __name__ == "__main__":
     if "--daemon" in sys.argv or "--schedule" in sys.argv:
         run_hourly_scheduler()
     else:
-        push_to_telegram()
+        target = get_target_group_id() or TARGET_CHAT_ID
+        push_to_telegram(target)
