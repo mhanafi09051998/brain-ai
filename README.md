@@ -42,7 +42,21 @@ Claudia beroperasi di bawah prinsip mutlak **Ponytail (Minimalist & Pragmatic Se
 
 ## 🧠 2. Cognitive Neural Mesh (82 Master Neurons Matrix)
 
-Jaringan kognitif terdistribusi yang mencakup seluruh domain rekayasa perangkat lunak, sistem terdistribusi, keamanan siber, dan perdagangan kuantitatif:
+Jaringan kognitif terdistribusi yang memetakan seluruh domain rekayasa sistem, HFT kuantitatif, dan kecerdasan otonom:
+
+| Cluster Domain | Cakupan Neuron | Invarian & Fokus Utama |
+| :--- | :---: | :--- |
+| 🎯 **Reasoning & Planning** | `N001` – `N064` | Executive Decisions, MCTS Planning, Graph-of-Thought (GoT) Swarm Consensus |
+| ⚡ **Systems & Low-Level** | `N009` – `N080` | Linux `io_uring`, Lock-Free SPSC, Zero-Copy DMA, SIMD/AVX-512, Rust 2024 |
+| 🌐 **Distributed Architecture** | `N021` – `N077` | Multi-Raft Range ACID, LSM Storage Compaction, CRDTs, 6-Phase DB Migration |
+| 🛡️ **Security & Cryptography** | `N012` – `N078` | NIST PQC (ML-KEM/ML-DSA), Firecracker MicroVM, Zero-Knowledge Proofs |
+| 📈 **Quantitative Trading HFT** | `N006` – `N074` | SMC/FVG Liquidity, L3 Order Book VPIN Toxicity, 2D Kalman Arbitrage |
+| 📊 **Frontier AI Benchmarks** | `N016` – `N082` | SWE-bench, NIAH 20k-2M Recall, World-Class DX & 12 SOTA Benchmarks |
+
+<details>
+<summary><b>🔍 Klik di sini untuk membuka Daftar Lengkap 82 Master Neurons Matrix</b></summary>
+
+<br>
 
 | Kategori | ID | Modul & Invarian Inti |
 | :--- | :---: | :--- |
@@ -87,6 +101,8 @@ Jaringan kognitif terdistribusi yang mencakup seluruh domain rekayasa perangkat 
 | **Frontier Benchmarks** | **N016** | Frontier Benchmark Evaluator & Real-Time Telemetry Harness |
 | | **N081** | World-Class Repository Architecture & Trunk-Based DX Engineering |
 | | **N082** | 2026 Next-Gen Frontier Benchmark Matrix (12 Parameter SOTA) |
+
+</details>
 
 ---
 
