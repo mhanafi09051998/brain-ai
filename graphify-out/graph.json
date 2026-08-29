@@ -290,19 +290,6 @@
       "source_location": "L746"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_generativeposter",
-      "label": "GenerativePoster",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 163,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": "generativeposter",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L625"
-    },
-    {
       "id": "scripts_strategic_swot_nucleus_engine_strategicswotnucleusengine",
       "label": "StrategicSWOTNucleusEngine",
       "_callable": true,
@@ -368,13 +355,26 @@
       "source_location": "L27"
     },
     {
+      "id": "scripts_graphic_design_visual_engine_generativeposter",
+      "label": "GenerativePoster",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": "generativeposter",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L625"
+    },
+    {
       "id": "scripts_graphic_design_visual_engine_palettegenerator",
       "label": "PaletteGenerator",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "code",
       "norm_label": "palettegenerator",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -1813,66 +1813,6 @@
       "norm_label": "updatenavbarauth()",
       "source_file": "goblix/public/app.js",
       "source_location": "L141"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_color_from_hex",
-      "label": ".from_hex()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 163,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": ".from_hex()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L44"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_generativeposter_build_svg",
-      "label": ".build_svg()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 163,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": ".build_svg()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L637"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_generativeposter_init",
-      "label": ".__init__()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 163,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": ".__init__()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L632"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_palettegenerator_triadic",
-      "label": ".triadic()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 163,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": ".triadic()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L301"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_run_self_tests",
-      "label": "run_self_tests()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 163,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": "run_self_tests()",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L744"
     },
     {
       "id": "scripts_strategic_swot_nucleus_engine_run_verification_tests",
@@ -4191,16 +4131,52 @@
       "source_location": "L237"
     },
     {
+      "id": "scripts_graphic_design_visual_engine_color_from_hex",
+      "label": ".from_hex()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": ".from_hex()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L44"
+    },
+    {
       "id": "scripts_graphic_design_visual_engine_color_from_hsl",
       "label": ".from_hsl()",
       "_callable": true,
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "code",
       "norm_label": ".from_hsl()",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L67"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_generativeposter_build_svg",
+      "label": ".build_svg()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": ".build_svg()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L637"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_generativeposter_init",
+      "label": ".__init__()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": ".__init__()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L632"
     },
     {
       "id": "scripts_graphic_design_visual_engine_palettegenerator_analogous",
@@ -4208,7 +4184,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "code",
       "norm_label": ".analogous()",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -4220,7 +4196,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "code",
       "norm_label": ".complementary()",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -4232,7 +4208,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "code",
       "norm_label": ".monochromatic()",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -4244,7 +4220,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "code",
       "norm_label": ".scale()",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -4256,7 +4232,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "code",
       "norm_label": ".split_complementary()",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -4268,11 +4244,35 @@
       "_callable": true,
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "code",
       "norm_label": ".tetradic()",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L321"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_palettegenerator_triadic",
+      "label": ".triadic()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": ".triadic()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L301"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_run_self_tests",
+      "label": "run_self_tests()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": "run_self_tests()",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L744"
     },
     {
       "id": "ponytail_hooks_ponytail_config_getdefaultmode",
@@ -9976,70 +9976,52 @@
       "source_location": "L1"
     },
     {
-      "id": "scripts_graphic_design_visual_engine",
-      "label": "graphic_design_visual_engine.py",
+      "id": "learning_neurons_n096_solana_dlmm_alpha_quantitative_y",
+      "label": "N096_solana_dlmm_alpha_quantitative_y.md",
       "_origin": "ast",
       "community": 163,
-      "community_name": "run_self_tests",
-      "file_type": "code",
-      "norm_label": "graphic_design_visual_engine.py",
-      "source_file": "scripts/graphic_design_visual_engine.py",
+      "community_name": "N096: Solana DLMM Alpha Quantitative Yield Maximizer",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "n096_solana_dlmm_alpha_quantitative_y.md",
+      "source_file": "learning/neurons/N096_solana_dlmm_alpha_quantitative_y.md",
       "source_location": "L1"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_rationale_302",
-      "label": "Generate triadic 3-color harmony (120\u00b0 offsets).",
+      "id": "learning_neurons_n096_solana_dlmm_alpha_quantitative_y_disiplin_eksekusi",
+      "label": "\ud83d\udd12 Disiplin Eksekusi",
       "_origin": "ast",
       "community": 163,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "generate triadic 3-color harmony (120\u00b0 offsets).",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L302"
+      "community_name": "N096: Solana DLMM Alpha Quantitative Yield Maximizer",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udd12 disiplin eksekusi",
+      "source_file": "learning/neurons/N096_solana_dlmm_alpha_quantitative_y.md",
+      "source_location": "L12"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_rationale_45",
-      "label": "Parse hex color (#RGB, #RGBA, #RRGGBB, #RRGGBBAA).",
+      "id": "learning_neurons_n096_solana_dlmm_alpha_quantitative_y_inti_pembelajaran_engineering_invariant",
+      "label": "\ud83c\udfaf Inti Pembelajaran (Engineering Invariant)",
       "_origin": "ast",
       "community": 163,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "parse hex color (#rgb, #rgba, #rrggbb, #rrggbbaa).",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L45"
+      "community_name": "N096: Solana DLMM Alpha Quantitative Yield Maximizer",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83c\udfaf inti pembelajaran (engineering invariant)",
+      "source_file": "learning/neurons/N096_solana_dlmm_alpha_quantitative_y.md",
+      "source_location": "L9"
     },
     {
-      "id": "scripts_graphic_design_visual_engine_rationale_626",
-      "label": "Algorithmic generative poster generator synthesizing: - Parametric Lissajous &\u2026",
+      "id": "learning_neurons_n096_solana_dlmm_alpha_quantitative_y_n096_solana_dlmm_alpha_quantitative_yield_maximizer",
+      "label": "N096: Solana DLMM Alpha Quantitative Yield Maximizer",
       "_origin": "ast",
       "community": 163,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "algorithmic generative poster generator synthesizing: - parametric lissajous &...",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L626"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_638",
-      "label": "Generate full SVG graphic poster with mathematical curves and layered depth.",
-      "_origin": "ast",
-      "community": 163,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "generate full svg graphic poster with mathematical curves and layered depth.",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L638"
-    },
-    {
-      "id": "scripts_graphic_design_visual_engine_rationale_745",
-      "label": "Execute 100% deterministic test suite covering color math, WCAG contrast,\u2026",
-      "_origin": "ast",
-      "community": 163,
-      "community_name": "run_self_tests",
-      "file_type": "rationale",
-      "norm_label": "execute 100% deterministic test suite covering color math, wcag contrast,...",
-      "source_file": "scripts/graphic_design_visual_engine.py",
-      "source_location": "L745"
+      "community_name": "N096: Solana DLMM Alpha Quantitative Yield Maximizer",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "n096: solana dlmm alpha quantitative yield maximizer",
+      "source_file": "learning/neurons/N096_solana_dlmm_alpha_quantitative_y.md",
+      "source_location": "L1"
     },
     {
       "id": "learning_neurons_n095_zolu_solana_vault_telegram_forma",
@@ -18637,7 +18619,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\udccb active tasks & history",
       "source_file": "memory.md",
-      "source_location": "L96"
+      "source_location": "L97"
     },
     {
       "id": "memory_claudia_neuron_memory_network",
@@ -18661,7 +18643,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\udccb prosedur pembaruan memori",
       "source_file": "memory.md",
-      "source_location": "L90"
+      "source_location": "L91"
     },
     {
       "id": "learning_neurons_n032_cloud_native_edge_infra",
@@ -18832,11 +18814,22 @@
       "source_location": "L75"
     },
     {
+      "id": "scripts_graphic_design_visual_engine",
+      "label": "graphic_design_visual_engine.py",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "code",
+      "norm_label": "graphic_design_visual_engine.py",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L1"
+    },
+    {
       "id": "scripts_graphic_design_visual_engine_rationale_272",
       "label": "Harmonious color palette generator supporting classical color wheel (HSL) and\u2026",
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "rationale",
       "norm_label": "harmonious color palette generator supporting classical color wheel (hsl) and...",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -18847,7 +18840,7 @@
       "label": "Generate a monochromatic ramp varying in Lightness.",
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "rationale",
       "norm_label": "generate a monochromatic ramp varying in lightness.",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -18858,7 +18851,7 @@
       "label": "Generate analogous colors clustered around base hue.",
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "rationale",
       "norm_label": "generate analogous colors clustered around base hue.",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -18869,18 +18862,29 @@
       "label": "Generate complementary color pair (180\u00b0 offset).",
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "rationale",
       "norm_label": "generate complementary color pair (180\u00b0 offset).",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L296"
     },
     {
+      "id": "scripts_graphic_design_visual_engine_rationale_302",
+      "label": "Generate triadic 3-color harmony (120\u00b0 offsets).",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "generate triadic 3-color harmony (120\u00b0 offsets).",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L302"
+    },
+    {
       "id": "scripts_graphic_design_visual_engine_rationale_312",
       "label": "Generate split-complementary harmony (base + 2 colors flanking complement).",
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "rationale",
       "norm_label": "generate split-complementary harmony (base + 2 colors flanking complement).",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -18891,7 +18895,7 @@
       "label": "Generate tetradic rectangular 4-color harmony.",
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "rationale",
       "norm_label": "generate tetradic rectangular 4-color harmony.",
       "source_file": "scripts/graphic_design_visual_engine.py",
@@ -18902,22 +18906,66 @@
       "label": "Generate multi-stop gradient scale interpolated in CIELAB space.",
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "rationale",
       "norm_label": "generate multi-stop gradient scale interpolated in cielab space.",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L333"
     },
     {
+      "id": "scripts_graphic_design_visual_engine_rationale_45",
+      "label": "Parse hex color (#RGB, #RGBA, #RRGGBB, #RRGGBBAA).",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "parse hex color (#rgb, #rgba, #rrggbb, #rrggbbaa).",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L45"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_626",
+      "label": "Algorithmic generative poster generator synthesizing: - Parametric Lissajous &\u2026",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "algorithmic generative poster generator synthesizing: - parametric lissajous &...",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L626"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_638",
+      "label": "Generate full SVG graphic poster with mathematical curves and layered depth.",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "generate full svg graphic poster with mathematical curves and layered depth.",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L638"
+    },
+    {
       "id": "scripts_graphic_design_visual_engine_rationale_68",
       "label": "Construct Color from HSL (H in [0, 360), S in [0, 1], L in [0, 1]).",
       "_origin": "ast",
       "community": 37,
-      "community_name": "PaletteGenerator",
+      "community_name": "run_self_tests",
       "file_type": "rationale",
       "norm_label": "construct color from hsl (h in [0, 360), s in [0, 1], l in [0, 1]).",
       "source_file": "scripts/graphic_design_visual_engine.py",
       "source_location": "L68"
+    },
+    {
+      "id": "scripts_graphic_design_visual_engine_rationale_745",
+      "label": "Execute 100% deterministic test suite covering color math, WCAG contrast,\u2026",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "run_self_tests",
+      "file_type": "rationale",
+      "norm_label": "execute 100% deterministic test suite covering color math, wcag contrast,...",
+      "source_file": "scripts/graphic_design_visual_engine.py",
+      "source_location": "L745"
     },
     {
       "id": "learning_neurons_n031_modern_data_storage_pgvector",
@@ -44219,6 +44267,39 @@
       "weight": 1.0
     },
     {
+      "source": "learning_neurons_n096_solana_dlmm_alpha_quantitative_y",
+      "target": "learning_neurons_n096_solana_dlmm_alpha_quantitative_y_n096_solana_dlmm_alpha_quantitative_yield_maximizer",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N096_solana_dlmm_alpha_quantitative_y.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n096_solana_dlmm_alpha_quantitative_y_n096_solana_dlmm_alpha_quantitative_yield_maximizer",
+      "target": "learning_neurons_n096_solana_dlmm_alpha_quantitative_y_disiplin_eksekusi",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N096_solana_dlmm_alpha_quantitative_y.md",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "learning_neurons_n096_solana_dlmm_alpha_quantitative_y_n096_solana_dlmm_alpha_quantitative_yield_maximizer",
+      "target": "learning_neurons_n096_solana_dlmm_alpha_quantitative_y_inti_pembelajaran_engineering_invariant",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "learning/neurons/N096_solana_dlmm_alpha_quantitative_y.md",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
       "source": "learning_playbooks_graphify_workflow",
       "target": "learning_playbooks_graphify_workflow_playbook_graphify_workflow",
       "relation": "contains",
@@ -44369,7 +44450,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "memory.md",
-      "source_location": "L90",
+      "source_location": "L91",
       "weight": 1.0
     },
     {
@@ -44380,7 +44461,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "memory.md",
-      "source_location": "L96",
+      "source_location": "L97",
       "weight": 1.0
     },
     {
@@ -52057,5 +52138,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "54717d3096c8a853256e5e2c0b7e24e923aa43fb"
+  "built_at_commit": "97a5d5d8f1b09ef1c63f690b7dd5b245b8e4b6be"
 }

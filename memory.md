@@ -5,6 +5,7 @@ Dokumen memori modular terdistribusi Claudia. Memori dipecah menjadi neuron-neur
 ---
 
 ## 🧠 Active Memory Neurons
+96. **[`N096_solana_dlmm_alpha_quantitative_y.md`](file:///D:/GEMINI-HANAFI/learning/neurons/N096_solana_dlmm_alpha_quantitative_y.md)** — **Solana DLMM Alpha Quantitative Yield Maximizer**: Implemented 3-tier quantitative yield enhancement: 1) Volatility-Adaptive Bin Co...
 95. **[`N095_zolu_solana_vault_telegram_forma.md`](file:///D:/GEMINI-HANAFI/learning/neurons/N095_zolu_solana_vault_telegram_forma.md)** — **Zolu Solana Vault Telegram Formatting & Accounting Engine**: All vault financial metrics across /saldo, /user, and /report must adhere to sin...
 94. **[`N094_headless_terminal_ebpf_debugging.md`](file:///D:/GEMINI-HANAFI/learning/neurons/N094_headless_terminal_ebpf_debugging.md)** — **Neuron N094: Headless Terminal eBPF & Concurrency Core-Dump Debugging**: Non-interactive headless CI/terminal execution, zero-overhead eBPF syscall probes, GDB batch core-dump deadlock backtracing.
 93. **[`N093_cross_domain_first_principles_deductive_synthesis.md`](file:///D:/GEMINI-HANAFI/learning/neurons/N093_cross_domain_first_principles_deductive_synthesis.md)** — **Neuron N093: Cross-Domain First-Principles Deductive Synthesis**: First-principles axiomatic proofs, Buckingham pi dimensional analysis, algebraic number theory parity, stochastic Bellman optimality.
