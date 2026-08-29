@@ -202,8 +202,8 @@ def run_claudia_bot():
                         continue
                     elif cmd == "/saldo":
                         rate = 16250
-                        initial_usd = 901
-                        initial_idr = initial_usd * rate
+                        initial_usd = 960
+                        initial_idr = 17000914
                         current_usd = 906
                         current_idr = current_usd * rate
                         profit_usd = 5
@@ -228,9 +228,9 @@ def run_claudia_bot():
                         sol_price = int(round(fetch_live_sol_price()))
                         rate = 16250
                         investors = [
-                            {"name": "Duri", "id": "INV-003", "invest_usd": 26, "invest_idr": 26 * rate, "sol": max(1, round(26 / sol_price)), "pnl_usd": 1, "pnl_idr": 1 * rate, "pct": 3},
-                            {"name": "Hanafi", "id": "INV-001", "invest_usd": 347, "invest_idr": 347 * rate, "sol": max(1, round(347 / sol_price)), "pnl_usd": 2, "pnl_idr": 2 * rate, "pct": 38},
-                            {"name": "Purwanto", "id": "INV-002", "invest_usd": 528, "invest_idr": 528 * rate, "sol": max(1, round(528 / sol_price)), "pnl_usd": 3, "pnl_idr": 3 * rate, "pct": 59},
+                            {"name": "Duri", "id": "INV-003", "invest_usd": 28, "invest_idr": 498379, "sol": max(1, round(28 / sol_price)), "pnl_usd": 1, "pnl_idr": 1 * rate, "pct": 3},
+                            {"name": "Hanafi", "id": "INV-001", "invest_usd": 369, "invest_idr": 6543986, "sol": max(1, round(369 / sol_price)), "pnl_usd": 2, "pnl_idr": 2 * rate, "pct": 38},
+                            {"name": "Purwanto", "id": "INV-002", "invest_usd": 562, "invest_idr": 9958549, "sol": max(1, round(562 / sol_price)), "pnl_usd": 3, "pnl_idr": 3 * rate, "pct": 59},
                         ]
                         user_msg = "<b>DATA INVESTOR & SHARING PnL</b>\n─────────────────────\n"
                         for i, inv in enumerate(investors, 1):
@@ -240,7 +240,7 @@ def run_claudia_bot():
                                         f"• Ekuivalen: {inv['sol']} SOL\n" \
                                         f"• PnL Didapat: +${inv['pnl_usd']} (Rp {inv['pnl_idr']:,})\n\n"
                         user_msg += "─────────────────────\n" \
-                                    f"*Total Gabungan: $901 (Rp {901*rate:,}) | PnL: +$5 (Rp {5*rate:,})\n\n" \
+                                    f"*Total Gabungan: $960 (Rp 17.000.914) | PnL: +$5 (Rp {5*rate:,})\n\n" \
                                     "<i>PnL didistribusikan ke setiap investor secara otomatis (proporsional) mengikuti rasio porsi modal masing-masing.</i>"
                         send_telegram_message(chat_id, user_msg.replace(",", "."))
                         continue
