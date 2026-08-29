@@ -238,7 +238,7 @@ def run_claudia_bot():
                                         f"• Ekuivalen   : {inv['sol']} SOL\n" \
                                         f"• PnL Didapat : 🟢 +${inv['pnl_usd']} (Rp {inv['pnl_idr']:,})\n\n"
                         user_msg += "─────────────────────\n" \
-                                    f"*Total Gabungan: $960 (Rp 17.000.914) | PnL: 🟢 +$5 (Rp {5*rate:,})\n\n" \
+                                    f"<b>Total Gabungan:</b> $960 (Rp 17.000.914) | <b>PnL:</b> 🟢 +$5 (Rp {5*rate:,})\n\n" \
                                     "<i>PnL didistribusikan secara otomatis mengikuti rasio porsi modal masing-masing.</i>"
                         send_telegram_message(chat_id, user_msg.replace(",", "."))
                         continue
