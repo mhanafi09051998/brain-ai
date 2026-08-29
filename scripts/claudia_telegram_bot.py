@@ -204,36 +204,35 @@ def run_claudia_bot():
                         continue
                     elif cmd == "/estimasi":
                         rate = 16250
+                        initial_usd = 960
+                        initial_idr = 17000914
                         current_usd = 906
                         current_idr = current_usd * rate
-                        est_msg = f"""📊 <b>ESTIMASI PROYEKSI BACKTEST</b>
-<code>Modal: ${current_usd} USD (Rp {current_idr:,})</code>
-───────────────
-
-<b>TABEL ESTIMASI IMBAL HASIL</b>
-<pre>
-PASAR   HARIAN   BULANAN   EST APY
-Sepi    +$4 (0.4%) +$120   ~150% 🟢
-Sedang  +$7 (0.8%) +$210   ~260% 🟢
-Ramai   +$15 (1.6%)+$450   ~540% 🟢
-</pre>
-
-<b>PROYEKSI RUPIAH (IDR):</b>
-• <b>Pasar Sepi (Sideways):</b>
-  ~Rp {4*rate:,} / hr (Rp {120*rate:,} / bln)
-• <b>Pasar Sedang (Normal):</b>
-  ~Rp {7*rate:,} / hr (Rp {210*rate:,} / bln)
-• <b>Pasar Ramai (Bull/Volatile):</b>
-  ~Rp {15*rate:,} / hr (Rp {450*rate:,} / bln)
-
-───────────────
-<b>KETERANGAN SKENARIO</b>
-• <b>Sepi</b>: Volatilitas rendah, kerapatan likuiditas maksimal (3.5x).
-• <b>Sedang</b>: Aktivitas transaksi stabil di DEX Solana.
-• <b>Ramai</b>: Volume swap melonjak & sering terjadi arb rebalance.
-
-───────────────
-<i>*Hasil berbasis data backtest historis DLMM & auto-compounding.</i>""".replace(",", ".")
+                        est_msg = f"""📊 <b>ESTIMASI PROYEKSI BACKTEST</b>\n───────────────\n""" \
+                                  f"""• <b>Modal Awal (Setoran)</b>: ${initial_usd} (Rp {initial_idr:,})\n""" \
+                                  f"""• <b>Modal Diposisikan</b>   : ${current_usd} (Rp {current_idr:,})\n""" \
+                                  f"""───────────────\n\n""" \
+                                  f"""<b>TABEL ESTIMASI IMBAL HASIL</b>\n""" \
+                                  f"""<pre>\n""" \
+                                  f"""PASAR   HARIAN   BULANAN   EST APY\n""" \
+                                  f"""Sepi    +$4 (0.4%) +$120   ~150% 🟢\n""" \
+                                  f"""Sedang  +$7 (0.8%) +$210   ~260% 🟢\n""" \
+                                  f"""Ramai   +$15 (1.6%)+$450   ~540% 🟢\n""" \
+                                  f"""</pre>\n\n""" \
+                                  f"""<b>PROYEKSI RUPIAH (IDR):</b>\n""" \
+                                  f"""• <b>Pasar Sepi (Sideways):</b>\n""" \
+                                  f"""  ~Rp {4*rate:,} / hr (Rp {120*rate:,} / bln)\n""" \
+                                  f"""• <b>Pasar Sedang (Normal):</b>\n""" \
+                                  f"""  ~Rp {7*rate:,} / hr (Rp {210*rate:,} / bln)\n""" \
+                                  f"""• <b>Pasar Ramai (Bull/Volatile):</b>\n""" \
+                                  f"""  ~Rp {15*rate:,} / hr (Rp {450*rate:,} / bln)\n\n""" \
+                                  f"""───────────────\n""" \
+                                  f"""<b>KETERANGAN SKENARIO</b>\n""" \
+                                  f"""• <b>Sepi</b>: Volatilitas rendah, kerapatan likuiditas maksimal (3.5x).\n""" \
+                                  f"""• <b>Sedang</b>: Aktivitas transaksi stabil di DEX Solana.\n""" \
+                                  f"""• <b>Ramai</b>: Volume swap melonjak & sering terjadi arb rebalance.\n\n""" \
+                                  f"""───────────────\n""" \
+                                  f"""<i>*Hasil dihitung dari Modal Diposisikan (${current_usd}) & auto-compound.</i>""".replace(",", ".")
                         send_telegram_message(chat_id, est_msg)
                         continue
                     elif cmd in ["/diversifikasi", "/disverifikasi"]:
