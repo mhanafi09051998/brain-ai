@@ -201,52 +201,46 @@ def run_claudia_bot():
 <i>Gahar Inovasi Teknologi</i>""")
                         continue
                     elif cmd == "/saldo":
-                        rate = 17717.16
-                        initial_usd = 931.53
+                        rate = 16250
+                        initial_usd = 901.47
                         initial_idr = initial_usd * rate
-                        current_usd = 901.31
+                        current_usd = 906.12
                         current_idr = current_usd * rate
-                        profit_usd = 1.5155
+                        profit_usd = 4.6522
                         profit_idr = profit_usd * rate
-                        gas_sol = 4.4982
+                        gas_sol = 4.5415
                         saldo_msg = f"""<b>RINGKASAN SALDO VAULT</b>\n─────────────────────\n""" \
                                     f"""<b>Modal Awal (Initial Deposit):</b>\n""" \
                                     f"""${initial_usd:.2f} USD\n""" \
-                                    f"""(≈ Rp {initial_idr:,.3f})\n\n""" \
+                                    f"""(≈ Rp {int(round(initial_idr)):,})\n\n""" \
                                     f"""<b>Modal Pokok Aktif (Current Equity):</b>\n""" \
                                     f"""${current_usd:.2f} USD\n""" \
-                                    f"""(≈ Rp {current_idr:,.2f})\n\n""" \
+                                    f"""(≈ Rp {int(round(current_idr)):,})\n\n""" \
                                     f"""<b>Total Keuntungan Bersih (100% Milik Anda):</b>\n""" \
                                     f"""<b>+${profit_usd:.4f} USD</b>\n""" \
-                                    f"""(≈ <b>Rp {profit_idr:,.2f}</b>)\n\n""" \
+                                    f"""(≈ <b>Rp {int(round(profit_idr)):,}</b>)\n\n""" \
                                     f"""<b>Cadangan Gas Fee:</b> {gas_sol:.4f} SOL\n""" \
                                     f"""─────────────────────"""
-                        # Convert to Indonesian number format (, -> . and . -> ,)
-                        parts = saldo_msg.split("(≈ Rp ")
-                        formatted_parts = [parts[0]]
-                        for p in parts[1:]:
-                            rp_val, rest = p.split(")", 1)
-                            formatted_val = rp_val.replace(",", "X").replace(".", ",").replace("X", ".")
-                            formatted_parts.append(formatted_val + ")" + rest)
-                        send_telegram_message(chat_id, "".join(formatted_parts))
+                        send_telegram_message(chat_id, saldo_msg.replace(",", "."))
                         continue
                     elif cmd == "/user":
                         sol_price = fetch_live_sol_price()
-                        # Multi-investor breakdown
+                        rate = 16250
+                        # Multi-investor breakdown matching real pool initial $901.47 USD
                         investors = [
-                            {"name": "Duri", "id": "INV-003", "invest_usd": 28.13, "invest_idr": 498379, "sol": 0.2664, "pnl_usd": 0.0586, "pnl_idr": 1038, "pct": 2.93},
-                            {"name": "Hanafi", "id": "INV-001", "invest_usd": 369.36, "invest_idr": 6543986, "sol": 3.4977, "pnl_usd": 0.7695, "pnl_idr": 13632, "pct": 38.49},
-                            {"name": "Purwanto", "id": "INV-002", "invest_usd": 562.09, "invest_idr": 9958549, "sol": 5.3228, "pnl_usd": 1.1709, "pnl_idr": 20746, "pct": 58.58},
+                            {"name": "Duri", "id": "INV-003", "invest_usd": 26.41, "invest_idr": int(round(26.41 * rate)), "sol": 26.41 / sol_price, "pnl_usd": 4.6522 * 0.0293, "pnl_idr": int(round(4.6522 * 0.0293 * rate)), "pct": 2.93},
+                            {"name": "Hanafi", "id": "INV-001", "invest_usd": 346.98, "invest_idr": int(round(346.98 * rate)), "sol": 346.98 / sol_price, "pnl_usd": 4.6522 * 0.3849, "pnl_idr": int(round(4.6522 * 0.3849 * rate)), "pct": 38.49},
+                            {"name": "Purwanto", "id": "INV-002", "invest_usd": 528.08, "invest_idr": int(round(528.08 * rate)), "sol": 528.08 / sol_price, "pnl_usd": 4.6522 * 0.5858, "pnl_idr": int(round(4.6522 * 0.5858 * rate)), "pct": 58.58},
                         ]
                         user_msg = "<b>DATA INVESTOR & SHARING PnL</b>\n─────────────────────\n"
                         for i, inv in enumerate(investors, 1):
                             user_msg += f"<b>{i}. {inv['name']} (ID: {inv['id']})</b>\n" \
                                         f"• Porsi Modal: {inv['pct']:.2f}%\n" \
-                                        f"• Investasi: {inv['invest_usd']:.2f} (≈ Rp {inv['invest_idr']:,})\n" \
+                                        f"• Investasi: ${inv['invest_usd']:.2f} (≈ Rp {inv['invest_idr']:,})\n" \
                                         f"• Ekuivalen: {inv['sol']:.4f} SOL\n" \
-                                        f"• PnL Didapat: +{inv['pnl_usd']:.4f} (≈ Rp {inv['pnl_idr']:,})\n\n"
+                                        f"• PnL Didapat: +${inv['pnl_usd']:.4f} (≈ Rp {inv['pnl_idr']:,})\n\n"
                         user_msg += "─────────────────────\n" \
-                                    "*Total Gabungan: 959.58 (≈ Rp 17.000.914) | PnL: +1.9990 (≈ Rp 35.416)\n\n" \
+                                    f"*Total Gabungan: $901.47 (≈ Rp {int(round(901.47*rate)):,}) | PnL: +$4.6522 (≈ Rp {int(round(4.6522*rate)):,})\n\n" \
                                     "<i>PnL didistribusikan ke setiap investor secara otomatis (proporsional) mengikuti rasio porsi modal masing-masing.</i>"
                         send_telegram_message(chat_id, user_msg.replace(",", "."))
                         continue
