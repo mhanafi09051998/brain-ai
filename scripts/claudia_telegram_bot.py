@@ -136,12 +136,40 @@ def run_claudia_bot():
                         send_telegram_message(chat_id, "🔒 *Akses Dibatasi*\n\nClaudia Ultra berada dalam mode privat khusus Administrator.")
                         continue
 
-                    if text == "/start":
-                        send_telegram_message(chat_id, "⚡ *Halo!*\n\nClaudia Ultra Quantum Apex siap mendampingi rekayasa perangkat lunak & operasi server.")
+                    if text in ["/start", "/help"]:
+                        send_telegram_message(chat_id, """<b>CLAUDIA ULTRA — CONTROL TERMINAL</b>
+<code>Engine Version : 2.4.0-Production</code>
+<code>Access Level   : Administrator Privileged</code>
+──────────────────────────
+
+<b>AVAILABLE COMMANDS</b>
+• <code>/status</code>  : Telemetry status sistem, uptime server, dan engine radar.
+• <code>/vault</code>   : Neraca saldo AUM, alokasi aset, dan open exposure.
+• <code>/pnl</code>     : Ringkasan profit harian, mingguan, dan rekap win rate.
+• <code>/user</code>    : Informasi profil pengguna, peran, dan hak akses terminal.
+• <code>/report</code>  : Generate instant hourly investor report snapshot.
+
+──────────────────────────
+<i>Gahar Inovasi Teknologi • Quantitative Engineering</i>""", parse_mode="HTML")
                         continue
-                    elif text == "/reset":
-                        user_sessions[user_id] = []
-                        send_telegram_message(chat_id, "🧹 *Sesi Memori Percakapan Direset.*")
+                    elif text == "/user":
+                        send_telegram_message(chat_id, f"""<b>USER PROFILE & ACCESS CONTROL</b>
+<code>Updated : {time.strftime('%d %b %Y, %H:%M WIB')}</code>
+──────────────────────────
+
+<b>USER IDENTIFIER</b>
+• Telegram ID  : <code>{user_id}</code>
+• Identity     : <code>Muhammad Hanafi (SuperAdmin)</code>
+• Organization : <code>Gahar Inovasi Teknologi</code>
+
+<b>PRIVILEGES & POLICY</b>
+• Role Level   : <code>TIER-0 (Full Sovereign Access)</code>
+• Execution    : <code>Unrestricted (All Slash Commands)</code>
+• Vault Access : <code>Read / Write / Rebalance</code>
+• Audit Status : <code>Zero-Trust Cryptographic Verified</code>
+
+──────────────────────────
+<i>Claudia Ultra Engine • Security Governance</i>""", parse_mode="HTML")
                         continue
 
                     send_chat_action(chat_id, "typing")

@@ -95,7 +95,6 @@ def get_help_slash_msg():
 • <code>/pnl</code>     : Ringkasan profit harian, mingguan, dan rekap win rate.
 • <code>/user</code>    : Informasi profil pengguna, peran, dan hak akses terminal.
 • <code>/report</code>  : Generate instant hourly investor report snapshot.
-• <code>/reset</code>   : Reset sesi percakapan memori asisten AI.
 
 ──────────────────────────
 <i>Gahar Inovasi Teknologi • Quantitative Engineering</i>"""
