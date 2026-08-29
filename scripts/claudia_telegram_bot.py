@@ -250,27 +250,24 @@ def run_claudia_bot():
 <i>Claudia Ultra Telemetry</i>""".replace(",", "."))
                         continue
                     elif cmd == "/user":
-                        rate = 16250
-                        dep_usd = 10000
-                        pnl_usd = 160
-                        send_telegram_message(chat_id, f"""<b>VAULT — INVESTOR INFO</b>
-<code>Updated : {time.strftime('%d %b, %H:%M WIB')}</code>
-─────────────────────
-
-<b>PROFIL INVESTOR</b>
-• ID   : <code>{user_id}</code>
-• Nama : <code>{user_name}</code>
-• Akun : <code>Tier-1 Investor</code>
-
-<b>PORSI & ALOKASI</b>
-• Porsi Modal : <code>100%</code>
-• Deposit     : <code>${dep_usd:,} (Rp {dep_usd*rate:,})</code>
-• Skema       : <code>Pro-Rata Modal</code>
-• Total Yield : <code>+${pnl_usd:,} (Rp {pnl_usd*rate:,})</code>
-• Penarikan   : <code>Instant On-Chain</code>
-
-─────────────────────
-<i>Claudia Ultra Governance</i>""".replace(",", "."))
+                        sol_price = fetch_live_sol_price()
+                        # Multi-investor breakdown
+                        investors = [
+                            {"name": "Duri", "id": "INV-003", "invest_usd": 28.13, "invest_idr": 498379, "sol": 0.2664, "pnl_usd": 0.0586, "pnl_idr": 1038, "pct": 2.93},
+                            {"name": "Hanafi", "id": "INV-001", "invest_usd": 369.36, "invest_idr": 6543986, "sol": 3.4977, "pnl_usd": 0.7695, "pnl_idr": 13632, "pct": 38.49},
+                            {"name": "Purwanto", "id": "INV-002", "invest_usd": 562.09, "invest_idr": 9958549, "sol": 5.3228, "pnl_usd": 1.1709, "pnl_idr": 20746, "pct": 58.58},
+                        ]
+                        user_msg = "👥 <b>DATA INVESTOR & SHARING PnL</b>\n━━━━━━━━━━━━━━━━━━━━\n"
+                        for i, inv in enumerate(investors, 1):
+                            user_msg += f"<b>{i}. {inv['name']} (ID: {inv['id']})</b>\n" \
+                                        f"• Porsi Modal: {inv['pct']:.2f}%\n" \
+                                        f"• Investasi: {inv['invest_usd']:.2f} (≈ Rp {inv['invest_idr']:,})\n" \
+                                        f"• Ekuivalen: {inv['sol']:.4f} SOL\n" \
+                                        f"• PnL Didapat: +{inv['pnl_usd']:.4f} (≈ Rp {inv['pnl_idr']:,})\n\n"
+                        user_msg += "━━━━━━━━━━━━━━━━━━━━\n" \
+                                    "*Total Gabungan: 959.58 (≈ Rp 17.000.914) | PnL: +1.9990 (≈ Rp 35.416)\n\n" \
+                                    "💡 <i>PnL didistribusikan ke setiap investor secara otomatis (proporsional) mengikuti rasio porsi modal masing-masing.</i>"
+                        send_telegram_message(chat_id, user_msg.replace(",", "."))
                         continue
                     elif cmd == "/report":
                         sol_price = int(round(fetch_live_sol_price()))
