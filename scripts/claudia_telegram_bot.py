@@ -137,40 +137,75 @@ def run_claudia_bot():
                         continue
 
                     if text in ["/start", "/help"]:
-                        send_telegram_message(chat_id, """<b>CLAUDIA ULTRA — CONTROL TERMINAL</b>
-<code>Engine Version : 2.4.0-Production</code>
-<code>Access Level   : Administrator Privileged</code>
+                        send_telegram_message(chat_id, """<b>ZOLU ASSET VAULT — CONTROL TERMINAL</b>
+<code>Engine : Claudia Ultra Quantitative Router</code>
 ──────────────────────────
 
-<b>AVAILABLE COMMANDS</b>
-• <code>/status</code>  : Telemetry status sistem, uptime server, dan engine radar.
-• <code>/vault</code>   : Neraca saldo AUM, alokasi aset, dan open exposure.
-• <code>/pnl</code>     : Ringkasan profit harian, mingguan, dan rekap win rate.
-• <code>/user</code>    : Informasi profil pengguna, peran, dan hak akses terminal.
-• <code>/report</code>  : Generate instant hourly investor report snapshot.
-• <code>/help</code>    : Menampilkan panduan dan daftar perintah terminal.
+<b>DAFTAR PERINTAH</b>
+• <code>/saldo</code>  : Lihat ringkasan saldo modal dan keuntungan.
+• <code>/status</code> : Lihat status engine dan rentang harga aktif.
+• <code>/user</code>   : Lihat sharing porsi modal & profit investor.
+• <code>/report</code> : Laporan berkala kinerja likuiditas per jam.
+• <code>/help</code>   : Menampilkan daftar panduan perintah terminal.
 
 ──────────────────────────
-<i>Gahar Inovasi Teknologi • Quantitative Engineering</i>""", parse_mode="HTML")
+<i>Gahar Inovasi Teknologi • Quantitative Asset Management</i>""", parse_mode="HTML")
                         continue
-                    elif text == "/user":
-                        send_telegram_message(chat_id, f"""<b>USER PROFILE & ACCESS CONTROL</b>
+                    elif text == "/saldo":
+                        send_telegram_message(chat_id, f"""<b>ZOLU ASSET VAULT — SALDO & KEUNTUNGAN</b>
 <code>Updated : {time.strftime('%d %b %Y, %H:%M WIB')}</code>
 ──────────────────────────
 
-<b>USER IDENTIFIER</b>
-• Telegram ID  : <code>{user_id}</code>
-• Identity     : <code>Muhammad Hanafi (SuperAdmin)</code>
-• Organization : <code>Gahar Inovasi Teknologi</code>
+<b>RINGKASAN MODAL (AUM)</b>
+• Modal Awal    : <code>$10,000.00</code>
+• Nilai Vault   : <code>$10,160.68</code> (~67.62 SOL)
+• Total Profit  : <code>+$160.68 (+1.61%)</code>
 
-<b>PRIVILEGES & POLICY</b>
-• Role Level   : <code>TIER-0 (Full Sovereign Access)</code>
-• Execution    : <code>Unrestricted (All Slash Commands)</code>
-• Vault Access : <code>Read / Write / Rebalance</code>
-• Audit Status : <code>Zero-Trust Cryptographic Verified</code>
+<b>DISTRIBUSI ASET</b>
+• USDC (Cash)   : <code>$8,500.00 (83.66%)</code>
+• SOL (Asset)   : <code>11.05 SOL (~$1,660.68)</code>
+• Open Exposure : <code>0.00% (Cash Settled)</code>
 
 ──────────────────────────
-<i>Claudia Ultra Engine • Security Governance</i>""", parse_mode="HTML")
+<i>Claudia Ultra Engine • Transparency Verified</i>""", parse_mode="HTML")
+                        continue
+                    elif text == "/status":
+                        send_telegram_message(chat_id, f"""<b>ZOLU ASSET VAULT — STATUS ENGINE & HARGA</b>
+<code>Updated : {time.strftime('%d %b %Y, %H:%M WIB')}</code>
+──────────────────────────
+
+<b>STATUS OPERASIONAL</b>
+• Engine State   : <code>ONLINE (Radar Active)</code>
+• Target Pair    : <code>SOL/USDC (15m Timeframe)</code>
+• Live Index     : <code>SOL/USD $150.25</code>
+
+<b>RENTANG HARGA AKTIF</b>
+• Support / FVG  : <code>$149.20 - $149.80</code>
+• Resistance     : <code>$151.80 - $152.40</code>
+• Trend Baseline : <code>Bullish (EMA20 > EMA50)</code>
+• Risk Lock      : <code>Max 1.5% Risk per Entry</code>
+
+──────────────────────────
+<i>Claudia Ultra Engine • Live Telemetry</i>""", parse_mode="HTML")
+                        continue
+                    elif text == "/user":
+                        send_telegram_message(chat_id, f"""<b>ZOLU ASSET VAULT — INVESTOR SHARING</b>
+<code>Updated : {time.strftime('%d %b %Y, %H:%M WIB')}</code>
+──────────────────────────
+
+<b>PROFIL INVESTOR</b>
+• Telegram ID   : <code>{user_id}</code>
+• Investor Name : <code>Muhammad Hanafi</code>
+• Status Akun   : <code>Verified Tier-1 Investor</code>
+
+<b>PORSI MODAL & PROFIT SHARING</b>
+• Porsi Modal   : <code>100.00% ($10,000.00 Deposit)</code>
+• Profit Sharing: <code>80% Investor / 20% Engine Performance</code>
+• Akumulasi PnL : <code>+$160.68 Net Yield</code>
+• Hak Penarikan : <code>Instant Withdrawal On-Chain</code>
+
+──────────────────────────
+<i>Claudia Ultra Engine • Investor Governance</i>""", parse_mode="HTML")
                         continue
 
                     send_chat_action(chat_id, "typing")

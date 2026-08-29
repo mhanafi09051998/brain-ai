@@ -84,57 +84,81 @@ def get_closed_position_msg(pair="SOL/USDC", direction="LONG", entry_price=149.8
 <i>Claudia Ultra Engine • Automated Trade Dispatch</i>"""
 
 def get_help_slash_msg():
-    return """<b>CLAUDIA ULTRA — CONTROL TERMINAL</b>
-<code>Engine Version : 2.4.0-Production</code>
-<code>Access Level   : Administrator Privileged</code>
+    return """<b>ZOLU ASSET VAULT — CONTROL TERMINAL</b>
+<code>Engine : Claudia Ultra Quantitative Router</code>
 ──────────────────────────
 
-<b>AVAILABLE COMMANDS</b>
-• <code>/status</code>  : Telemetry status sistem, uptime server, dan engine radar.
-• <code>/vault</code>   : Neraca saldo AUM, alokasi aset, dan open exposure.
-• <code>/pnl</code>     : Ringkasan profit harian, mingguan, dan rekap win rate.
-• <code>/user</code>    : Informasi profil pengguna, peran, dan hak akses terminal.
-• <code>/report</code>  : Generate instant hourly investor report snapshot.
-• <code>/help</code>    : Menampilkan panduan dan daftar perintah terminal.
+<b>DAFTAR PERINTAH</b>
+• <code>/saldo</code>  : Lihat ringkasan saldo modal dan keuntungan.
+• <code>/status</code> : Lihat status engine dan rentang harga aktif.
+• <code>/user</code>   : Lihat sharing porsi modal & profit investor.
+• <code>/report</code> : Laporan berkala kinerja likuiditas per jam.
+• <code>/help</code>   : Menampilkan daftar panduan perintah terminal.
 
 ──────────────────────────
-<i>Gahar Inovasi Teknologi • Quantitative Engineering</i>"""
+<i>Gahar Inovasi Teknologi • Quantitative Asset Management</i>"""
 
-def get_user_slash_msg(user_id=***CHAT_ID_REMOVED***):
+def get_saldo_slash_msg(vault_aum_usd=10160.68, initial_deposit=10000.00, realized_pnl=160.68, sol_price=150.25):
     now_str = datetime.now(timezone(timedelta(hours=7))).strftime("%d %b %Y, %H:%M WIB")
-    return f"""<b>USER PROFILE & ACCESS CONTROL</b>
+    vault_sol = vault_aum_usd / sol_price
+    pnl_pct = (realized_pnl / initial_deposit) * 100
+    
+    return f"""<b>ZOLU ASSET VAULT — SALDO & KEUNTUNGAN</b>
 <code>Updated : {now_str}</code>
 ──────────────────────────
 
-<b>USER IDENTIFIER</b>
-• Telegram ID  : <code>{user_id}</code>
-• Identity     : <code>Muhammad Hanafi (SuperAdmin)</code>
-• Organization : <code>Gahar Inovasi Teknologi</code>
+<b>RINGKASAN MODAL (AUM)</b>
+• Modal Awal    : <code>${initial_deposit:,.2f}</code>
+• Nilai Vault   : <code>${vault_aum_usd:,.2f}</code> (~{vault_sol:.2f} SOL)
+• Total Profit  : <code>+${realized_pnl:,.2f} (+{pnl_pct:.2f}%)</code>
 
-<b>PRIVILEGES & POLICY</b>
-• Role Level   : <code>TIER-0 (Full Sovereign Access)</code>
-• Execution    : <code>Unrestricted (All Slash Commands)</code>
-• Vault Access : <code>Read / Write / Rebalance</code>
-• Audit Status : <code>Zero-Trust Cryptographic Verified</code>
+<b>DISTRIBUSI ASET</b>
+• USDC (Cash)   : <code>$8,500.00 (83.66%)</code>
+• SOL (Asset)   : <code>11.05 SOL (~$1,660.68)</code>
+• Open Exposure : <code>0.00% (Cash Settled)</code>
 
 ──────────────────────────
-<i>Claudia Ultra Engine • Security Governance</i>"""
+<i>Claudia Ultra Engine • Transparency Verified</i>"""
 
-def get_status_slash_msg():
+def get_user_slash_msg(user_id=***CHAT_ID_REMOVED***, deposit_usd=10000.00, net_yield_usd=160.68):
     now_str = datetime.now(timezone(timedelta(hours=7))).strftime("%d %b %Y, %H:%M WIB")
-    return f"""<b>SYSTEM TELEMETRY — STATUS</b>
+    return f"""<b>ZOLU ASSET VAULT — INVESTOR SHARING</b>
 <code>Updated : {now_str}</code>
 ──────────────────────────
 
-<b>ENGINE METRICS</b>
-• Radar State     : <code>ONLINE (Scanning 15m Klines)</code>
-• Memory Network  : <code>94 Master Neurons Active</code>
-• Execution Mode  : <code>Institutional Strict Risk (Max 1.5%)</code>
-• Router Latency  : <code>42ms (9Router Gateway)</code>
-• Active Position : <code>None (0.00% Exposure)</code>
+<b>PROFIL INVESTOR</b>
+• Telegram ID   : <code>{user_id}</code>
+• Investor Name : <code>Muhammad Hanafi</code>
+• Status Akun   : <code>Verified Tier-1 Investor</code>
+
+<b>PORSI MODAL & PROFIT SHARING</b>
+• Porsi Modal   : <code>100.00% (${deposit_usd:,.2f} Deposit)</code>
+• Profit Sharing: <code>80% Investor / 20% Engine Performance</code>
+• Akumulasi PnL : <code>+${net_yield_usd:,.2f} Net Yield</code>
+• Hak Penarikan : <code>Instant Withdrawal On-Chain</code>
 
 ──────────────────────────
-<i>Claudia Ultra Engine • Gahar Inovasi Teknologi</i>"""
+<i>Claudia Ultra Engine • Investor Governance</i>"""
+
+def get_status_slash_msg(sol_price=150.25):
+    now_str = datetime.now(timezone(timedelta(hours=7))).strftime("%d %b %Y, %H:%M WIB")
+    return f"""<b>ZOLU ASSET VAULT — STATUS ENGINE & HARGA</b>
+<code>Updated : {now_str}</code>
+──────────────────────────
+
+<b>STATUS OPERASIONAL</b>
+• Engine State   : <code>ONLINE (Radar Active)</code>
+• Target Pair    : <code>SOL/USDC (15m Timeframe)</code>
+• Live Index     : <code>SOL/USD ${sol_price:,.2f}</code>
+
+<b>RENTANG HARGA AKTIF</b>
+• Support / FVG  : <code>$149.20 - $149.80</code>
+• Resistance     : <code>$151.80 - $152.40</code>
+• Trend Baseline : <code>Bullish (EMA20 > EMA50)</code>
+• Risk Lock      : <code>Max 1.5% Risk per Entry</code>
+
+──────────────────────────
+<i>Claudia Ultra Engine • Live Telemetry</i>"""
 
 def send_msg(text):
     if not BOT_TOKEN:
@@ -167,6 +191,12 @@ if __name__ == "__main__":
     if action in ["help", "all"]:
         print("--- SENDING SLASH COMMAND HELP ---")
         send_msg(get_help_slash_msg())
+    if action in ["saldo", "all"]:
+        print("--- SENDING SLASH COMMAND SALDO ---")
+        send_msg(get_saldo_slash_msg())
+    if action in ["status", "all"]:
+        print("--- SENDING SLASH COMMAND STATUS ---")
+        send_msg(get_status_slash_msg())
     if action in ["user", "all"]:
         print("--- SENDING SLASH COMMAND USER ---")
         send_msg(get_user_slash_msg())
