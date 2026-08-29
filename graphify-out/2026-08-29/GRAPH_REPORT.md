@@ -1,22 +1,22 @@
 # Graph Report - GEMINI-HANAFI  (2026-08-29)
 
 ## Corpus Check
-- 285 files · ~400,483 words
+- 285 files · ~401,339 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2000 nodes · 2332 edges · 235 communities (203 shown, 32 thin omitted)
+- 2008 nodes · 2340 edges · 231 communities (197 shown, 34 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 38 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `94782bb3`
+- Built from commit: `993492bc`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - run_deterministic_tests
-- README.es.md
+- Install
 - Neuron N020: Autonomous Cross-Session Memory & Resilient Checkpoint Continuity
 - CubicBezier
 - ponytail/package.json
@@ -52,7 +52,7 @@
 - Color
 - Ponytail, lazy senior dev mode
 - 🎯 5 Pilar & Invarian Operasional Edge & Containerization
-- PaletteGenerator
+- run_self_tests
 - Neuron N031: Modern Data Architecture & Hybrid Search (PostgreSQL 17, pgvector HNSW, Drizzle ORM, SQLite WAL)
 - ponytail.mjs
 - official_runner_real.py
@@ -70,7 +70,7 @@
 - 🎯 5 Invarian Utama Autonomous Red Team & Automated CVE Patching
 - Ponytail
 - Ponytail Help
-- Core Engines & Workflows
+- Identity: Claudia (Hard-Locked & Immutable)
 - Ponytail Help
 - ⚡ CLAUDIA ULTRA (2026 World Frontier Edition)
 - test_brain.py
@@ -128,13 +128,14 @@
 - user_profile.md
 - vps_infrastructure.md
 - ponytail-statusline.sh script
-- run_self_tests
+- .process_tiled_convolution
 - fix_jellyfin_db.py
+- copilot-instructions.md
 - ImageMatrix
 - ConvolutionKernelEngine
+- ColorSpaceMath
 - run_tests
-- image_vision_nucleus_engine.py
-- .letterbox_aspect_preserver
+- Any
 - RasterToVectorTracer
 - GenerativeGraphExecutor
 - server.js
@@ -194,10 +195,6 @@
 - N080: Meta-Compiler Tiered JIT, Polyhedral Loop Transformations & SIMD Coalescing
 - 🎯 Inti Pembelajaran (Engineering Invariant)
 - 🎯 Inti Pembelajaran (12 Parameter Evaluasi Model AI Generasi Baru)
-- ponytail/README.md
-- Install
-- Instalación
-- README.ko.md
 
 ## God Nodes (most connected - your core abstractions)
 1. `Vec2D` - 25 edges
@@ -226,15 +223,15 @@
 ## Import Cycles
 - None detected.
 
-## Communities (235 total, 32 thin omitted)
+## Communities (231 total, 34 thin omitted)
 
 ### Community 0 - "run_deterministic_tests"
 Cohesion: 0.06
 Nodes (32): ArchitectureDecisionRecordManager, C4Element, C4ModelGenerator, C4Relation, CapacityInput, CapacityOutput, ConsistentHashRing, OpenAPIContractValidator (+24 more)
 
-### Community 1 - "README.es.md"
-Cohesion: 0.17
-Nodes (10): Ponytail, lazy senior dev mode, Antes / después, Comandos, Cómo funciona, Desarrollo, FAQ, Historial de estrellas, Licencia (+2 more)
+### Community 1 - "Install"
+Cohesion: 0.04
+Nodes (42): Ponytail, lazy senior dev mode, Antes / después, Antigravity CLI, Claude Code, CodeWhale, Codex, Comandos, Cómo funciona (+34 more)
 
 ### Community 2 - "Neuron N020: Autonomous Cross-Session Memory & Resilient Checkpoint Continuity"
 Cohesion: 0.25
@@ -249,8 +246,8 @@ Cohesion: 0.05
 Nodes (40): author, name, url, bugs, url, description, exports, ./plugin (+32 more)
 
 ### Community 5 - "Install"
-Cohesion: 0.13
-Nodes (15): Antigravity CLI, Claude Code, CodeWhale, Codex, Devin CLI, Gemini CLI, GitHub Copilot CLI, Hermes Agent (+7 more)
+Cohesion: 0.07
+Nodes (25): Ponytail, lazy senior dev mode, Antigravity CLI, Before / after, Claude Code, CodeWhale, Codex, Commands, Development (+17 more)
 
 ### Community 6 - "MultiHopEngine"
 Cohesion: 0.10
@@ -379,16 +376,16 @@ Cohesion: 0.10
 Nodes (12): Color, Construct Color from CIELCh (Cylindrical CIELAB)., Return uppercase hex string., Convert sRGB to HSL (H in [0, 360), S in [0, 1], L in [0, 1])., Convert sRGB to CIELAB (L*, a*, b*)., Convert sRGB to CIELCh (L*, C*, h_deg)., Calculate relative luminance according to WCAG 2.1/2.2 standard. Y = 0.2126 *…, Calculate WCAG contrast ratio between this color and another color. Formula:… (+4 more)
 
 ### Community 35 - "Ponytail, lazy senior dev mode"
-Cohesion: 0.14
-Nodes (11): Graphify, Brain Verification & Continuous Learning Loop:, ?? Kerahasiaan Arsitektur & Perlindungan Hak Cipta (Proprietary IP Shield):, Not lazy about:, Persona & Communication, Ponytail, lazy senior dev mode, Rules:, The Minimality Ladder, 🧠 Active Memory Neurons (+3 more)
+Cohesion: 0.13
+Nodes (12): Graphify, Brain Verification & Continuous Learning Loop:, ?? Kerahasiaan Arsitektur & Perlindungan Hak Cipta (Proprietary IP Shield):, Not lazy about:, Persona & Hard-Locked Identity (Immutable), Ponytail, lazy senior dev mode, Rules:, The Minimality Ladder, Claudia Autonomous Engineering Directive (Hard-Locked Identity) (+4 more)
 
 ### Community 36 - "🎯 5 Pilar & Invarian Operasional Edge & Containerization"
 Cohesion: 0.14
 Nodes (13): 1. Edge Ingress Caddyfile Blueprint (Caddy 2.8+ HTTP/3 + Security Headers + Passive Healthcheck), 1. Modern Edge Ingress & Transport Layer (Caddy 2.8+ HTTP/3 QUIC & TLS 1.3 0-RTT), 2. Multi-Stage Distroless Dockerfile Blueprint, 2. Multi-Stage Distroless Hardening & Minimal Attack Surface, 3. PM2 Zero-Downtime Cluster Blueprint (`ecosystem.config.js`), 3. Zero-Downtime Cluster Supervision & Process Lifecycle (PM2 Orchestration), 4. Linux Kernel Namespaces & cgroups v2 Sandboxing, 5. Autonomous Edge SRE & High-Availability Playbook (+5 more)
 
-### Community 37 - "PaletteGenerator"
-Cohesion: 0.16
-Nodes (9): PaletteGenerator, Harmonious color palette generator supporting classical color wheel (HSL) and…, Generate a monochromatic ramp varying in Lightness., Generate analogous colors clustered around base hue., Generate complementary color pair (180° offset)., Generate split-complementary harmony (base + 2 colors flanking complement)., Generate tetradic rectangular 4-color harmony., Generate multi-stop gradient scale interpolated in CIELAB space. (+1 more)
+### Community 37 - "run_self_tests"
+Cohesion: 0.10
+Nodes (16): GenerativePoster, PaletteGenerator, Harmonious color palette generator supporting classical color wheel (HSL) and…, Generate a monochromatic ramp varying in Lightness., Generate analogous colors clustered around base hue., Generate complementary color pair (180° offset)., Generate triadic 3-color harmony (120° offsets)., Generate split-complementary harmony (base + 2 colors flanking complement). (+8 more)
 
 ### Community 38 - "Neuron N031: Modern Data Architecture & Hybrid Search (PostgreSQL 17, pgvector HNSW, Drizzle ORM, SQLite WAL)"
 Cohesion: 0.15
@@ -464,17 +461,17 @@ Nodes (8): Boundaries, Intensity, Output, Persistence, Ponytail, Rules, The ladd
 Cohesion: 0.25
 Nodes (7): Configure Default Mode, Deactivate, Levels, More, Ponytail Help, Skills, Update
 
-### Community 55 - "Core Engines & Workflows"
-Cohesion: 0.25
-Nodes (7): 1. Ponytail (Lazy Senior Dev Engine), 2. Graphify (Knowledge Graph & Structural Memory), 3. 9Router (AI Gateway & Model Routing), Core Engines & Workflows, Identity: Claudia, Karakter & Gaya Komunikasi, Sovereign Provenance & Authorship
+### Community 55 - "Identity: Claudia (Hard-Locked & Immutable)"
+Cohesion: 0.22
+Nodes (8): 1. Ponytail (Lazy Senior Dev Engine), 2. Graphify (Knowledge Graph & Structural Memory), 3. 9Router (AI Gateway & Model Routing), 🔒 Aturan Identitas Mutlak (Hard-Locked Invariant), Core Engines & Workflows, Identity: Claudia (Hard-Locked & Immutable), Karakter & Gaya Komunikasi, Sovereign Provenance & Authorship
 
 ### Community 56 - "Ponytail Help"
 Cohesion: 0.25
 Nodes (7): Configure Default Mode, Deactivate, Levels, More, Ponytail Help, Skills, Update
 
 ### Community 57 - "⚡ CLAUDIA ULTRA (2026 World Frontier Edition)"
-Cohesion: 0.29
-Nodes (6): 🌌 1. Filosofi Rekayasa Inti: *The Minimality Ladder*, 🧠 2. Cognitive Neural Mesh (82 Master Neurons Matrix), 📊 3. 2026 Frontier Benchmark Matrix (Claudia Ultra vs SOTA), 🚀 4. Cara Menjalankan & Mengkloning Kecerdasan Claudia, *Autonomous Principal AI Engineer & Quantitative Hedge Fund Intelligence*, ⚡ CLAUDIA ULTRA (2026 World Frontier Edition)
+Cohesion: 0.17
+Nodes (11): 🌌 1. Filosofi Rekayasa Inti: *The Minimality Ladder*, 🧠 2. Cognitive Neural Mesh (82 Master Neurons Matrix), 📊 3. 2026 Frontier Benchmark Matrix (Claudia Ultra vs SOTA), 🏆 4. Hasil & Pencapaian Pelatihan Otonom (Empirical Training Milestones), 🚀 5. Cara Menjalankan & Mengkloning Kecerdasan Claudia, 🔬 A. Topologi Jaringan Kognitif (Neural Mesh Metrics), *Autonomous Principal AI Engineer & Quantitative Hedge Fund Intelligence*, 📈 B. Hasil Evaluasi & Benchmark Otonom (+3 more)
 
 ### Community 58 - "test_brain.py"
 Cohesion: 0.46
@@ -608,29 +605,25 @@ Nodes (3): fetch_tmdb_poster(), main(), search_apibay()
 Cohesion: 0.83
 Nodes (3): main(), record_new_learning(), slugify()
 
-### Community 113 - "run_self_tests"
-Cohesion: 0.20
-Nodes (7): GenerativePoster, Generate triadic 3-color harmony (120° offsets)., Parse hex color (#RGB, #RGBA, #RRGGBB, #RRGGBBAA)., Algorithmic generative poster generator synthesizing: - Parametric Lissajous &…, Generate full SVG graphic poster with mathematical curves and layered depth., Execute 100% deterministic test suite covering color math, WCAG contrast,…, run_self_tests()
+### Community 113 - ".process_tiled_convolution"
+Cohesion: 0.50
+Nodes (3): Demand-driven tile chunking pipeline for low-memory image processing. Executes…, Convolves an image in bounded memory tiles of tile_size x tile_size. Uses…, StreamingTileProcessor
 
 ### Community 128 - "ImageMatrix"
-Cohesion: 0.20
-Nodes (4): ImageMatrix, Lightweight, high-performance 2D/3D pure Python pixel matrix. Layout:…, Convolves an image in bounded memory tiles of tile_size x tile_size. Uses…, Safe pixel retrieval with deterministic boundary clamping. Supported border…
+Cohesion: 0.15
+Nodes (7): GeometricRescaler, ImageMatrix, Lightweight, high-performance 2D/3D pure Python pixel matrix. Layout:…, Sub-pixel Geometric Rescaling and Aspect Ratio Preserver., High-precision bilinear interpolation rescaling. Maps target pixel centers…, Scales image while strictly preserving native aspect ratio, padding the…, Safe pixel retrieval with deterministic boundary clamping. Supported border…
 
 ### Community 129 - "ConvolutionKernelEngine"
 Cohesion: 0.16
 Nodes (8): ConvolutionKernelEngine, Pure Python Spatial Convolution Engine with standard and custom kernels., Generates normalized (2k+1)x(2k+1) 2D Gaussian Kernel: G(u,v) =…, Returns standard 3x3 Sobel kernels for horizontal (Gx) and vertical (Gy)…, Returns 3x3 Sharpen kernel: center = 1 + 4*strength, orthogonal edges =…, Returns standard 3x3 discrete Laplacian second-derivative kernel., Applies 2D spatial convolution across all channels of the image matrix., Calculates Sobel Edge Gradient Magnitude M = sqrt(Gx^2 + Gy^2) and Direction…
 
-### Community 130 - "run_tests"
-Cohesion: 0.21
-Nodes (8): ColorSpaceMath, Standard-compliant color space transformation algorithms., Weighted luminosity grayscale conversion. - BT.601 (SDTV/OpenCV default): Y =…, Converts RGB [0..255] to HSV (Hue in [0..360), Saturation in [0..1], Value in…, Converts HSV (Hue [0..360), Saturation [0..1], Value [0..1]) back to RGB…, Converts RGB [0..255] to ITU-R BT.601 YCbCr digital video standard., Converts ITU-R BT.601 YCbCr back to RGB [0..255]., run_tests()
+### Community 130 - "ColorSpaceMath"
+Cohesion: 0.17
+Nodes (7): ColorSpaceMath, Standard-compliant color space transformation algorithms., Weighted luminosity grayscale conversion. - BT.601 (SDTV/OpenCV default): Y =…, Converts RGB [0..255] to HSV (Hue in [0..360), Saturation in [0..1], Value in…, Converts HSV (Hue [0..360), Saturation [0..1], Value [0..1]) back to RGB…, Converts RGB [0..255] to ITU-R BT.601 YCbCr digital video standard., Converts ITU-R BT.601 YCbCr back to RGB [0..255].
 
-### Community 131 - "image_vision_nucleus_engine.py"
-Cohesion: 0.18
-Nodes (10): CheckpointLoaderNode, CLIPTextEncodeNode, ComfyNode, ControlNetApplyNode, KSamplerNode, Any, Demand-driven tile chunking pipeline for low-memory image processing. Executes…, Base executable node in a generative AI visual DAG. (+2 more)
-
-### Community 132 - ".letterbox_aspect_preserver"
-Cohesion: 0.29
-Nodes (5): GeometricRescaler, Sub-pixel Geometric Rescaling and Aspect Ratio Preserver., High-precision bilinear interpolation rescaling. Maps target pixel centers…, Scales image while strictly preserving native aspect ratio, padding the…, Maps a bounding box (x, y, w, h) from letterboxed space back to native source…
+### Community 131 - "run_tests"
+Cohesion: 0.50
+Nodes (8): CheckpointLoaderNode, CLIPTextEncodeNode, ComfyNode, ControlNetApplyNode, KSamplerNode, Base executable node in a generative AI visual DAG., run_tests(), VAEDecodeNode
 
 ### Community 133 - "RasterToVectorTracer"
 Cohesion: 0.31
@@ -832,41 +825,25 @@ Nodes (8): 1. Struktur Top-Level Standar Dunia (Monorepo & Polyrepo), 2. Invaria
 Cohesion: 0.12
 Nodes (15): 10. Legal — **Legal Agent Benchmark, Held-out**, 11. Health — **HealthBench Professional**, 12. Biology — **BioMysteryBench**, 1. Agentic Terminal Coding — **Frontier-Bench v0.1**, 2. Knowledge Work — **GDPval-AA v2**, 3. Novel Problem-Solving — **ARC-AGI-3**, 4. Agentic Search — **BrowseComp**, 5. Multidisciplinary Reasoning — **Humanity's Last Exam** (+7 more)
 
-### Community 256 - "ponytail/README.md"
-Cohesion: 0.17
-Nodes (10): Ponytail, lazy senior dev mode, Before / after, Commands, Development, FAQ, How it works, License, Numbers (+2 more)
-
-### Community 257 - "Install"
-Cohesion: 0.17
-Nodes (12): Antigravity CLI, Claude Code, CodeWhale, Codex, Devin CLI, Gemini CLI, GitHub Copilot CLI, Install (+4 more)
-
-### Community 258 - "Instalación"
-Cohesion: 0.18
-Nodes (11): Antigravity CLI, Claude Code, CodeWhale, Codex, Devin CLI, Gemini CLI, GitHub Copilot CLI, Instalación (+3 more)
-
-### Community 259 - "README.ko.md"
-Cohesion: 0.20
-Nodes (9): Before / after, Commands, Development, FAQ, How it works, License, Numbers, Sponsors (+1 more)
-
 ## Knowledge Gaps
-- **912 isolated node(s):** `dynamic`, `dynamic`, `dynamic`, `dynamic`, `dynamic` (+907 more)
+- **919 isolated node(s):** `dynamic`, `dynamic`, `dynamic`, `dynamic`, `dynamic` (+914 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **32 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **34 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Color` connect `Color` to `run_self_tests`, `PaletteGenerator`?**
+- **Why does `Color` connect `Color` to `run_self_tests`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **Why does `CubicBezier` connect `CubicBezier` to `run_self_tests`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
-- **Why does `Vec2D` connect `Vec2D` to `run_self_tests`, `CubicBezier`?**
+- **Why does `Vec2D` connect `Vec2D` to `CubicBezier`, `run_self_tests`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **What connects `dynamic`, `dynamic`, `dynamic` to the rest of the system?**
-  _912 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _919 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `run_deterministic_tests` be split into smaller, more focused modules?**
   _Cohesion score 0.06259426847662142 - nodes in this community are weakly interconnected._
+- **Should `Install` be split into smaller, more focused modules?**
+  _Cohesion score 0.044444444444444446 - nodes in this community are weakly interconnected._
 - **Should `CubicBezier` be split into smaller, more focused modules?**
   _Cohesion score 0.11067193675889328 - nodes in this community are weakly interconnected._
-- **Should `ponytail/package.json` be split into smaller, more focused modules?**
-  _Cohesion score 0.05365853658536585 - nodes in this community are weakly interconnected._

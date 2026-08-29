@@ -204,15 +204,15 @@
     "semantic_hash": ""
   },
   "AGENTS.md": {
-    "mtime": 1787793523.3071334,
-    "seen": 1787793958.3189566,
-    "ast_hash": "5a042897875aa53cc14ffdd393b98bde",
+    "mtime": 1787968647.7950504,
+    "seen": 1787968717.4976733,
+    "ast_hash": "ba90d6b1db6923f7186768f974453df5",
     "semantic_hash": ""
   },
   "identity.md": {
-    "mtime": 1787818711.0749192,
-    "seen": 1787818725.2397497,
-    "ast_hash": "a0ba07694b3b9f8d606d06231d64e15e",
+    "mtime": 1787968637.9563673,
+    "seen": 1787968717.4976733,
+    "ast_hash": "6ef0a7ea9229b88a35eb58c5bec7ec54",
     "semantic_hash": ""
   },
   "learning/README.md": {
@@ -312,9 +312,9 @@
     "semantic_hash": ""
   },
   "memory.md": {
-    "mtime": 1787814441.519925,
-    "seen": 1787814449.8853319,
-    "ast_hash": "3bb957f94f5bc1445a24cfa349f6025b",
+    "mtime": 1787968397.186309,
+    "seen": 1787968717.4976733,
+    "ast_hash": "99b418801cd7b441144bb576d565bcf3",
     "semantic_hash": ""
   },
   "memory/neurons/ai_engine_9router.md": {
@@ -522,15 +522,15 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1787818687.7681189,
-    "seen": 1787818701.1169438,
-    "ast_hash": "37e7b286a1cfca60adda106ae9021430",
+    "mtime": 1787968522.1715171,
+    "seen": 1787968717.4976733,
+    "ast_hash": "fd142ab6206d52f1a4fccef38c850f70",
     "semantic_hash": ""
   },
   "scripts/auto_sync_github.py": {
-    "mtime": 1787793947.1470487,
-    "seen": 1787793958.3189566,
-    "ast_hash": "4f0f67b2e0a7e3d23644b5bdc04ef48b",
+    "mtime": 1787968401.4478798,
+    "seen": 1787968717.4976733,
+    "ast_hash": "4d5a67684d7d3021bc1ceab2213949ef",
     "semantic_hash": ""
   },
   "learning/neurons/N009_peak_algorithms_codex.md": {
@@ -714,9 +714,9 @@
     "semantic_hash": ""
   },
   "CLAUDIA.md": {
-    "mtime": 1787793523.3071334,
-    "seen": 1787793958.3189566,
-    "ast_hash": "ef1562dad81c09f624c3fb68cbc81a8d",
+    "mtime": 1787968653.5392227,
+    "seen": 1787968717.4976733,
+    "ast_hash": "e4c14a148701b2fe5b696f1c262b420a",
     "semantic_hash": ""
   },
   "learning/neurons/N020_session_continuity_checkpoint.md": {
@@ -726,28 +726,28 @@
     "semantic_hash": ""
   },
   "scripts/test_brain.py": {
-    "mtime": 1787967930.076272,
-    "seen": 1787967948.6277099,
-    "ast_hash": "d468ee0862da04ab55ca702426744bcd",
+    "mtime": 1787968701.4708118,
+    "seen": 1787968717.4976733,
+    "ast_hash": "289bc5bdd57739c5778ee7006167ea49",
     "semantic_hash": ""
   },
   ".github/copilot-instructions.md": {
-    "mtime": 1787793523.305013,
-    "seen": 1787793958.3189566,
-    "ast_hash": "ef1562dad81c09f624c3fb68cbc81a8d",
+    "mtime": 1787968666.951958,
+    "seen": 1787968717.4976733,
+    "ast_hash": "e4c14a148701b2fe5b696f1c262b420a",
     "semantic_hash": ""
   },
   "scripts/record_learning.py": {
-    "mtime": 1787793523.455994,
-    "seen": 1787793958.3189566,
-    "ast_hash": "41926859d1341a9566b99ba8a7bc1958",
+    "mtime": 1787968409.600514,
+    "seen": 1787968717.4976733,
+    "ast_hash": "edec6d0b7230547302e06ae58a166822",
     "semantic_hash": ""
   },
   ".identity_signature.json": {
-    "mtime": 1787793523.305013,
-    "seen": 1787793958.3189566,
-    "ast_hash": "e958fb53035f74602788d64326a2b20f",
-    "semantic_hash": "e958fb53035f74602788d64326a2b20f"
+    "mtime": 1787968679.1315289,
+    "seen": 1787968717.4976733,
+    "ast_hash": "4ff15036766fe5d23e3b180a581111b7",
+    "semantic_hash": ""
   },
   "scripts/train_trading_engine.py": {
     "mtime": 1787793523.4601655,

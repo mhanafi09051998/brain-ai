@@ -6,9 +6,9 @@
     "semantic_hash": ""
   },
   "learning/NEURON_INDEX.json": {
-    "mtime": 1787814441.519925,
-    "seen": 1787814449.8853319,
-    "ast_hash": "dfbd2c180447cb6c76f907685bc006c4",
+    "mtime": 1787972595.7132864,
+    "seen": 1787972637.4911635,
+    "ast_hash": "224ca2428e77ff14b25550fde1bc83aa",
     "semantic_hash": ""
   },
   "learning/scripts/grow_neurons.py": {
@@ -312,9 +312,9 @@
     "semantic_hash": ""
   },
   "memory.md": {
-    "mtime": 1787968397.186309,
-    "seen": 1787968717.4976733,
-    "ast_hash": "99b418801cd7b441144bb576d565bcf3",
+    "mtime": 1787972601.8950405,
+    "seen": 1787972637.4916842,
+    "ast_hash": "a643edde9071d8936ed2519f2583a27f",
     "semantic_hash": ""
   },
   "memory/neurons/ai_engine_9router.md": {
@@ -522,9 +522,9 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1787968522.1715171,
-    "seen": 1787968717.4976733,
-    "ast_hash": "fd142ab6206d52f1a4fccef38c850f70",
+    "mtime": 1787972617.5419104,
+    "seen": 1787972637.4916842,
+    "ast_hash": "06677928826bae86a571807c2696c5a0",
     "semantic_hash": ""
   },
   "scripts/auto_sync_github.py": {
@@ -1854,9 +1854,45 @@
     "semantic_hash": ""
   },
   "learning/frontier_datasets/claudia_continuous_stream.json": {
-    "mtime": 1787880906.79344,
-    "seen": 1787967948.6277099,
-    "ast_hash": "4f7eace09d03b706522963610fe2ea26",
+    "mtime": 1787972620.968737,
+    "seen": 1787972637.4911635,
+    "ast_hash": "923b11febc31b344eae95aeb7f104d31",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N083_arc_agi_spatial_inductive_reasoning.md": {
+    "mtime": 1787972560.704777,
+    "seen": 1787972637.4916842,
+    "ast_hash": "5338da8444ceaa6e127946129fa58cab",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N084_enterprise_legal_statutory_compliance.md": {
+    "mtime": 1787972565.393962,
+    "seen": 1787972637.4916842,
+    "ast_hash": "ac971f38636d8c5fcfa5e27b51639f7d",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N085_autonomous_business_workflow_automation.md": {
+    "mtime": 1787972570.2858148,
+    "seen": 1787972637.4916842,
+    "ast_hash": "752c3ce3282bed7aabd8e6814402591d",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N086_biomedical_clinical_diagnostic_reasoning.md": {
+    "mtime": 1787972575.526623,
+    "seen": 1787972637.4916842,
+    "ast_hash": "37c68f53f19b272f998b31f86d73009b",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N087_multimodal_osworld_computer_use_engine.md": {
+    "mtime": 1787972579.961746,
+    "seen": 1787972637.4916842,
+    "ast_hash": "bcf2ff8d8b8508e67cb92e1b6ddb69c5",
+    "semantic_hash": ""
+  },
+  "learning/neurons/N088_deepswe_ast_patch_minimality_oracle.md": {
+    "mtime": 1787972584.920777,
+    "seen": 1787972637.4916842,
+    "ast_hash": "30417fab6589e7adc7a86884d8c738fb",
     "semantic_hash": ""
   }
 }

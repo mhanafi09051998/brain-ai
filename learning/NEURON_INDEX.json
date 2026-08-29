@@ -1,9 +1,9 @@
 {
   "version": "1.2.0",
-  "updated_at": "2026-08-27 14:07:21",
-  "total_neurons": 82,
-  "total_synapses": 324,
-  "mesh_density": 0.0679,
+  "updated_at": "2026-08-29 10:03:15",
+  "total_neurons": 88,
+  "total_synapses": 352,
+  "mesh_density": 0.046,
   "neurons": [
     {
       "id": "N001",
@@ -1032,6 +1032,88 @@
       ],
       "synapse_count": 6,
       "size_bytes": 4857
+    },
+    {
+      "id": "N083",
+      "label": "Neuron N083: ARC-AGI-3 Spatial Inductive Reasoning & DSL Program Synthesis",
+      "file": "N083_arc_agi_spatial_inductive_reasoning.md",
+      "connections": [
+        "N001",
+        "N009",
+        "N060",
+        "N063",
+        "N082"
+      ],
+      "synapse_count": 5,
+      "size_bytes": 3250
+    },
+    {
+      "id": "N084",
+      "label": "Neuron N084: Enterprise Legal Synthesis & Statutory Compliance Engine",
+      "file": "N084_enterprise_legal_statutory_compliance.md",
+      "connections": [
+        "N001",
+        "N012",
+        "N054",
+        "N082"
+      ],
+      "synapse_count": 4,
+      "size_bytes": 3120
+    },
+    {
+      "id": "N085",
+      "label": "Neuron N085: Autonomous Business Workflow & SAGA Orchestration Engine",
+      "file": "N085_autonomous_business_workflow_automation.md",
+      "connections": [
+        "N010",
+        "N031",
+        "N062",
+        "N069",
+        "N082"
+      ],
+      "synapse_count": 5,
+      "size_bytes": 3180
+    },
+    {
+      "id": "N086",
+      "label": "Neuron N086: Biomedical Clinical Diagnosis & Molecular Pathway Invariants",
+      "file": "N086_biomedical_clinical_diagnostic_reasoning.md",
+      "connections": [
+        "N001",
+        "N040",
+        "N076",
+        "N082"
+      ],
+      "synapse_count": 4,
+      "size_bytes": 3340
+    },
+    {
+      "id": "N087",
+      "label": "Neuron N087: Multimodal OSWorld Computer Use & Agentic Search Engine",
+      "file": "N087_multimodal_osworld_computer_use_engine.md",
+      "connections": [
+        "N003",
+        "N012",
+        "N056",
+        "N082"
+      ],
+      "synapse_count": 4,
+      "size_bytes": 3290
+    },
+    {
+      "id": "N088",
+      "label": "Neuron N088: DeepSWE AST Patch Minimality & Zero-Overengineering Oracle",
+      "file": "N088_deepswe_ast_patch_minimality_oracle.md",
+      "connections": [
+        "N001",
+        "N004",
+        "N015",
+        "N018",
+        "N081",
+        "N082"
+      ],
+      "synapse_count": 6,
+      "size_bytes": 3410
     }
   ]
 }
