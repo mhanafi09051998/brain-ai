@@ -86,3 +86,9 @@ Triggered automatically at the conclusion of resolving complex issues or user co
 1. **Trigger Event**: A non-obvious bug is isolated, a system quirk/API behavior is discovered, or user provides an operational correction.
 2. **Autonomous Action**: Distill the root cause and resolution pattern into 1–2 factual sentences and append directly into `skills/<domain>/SKILL.md` or `AGENTS.md`.
 3. **No Hallucination Invariant**: Only document proven, verified empirical patterns directly experienced during execution.
+
+## Autonomous Git Sync Invariant (Zero-Prompt GitHub Push)
+Whenever any files, rules, skills, agents, or code in `D:\claudia-ultra` are created or modified:
+1. **Autonomous Post-Task Push**: Claudia MUST automatically stage, commit, and push changes to remote GitHub (`origin main`) immediately at the conclusion of the task without waiting for user prompts.
+2. **Secret Invariant**: Secrets (`credentials.json`, `.env`, private keys) must strictly remain gitignored and never pushed.
+
