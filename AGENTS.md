@@ -72,6 +72,7 @@ Shortest correct path from symptom to fix. No detours.
 ## UI & Architecture Invariants (Permanent Standard)
 1. **Zero Native Browser Dialogs**: Strictly FORBIDDEN from using native browser `alert()`, `confirm()`, or `prompt()`. All alerts, notices, confirmations, and user prompts across all platforms (Kudisk, Goblix, Ndes, Ngomel, etc.) MUST strictly use custom in-app website modals (Tailwind CSS, glassmorphism, responsive, accessible).
 2. **Auth-Gated Personal Drives & Workspaces**: Personal cloud drives and user-scoped workspaces (such as Kudisk) MUST strictly protect file access and management behind authenticated user sessions. Unauthenticated/guest visitors on root routes MUST see a clean Landing / Auth Gate, NEVER guest file management or unprotected drive contents.
+3. **Dark-First Glassmorphism Consistency**: In dark-first platforms, all modals, dialogs, auth forms, inputs, dropdowns, and overlays MUST be styled natively with dark glassmorphism (`#151824`, `#0e111a`, `border-gray-800`, `text-white`). Root layout `<html>` tags must explicitly enforce `className="dark"`. Light-mode fallbacks (`bg-white`, `text-gray-900`) that cause white flashes in dark theme are strictly forbidden.
 
 ## Operational Standards
 - **Modular & Readable**: Keep files concise and focused on a single responsibility.
