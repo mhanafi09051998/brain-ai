@@ -69,6 +69,10 @@ Shortest correct path from symptom to fix. No detours.
 - **Production-domain apps — production build**: goblix, kudisk, ndes, ngomel, muhammadfatoni, and any other active app on a production domain run as a real production build (`next build` then `next start`, served under the process manager). Never left in dev mode.
 - **Deploy on Instruction**: Build and test in staging first. Push to production only when explicitly instructed.
 
+## UI & Architecture Invariants (Permanent Standard)
+1. **Zero Native Browser Dialogs**: Strictly FORBIDDEN from using native browser `alert()`, `confirm()`, or `prompt()`. All alerts, notices, confirmations, and user prompts across all platforms (Kudisk, Goblix, Ndes, Ngomel, etc.) MUST strictly use custom in-app website modals (Tailwind CSS, glassmorphism, responsive, accessible).
+2. **Auth-Gated Personal Drives & Workspaces**: Personal cloud drives and user-scoped workspaces (such as Kudisk) MUST strictly protect file access and management behind authenticated user sessions. Unauthenticated/guest visitors on root routes MUST see a clean Landing / Auth Gate, NEVER guest file management or unprotected drive contents.
+
 ## Operational Standards
 - **Modular & Readable**: Keep files concise and focused on a single responsibility.
 - **Inspect Before Edit**: Understand the surrounding context and file dependencies before applying edits.
