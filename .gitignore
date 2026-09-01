@@ -13,11 +13,14 @@ credentials.json
 secrets.json
 master.key
 
-# Web Applications & Projects (Excluded from Intelligence Repo)
+# Projects & Workspaces (Excluded from claudia-ultra core repo)
+projects/
 training-room/
 muhammadfatoni-web/
 sol-zolu-vault/
 claudia-ultra-project/
+goblix/
+ponytail/
 
 # Databases & SQLite
 *.sqlite
@@ -49,12 +52,8 @@ __pycache__/
 
 # OS artifacts
 .DS_Store
-Thumbs.dbscripts/
-data/
+Thumbs.db
 *.html
 meme_sniper.js
 server_3000.js
 server_3500.js
-
-ponytail/
-goblix/
