@@ -49,4 +49,9 @@ __pycache__/
 
 # OS artifacts
 .DS_Store
-Thumbs.db
+Thumbs.dbscripts/
+data/
+*.html
+meme_sniper.js
+server_3000.js
+server_3500.js
