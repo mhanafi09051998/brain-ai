@@ -1,14 +1,21 @@
-﻿# ⚡ Modular Engineering Skills Matrix
+﻿# ⚡ Modular Engineering Skills Matrix (15 Core Domains)
 
-Direktori modul keahlian arsitektur perangkat lunak dan sistem terdistribusi otonom tingkat lanjut:
+Direktori modul keahlian arsitektur sistem, infrastruktur jaringan, trading kuantitatif, dan rekayasa perangkat lunak otonom tingkat lanjut:
 
 | Modul Skill | Lokasi Berkas | Cakupan Rekayasa & Invarian Utama |
 | :--- | :--- | :--- |
-| **lgorithms** | [skills/algorithms/SKILL.md](./algorithms/SKILL.md) | Decision Matrix, Monotonic Deque, Binary Search Predicates, DP State Reduction, Graph SCC & Shortest Path, DSU, Fenwick Tree. |
-| **database-engineering** | [skills/database-engineering/SKILL.md](./database-engineering/SKILL.md) | B-Tree Index Ordering, EXPLAIN Buffers, N+1 Elimination, MVCC & Deadlock Prevention, Zero-Downtime Migration, SQLite WAL Pragmas. |
-| **devops-linux-hardening** | [skills/devops-linux-hardening/SKILL.md](./devops-linux-hardening/SKILL.md) | PM2 Lifecycle & Logrotate, Nginx SSL TLS 1.3 / HMR Passthrough, Cloudflare Zero-Trust Tunnel, Linux Swap & Inode Diagnostics. |
-| **distributed-systems** | [skills/distributed-systems/SKILL.md](./distributed-systems/SKILL.md) | CAP/PACELC Tradeoffs, Idempotency Keys, Transactional Outbox, SAGA Orchestration/Choreography, Raft Consensus, Token/Leaky Bucket. |
-| **
-extjs-tailwind-ui** | [skills/nextjs-tailwind-ui/SKILL.md](./nextjs-tailwind-ui/SKILL.md) | App Router RSC Boundaries, Server Actions & Zod, Auth.js Session Guard, Tailwind CSS v4 Glassmorphism Bento Grids, Turbopack. |
-| **security-owasp-hardening** | [skills/security-owasp-hardening/SKILL.md](./security-owasp-hardening/SKILL.md) | Argon2id Hashing, Timing-Safe Comparison, Cookie Flags (__Host-), Parameterized Queries, CSP Headers, Origin Whitelisting. |
-| **solana-defi-engineering** | [skills/solana-defi-engineering/SKILL.md](./solana-defi-engineering/SKILL.md) | Accounts & PDA Invariants, Meteora DLMM Concentrated Liquidity, Jupiter Dynamic CU & Priority Fees, Resilient Tx Submission. |
+| **`algorithms`** | [`skills/algorithms/SKILL.md`](./algorithms/SKILL.md) | Decision Matrix, Monotonic Deque, Binary Search Predicates, DP State Reduction, Graph SCC, DSU, Fenwick Tree. |
+| **`api-gateway-reverse-proxy`** | [`skills/api-gateway-reverse-proxy/SKILL.md`](./api-gateway-reverse-proxy/SKILL.md) | Multi-Tenant Path/Subdomain Routing, WebSocket/SSE Streaming Passthrough, Circuit Breakers, Request Deduplication. |
+| **`database-engineering`** | [`skills/database-engineering/SKILL.md`](./database-engineering/SKILL.md) | B-Tree Composite Indexing, EXPLAIN Buffers, Eliminasi N+1, MVCC/Deadlock, Zero-Downtime Migration, SQLite WAL. |
+| **`devops-linux-hardening`** | [`skills/devops-linux-hardening/SKILL.md`](./devops-linux-hardening/SKILL.md) | PM2 Logrotate & Standalone Next.js, Nginx SSL TLS 1.3/HMR Passthrough, Cloudflare Tunnel Ingress, Linux Swap/Inode Tuning. |
+| **`distributed-systems`** | [`skills/distributed-systems/SKILL.md`](./distributed-systems/SKILL.md) | CAP/PACELC, Idempotency Keys, Transactional Outbox, SAGA Choreography/Orchestration, Raft Consensus, Token Bucket. |
+| **`incident-root-cause-debugging`** | [`skills/incident-root-cause-debugging/SKILL.md`](./incident-root-cause-debugging/SKILL.md) | Non-Overthinking Triage, Binary Search Git Bisecting, Minimal Diff Invariants, Atomic Non-Destructive Rollbacks. |
+| **`linux-performance-profiling`** | [`skills/linux-performance-profiling/SKILL.md`](./linux-performance-profiling/SKILL.md) | CPU/Memory RSS Triaging, V8 Event Loop Lag & Heap Snapshots, Socket Leak Detection, Inode Space Recovery. |
+| **`linux-server-architecture`** | [`skills/linux-server-architecture/SKILL.md`](./linux-server-architecture/SKILL.md) | Bare-Metal/VPS Partitioning, Systemd Sandboxing Units, Docker Cgroups Resource Limits, Kernel Sysctl Network Tuning. |
+| **`mikrotik-routeros-engineering`** | [`skills/mikrotik-routeros-engineering/SKILL.md`](./mikrotik-routeros-engineering/SKILL.md) | RouterOS v7 FIB Routing, Raw/Mangle Table Filtering, PCC Multi-WAN Balancing, Recursive Failover, WireGuard Mesh, Queue Tree PCQ. |
+| **`nextjs-tailwind-ui`** | [`skills/nextjs-tailwind-ui/SKILL.md`](./nextjs-tailwind-ui/SKILL.md) | App Router RSC Boundaries, Server Actions + Zod, Auth.js Session Guard, Tailwind CSS v4 Glassmorphism Bento Grids. |
+| **`quantitative-market-making`** | [`skills/quantitative-market-making/SKILL.md`](./quantitative-market-making/SKILL.md) | Meteora DLMM Bin Step Math, Concentrated Capital Efficiency, Inventory Risk & Rebalancing, True PnL Accounting. |
+| **`security-owasp-hardening`** | [`skills/security-owasp-hardening/SKILL.md`](./security-owasp-hardening/SKILL.md) | Argon2id Hashing, Timing-Safe Comparison, `__Host-` Cookies, Parameterized Queries, Strict CSP, Zero Secret Leakage. |
+| **`solana-defi-engineering`** | [`skills/solana-defi-engineering/SKILL.md`](./solana-defi-engineering/SKILL.md) | Accounts/PDA/ATA, Meteora DLMM Concentrated Liquidity, Jupiter Dynamic CU & Priority Fees, Resilient Tx Submission. |
+| **`telegram-bot-architecture`** | [`skills/telegram-bot-architecture/SKILL.md`](./telegram-bot-architecture/SKILL.md) | Long Polling Invariants, PM2 Loop Anti-Spam Guards, Age-Gating, MarkdownV2 Escaping, Crash Resilience. |
+| **`typescript-type-gymnastics`** | [`skills/typescript-type-gymnastics/SKILL.md`](./typescript-type-gymnastics/SKILL.md) | Zero `any` Policies, Advanced Generic Inference (`infer`), Branded Nominal Types, Discriminated Unions Pattern Matching. |
