@@ -65,14 +65,15 @@ Shortest correct path from symptom to fix. No detours.
 6. **Verify, Then Stop**: Build/test/run to confirm. Once it passes, the task is done — do not keep polishing.
 7. **Escalate Only When Blocked**: If the root cause genuinely cannot be isolated, say so and ask. Never guess and never mass-edit to "see what sticks".
 
-## Deployment Rules (Non-Negotiable)
-- **Production-domain apps — production build**: goblix, kudisk, ndes, ngomel, muhammadfatoni, and any other active app on a production domain run as a real production build (`next build` then `next start`, served under the process manager). Never left in dev mode.
-- **Deploy on Instruction**: Build and test in staging first. Push to production only when explicitly instructed.
-
-## UI & Architecture Invariants (Permanent Standard)
-1. **Zero Native Browser Dialogs**: Strictly FORBIDDEN from using native browser `alert()`, `confirm()`, or `prompt()`. All alerts, notices, confirmations, and user prompts across all platforms (Kudisk, Goblix, Ndes, Ngomel, etc.) MUST strictly use custom in-app website modals (Tailwind CSS, glassmorphism, responsive, accessible).
-2. **Auth-Gated Personal Drives & Workspaces**: Personal cloud drives and user-scoped workspaces (such as Kudisk) MUST strictly protect file access and management behind authenticated user sessions. Unauthenticated/guest visitors on root routes MUST see a clean Landing / Auth Gate, NEVER guest file management or unprotected drive contents.
-3. **Dark-First Glassmorphism Consistency**: In dark-first platforms, all modals, dialogs, auth forms, inputs, dropdowns, and overlays MUST be styled natively with dark glassmorphism (`#151824`, `#0e111a`, `border-gray-800`, `text-white`). Root layout `<html>` tags must explicitly enforce `className="dark"`. Light-mode fallbacks (`bg-white`, `text-gray-900`) that cause white flashes in dark theme are strictly forbidden.
+## Full-Stack Ecosystem Architecture Standard (Permanent Blueprint)
+Whenever creating or maintaining any full-stack application across the ecosystem (Goblix, Kudisk, Ndes, Ngomel, MuhammadFatoni, etc.):
+1. **Core Framework**: Next.js App Router (React, Tailwind CSS, FontAwesome/Lucide icons).
+2. **Instant Reactive Turbopack Runtime**: All applications run in Turbopack Dev mode (`next dev --turbo -p <PORT>` / `dev:turbo`) managed under PM2 daemon so all code changes immediately compile and hot-reload live on VPS and local without requiring manual `next build` passes.
+3. **Dark-First Glassmorphism Invariant**: All apps enforce dark glassmorphism styling natively (`#0a0c13`, `#151824`, `#0e111a`, `border-gray-800`, `text-white`). Root layout `<html>` tags must strictly enforce `className="dark bg-[#0a0c13] text-gray-100"`. Light-mode fallbacks (`bg-white`, `text-gray-900`) that cause white flashes in dark theme are strictly forbidden.
+4. **Zero Native Browser Dialogs**: Strictly FORBIDDEN from using native browser `alert()`, `confirm()`, or `prompt()`. All alerts, notices, confirmations, and user prompts across all platforms MUST strictly use custom in-app website modals (Tailwind CSS, glassmorphism, responsive, accessible).
+5. **Auth-Gated Personal Drives & Workspaces**: Personal cloud drives and user-scoped workspaces (such as Kudisk) MUST strictly protect file access and management behind authenticated user sessions. Unauthenticated/guest visitors on root routes MUST see a clean Landing / Auth Gate, NEVER guest file management or unprotected drive contents.
+6. **Mobile-First Responsiveness**: Hero banners and main slides must use `min-h-[100dvh]` immersive full-screen viewports, fluid typography, touch-friendly flex wraps, and clean navigation bars.
+7. **PM2 Process Management & Ports**: Every application has its dedicated port in `package.json`, runs continuously under PM2 daemon, and is saved permanently (`pm2 save`).
 
 ## Operational Standards
 - **Modular & Readable**: Keep files concise and focused on a single responsibility.
