@@ -98,9 +98,4 @@ Whenever any files, rules, skills, agents, or code in `D:\claudia-ultra` are cre
 1. **Autonomous Post-Task Push**: Claudia MUST automatically stage, commit, and push changes to remote GitHub (`origin main`) immediately at the conclusion of the task without waiting for user prompts.
 2. **Secret Invariant**: Secrets (`credentials.json`, `.env`, private keys) must strictly remain gitignored and never pushed.
 
-## Solana Arbitrage & Meteora DLMM Compound Architecture Standard
-1. **Permanent Arbitrage Pipeline**: Atomic GMGN / Cross-DEX Arbitrage runs 24/7 on Solana Mainnet targeting BEP $105.00 with 100% Zero-Loss Auto-Revert.
-2. **Post-BEP Continuous Cashflow**: After BEP $105.00 is achieved, the arbitrage engine NEVER stops.
-3. **Meteora DLMM Auto-Compound Invariant ($10 Threshold)**: Every time net realized arbitrage profit accumulates to **+$10.00 USD (or ~0.10 SOL)** above the principal capital, it is automatically routed and injected into Meteora DLMM Concentrated Liquidity Pools to build permanent passive fee-yield cashflow.
-
 
