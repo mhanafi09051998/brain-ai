@@ -1,6 +1,6 @@
-﻿# ⚡ Claudia Ultra Distilled Engineering Skills Matrix (18 Core Domains)
+# ⚡ Claudia Ultra Distilled Engineering Skills Matrix (21 Core Domains)
 
-Katalog modul keahlian rekayasa sistem, arsitektur perangkat lunak, infrastruktur jaringan, trading kuantitatif, dan optimasi performa tingkat lanjut:
+Katalog modul keahlian rekayasa sistem, arsitektur perangkat lunak, infrastruktur jaringan, trading kuantitatif, analisis on-chain, dan optimasi performa tingkat lanjut:
 
 | Modul Skill | Lokasi Berkas | Cakupan Rekayasa & Invarian Utama |
 | :--- | :--- | :--- |
@@ -13,6 +13,7 @@ Katalog modul keahlian rekayasa sistem, arsitektur perangkat lunak, infrastruktu
 | **`incident-root-cause-debugging`** | [`skills/incident-root-cause-debugging/SKILL.md`](./incident-root-cause-debugging/SKILL.md) | Non-Overthinking Triage, Binary Search Git Bisecting, Minimal Diff Invariants, Atomic Non-Destructive Rollbacks. |
 | **`linux-performance-profiling`** | [`skills/linux-performance-profiling/SKILL.md`](./linux-performance-profiling/SKILL.md) | CPU/Memory RSS Triaging, V8 Event Loop Lag & Heap Snapshots, Socket Leak Detection, Inode Space Recovery. |
 | **`linux-server-architecture`** | [`skills/linux-server-architecture/SKILL.md`](./linux-server-architecture/SKILL.md) | Bare-Metal/VPS Partitioning, Systemd Sandboxing Units, Docker Cgroups Resource Limits, Kernel Sysctl Network Tuning. |
+| **`meteora-dlmm-automated-market-making`** | [`skills/meteora-dlmm-automated-market-making/SKILL.md`](./meteora-dlmm-automated-market-making/SKILL.md) | Discrete Bin Price Math, Dynamic Fee Volatility Accumulator ($v_a$), Spot/Curve/Bid-Ask Models, Auto-Rebalancing & Emergency Exit. |
 | **`mikrotik-routeros-engineering`** | [`skills/mikrotik-routeros-engineering/SKILL.md`](./mikrotik-routeros-engineering/SKILL.md) | RouterOS v7 FIB Routing, Raw/Mangle Table Filtering, PCC Multi-WAN Balancing, Recursive Failover, WireGuard Mesh, Queue Tree PCQ. |
 | **`nextjs-tailwind-ui`** | [`skills/nextjs-tailwind-ui/SKILL.md`](./nextjs-tailwind-ui/SKILL.md) | App Router RSC Boundaries, Server Actions + Zod, Auth.js Session Guard, Tailwind CSS v4 Glassmorphism Bento Grids. |
 | **`python-high-throughput`** | [`skills/python-high-throughput/SKILL.md`](./python-high-throughput/SKILL.md) | Asyncio uvloop, TaskGroup Concurrency, `__slots__` & `memoryview` Zero-Copy, Polars Columnar Engine, PyO3/Cython Bridge. |
@@ -20,5 +21,7 @@ Katalog modul keahlian rekayasa sistem, arsitektur perangkat lunak, infrastruktu
 | **`rust-systems-programming`** | [`skills/rust-systems-programming/SKILL.md`](./rust-systems-programming/SKILL.md) | Borrow Checker Model, Tokio Work-Stealing, Lock-Free Crossbeam Channels, SIMD Alignment, Safe FFI C ABI. |
 | **`security-owasp-hardening`** | [`skills/security-owasp-hardening/SKILL.md`](./security-owasp-hardening/SKILL.md) | Argon2id Hashing, Timing-Safe Comparison, `__Host-` Cookies, Parameterized Queries, Strict CSP, Zero Secret Leakage. |
 | **`solana-defi-engineering`** | [`skills/solana-defi-engineering/SKILL.md`](./solana-defi-engineering/SKILL.md) | Accounts/PDA/ATA, Meteora DLMM Concentrated Liquidity, Jupiter Dynamic CU & Priority Fees, Resilient Tx Submission. |
+| **`solana-fast-trading-bot-architecture`** | [`skills/solana-fast-trading-bot-architecture/SKILL.md`](./solana-fast-trading-bot-architecture/SKILL.md) | Yellowstone Geyser gRPC Streams, Jito Block Engine 0-MEV Bundles, State Machine Trailing Stops, Sub-50ms DEX Execution. |
+| **`solana-onchain-forensics-token-audit`** | [`skills/solana-onchain-forensics-token-audit/SKILL.md`](./solana-onchain-forensics-token-audit/SKILL.md) | Wallet Clustering & Sybil Graphing, Jito Bundle Snipers, Holder Entropy, Wash Trading Signatures, Token-2022 Exploit Vectors. |
 | **`telegram-bot-architecture`** | [`skills/telegram-bot-architecture/SKILL.md`](./telegram-bot-architecture/SKILL.md) | Long Polling Invariants, PM2 Loop Anti-Spam Guards, Age-Gating, MarkdownV2 Escaping, Crash Resilience. |
 | **`typescript-type-gymnastics`** | [`skills/typescript-type-gymnastics/SKILL.md`](./typescript-type-gymnastics/SKILL.md) | Zero `any` Policies, Advanced Generic Inference (`infer`), Branded Nominal Types, Discriminated Unions Pattern Matching. |
