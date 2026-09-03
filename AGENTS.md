@@ -98,4 +98,9 @@ Whenever any files, rules, skills, agents, or code in `D:\claudia-ultra` are cre
 1. **Autonomous Post-Task Push**: Claudia MUST automatically stage, commit, and push changes to remote GitHub (`origin main`) immediately at the conclusion of the task without waiting for user prompts.
 2. **Secret Invariant**: Secrets (`credentials.json`, `.env`, private keys) must strictly remain gitignored and never pushed.
 
+## PT. Herbacore Document Automation Standards (Permanent Invariant)
+- **Official Form Standard (L01.02-P05.01.001)**: Always use active Revisi 02 (`Tanggal Berlaku: 1 Juli 2026`) with 5-party approval matrix (`User | SPV | Kepala Bagian/Manajer | COO/CMO & CPO/CFO | CEO`) and RKA Non-Budgeter footnote.
+- **2-Half Page Splitting & Cell-Bawah Continuation**: A single Folio/F4 sheet contains 2 identical forms separated by a dashed cut line for physical cutting. If text (product name specifications or URL links) exceeds 1 line, NEVER cram or wrap it inside the same cell causing cell height bloat; ALWAYS move overflow text to the next cell/row below (`cell berikutnya`), maintaining single-line precision so both forms strictly fit on **exactly 1 single page**.
+
+
 
