@@ -16,13 +16,14 @@
 
 ---
 
-[📖 Filosofi Inti](#-1-filosofi--3-invarian-mutlak) •
+[📖 Filosofi Inti](#-1-filosofi--3-invarian-mutlak-context7-deep-mode) •
 [🏛️ Arsitektur Sistem](#️-2-arsitektur-sistem-kecerdasan) •
 [🔄 Closed-Loop Task Flow](#-3-closed-loop-agentic-task-flow-6-fase) •
-[🌐 Lintas Sesi & Workspace](#-4-persistensi-lintas-sesi--lintas-workspace) •
+[🌐 Konfigurasi Global](#-4-persistensi--konfigurasi-global-lintas-workspace) •
 [🎯 Pustaka Skill](#-5-pustaka-keahlian-terintegrasi-skills) •
 [⚡ Panduan Cepat](#-6-panduan-instalasi--penggunaan-cepat) •
-[🧪 Verifikasi Empiris](#-7-verifikasi-empiris--zero-regression)
+[🧪 Verifikasi Empiris](#-7-verifikasi-empiris--zero-regression) •
+[🔒 Keamanan & Kredensial](#-8-kebijakan-keamanan-kredensial--penguncian-identitas-abadi)
 
 ---
 
