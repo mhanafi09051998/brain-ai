@@ -133,5 +133,89 @@
         "gas_opt"
       ]
     }
+  },
+  "dynflow-ad6e8e34": {
+    "entry_id": "dynflow-ad6e8e34",
+    "task_type": "dynamic_task_flow",
+    "category": "heuristic",
+    "pattern": "Pipeline blockchain_engineer (2 stages)",
+    "explanation": "Alur kerja dinamis terspesialisasi untuk domain blockchain_engineer.",
+    "impact_score": 1.0,
+    "timestamp": "2026-09-09T20:32:11.354392",
+    "metadata": {
+      "keywords": [
+        "solidity",
+        "smart contract",
+        "web3",
+        "evm"
+      ],
+      "stages": [
+        "audit",
+        "gas_opt"
+      ]
+    }
+  },
+  "dynflow-087943f7": {
+    "entry_id": "dynflow-087943f7",
+    "task_type": "dynamic_task_flow",
+    "category": "heuristic",
+    "pattern": "Pipeline blockchain_engineer (2 stages)",
+    "explanation": "Alur kerja dinamis terspesialisasi untuk domain blockchain_engineer.",
+    "impact_score": 1.0,
+    "timestamp": "2026-09-09T20:32:36.412160",
+    "metadata": {
+      "keywords": [
+        "solidity",
+        "smart contract",
+        "web3",
+        "evm"
+      ],
+      "stages": [
+        "audit",
+        "gas_opt"
+      ]
+    }
+  },
+  "dynflow-1bd0ad55": {
+    "entry_id": "dynflow-1bd0ad55",
+    "task_type": "dynamic_task_flow",
+    "category": "heuristic",
+    "pattern": "Pipeline blockchain_engineer (2 stages)",
+    "explanation": "Alur kerja dinamis terspesialisasi untuk domain blockchain_engineer.",
+    "impact_score": 1.0,
+    "timestamp": "2026-09-09T20:32:48.702980",
+    "metadata": {
+      "keywords": [
+        "solidity",
+        "smart contract",
+        "web3",
+        "evm"
+      ],
+      "stages": [
+        "audit",
+        "gas_opt"
+      ]
+    }
+  },
+  "dynflow-7b179acc": {
+    "entry_id": "dynflow-7b179acc",
+    "task_type": "dynamic_task_flow",
+    "category": "heuristic",
+    "pattern": "Pipeline blockchain_engineer (2 stages)",
+    "explanation": "Alur kerja dinamis terspesialisasi untuk domain blockchain_engineer.",
+    "impact_score": 1.0,
+    "timestamp": "2026-09-09T20:33:21.152578",
+    "metadata": {
+      "keywords": [
+        "solidity",
+        "smart contract",
+        "web3",
+        "evm"
+      ],
+      "stages": [
+        "audit",
+        "gas_opt"
+      ]
+    }
   }
 }

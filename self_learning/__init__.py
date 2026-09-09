@@ -17,6 +17,11 @@ from .reflection import (
     ReflectiveExecutor,
     ReflexionMemoryStore,
 )
+from .global_config import (
+    GlobalConfigManager,
+    ProjectEntry,
+    WorkspaceBridge,
+)
 from .identity_lock import (
     ClaudiaIdentity,
     IMMUTABLE_IDENTITY,
@@ -46,5 +51,8 @@ __all__ = [
     "IMMUTABLE_IDENTITY",
     "IdentityGuard",
     "IdentityTamperAttemptError",
+    "GlobalConfigManager",
+    "ProjectEntry",
+    "WorkspaceBridge",
 ]
 

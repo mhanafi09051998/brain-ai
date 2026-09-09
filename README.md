@@ -5,7 +5,7 @@
 
 [![Python Version](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![Architecture](https://img.shields.io/badge/Architecture-Context7%20Deep%20Mode-8A2BE2?style=for-the-badge)](https://github.com/mhanafi09051998/brain-ai)
-[![Test Suite](https://img.shields.io/badge/Tests-23%2F23%20Passing%20(100%25)-success?style=for-the-badge&logo=pytest&logoColor=white)](https://github.com/mhanafi09051998/brain-ai)
+[![Test Suite](https://img.shields.io/badge/Tests-27%2F27%20Passing%20(100%25)-success?style=for-the-badge&logo=pytest&logoColor=white)](https://github.com/mhanafi09051998/brain-ai)
 [![ISO Standard](https://img.shields.io/badge/Standard-ISO%209001%3A2015%20Clause%207.5-orange?style=for-the-badge)](https://github.com/mhanafi09051998/brain-ai)
 [![Zero Leak](https://img.shields.io/badge/Security-Zero%20Credential%20Leakage-green?style=for-the-badge&logo=securityscorecard&logoColor=white)](https://github.com/mhanafi09051998/brain-ai)
 [![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)](LICENSE)
@@ -60,6 +60,8 @@ brain-ai/
 ├── 🧠 self_learning/             # Mesin Inti Pembelajaran Mandiri & Multi-Agent
 │   ├── agents/                   # Substrat Multi-Agent (Observer, Critic, Distiller, Optimizer)
 │   ├── knowledge_base/           # Basis Pengetahuan Persisten & Memori Refleksi Episodik
+│   ├── global_config.py          # Manajemen Konfigurasi Global & Jembatan Lintas Workspace
+│   ├── identity_lock.py          # Penguncian Identitas Abadi (Immutable Identity & Guardrails)
 │   ├── storage.py                # KnowledgeStore berbasis JSON (Heuristik & Anti-Pola)
 │   ├── reflection.py             # Reflexion Engine (Evaluasi Kausal 4-Kuadran)
 │   ├── task_flow.py              # Closed-Loop Agentic Task Flow (6 Fase Otonom)
@@ -68,7 +70,9 @@ brain-ai/
 │   ├── reflection_protocol.md    # Standar Injeksi Prompt Refleksi Kausal
 │   ├── agentic_task_flow.md      # Standar Eksekusi Tugas Bertahap
 │   ├── multi_task_flow.md        # Spesifikasi Pipeline Domain (FullStack, Research, XR, DC)
-│   └── test_*.py                 # Pengujian Unit Otomatis (19/19 Lolos 100%)
+│   └── test_*.py                 # Pengujian Unit Otomatis (27/27 Lolos 100%)
+│
+├── ⚙️ setup_global_config.py      # Skrip Otomasi 1-Komando Instalasi Global Cross-Workspace
 │
 ├── 🎯 .agents/skills/            # Pustaka Keahlian Teknis (Skill Modules)
 │   ├── claudia-brain/            # Standar Identitas, Task Flow & Aturan Operasional
@@ -101,14 +105,15 @@ Setiap siklus kerja rekayasa perangkat lunak dieksekusi melalui 6 fase tertutup:
 
 ---
 
-## 🌐 4. Persistensi Lintas Sesi & Lintas Workspace
+## 🌐 4. Persistensi & Konfigurasi Global Lintas Workspace
 
-Berbeda dengan asisten AI konvensional yang kehilangan ingatan saat sesi berakhir, Claudia Brain dilengkapi **Global Persistent Memory Ledger**:
+Berbeda dengan asisten AI konvensional yang kehilangan ingatan dan konfigurasi saat sesi berakhir atau berpindah direktori, Claudia Brain dilengkapi **Global Persistent Memory Ledger** dan **Automated Cross-Workspace Configuration**:
 
-- **Single Source of Truth**: Berkas [`memory.md`](memory.md) menyimpan status proyek, register arsitektur, parameter integrasi, dan heuristik kegagalan (*negative constraints*).
-- **Cross-Session Continuity**: Pada awal sesi percakapan baru, Claudia otomatis membaca ledger memori untuk memulihkan seluruh konteks historis tanpa perlu instruksi ulang.
-- **Cross-Workspace Bridging**: Mampu membaca, menghubungkan, dan memodifikasi artefak lintas direktori kerja dengan tautan berbasis URI absolut.
-- **Auto-Learn Handover**: Setiap milestone baru atau perbaikan bug kritis langsung dicatat permanen di akhir tugas.
+- **Single Source of Truth**: Berkas [`memory.md`](memory.md) (disinkronkan ke `~/memory.md` di level sistem pengguna) menyimpan status proyek, register arsitektur, parameter integrasi, dan batasan kegagalan (*negative constraints*).
+- **Cross-Session Continuity**: Pada awal sesi percakapan baru di folder manapun, Claudia otomatis membaca ledger memori sentral untuk memulihkan seluruh konteks historis tanpa perlu instruksi ulang.
+- **Cross-Workspace Bridging**: Modul `WorkspaceBridge` dan `GlobalConfigManager` (`self_learning/global_config.py`) secara programmatis membaca, menghubungkan, dan mendaftarkan direktori proyek yang tersebar di disk ke dalam register sentral.
+- **1-Command Global Installer (`setup_global_config.py`)**: Mengotomasi replikasi aturan global (`AGENTS.md`, `GEMINI.md`), registrasi pustaka skill (`.gemini/config/skills/`), dan aktivasi plugin ke direktori konfigurasi global pengguna.
+- **Auto-Learn Handover**: Setiap perbaikan bug kritis atau milestone baru langsung dicatat permanen ke register memori di akhir tugas.
 
 ---
 
@@ -135,7 +140,35 @@ git clone https://github.com/mhanafi09051998/brain-ai.git
 cd brain-ai
 ```
 
-### 2. Jalankan Mode Refleksi Mandiri
+### 2. Pasang Konfigurasi Global (Cross-Workspace Setup)
+Jalankan skrip installer 1-komando untuk mereplikasi aturan dan skills ke direktori konfigurasi global pengguna (`~/.gemini/config/`):
+```bash
+# Periksa status konfigurasi saat ini
+python setup_global_config.py --status
+
+# Pasang konfigurasi global (rules, skills, memory ledger, config.json)
+python setup_global_config.py
+```
+
+### 3. Registrasi & Jembatan Lintas Workspace
+Gunakan `WorkspaceBridge` untuk menghubungkan repositori lokal ke ledger sentral:
+```python
+from self_learning.global_config import WorkspaceBridge
+
+# Daftarkan proyek yang sedang dikerjakan ke memory.md global
+WorkspaceBridge.register_current_workspace(
+    name="Super Mario HTML5",
+    location="C:/Users/Win10/Music/super_mario",
+    status="Production Ready (120 FPS)",
+    notes="Physics Rapier, AABB collision, Web Audio Synthesizer"
+)
+
+# Periksa seluruh proyek yang terdaftar di sistem
+for proj in WorkspaceBridge.get_all_projects():
+    print(f"[{proj.status}] {proj.name} -> {proj.location}")
+```
+
+### 4. Jalankan Mode Refleksi Mandiri
 ```python
 from self_learning.reflection import ReflexionEngine
 
@@ -153,7 +186,7 @@ reflection = engine.analyze(
 print(reflection.to_constraint_prompt())
 ```
 
-### 3. Eksekusi Task Flow 6-Fase
+### 5. Eksekusi Task Flow 6-Fase
 ```python
 from self_learning.task_flow import AgenticTaskFlow
 
@@ -173,11 +206,11 @@ python -m unittest discover -s self_learning -t . -p "test_*.py"
 ```
 
 ```text
-.......................
+...........................
 ----------------------------------------------------------------------
-Ran 23 tests in 0.081s
+Ran 27 tests in 0.109s
 
-OK (23 tests passing, 0 failures, 0 errors)
+OK (27 tests passing, 0 failures, 0 errors)
 ```
 
 ---
