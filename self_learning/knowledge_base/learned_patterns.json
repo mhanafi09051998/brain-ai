@@ -1,0 +1,116 @@
+{
+  "ap_762919de": {
+    "entry_id": "ap_762919de",
+    "task_type": "array_search_optimization",
+    "category": "anti_pattern",
+    "pattern": "Bottleneck Kinerja: Latensi rata-rata (1.3855 ms) melampaui batas target (0.1000 ms).",
+    "explanation": "Algoritma pada iterasi 1 mengalami hambatan efisiensi yang melampaui batas toleransi.",
+    "impact_score": -0.5,
+    "timestamp": "2026-09-09T16:41:26.132589",
+    "metadata": {
+      "iteration": 1
+    }
+  },
+  "ap_7db9f1c2": {
+    "entry_id": "ap_7db9f1c2",
+    "task_type": "array_search_optimization",
+    "category": "anti_pattern",
+    "pattern": "Kegagalan pengujian pada input: ([], 42)",
+    "explanation": "Pengujian 'Edge Case: Array Kosong' gagal menghasilkan output yang sesuai. Ekspektasi: None, Aktual: None. Tipe galat: ValueError.",
+    "impact_score": -0.8,
+    "timestamp": "2026-09-09T16:41:26.134594",
+    "metadata": {
+      "iteration": 2,
+      "test_name": "Edge Case: Array Kosong"
+    }
+  },
+  "h_9c4a602e": {
+    "entry_id": "h_9c4a602e",
+    "task_type": "array_search_optimization",
+    "category": "heuristic",
+    "pattern": "Strategi Optimal: Buggy Binary Search",
+    "explanation": "Solusi mencapai skor kesesuaian 86.0/100 dengan pass rate 80.0% dan rata-rata latensi 0.0059 ms.",
+    "impact_score": 0.9,
+    "timestamp": "2026-09-09T16:41:26.134594",
+    "metadata": {
+      "iteration": 2,
+      "fitness_score": 86.0
+    }
+  },
+  "h_3737eeb1": {
+    "entry_id": "h_3737eeb1",
+    "task_type": "array_search_optimization",
+    "category": "heuristic",
+    "pattern": "Strategi Optimal: Optimized Binary Search O(log N)",
+    "explanation": "Solusi mencapai skor kesesuaian 100.0/100 dengan pass rate 100.0% dan rata-rata latensi 0.0059 ms.",
+    "impact_score": 0.9,
+    "timestamp": "2026-09-09T16:41:26.134594",
+    "metadata": {
+      "iteration": 3,
+      "fitness_score": 100.0
+    }
+  },
+  "dynflow-df4f5214": {
+    "entry_id": "dynflow-df4f5214",
+    "task_type": "dynamic_task_flow",
+    "category": "heuristic",
+    "pattern": "Pipeline blockchain_engineer (2 stages)",
+    "explanation": "Alur kerja dinamis terspesialisasi untuk domain blockchain_engineer.",
+    "impact_score": 1.0,
+    "timestamp": "2026-09-09T17:33:13.363664",
+    "metadata": {
+      "keywords": [
+        "solidity",
+        "smart contract",
+        "web3",
+        "evm"
+      ],
+      "stages": [
+        "audit",
+        "gas_opt"
+      ]
+    }
+  },
+  "dynflow-01271794": {
+    "entry_id": "dynflow-01271794",
+    "task_type": "dynamic_task_flow",
+    "category": "heuristic",
+    "pattern": "Pipeline blockchain_engineer (2 stages)",
+    "explanation": "Alur kerja dinamis terspesialisasi untuk domain blockchain_engineer.",
+    "impact_score": 1.0,
+    "timestamp": "2026-09-09T17:38:25.595102",
+    "metadata": {
+      "keywords": [
+        "solidity",
+        "smart contract",
+        "web3",
+        "evm"
+      ],
+      "stages": [
+        "audit",
+        "gas_opt"
+      ]
+    }
+  },
+  "dynflow-8e441373": {
+    "entry_id": "dynflow-8e441373",
+    "task_type": "dynamic_task_flow",
+    "category": "heuristic",
+    "pattern": "Pipeline blockchain_engineer (2 stages)",
+    "explanation": "Alur kerja dinamis terspesialisasi untuk domain blockchain_engineer.",
+    "impact_score": 1.0,
+    "timestamp": "2026-09-09T19:52:52.852742",
+    "metadata": {
+      "keywords": [
+        "solidity",
+        "smart contract",
+        "web3",
+        "evm"
+      ],
+      "stages": [
+        "audit",
+        "gas_opt"
+      ]
+    }
+  }
+}
