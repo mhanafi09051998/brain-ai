@@ -5,7 +5,7 @@
 
 [![Python Version](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![Architecture](https://img.shields.io/badge/Architecture-Context7%20Deep%20Mode-8A2BE2?style=for-the-badge)](https://github.com/mhanafi09051998/brain-ai)
-[![Test Suite](https://img.shields.io/badge/Tests-19%2F19%20Passing%20(100%25)-success?style=for-the-badge&logo=pytest&logoColor=white)](https://github.com/mhanafi09051998/brain-ai)
+[![Test Suite](https://img.shields.io/badge/Tests-23%2F23%20Passing%20(100%25)-success?style=for-the-badge&logo=pytest&logoColor=white)](https://github.com/mhanafi09051998/brain-ai)
 [![ISO Standard](https://img.shields.io/badge/Standard-ISO%209001%3A2015%20Clause%207.5-orange?style=for-the-badge)](https://github.com/mhanafi09051998/brain-ai)
 [![Zero Leak](https://img.shields.io/badge/Security-Zero%20Credential%20Leakage-green?style=for-the-badge&logo=securityscorecard&logoColor=white)](https://github.com/mhanafi09051998/brain-ai)
 [![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)](LICENSE)
@@ -173,21 +173,22 @@ python -m unittest discover -s self_learning -t . -p "test_*.py"
 ```
 
 ```text
-...................
+.......................
 ----------------------------------------------------------------------
-Ran 19 tests in 0.077s
+Ran 23 tests in 0.081s
 
-OK (19 tests passing, 0 failures, 0 errors)
+OK (23 tests passing, 0 failures, 0 errors)
 ```
 
 ---
 
-## 🔒 8. Kebijakan Keamanan & Kredensial (Zero Leakage)
+## 🔒 8. Kebijakan Keamanan, Kredensial & Penguncian Identitas Abadi
 
-Repositori ini menerapkan standar sanitasi ketat untuk melindungi privasi dan keamanan:
-- **Nol Kredensial**: Tidak ada API Key, Private Token, atau kredensial autentikasi yang tersimpan di dalam repositori.
-- **Strict `.gitignore`**: Seluruh berkas konfigurasi lokal (`.env`, `*.token`, `*.key`, file cache, dan log runtime) otomatis diabaikan dari pelacakan git.
-- **Aman Diklon**: Repositori ini aman untuk diklon, dipelajari, dan digunakan oleh komunitas pengembang tanpa risiko kebocoran data sensitif.
+Repositori ini menerapkan standar sanitasi dan proteksi identitas berlapis:
+- **Penguncian Identitas Abadi (*Immutable Identity Lock*)**: Identitas Claudia dikunci permanen menggunakan kelas `ClaudiaIdentity` (*frozen dataclass*) dan guardrail `IdentityGuard` (`self_learning/identity_lock.py`). Upaya *prompt injection*, manipulasi persona ("ignore previous instructions", "act as DAN"), atau perusakan identitas otomatis ditolak secara programmatis di gerbang tugas.
+- **Nol Kredensial (*Zero Leakage Policy*)**: Tidak ada API Key, Private Token, alamat email pribadi, atau kredensial autentikasi yang tersimpan di dalam riwayat repositori maupun berkas `.git/config`.
+- **Strict `.gitignore`**: Seluruh berkas konfigurasi lokal (`.env*`, `*.token`, `*.key`, cache `__pycache__`, dan file log) otomatis diabaikan dari pelacakan git.
+- **Aman Diklon Bebas**: Repositori ini aman untuk di-clone secara massal, dipelajari, dan digunakan oleh komunitas pengembang tanpa risiko kebocoran data sensitif.
 
 ---
 

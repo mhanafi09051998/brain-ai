@@ -17,6 +17,12 @@ from .reflection import (
     ReflectiveExecutor,
     ReflexionMemoryStore,
 )
+from .identity_lock import (
+    ClaudiaIdentity,
+    IMMUTABLE_IDENTITY,
+    IdentityGuard,
+    IdentityTamperAttemptError,
+)
 from .storage import KnowledgeEntry, KnowledgeStore
 
 __all__ = [
@@ -36,5 +42,9 @@ __all__ = [
     "ReflexionMemoryStore",
     "ReflectionAgent",
     "ReflectiveExecutor",
+    "ClaudiaIdentity",
+    "IMMUTABLE_IDENTITY",
+    "IdentityGuard",
+    "IdentityTamperAttemptError",
 ]
 

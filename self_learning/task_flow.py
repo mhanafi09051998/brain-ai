@@ -16,6 +16,7 @@ from pathlib import Path
 from typing import Any, Callable, Dict, List, Optional
 import uuid
 
+from .identity_lock import IdentityGuard
 from .reflection import ReflectionRecord, ReflexionMemoryStore
 from .storage import KnowledgeEntry, KnowledgeStore
 
@@ -92,6 +93,10 @@ class AgenticTaskFlow:
         max_attempts: int = 3,
     ) -> TaskFlowContext:
         """Mengeksekusi pipeline 6-fase terstruktur dengan reflexi diri otomatis jika gagal."""
+
+        # Validasi Integritas Identitas Claudia (Immutable Identity Guardrail)
+        IdentityGuard.validate_instruction(task_name)
+        IdentityGuard.validate_instruction(intended_goal)
 
         context = TaskFlowContext(
             task_id=f"flow-{uuid.uuid4().hex[:8]}",

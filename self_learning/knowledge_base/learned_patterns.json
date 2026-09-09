@@ -112,5 +112,26 @@
         "gas_opt"
       ]
     }
+  },
+  "dynflow-1e9dd4e5": {
+    "entry_id": "dynflow-1e9dd4e5",
+    "task_type": "dynamic_task_flow",
+    "category": "heuristic",
+    "pattern": "Pipeline blockchain_engineer (2 stages)",
+    "explanation": "Alur kerja dinamis terspesialisasi untuk domain blockchain_engineer.",
+    "impact_score": 1.0,
+    "timestamp": "2026-09-09T20:18:36.473054",
+    "metadata": {
+      "keywords": [
+        "solidity",
+        "smart contract",
+        "web3",
+        "evm"
+      ],
+      "stages": [
+        "audit",
+        "gas_opt"
+      ]
+    }
   }
 }
