@@ -1,4 +1,4 @@
-﻿---
+---
 name: mikrotik-routeros-engineering
 description: Production-grade engineering guide and empirical configuration reference for MikroTik RouterOS v7. Covers routing engine invariants, L3 hardware offloading, connection tracking, multi-tier firewall hardening, PCC multi-WAN load balancing, recursive routing failover, WireGuard site-to-site & hub-and-spoke topologies, hierarchical Queue Trees with PCQ/CAKE bufferbloat mitigation, and failure-resilient automation scripting with Telegram alerting.
 ---
@@ -119,3 +119,15 @@ add name=LAN_PCQ_DOWN parent=TOTAL_DOWNLOAD limit-at=90M max-limit=100M queue=PC
 add name=TOTAL_UPLOAD parent=WAN1 max-limit=50M
 add name=LAN_PCQ_UP parent=TOTAL_UPLOAD limit-at=45M max-limit=50M queue=PCQ_Upload packet-mark=PM_UP
 ```
+
+---
+
+## 6. Empirical Production Quirks & Invariants
+
+### A. Netwatch Flapping Prevention & Safe Failover Scripts
+* In RouterOS v7, single-probe Netwatch (`interval=5s timeout=1.5s`) flaps violently on transient public WAN jitter. Always configure multi-probe: `interval=10s timeout=2s packet-count=4 packet-interval=250ms thr-loss-percent=75%`.
+* Script connection removals (`/ip firewall connection remove`) will crash with `no such item` if stale entries vanish during execution. Always wrap inside `:do { ... } on-error={}`.
+
+### B. Transparent Port 53 DNS Redirect with PCC Multi-WAN
+* When redirecting local DNS traffic (`action=redirect to-ports=53 dst-port=53`), Mangle must explicitly `accept` port 53 traffic (`action=accept in-interface=bridge1 dst-port=53`) *before* PCC `mark-connection` rules. Otherwise, intercepted DNS requests receive WAN routing marks, corrupting reverse NAT and causing client timeouts.
+
