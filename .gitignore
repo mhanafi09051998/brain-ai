@@ -63,3 +63,7 @@ service-account*.json
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Runtime knowledge base (ditulis KnowledgeStore / ReflexionMemoryStore saat benchmark & pemakaian)
+self_learning/knowledge_base/*.json
+self_learning/knowledge_base/*.tmp

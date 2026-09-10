@@ -8,7 +8,11 @@ from typing import Any, Callable, Dict, List, Optional
 
 @dataclass
 class TestCase:
-    """Spesifikasi kasus uji empiris."""
+    """Spesifikasi kasus uji empiris.
+
+    `inputs` bertipe tuple diperlakukan sebagai daftar argumen posisional
+    (`fn(*inputs)`); tipe lain diteruskan sebagai satu argumen (`fn(inputs)`).
+    """
 
     name: str
     inputs: Any
@@ -30,6 +34,13 @@ class ExecutionReport:
     raw_outputs: List[Any] = field(default_factory=list)
 
 
+def invoke_candidate(candidate_fn: Callable, inputs: Any) -> Any:
+    """Memanggil fungsi kandidat dengan konvensi argumen TestCase (tuple = *args)."""
+    if isinstance(inputs, tuple):
+        return candidate_fn(*inputs)
+    return candidate_fn(inputs)
+
+
 class ObserverAgent:
     """Agen pengamat yang menguji fungsi kandidat secara empiris dan mencatat telemetri."""
 
@@ -44,21 +55,18 @@ class ObserverAgent:
         raw_outputs = []
         execution_times: List[float] = []
 
-        # Warmup jika diminta
-        if self.warmup_runs > 0 and test_cases:
-            try:
-                candidate_fn(test_cases[0].inputs)
-            except Exception:
-                pass
+        # Warmup (cache/JIT/import lazy) agar pengukuran latensi pertama tidak bias
+        if test_cases:
+            for _ in range(self.warmup_runs):
+                try:
+                    invoke_candidate(candidate_fn, test_cases[0].inputs)
+                except Exception:
+                    pass
 
         for tc in test_cases:
             t_start = time.perf_counter()
             try:
-                # Menangani input tunggal vs tuple argumen
-                if isinstance(tc.inputs, tuple):
-                    actual = candidate_fn(*tc.inputs)
-                else:
-                    actual = candidate_fn(tc.inputs)
+                actual = invoke_candidate(candidate_fn, tc.inputs)
 
                 t_end = time.perf_counter()
                 elapsed_ms = (t_end - t_start) * 1000.0

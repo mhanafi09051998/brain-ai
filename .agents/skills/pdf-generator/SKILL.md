@@ -162,10 +162,44 @@ Dengan parameter di atas, judul tab di peramban web akan menampilkan nama dokume
 ## 5. Modul Reusable
 
 Engine Python siap pakai dapat diimpor langsung dari:
-`skills/pdf-generator/scripts/executive_pdf.py`
+`skills/pdf-generator/scripts/executive_pdf.py` (dependensi: `pip install "reportlab>=4"`).
 
-Contoh penggunaan:
+Teks running header/footer **tidak di-hardcode**: gunakan `make_canvas(...)` untuk mengisi nama perusahaan, divisi, subjek, dan penulis per dokumen, lalu `create_document(...)` untuk `SimpleDocTemplate` dengan metadata PDF wajib (Bagian 4).
+
 ```python
-from executive_pdf import AstraNumberedCanvas, get_astra_styles, create_callout_box, create_terminal_code_block
+from executive_pdf import (
+    create_document, make_canvas, get_astra_styles,
+    create_callout_box, create_terminal_code_block,
+)
+from reportlab.platypus import Paragraph, PageBreak
+
+styles = get_astra_styles()
+doc = create_document(
+    "laporan.pdf",
+    title="Kandidat 1 - Sistem Kepatuhan CPOTB | PT Contoh (IT KBGroup)",
+    author="Muhammad Hanafi, S.Tr.Kom (IT KBGroup)",
+    subject="Uji Kompetensi Teknis Full Stack Software Engineer",
+    creator="IT KBGroup - PT Contoh",
+)
+
+story = [Paragraph("Studi Kasus Teknis", styles["DocTitle"])]
+story += [create_callout_box("Kutipan stakeholder.", "Nama", "Peran", styles)]
+story += create_terminal_code_block("SELECT id FROM users;", "sql", styles)
+story += [PageBreak(), Paragraph("Arsitektur Teknis", styles["SectionHeading"])]
+
+doc.build(
+    story,
+    canvasmaker=make_canvas(
+        company_name="PT CONTOH",
+        division_name="IT KBGroup",
+        doc_subject="Dokumen Uji Kompetensi Teknis Full Stack Software Engineer",
+        author_label="Lead Asesor",
+        author_name="Muhammad Hanafi, S.Tr.Kom",
+        confidentiality_note="Kerahasiaan Dokumen Internal",
+        doc_year=2026,
+    ),
+)
 ```
+
+Atribut yang didukung `make_canvas`: `company_name`, `division_name`, `doc_subject`, `author_label`, `author_name`, `confidentiality_note`, `doc_year`. Nama atribut lain ditolak dengan `TypeError`.
 

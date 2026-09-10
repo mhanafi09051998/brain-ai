@@ -12,14 +12,13 @@ from __future__ import annotations
 
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
-from datetime import datetime
 from enum import Enum
-from typing import Any, Callable, Dict, List, Optional
-import uuid
+import re
+from typing import Any, Callable, Dict, List, Optional, Sequence
 
-from .reflection import ReflectionRecord, ReflexionMemoryStore
+from .reflection import ReflexionMemoryStore
 from .storage import KnowledgeEntry, KnowledgeStore
-from .task_flow import FlowStep, StepStatus, TaskFlowContext, TaskPhase
+from .task_flow import StepStatus, TaskFlowContext, TaskPhase
 
 
 class DomainRole(str, Enum):
@@ -29,6 +28,23 @@ class DomainRole(str, Enum):
     SPATIAL_XR = "spatial_xr_developer"
     DOCUMENT_CONTROLLER = "document_controller"
     OPTIMIZER = "performance_optimizer"
+
+
+# Kata kunci routing bawaan per domain. Urutan menentukan prioritas pencocokan.
+XR_KEYWORDS: Sequence[str] = ("ar/vr", "webxr", "three.js", "threejs", "a-frame", "spatial", "quest", "3d", "teleport")
+DOCUMENT_CONTROL_KEYWORDS: Sequence[str] = ("document control", "iso 9001", "mdr", "transmittal", "revisi", "klausul 7.5", "pengendali dokumen")
+RESEARCH_KEYWORDS: Sequence[str] = ("riset", "analisis", "research", "bedah kode", "investigasi", "bandingkan", "survey")
+
+
+def contains_keyword(text: str, keywords: Sequence[str]) -> bool:
+    """Mencocokkan kata kunci sebagai token utuh (bukan substring), tidak peka huruf besar/kecil.
+    `"3d"` cocok pada "adegan 3d" tetapi tidak pada "id3d"; `"mdr"` tidak cocok pada "admdr"."""
+    lowered = text.lower()
+    for keyword in keywords:
+        pattern = r"(?<!\w)" + re.escape(keyword.lower()) + r"(?!\w)"
+        if re.search(pattern, lowered):
+            return True
+    return False
 
 
 @dataclass
@@ -46,19 +62,32 @@ class BaseSpecializedTaskFlow(ABC):
 
     def __init__(
         self,
-        domain_role: DomainRole,
+        domain_role: DomainRole | str,
         memory_store: Optional[ReflexionMemoryStore] = None,
         knowledge_store: Optional[KnowledgeStore] = None,
     ):
         self.domain_role = domain_role
-        self.memory_store = memory_store or ReflexionMemoryStore()
-        self.knowledge_store = knowledge_store or KnowledgeStore()
+        self.memory_store = memory_store if memory_store is not None else ReflexionMemoryStore()
+        self.knowledge_store = knowledge_store if knowledge_store is not None else KnowledgeStore()
         self.stages: List[DomainStage] = self._define_stages()
+
+    @property
+    def role_label(self) -> str:
+        """Nama peran untuk label langkah (enum bawaan maupun peran kustom dinamis)."""
+        if isinstance(self.domain_role, DomainRole):
+            return self.domain_role.value
+        return str(self.domain_role)
+
+    def get_stage(self, stage_id: str) -> DomainStage:
+        """Mengambil tahapan berdasarkan `stage_id`; ValueError jika tidak ada."""
+        for stage in self.stages:
+            if stage.stage_id == stage_id:
+                return stage
+        raise ValueError(f"Stage '{stage_id}' tidak terdaftar pada flow '{self.role_label}'.")
 
     @abstractmethod
     def _define_stages(self) -> List[DomainStage]:
         """Mendefinisikan tahapan-tahapan khusus domain."""
-        pass
 
     def execute_stage(
         self,
@@ -70,7 +99,7 @@ class BaseSpecializedTaskFlow(ABC):
         """Mengeksekusi satu tahapan domain secara tertutup."""
         step = context.add_step(
             phase=TaskPhase.EXECUTION,
-            name=f"[{self.domain_role.value.upper()}] {stage.name}",
+            name=f"[{self.role_label.upper()}] {stage.name}",
             status=StepStatus.RUNNING,
             detail=stage.description
         )
@@ -299,14 +328,17 @@ class DynamicTaskFlow(BaseSpecializedTaskFlow):
         memory_store: Optional[ReflexionMemoryStore] = None,
         knowledge_store: Optional[KnowledgeStore] = None,
     ):
+        if not custom_role_name:
+            raise ValueError("custom_role_name tidak boleh kosong.")
+        if not custom_stages:
+            raise ValueError("DynamicTaskFlow membutuhkan minimal satu DomainStage.")
         self.custom_role_name = custom_role_name
-        self._custom_stages = custom_stages
-        # Inisialisasi tanpa enum kaku
-        super().__init__(DomainRole.FULLSTACK, memory_store, knowledge_store)
-        self.stages = custom_stages
+        self._custom_stages = list(custom_stages)
+        # Peran kustom dipakai langsung sebagai label (tidak menyamar sebagai FULLSTACK)
+        super().__init__(custom_role_name, memory_store, knowledge_store)
 
     def _define_stages(self) -> List[DomainStage]:
-        return getattr(self, "_custom_stages", [])
+        return self._custom_stages
 
 
 class TaskFlowRouter:
@@ -317,8 +349,8 @@ class TaskFlowRouter:
         memory_store: Optional[ReflexionMemoryStore] = None,
         knowledge_store: Optional[KnowledgeStore] = None
     ):
-        self.memory_store = memory_store or ReflexionMemoryStore()
-        self.knowledge_store = knowledge_store or KnowledgeStore()
+        self.memory_store = memory_store if memory_store is not None else ReflexionMemoryStore()
+        self.knowledge_store = knowledge_store if knowledge_store is not None else KnowledgeStore()
 
         self.flows: Dict[str, BaseSpecializedTaskFlow] = {
             DomainRole.FULLSTACK.value: FullStackTaskFlow(self.memory_store, self.knowledge_store),
@@ -350,15 +382,18 @@ class TaskFlowRouter:
         )
         self.flows[role_name] = flow
 
+        # Registrasi ulang peran yang sama menimpa aturan lama (idempoten, tanpa duplikasi)
+        self.custom_routing_rules = [r for r in self.custom_routing_rules if r["role_name"] != role_name]
         if keywords:
             self.custom_routing_rules.append({
                 "role_name": role_name,
                 "keywords": [k.lower() for k in keywords]
             })
 
-        # Persistensikan pengetahuan alur baru ke knowledge store
+        # Persistensikan pengetahuan alur baru ke knowledge store.
+        # ID deterministik per peran: registrasi berulang memperbarui entri, bukan menumpuk duplikat.
         self.knowledge_store.add(KnowledgeEntry(
-            entry_id=f"dynflow-{uuid.uuid4().hex[:8]}",
+            entry_id=f"dynflow-{role_name}",
             task_type="dynamic_task_flow",
             category="heuristic",
             pattern=f"Pipeline {role_name} ({len(stages)} stages)",
@@ -371,23 +406,21 @@ class TaskFlowRouter:
 
     def route_by_task_description(self, description: str) -> BaseSpecializedTaskFlow:
         """Menganalisis deskripsi tugas dan memilih flow yang paling tepat secara otomatis."""
-        text = description.lower()
-
         # 1. Cek aturan kustom dinamis terlebih dahulu
         for rule in self.custom_routing_rules:
-            if any(k in text for k in rule["keywords"]):
+            if contains_keyword(description, rule["keywords"]):
                 return self.flows[rule["role_name"]]
 
         # 2. XR / 3D Keywords
-        if any(k in text for k in ["ar/vr", "webxr", "three.js", "threejs", "a-frame", "spatial", "quest", "3d", "teleport"]):
+        if contains_keyword(description, XR_KEYWORDS):
             return self.flows[DomainRole.SPATIAL_XR.value]
 
         # 3. Document Control Keywords
-        if any(k in text for k in ["document control", "iso 9001", "mdr", "transmittal", "revisi", "klausul 7.5", "pengendali dokumen"]):
+        if contains_keyword(description, DOCUMENT_CONTROL_KEYWORDS):
             return self.flows[DomainRole.DOCUMENT_CONTROLLER.value]
 
         # 4. Research Keywords
-        if any(k in text for k in ["riset", "analisis", "research", "bedah kode", "investigasi", "bandingkan", "survey"]):
+        if contains_keyword(description, RESEARCH_KEYWORDS):
             return self.flows[DomainRole.RESEARCHER.value]
 
         # 5. Default to FullStack

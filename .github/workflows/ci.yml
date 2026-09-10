@@ -1,0 +1,70 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Python ${{ matrix.python-version }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Byte-compile seluruh sumber
+        run: python -m compileall -q self_learning setup_global_config.py .agents/skills/pdf-generator/scripts/executive_pdf.py
+
+      - name: Unit tests (58 tests, store terisolasi)
+        run: python -m unittest discover -s self_learning -t . -p "test_*.py" -v
+
+      - name: Benchmark self-learning (smoke)
+        run: python -m self_learning.benchmark
+
+      - name: Installer dry-run (tidak menulis ke home runner)
+        run: python setup_global_config.py --dry-run
+
+      - name: Pastikan test/benchmark tidak mengotori working tree
+        shell: bash
+        run: |
+          git status --porcelain
+          test -z "$(git status --porcelain)"
+
+  pdf-skill:
+    name: Skill pdf-generator (reportlab)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install "reportlab>=4.0"
+      - name: Render PDF contoh dengan executive_pdf
+        shell: bash
+        run: |
+          cd .agents/skills/pdf-generator/scripts
+          python - <<'EOF'
+          from executive_pdf import create_document, get_astra_styles, make_canvas, create_callout_box, create_terminal_code_block
+          from reportlab.platypus import Paragraph, PageBreak
+          styles = get_astra_styles()
+          doc = create_document("ci_smoke.pdf", title="CI Smoke", author="CI", subject="Smoke", creator="CI")
+          story = [Paragraph("Judul", styles["DocTitle"]), create_callout_box("Kutipan", "Nama", "Peran", styles)]
+          story += create_terminal_code_block("SELECT 1;", "sql", styles) + [PageBreak(), Paragraph("Halaman 2", styles["BodyText"])]
+          doc.build(story, canvasmaker=make_canvas(company_name="CI CORP", doc_subject="Smoke"))
+          data = open("ci_smoke.pdf", "rb").read()
+          assert b"CI Smoke" in data and data.count(b"/Type /Page") - data.count(b"/Type /Pages") == 2
+          print("PDF OK:", len(data), "bytes")
+          EOF

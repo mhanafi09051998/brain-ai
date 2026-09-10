@@ -27,11 +27,25 @@ class CritiqueReport:
     metadata: Dict[str, Any] = field(default_factory=dict)
 
 
+def _has_empty_or_zero_input(inputs: Any) -> bool:
+    """Mendeteksi input edge case (koleksi/string kosong atau nol). Untuk input tuple
+    (multi-argumen), cukup salah satu argumen yang memenuhi kriteria."""
+    candidates = inputs if isinstance(inputs, tuple) else (inputs,)
+    for value in candidates:
+        if isinstance(value, bool):
+            continue
+        if isinstance(value, (int, float)) and value == 0:
+            return True
+        if isinstance(value, (str, bytes, list, dict, set, frozenset)) and len(value) == 0:
+            return True
+    return False
+
+
 class CriticAgent:
     """Agen pengkritik yang mengevaluasi apakah solusi telah memenuhi standar dan mendiagnosis kelemahan."""
 
     def __init__(self, target_profile: Optional[TargetProfile] = None):
-        self.target = target_profile or TargetProfile()
+        self.target = target_profile if target_profile is not None else TargetProfile()
 
     def evaluate(self, report: ExecutionReport) -> CritiqueReport:
         """Mengevaluasi laporan eksekusi dan menghasilkan kritik terstruktur."""
@@ -53,13 +67,16 @@ class CriticAgent:
             )
             # Analisis jenis kesalahan
             error_types = set()
+            edge_case_hit = False
             for fail in report.failure_details:
                 err = fail.get("error_type", "Unknown")
                 error_types.add(err)
-                if "inputs" in fail and (fail["inputs"] == [] or fail["inputs"] == "" or fail["inputs"] == 0):
-                    bottlenecks.append("Gagal menangani edge case (input kosong/nol).")
+                if "inputs" in fail and _has_empty_or_zero_input(fail["inputs"]):
+                    edge_case_hit = True
+            if edge_case_hit:
+                bottlenecks.append("Gagal menangani edge case (input kosong/nol).")
 
-            for et in error_types:
+            for et in sorted(error_types):
                 actionable_feedback.append(f"Terjadi error bertipe '{et}' pada kasus uji.")
 
         # 2. Evaluasi Latensi / Performa

@@ -20,11 +20,13 @@
 
 ---
 
-## Konteks Proyek (TheAlgorithms/Python Study)
-Direktori ini (`C:\Users\Win10\Music\train`) memuat studi komprehensif repositori algoritma:
-- `the_algorithms_python/`: Kode sumber asli TheAlgorithms/Python.
-- `hasil_pembelajaran_algoritma_python/`: Modul rangkuman terstruktur (01 hingga 07) serta kode contoh murni terverifikasi 110 doctests di `hasil_pembelajaran_algoritma_python/contoh_implementasi/`.
-- Dokumen inti: `README.md`, `identity.md`, `soul.md`, `memory.md`.
+## Konteks Proyek (Claudia Brain AI)
+Repositori ini (`brain-ai`) adalah inti sistem kecerdasan Claudia, Python stdlib murni (≥ 3.10):
+- `self_learning/`: Self-Learning Engine (Observer/Critic/Distiller/Optimizer), Reflexion Engine 4-kuadran, Closed-Loop Task Flow 6-fase, Multi-Task Flow Router, Identity Lock, dan Global Config/Workspace Bridge. Diverifikasi 58 unit test (`python -m unittest discover -s self_learning -t . -p "test_*.py"`).
+- `self_learning/knowledge_base/`: store runtime (`learned_patterns.json`, `reflections.json`), tidak dilacak git.
+- `.agents/skills/`: pustaka skill (`claudia-brain`, `web-game-dev`, `document-controller`, `pdf-generator`).
+- `setup_global_config.py`: installer/uninstaller konfigurasi global (`--status`, `--dry-run`, `--uninstall`).
+- Dokumen inti: `README.md`, `identity.md`, `soul.md`, `memory.md`, `AGENTS.md`, `GEMINI.md`.
 
 ---
 

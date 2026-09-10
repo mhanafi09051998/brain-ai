@@ -5,7 +5,9 @@
 
 [![Python Version](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![Architecture](https://img.shields.io/badge/Architecture-Context7%20Deep%20Mode-8A2BE2?style=for-the-badge)](https://github.com/mhanafi09051998/brain-ai)
-[![Test Suite](https://img.shields.io/badge/Tests-27%2F27%20Passing%20(100%25)-success?style=for-the-badge&logo=pytest&logoColor=white)](https://github.com/mhanafi09051998/brain-ai)
+[![CI](https://img.shields.io/github/actions/workflow/status/mhanafi09051998/brain-ai/ci.yml?branch=main&style=for-the-badge&logo=githubactions&logoColor=white&label=CI)](https://github.com/mhanafi09051998/brain-ai/actions/workflows/ci.yml)
+[![Test Suite](https://img.shields.io/badge/Tests-58%2F58%20Passing%20(100%25)-success?style=for-the-badge&logo=pytest&logoColor=white)](https://github.com/mhanafi09051998/brain-ai/actions/workflows/ci.yml)
+[![Dependencies](https://img.shields.io/badge/Dependencies-Zero%20(stdlib)-informational?style=for-the-badge)](pyproject.toml)
 [![ISO Standard](https://img.shields.io/badge/Standard-ISO%209001%3A2015%20Clause%207.5-orange?style=for-the-badge)](https://github.com/mhanafi09051998/brain-ai)
 [![Zero Leak](https://img.shields.io/badge/Security-Zero%20Credential%20Leakage-green?style=for-the-badge&logo=securityscorecard&logoColor=white)](https://github.com/mhanafi09051998/brain-ai)
 [![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)](LICENSE)
@@ -58,22 +60,26 @@ Sistem dirancang secara modular dengan pemisahan peran yang tegas (*separation o
 ```
 brain-ai/
 │
-├── 🧠 self_learning/             # Mesin Inti Pembelajaran Mandiri & Multi-Agent
+├── 🧠 self_learning/             # Mesin Inti Pembelajaran Mandiri & Multi-Agent (stdlib murni)
 │   ├── agents/                   # Substrat Multi-Agent (Observer, Critic, Distiller, Optimizer)
-│   ├── knowledge_base/           # Basis Pengetahuan Persisten & Memori Refleksi Episodik
+│   ├── engine.py                 # SelfLearningEngine: orkestrasi Observe → Critique → Distill → Optimize
+│   ├── knowledge_base/           # Store runtime (learned_patterns.json & reflections.json, tidak dilacak git)
 │   ├── global_config.py          # Manajemen Konfigurasi Global & Jembatan Lintas Workspace
 │   ├── identity_lock.py          # Penguncian Identitas Abadi (Immutable Identity & Guardrails)
-│   ├── storage.py                # KnowledgeStore berbasis JSON (Heuristik & Anti-Pola)
+│   ├── storage.py                # KnowledgeStore berbasis JSON (penulisan atomik, toleran berkas rusak)
 │   ├── reflection.py             # Reflexion Engine (Evaluasi Kausal 4-Kuadran)
 │   ├── task_flow.py              # Closed-Loop Agentic Task Flow (6 Fase Otonom)
 │   ├── multi_task_flow.py        # Multi-Task Flow Terdistribusi per Disiplin & Dynamic Router
+│   ├── benchmark.py              # Demo/benchmark konvergensi O(N) → O(log N)
 │   ├── protocol.md               # Spesifikasi Siklus Tertutup OODA
 │   ├── reflection_protocol.md    # Standar Injeksi Prompt Refleksi Kausal
 │   ├── agentic_task_flow.md      # Standar Eksekusi Tugas Bertahap
 │   ├── multi_task_flow.md        # Spesifikasi Pipeline Domain (FullStack, Research, XR, DC)
-│   └── test_*.py                 # Pengujian Unit Otomatis (27/27 Lolos 100%)
+│   └── test_*.py                 # 58 unit test (store terisolasi di direktori sementara)
 │
-├── ⚙️ setup_global_config.py      # Skrip Otomasi 1-Komando Instalasi Global Cross-Workspace
+├── ⚙️ setup_global_config.py      # Installer/uninstaller 1-komando konfigurasi global (--status/--dry-run/--uninstall)
+├── 📦 pyproject.toml              # Metadata paket (PEP 621), Python ≥ 3.10, nol dependensi runtime
+├── 🤖 .github/workflows/ci.yml    # CI: compileall + unittest + benchmark + installer dry-run (Linux & Windows, 3.10–3.13)
 │
 ├── 🎯 .agents/skills/            # Pustaka Keahlian Teknis (Skill Modules)
 │   ├── claudia-brain/            # Standar Identitas, Task Flow & Aturan Operasional
@@ -132,87 +138,158 @@ Berbeda dengan asisten AI konvensional yang kehilangan ingatan dan konfigurasi s
 ## ⚡ 6. Panduan Instalasi & Penggunaan Cepat
 
 ### Prasyarat
-- Python 3.10 atau versi yang lebih baru.
+- Python 3.10 atau versi yang lebih baru (tanpa dependensi eksternal).
 - Git.
+- Opsional: `reportlab>=4` hanya untuk skill `pdf-generator` (`pip install -e ".[pdf]"`).
 
 ### 1. Klon Repositori
 ```bash
 git clone https://github.com/mhanafi09051998/brain-ai.git
 cd brain-ai
+
+# Opsional: pasang sebagai paket (editable) agar `import self_learning` bekerja dari folder mana pun
+pip install -e .
 ```
 
 ### 2. Pasang Konfigurasi Global (Cross-Workspace Setup)
-Jalankan skrip installer 1-komando untuk mereplikasi aturan dan skills ke direktori konfigurasi global pengguna (`~/.gemini/config/`):
+Jalankan skrip installer 1-komando untuk mereplikasi aturan dan skills ke direktori konfigurasi global pengguna (`~/.gemini/config/`). Installer bersifat **idempoten**: aman dijalankan berulang, tidak menggandakan entri registry, dan **tidak pernah menimpa** `~/memory.md` yang sudah ada.
 ```bash
 # Periksa status konfigurasi saat ini
 python setup_global_config.py --status
 
+# Simulasi tanpa menulis berkas apa pun
+python setup_global_config.py --dry-run
+
 # Pasang konfigurasi global (rules, skills, memory ledger, config.json)
 python setup_global_config.py
+
+# Lepas rules/skills/registry yang dipasang (memory.md dipertahankan)
+python setup_global_config.py --uninstall
 ```
 
 ### 3. Registrasi & Jembatan Lintas Workspace
-Gunakan `WorkspaceBridge` untuk menghubungkan repositori lokal ke ledger sentral:
+Gunakan `GlobalConfigManager` untuk menulis ke ledger sentral dan `WorkspaceBridge` untuk membacanya dari workspace lain:
 ```python
-from self_learning.global_config import WorkspaceBridge
+from self_learning import GlobalConfigManager, WorkspaceBridge
 
-# Daftarkan proyek yang sedang dikerjakan ke memory.md global
-WorkspaceBridge.register_current_workspace(
+# Daftarkan (atau perbarui) proyek yang sedang dikerjakan ke tabel "Register Proyek" di ~/memory.md
+GlobalConfigManager.register_or_update_project(
     name="Super Mario HTML5",
     location="C:/Users/Win10/Music/super_mario",
     status="Production Ready (120 FPS)",
-    notes="Physics Rapier, AABB collision, Web Audio Synthesizer"
+    notes="Physics Rapier, AABB collision, Web Audio Synthesizer",
 )
 
 # Periksa seluruh proyek yang terdaftar di sistem
-for proj in WorkspaceBridge.get_all_projects():
+for proj in GlobalConfigManager.parse_registered_projects():
     print(f"[{proj.status}] {proj.name} -> {proj.location}")
+
+# Dari workspace lain: ambil konteks proyek berdasarkan nama (pencocokan parsial)
+ctx = WorkspaceBridge.get_cross_workspace_context("mario")
+print(ctx["location"], ctx["exists_on_disk"])
 ```
 
 ### 4. Jalankan Mode Refleksi Mandiri
 ```python
-from self_learning.reflection import ReflexionEngine
+from self_learning import ReflectionAgent, ReflectiveExecutor, ReflexionMemoryStore
 
-# Inisialisasi engine refleksi kausal 4-kuadran
-engine = ReflexionEngine()
+memory = ReflexionMemoryStore()          # default: self_learning/knowledge_base/reflections.json
+agent = ReflectionAgent(memory)
 
-# Catat hasil refleksi saat terjadi kegagalan
-reflection = engine.analyze(
-    target_goal="Snake bergerak maju tanpa tabrakan di awal permainan",
-    actual_outcome="Ular menabrak leher sendiri pada tick ke-1",
-    root_cause="Inisialisasi arah DOWN berlawanan dengan posisi leher di (y+1)",
-    corrective_action="Ubah start ke Baris 0 arah RIGHT dan perbaiki limit pengecekan ekor"
+# (a) Diagnosis kausal otomatis dari exception nyata
+try:
+    [][0]
+except IndexError as err:
+    record = agent.formulate_reflection(
+        task_name="snake_spawn",
+        attempt_number=1,
+        intended_goal="Snake bergerak maju tanpa tabrakan di awal permainan",
+        error=err,
+    )
+    print(record.to_in_context_prompt())   # 4 kuadran: Target, Aktual, Akar Masalah, Tindakan
+
+# (b) Eksekusi self-healing: gagal -> refleksi -> retry dengan refleksi diinjeksikan
+executor = ReflectiveExecutor("safe_getter", "Ambil elemen pertama dengan aman", memory, max_attempts=3)
+result = executor.execute(
+    lambda attempt, reflections: "fallback" if reflections else [][0],
+    validator_fn=lambda out: out == "fallback",
 )
-
-print(reflection.to_constraint_prompt())
+print(result["success"], result["attempt"])  # True 2
 ```
 
 ### 5. Eksekusi Task Flow 6-Fase
 ```python
-from self_learning.task_flow import AgenticTaskFlow
+from self_learning import AgenticTaskFlow
 
-task_flow = AgenticTaskFlow(task_name="Implementasi Fitur Baru")
-task_flow.start_phase(1, "Ingestion & Grounding")
-# ... lanjutkan alur siklus tertutup
+flow = AgenticTaskFlow()  # store default; berikan memory_store/knowledge_store untuk lokasi kustom
+
+context = flow.run_pipeline(
+    task_name="Implementasi Fitur Baru",
+    intended_goal="Endpoint /health mengembalikan 200",
+    acceptance_criteria=["status == 200"],
+    grounded_files=["app/routes.py"],
+    plan_steps=["Tambah route", "Tambah test"],
+    executor_fn=lambda ctx, feedback: {"status": 200},   # feedback = prompt refleksi dari percobaan gagal sebelumnya
+    verifier_fn=lambda out: out["status"] == 200,
+    max_attempts=3,
+)
+
+print(context.is_success, [s.phase.value for s in context.steps])
+# Sukses: heuristik disimpan; gagal total: anti-pola disimpan. Keduanya masuk KnowledgeStore.
+```
+
+### 6. Siklus Self-Learning & Router Multi-Task Flow
+```python
+from self_learning import SelfLearningEngine, TargetProfile, TestCase, TaskFlowRouter, DomainRole
+
+# Bandingkan beberapa kandidat implementasi secara empiris hingga konvergen
+engine = SelfLearningEngine("array_search", TargetProfile(min_pass_rate=1.0, max_avg_latency_ms=0.1))
+result = engine.run(
+    candidate_pool=[{"name": "Linear", "fn": lambda a, t: a.index(t) if t in a else None}],
+    test_cases=[TestCase("hit", ([1, 2, 3], 2), 1), TestCase("miss", ([1, 2, 3], 9), None)],
+)
+print(result.best_candidate_name, result.best_fitness_score)
+
+# Pilih pipeline domain secara otomatis dari deskripsi tugas
+router = TaskFlowRouter()
+print(router.route_by_task_description("Buat adegan WebXR dengan three.js").role_label)  # spatial_xr_developer
+print(router.get_flow(DomainRole.RESEARCHER).stages[0].name)
+```
+
+Demo lengkap siklus self-learning (O(N) → O(log N)):
+```bash
+python -m self_learning.benchmark
 ```
 
 ---
 
 ## 🧪 7. Verifikasi Empiris & Zero Regression
 
-Reputasi dan kehandalan kode diverifikasi secara objektif menggunakan unit test suite otomatis:
+Reputasi dan kehandalan kode diverifikasi secara objektif menggunakan unit test suite otomatis. Seluruh test memakai store di direktori sementara sehingga **tidak pernah menyentuh `knowledge_base/` maupun home pengguna** (installer diuji terhadap home tiruan):
 
 ```bash
 python -m unittest discover -s self_learning -t . -p "test_*.py"
 ```
 
 ```text
-...........................
+..........................................................
 ----------------------------------------------------------------------
-Ran 27 tests in 0.109s
+Ran 58 tests in 0.244s
 
-OK (27 tests passing, 0 failures, 0 errors)
+OK
 ```
+
+| Berkas Test | Cakupan |
+| :--- | :--- |
+| `test_self_learning.py` | KnowledgeStore (CRUD, atomik, toleransi berkas rusak), Observer, Critic, Distiller, Optimizer, Engine |
+| `test_reflection.py` | Rubrik 4-kuadran, memori episodik, diagnosis kausal, self-healing & exhaust |
+| `test_task_flow.py` | Pipeline 6-fase: sukses, retry-dengan-refleksi, diagnosis exception, anti-pola saat gagal total |
+| `test_multi_task_flow.py` | 4 pipeline domain, routing berbatas kata, flow dinamis idempoten |
+| `test_identity_lock.py` | Immutable identity, deteksi tampering, gerbang task flow |
+| `test_global_config.py` | Parsing & registrasi ledger (tabel yang benar), WorkspaceBridge |
+| `test_setup_global_config.py` | Installer: dry-run, idempoten, preservasi config pengguna, uninstall, CLI |
+
+CI GitHub Actions (`.github/workflows/ci.yml`) menjalankan suite ini pada Ubuntu & Windows untuk Python 3.10–3.13, ditambah benchmark, installer `--dry-run`, render PDF skill, dan pemeriksaan bahwa working tree tetap bersih setelah test.
 
 ---
 
@@ -221,7 +298,7 @@ OK (27 tests passing, 0 failures, 0 errors)
 Repositori ini menerapkan standar sanitasi dan proteksi identitas berlapis:
 - **Penguncian Identitas Abadi (*Immutable Identity Lock*)**: Identitas Claudia dikunci permanen menggunakan kelas `ClaudiaIdentity` (*frozen dataclass*) dan guardrail `IdentityGuard` (`self_learning/identity_lock.py`). Upaya *prompt injection*, manipulasi persona ("ignore previous instructions", "act as DAN"), atau perusakan identitas otomatis ditolak secara programmatis di gerbang tugas.
 - **Nol Kredensial (*Zero Leakage Policy*)**: Tidak ada API Key, Private Token, alamat email pribadi, atau kredensial autentikasi yang tersimpan di dalam riwayat repositori maupun berkas `.git/config`.
-- **Strict `.gitignore`**: Seluruh berkas konfigurasi lokal (`.env*`, `*.token`, `*.key`, cache `__pycache__`, dan file log) otomatis diabaikan dari pelacakan git.
+- **Strict `.gitignore`**: Seluruh berkas konfigurasi lokal (`.env*`, `*.token`, `*.key`, cache `__pycache__`, file log, serta store runtime `knowledge_base/*.json`) otomatis diabaikan dari pelacakan git.
 - **Aman Diklon Bebas**: Repositori ini aman untuk di-clone secara massal, dipelajari, dan digunakan oleh komunitas pengembang tanpa risiko kebocoran data sensitif.
 
 ---

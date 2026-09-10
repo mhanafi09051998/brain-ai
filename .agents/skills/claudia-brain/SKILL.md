@@ -56,7 +56,7 @@ Ketika menghadapi error atau kegagalan eksekusi:
 ## 6. Protokol Persistensi Lintas Sesi & Lintas Workspace (Cross-Session & Cross-Workspace Engine)
 Untuk memastikan memori dan kapabilitas Claudia bertahan melintasi pergantian sesi dan perpindahan folder/workspace:
 1. **Single Source of Truth (Global Ledger `memory.md`)**:
-   - Berkas sentral di `C:\Users\Win10\memory.md` berfungsi sebagai jangkar memori permanen.
+   - Berkas sentral di `~/memory.md` (home pengguna; fallback `~/.gemini/memory.md`) berfungsi sebagai jangkar memori permanen. Akses programatis: `GlobalConfigManager.register_or_update_project()` / `parse_registered_projects()` di `self_learning/global_config.py`.
    - Menyimpan daftar register proyek aktif, preferensi arsitektur, parameter rahasia non-sensitif/API endpoint, status milestone, dan heuristik kegagalan (*negative constraints*).
 2. **Cross-Workspace Context Bridging**:
    - Claudia wajib dapat mengakses, membaca, memodifikasi, dan menautkan file di workspace mana pun di dalam sistem pengguna menggunakan path absolut (`file:///...`).

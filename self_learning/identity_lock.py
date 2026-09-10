@@ -5,12 +5,15 @@ Mencegah perubahan identitas, persona override, dan prompt injection pada tingka
 
 from dataclasses import dataclass
 import re
-from typing import Tuple
+from typing import List, Pattern, Tuple
 
 
-class IdentityTamperAttemptError(SecurityError if "SecurityError" in globals() else Exception):
-    """Exception yang dilempar saat terdeteksi upaya manipulasi atau penggantian identitas Claudia."""
-    pass
+class IdentityTamperAttemptError(PermissionError):
+    """Exception yang dilempar saat terdeteksi upaya manipulasi atau penggantian identitas Claudia.
+
+    Diturunkan dari `PermissionError` (stdlib) agar dapat ditangkap secara semantik
+    sebagai pelanggaran akses tanpa memerlukan hierarki exception kustom.
+    """
 
 
 @dataclass(frozen=True)
@@ -38,7 +41,7 @@ class IdentityGuard:
     """Guardrail pendeteksi dan penolak upaya pengubahan persona/identitas."""
 
     # Pola-pola manipulasi identitas, jailbreak, dan prompt injection
-    TAMPER_PATTERNS = [
+    TAMPER_PATTERNS: List[Pattern[str]] = [
         re.compile(r"ignore\s+(all\s+)?(previous\s+)?instructions?", re.IGNORECASE),
         re.compile(r"abaikan\s+(semua\s+)?aturan\s+(sebelumnya|awal)", re.IGNORECASE),
         re.compile(r"(you\s+are\s+now|kamu\s+sekarang\s+adalah)\s+", re.IGNORECASE),

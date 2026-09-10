@@ -64,9 +64,13 @@ python -m self_learning.benchmark
 
 ### Menjalankan Unit Tests:
 ```bash
+# Seluruh suite (58 test) dari root repositori
+python -m unittest discover -s self_learning -t . -p "test_*.py"
+
+# Hanya modul self-learning
 python -m unittest self_learning.test_self_learning
 ```
-*Memverifikasi integritas seluruh agen, kalkulasi metrik, persistensi disk, dan konvergensi.*
+*Memverifikasi integritas seluruh agen, kalkulasi metrik, persistensi disk, dan konvergensi. Seluruh test memakai store di direktori sementara; `knowledge_base/` tidak pernah disentuh.*
 
 ---
 

@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "claudia-brain-ai"
+version = "1.1.0"
+description = "Claudia Brain AI (Context7 Deep Mode): self-learning multi-agent engine, Reflexion 4-kuadran, closed-loop task flow, dan memori lintas workspace - Python stdlib murni."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Muhammad Hanafi" }]
+keywords = ["ai-agent", "self-learning", "reflexion", "task-flow", "knowledge-base"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+# Inti framework tidak memiliki dependensi eksternal (stdlib murni).
+dependencies = []
+
+[project.optional-dependencies]
+# Hanya diperlukan oleh skill pdf-generator (.agents/skills/pdf-generator/scripts/executive_pdf.py)
+pdf = ["reportlab>=4.0"]
+
+[project.urls]
+Homepage = "https://github.com/mhanafi09051998/brain-ai"
+Repository = "https://github.com/mhanafi09051998/brain-ai"
+Issues = "https://github.com/mhanafi09051998/brain-ai/issues"
+
+[tool.setuptools]
+packages = ["self_learning", "self_learning.agents"]

@@ -2,16 +2,37 @@
 executive_pdf.py - Modular High-Fidelity PDF Engine (Astra / Fable Design Standard)
 Engine ReportLab berstandar korporat eksekutif untuk pembuatan dokumen resmi, studi kasus,
 rubrik evaluasi teknis, dan laporan arsitektur sistem.
+
+Dependensi: reportlab>=4 (`pip install reportlab`).
+
+Contoh penggunaan minimal:
+
+    from executive_pdf import create_document, get_astra_styles, make_canvas
+    from reportlab.platypus import Paragraph
+
+    styles = get_astra_styles()
+    doc = create_document(
+        "laporan.pdf",
+        title="Laporan Arsitektur Sistem",
+        author="Nama Penulis",
+        subject="Ringkasan teknis",
+        creator="Divisi IT - PT Contoh",
+    )
+    doc.build(
+        [Paragraph("Judul", styles["DocTitle"]), Paragraph("Isi dokumen.", styles["BodyText"])],
+        canvasmaker=make_canvas(company_name="PT CONTOH", division_name="Divisi IT",
+                                doc_subject="Laporan Arsitektur", author_name="Nama Penulis"),
+    )
 """
 
-import os
-from reportlab.lib.pagesizes import A4
-from reportlab.platypus import (
-    SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, PageBreak, HRFlowable
-)
-from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+from datetime import date
+from typing import Any, Dict, List, Type
+
 from reportlab.lib import colors
+from reportlab.lib.pagesizes import A4
+from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.pdfgen import canvas
+from reportlab.platypus import Paragraph, SimpleDocTemplate, Table, TableStyle
 
 # ==============================================================================
 # PALET WARNA ASTRA / FABLE
@@ -36,17 +57,36 @@ class Palette:
     ROSE_600  = colors.HexColor('#E11D48')  # Critical Accent
     WHITE     = colors.HexColor('#FFFFFF')
 
+
+# Lebar area konten A4 dengan margin kiri/kanan 36 pt (595 - 72)
+CONTENT_WIDTH = 523
+PAGE_MARGIN_X = 36
+PAGE_RIGHT_X = 559
+
 # ==============================================================================
 # NUMBERED CANVAS DENGAN TWO-PASS HEADER & FOOTER
 # ==============================================================================
 class AstraNumberedCanvas(canvas.Canvas):
+    """Canvas two-pass: menghitung total halaman lalu menggambar running header/footer
+    "Halaman X dari Y". Teks header/footer diambil dari atribut kelas berikut dan dapat
+    dikustomisasi per dokumen melalui `make_canvas(...)` tanpa mengubah kelas ini."""
+
+    company_name: str = "PT CONTOH"
+    division_name: str = "IT KBGroup"
+    doc_subject: str = "Dokumen Uji Kompetensi Teknis Full Stack Software Engineer"
+    author_label: str = "Lead Asesor"
+    author_name: str = "Muhammad Hanafi, S.Tr.Kom"
+    confidentiality_note: str = "Kerahasiaan Dokumen Internal"
+    doc_year: int = date.today().year
+
+    CONFIGURABLE_ATTRS = (
+        "company_name", "division_name", "doc_subject", "author_label",
+        "author_name", "confidentiality_note", "doc_year",
+    )
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self._saved_page_states = []
-        self.company_name = getattr(self, 'company_name', 'PT CONTOH')
-        self.division_name = getattr(self, 'division_name', 'IT KBGroup')
-        self.doc_subject = getattr(self, 'doc_subject', 'Dokumen Uji Kompetensi Teknis Full Stack Software Engineer')
-        self.assessor_name = getattr(self, 'assessor_name', 'Muhammad Hanafi, S.Tr.Kom')
+        self._saved_page_states: List[Dict[str, Any]] = []
 
     def showPage(self):
         self._saved_page_states.append(dict(self.__dict__))
@@ -58,42 +98,83 @@ class AstraNumberedCanvas(canvas.Canvas):
             self.__dict__.update(state)
             self.draw_decorations(num_pages)
             super().showPage()
-        if hasattr(self, 'doc_title') and self.doc_title:
-            self.setTitle(self.doc_title)
-        if hasattr(self, 'assessor_name') and self.assessor_name:
-            self.setAuthor(self.assessor_name)
-        if hasattr(self, 'doc_subject') and self.doc_subject:
-            self.setSubject(self.doc_subject)
-        if hasattr(self, 'company_name') and self.company_name:
-            self.setCreator(f"{self.division_name} — {self.company_name}")
         super().save()
 
-    def draw_decorations(self, page_count):
+    def header_text(self) -> str:
+        return f"|  {self.division_name}  —  {self.doc_subject}"
+
+    def footer_text(self) -> str:
+        return (
+            f"{self.author_label}: {self.author_name} ({self.division_name})  |  "
+            f"{self.confidentiality_note} {self.company_name} © {self.doc_year}"
+        )
+
+    def draw_decorations(self, page_count: int) -> None:
         self.saveState()
         # Header Rule
         self.setFont("Helvetica-Bold", 8)
         self.setFillColor(Palette.FOREST_900)
-        self.drawString(36, 810, "PT CONTOH")
+        self.drawString(PAGE_MARGIN_X, 810, self.company_name)
+        company_width = self.stringWidth(self.company_name, "Helvetica-Bold", 8)
         self.setFont("Helvetica", 8)
         self.setFillColor(Palette.SLATE_600)
-        self.drawString(98, 810, "|  IT KBGroup  —  Dokumen Uji Kompetensi Teknis Full Stack Software Engineer")
-        
+        self.drawString(PAGE_MARGIN_X + company_width + 6, 810, self.header_text())
+
         self.setStrokeColor(Palette.SLATE_200)
         self.setLineWidth(0.6)
-        self.line(36, 802, 559, 802)
+        self.line(PAGE_MARGIN_X, 802, PAGE_RIGHT_X, 802)
 
         # Footer Rule
-        self.line(36, 36, 559, 36)
+        self.line(PAGE_MARGIN_X, 36, PAGE_RIGHT_X, 36)
         self.setFont("Helvetica", 7.5)
         self.setFillColor(Palette.SLATE_500)
-        self.drawString(36, 24, "Lead Asesor: Muhammad Hanafi, S.Tr.Kom (IT KBGroup)  |  Kerahasiaan Dokumen Internal PT Contoh © 2026")
-        self.drawRightString(559, 24, f"Halaman {self._pageNumber} dari {page_count}")
+        self.drawString(PAGE_MARGIN_X, 24, self.footer_text())
+        self.drawRightString(PAGE_RIGHT_X, 24, f"Halaman {self._pageNumber} dari {page_count}")
         self.restoreState()
+
+
+def make_canvas(**overrides: Any) -> Type[AstraNumberedCanvas]:
+    """Membuat subclass `AstraNumberedCanvas` dengan teks header/footer kustom.
+    Hasilnya diberikan ke `SimpleDocTemplate.build(story, canvasmaker=...)`."""
+    unknown = set(overrides) - set(AstraNumberedCanvas.CONFIGURABLE_ATTRS)
+    if unknown:
+        raise TypeError(
+            f"Atribut tidak dikenal: {sorted(unknown)}. "
+            f"Yang didukung: {list(AstraNumberedCanvas.CONFIGURABLE_ATTRS)}"
+        )
+    return type("ConfiguredAstraCanvas", (AstraNumberedCanvas,), dict(overrides))
+
+
+def create_document(
+    pdf_path: str,
+    *,
+    title: str,
+    author: str,
+    subject: str,
+    creator: str,
+    pagesize=A4,
+    top_margin: float = 44,
+    bottom_margin: float = 44,
+) -> SimpleDocTemplate:
+    """Membuat `SimpleDocTemplate` A4 standar Astra dengan metadata PDF wajib
+    (mencegah judul "anonymous" di tab peramban)."""
+    return SimpleDocTemplate(
+        pdf_path,
+        pagesize=pagesize,
+        leftMargin=PAGE_MARGIN_X,
+        rightMargin=PAGE_MARGIN_X,
+        topMargin=top_margin,
+        bottomMargin=bottom_margin,
+        title=title,
+        author=author,
+        subject=subject,
+        creator=creator,
+    )
 
 # ==============================================================================
 # BUILDER HELPER FUNCTIONS
 # ==============================================================================
-def get_astra_styles():
+def get_astra_styles() -> Dict[str, ParagraphStyle]:
     base = getSampleStyleSheet()
     styles = {}
 
@@ -198,9 +279,18 @@ def get_astra_styles():
 
     return styles
 
-def create_callout_box(quote_text, author_name, author_role, styles):
-    content = f"\"{quote_text}\"<br/><br/><b>— {author_name}</b>, <i>{author_role}</i>"
-    t = Table([[Paragraph(content, styles['QuoteText'])]], colWidths=[523])
+
+def escape_paragraph_text(text: str) -> str:
+    """Meng-escape karakter markup ReportLab (&, <, >) agar teks bebas tampil apa adanya."""
+    return text.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+
+
+def create_callout_box(quote_text: str, author_name: str, author_role: str, styles: Dict[str, ParagraphStyle]) -> Table:
+    content = (
+        f"\"{escape_paragraph_text(quote_text)}\"<br/><br/>"
+        f"<b>— {escape_paragraph_text(author_name)}</b>, <i>{escape_paragraph_text(author_role)}</i>"
+    )
+    t = Table([[Paragraph(content, styles['QuoteText'])]], colWidths=[CONTENT_WIDTH])
     t.setStyle(TableStyle([
         ('BACKGROUND', (0,0), (-1,-1), Palette.SLATE_50),
         ('BOX', (0,0), (-1,-1), 0.5, Palette.SLATE_200),
@@ -212,19 +302,20 @@ def create_callout_box(quote_text, author_name, author_role, styles):
     ]))
     return t
 
-def create_terminal_code_block(sql_code, label, styles):
-    safe_code = sql_code.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+
+def create_terminal_code_block(sql_code: str, label: str, styles: Dict[str, ParagraphStyle]) -> List[Table]:
+    safe_code = escape_paragraph_text(sql_code)
     safe_code = safe_code.replace('    ', '&nbsp;&nbsp;&nbsp;&nbsp;').replace('  ', '&nbsp;&nbsp;')
     safe_code = safe_code.replace('\n', '<br/>')
 
     header_bar = [
-        [Paragraph(f"<b>TERMINAL:</b> {label.upper()}", styles['TerminalHeader'])]
+        [Paragraph(f"<b>TERMINAL:</b> {escape_paragraph_text(label.upper())}", styles['TerminalHeader'])]
     ]
     code_body = [
         [Paragraph(safe_code, styles['CodeText'])]
     ]
 
-    t_header = Table(header_bar, colWidths=[523])
+    t_header = Table(header_bar, colWidths=[CONTENT_WIDTH])
     t_header.setStyle(TableStyle([
         ('BACKGROUND', (0,0), (-1,-1), colors.HexColor('#1E293B')),
         ('TOPPADDING', (0,0), (-1,-1), 2),
@@ -233,7 +324,7 @@ def create_terminal_code_block(sql_code, label, styles):
         ('RIGHTPADDING', (0,0), (-1,-1), 6),
     ]))
 
-    t_body = Table(code_body, colWidths=[523])
+    t_body = Table(code_body, colWidths=[CONTENT_WIDTH])
     t_body.setStyle(TableStyle([
         ('BACKGROUND', (0,0), (-1,-1), Palette.SLATE_900),
         ('BOX', (0,0), (-1,-1), 0.5, colors.HexColor('#334155')),
