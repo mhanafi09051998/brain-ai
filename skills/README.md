@@ -1,21 +1,25 @@
-# ⚡ Claudia Ultra Distilled Engineering Skills Matrix (21 Core Domains)
+# ⚡ Claudia Ultra Distilled Engineering Skills Matrix (26 Core Domains)
 
-Katalog modul keahlian rekayasa sistem, arsitektur perangkat lunak, infrastruktur jaringan, trading kuantitatif, analisis on-chain, dan optimasi performa tingkat lanjut:
+Katalog modul keahlian rekayasa sistem, arsitektur perangkat lunak, infrastruktur jaringan, trading kuantitatif, analisis on-chain, otomasi dokumen ISO 9001, game development, dan mesin kecerdasan otonom:
 
 | Modul Skill | Lokasi Berkas | Cakupan Rekayasa & Invarian Utama |
 | :--- | :--- | :--- |
 | **`algorithms`** | [`skills/algorithms/SKILL.md`](./algorithms/SKILL.md) | Decision Matrix, Monotonic Deque, Binary Search Predicates, DP State Reduction, Graph SCC, DSU, Fenwick Tree. |
 | **`api-gateway-reverse-proxy`** | [`skills/api-gateway-reverse-proxy/SKILL.md`](./api-gateway-reverse-proxy/SKILL.md) | Multi-Tenant Path/Subdomain Routing, WebSocket/SSE Streaming Passthrough, Circuit Breakers, Request Deduplication. |
+| **`claudia-brain`** | [`skills/claudia-brain/SKILL.md`](./claudia-brain/SKILL.md) | Otak inti, Closed-Loop Task Flow 6-fase, Multi-Task Flow terdistribusi, OODA Self-Learning, Reflexion 4-kuadran, persistensi memori global. |
 | **`clean-architecture-minimalism`** | [`skills/clean-architecture-minimalism/SKILL.md`](./clean-architecture-minimalism/SKILL.md) | Pragmatic 3-Tier Hexagonal, Rich Domain Models vs Anemic, Consumer-Driven Minimal Interfaces, Zero-Mock Testing. |
 | **`database-engineering`** | [`skills/database-engineering/SKILL.md`](./database-engineering/SKILL.md) | B-Tree Composite Indexing, EXPLAIN Buffers, Eliminasi N+1, MVCC/Deadlock, Zero-Downtime Migration, SQLite WAL. |
 | **`devops-linux-hardening`** | [`skills/devops-linux-hardening/SKILL.md`](./devops-linux-hardening/SKILL.md) | PM2 Logrotate & Standalone Next.js, Nginx SSL TLS 1.3/HMR Passthrough, Cloudflare Tunnel Ingress, Linux Swap/Inode Tuning. |
 | **`distributed-systems`** | [`skills/distributed-systems/SKILL.md`](./distributed-systems/SKILL.md) | CAP/PACELC, Idempotency Keys, Transactional Outbox, SAGA Choreography/Orchestration, Raft Consensus, Token Bucket. |
+| **`document-controller`** | [`skills/document-controller/SKILL.md`](./document-controller/SKILL.md) | Standar ISO 9001:2015 Klausul 7.5, penomoran dokumen korporat/transmittal, Master Document Register (MDR), RACI workflow, Laravel EDMS. |
+| **`herbacore-document-automation`** | [`skills/herbacore-document-automation/SKILL.md`](./herbacore-document-automation/SKILL.md) | Standar formulir internal PT Herbacore, layout 2-setengah halaman Folio/F4, mitigasi cell-height bloat, matriks otorisasi 5 pihak. |
 | **`incident-root-cause-debugging`** | [`skills/incident-root-cause-debugging/SKILL.md`](./incident-root-cause-debugging/SKILL.md) | Non-Overthinking Triage, Binary Search Git Bisecting, Minimal Diff Invariants, Atomic Non-Destructive Rollbacks. |
 | **`linux-performance-profiling`** | [`skills/linux-performance-profiling/SKILL.md`](./linux-performance-profiling/SKILL.md) | CPU/Memory RSS Triaging, V8 Event Loop Lag & Heap Snapshots, Socket Leak Detection, Inode Space Recovery. |
 | **`linux-server-architecture`** | [`skills/linux-server-architecture/SKILL.md`](./linux-server-architecture/SKILL.md) | Bare-Metal/VPS Partitioning, Systemd Sandboxing Units, Docker Cgroups Resource Limits, Kernel Sysctl Network Tuning. |
 | **`meteora-dlmm-automated-market-making`** | [`skills/meteora-dlmm-automated-market-making/SKILL.md`](./meteora-dlmm-automated-market-making/SKILL.md) | Discrete Bin Price Math, Dynamic Fee Volatility Accumulator ($v_a$), Spot/Curve/Bid-Ask Models, Auto-Rebalancing & Emergency Exit. |
 | **`mikrotik-routeros-engineering`** | [`skills/mikrotik-routeros-engineering/SKILL.md`](./mikrotik-routeros-engineering/SKILL.md) | RouterOS v7 FIB Routing, Raw/Mangle Table Filtering, PCC Multi-WAN Balancing, Recursive Failover, WireGuard Mesh, Queue Tree PCQ. |
 | **`nextjs-tailwind-ui`** | [`skills/nextjs-tailwind-ui/SKILL.md`](./nextjs-tailwind-ui/SKILL.md) | App Router RSC Boundaries, Server Actions + Zod, Auth.js Session Guard, Tailwind CSS v4 Glassmorphism Bento Grids. |
+| **`pdf-generator`** | [`skills/pdf-generator/SKILL.md`](./pdf-generator/SKILL.md) | Dokumen PDF korporat eksekutif profesional menggunakan ReportLab di Python, standar desain Astra & Fable, Two-Pass NumberedCanvas. |
 | **`python-high-throughput`** | [`skills/python-high-throughput/SKILL.md`](./python-high-throughput/SKILL.md) | Asyncio uvloop, TaskGroup Concurrency, `__slots__` & `memoryview` Zero-Copy, Polars Columnar Engine, PyO3/Cython Bridge. |
 | **`quantitative-market-making`** | [`skills/quantitative-market-making/SKILL.md`](./quantitative-market-making/SKILL.md) | Meteora DLMM Bin Step Math, Concentrated Capital Efficiency, Inventory Risk & Rebalancing, True PnL Accounting. |
 | **`rust-systems-programming`** | [`skills/rust-systems-programming/SKILL.md`](./rust-systems-programming/SKILL.md) | Borrow Checker Model, Tokio Work-Stealing, Lock-Free Crossbeam Channels, SIMD Alignment, Safe FFI C ABI. |
@@ -25,3 +29,4 @@ Katalog modul keahlian rekayasa sistem, arsitektur perangkat lunak, infrastruktu
 | **`solana-onchain-forensics-token-audit`** | [`skills/solana-onchain-forensics-token-audit/SKILL.md`](./solana-onchain-forensics-token-audit/SKILL.md) | Wallet Clustering & Sybil Graphing, Jito Bundle Snipers, Holder Entropy, Wash Trading Signatures, Token-2022 Exploit Vectors. |
 | **`telegram-bot-architecture`** | [`skills/telegram-bot-architecture/SKILL.md`](./telegram-bot-architecture/SKILL.md) | Long Polling Invariants, PM2 Loop Anti-Spam Guards, Age-Gating, MarkdownV2 Escaping, Crash Resilience. |
 | **`typescript-type-gymnastics`** | [`skills/typescript-type-gymnastics/SKILL.md`](./typescript-type-gymnastics/SKILL.md) | Zero `any` Policies, Advanced Generic Inference (`infer`), Branded Nominal Types, Discriminated Unions Pattern Matching. |
+| **`web-game-dev`** | [`skills/web-game-dev/SKILL.md`](./web-game-dev/SKILL.md) | Fixed Timestep Game Loop, Zero-Allocation Memory Pool, Web Audio API Synthesizer, Shaders, AABB Collision, Three.js/Rapier. |
