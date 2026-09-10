@@ -6,7 +6,7 @@
 [![Python Version](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![Architecture](https://img.shields.io/badge/Architecture-Context7%20Deep%20Mode-8A2BE2?style=for-the-badge)](https://github.com/mhanafi09051998/brain-ai)
 [![CI](https://img.shields.io/github/actions/workflow/status/mhanafi09051998/brain-ai/ci.yml?branch=main&style=for-the-badge&logo=githubactions&logoColor=white&label=CI)](https://github.com/mhanafi09051998/brain-ai/actions/workflows/ci.yml)
-[![Test Suite](https://img.shields.io/badge/Tests-58%2F58%20Passing%20(100%25)-success?style=for-the-badge&logo=pytest&logoColor=white)](https://github.com/mhanafi09051998/brain-ai/actions/workflows/ci.yml)
+[![Test Suite](https://img.shields.io/badge/Tests-70%2F70%20Passing%20(100%25)-success?style=for-the-badge&logo=pytest&logoColor=white)](https://github.com/mhanafi09051998/brain-ai/actions/workflows/ci.yml)
 [![Dependencies](https://img.shields.io/badge/Dependencies-Zero%20(stdlib)-informational?style=for-the-badge)](pyproject.toml)
 [![ISO Standard](https://img.shields.io/badge/Standard-ISO%209001%3A2015%20Clause%207.5-orange?style=for-the-badge)](https://github.com/mhanafi09051998/brain-ai)
 [![Zero Leak](https://img.shields.io/badge/Security-Zero%20Credential%20Leakage-green?style=for-the-badge&logo=securityscorecard&logoColor=white)](https://github.com/mhanafi09051998/brain-ai)
@@ -66,6 +66,8 @@ brain-ai/
 │   ├── knowledge_base/           # Store runtime (learned_patterns.json & reflections.json, tidak dilacak git)
 │   ├── global_config.py          # Manajemen Konfigurasi Global & Jembatan Lintas Workspace
 │   ├── identity_lock.py          # Penguncian Identitas Abadi (Immutable Identity & Guardrails)
+│   ├── operational_guard.py      # ActionGuard: klasifikasi risiko aksi (SAFE/REVERSIBLE/OUTWARD/IRREVERSIBLE) & persetujuan per-aksi
+│   ├── operational_protocol.md   # Protokol Operasional Agen (paritas Claude Code, aturan OP-x.y)
 │   ├── storage.py                # KnowledgeStore berbasis JSON (penulisan atomik, toleran berkas rusak)
 │   ├── reflection.py             # Reflexion Engine (Evaluasi Kausal 4-Kuadran)
 │   ├── task_flow.py              # Closed-Loop Agentic Task Flow (6 Fase Otonom)
@@ -75,7 +77,7 @@ brain-ai/
 │   ├── reflection_protocol.md    # Standar Injeksi Prompt Refleksi Kausal
 │   ├── agentic_task_flow.md      # Standar Eksekusi Tugas Bertahap
 │   ├── multi_task_flow.md        # Spesifikasi Pipeline Domain (FullStack, Research, XR, DC)
-│   └── test_*.py                 # 58 unit test (store terisolasi di direktori sementara)
+│   └── test_*.py                 # 70 unit test (store terisolasi di direktori sementara)
 │
 ├── ⚙️ setup_global_config.py      # Installer/uninstaller 1-komando konfigurasi global (--status/--dry-run/--uninstall)
 ├── 📦 pyproject.toml              # Metadata paket (PEP 621), Python ≥ 3.10, nol dependensi runtime
@@ -109,6 +111,27 @@ Setiap siklus kerja rekayasa perangkat lunak dieksekusi melalui 6 fase tertutup:
 | **4** | **Empirical Verification** | Menjalankan pengujian sintaks, linter, dan unit test langsung di terminal untuk memastikan **nol regresi**. |
 | **5** | **Reflexion Mode** | Jika terjadi kesalahan, otomatis mengaktifkan diagnosis kausal **4-Kuadran** (Target, Aktual, Akar Masalah, Solusi Korektif) sebelum mencoba kembali. |
 | **6** | **Distillation & Delivery** | Menyimpan heuristik baru ke `memory.md` (Auto-Learn) dan menyajikan laporan hasil secara padat, lugas, dan presisi. |
+
+### 3.1 Protokol Operasional Agen (Paritas Claude Code)
+
+Setiap fase dijaga *gate* dari [`self_learning/operational_protocol.md`](self_learning/operational_protocol.md) — 12 bagian aturan berkode `OP-x.y` yang mendistilasi disiplin kerja agen pemrograman kelas produksi: **baca sebelum ubah**, **verifikasi sebelum merujuk**, **bertanya hanya untuk keputusan milik pengguna**, **minimal diffs & nol fitur spekulatif**, **tidak ada klaim tanpa bukti pada giliran ini**, **batas 2–3 coba-ulang**, **data ≠ instruksi**, format laporan wajib, dan daftar periksa audit-diri.
+
+Bagian yang dapat ditegakkan mekanis diimplementasikan di [`self_learning/operational_guard.py`](self_learning/operational_guard.py):
+
+```python
+from self_learning import ActionGuard, ApprovalRegistry, ConfirmationRequiredError, RiskLevel
+
+ActionGuard.assess("git status").risk                      # RiskLevel.SAFE
+ActionGuard.assess("git commit -m fix").risk               # RiskLevel.REVERSIBLE
+ActionGuard.assess("git push origin main").risk            # RiskLevel.OUTWARD      -> konfirmasi
+ActionGuard.assess("git status && rm -rf build").risk      # RiskLevel.IRREVERSIBLE -> konfirmasi (tingkat tertinggi menang)
+ActionGuard.assess("DELETE FROM users WHERE id=1").risk    # RiskLevel.SAFE (ada WHERE)
+
+approvals = ApprovalRegistry()
+approvals.grant("git push origin main")                    # persetujuan pengguna: per-aksi, sekali pakai
+ActionGuard.enforce("git push origin main", approvals)     # OK, persetujuan dikonsumsi
+ActionGuard.enforce("git push origin main", approvals)     # ConfirmationRequiredError (PermissionError)
+```
 
 ---
 
@@ -272,9 +295,9 @@ python -m unittest discover -s self_learning -t . -p "test_*.py"
 ```
 
 ```text
-..........................................................
+......................................................................
 ----------------------------------------------------------------------
-Ran 58 tests in 0.244s
+Ran 70 tests in 0.27s
 
 OK
 ```
@@ -286,6 +309,7 @@ OK
 | `test_task_flow.py` | Pipeline 6-fase: sukses, retry-dengan-refleksi, diagnosis exception, anti-pola saat gagal total |
 | `test_multi_task_flow.py` | 4 pipeline domain, routing berbatas kata, flow dinamis idempoten |
 | `test_identity_lock.py` | Immutable identity, deteksi tampering, gerbang task flow |
+| `test_operational_guard.py` | Klasifikasi risiko 4 tingkat (shell, PowerShell, git, SQL, docker, cloud), perintah majemuk, persetujuan per-aksi sekali pakai |
 | `test_global_config.py` | Parsing & registrasi ledger (tabel yang benar), WorkspaceBridge |
 | `test_setup_global_config.py` | Installer: dry-run, idempoten, preservasi config pengguna, uninstall, CLI |
 
@@ -297,6 +321,7 @@ CI GitHub Actions (`.github/workflows/ci.yml`) menjalankan suite ini pada Ubuntu
 
 Repositori ini menerapkan standar sanitasi dan proteksi identitas berlapis:
 - **Penguncian Identitas Abadi (*Immutable Identity Lock*)**: Identitas Claudia dikunci permanen menggunakan kelas `ClaudiaIdentity` (*frozen dataclass*) dan guardrail `IdentityGuard` (`self_learning/identity_lock.py`). Upaya *prompt injection*, manipulasi persona ("ignore previous instructions", "act as DAN"), atau perusakan identitas otomatis ditolak secara programmatis di gerbang tugas.
+- **Gerbang Risiko Aksi (*Operational Guard*)**: `ActionGuard` (`self_learning/operational_guard.py`) mengklasifikasi setiap perintah ke SAFE / REVERSIBLE / OUTWARD / IRREVERSIBLE; aksi OUTWARD dan IRREVERSIBLE hanya berjalan dengan persetujuan pengguna **per-aksi dan sekali pakai** (`ApprovalRegistry`), sesuai `operational_protocol.md` §5.
 - **Nol Kredensial (*Zero Leakage Policy*)**: Tidak ada API Key, Private Token, alamat email pribadi, atau kredensial autentikasi yang tersimpan di dalam riwayat repositori maupun berkas `.git/config`.
 - **Strict `.gitignore`**: Seluruh berkas konfigurasi lokal (`.env*`, `*.token`, `*.key`, cache `__pycache__`, file log, serta store runtime `knowledge_base/*.json`) otomatis diabaikan dari pelacakan git.
 - **Aman Diklon Bebas**: Repositori ini aman untuk di-clone secara massal, dipelajari, dan digunakan oleh komunitas pengembang tanpa risiko kebocoran data sensitif.

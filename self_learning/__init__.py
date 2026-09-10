@@ -33,6 +33,13 @@ from .multi_task_flow import (
     SpatialXRTaskFlow,
     TaskFlowRouter,
 )
+from .operational_guard import (
+    ActionAssessment,
+    ActionGuard,
+    ApprovalRegistry,
+    ConfirmationRequiredError,
+    RiskLevel,
+)
 from .reflection import (
     ReflectionAgent,
     ReflectionRecord,
@@ -48,7 +55,7 @@ from .task_flow import (
     TaskPhase,
 )
 
-__version__ = "1.1.0"
+__version__ = "1.2.0"
 
 __all__ = [
     # Self-Learning Engine
@@ -91,6 +98,12 @@ __all__ = [
     "IMMUTABLE_IDENTITY",
     "IdentityGuard",
     "IdentityTamperAttemptError",
+    # Operational Guard (Protokol Operasional Agen §5)
+    "ActionGuard",
+    "ActionAssessment",
+    "ApprovalRegistry",
+    "ConfirmationRequiredError",
+    "RiskLevel",
     # Global Config
     "GlobalConfigManager",
     "ProjectEntry",

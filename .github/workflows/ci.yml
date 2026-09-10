@@ -28,7 +28,7 @@ jobs:
       - name: Byte-compile seluruh sumber
         run: python -m compileall -q self_learning setup_global_config.py .agents/skills/pdf-generator/scripts/executive_pdf.py
 
-      - name: Unit tests (58 tests, store terisolasi)
+      - name: Unit tests (store terisolasi)
         run: python -m unittest discover -s self_learning -t . -p "test_*.py" -v
 
       - name: Benchmark self-learning (smoke)
