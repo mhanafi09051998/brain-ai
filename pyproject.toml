@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "claudia-brain-ai"
-version = "1.2.0"
+version = "1.3.0"
 description = "Claudia Brain AI (Context7 Deep Mode): self-learning multi-agent engine, Reflexion 4-kuadran, closed-loop task flow, dan memori lintas workspace - Python stdlib murni."
 readme = "README.md"
 requires-python = ">=3.10"
