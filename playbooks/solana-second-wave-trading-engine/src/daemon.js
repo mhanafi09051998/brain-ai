@@ -15,8 +15,12 @@ const { PublicKey } = require('@solana/web3.js');
 const WalletManager = require('./wallet');
 const JupiterClient = require('./jupiter');
 
-const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || '***TELEGRAM_TOKEN_REMOVED***';
-const CHAT_ID = process.env.TELEGRAM_CHAT_ID || '***CHAT_ID_REMOVED***';
+const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
+const CHAT_ID = process.env.TELEGRAM_CHAT_ID;
+if (!BOT_TOKEN || !CHAT_ID) {
+  console.error('[daemon] TELEGRAM_BOT_TOKEN dan TELEGRAM_CHAT_ID wajib diset di environment.');
+  process.exit(1);
+}
 const STATE_FILE = path.resolve(__dirname, '../data/gmgn_dlmm_state.json');
 
 const TRADE_SOL_AMOUNT = 0.30; // $30.00 Modal Scalp
