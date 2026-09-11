@@ -183,6 +183,11 @@ class WorkspaceBridge:
     @classmethod
     def resolve_workspace_path(cls, relative_or_absolute: str, base_dir: Optional[Path] = None) -> Path:
         """Menghitung path absolut dari path relatif terhadap `base_dir` (default: cwd)."""
+        from pathlib import PureWindowsPath
+        # Tangani path absolut Windows (C:/...) meskipun dijalankan di kernel Linux POSIX
+        if PureWindowsPath(relative_or_absolute).is_absolute():
+            return Path(relative_or_absolute)
+
         path_obj = Path(relative_or_absolute)
         if path_obj.is_absolute():
             return path_obj
