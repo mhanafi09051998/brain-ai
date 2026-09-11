@@ -1,10 +1,42 @@
 """Modul Storage untuk persistensi pengetahuan Self-Learning."""
 
 import json
+import os
+import tempfile
 from dataclasses import asdict, dataclass, field
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
+
+
+def atomic_write_json(path: Path, data: Any) -> None:
+    """Menulis JSON secara atomik: tulis ke berkas sementara di direktori yang sama,
+    lalu `os.replace` agar berkas tujuan tidak pernah korup jika proses terhenti."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    fd, tmp_name = tempfile.mkstemp(dir=path.parent, prefix=f".{path.name}.", suffix=".tmp")
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+        os.replace(tmp_name, path)
+    except BaseException:
+        try:
+            os.unlink(tmp_name)
+        except OSError:
+            pass
+        raise
+
+
+def load_json_dict(path: Path) -> Dict[str, Any]:
+    """Memuat objek JSON dari disk. Berkas yang tidak ada, rusak, atau bukan objek
+    diperlakukan sebagai store kosong."""
+    if not path.exists():
+        return {}
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except (json.JSONDecodeError, OSError):
+        return {}
+    return data if isinstance(data, dict) else {}
 
 
 @dataclass
@@ -32,10 +64,19 @@ class KnowledgeStore:
         self._entries: Dict[str, KnowledgeEntry] = {}
         self.load()
 
+    def count(self) -> int:
+        """Jumlah entri yang tersimpan. (Sengaja bukan `__len__`: store kosong harus tetap
+        truthy agar idiom `store or KnowledgeStore()` tidak mengganti store yang diberikan.)"""
+        return len(self._entries)
+
     def add(self, entry: KnowledgeEntry) -> None:
-        """Menambahkan entri pengetahuan baru dan menyimpan ke disk."""
+        """Menambahkan (atau menimpa berdasarkan entry_id) entri pengetahuan dan menyimpan ke disk."""
         self._entries[entry.entry_id] = entry
         self.save()
+
+    def get(self, entry_id: str) -> Optional[KnowledgeEntry]:
+        """Mengambil satu entri berdasarkan ID, atau None jika tidak ada."""
+        return self._entries.get(entry_id)
 
     def get_by_task(self, task_type: str) -> List[KnowledgeEntry]:
         """Mengambil seluruh pengetahuan terkait tipe tugas tertentu."""
@@ -58,22 +99,19 @@ class KnowledgeStore:
         ]
 
     def save(self) -> None:
-        """Menyimpan seluruh memori ke file JSON."""
+        """Menyimpan seluruh memori ke file JSON secara atomik."""
         data = {eid: asdict(entry) for eid, entry in self._entries.items()}
-        with open(self.storage_path, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=2, ensure_ascii=False)
+        atomic_write_json(self.storage_path, data)
 
     def load(self) -> None:
-        """Memuat memori yang tersimpan dari file JSON jika ada."""
-        if not self.storage_path.exists():
-            return
-        try:
-            with open(self.storage_path, "r", encoding="utf-8") as f:
-                raw_data = json.load(f)
-                for eid, item in raw_data.items():
-                    self._entries[eid] = KnowledgeEntry(**item)
-        except (json.JSONDecodeError, IOError):
-            self._entries = {}
+        """Memuat memori dari file JSON jika ada. Entri yang skemanya tidak cocok dilewati,
+        bukan menggugurkan seluruh store."""
+        self._entries = {}
+        for eid, item in load_json_dict(self.storage_path).items():
+            try:
+                self._entries[eid] = KnowledgeEntry(**item)
+            except TypeError:
+                continue
 
     def clear(self) -> None:
         """Membersihkan seluruh memori (digunakan untuk reset atau testing)."""

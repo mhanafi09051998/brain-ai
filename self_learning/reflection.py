@@ -1,12 +1,13 @@
 """Modul Implementasi Mode Refleksi (Verbal Self-Reflection / Reflexion Engine)."""
 
-import json
 import traceback
 import uuid
 from dataclasses import asdict, dataclass, field
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Callable, Dict, List, Optional
+
+from .storage import atomic_write_json, load_json_dict
 
 
 @dataclass
@@ -50,6 +51,10 @@ class ReflexionMemoryStore:
         self._records: Dict[str, ReflectionRecord] = {}
         self.load()
 
+    def count(self) -> int:
+        """Jumlah catatan refleksi yang tersimpan (lihat catatan `KnowledgeStore.count`)."""
+        return len(self._records)
+
     def record(self, reflection: ReflectionRecord) -> None:
         """Menyimpan catatan refleksi baru."""
         self._records[reflection.record_id] = reflection
@@ -73,22 +78,18 @@ class ReflexionMemoryStore:
             self.save()
 
     def save(self) -> None:
-        """Menyimpan catatan refleksi ke file JSON."""
+        """Menyimpan catatan refleksi ke file JSON secara atomik."""
         data = {rid: asdict(rec) for rid, rec in self._records.items()}
-        with open(self.storage_path, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=2, ensure_ascii=False)
+        atomic_write_json(self.storage_path, data)
 
     def load(self) -> None:
-        """Memuat catatan refleksi dari file JSON jika ada."""
-        if not self.storage_path.exists():
-            return
-        try:
-            with open(self.storage_path, "r", encoding="utf-8") as f:
-                raw_data = json.load(f)
-                for rid, item in raw_data.items():
-                    self._records[rid] = ReflectionRecord(**item)
-        except (json.JSONDecodeError, IOError):
-            self._records = {}
+        """Memuat catatan refleksi dari file JSON jika ada. Entri yang skemanya tidak cocok dilewati."""
+        self._records = {}
+        for rid, item in load_json_dict(self.storage_path).items():
+            try:
+                self._records[rid] = ReflectionRecord(**item)
+            except TypeError:
+                continue
 
     def clear(self) -> None:
         """Membersihkan memori refleksi."""
@@ -101,7 +102,7 @@ class ReflectionAgent:
     """Agen yang bertugas menganalisis kegagalan dan merumuskan refleksi kausal terstruktur."""
 
     def __init__(self, memory_store: Optional[ReflexionMemoryStore] = None):
-        self.memory = memory_store or ReflexionMemoryStore()
+        self.memory = memory_store if memory_store is not None else ReflexionMemoryStore()
 
     def formulate_reflection(
         self,
@@ -115,7 +116,9 @@ class ReflectionAgent:
         err_type = type(error).__name__
         err_msg = str(error)
 
-        actual_outcome = f"{err_type}: {err_msg} pada input {context_inputs}"
+        actual_outcome = f"{err_type}: {err_msg}"
+        if context_inputs is not None:
+            actual_outcome += f" pada input {context_inputs}"
 
         # Diagnosis akar masalah berbasis pola exception umum
         if isinstance(error, IndexError):
@@ -169,7 +172,7 @@ class ReflectiveExecutor:
     ):
         self.task_name = task_name
         self.intended_goal = intended_goal
-        self.memory = memory_store or ReflexionMemoryStore()
+        self.memory = memory_store if memory_store is not None else ReflexionMemoryStore()
         self.agent = ReflectionAgent(self.memory)
         self.max_attempts = max_attempts
 
@@ -180,8 +183,7 @@ class ReflectiveExecutor:
     ) -> Dict[str, Any]:
         """Mengeksekusi aksi berulang dengan injeksi refleksi jika terjadi kegagalan."""
         active_reflections: List[ReflectionRecord] = []
-        last_error = None
-        last_result = None
+        last_error: Optional[Exception] = None
 
         for attempt in range(1, self.max_attempts + 1):
             try:

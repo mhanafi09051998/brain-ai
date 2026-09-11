@@ -1,7 +1,7 @@
 """Self-Learning Optimization Engine: Pengorkestrasi siklus tertutup observasi, kritik, penyulingan, dan optimasi."""
 
 from dataclasses import dataclass, field
-from typing import Any, Callable, Dict, List, Optional
+from typing import Any, Dict, List, Optional
 from .agents import (
     CriticAgent,
     CritiqueReport,
@@ -34,7 +34,7 @@ class OptimizationResult:
     total_iterations: int
     best_candidate_name: str
     best_fitness_score: float
-    best_execution_report: ExecutionReport
+    best_execution_report: Optional[ExecutionReport]  # None jika tidak ada kandidat yang dievaluasi
     iteration_history: List[IterationLog] = field(default_factory=list)
     new_knowledge_count: int = 0
 
@@ -49,8 +49,8 @@ class SelfLearningEngine:
         store: Optional[KnowledgeStore] = None,
     ):
         self.task_type = task_type
-        self.target = target_profile or TargetProfile()
-        self.store = store or KnowledgeStore()
+        self.target = target_profile if target_profile is not None else TargetProfile()
+        self.store = store if store is not None else KnowledgeStore()
 
         # Inisialisasi agen-agen spesialis
         self.observer = ObserverAgent()
@@ -65,6 +65,12 @@ class SelfLearningEngine:
         max_iterations: int = 5,
     ) -> OptimizationResult:
         """Menjalankan loop self-learning hingga konvergen atau mencapai batas maksimum iterasi."""
+        if max_iterations < 1:
+            raise ValueError("max_iterations harus >= 1.")
+        for cand in candidate_pool:
+            if not callable(cand.get("fn")):
+                raise ValueError(f"Kandidat {cand.get('name', cand)!r} tidak memiliki 'fn' yang callable.")
+
         history: List[IterationLog] = []
         best_candidate: Optional[Dict[str, Any]] = None
         best_fitness: float = -1.0

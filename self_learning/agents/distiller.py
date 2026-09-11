@@ -10,8 +10,12 @@ from .observer import ExecutionReport
 class DistillerAgent:
     """Agen penyuling memori yang mengekstrak prinsip berulang dari hasil evaluasi."""
 
+    # Ambang fitness minimum agar strategi yang lolos 100% tes tetap layak dicatat
+    # sebagai heuristik meskipun belum memenuhi target latensi (belum konvergen).
+    HEURISTIC_MIN_FITNESS = 80.0
+
     def __init__(self, store: Optional[KnowledgeStore] = None):
-        self.store = store or KnowledgeStore()
+        self.store = store if store is not None else KnowledgeStore()
 
     def distill(
         self,
@@ -23,12 +27,12 @@ class DistillerAgent:
     ) -> List[KnowledgeEntry]:
         """Mengekstraksi pengetahuan baru dan menyimpannya secara persisten."""
         meta = candidate_meta or {}
+        strategy_name = meta.get("strategy_name", f"Strategy_Iter_{iteration}")
         new_entries: List[KnowledgeEntry] = []
 
         # 1. Penyulingan Anti-Pola jika terjadi kegagalan atau hambatan
         for fail in execution_report.failure_details:
             err_type = fail.get("error_type", "Unknown")
-            pattern_key = f"anti_pattern_{task_type}_{err_type}_{iteration}"
             entry = KnowledgeEntry(
                 entry_id=f"ap_{uuid.uuid4().hex[:8]}",
                 task_type=task_type,
@@ -36,11 +40,16 @@ class DistillerAgent:
                 pattern=f"Kegagalan pengujian pada input: {fail.get('inputs')}",
                 explanation=(
                     f"Pengujian '{fail.get('test_name')}' gagal menghasilkan output yang sesuai. "
-                    f"Ekspektasi: {fail.get('expected')}, Aktual: {fail.get('actual')}. "
+                    f"Ekspektasi: {fail.get('expected')}, Aktual: {fail.get('actual', fail.get('error_message'))}. "
                     f"Tipe galat: {err_type}."
                 ),
                 impact_score=-0.8,
-                metadata={"iteration": iteration, "test_name": fail.get("test_name")},
+                metadata={
+                    "iteration": iteration,
+                    "test_name": fail.get("test_name"),
+                    "strategy_name": strategy_name,
+                    "error_type": err_type,
+                },
             )
             self.store.add(entry)
             new_entries.append(entry)
@@ -54,14 +63,19 @@ class DistillerAgent:
                 pattern=f"Bottleneck Kinerja: {bneck}",
                 explanation=f"Algoritma pada iterasi {iteration} mengalami hambatan efisiensi yang melampaui batas toleransi.",
                 impact_score=-0.5,
-                metadata={"iteration": iteration},
+                metadata={"iteration": iteration, "strategy_name": strategy_name},
             )
             self.store.add(entry)
             new_entries.append(entry)
 
-        # 3. Penyulingan Heuristik Sukses
-        if critique_report.is_converged or critique_report.fitness_score >= 80.0:
-            strategy_name = meta.get("strategy_name", f"Strategy_Iter_{iteration}")
+        # 3. Penyulingan Heuristik Sukses.
+        #    Syarat mutlak: seluruh kasus uji lolos (PASS). Strategi yang masih gagal
+        #    pada sebagian tes tidak boleh dipelajari sebagai "optimal" hanya karena cepat.
+        is_correct = critique_report.correctness_grade == "PASS"
+        if is_correct and (
+            critique_report.is_converged
+            or critique_report.fitness_score >= self.HEURISTIC_MIN_FITNESS
+        ):
             entry = KnowledgeEntry(
                 entry_id=f"h_{uuid.uuid4().hex[:8]}",
                 task_type=task_type,
@@ -72,8 +86,13 @@ class DistillerAgent:
                     f"dengan pass rate {execution_report.pass_rate * 100:.1f}% dan rata-rata latensi "
                     f"{execution_report.average_execution_time_ms:.4f} ms."
                 ),
-                impact_score=0.9,
-                metadata={"iteration": iteration, "fitness_score": critique_report.fitness_score},
+                impact_score=1.0 if critique_report.is_converged else 0.9,
+                metadata={
+                    "iteration": iteration,
+                    "fitness_score": critique_report.fitness_score,
+                    "strategy_name": strategy_name,
+                    "converged": critique_report.is_converged,
+                },
             )
             self.store.add(entry)
             new_entries.append(entry)

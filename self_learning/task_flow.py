@@ -12,12 +12,11 @@ Mengimplementasikan 6 fase eksekusi tugas AI:
 from dataclasses import dataclass, field
 from datetime import datetime
 from enum import Enum
-from pathlib import Path
 from typing import Any, Callable, Dict, List, Optional
 import uuid
 
 from .identity_lock import IdentityGuard
-from .reflection import ReflectionRecord, ReflexionMemoryStore
+from .reflection import ReflectionAgent, ReflectionRecord, ReflexionMemoryStore
 from .storage import KnowledgeEntry, KnowledgeStore
 
 
@@ -78,8 +77,9 @@ class AgenticTaskFlow:
         memory_store: Optional[ReflexionMemoryStore] = None,
         knowledge_store: Optional[KnowledgeStore] = None,
     ):
-        self.memory_store = memory_store or ReflexionMemoryStore()
-        self.knowledge_store = knowledge_store or KnowledgeStore()
+        self.memory_store = memory_store if memory_store is not None else ReflexionMemoryStore()
+        self.knowledge_store = knowledge_store if knowledge_store is not None else KnowledgeStore()
+        self.reflection_agent = ReflectionAgent(self.memory_store)
 
     def run_pipeline(
         self,
@@ -92,7 +92,9 @@ class AgenticTaskFlow:
         verifier_fn: Callable[[Any], bool],
         max_attempts: int = 3,
     ) -> TaskFlowContext:
-        """Mengeksekusi pipeline 6-fase terstruktur dengan reflexi diri otomatis jika gagal."""
+        """Mengeksekusi pipeline 6-fase terstruktur dengan refleksi diri otomatis jika gagal."""
+        if max_attempts < 1:
+            raise ValueError("max_attempts harus >= 1.")
 
         # Validasi Integritas Identitas Claudia (Immutable Identity Guardrail)
         IdentityGuard.validate_instruction(task_name)
@@ -123,84 +125,56 @@ class AgenticTaskFlow:
         )
 
         # Siklus Eksekusi, Verifikasi, dan Refleksi
-        attempt = 1
-        last_feedback = None
+        last_feedback: Optional[str] = None
 
-        while attempt <= max_attempts:
+        for attempt in range(1, max_attempts + 1):
             # Fase 3: Grounded Execution
-            context.add_step(
+            exec_step = context.add_step(
                 TaskPhase.EXECUTION,
                 f"Percobaan Eksekusi #{attempt}",
                 StepStatus.RUNNING,
-                f"Menjalankan logika dengan constraints aktif: {bool(last_feedback)}",
+                f"Menjalankan logika dengan constraints aktif: {last_feedback is not None}",
             )
+            verify_step: Optional[FlowStep] = None
 
             try:
                 result = executor_fn(context, last_feedback)
                 context.final_output = result
+                exec_step.status = StepStatus.SUCCESS
+                exec_step.detail = "Eksekutor selesai tanpa exception."
 
                 # Fase 4: Empirical Verification
-                context.add_step(
+                verify_step = context.add_step(
                     TaskPhase.VERIFICATION,
                     f"Pengujian Verifikasi #{attempt}",
                     StepStatus.RUNNING,
                     "Menilai pemenuhan kriteria penerimaan...",
                 )
 
-                is_valid = verifier_fn(result)
-
-                if is_valid:
-                    # Sukses
-                    context.is_success = True
-                    context.add_step(
-                        TaskPhase.VERIFICATION,
-                        f"Pengujian Verifikasi #{attempt}",
-                        StepStatus.SUCCESS,
-                        "Semua kriteria penerimaan terpenuhi secara empiris.",
-                    )
-
-                    # Fase 5 & 6: Distillation & Persistence
-                    entry = KnowledgeEntry(
-                        entry_id=f"distill-{uuid.uuid4().hex[:8]}",
-                        task_type=task_name,
-                        category="heuristic",
-                        pattern=f"Keberhasilan eksekusi tugas '{task_name}' pada percobaan #{attempt}",
-                        explanation=f"Kriteria terpenuhi: {', '.join(acceptance_criteria)}",
-                        impact_score=0.9,
-                    )
-                    self.knowledge_store.add(entry)
-                    context.distilled_patterns.append(entry.entry_id)
-
-                    context.add_step(
-                        TaskPhase.DISTILLATION,
-                        "Penyulingan Pengetahuan Sukses",
-                        StepStatus.SUCCESS,
-                        f"Pola disimpan ke KnowledgeStore: {entry.entry_id}",
-                    )
-                    break
-                else:
+                if not verifier_fn(result):
                     raise AssertionError("Verifikasi kriteria penerimaan mengembalikan False.")
 
-            except Exception as err:
-                # Fase 5: Reflexion Loop (Refleksi Verbal 4-Kuadran)
-                context.add_step(
-                    TaskPhase.VERIFICATION,
-                    f"Pengujian Verifikasi #{attempt}",
-                    StepStatus.FAILED,
-                    f"Kegagalan terdeteksi: {str(err)}",
-                )
+                verify_step.status = StepStatus.SUCCESS
+                verify_step.detail = "Semua kriteria penerimaan terpenuhi secara empiris."
+                context.is_success = True
 
-                reflection = ReflectionRecord(
-                    record_id=f"ref-{uuid.uuid4().hex[:8]}",
+                # Fase 6: Distillation & Persistence (heuristik sukses)
+                self._distill_success(context, attempt)
+                break
+
+            except Exception as err:
+                # Langkah yang sedang berjalan (eksekusi atau verifikasi) ditandai gagal
+                failed_step = verify_step or exec_step
+                failed_step.status = StepStatus.FAILED
+                failed_step.detail = f"Kegagalan terdeteksi: {err}"
+
+                # Fase 5: Reflexion Loop (Refleksi Verbal 4-Kuadran, diagnosis kausal per tipe error)
+                reflection = self.reflection_agent.formulate_reflection(
                     task_name=task_name,
                     attempt_number=attempt,
                     intended_goal=intended_goal,
-                    actual_outcome=str(err),
-                    root_cause=f"Ketidaksesuaian hasil aktual dengan kriteria penerimaan pada iterasi #{attempt}.",
-                    corrective_heuristic=f"Gunakan perbaikan terfokus dan eliminasi asumsi yang menyebabkan error: {err}",
-                    resolved=False,
+                    error=err,
                 )
-                self.memory_store.record(reflection)
                 context.reflections.append(reflection)
                 last_feedback = reflection.to_in_context_prompt()
 
@@ -208,9 +182,62 @@ class AgenticTaskFlow:
                     TaskPhase.REFLEXION,
                     f"Refleksi Verbal #{attempt}",
                     StepStatus.SUCCESS,
-                    f"Refleksi kausal dirumuskan dan diinjeksikan untuk percobaan #{attempt + 1}",
+                    f"Refleksi kausal dirumuskan ({reflection.record_id}) dan diinjeksikan untuk percobaan #{attempt + 1}",
                 )
 
-                attempt += 1
+        if context.is_success:
+            # Kegagalan sebelumnya terbukti teratasi -> tandai resolved di memori episodik
+            for refl in context.reflections:
+                self.memory_store.resolve(refl.record_id)
+        else:
+            # Fase 6 (jalur gagal): anti-pola dicatat agar iterasi/sesi berikutnya tidak mengulang
+            self._distill_failure(context, max_attempts)
 
         return context
+
+    def _distill_success(self, context: TaskFlowContext, attempt: int) -> None:
+        entry = KnowledgeEntry(
+            entry_id=f"distill-{uuid.uuid4().hex[:8]}",
+            task_type=context.task_name,
+            category="heuristic",
+            pattern=f"Keberhasilan eksekusi tugas '{context.task_name}' pada percobaan #{attempt}",
+            explanation=f"Kriteria terpenuhi: {', '.join(context.acceptance_criteria)}",
+            impact_score=0.9,
+            metadata={"task_id": context.task_id, "attempts": attempt, "reflections": len(context.reflections)},
+        )
+        self.knowledge_store.add(entry)
+        context.distilled_patterns.append(entry.entry_id)
+        context.add_step(
+            TaskPhase.DISTILLATION,
+            "Penyulingan Pengetahuan Sukses",
+            StepStatus.SUCCESS,
+            f"Pola disimpan ke KnowledgeStore: {entry.entry_id}",
+        )
+
+    def _distill_failure(self, context: TaskFlowContext, max_attempts: int) -> None:
+        last_reflection = context.reflections[-1] if context.reflections else None
+        entry = KnowledgeEntry(
+            entry_id=f"distill-{uuid.uuid4().hex[:8]}",
+            task_type=context.task_name,
+            category="anti_pattern",
+            pattern=f"Kegagalan tugas '{context.task_name}' setelah {max_attempts} percobaan",
+            explanation=(
+                last_reflection.root_cause
+                if last_reflection
+                else "Kriteria penerimaan tidak pernah terpenuhi."
+            ),
+            impact_score=-0.8,
+            metadata={
+                "task_id": context.task_id,
+                "attempts": max_attempts,
+                "reflection_ids": [r.record_id for r in context.reflections],
+            },
+        )
+        self.knowledge_store.add(entry)
+        context.distilled_patterns.append(entry.entry_id)
+        context.add_step(
+            TaskPhase.DISTILLATION,
+            "Penyulingan Anti-Pola Kegagalan",
+            StepStatus.SUCCESS,
+            f"Anti-pola disimpan ke KnowledgeStore: {entry.entry_id}",
+        )

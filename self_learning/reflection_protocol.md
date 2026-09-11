@@ -52,5 +52,5 @@ Mode Refleksi otomatis aktif ketika salah satu kondisi berikut terpenuhi:
 
 ## 4. Persistensi & Injeksi Konteks Refleksi (In-Context Prompt Injection)
 
-1. Hasil refleksi disimpan ke basis data memori episodik persisten di [`self_learning/knowledge_base/reflections.json`](file:///C:/Users/Win10/Music/train/self_learning/knowledge_base/reflections.json).
+1. Hasil refleksi disimpan ke basis data memori episodik persisten di `self_learning/knowledge_base/reflections.json` (store runtime, tidak dilacak git; lihat [`knowledge_base/README.md`](knowledge_base/README.md)). Penulisan bersifat atomik sehingga berkas tidak korup jika proses terhenti.
 2. Pada percobaan berikutnya, refleksi dari kegagalan sebelumnya **disuntikkan ke dalam konteks eksekutor** sebagai peringatan (*negative constraint & corrective guide*).

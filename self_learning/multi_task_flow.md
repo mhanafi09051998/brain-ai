@@ -43,7 +43,7 @@ Ada 3 alasan fundamental (*The Triad of Task Heterogeneity*):
 
 ## 3. Implementasi Kode: `TaskFlowRouter`
 
-Sistem mengimplementasikan router otomatis di [`self_learning/multi_task_flow.py`](file:///C:/Users/Win10/Music/train/self_learning/multi_task_flow.py):
+Sistem mengimplementasikan router otomatis di [`self_learning/multi_task_flow.py`](multi_task_flow.py). Kata kunci dicocokkan sebagai token utuh (berbatas kata), sehingga `mdr` tidak salah cocok dengan `admdr`:
 
 ```python
 from self_learning.multi_task_flow import TaskFlowRouter, DomainRole
@@ -81,7 +81,7 @@ Ketika pengguna memberikan instruksi atau proyek di luar 4 domain standar (misal
    - Sistem **Auto-Plan** menurunkan tahapan spesifik dari 6 fase tertutup (*Ingestion ➔ Planning ➔ Execution ➔ Verification ➔ Reflexion ➔ Distillation*).
    - Menetapkan **kriteria verifikasi empiris yang relevan secara matematis/teknis** (misal: *loss convergence* untuk ML, *gas limit* untuk smart contract).
 3. **Pendaftaran Dinamis (`register_custom_flow`)**:
-   - Instansiasi `DynamicTaskFlow` langsung didaftarkan ke runtime router.
+   - Instansiasi `DynamicTaskFlow` langsung didaftarkan ke runtime router dengan label peran kustom (misal `[BLOCKCHAIN_ENGINEER]`). Registrasi ulang peran yang sama bersifat idempoten (menimpa aturan & entri lama, bukan menggandakan).
 4. **Persistensi ke Knowledge Store & Memory**:
-   - Struktur alur baru langsung disimpan ke `self_learning/knowledge_base/` dan dicatat ke `memory.md` (*Auto-Learn*), sehingga pada iterasi berikutnya alur tersebut siap digunakan kembali tanpa perlu disintesis ulang.
+   - Struktur alur baru disimpan ke `self_learning/knowledge_base/learned_patterns.json` dengan ID deterministik `dynflow-<role_name>` dan dicatat ke `memory.md` (*Auto-Learn*), sehingga pada iterasi berikutnya alur tersebut siap digunakan kembali tanpa perlu disintesis ulang.
 
