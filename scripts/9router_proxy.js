@@ -7,8 +7,8 @@ const PORT = 8045;
 const server = http.createServer((req, res) => {
   let targetPath = req.url;
 
-  // Route all incoming model requests to 9router target: ag/gemini-3.8-flash-high
-  targetPath = targetPath.replace(/\/models\/[^:?]+/, '/models/ag/gemini-3.8-flash-high');
+  // Route all incoming model requests to 9router target: ag/gemini-3.8-flash-medium
+  targetPath = targetPath.replace(/\/models\/[^:?]+/, '/models/ag/gemini-3.8-flash-medium');
 
   let apiKey = req.headers['x-goog-api-key'] || process.env.GEMINI_API_KEY;
   if (!apiKey || !apiKey.startsWith('sk-')) {
