@@ -132,6 +132,29 @@ ActionGuard.enforce("git push origin main", approvals)     # OK, persetujuan dik
 ActionGuard.enforce("git push origin main", approvals)     # ConfirmationRequiredError (PermissionError)
 ```
 
+### 3.2 Multi-Agent Parallel Execution
+
+Untuk tugas yang dapat dipecah secara independen, sistem mendukung pengerahan
+**subagent paralel** hingga maksimal **8 agent bersamaan** dengan aturan ketat:
+
+- **Disjoint Write Set**: Setiap agent memegang scope file/direktori yang tidak
+  tumpang tindih untuk mencegah konflik merge.
+- **Isolasi Konteks**: Agent tidak melihat pekerjaan agent lain; hasil hanya
+  digabung di tingkat orkestrator.
+- **Model Inherit**: Agent mewarisi model utama secara default; override per-agent
+  hanya bila diperlukan (misalnya riset vs coding).
+- **Sparing Deployment**: Jangan spawn semua slot jika 2–3 agent cukup —
+  fokus > jumlah.
+
+Contoh pembagian:
+
+| Skenario | Distribusi Agent |
+|---|---|
+| Audit 3 repo | 1 agent per repo (read-only review) |
+| Patch 4 file terpisah | 2–3 agent, scope file disjoint |
+| Riset + implementasi | 1 agent riset, 1 agent coding |
+| Deploy + test + docs | 1 agent per fase |
+
 ---
 
 ## 🌐 4. Persistensi & Konfigurasi Global Lintas Workspace
