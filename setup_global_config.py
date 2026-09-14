@@ -43,8 +43,11 @@ def get_paths(home: Optional[Path] = None, repo_dir: Optional[Path] = None) -> D
         "memory_file": home / "memory.md",
         "skills_json": config_dir / "skills.json",
         "config_json": config_dir / "config.json",
+        "codex_home": home / ".codex",
         "repo_dir": repo_dir,
         "repo_skills": repo_dir / ".agents" / "skills",
+        "repo_codex_agents_md": repo_dir / ".codex" / "AGENTS.md",
+        "repo_codex_memory_note": repo_dir / ".codex" / "memories" / "extensions" / "ad_hoc" / "cross-session-cross-workspace.md",
         "repo_agents_md": repo_dir / "AGENTS.md",
         "repo_gemini_md": repo_dir / "GEMINI.md",
         "repo_memory_md": repo_dir / "memory.md",
@@ -90,6 +93,12 @@ def check_status(paths: Dict[str, Path]) -> None:
         print(f"  - {name:<12}: [{flag(paths['rules_dir'] / name)}]")
     print(f"Global Memory   : {paths['memory_file']} [{flag(paths['memory_file'])}]")
     print(f"Skills Dir      : {paths['skills_dir']} [{flag(paths['skills_dir'])}]")
+    print(f"Codex Rules     : {paths['codex_home'] / 'AGENTS.md'} [{flag(paths['codex_home'] / 'AGENTS.md')}]")
+    print(
+        "Codex Memory    : "
+        f"{paths['codex_home'] / 'memories' / 'extensions' / 'ad_hoc' / 'cross-session-cross-workspace.md'} "
+        f"[{flag(paths['codex_home'] / 'memories' / 'extensions' / 'ad_hoc' / 'cross-session-cross-workspace.md')}]"
+    )
 
     if paths["skills_dir"].exists():
         installed_skills = sorted(d.name for d in paths["skills_dir"].iterdir() if d.is_dir())
@@ -129,7 +138,6 @@ def install_global(dry_run: bool = False, home: Optional[Path] = None, repo_dir:
             paths["rules_dir"] / "AGENTS.md",
             paths["config_dir"] / "AGENTS.md",
             paths["config_dir"] / "GEMINI.md",
-            paths["home"] / "AGENTS.md",
             paths["home"] / "GEMINI.md",
         ]
         for rf in redundant_files:
@@ -139,6 +147,34 @@ def install_global(dry_run: bool = False, home: Optional[Path] = None, repo_dir:
                     print(f"  [CLEANUP] Hapus aturan duplikat: {rf.name}")
                 except OSError:
                     pass
+
+    # 1b. Pasang aturan global Codex (~/.codex/AGENTS.md) bila tersedia di repo.
+    codex_agents_src = paths["repo_codex_agents_md"]
+    if codex_agents_src.exists():
+        codex_agents_target = paths["codex_home"] / "AGENTS.md"
+        print(f"  [CODEX RULES] Salin AGENTS.md -> {codex_agents_target}")
+        if not dry_run:
+            paths["codex_home"].mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(codex_agents_src, codex_agents_target)
+    else:
+        print("  [CODEX RULES] Lewati AGENTS.md (tidak ditemukan di repo .codex/)")
+
+    # 1c. Pasang catatan memori lintas sesi ke Codex memories (ad-hoc extension).
+    codex_note_src = paths["repo_codex_memory_note"]
+    if codex_note_src.exists():
+        codex_note_target = (
+            paths["codex_home"]
+            / "memories"
+            / "extensions"
+            / "ad_hoc"
+            / "cross-session-cross-workspace.md"
+        )
+        print(f"  [CODEX MEMORY] Salin cross-session-cross-workspace.md -> {codex_note_target}")
+        if not dry_run:
+            codex_note_target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(codex_note_src, codex_note_target)
+    else:
+        print("  [CODEX MEMORY] Lewati catatan memori (tidak ditemukan di repo .codex/)")
 
     # 2. Pasang Skills ke ~/.gemini/config/skills/
     skill_dirs = _repo_skill_dirs(paths)
@@ -205,6 +241,22 @@ def uninstall_global(home: Optional[Path] = None, repo_dir: Optional[Path] = Non
         if target.exists():
             target.unlink()
             print(f"  [RULES] Hapus {target}")
+
+    codex_agents_target = paths["codex_home"] / "AGENTS.md"
+    if codex_agents_target.exists():
+        codex_agents_target.unlink()
+        print(f"  [CODEX RULES] Hapus {codex_agents_target}")
+
+    codex_note_target = (
+        paths["codex_home"]
+        / "memories"
+        / "extensions"
+        / "ad_hoc"
+        / "cross-session-cross-workspace.md"
+    )
+    if codex_note_target.exists():
+        codex_note_target.unlink()
+        print(f"  [CODEX MEMORY] Hapus {codex_note_target}")
 
     skill_names = {d.name for d in _repo_skill_dirs(paths)}
     for name in sorted(skill_names):
