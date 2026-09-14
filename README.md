@@ -6,9 +6,8 @@
 [![Python Version](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![Architecture](https://img.shields.io/badge/Architecture-Context7%20Deep%20Mode-8A2BE2?style=for-the-badge)](https://github.com/mhanafi09051998/brain-ai)
 [![CI](https://img.shields.io/github/actions/workflow/status/mhanafi09051998/brain-ai/ci.yml?branch=main&style=for-the-badge&logo=githubactions&logoColor=white&label=CI)](https://github.com/mhanafi09051998/brain-ai/actions/workflows/ci.yml)
-[![Test Suite](https://img.shields.io/badge/Tests-70%2F70%20Passing%20(100%25)-success?style=for-the-badge&logo=pytest&logoColor=white)](https://github.com/mhanafi09051998/brain-ai/actions/workflows/ci.yml)
+[![Test Suite](https://img.shields.io/badge/Tests-85%2F85%20Passing%20(100%25)-success?style=for-the-badge&logo=pytest&logoColor=white)](https://github.com/mhanafi09051998/brain-ai/actions/workflows/ci.yml)
 [![Dependencies](https://img.shields.io/badge/Dependencies-Zero%20(stdlib)-informational?style=for-the-badge)](pyproject.toml)
-[![ISO Standard](https://img.shields.io/badge/Standard-ISO%209001%3A2015%20Clause%207.5-orange?style=for-the-badge)](https://github.com/mhanafi09051998/brain-ai)
 [![Zero Leak](https://img.shields.io/badge/Security-Zero%20Credential%20Leakage-green?style=for-the-badge&logo=securityscorecard&logoColor=white)](https://github.com/mhanafi09051998/brain-ai)
 [![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)](LICENSE)
 
@@ -297,7 +296,7 @@ python -m unittest discover -s self_learning -t . -p "test_*.py"
 ```text
 ......................................................................
 ----------------------------------------------------------------------
-Ran 70 tests in 0.27s
+Ran 85 tests in 0.27s
 
 OK
 ```
@@ -312,8 +311,64 @@ OK
 | `test_operational_guard.py` | Klasifikasi risiko 4 tingkat (shell, PowerShell, git, SQL, docker, cloud), perintah majemuk, persetujuan per-aksi sekali pakai |
 | `test_global_config.py` | Parsing & registrasi ledger (tabel yang benar), WorkspaceBridge |
 | `test_setup_global_config.py` | Installer: dry-run, idempoten, preservasi config pengguna, uninstall, CLI |
+| `test_llm_runtime.py` | Semantic search TF-IDF, Prompt Optimizer, LLMExecutor, validator, retry, distilasi |
 
 CI GitHub Actions (`.github/workflows/ci.yml`) menjalankan suite ini pada Ubuntu & Windows untuk Python 3.10–3.13, ditambah benchmark, installer `--dry-run`, render PDF skill, dan pemeriksaan bahwa working tree tetap bersih setelah test.
+
+---
+
+## 🤖 9. LLM Runtime, Prompt Optimizer & Semantic Search
+
+### Pencarian Semantik Knowledge Base
+
+`KnowledgeStore` kini mendukung pencarian semantik berbasis **TF-IDF + cosine similarity** murni stdlib (tanpa dependensi eksternal):
+
+```python
+from self_learning import KnowledgeStore
+
+store = KnowledgeStore()
+results = store.search_semantic("algoritma pencarian binary search array terurut", limit=3)
+for entry, score in results:
+    print(f"[{score:.3f}] {entry.pattern}")
+```
+
+Stopword Indonesia + Inggris dibuang otomatis sehingga kata fungsional tidak mendominasi skor.
+
+### Prompt Optimizer (Indonesia → Instruksi Inggris Presisi)
+
+`PromptOptimizer` adalah tahap terpisah sebelum eksekusi utama: LLM menulis ulang tugas berbahasa Indonesia menjadi satu instruksi Inggris yang ringkas dan operatif. Optimizer tidak menjawab tugas — ia hanya menyempurnakan instruksi.
+
+### LLM Runtime Nyata (OpenAI-compatible & Gemini)
+
+`LLMExecutor` menggabungkan ketiganya: **retrieve semantik → optimasi prompt → panggil API LLM → distilasi balik ke knowledge base**.
+
+```python
+from self_learning import (
+    KnowledgeStore, LLMExecutor, OpenAIChatProvider, PromptOptimizer,
+)
+
+store = KnowledgeStore()
+
+# Contoh OpenRouter (OpenAI-compatible):
+provider = OpenAIChatProvider(
+    model="openai/gpt-4o-mini",
+    base_url="https://openrouter.ai/api/v1",
+    api_key="sk-or-...",  # atau set environment OPENROUTER_API_KEY
+)
+optimizer = PromptOptimizer(provider)
+executor = LLMExecutor(provider, knowledge_store=store, prompt_optimizer=optimizer)
+
+result = executor.execute(
+    task_name="demo_binary_search",
+    intended_goal="Cari angka 42 di array [1, 3, 42, 99] terurut naik",
+    acceptance_criteria=["Jawaban harus menyebut indeks 2"],
+    max_attempts=1,
+)
+print(result["optimized_goal"])   # Prompt hasil terjemahan/penyempurnaan ke Inggris
+print(result["result"])           # Jawaban akhir dari LLM
+```
+
+Provider Gemini juga didukung (`GEMINIProvider` dengan `GEMINI_API_KEY`), namun untuk OpenRouter gunakan `OpenAIChatProvider` dengan `base_url="https://openrouter.ai/api/v1"` dan environment variable `OPENROUTER_API_KEY`.
 
 ---
 

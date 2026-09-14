@@ -128,7 +128,11 @@ class OpenAIChatProvider:
     ):
         self.model = model
         self.base_url = base_url.rstrip("/")
-        self.api_key = api_key or os.environ.get("OPENAI_API_KEY", "")
+        self.api_key = (
+            api_key
+            or os.environ.get("OPENAI_API_KEY", "")
+            or os.environ.get("OPENROUTER_API_KEY", "")
+        )
         self.temperature = temperature
         self.timeout = timeout
 
