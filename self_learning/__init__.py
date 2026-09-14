@@ -22,6 +22,16 @@ from .identity_lock import (
     IdentityGuard,
     IdentityTamperAttemptError,
 )
+from .llm_runtime import (
+    GeminiProvider,
+    LLMError,
+    LLMExecutor,
+    LLMMessage,
+    LLMResponse,
+    OpenAIChatProvider,
+    PromptOptimizer,
+    build_contextual_prompt,
+)
 from .multi_task_flow import (
     BaseSpecializedTaskFlow,
     DocumentControllerTaskFlow,
@@ -108,4 +118,13 @@ __all__ = [
     "GlobalConfigManager",
     "ProjectEntry",
     "WorkspaceBridge",
+    # LLM Runtime & Prompt Optimizer
+    "LLMMessage",
+    "LLMResponse",
+    "LLMError",
+    "OpenAIChatProvider",
+    "GeminiProvider",
+    "PromptOptimizer",
+    "LLMExecutor",
+    "build_contextual_prompt",
 ]

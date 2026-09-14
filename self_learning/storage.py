@@ -1,12 +1,30 @@
 """Modul Storage untuk persistensi pengetahuan Self-Learning."""
 
+import math
 import json
 import os
+import re
 import tempfile
 from dataclasses import asdict, dataclass, field
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple
+
+
+_TOKEN_RE = re.compile(r"[a-z0-9]+")
+
+# Stopword ringkas (ID + EN) agar kata fungsional tidak mendominasi skor kemiripan.
+_STOPWORDS = frozenset({
+    "a", "an", "and", "are", "as", "at", "be", "by", "for", "from", "in",
+    "is", "it", "of", "on", "or", "that", "the", "to", "was", "were", "will",
+    "with", "yang", "dan", "di", "ke", "dari", "untuk", "pada", "adalah",
+    "dengan", "atau", "jika", "saat", "agar", "bisa", "akan", "tidak",
+})
+
+
+def _tokenize(text: str) -> List[str]:
+    """Tokenisasi sederhana: huruf kecil, ambil alfanumerik, buang stopword."""
+    return [t for t in _TOKEN_RE.findall(text.lower()) if t not in _STOPWORDS]
 
 
 def atomic_write_json(path: Path, data: Any) -> None:
@@ -118,3 +136,61 @@ class KnowledgeStore:
         self._entries.clear()
         if self.storage_path.exists():
             self.storage_path.unlink()
+
+    def search_semantic(
+        self,
+        query: str,
+        limit: int = 5,
+        min_score: float = 0.0,
+    ) -> List[tuple]:
+        """Pencarian semantik berbasis TF-IDF + cosine similarity (stdlib murni).
+
+        Mengembalikan daftar `(KnowledgeEntry, score)` diurutkan dari skor tertinggi.
+        Skor berada pada rentang 0.0 s/d 1.0. Entry yang tidak memiliki token
+        relevan tidak dikembalikan.
+        """
+        if limit < 1:
+            raise ValueError("limit harus >= 1.")
+        query_tokens = _tokenize(query)
+        if not query_tokens or not self._entries:
+            return []
+
+        # Korpus dokumen = pattern + explanation + task_type per entry.
+        docs: Dict[str, List[str]] = {}
+        for eid, entry in self._entries.items():
+            docs[eid] = _tokenize(
+                f"{entry.pattern} {entry.explanation} {entry.task_type}"
+            )
+
+        # DF (document frequency) untuk smoothing IDF.
+        df: Dict[str, int] = {}
+        for tokens in docs.values():
+            for term in set(tokens):
+                df[term] = df.get(term, 0) + 1
+
+        n_docs = len(docs)
+
+        def _tfidf(tokens: List[str]) -> Dict[str, float]:
+            tf: Dict[str, float] = {}
+            for term in tokens:
+                tf[term] = tf.get(term, 0.0) + 1.0
+            total = len(tokens) if tokens else 1.0
+            vec: Dict[str, float] = {}
+            for term, count in tf.items():
+                idf = math.log((n_docs + 1.0) / (df.get(term, 0) + 1.0)) + 1.0
+                vec[term] = (count / total) * idf
+            return vec
+
+        query_vec = _tfidf(query_tokens)
+        scored: List[tuple] = []
+        for eid, entry in self._entries.items():
+            doc_vec = _tfidf(docs[eid])
+            dot = sum(query_vec.get(t, 0.0) * doc_vec.get(t, 0.0) for t in query_vec)
+            q_norm = math.sqrt(sum(v * v for v in query_vec.values()))
+            d_norm = math.sqrt(sum(v * v for v in doc_vec.values()))
+            score = (dot / (q_norm * d_norm)) if (q_norm > 0.0 and d_norm > 0.0) else 0.0
+            if score > min_score:
+                scored.append((entry, round(score, 6)))
+
+        scored.sort(key=lambda pair: (-pair[1], pair[0].entry_id))
+        return scored[:limit]
