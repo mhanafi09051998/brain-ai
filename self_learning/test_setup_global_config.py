@@ -54,11 +54,12 @@ class TestSetupGlobalConfig(unittest.TestCase):
             self._run(installer.install_global, home=self.home)
 
         repo_skills = sorted(d.name for d in paths["repo_skills"].iterdir() if d.is_dir())
-        for name in ("AGENTS.md", "GEMINI.md"):
+        for name in installer.RULE_FILES:
             self.assertEqual(
                 (paths["rules_dir"] / name).read_text(encoding="utf-8"),
                 (self.repo_dir / name).read_text(encoding="utf-8"),
             )
+        self.assertFalse((paths["rules_dir"] / "AGENTS.md").exists())
         installed = sorted(d.name for d in paths["skills_dir"].iterdir() if d.is_dir())
         self.assertEqual(installed, repo_skills)
         self.assertTrue((paths["skills_dir"] / "claudia-brain" / "SKILL.md").exists())

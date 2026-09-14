@@ -25,7 +25,7 @@ if hasattr(sys.stderr, "reconfigure"):
     sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
 PLUGIN_NAME = "claudia-brain"
-RULE_FILES = ("AGENTS.md", "GEMINI.md")
+RULE_FILES = ("GEMINI.md",)
 
 
 def get_paths(home: Optional[Path] = None, repo_dir: Optional[Path] = None) -> Dict[str, Path]:
@@ -111,16 +111,34 @@ def install_global(dry_run: bool = False, home: Optional[Path] = None, repo_dir:
     print(f"Mode: {'DRY RUN (Simulasi)' if dry_run else 'LIVE EXECUTION'}")
     print("=" * 60)
 
-    # 1. Buat direktori rules & copy file aturan
-    for md_file in (paths["repo_agents_md"], paths["repo_gemini_md"]):
-        if md_file.exists():
-            target_path = paths["rules_dir"] / md_file.name
-            print(f"  [RULES] Salin {md_file.name} -> {target_path}")
+    # 1. Buat direktori rules & pasang aturan GEMINI.md (tunggal, anti-duplikasi)
+    for md_name in RULE_FILES:
+        src = paths["repo_dir"] / md_name
+        if src.exists():
+            target_path = paths["rules_dir"] / md_name
+            print(f"  [RULES] Salin {md_name} -> {target_path}")
             if not dry_run:
                 paths["rules_dir"].mkdir(parents=True, exist_ok=True)
-                shutil.copyfile(md_file, target_path)
+                shutil.copyfile(src, target_path)
         else:
-            print(f"  [RULES] Lewati {md_file.name} (tidak ditemukan di repo)")
+            print(f"  [RULES] Lewati {md_name} (tidak ditemukan di repo)")
+
+    # Bersihkan file aturan duplikat agar tidak membanjiri prompt sistem
+    if not dry_run:
+        redundant_files = [
+            paths["rules_dir"] / "AGENTS.md",
+            paths["config_dir"] / "AGENTS.md",
+            paths["config_dir"] / "GEMINI.md",
+            paths["home"] / "AGENTS.md",
+            paths["home"] / "GEMINI.md",
+        ]
+        for rf in redundant_files:
+            if rf.exists():
+                try:
+                    rf.unlink()
+                    print(f"  [CLEANUP] Hapus aturan duplikat: {rf.name}")
+                except OSError:
+                    pass
 
     # 2. Pasang Skills ke ~/.gemini/config/skills/
     skill_dirs = _repo_skill_dirs(paths)
@@ -182,7 +200,7 @@ def uninstall_global(home: Optional[Path] = None, repo_dir: Optional[Path] = Non
     print("[UNINSTALL] MELEPAS KONFIGURASI GLOBAL CLAUDIA BRAIN")
     print("=" * 60)
 
-    for name in RULE_FILES:
+    for name in set(RULE_FILES + ("AGENTS.md",)):
         target = paths["rules_dir"] / name
         if target.exists():
             target.unlink()
