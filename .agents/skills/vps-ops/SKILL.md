@@ -26,9 +26,11 @@ dengan penekanan pada keamanan, idempotensi, dan verifikasi empiris.
 # Nonaktifkan root login & password auth
 sudo sed -i 's/^#\?PermitRootLogin.*/PermitRootLogin no/' /etc/ssh/sshd_config
 sudo sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication no/' /etc/ssh/sshd_config
+sudo sshd -t
 sudo systemctl reload sshd
 
 # Verifikasi status
+sudo sshd -t
 ssh -n ubuntu@sol.zolu.my.id "sudo grep -E 'PermitRootLogin|PasswordAuthentication' /etc/ssh/sshd_config"
 ```
 
@@ -39,15 +41,23 @@ pm2 list
 
 # Restart spesifik
 pm2 restart meridian
+pm2 save
 
 # Auto-restart on boot
 pm2 startup && pm2 save
 
+# Wajib setelah start, restart, delete, atau ubah daftar proses
+pm2 save
+
 # Monitoring log real-time
 pm2 logs meridian --lines 50
 
+# Audit log lama tanpa streaming
+pm2 logs meridian --lines 200 --nostream
+
 # Hapus proses
 pm2 delete kasir
+pm2 save
 ```
 
 ## 4. Nginx Reverse Proxy
@@ -75,10 +85,10 @@ sudo nginx -t && sudo systemctl reload nginx
 # Cek status tunnel
 systemctl status cloudflared
 
-# Lihat route aktif
+# Validasi ingress WAJIB sebelum reload/restart
 cloudflared tunnel ingress validate
 
-# Restart tunnel
+# Hanya restart setelah validate sukses
 systemctl restart cloudflared
 ```
 Aturan penting: jangan pernah hapus ingress route tanpa konfirmasi pengguna — terutama untuk domain produksi aktif.
@@ -86,6 +96,7 @@ Aturan penting: jangan pernah hapus ingress route tanpa konfirmasi pengguna — 
 ## 6. Firewall UFW
 ```bash
 sudo ufw status numbered
+sudo ufw --dry-run allow OpenSSH   # preview perubahan sebelum apply
 sudo ufw allow OpenSSH
 sudo ufw deny 22/tcp comment "SSH public"  # atau sesuaikan
 sudo ufw allow from 103.21.244.0/22 to any port 443 comment "Cloudflare IP range"
@@ -107,6 +118,7 @@ git pull origin main
 npm ci --omit=dev
 npm run build 2>&1 | tee deploy-$(date +%Y%m%d).log
 pm2 restart app
+pm2 save
 curl -sS -o /dev/null -w "%{http_code}" http://127.0.0.1:3000/
 ```
 
@@ -120,6 +132,8 @@ curl -sS -o /dev/null -w "%{http_code}" http://127.0.0.1:3000/
 ## 10. Checklist Selesai
 - [ ] Backup file yang diubah tersimpan (`.bak-YYYYMMDD`).
 - [ ] `pm2 list` menunjukkan status `online` untuk aplikasi target.
+- [ ] State PM2 tersimpan dengan `pm2 save`.
+- [ ] Cloudflare Tunnel tervalidasi via `cloudflared tunnel ingress validate`.
 - [ ] `curl` ke endpoint lokal mengembalikan 200/redirect yang benar.
 - [ ] Tidak ada error baru di `pm2 logs` atau `journalctl`.
 - [ ] Perubahan konfigurasi tercatat di `memory.md` bila bersifat arsitektural.

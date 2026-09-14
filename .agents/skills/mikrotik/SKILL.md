@@ -18,7 +18,8 @@ dan verifikasi empiris. Seluruh perintah mengikuti sintaks RouterOS v7.
 - **Grounding Faktual**: Baca konfigurasi aktual perangkat (`/export`) sebelum mengubah apa pun.
 - **Non-Destructive First**: Selalu gunakan `print` atau `export` sebelum `set`.
 - **Verifikasi Empiris**: Setiap perubahan wajib diuji (`ping`, `torch`, `log`) sebelum dinyatakan selesai.
-- **Backup Sebelum Mutasi**: `/system backup save name=pre-change-YYYYMMDD` wajib dijalankan sebelum perubahan besar.
+- **Backup Sebelum Mutasi**: Wajib menyimpan backup binary dan konfigurasi teks:
+  `/system backup save name=pre-change-YYYYMMDD` dan `/export file=pre-change-YYYYMMDD`.
 
 ## 2. Konfigurasi Dasar (RouterOS v7)
 ```routeros
@@ -37,30 +38,50 @@ dan verifikasi empiris. Seluruh perintah mengikuti sintaks RouterOS v7.
 
 ## 3. Firewall (Keamanan Berlapis)
 ```routeros
-# Blokir akses Winbox dari WAN
-/ip firewall filter add chain=input action=drop connection-state=new in-interface=ether1 dst-port=8291 protocol=tcp comment="Block Winbox from WAN"
-
 # Drop invalid & port scan
 /ip firewall filter add chain=input action=drop connection-state=invalid
 /ip firewall filter add chain=input action=drop protocol=tcp psd=21,3s,3,1
 
+# Allow LAN management
+/ip firewall filter add chain=input action=accept in-interface=bridge-lan comment="Allow LAN management"
+
+# Default deny untuk input dan forward (letakkan di akhir chain)
+/ip firewall filter add chain=input action=drop comment="default drop input"
+/ip firewall filter add chain=forward action=drop comment="default drop forward"
+
 # NAT masquerade
 /ip firewall nat add chain=srcnat action=masquerade out-interface=ether1 comment="Default MASQ"
 ```
+
+## Service Hardening
+```routeros
+/ip service disable telnet,ftp,www
+/ip service set ssh address=192.168.0.0/16,10.0.0.0/8
+/ip service set winbox address=192.168.0.0/16,10.0.0.0/8
+```
+Aturan: jangan pernah menonaktifkan service yang sedang dipakai untuk sesi
+manajemen aktif. Sesuaikan subnet di atas dengan subnet LAN aktual.
 
 ## 4. VPN (WireGuard — v7 native)
 ```routeros
 /interface wireguard add listen-port=13231 name=wireguard-vpn
 /ip address add address=10.0.0.1/24 interface=wireguard-vpn
 /interface wireguard peers add interface=wireguard-vpn public-key="<CLIENT_PUB>" allowed-address=10.0.0.2/32
-/ip firewall filter add chain=input action=accept protocol=udp dst-port=13231 in-interface=ether1 comment="WireGuard"
+/ip firewall filter add chain=input action=accept protocol=udp dst-port=13231 in-interface=ether1 place-before=1 comment="WireGuard"
 ```
 
 ## 5. QoS / Bandwidth Shaping (Simple Queue)
 ```routeros
-/queue simple add name=limit-guest target=192.168.20.0/24 max-limit=5M/5M
-/queue simple add name=voip-priority target=192.168.30.0/24 priority=1/1
+/queue simple add name=limit-guest target=192.168.20.0/24 max-limit=5M/5M limit-at=2M/2M
+/queue simple add name=voip-parent target=192.168.30.0/24 max-limit=10M/10M
+/queue simple add name=voip-priority parent=voip-parent target=192.168.30.10/32 priority=1/1 limit-at=2M/2M
 ```
+Catatan QoS:
+- `limit-at` adalah jaminan bandwidth minimum (CIR); `max-limit` adalah batas atas.
+- `priority` hanya berpengaruh pada child queue, bukan queue tanpa parent.
+- FastTrack membuat Simple Queue tidak bekerja. Cek
+  `/ip firewall filter print where action=fasttrack-connection` dan nonaktifkan
+  rule FastTrack terlebih dahulu jika bandwidth shaping wajib dijalankan.
 
 ## 6. Monitoring & Diagnostik
 ```routeros
@@ -80,4 +101,5 @@ dan verifikasi empiris. Seluruh perintah mengikuti sintaks RouterOS v7.
 - [ ] `/export` sebelum dan sesudah dibandingkan.
 - [ ] Akses Winbox/SSH masih bisa dari jaringan internal.
 - [ ] Log tidak menampilkan error baru.
-- [ ] Backup post-change tersimpan (`/system backup save`).
+- [ ] Backup binary dan konfigurasi teks post-change tersimpan
+  (`/system backup save` dan `/export file=`).
