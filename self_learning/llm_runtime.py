@@ -15,6 +15,7 @@ import os
 import time
 import urllib.error
 import urllib.request
+import uuid
 from dataclasses import dataclass, field
 from typing import Any, Callable, Dict, List, Optional
 
@@ -344,10 +345,10 @@ class LLMExecutor:
                     break
             if all_valid:
                 entry = KnowledgeEntry(
-                    entry_id=f"llm-distill-{task_name}-{attempt}",
+                    entry_id=f"llm-distill-{task_name}-{uuid.uuid4().hex[:8]}",
                     task_type=task_name,
                     category="heuristic",
-                    pattern=f"Eksekusi LLM berhasil untuk '{intended_goal[:80]}'",
+                    pattern=f"Eksekusi LLM berhasil untuk '{(optimized_goal if self.prompt_optimizer else intended_goal)[:80]}'",
                     explanation=(f"Provider={response.provider}, model={response.model}, latensi={response.latency_ms:.1f}ms"),
                     impact_score=1.0,
                     metadata={

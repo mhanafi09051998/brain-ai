@@ -368,7 +368,7 @@ print(result["optimized_goal"])   # Prompt hasil terjemahan/penyempurnaan ke Ing
 print(result["result"])           # Jawaban akhir dari LLM
 ```
 
-Provider Gemini juga didukung (`GEMINIProvider` dengan `GEMINI_API_KEY`), namun untuk OpenRouter gunakan `OpenAIChatProvider` dengan `base_url="https://openrouter.ai/api/v1"` dan environment variable `OPENROUTER_API_KEY`.
+Provider Gemini juga didukung (`GeminiProvider` dengan `GEMINI_API_KEY`), namun untuk OpenRouter gunakan `OpenAIChatProvider` dengan `base_url="https://openrouter.ai/api/v1"` dan environment variable `OPENROUTER_API_KEY`.
 
 ---
 

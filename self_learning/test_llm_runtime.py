@@ -130,7 +130,9 @@ class TestLLMExecutor(unittest.TestCase):
         self.assertTrue(result["success"])
         self.assertEqual(result["retrieved_count"], 1)
         self.assertEqual(result["retrieved_entries"], ["h1"])
-        self.assertIn("llm-distill-cari_nilai", self.store.get("llm-distill-cari_nilai-1").entry_id)
+        distilled = [e for e in self.store._entries.values() if e.entry_id.startswith("llm-distill-cari_nilai")]
+        self.assertEqual(len(distilled), 1)
+        self.assertTrue(distilled[0].entry_id.startswith("llm-distill-cari_nilai"))
 
     def test_execute_without_optimizer_keeps_original_goal(self):
         executor = LLMExecutor(_MockProvider(text="done"), knowledge_store=self.store)
